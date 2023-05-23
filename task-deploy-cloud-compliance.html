@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head class="at-element-marker">
+  <title>Implementare la classificazione BlueXP nel cloud utilizzando BlueXP | NetApp Documentation</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Implementare la classificazione BlueXP nel cloud utilizzando BlueXP | NetApp Documentation" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/it-it/cloud-manager-data-sense/task-deploy-cloud-compliance.html" />
+	<meta property="og:description" content="Completare alcuni passaggi per implementare la classificazione BlueXP nel cloud. BlueXP implementerà l"istanza di classificazione BlueXP nella stessa rete di..." />
+  <meta property="og:image" content="https://docs.netapp.com/it-it/cloud-manager-data-sense/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Completare alcuni passaggi per implementare la classificazione BlueXP nel cloud. BlueXP implementerà l"istanza di classificazione BlueXP nella stessa rete di...">
+  <meta name="keywords" content=" cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance"><!-- Icons -->
+  <link rel="icon" href="/it-it/cloud-manager-data-sense/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="NetApp Documentation" href="/it-it/cloud-manager-data-sense/feed.xml"><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/it-it/cloud-manager-data-sense/css/netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/it-it/cloud-manager-data-sense/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/it-it/cloud-manager-data-sense/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/it-it/cloud-manager-data-sense/task-deploy-cloud-compliance.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-cloud-compliance.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/cloud-manager-data-sense/task-deploy-cloud-compliance.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-cloud-compliance.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/cloud-manager-data-sense/task-deploy-cloud-compliance.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/cloud-manager-data-sense/task-deploy-cloud-compliance.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/cloud-manager-data-sense/task-deploy-cloud-compliance.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/cloud-manager-data-sense/task-deploy-cloud-compliance.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/cloud-manager-data-sense/task-deploy-cloud-compliance.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/cloud-manager-data-sense/task-deploy-cloud-compliance.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/cloud-manager-data-sense/task-deploy-cloud-compliance.html" />
+  <link rel='stylesheet' href='/it-it/cloud-manager-data-sense/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    function addAdobeLaunch(adobeId) {
+      var head = document.getElementsByTagName('head')[0];
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/"+adobeId+".min.js";
+      head.appendChild(adobe);
+    }
+
+    function addGoogleAnalytics(gtagId) {
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id="+gtagId;
+      var head = document.getElementsByTagName('head')[0];
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gtagId);
+    }
+
+    function addConsent(consentId) {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/"+consentId+"/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = consentId;
+      head.appendChild(onetrustScript);
+    }addConsent("72570c5c-fe30-465f-b0e0-b77f7fb4ae34");
+    addAdobeLaunch("launch-e9ff3acac59f");
+    addGoogleAnalytics("UA-81697994-3");function OptanonWrapper() { }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/it-it/cloud-manager-data-sense/js/na-search.js'></script><script src='/it-it/cloud-manager-data-sense/js/na-pagenav.js'></script><script src='/it-it/cloud-manager-data-sense/js/na-utility.js'></script>
+ <!--  
+  <link rel='stylesheet' href='/it-it/cloud-manager-data-sense/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/it-it/cloud-manager-data-sense/css/prism-netapp.css' type='text/css'>
+ -->
+
+  <!-- <script src='/it-it/cloud-manager-data-sense/js/na-utility.js'></script> -->
+  <script src='/it-it/cloud-manager-data-sense/js/clouddocs.js'></script>
+  <script src='/it-it/cloud-manager-data-sense/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- <script src='/it-it/cloud-manager-data-sense/js/toc.js'></script> -->
+  <!-- <script src='/it-it/cloud-manager-data-sense/js/customscripts.js'></script> --><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/it-it/cloud-manager-data-sense"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/it-it/cloud-manager-data-sense/js/custom-dropdown.js'></script>
+  <script src='/it-it/cloud-manager-data-sense/js/FileSaver.min.js'></script>
+  <script src='/it-it/cloud-manager-data-sense/js/jszip-utils.min.js'></script>
+  <script src='/it-it/cloud-manager-data-sense/js/jszip.min.js'></script>
+  <!-- <script src='/it-it/cloud-manager-data-sense/js/pdf-ux.js'></script> -->
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-data-sense.it-it/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/it-it/cloud-manager-data-sense/task-deploy-cloud-compliance.html&page-title=Implementare la classificazione BlueXP nel cloud utilizzando BlueXP" class="page-nav-contribute-link" role="button"><img src="/it-it/cloud-manager-data-sense/images/discuss-sm.svg" alt="" class="github-icon" />Richiedi modifiche alla documentazione</a><a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-data-sense/blob/main/task-deploy-cloud-compliance.adoc" class="page-nav-contribute-link" role="button"><img src="/it-it/cloud-manager-data-sense/images/edit-sm.svg" alt="" class="github-icon" />Modifica questa pagina</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/it-it/cloud-manager-data-sense/images/article-sm.svg" alt="" class="github-icon" />Scopri come collaborare</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">IN QUESTA PAGINA</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Prodotto e soluzioni</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Supporto e training</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Testimonianze dei clienti</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/company/contact-us/" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contatto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/it-it/cloud-manager-data-sense/images/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/it-it/cloud-manager-data-sense/images/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/it-it/cloud-manager-data-sense/images/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/it-it/cloud-manager-data-sense/search.html"
+          data-type="widget" 
+          data-placeholder="Esplora la documentazione"
+          data-no-results-found="Nessun risultato per {query}"
+          data-did-you-mean="Cerca {suggestion}."
+          data-no-results-found-did-you-mean="Nessun risultato per {query}. Intendi {suggestion}?"
+          data-results-found="{hitCount} risultati trovati"
+          data-error-message="Si è verificato un problema durante il recupero dei risultati. Riprova."
+          data-error-reset="Reimposta ricerca"
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/it-it/cloud-manager-data-sense/images/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Italiano</span>
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/it-it/cloud-manager-data-sense/images/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/it-it/cloud-manager-data-sense/task-deploy-cloud-compliance.html" target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-cloud-compliance.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/cloud-manager-data-sense/task-deploy-cloud-compliance.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/cloud-manager-data-sense/task-deploy-cloud-compliance.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/cloud-manager-data-sense/task-deploy-cloud-compliance.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/cloud-manager-data-sense/task-deploy-cloud-compliance.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/cloud-manager-data-sense/task-deploy-cloud-compliance.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/es-es/cloud-manager-data-sense/task-deploy-cloud-compliance.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/fr-fr/cloud-manager-data-sense/task-deploy-cloud-compliance.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li></ul>
+    </div>
+    <!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <button id="btn-sidebar-collapse" onclick="hideSidebar()"><img src="/it-it/cloud-manager-data-sense/images/collapse.png" alt="Comprimi pannello di navigazione"></button>
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/it-it/cloud-manager-data-sense/images/pdf.png" alt="" width="16" height="16"/>PDF disponibili<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/it-it/cloud-manager-data-sense/pdfs/fullsite-sidebar/Documentazione_sulla_classificazione_BlueXP.pdf" >
+          <img src="/it-it/cloud-manager-data-sense/images/pdf.png" alt="" width="16" height="16"/>PDF del sito di questa documentazione</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-data-sense/pdfs/sidebar/Inizia_subito.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-data-sense/images/pdf.png" alt="" width="16" height="16"/>
+            Inizia subito
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-data-sense/pdfs/sidebar/Implementare_la_classificazione_BlueXP.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-data-sense/images/pdf.png" alt="" width="16" height="16"/>
+            Implementare la classificazione BlueXP
+          </a>
+          
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-data-sense/pdfs/sidebar/Attivare_la_scansione_sulle_origini_dati.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-data-sense/images/pdf.png" alt="" width="16" height="16"/>
+            Attivare la scansione sulle origini dati
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-data-sense/pdfs/sidebar/Utilizzare_la_classificazione_BlueXP.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-data-sense/images/pdf.png" alt="" width="16" height="16"/>
+            Utilizzare la classificazione BlueXP
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-data-sense/pdfs/sidebar/Gestire_la_classificazione_BlueXP.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-data-sense/images/pdf.png" alt="" width="16" height="16"/>
+            Gestire la classificazione BlueXP
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-data-sense/pdfs/sidebar/Riferimento.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-data-sense/images/pdf.png" alt="" width="16" height="16"/>
+            Riferimento
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-data-sense/pdfs/sidebar/Conoscenza_e_supporto.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-data-sense/images/pdf.png" alt="" width="16" height="16"/>
+            Conoscenza e supporto
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/it-it/cloud-manager-data-sense/images/pdf-zip.png" alt="" width="16" height="16"/>
+      <pre>Raccolta di documenti PDF separati<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="prod-nav" id="product-nav">
+  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/it-it/cloud-manager-family/"><img src="/it-it/cloud-manager-data-sense/images/left_arrow.png" alt=""><pre>Tutta la documentazione BlueXP</pre></a>
+</div><div class="sidebar-nav-container" id="mysidebardiv">
+  <ul id="mysidebar" class="nav"><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Documenti di classificazione BlueXP"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/index.html">
+        Documenti di classificazione BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Note di rilascio"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/whats-new.html">
+        Note di rilascio
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Inizia subito"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Inizia subito</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Scopri di più sulla classificazione BlueXP"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/concept-cloud-compliance.html">
+        Scopri di più sulla classificazione BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Implementare la classificazione BlueXP"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Implementare la classificazione BlueXP</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Implementazione nel cloud con BlueXP"
+      data-li-level="3#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-deploy-cloud-compliance.html">
+        Implementazione nel cloud con BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installazione su un host Linux con accesso a Internet"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-deploy-compliance-onprem.html">
+        Installazione su un host Linux con accesso a Internet
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installazione on-premise senza accesso a Internet"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-deploy-compliance-dark-site.html">
+        Installazione on-premise senza accesso a Internet
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verificare che l'host Linux sia pronto per installare la classificazione BlueXP"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-test-linux-system.html">
+        Verificare che l'host Linux sia pronto per installare la classificazione BlueXP
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Attivare la scansione sulle origini dati"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Attivare la scansione sulle origini dati</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Volumes ONTAP e ONTAP on-premise"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-getting-started-compliance.html">
+        Cloud Volumes ONTAP e ONTAP on-premise
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Azure NetApp Files"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-scanning-anf.html">
+        Azure NetApp Files
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Amazon FSX per ONTAP"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-scanning-fsx.html">
+        Amazon FSX per ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Bucket Amazon S3"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-scanning-s3.html">
+        Bucket Amazon S3
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Schemi di database"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-scanning-databases.html">
+        Schemi di database
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Account OneDrive"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-scanning-onedrive.html">
+        Account OneDrive
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Account SharePoint"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-scanning-sharepoint.html">
+        Account SharePoint
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Account Google Drive"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-scanning-google-drive.html">
+        Account Google Drive
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Condivisioni di file"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-scanning-file-shares.html">
+        Condivisioni di file
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage a oggetti"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-scanning-object-storage.html">
+        Storage a oggetti
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Integrare Active Directory"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-add-active-directory-datasense.html">
+        Integrare Active Directory
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Impostare la licenza"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-licensing-datasense.html">
+        Impostare la licenza
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FAQ"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/faq-cloud-compliance.html">
+        FAQ
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilizzare la classificazione BlueXP"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Utilizzare la classificazione BlueXP</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizza i dettagli di governance relativi ai tuoi dati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-controlling-governance-data.html">
+        Visualizza i dettagli di governance relativi ai tuoi dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizza i dettagli di conformità relativi ai tuoi dati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-controlling-private-data.html">
+        Visualizza i dettagli di conformità relativi ai tuoi dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Categorie di dati privati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/reference-private-data-categories.html">
+        Categorie di dati privati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Analizzare i dati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-investigate-data.html">
+        Analizzare i dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Organizzare i dati privati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-org-private-data.html">
+        Organizzare i dati privati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Assegnare policy ai dati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-using-policies.html">
+        Assegnare policy ai dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestisci i tuoi dati privati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-managing-highlights.html">
+        Gestisci i tuoi dati privati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare le impostazioni di scansione"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-managing-repo-scanning.html">
+        Modificare le impostazioni di scansione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Generare report sulla conformità"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-generating-compliance-reports.html">
+        Generare report sulla conformità
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire la classificazione BlueXP"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Gestire la classificazione BlueXP</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiungere identificatori di dati personali personalizzati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-managing-data-fusion.html">
+        Aggiungere identificatori di dati personali personalizzati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzare lo stato delle azioni di classificazione di BlueXP"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-view-compliance-actions.html">
+        Visualizzare lo stato delle azioni di classificazione di BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Controllare la cronologia delle azioni di classificazione di BlueXP"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-audit-data-sense-actions.html">
+        Controllare la cronologia delle azioni di classificazione di BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ridurre la velocità di scansione della classificazione BlueXP"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-reduce-scan-speed.html">
+        Ridurre la velocità di scansione della classificazione BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Rimuovere le origini dati dalla classificazione BlueXP"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-managing-compliance.html">
+        Rimuovere le origini dati dalla classificazione BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Disinstallare la classificazione BlueXP"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-uninstall-data-sense.html">
+        Disinstallare la classificazione BlueXP
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Riferimento"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Riferimento</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tipi di istanze di classificazione BlueXP supportati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/reference-instance-types.html">
+        Tipi di istanze di classificazione BlueXP supportati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Metadati raccolti dalle origini dati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/reference-collected-metadata.html">
+        Metadati raccolti dalle origini dati
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conoscenza e supporto"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Conoscenza e supporto</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Registrati per ricevere assistenza"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-support-registration.html">
+        Registrati per ricevere assistenza
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Richiedi assistenza"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/task-get-help.html">
+        Richiedi assistenza
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Note legali"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-data-sense/legal-notices.html">
+        Note legali
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <div class="ie-utility">
+  <button id="btn-sidebar-expand" onclick="showSidebar()"><img src="/it-it/cloud-manager-data-sense/images/expand.png" alt="Espandi pannello di navigazione"></button>
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/us-en/cloud/">Documentazione Cloud</a>
+        </li>
+        
+
+        
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/it-it/cloud-manager-family/">BlueXP</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/it-it/cloud-manager-data-sense/">BlueXP&nbsp;classification</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/it-it/cloud-manager-data-sense/images/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Implementare la classificazione BlueXP nel cloud utilizzando BlueXP</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2023-05-23 20:55:14 +0000">05/23/2023</time>
+    
+  
+
+<span>Collaboratori
+</span>
+
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>Completare alcuni passaggi per implementare la classificazione BlueXP nel cloud. BlueXP implementerà l&#8217;istanza di classificazione BlueXP nella stessa rete di provider cloud del connettore BlueXP.</p>
+</div>
+<div class="paragraph">
+<p>Nota: È anche possibile <a href="task-deploy-compliance-onprem.html">"Installare la classificazione BlueXP su un host Linux con accesso a Internet"</a>. Questo tipo di installazione può essere una buona opzione se si preferisce eseguire la scansione dei sistemi ONTAP on-premise utilizzando un&#8217;istanza di classificazione BlueXP che si trova anche on-premise, ma non è un requisito. Il software funziona esattamente allo stesso modo, indipendentemente dal metodo di installazione scelto.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="avvio-rapido">Avvio rapido</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Inizia subito seguendo questi passaggi o scorri verso il basso fino alle sezioni rimanenti per ottenere dettagli completi.</p>
+</div>
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png" alt="Uno"></span> Creare un connettore</div>
+<p>Se non si dispone già di un connettore, crearne uno. Vedere <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html" target="_blank" rel="noopener">"Creazione di un connettore in AWS"</a>, <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-azure.html" target="_blank" rel="noopener">"Creazione di un connettore in Azure"</a>, o. <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html" target="_blank" rel="noopener">"Creazione di un connettore in GCP"</a>.</p>
+</div>
+<div class="paragraph quick-margin-para">
+<p>Puoi anche farlo <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html" target="_blank" rel="noopener">"Installare il connettore on-premise"</a> Su un host Linux nella rete o su un host Linux nel cloud.</p>
+</div>
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png" alt="Due"></span> Esaminare i prerequisiti</div>
+<p>Assicurarsi che l&#8217;ambiente soddisfi i prerequisiti. Ciò include l&#8217;accesso a Internet in uscita per l&#8217;istanza, la connettività tra il connettore e la classificazione BlueXP sulla porta 443 e altro ancora. <a href="#esaminare-i-prerequisiti">Consulta l&#8217;elenco completo</a>.</p>
+</div>
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png" alt="Tre"></span> Implementare la classificazione BlueXP</div>
+<p>Avviare l&#8217;installazione guidata per implementare l&#8217;istanza di classificazione BlueXP nel cloud.</p>
+</div>
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png" alt="Quattro"></span> Iscriviti al servizio di classificazione BlueXP</div>
+<p>I primi 1 TB di dati che la classificazione BlueXP scansiona in BlueXP sono gratuiti per 30 giorni. Per continuare a eseguire la scansione dei dati dopo tale data, è necessario un abbonamento BlueXP tramite il proprio provider cloud Marketplace o una licenza BYOL di NetApp.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="creare-un-connettore">Creare un connettore</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Se non disponi già di un connettore, crea un connettore nel tuo cloud provider. Vedere <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html" target="_blank" rel="noopener">"Creazione di un connettore in AWS"</a> oppure <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-azure.html" target="_blank" rel="noopener">"Creazione di un connettore in Azure"</a>, o. <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html" target="_blank" rel="noopener">"Creazione di un connettore in GCP"</a>. Nella maggior parte dei casi, probabilmente si dispone di un connettore configurato prima di tentare di attivare la classificazione BlueXP, perché la maggior parte <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-a-connector-is-required">"Le funzionalità di BlueXP richiedono un connettore"</a>, ma in alcuni casi è necessario impostarne uno ora.</p>
+</div>
+<div class="paragraph">
+<p>Esistono alcuni scenari in cui è necessario utilizzare un connettore implementato in uno specifico cloud provider:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Quando si esegue la scansione dei dati in Cloud Volumes ONTAP in AWS, Amazon FSX per ONTAP o nei bucket AWS S3, si utilizza un connettore in AWS.</p>
+</li>
+<li>
+<p>Quando si esegue la scansione dei dati in Cloud Volumes ONTAP in Azure o in Azure NetApp Files, si utilizza un connettore in Azure.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Per Azure NetApp Files, deve essere implementato nella stessa regione dei volumi che si desidera sottoporre a scansione.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Quando si esegue la scansione dei dati in Cloud Volumes ONTAP in GCP, si utilizza un connettore in GCP.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I sistemi ONTAP on-premise, le condivisioni di file non NetApp, lo storage a oggetti S3 generico, i database, le cartelle OneDrive, gli account SharePoint e gli account Google Drive possono essere sottoposti a scansione quando si utilizza uno di questi connettori cloud.</p>
+</div>
+<div class="paragraph">
+<p>Nota: È anche possibile <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html" target="_blank" rel="noopener">"Installare il connettore on-premise"</a> Su un host Linux nella rete o nel cloud. Alcuni utenti che intendono installare BlueXP classification on-premise possono anche scegliere di installare il connettore on-premise.</p>
+</div>
+<div class="paragraph">
+<p>Come puoi vedere, potrebbero esserci alcune situazioni in cui devi utilizzare <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#multiple-connectors">"Connettori multipli"</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="supporto-per-le-regioni-governative">Supporto per le regioni governative</h3>
+<div class="paragraph">
+<p>La classificazione BlueXP è supportata quando il connettore viene implementato in un&#8217;area governativa (AWS GovCloud, Azure Gov o Azure DoD). Se implementato in questo modo, la classificazione BlueXP presenta le seguenti restrizioni:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Impossibile eseguire la scansione di account OneDrive, SharePoint e Google Drive.</p>
+</li>
+<li>
+<p>La funzionalità dell&#8217;etichetta AIP (Microsoft Azure Information Protection) non può essere integrata.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-restricted-mode.html" target="_blank" rel="noopener">"Ulteriori informazioni sull&#8217;implementazione del connettore in un&#8217;area pubblica"</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="esaminare-i-prerequisiti">Esaminare i prerequisiti</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Esaminare i seguenti prerequisiti per assicurarsi di disporre di una configurazione supportata prima di implementare la classificazione BlueXP nel cloud.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Abilitare l&#8217;accesso a Internet in uscita dalla classificazione BlueXP</dt>
+<dd>
+<p>La classificazione BlueXP richiede l&#8217;accesso a Internet in uscita. Se la rete fisica o virtuale utilizza un server proxy per l&#8217;accesso a Internet, assicurarsi che l&#8217;istanza di classificazione BlueXP disponga dell&#8217;accesso a Internet in uscita per contattare i seguenti endpoint. Quando si implementa la classificazione BlueXP nel cloud, si trova nella stessa subnet del connettore.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Esaminare la tabella appropriata riportata di seguito a seconda che si stia implementando la classificazione BlueXP in AWS, Azure o GCP.</p>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">Endpoint richiesti per AWS</div>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 43%;">
+<col style="width: 57%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Endpoint</th>
+<th class="tableblock halign-left valign-top">Scopo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://api.bluexp.netapp.com" class="bare">https://api.bluexp.netapp.com</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comunicazione con il servizio BlueXP, che include gli account NetApp.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://netapp-cloud-account.auth0.com" class="bare">https://netapp-cloud-account.auth0.com</a> <a href="https://auth0.com" class="bare">https://auth0.com</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comunicazione con il sito Web BlueXP per l&#8217;autenticazione utente centralizzata.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://cloud-compliance-support-netapp.s3.us-west-2.amazonaws.com" class="bare">https://cloud-compliance-support-netapp.s3.us-west-2.amazonaws.com</a> <a href="https://hub.docker.com" class="bare">https://hub.docker.com</a> <a href="https://auth.docker.io" class="bare">https://auth.docker.io</a> <a href="https://registry-1.docker.io" class="bare">https://registry-1.docker.io</a> <a href="https://index.docker.io/" class="bare">https://index.docker.io/</a> <a href="https://dseasb33srnrn.cloudfront.net/" class="bare">https://dseasb33srnrn.cloudfront.net/</a> <a href="https://production.cloudflare.docker.com/" class="bare">https://production.cloudflare.docker.com/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fornisce l&#8217;accesso a immagini, manifesti e modelli software.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://kinesis.us-east-1.amazonaws.com" class="bare">https://kinesis.us-east-1.amazonaws.com</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Consente a NetApp di eseguire lo streaming dei dati dai record di audit.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://cognito-idp.us-east-1.amazonaws.com" class="bare">https://cognito-idp.us-east-1.amazonaws.com</a> <a href="https://cognito-identity.us-east-1.amazonaws.com" class="bare">https://cognito-identity.us-east-1.amazonaws.com</a> <a href="https://user-feedback-store-prod.s3.us-west-2.amazonaws.com" class="bare">https://user-feedback-store-prod.s3.us-west-2.amazonaws.com</a> <a href="https://customer-data-production.s3.us-west-2.amazonaws.com" class="bare">https://customer-data-production.s3.us-west-2.amazonaws.com</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abilita la classificazione BlueXP per accedere e scaricare manifesti e modelli e per inviare registri e metriche.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="openblock">
+<div class="title">Endpoint richiesti per Azure</div>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 43%;">
+<col style="width: 57%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Endpoint</th>
+<th class="tableblock halign-left valign-top">Scopo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://api.bluexp.netapp.com" class="bare">https://api.bluexp.netapp.com</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comunicazione con il servizio BlueXP, che include gli account NetApp.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://netapp-cloud-account.auth0.com" class="bare">https://netapp-cloud-account.auth0.com</a> <a href="https://auth0.com" class="bare">https://auth0.com</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comunicazione con il sito Web BlueXP per l&#8217;autenticazione utente centralizzata.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://support.compliance.api.bluexp.netapp.com/" class="bare">https://support.compliance.api.bluexp.netapp.com/</a> <a href="https://hub.docker.com" class="bare">https://hub.docker.com</a> <a href="https://auth.docker.io" class="bare">https://auth.docker.io</a> <a href="https://registry-1.docker.io" class="bare">https://registry-1.docker.io</a> <a href="https://index.docker.io/" class="bare">https://index.docker.io/</a> <a href="https://dseasb33srnrn.cloudfront.net/" class="bare">https://dseasb33srnrn.cloudfront.net/</a> <a href="https://production.cloudflare.docker.com/" class="bare">https://production.cloudflare.docker.com/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fornisce accesso a immagini software, manifesti, modelli e per inviare registri e metriche.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://support.compliance.api.bluexp.netapp.com/" class="bare">https://support.compliance.api.bluexp.netapp.com/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Consente a NetApp di eseguire lo streaming dei dati dai record di audit.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="openblock">
+<div class="title">Endpoint richiesti per GCP</div>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 43%;">
+<col style="width: 57%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Endpoint</th>
+<th class="tableblock halign-left valign-top">Scopo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://api.bluexp.netapp.com" class="bare">https://api.bluexp.netapp.com</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comunicazione con il servizio BlueXP, che include gli account NetApp.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://netapp-cloud-account.auth0.com" class="bare">https://netapp-cloud-account.auth0.com</a> <a href="https://auth0.com" class="bare">https://auth0.com</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comunicazione con il sito Web BlueXP per l&#8217;autenticazione utente centralizzata.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://support.compliance.api.bluexp.netapp.com/" class="bare">https://support.compliance.api.bluexp.netapp.com/</a> <a href="https://hub.docker.com" class="bare">https://hub.docker.com</a> <a href="https://auth.docker.io" class="bare">https://auth.docker.io</a> <a href="https://registry-1.docker.io" class="bare">https://registry-1.docker.io</a> <a href="https://index.docker.io/" class="bare">https://index.docker.io/</a> <a href="https://dseasb33srnrn.cloudfront.net/" class="bare">https://dseasb33srnrn.cloudfront.net/</a> <a href="https://production.cloudflare.docker.com/" class="bare">https://production.cloudflare.docker.com/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fornisce accesso a immagini software, manifesti, modelli e per inviare registri e metriche.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://support.compliance.api.bluexp.netapp.com/" class="bare">https://support.compliance.api.bluexp.netapp.com/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Consente a NetApp di eseguire lo streaming dei dati dai record di audit.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Assicurarsi che BlueXP disponga delle autorizzazioni necessarie</dt>
+<dd>
+<p>Assicurarsi che BlueXP disponga delle autorizzazioni per distribuire le risorse e creare gruppi di protezione per l&#8217;istanza di classificazione BlueXP. Le autorizzazioni BlueXP più recenti sono disponibili in <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html" target="_blank" rel="noopener">"Le policy fornite da NetApp"</a>.</p>
+</dd>
+<dt class="hdlist1">Assicurarsi che BlueXP Connector possa accedere alla classificazione BlueXP</dt>
+<dd>
+<p>Garantire la connettività tra il connettore e l&#8217;istanza di classificazione BlueXP. Il gruppo di protezione per il connettore deve consentire il traffico in entrata e in uscita sulla porta 443 da e verso l&#8217;istanza di classificazione BlueXP. Questa connessione consente l&#8217;implementazione dell&#8217;istanza di classificazione BlueXP e consente di visualizzare le informazioni nelle schede Compliance e Governance. La classificazione BlueXP è supportata nelle regioni governative di AWS e Azure.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Per le implementazioni di AWS e AWS GovCloud sono richieste regole aggiuntive per i gruppi di sicurezza in entrata e in uscita. Vedere <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html" target="_blank" rel="noopener">"Regole per il connettore in AWS"</a> per ulteriori informazioni.</p>
+</div>
+<div class="paragraph">
+<p>Per le implementazioni di Azure e Azure Government sono richieste regole aggiuntive per i gruppi di sicurezza in entrata e in uscita. Vedere <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-azure.html" target="_blank" rel="noopener">"Regole per il connettore in Azure"</a> per ulteriori informazioni.</p>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Assicurarsi che sia possibile mantenere in esecuzione la classificazione BlueXP</dt>
+<dd>
+<p>L&#8217;istanza di classificazione BlueXP deve rimanere attiva per eseguire una scansione continua dei dati.</p>
+</dd>
+<dt class="hdlist1">Garantire la connettività del browser Web alla classificazione BlueXP</dt>
+<dd>
+<p>Una volta attivata la classificazione BlueXP, assicurarsi che gli utenti accedano all&#8217;interfaccia BlueXP da un host che dispone di una connessione all&#8217;istanza di classificazione BlueXP.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>L&#8217;istanza di classificazione BlueXP utilizza un indirizzo IP privato per garantire che i dati indicizzati non siano accessibili a Internet. Di conseguenza, il browser Web utilizzato per accedere a BlueXP deve disporre di una connessione a tale indirizzo IP privato. Tale connessione può provenire da una connessione diretta al provider cloud (ad esempio, una VPN) o da un host all&#8217;interno della stessa rete dell&#8217;istanza di classificazione BlueXP.</p>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Controllare i limiti della vCPU</dt>
+<dd>
+<p>Assicurati che il limite vCPU del tuo cloud provider consenta l&#8217;implementazione di un&#8217;istanza con il numero necessario di core. È necessario verificare il limite vCPU per la famiglia di istanze pertinente nella regione in cui è in esecuzione BlueXP. <a href="concept-cloud-compliance.html#the-bluexp-classification-instance">"Vedere i tipi di istanza richiesti"</a>.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Per ulteriori informazioni sui limiti delle vCPU, consultare i seguenti collegamenti:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html" target="_blank" rel="noopener">"Documentazione AWS: Quote di servizio Amazon EC2"</a></p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas" target="_blank" rel="noopener">"Documentazione di Azure: Quote vCPU delle macchine virtuali"</a></p>
+</li>
+<li>
+<p><a href="https://cloud.google.com/compute/quotas" target="_blank" rel="noopener">"Documentazione di Google Cloud: Quote delle risorse"</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Si noti che è possibile implementare la classificazione BlueXP su un&#8217;istanza in ambienti cloud AWS con meno CPU e meno RAM, ma l&#8217;utilizzo di questi sistemi presenta delle limitazioni. Vedere <a href="concept-cloud-compliance.html#using-a-smaller-instance-type">"Utilizzando un tipo di istanza più piccolo"</a> per ulteriori informazioni.</p>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="implementare-la-classificazione-bluexp-nel-cloud">Implementare la classificazione BlueXP nel cloud</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Seguire questi passaggi per implementare un&#8217;istanza della classificazione BlueXP nel cloud. Il connettore implementerà l&#8217;istanza nel cloud, quindi installerà il software di classificazione BlueXP su tale istanza.</p>
+</div>
+<div class="paragraph">
+<p>Quando si implementa la classificazione BlueXP da un connettore BlueXP in un ambiente AWS, è possibile selezionare la dimensione predefinita dell&#8217;istanza oppure scegliere tra due tipi di istanze più piccoli. <a href="concept-cloud-compliance.html#using-a-smaller-instance-type">"Vedere i tipi di istanze e le limitazioni disponibili"</a>. Nelle regioni in cui il tipo di istanza predefinito non è disponibile, la classificazione BlueXP viene eseguita su un <a href="reference-instance-types.html">"tipo di istanza alternativo"</a>.</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">Implementazione in AWS</div>
+<div class="content">
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Dal menu di navigazione a sinistra di BlueXP, fare clic su <strong>Governance &gt; Classification</strong>.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cloud_compliance_deploy_start.png" alt="Una schermata che mostra la selezione del pulsante per attivare la classificazione BlueXP."></span></p>
+</div>
+</li>
+<li>
+<p>Fare clic su <strong>Activate Data Sense</strong> (attiva rilevamento dati).</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cloud_compliance_deploy_cloud_aws.png" alt="Una schermata che mostra la selezione del pulsante per implementare la classificazione BlueXP nel cloud."></span></p>
+</div>
+</li>
+<li>
+<p>Dalla pagina <em>Installation</em>, fare clic su <strong>Deploy &gt; Deploy</strong> per utilizzare le dimensioni dell&#8217;istanza "Large" e avviare la procedura guidata di implementazione del cloud.</p>
+<div class="paragraph">
+<p>È inoltre possibile fare clic su <strong>Deploy &gt; Configuration</strong> per scegliere tra due tipi di istanze più piccoli se non si dispone di molti dati da sottoporre a scansione. Ciò consente di risparmiare sui costi del cloud quando si utilizza un&#8217;istanza più piccola. Di seguito viene mostrata una dimensione della risorsa "media".</p>
+</div>
+<div class="paragraph">
+<p>Quindi fare clic su <strong>Deploy</strong> per avviare la procedura guidata di implementazione del cloud.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cloud_deploy_resource_size.png" alt="Una schermata della pagina di distribuzione per scegliere le dimensioni dell&#8217;istanza su cui verrà distribuita la classificazione BlueXP."></span></p>
+</div>
+</li>
+<li>
+<p>La procedura guidata visualizza lo stato di avanzamento durante le fasi di implementazione. In caso di problemi, il sistema si arresta e richiede l&#8217;immissione.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cloud_compliance_wizard_start.png" alt="Schermata della classificazione guidata BlueXP per la distribuzione di una nuova istanza."></span></p>
+</div>
+</li>
+<li>
+<p>Una volta implementata l&#8217;istanza e installata la classificazione BlueXP, fare clic su <strong>Continue to Configuration</strong> (continua alla configurazione) per accedere alla pagina <em>Configuration</em> (Configurazione).</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">Implementazione in Azure</div>
+<div class="content">
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Dal menu di navigazione a sinistra di BlueXP, fare clic su <strong>Governance &gt; Classification</strong>.</p>
+</li>
+<li>
+<p>Fare clic su <strong>Activate Data Sense</strong> (attiva rilevamento dati).</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cloud_compliance_deploy_start.png" alt="Una schermata che mostra la selezione del pulsante per attivare la classificazione BlueXP."></span></p>
+</div>
+</li>
+<li>
+<p>Fare clic su <strong>Deploy</strong> per avviare la procedura guidata di implementazione del cloud.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cloud_compliance_deploy_cloud.png" alt="Una schermata che mostra la selezione del pulsante per implementare la classificazione BlueXP nel cloud."></span></p>
+</div>
+</li>
+<li>
+<p>La procedura guidata visualizza lo stato di avanzamento durante le fasi di implementazione. In caso di problemi, il sistema si arresta e richiede l&#8217;immissione.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cloud_compliance_wizard_start.png" alt="Schermata della classificazione guidata BlueXP per la distribuzione di una nuova istanza."></span></p>
+</div>
+</li>
+<li>
+<p>Una volta implementata l&#8217;istanza e installata la classificazione BlueXP, fare clic su <strong>Continue to Configuration</strong> (continua alla configurazione) per accedere alla pagina <em>Configuration</em> (Configurazione).</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">Implementazione in Google Cloud</div>
+<div class="content">
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Dal menu di navigazione a sinistra di BlueXP, fare clic su <strong>Governance &gt; Classification</strong>.</p>
+</li>
+<li>
+<p>Fare clic su <strong>Activate Data Sense</strong> (attiva rilevamento dati).</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cloud_compliance_deploy_start.png" alt="Una schermata che mostra la selezione del pulsante per attivare la classificazione BlueXP."></span></p>
+</div>
+</li>
+<li>
+<p>Fare clic su <strong>Deploy</strong> per avviare la procedura guidata di implementazione del cloud.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cloud_compliance_deploy_cloud.png" alt="Una schermata che mostra la selezione del pulsante per implementare la classificazione BlueXP nel cloud."></span></p>
+</div>
+</li>
+<li>
+<p>La procedura guidata visualizza lo stato di avanzamento durante le fasi di implementazione. In caso di problemi, il sistema si arresta e richiede l&#8217;immissione.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cloud_compliance_wizard_start.png" alt="Schermata della classificazione guidata BlueXP per la distribuzione di una nuova istanza."></span></p>
+</div>
+</li>
+<li>
+<p>Una volta implementata l&#8217;istanza e installata la classificazione BlueXP, fare clic su <strong>Continue to Configuration</strong> (continua alla configurazione) per accedere alla pagina <em>Configuration</em> (Configurazione).</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Risultato</div>
+<p>BlueXP implementa l&#8217;istanza di classificazione BlueXP nel tuo cloud provider.</p>
+</div>
+<div class="paragraph">
+<p>Gli aggiornamenti al software di classificazione BlueXP Connector e BlueXP sono automatizzati purché le istanze dispongano di connettività Internet.</p>
+</div>
+<div class="paragraph">
+<div class="title">Cosa c&#8217;è di nuovo</div>
+<p>Dalla pagina di configurazione è possibile selezionare le origini dati da sottoporre a scansione.</p>
+</div>
+<div class="paragraph">
+<p>Puoi anche farlo <a href="task-licensing-datasense.html">"Impostare la licenza per la classificazione BlueXP"</a> a questo punto. Non ti verrà addebitato alcun costo fino al termine della prova gratuita di 30 giorni.</p>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/copyright/">© 2023 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Condizioni per l'utilizzo</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Direttiva sulla privacy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Direttiva sui Cookie</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Impostazioni cookie</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a target="_self" href="javascript:netapp_mailto()">Invia feedback su questa pagina</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-data-sense/images/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-data-sense/images/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-data-sense/images/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-data-sense/images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-data-sense/images/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-data-sense/images/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-data-sense/images/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/it-it/cloud-manager-data-sense/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/it-it/cloud-manager-data-sense/js/prism.js'></script>
+      <script type="text/javascript" src='/it-it/cloud-manager-data-sense/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/it-it/cloud-manager-data-sense/js/tabbed-blocks.js'></script>
+    <script src='/it-it/cloud-manager-data-sense/js/sidebar.js'></script>
+  </body></html>
