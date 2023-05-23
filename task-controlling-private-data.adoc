@@ -1,0 +1,138 @@
+---
+sidebar: sidebar 
+permalink: task-controlling-private-data.html 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies 
+summary: Ottieni il controllo dei tuoi dati privati visualizzando i dettagli relativi ai dati personali e ai dati personali sensibili della tua organizzazione. È inoltre possibile ottenere visibilità esaminando le categorie e i tipi di file che BlueXP classifica trovato nei dati. 
+---
+= Visualizzazione dei dettagli di conformità relativi ai dati memorizzati nell'organizzazione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ottieni il controllo dei tuoi dati privati visualizzando i dettagli relativi ai dati personali e ai dati personali sensibili della tua organizzazione. È inoltre possibile ottenere visibilità esaminando le categorie e i tipi di file che BlueXP classifica trovato nei dati.
+
+
+NOTE: Le funzionalità descritte in questa sezione sono disponibili solo se si è scelto di eseguire una scansione di classificazione completa sulle origini dati. Le origini dati che hanno eseguito una scansione solo mappatura non mostrano i dettagli a livello di file.
+
+Per impostazione predefinita, la dashboard di classificazione BlueXP visualizza i dati di conformità per tutti gli ambienti di lavoro e i database.
+
+image:screenshot_compliance_dashboard.png["Una schermata della dashboard di classificazione di BlueXP"]
+
+Se si desidera visualizzare i dati solo per alcuni ambienti di lavoro, <<Visualizzazione dei dati della dashboard per ambienti di lavoro specifici,selezionare gli ambienti di lavoro>>.
+
+È inoltre possibile filtrare i risultati dalla pagina Data Investigation (analisi dati) e scaricare un report dei risultati come file CSV. Vedere link:task-investigate-data.html#filtering-data-in-the-data-investigation-page["Filtraggio dei dati nella pagina Data Investigation"] per ulteriori informazioni.
+
+
+
+== Visualizzazione di file contenenti dati personali
+
+La classificazione BlueXP identifica automaticamente parole, stringhe e modelli specifici (Regex) all'interno dei dati. Ad esempio, informazioni di identificazione personale (PII), numeri di carta di credito, numeri di previdenza sociale, numeri di conto bancario, password, e molto altro ancora. link:reference-private-data-categories.html#types-of-personal-data["Consulta l'elenco completo"^]. La classificazione BlueXP identifica questo tipo di informazioni nei singoli file, nei file all'interno delle directory (condivisioni e cartelle) e nelle tabelle dei database.
+
+Inoltre, se è stato aggiunto un server di database da sottoporre a scansione, la funzione _Data Fusion_ consente di eseguire la scansione dei file per identificare se gli identificatori univoci dei database sono presenti in tali file o in altri database. Vedere link:task-managing-data-fusion.html["Aggiunta di identificatori di dati personali mediante Data Fusion"^] per ulteriori informazioni.
+
+Per alcuni tipi di dati personali, la classificazione BlueXP utilizza _Proximity Validation_ per validarne i risultati. La convalida avviene cercando una o più parole chiave predefinite in prossimità dei dati personali trovati. Ad esempio, la classificazione BlueXP identifica un Numero di previdenza sociale (SSN) come SSN se viene visualizzato un termine di prossimità, ad esempio _SSN_ o _social Security_. link:reference-private-data-categories.html#types-of-personal-data["La tabella dei dati personali"^] Mostra quando la classificazione BlueXP utilizza la convalida di prossimità.
+
+.Fasi
+. Dal menu di navigazione a sinistra di BlueXP, fare clic su *Governance > Classification*, quindi fare clic sulla scheda *Compliance*.
+. Per esaminare i dettagli di tutti i dati personali, fare clic sull'icona accanto alla percentuale dei dati personali.
++
+image:screenshot_compliance_personal.gif["Una schermata che mostra la selezione della percentuale dei dati personali."]
+
+. Per esaminare i dettagli di un tipo specifico di dati personali, fare clic su *Visualizza tutto*, quindi fare clic sull'icona *esamina risultati* per un tipo specifico di dati personali, ad esempio indirizzi e-mail.
++
+image:screenshot_personal_files.gif["Una schermata della finestra di dialogo dei file personali in cui è possibile fare clic sull'icona dei risultati dell'analisi accanto a un tipo di dati personali."]
+
+. Esaminare i dati ricercando, ordinando, espandendo i dettagli di un file specifico, facendo clic su *esamina risultati* per visualizzare le informazioni mascherate o scaricando l'elenco dei file.
++
+Le 2 schermate riportate di seguito mostrano i dati personali presenti nei singoli file e contenuti nei file all'interno delle directory (condivisioni e cartelle). È inoltre possibile selezionare la scheda *Structured* per visualizzare i dati personali trovati nei database.
+
++
+image:screenshot_compliance_investigation_page.png["Una schermata con informazioni dettagliate che si trovano nei file dopo aver fatto clic su Investigate Results (esamina risultati)."]
+
++
+image:screenshot_compliance_investigation_page_directory.png["Una schermata di informazioni dettagliate che si trovano nelle directory dopo aver fatto clic su Investigate Results (esamina risultati)."]
+
+
+
+
+
+== Visualizzazione di file contenenti dati personali sensibili
+
+La classificazione BlueXP identifica automaticamente tipi speciali di informazioni personali sensibili, come definito dalle normative sulla privacy, ad esempio https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN#d1e2051-1-1["articoli 9 e 10 del GDPR"^]. Ad esempio, informazioni relative alla salute, all'origine etnica o all'orientamento sessuale di una persona. link:reference-private-data-categories.html#types-of-sensitive-personal-data["Consulta l'elenco completo"^]. La classificazione BlueXP identifica questo tipo di informazioni nei singoli file, nei file all'interno delle directory (condivisioni e cartelle) e nelle tabelle dei database.
+
+La classificazione BlueXP utilizza l'intelligenza artificiale (ai), l'elaborazione del linguaggio naturale (NLP), l'apprendimento automatico (ML) e il calcolo cognitivo (CC) per comprendere il significato del contenuto che scansiona al fine di estrarre le entità e classificarlo di conseguenza.
+
+Ad esempio, una categoria di dati GDPR sensibili è l'origine etnica. Grazie alle sue capacità NLP, la classificazione BlueXP è in grado di distinguere la differenza tra una frase che recita "George is Mexican" (che indica i dati sensibili come specificato nell'articolo 9 del GDPR) e "George is Eating Mexican Food" (George sta mangiando cibo messicano).
+
+
+NOTE: Quando si esegue la scansione di dati personali sensibili, è supportata solo l'inglese. Il supporto per altre lingue verrà aggiunto in un secondo momento.
+
+.Fasi
+. Dal menu di navigazione a sinistra di BlueXP, fare clic su *Governance > Classification*, quindi fare clic sulla scheda *Compliance*.
+. Per esaminare i dettagli di tutti i dati personali sensibili, fare clic sull'icona accanto alla percentuale dei dati personali sensibili.
++
+image:screenshot_compliance_sensitive_personal.gif["Una schermata che mostra la selezione della percentuale di dati personali sensibili."]
+
+. Per esaminare i dettagli di un tipo specifico di dati personali sensibili, fare clic su *Visualizza tutto*, quindi fare clic sull'icona *esamina risultati* per un tipo specifico di dati personali sensibili.
++
+image:screenshot_sensitive_personal_files.gif["Una schermata della finestra di dialogo dei file personali sensibili in cui è possibile fare clic sull'icona dei risultati dell'analisi accanto a un tipo di dati personali."]
+
+. Esaminare i dati ricercando, ordinando, espandendo i dettagli di un file specifico, facendo clic su *esamina risultati* per visualizzare le informazioni mascherate o scaricando l'elenco dei file.
+
+
+
+
+== Visualizzazione dei file in base alle categorie
+
+La classificazione BlueXP prende i dati sottoposti a scansione e li divide in diversi tipi di categorie. Le categorie sono argomenti basati sull'analisi ai del contenuto e dei metadati di ciascun file. link:reference-private-data-categories.html#types-of-categories["Vedere l'elenco delle categorie"^].
+
+Le categorie possono aiutarti a capire cosa accade con i tuoi dati mostrando i tipi di informazioni di cui disponi. Ad esempio, una categoria come i curriculum o i contratti dei dipendenti può includere dati sensibili. Quando si analizzano i risultati, è possibile che i contratti dei dipendenti siano memorizzati in una posizione non sicura. A questo punto, è possibile correggere il problema.
+
+
+NOTE: Le categorie sono supportate in inglese, tedesco e spagnolo. Il supporto per altre lingue verrà aggiunto in un secondo momento.
+
+.Fasi
+. Dal menu di navigazione a sinistra di BlueXP, fare clic su *Governance > Classification*, quindi fare clic sulla scheda *Compliance*.
+. Fare clic sull'icona *esamina risultati* di una delle 4 categorie principali direttamente dalla schermata principale oppure fare clic su *Visualizza tutto* e quindi sull'icona corrispondente a una delle categorie.
++
+image:screenshot_categories.gif["Una schermata della finestra di dialogo delle categorie in cui è possibile fare clic sull'icona dei risultati dell'analisi accanto a una categoria."]
+
+. Esaminare i dati ricercando, ordinando, espandendo i dettagli di un file specifico, facendo clic su *esamina risultati* per visualizzare le informazioni mascherate o scaricando l'elenco dei file.
+
+
+
+
+== Visualizzazione dei file in base ai tipi di file
+
+La classificazione BlueXP prende i dati sottoposti a scansione e li suddivide in base al tipo di file. La revisione dei tipi di file consente di controllare i dati sensibili, poiché alcuni tipi di file potrebbero non essere memorizzati correttamente. link:reference-private-data-categories.html#types-of-files["Vedere l'elenco dei tipi di file"^].
+
+Ad esempio, è possibile memorizzare file CAD che includono informazioni molto sensibili sull'organizzazione. Se non sono protetti, è possibile assumere il controllo dei dati sensibili limitando le autorizzazioni o spostando i file in un'altra posizione.
+
+.Fasi
+. Dal menu di navigazione a sinistra di BlueXP, fare clic su *Governance > Classification*, quindi fare clic sulla scheda *Compliance*.
+. Fare clic sull'icona *esamina risultati* per uno dei 4 tipi di file principali direttamente dalla schermata principale oppure fare clic su *Visualizza tutto*, quindi fare clic sull'icona corrispondente a uno qualsiasi dei tipi di file.
++
+image:screenshot_file_types.gif["Una schermata della finestra di dialogo tipi di file in cui è possibile fare clic sull'icona analisi dei risultati accanto a un tipo di file."]
+
+. Esaminare i dati ricercando, ordinando, espandendo i dettagli di un file specifico, facendo clic su *esamina risultati* per visualizzare le informazioni mascherate o scaricando l'elenco dei file.
+
+
+
+
+== Visualizzazione dei dati della dashboard per ambienti di lavoro specifici
+
+È possibile filtrare il contenuto della dashboard di classificazione BlueXP per visualizzare i dati di conformità per tutti gli ambienti di lavoro e i database o solo per ambienti di lavoro specifici.
+
+Quando si filtra la dashboard, la classificazione BlueXP regola i dati di conformità e invia report solo agli ambienti di lavoro selezionati.
+
+.Fasi
+. Fare clic sul menu a discesa del filtro, selezionare gli ambienti di lavoro per i quali si desidera visualizzare i dati e fare clic su *View* (Visualizza).
++
+image:screenshot_cloud_compliance_filter.gif["Una schermata che mostra come filtrare i risultati dell'analisi per ambienti di lavoro specifici."]
+
+

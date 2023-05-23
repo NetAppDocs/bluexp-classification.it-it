@@ -1,0 +1,121 @@
+---
+sidebar: sidebar 
+permalink: task-add-active-directory-datasense.html 
+keywords: active directory, ad, data sense, cloud data sense 
+summary: È possibile integrare un Active Directory globale con la classificazione BlueXP per migliorare i risultati che BlueXP fornisce in relazione ai proprietari dei file e agli utenti e ai gruppi che hanno accesso ai file. 
+---
+= Integra Active Directory con la classificazione BlueXP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile integrare un Active Directory globale con la classificazione BlueXP per migliorare i risultati che BlueXP fornisce in relazione ai proprietari dei file e agli utenti e ai gruppi che hanno accesso ai file.
+
+Quando si impostano determinate origini dati (elencate di seguito), è necessario immettere le credenziali Active Directory per consentire alla classificazione BlueXP di eseguire la scansione dei volumi CIFS. Questa integrazione fornisce la classificazione BlueXP con i dettagli relativi al proprietario del file e alle autorizzazioni per i dati che risiedono in tali origini dati. L'Active Directory immessa per tali origini dati potrebbe essere diversa dalle credenziali globali di Active Directory inserite qui. La classificazione BlueXP cerca in tutte le Active Directory integrate i dettagli relativi all'utente e alle autorizzazioni.
+
+Questa integrazione fornisce informazioni aggiuntive nelle seguenti posizioni della classificazione BlueXP:
+
+* È possibile utilizzare il "proprietario del file" link:task-investigate-data.html#filtering-data-in-the-data-investigation-page["filtro"] E visualizzare i risultati nei metadati del file nel riquadro di analisi. Al posto del proprietario del file che contiene il SID (Security identifier), viene inserito il nome utente effettivo.
+* Puoi vedere link:task-investigate-data.html#viewing-permissions-for-files-and-directories["autorizzazioni complete per i file"] Per ogni file e directory quando si fa clic sul pulsante "View All Permissions" (Visualizza tutte le autorizzazioni).
+* In link:task-controlling-governance-data.html["Dashboard di governance"], Il pannello Open Permissions (autorizzazioni aperte) mostra un livello di dettaglio maggiore sui dati.
+
+
+
+NOTE: I SID degli utenti locali e i SID dei domini sconosciuti non vengono convertiti nel nome utente effettivo.
+
+
+
+== Origini dati supportate
+
+L'integrazione di Active Directory con la classificazione BlueXP consente di identificare i dati dalle seguenti origini dati:
+
+* Sistemi ONTAP on-premise
+* Cloud Volumes ONTAP
+* Azure NetApp Files
+* FSX per ONTAP
+* Condivisioni file CIFS non NetApp (non condivisioni file NFS)
+* Account OneDrive
+* Account SharePoint
+
+
+Non è disponibile alcun supporto per l'identificazione delle informazioni relative a utenti e autorizzazioni da schemi di database, account Google Drive, account Amazon S3 o storage a oggetti che utilizzano il protocollo S3 (Simple Storage Service).
+
+
+
+== Connessione al server Active Directory
+
+Dopo aver implementato la classificazione BlueXP e aver attivato la scansione sulle origini dati, è possibile integrare la classificazione BlueXP con Active Directory. È possibile accedere ad Active Directory utilizzando un indirizzo IP del server DNS o un indirizzo IP del server LDAP.
+
+Le credenziali di Active Directory possono essere di sola lettura, ma fornendo credenziali di amministratore si garantisce che la classificazione BlueXP possa leggere tutti i dati che richiedono autorizzazioni elevate. Le credenziali vengono memorizzate nell'istanza di classificazione BlueXP.
+
+Per volumi CIFS/condivisioni file, se si desidera assicurarsi che i file "ultimi tempi di accesso" siano invariati dalle scansioni di classificazione BlueXP, si consiglia di disporre dell'autorizzazione Write Attributes. Se possibile, si consiglia di far parte dell'utente configurato con Active Directory di un gruppo principale dell'organizzazione che dispone delle autorizzazioni per tutti i file.
+
+.Requisiti
+* È necessario che sia già stata configurata una Active Directory per gli utenti della società.
+* È necessario disporre delle informazioni per Active Directory:
++
+** Indirizzo IP del server DNS o indirizzi IP multipli
++
+oppure
+
++
+Indirizzo IP del server LDAP o indirizzi IP multipli
+
+** User Name (Nome utente) e Password per accedere al server
+** Domain Name (Nome di Active Directory) (Nome di dominio)
+** Se si utilizza o meno LDAP sicuro (LDAPS)
+** Porta server LDAP (generalmente 389 per LDAP e 636 per LDAP sicuro)
+
+
+* Le seguenti porte devono essere aperte per la comunicazione in uscita dall'istanza di classificazione BlueXP:
++
+[cols="20,20,30,30"]
+|===
+| Protocollo | Porta | Destinazione | Scopo 
+
+
+| TCP E UDP | 389 | Active Directory | LDAP 
+
+
+| TCP | 636 | Active Directory | LDAP su SSL 
+
+
+| TCP | 3268 | Active Directory | Catalogo globale 
+
+
+| TCP | 3269 | Active Directory | Catalogo globale su SSL 
+|===
+
+
+.Fasi
+. Dalla pagina di configurazione della classificazione BlueXP, fare clic su *Add Active Directory* (Aggiungi Active Directory).
++
+image:screenshot_compliance_integrate_active_directory.png["Una schermata che mostra facendo clic sul pulsante per aggiungere un server Active Directory alla classificazione BlueXP."]
+
+. Nella finestra di dialogo connessione ad Active Directory, immettere i dettagli di Active Directory e fare clic su *Connetti*.
++
+Se necessario, è possibile aggiungere più indirizzi IP facendo clic su *Add IP* (Aggiungi indirizzo IP).
+
++
+image:screenshot_compliance_active_directory_dialog.png["Una schermata della finestra di dialogo in cui definire l'Active Directory che si desidera integrare con la classificazione BlueXP."]
+
++
+La classificazione BlueXP si integra con Active Directory e viene aggiunta una nuova sezione alla pagina di configurazione.
+
++
+image:screenshot_compliance_active_directory_added.png["Una schermata che mostra la nuova Active Directory integrata nella classificazione BlueXP."]
+
+
+
+
+
+== Gestione dell'integrazione di Active Directory
+
+Se è necessario modificare i valori dell'integrazione di Active Directory, fare clic sul pulsante *Edit* (Modifica) e apportare le modifiche.
+
+È inoltre possibile eliminare l'integrazione se non è più necessaria facendo clic su image:screenshot_gallery_options.gif["Pulsante More (Altro)"] E quindi *Rimuovi Active Directory*.

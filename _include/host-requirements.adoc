@@ -1,0 +1,66 @@
+= 
+:allow-uri-read: 
+
+
+* La classificazione BlueXP non è supportata su un host condiviso con altre applicazioni: L'host deve essere un host dedicato.
+
+
+* Quando si costruisce il sistema host in sede, è possibile scegliere tra tre dimensioni del sistema a seconda delle dimensioni del set di dati che si prevede di sottoporre a scansione di classificazione BlueXP.
++
+[cols="18,18,26,30"]
+|===
+| Dimensioni del sistema | CPU | RAM (la memoria di swap deve essere disattivata) | Disco 
+
+
+| *Grande* | 16 CPU | 64 GB DI RAM | 500 GiB SSD ON /, o - 100 GiB Available on /opt - 395 GiB Available on /var - 5 GiB on /tmp 
+
+
+| *Medio* | 8 CPU | 32 GB DI RAM | 200 GiB SSD ON /, o - 50 GiB Available on /opt - 145 GiB Available on /var - 5 GiB on /tmp 
+
+
+| *Piccolo* | 8 CPU | 16 GB DI RAM | 100 GiB SSD ON /, o - 50 GiB Available on /opt - 45 GiB Available on /var - 5 GiB on /tmp 
+|===
++
+Si noti che l'utilizzo di questi sistemi più piccoli presenta delle limitazioni. Vedere link:concept-cloud-compliance.html#using-a-smaller-instance-type["Utilizzando un tipo di istanza più piccolo"] per ulteriori informazioni.
+
+* *UNIX folder permissions*: Sono richieste le seguenti autorizzazioni minime per UNIX:
++
+[cols="25,25"]
+|===
+| Cartella | Permessi minimi 
+
+
+| /tmp | `rwxrwxrwt` 
+
+
+| /opz | `rwxr-xr-x` 
+
+
+| /var/lib/docker | `rwx------` 
+
+
+| /user/lib/systemd/system | `rwxr-xr-x` 
+|===
+* Quando si implementa un'istanza di calcolo nel cloud per l'installazione della classificazione BlueXP, si consiglia di utilizzare un sistema che soddisfi i requisiti di sistema "grandi" indicati in precedenza:
++
+** *Tipo di istanza AWS EC2*: Si consiglia "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types["Vedere altri tipi di istanze AWS"^].
+** *Dimensione delle macchine virtuali Azure*: Si consiglia "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types["Vedere altri tipi di istanze di Azure"^].
+** *Tipo di macchina GCP*: Si consiglia "n2-standard-16". link:reference-instance-types.html#gcp-instance-types["Vedere altri tipi di istanze GCP"^].
+
+
+* *Sistema operativo*: Il sistema operativo deve essere in grado di installare il motore di docker.
++
+** Red Hat Enterprise Linux versioni da 8.0 a 8.7
+** CentOS versioni da 8.0 a 8.7
+** CentOS Stream 8
+** È possibile utilizzare RHEL o CentOS versione 7.8 o 7.9, ma la versione del kernel Linux deve essere 4.0 o superiore
+
+
+* *Red Hat Subscription Management*: L'host deve essere registrato con Red Hat Subscription Management. Se non è registrato, il sistema non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione.
+* *Software aggiuntivo*: È necessario installare il seguente software sull'host prima di installare la classificazione BlueXP:
++
+** Docker Engine versione 19.3.1 o successiva. https://docs.docker.com/engine/install/["Visualizzare le istruzioni di installazione"^].
+** Python 3 versione 3.6 o successiva. https://www.python.org/downloads/["Visualizzare le istruzioni di installazione"^].
+
+
+

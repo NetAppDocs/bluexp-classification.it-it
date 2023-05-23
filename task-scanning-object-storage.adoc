@@ -1,0 +1,124 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-object-storage.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, object storage, data sense 
+summary: 'Completare alcuni passaggi per avviare la scansione dei dati all"interno dello storage a oggetti direttamente con la classificazione BlueXP. La classificazione BlueXP consente di eseguire la scansione dei dati da qualsiasi servizio di storage a oggetti che utilizza il protocollo S3 (Simple Storage Service). Tra cui NetApp StorageGRID, IBM Cloud Object Store, Linode, B2 Cloud Storage, Amazon S3 e molto altro ancora.' 
+---
+= Scansione dello storage a oggetti che utilizza il protocollo S3
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Completare alcuni passaggi per avviare la scansione dei dati all'interno dello storage a oggetti direttamente con la classificazione BlueXP. La classificazione BlueXP consente di eseguire la scansione dei dati da qualsiasi servizio di storage a oggetti che utilizza il protocollo S3 (Simple Storage Service). Tra cui NetApp StorageGRID, IBM Cloud Object Store, Linode, B2 Cloud Storage, Amazon S3 e molto altro ancora.
+
+
+
+== Avvio rapido
+
+Inizia subito seguendo questi passaggi o scorri verso il basso fino alle sezioni rimanenti per ottenere dettagli completi.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Esaminare i prerequisiti dello storage a oggetti
+[role="quick-margin-para"]
+Per connettersi al servizio di storage a oggetti, è necessario disporre dell'URL dell'endpoint.
+
+[role="quick-margin-para"]
+È necessario disporre della chiave di accesso e della chiave segreta del provider di storage a oggetti, in modo che la classificazione BlueXP possa accedere ai bucket.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Distribuire l'istanza di classificazione BlueXP
+[role="quick-margin-para"]
+link:task-deploy-cloud-compliance.html["Implementare la classificazione BlueXP"^] se non è già stata implementata un'istanza.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Aggiungere il servizio di storage a oggetti
+[role="quick-margin-para"]
+Aggiungere il servizio di storage a oggetti alla classificazione BlueXP.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Selezionare i bucket da sottoporre a scansione
+[role="quick-margin-para"]
+Selezionare i bucket che si desidera sottoporre a scansione e la classificazione BlueXP inizierà a eseguirne la scansione.
+
+
+
+== Analisi dei requisiti di storage a oggetti
+
+Prima di attivare la classificazione BlueXP, verificare di disporre di una configurazione supportata.
+
+* Per connettersi al servizio di storage a oggetti, è necessario disporre dell'URL dell'endpoint.
+* È necessario disporre della chiave di accesso e della chiave segreta del provider di storage a oggetti, in modo che la classificazione BlueXP possa accedere ai bucket.
+
+
+
+
+== Implementazione dell'istanza di classificazione BlueXP
+
+Distribuire la classificazione BlueXP se non è già stata implementata un'istanza.
+
+Se si esegue la scansione di dati dallo storage a oggetti S3 accessibile tramite Internet, è possibile link:task-deploy-cloud-compliance.html["Implementare la classificazione BlueXP nel cloud"^] oppure link:task-deploy-compliance-onprem.html["Implementare la classificazione BlueXP in una posizione on-premise con accesso a Internet"^].
+
+Se si esegue la scansione di dati dallo storage a oggetti S3 installato in un sito buio che non dispone di accesso a Internet, è necessario link:task-deploy-compliance-dark-site.html["Implementare la classificazione BlueXP nella stessa posizione on-premise che non dispone di accesso a Internet"^]. Ciò richiede anche che BlueXP Connector sia implementato nella stessa posizione on-premise.
+
+Gli aggiornamenti al software di classificazione BlueXP sono automatizzati finché l'istanza dispone di connettività Internet.
+
+
+
+== Aggiunta del servizio di storage a oggetti alla classificazione BlueXP
+
+Aggiungere il servizio di storage a oggetti.
+
+.Fasi
+. Dalla pagina Working Environments Configuration (Configurazione ambienti di lavoro), fare clic su *Add Data Source* (Aggiungi origine dati) > *Add Object Storage Service* (Aggiungi servizio di storage a oggetti).
++
+image:screenshot_compliance_add_object_storage_button.png["Una schermata della pagina Scan Configuration (Configurazione scansione) in cui è possibile fare clic sul pulsante Add file shares Group (Aggiungi gruppo condivisioni file)."]
+
+. Nella finestra di dialogo Add Object Storage Service (Aggiungi servizio di storage a oggetti), immettere i dettagli del servizio di storage a oggetti e fare clic su *Continue* (continua).
++
+.. Immettere il nome che si desidera utilizzare per l'ambiente di lavoro. Questo nome deve riflettere il nome del servizio di storage a oggetti a cui ci si connette.
+.. Inserire l'URL dell'endpoint per accedere al servizio di storage a oggetti.
+.. Inserire la chiave di accesso e la chiave segreta in modo che la classificazione BlueXP possa accedere ai bucket nello storage a oggetti.
++
+image:screenshot_compliance_add_object_storage.png["Una schermata della finestra di dialogo in cui inserire i valori per accedere al servizio di storage a oggetti."]
+
+
+
+
+
+.Risultato
+Il nuovo servizio di storage a oggetti viene aggiunto all'elenco degli ambienti di lavoro.
+
+
+
+== Attivazione e disattivazione delle scansioni di compliance nei bucket di storage a oggetti
+
+Dopo aver attivato la classificazione BlueXP sul servizio di storage a oggetti, il passaggio successivo consiste nel configurare i bucket che si desidera sottoporre a scansione. La classificazione BlueXP rileva tali bucket e li visualizza nell'ambiente di lavoro creato.
+
+.Fasi
+. Nella pagina Configuration (Configurazione), fare clic su *Configuration* (Configurazione) dall'ambiente di lavoro Object Storage Service (Servizio di archiviazione oggetti).
++
+image:screenshot_compliance_object_storage_config.png["Una schermata di fare clic su Configuration (Configurazione) per l'ambiente di lavoro in modo da poter scegliere i bucket da sottoporre a scansione."]
+
+. Abilita scansioni di sola mappatura o scansioni di mappatura e classificazione sui bucket.
++
+image:screenshot_compliance_object_storage_select_buckets.png["Una schermata che mostra la selezione dei bucket di storage a oggetti che si desidera sottoporre a scansione."]
+
++
+[cols="45,45"]
+|===
+| A: | Eseguire questa operazione: 
+
+
+| Attivare scansioni solo mappatura su un bucket | Fare clic su *Map* (Mappa) 
+
+
+| Abilitare scansioni complete su un bucket | Fare clic su *Map & Classify* (Mappa e classificazione) 
+
+
+| Disattivare la scansione su un bucket | Fare clic su *Off* 
+|===
+
+
+.Risultato
+La classificazione BlueXP avvia la scansione dei bucket attivati. In caso di errori, questi vengono visualizzati nella colonna Status (Stato), insieme all'azione richiesta per risolvere l'errore.

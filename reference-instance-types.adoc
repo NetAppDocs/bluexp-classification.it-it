@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: reference-instance-types.html 
+keywords: BlueXP classification, installation, deployment, instance, virtual machine, cpu, ram, memory, disk, capacity 
+summary: 'Il software di classificazione BlueXP deve essere eseguito su un host che soddisfi requisiti specifici del sistema operativo, requisiti di RAM, requisiti software e così via. Quando si implementa la classificazione BlueXP nel cloud, si consiglia di utilizzare un sistema con le caratteristiche "grandi" per una funzionalità completa.' 
+---
+= Tipi di istanze di classificazione BlueXP supportati
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il software di classificazione BlueXP deve essere eseguito su un host che soddisfi requisiti specifici del sistema operativo, requisiti di RAM, requisiti software e così via. Quando si implementa la classificazione BlueXP nel cloud, si consiglia di utilizzare un sistema con le caratteristiche "grandi" per una funzionalità completa.
+
+È possibile implementare la classificazione BlueXP su un sistema con meno CPU e meno RAM, ma ci sono alcune limitazioni quando si utilizzano questi sistemi meno potenti. link:concept-cloud-compliance.html#using-a-smaller-instance-type["Scopri queste limitazioni"^].
+
+Nelle tabelle seguenti, se il sistema contrassegnato come "predefinito" non è disponibile nella regione in cui si sta installando la classificazione BlueXP, verrà implementato il sistema successivo nella tabella.
+
+
+
+== Tipi di istanze AWS
+
+[cols="20,30,25"]
+|===
+| Dimensioni del sistema | Specifiche | Tipo di istanza 
+
+
+| Grande | 16 CPU, 64 GB di RAM, SSD da 500 GiB | https://aws.amazon.com/ec2/instance-types/m6i/["m6i.4xlarge"^] (impostazione predefinita) m6a.4xlarge m5a.4xlarge m5.4xlarge m4.4xlarge 
+
+
+| Medio | 8 CPU, 32 GB di RAM, SSD da 200 GiB | https://aws.amazon.com/ec2/instance-types/m6i/["m6i.2xlarge"^] (impostazione predefinita) m6a.2xlarge m5a.2xlarge m5.2xlarge m4.2xlarge 
+
+
+| Piccolo | 8 CPU, 16 GB di RAM, SSD da 100 GiB | https://aws.amazon.com/ec2/instance-types/c6a/["c6a.2xlarge"^] (impostazione predefinita) c5a.2xlarge c5.2xlarge c4.2xlarge 
+|===
+
+
+== Tipi di istanze di Azure
+
+[cols="20,30,25"]
+|===
+| Dimensioni del sistema | Specifiche | Tipo di istanza 
+
+
+| Grande | 16 CPU, 64 GB di RAM, SSD da 500 GiB | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D16s_v3"^] (impostazione predefinita) 
+|===
+
+
+== Tipi di istanze GCP
+
+[cols="20,30,25"]
+|===
+| Dimensioni del sistema | Specifiche | Tipo di istanza 
+
+
+| Grande | 16 CPU, 64 GB di RAM, SSD da 500 GiB | https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines["n2-standard-16"^] (impostazione predefinita) n2d-standard-16 n1-standard-16 
+|===

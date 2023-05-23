@@ -1,0 +1,258 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-s3.html 
+keywords: cloud compliance, amazon s3, s3 buckets, amazon s3 buckets, scan s3 buckets, scan amazon s3 buckets, enable compliance s3, enable compliance on s3, s3 working environment, data sense 
+summary: 'La classificazione BlueXP consente di eseguire la scansione dei bucket Amazon S3 per identificare i dati personali e sensibili presenti nello storage a oggetti S3. La classificazione BlueXP può eseguire la scansione di qualsiasi bucket dell"account, indipendentemente dal fatto che sia stato creato per una soluzione NetApp.' 
+---
+= Introduzione alla classificazione BlueXP per Amazon S3
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La classificazione BlueXP consente di eseguire la scansione dei bucket Amazon S3 per identificare i dati personali e sensibili presenti nello storage a oggetti S3. La classificazione BlueXP può eseguire la scansione di qualsiasi bucket dell'account, indipendentemente dal fatto che sia stato creato per una soluzione NetApp.
+
+
+
+== Avvio rapido
+
+Inizia subito seguendo questi passaggi o scorri verso il basso fino alle sezioni rimanenti per ottenere dettagli completi.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Imposta i requisiti S3 nel tuo ambiente cloud
+[role="quick-margin-para"]
+Assicurati che il tuo ambiente cloud sia in grado di soddisfare i requisiti per la classificazione BlueXP, inclusa la preparazione di un ruolo IAM e la configurazione della connettività dalla classificazione BlueXP a S3. <<Verifica dei prerequisiti di S3,Consulta l'elenco completo>>.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Distribuire l'istanza di classificazione BlueXP
+[role="quick-margin-para"]
+link:task-deploy-cloud-compliance.html["Implementare la classificazione BlueXP"^] se non è già stata implementata un'istanza.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Attivare la classificazione BlueXP nell'ambiente di lavoro S3
+[role="quick-margin-para"]
+Selezionare l'ambiente di lavoro Amazon S3, fare clic su *Enable* (attiva) e selezionare un ruolo IAM che includa le autorizzazioni richieste.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Selezionare i bucket da sottoporre a scansione
+[role="quick-margin-para"]
+Selezionare i bucket che si desidera sottoporre a scansione e la classificazione BlueXP inizierà a eseguirne la scansione.
+
+
+
+== Verifica dei prerequisiti di S3
+
+I seguenti requisiti sono specifici per la scansione dei bucket S3.
+
+[[policy-requirements]]
+Impostare un ruolo IAM per l'istanza di classificazione BlueXP:: La classificazione BlueXP richiede autorizzazioni per connettersi ai bucket S3 del tuo account e per eseguirne la scansione. Impostare un ruolo IAM che includa le autorizzazioni elencate di seguito. BlueXP richiede di selezionare un ruolo IAM quando si attiva la classificazione BlueXP nell'ambiente di lavoro Amazon S3.
++
+--
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Effect": "Allow",
+          "Action": [
+              "s3:Get*",
+              "s3:List*",
+              "s3:PutObject"
+          ],
+          "Resource": "*"
+      },
+      {
+          "Effect": "Allow",
+          "Action": [
+              "iam:GetPolicyVersion",
+              "iam:GetPolicy",
+              "iam:ListAttachedRolePolicies"
+          ],
+          "Resource": [
+              "arn:aws:iam::*:policy/*",
+              "arn:aws:iam::*:role/*"
+          ]
+      }
+  ]
+}
+----
+--
+Fornire connettività dalla classificazione BlueXP ad Amazon S3:: La classificazione BlueXP richiede una connessione ad Amazon S3. Il modo migliore per fornire tale connessione è tramite un endpoint VPC al servizio S3. Per istruzioni, vedere https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["Documentazione AWS: Creazione di un endpoint gateway"^].
++
+--
+Quando si crea l'endpoint VPC, assicurarsi di selezionare la regione, il VPC e la tabella di routing che corrispondono all'istanza di classificazione BlueXP. È inoltre necessario modificare il gruppo di protezione per aggiungere una regola HTTPS in uscita che abilita il traffico all'endpoint S3. In caso contrario, la classificazione BlueXP non può connettersi al servizio S3.
+
+In caso di problemi, vedere https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/["AWS Support Knowledge Center: Perché non è possibile connettersi a un bucket S3 utilizzando un endpoint VPC gateway?"^]
+
+In alternativa, è possibile stabilire la connessione utilizzando un gateway NAT.
+
+
+NOTE: Non puoi utilizzare un proxy per accedere a S3 tramite Internet.
+
+--
+
+
+
+
+== Implementazione dell'istanza di classificazione BlueXP
+
+link:task-deploy-cloud-compliance.html["Implementare la classificazione BlueXP in BlueXP"^] se non è già stata implementata un'istanza.
+
+È necessario implementare l'istanza utilizzando un connettore implementato in AWS in modo che BlueXP scopra automaticamente i bucket S3 in questo account AWS e li visualizzi in un ambiente di lavoro Amazon S3.
+
+*Nota:* l'implementazione della classificazione BlueXP in una posizione on-premise non è attualmente supportata durante la scansione dei bucket S3.
+
+Gli aggiornamenti al software di classificazione BlueXP sono automatizzati finché l'istanza dispone di connettività Internet.
+
+
+
+== Attivazione della classificazione BlueXP nell'ambiente di lavoro S3
+
+Abilitare la classificazione BlueXP su Amazon S3 dopo aver verificato i prerequisiti.
+
+.Fasi
+. Dal menu di navigazione a sinistra di BlueXP, fare clic su *Storage > Canvas*.
+. Selezionare l'ambiente di lavoro Amazon S3.
++
+image:screenshot_s3_we.gif["Schermata dell'icona di un ambiente di lavoro Amazon S3"]
+
+. Nel riquadro servizi a destra, fare clic su *Enable* (attiva) accanto a *Classification* (classificazione).
++
+image:screenshot_s3_enable_compliance.png["Schermata di attivazione del servizio di classificazione BlueXP dal pannello servizi"]
+
+. Quando richiesto, assegnare un ruolo IAM all'istanza di classificazione BlueXP che ha <<Verifica dei prerequisiti di S3,le autorizzazioni richieste>>.
++
+image:screenshot_s3_compliance_iam_role.png["Una schermata che mostra l'inserimento del ruolo AWS IAM per la classificazione BlueXP"]
+
+. Fare clic su *Enable* (attiva).
+
+
+
+TIP: È inoltre possibile attivare le scansioni di conformità per un ambiente di lavoro dalla pagina di configurazione facendo clic su image:screenshot_gallery_options.gif[""] E selezionando *Activate BlueXP classification* (attiva classificazione BlueXP).
+
+.Risultato
+BlueXP assegna il ruolo IAM all'istanza.
+
+
+
+== Attivazione e disattivazione delle scansioni di compliance sui bucket S3
+
+Dopo che BlueXP ha attivato la classificazione BlueXP su Amazon S3, il passaggio successivo consiste nella configurazione dei bucket che si desidera sottoporre a scansione.
+
+Quando BlueXP viene eseguito nell'account AWS che dispone dei bucket S3 che si desidera sottoporre a scansione, rileva tali bucket e li visualizza in un ambiente di lavoro Amazon S3.
+
+La classificazione BlueXP può anche <<Scansione dei bucket da account AWS aggiuntivi,Eseguire la scansione dei bucket S3 che si trovano in diversi account AWS>>.
+
+.Fasi
+. Selezionare l'ambiente di lavoro Amazon S3.
+. Nel riquadro servizi a destra, fare clic su *Configura bucket*.
++
+image:screenshot_s3_configure_buckets.png["Una schermata di fare clic su Configure Bucket (Configura bucket) per scegliere i bucket S3 che si desidera sottoporre a scansione"]
+
+. Abilita scansioni di sola mappatura o scansioni di mappatura e classificazione sui bucket.
++
+image:screenshot_s3_select_buckets.png["Una schermata che mostra la selezione dei bucket S3 che si desidera sottoporre a scansione"]
+
++
+[cols="45,45"]
+|===
+| A: | Eseguire questa operazione: 
+
+
+| Attivare scansioni solo mappatura su un bucket | Fare clic su *Map* (Mappa) 
+
+
+| Abilitare scansioni complete su un bucket | Fare clic su *Map & Classify* (Mappa e classificazione) 
+
+
+| Disattivare la scansione su un bucket | Fare clic su *Off* 
+|===
+
+
+.Risultato
+La classificazione BlueXP avvia la scansione dei bucket S3 abilitati. In caso di errori, questi vengono visualizzati nella colonna Status (Stato), insieme all'azione richiesta per risolvere l'errore.
+
+
+
+== Scansione dei bucket da account AWS aggiuntivi
+
+È possibile eseguire la scansione dei bucket S3 che si trovano sotto un account AWS diverso assegnando un ruolo da tale account per accedere all'istanza di classificazione BlueXP esistente.
+
+.Fasi
+. Accedere all'account AWS di destinazione in cui si desidera eseguire la scansione dei bucket S3 e creare un ruolo IAM selezionando *un altro account AWS*.
++
+image:screenshot_iam_create_role.gif["Una schermata della pagina AWS per creare un ruolo IAM."]
+
++
+Assicurarsi di effettuare le seguenti operazioni:
+
++
+** Inserire l'ID dell'account in cui risiede l'istanza di classificazione BlueXP.
+** Modificare la *durata massima della sessione CLI/API* da 1 ora a 12 ore e salvare la modifica.
+** Allegare il criterio IAM di classificazione BlueXP. Assicurarsi che disponga delle autorizzazioni necessarie.
++
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Effect": "Allow",
+          "Action": [
+              "s3:Get*",
+              "s3:List*",
+              "s3:PutObject"
+          ],
+          "Resource": "*"
+      },
+  ]
+}
+----
+
+
+. Accedere all'account AWS di origine in cui risiede l'istanza di classificazione BlueXP e selezionare il ruolo IAM associato all'istanza.
++
+.. Modificare la *durata massima della sessione CLI/API* da 1 ora a 12 ore e salvare la modifica.
+.. Fare clic su *Allega policy*, quindi su *Crea policy*.
+.. Creare un criterio che includa l'azione "sts:AssumeRole" e specificare l'ARN del ruolo creato nell'account di destinazione.
++
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "sts:AssumeRole",
+            "Resource": "arn:aws:iam::<ADDITIONAL-ACCOUNT-ID>:role/<ADDITIONAL_ROLE_NAME>"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetPolicyVersion",
+                "iam:GetPolicy",
+                "iam:ListAttachedRolePolicies"
+            ],
+            "Resource": [
+                "arn:aws:iam::*:policy/*",
+                "arn:aws:iam::*:role/*"
+            ]
+        }
+    ]
+}
+----
++
+L'account del profilo dell'istanza di classificazione BlueXP ora ha accesso all'account AWS aggiuntivo.
+
+
+
+. Accedere alla pagina *Amazon S3 Configuration* (Configurazione Amazon S3) per visualizzare il nuovo account AWS. Nota: La sincronizzazione dell'ambiente di lavoro del nuovo account e la visualizzazione di queste informazioni possono richiedere alcuni minuti prima che la classificazione BlueXP venga eseguita.
++
+image:screenshot_activate_and_select_buckets.png["Una schermata che mostra come attivare la classificazione BlueXP."]
+
+. Fare clic su *Activate BlueXP classification & Select Bucket* (attiva classificazione BlueXP e seleziona bucket) e selezionare i bucket da sottoporre a scansione.
+
+
+.Risultato
+La classificazione BlueXP avvia la scansione dei nuovi bucket S3 abilitati.

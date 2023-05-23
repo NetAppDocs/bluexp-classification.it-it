@@ -1,0 +1,238 @@
+---
+sidebar: sidebar 
+permalink: task-generating-compliance-reports.html 
+keywords: report, privacy, risk, privacy risk assessment, compliance status, severity, compliance, privacy risk, data subjects, privacy, credit cards, pci dss, hipaa, csv file, json file, dsar 
+summary: La classificazione BlueXP fornisce report che è possibile utilizzare per comprendere meglio lo stato del programma per la privacy dei dati della tua organizzazione. 
+---
+= Visualizzazione dei report di conformità
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La classificazione BlueXP fornisce report che è possibile utilizzare per comprendere meglio lo stato del programma per la privacy dei dati della tua organizzazione.
+
+Per impostazione predefinita, le dashboard di classificazione di BlueXP visualizzano i dati di conformità e governance per tutti gli ambienti di lavoro, i database e le origini dati. Se si desidera visualizzare report contenenti dati solo per alcuni ambienti di lavoro, <<Selezione degli ambienti di lavoro per i report,selezionare gli ambienti di lavoro>>.
+
+[NOTE]
+====
+* I report descritti in questa sezione sono disponibili solo se si è scelto di eseguire una scansione di classificazione completa sulle origini dati. Le origini dati che hanno eseguito una scansione solo mappatura possono generare solo il report di mappatura dei dati.
+* NetApp non può garantire la precisione del 100% dei dati personali e dei dati personali sensibili identificati dalla classificazione BlueXP. È sempre necessario convalidare le informazioni esaminando i dati.
+
+
+====
+
+
+== Report sulla valutazione dei rischi per la privacy
+
+Il report sulla valutazione dei rischi per la privacy fornisce una panoramica dello stato di rischio per la privacy della tua organizzazione, come richiesto dalle normative sulla privacy come GDPR e CCPA. Il report contiene le seguenti informazioni:
+
+Stato di compliance:: R <<Punteggio di severità,punteggio di severità>> e la distribuzione dei dati, sia che si tratti di dati personali, non sensibili o sensibili.
+Panoramica della valutazione:: Analisi dei tipi di dati personali rilevati, nonché delle categorie di dati.
+Argomenti trattati in questa valutazione:: Il numero di persone, per località, per le quali sono stati trovati identificatori nazionali.
+
+
+
+
+=== Generazione del report sulla valutazione dei rischi per la privacy
+
+Accedere alla scheda Compliance per generare il report.
+
+.Fasi
+. Dal menu BlueXP, fare clic su *Governance > Classification*.
+. Fare clic su *Compliance*, quindi fare clic sull'icona di download accanto a *Privacy Risk Assessment* sotto *Report*.
++
+image:screenshot_privacy_risk_assessment.gif["Una schermata della scheda Compliance di BlueXP che mostra il riquadro Reports (Report) in cui è possibile fare clic su Privacy Risk Assessment (Valutazione dei rischi per la privacy)."]
+
+
+
+.Risultato
+La classificazione BlueXP genera un report in formato PDF che è possibile rivedere e inviare ad altri gruppi in base alle esigenze.
+
+
+
+=== Punteggio di severità
+
+La classificazione BlueXP calcola il punteggio di severità per il Privacy Risk Assessment Report sulla base di tre variabili:
+
+* La percentuale di dati personali su tutti i dati.
+* La percentuale di dati personali sensibili rispetto a tutti i dati.
+* La percentuale di file che includono soggetti dati, determinata da identificatori nazionali come ID nazionali, numeri di previdenza sociale e numeri di identificazione fiscale.
+
+
+La logica utilizzata per determinare il punteggio è la seguente:
+
+[cols="27,73"]
+|===
+| Punteggio di severità | Logica 
+
+
+| 0 | Tutte e tre le variabili sono esattamente 0% 
+
+
+| 1 | Una delle variabili è maggiore dello 0% 
+
+
+| 2 | Una delle variabili è maggiore del 3% 
+
+
+| 3 | Due delle variabili sono maggiori del 3% 
+
+
+| 4 | Tre delle variabili sono maggiori del 3% 
+
+
+| 5 | Una delle variabili è maggiore del 6% 
+
+
+| 6 | Due delle variabili sono maggiori del 6% 
+
+
+| 7 | Tre delle variabili sono maggiori del 6% 
+
+
+| 8 | Una delle variabili è maggiore del 15% 
+
+
+| 9 | Due delle variabili sono maggiori del 15% 
+
+
+| 10 | Tre delle variabili sono maggiori del 15% 
+|===
+
+
+== Report PCI DSS
+
+Il report PCI DSS (Payment Card Industry Data Security Standard) consente di identificare la distribuzione delle informazioni sulle carte di credito nei file. Il report contiene le seguenti informazioni:
+
+Panoramica:: Quanti file contengono informazioni sulla carta di credito e in quali ambienti di lavoro.
+Crittografia:: La percentuale di file contenenti informazioni sulla carta di credito presenti in ambienti di lavoro crittografati o non crittografati. Queste informazioni sono specifiche di Cloud Volumes ONTAP.
+Protezione ransomware:: La percentuale di file contenenti informazioni sulla carta di credito che si trovano in ambienti di lavoro in cui la protezione ransomware è attivata o meno. Queste informazioni sono specifiche di Cloud Volumes ONTAP.
+Conservazione:: Il periodo di tempo in cui i file sono stati modificati per l'ultima volta. Ciò è utile perché non è necessario conservare le informazioni della carta di credito per un periodo di tempo superiore a quello necessario per elaborarle.
+Distribuzione delle informazioni sulla carta di credito:: Gli ambienti di lavoro in cui sono state rilevate le informazioni sulla carta di credito e se sono attivate la crittografia e la protezione ransomware.
+
+
+
+
+=== Generazione del rapporto PCI DSS
+
+Accedere alla scheda Compliance per generare il report.
+
+.Fasi
+. Dal menu BlueXP, fare clic su *Governance > Classification*.
+. Fare clic su *Compliance*, quindi fare clic sull'icona di download accanto a *PCI DSS Report* sotto *Report*.
++
+image:screenshot_pci_dss.gif["Una schermata della scheda Compliance di BlueXP che mostra il riquadro Reports (Report) in cui è possibile fare clic su Privacy Risk Assessment (Valutazione dei rischi per la privacy)."]
+
+
+
+.Risultato
+La classificazione BlueXP genera un report in formato PDF che è possibile rivedere e inviare ad altri gruppi in base alle esigenze.
+
+
+
+== Report HIPAA
+
+Il report HIPAA (Health Insurance Portability and Accountability Act) consente di identificare i file contenenti informazioni sulla salute. È progettato per soddisfare i requisiti della tua organizzazione in materia di privacy dei dati HIPAA. Le informazioni che la classificazione BlueXP cerca includono:
+
+* Schema di riferimento per lo stato di salute
+* ICD-10-CM Codice medico
+* Codice medico ICD-9-CM
+* HR - Categoria di salute
+* Categoria Health Application Data
+
+
+Il report contiene le seguenti informazioni:
+
+Panoramica:: Quanti file contengono informazioni sullo stato di salute e in quali ambienti di lavoro.
+Crittografia:: La percentuale di file contenenti informazioni sullo stato di salute che si trovano in ambienti di lavoro crittografati o non crittografati. Queste informazioni sono specifiche di Cloud Volumes ONTAP.
+Protezione ransomware:: La percentuale di file contenenti informazioni sullo stato di salute che si trovano in ambienti di lavoro in cui la protezione ransomware è attivata o meno. Queste informazioni sono specifiche di Cloud Volumes ONTAP.
+Conservazione:: Il periodo di tempo in cui i file sono stati modificati per l'ultima volta. Ciò è utile perché non è necessario conservare le informazioni sulla salute per un periodo di tempo superiore a quello necessario per elaborarle.
+Distribuzione delle informazioni sanitarie:: Gli ambienti di lavoro in cui sono state trovate le informazioni di salute e se sono attivate la crittografia e la protezione ransomware.
+
+
+
+
+=== Generazione del report HIPAA
+
+Accedere alla scheda Compliance per generare il report.
+
+.Fasi
+. Dal menu BlueXP, fare clic su *Governance > Classification*.
+. Fare clic su *Compliance*, quindi fare clic sull'icona di download accanto a *HIPAA Report* sotto *Report*.
++
+image:screenshot_hipaa.gif["Una schermata della scheda Compliance di BlueXP che mostra il riquadro Reports (Report) in cui è possibile fare clic su HIPAA."]
+
+
+
+.Risultato
+La classificazione BlueXP genera un report in formato PDF che è possibile rivedere e inviare ad altri gruppi in base alle esigenze.
+
+
+
+== Che cos'è una richiesta di accesso ai dati?
+
+Le normative sulla privacy, come il GDPR europeo, concedono ai soggetti interessati (come clienti o dipendenti) il diritto di accedere ai propri dati personali. Quando un soggetto interessato richiede queste informazioni, queste vengono denominate DSAR (data subject access request). Le organizzazioni devono rispondere a queste richieste "senza ritardi indebito" e al più tardi entro un mese dalla ricezione.
+
+È possibile rispondere a una DSAR cercando il nome completo di un soggetto o l'identificatore noto (ad esempio un indirizzo e-mail) e scaricando un report. Il report è stato progettato per aiutare l'organizzazione a rispettare il GDPR o leggi simili sulla privacy dei dati.
+
+
+
+=== In che modo la classificazione BlueXP può aiutarti a rispondere a una DSAR?
+
+Quando si esegue una ricerca dell'oggetto dati, la classificazione BlueXP trova tutti i file, i bucket, OneDrive e gli account SharePoint che contengono il nome o l'identificatore di tale persona. La classificazione BlueXP verifica i dati pre-indicizzati più recenti per il nome o l'identificatore. Non avvia una nuova scansione.
+
+Una volta completata la ricerca, è possibile scaricare l'elenco di file per un report Data Subject Access Request. Il report aggrega le informazioni dei dati e le inserisce in termini legali che è possibile inviare alla persona.
+
+
+NOTE: La ricerca dei dati non è attualmente supportata nei database.
+
+
+
+=== Ricerca di dati e download di report
+
+Cercare il nome completo o l'identificatore noto del soggetto interessato, quindi scaricare un report elenco file o un report DSAR. È possibile eseguire la ricerca in base a. link:reference-private-data-categories.html#types-of-personal-data["qualsiasi tipo di informazione personale"^].
+
+
+NOTE: L'inglese, il tedesco e lo spagnolo sono supportati durante la ricerca dei nomi degli argomenti dei dati. Il supporto per altre lingue verrà aggiunto in un secondo momento.
+
+.Fasi
+. Dal menu BlueXP, fare clic su *Governance > Classification*.
+. Fare clic su *Data subjects*.
+. Cercare il nome completo o l'identificativo noto dell'interessato.
++
+Ecco un esempio che mostra una ricerca per il nome _john Doe_:
+
++
+image:screenshot_dsar_search.gif["Una schermata che mostra una ricerca del nome \"John Doe\" per una DSAR."]
+
+. Scegliere una delle opzioni disponibili:
++
+** *Download del report DSAR*: Una risposta formale alla richiesta di accesso che è possibile inviare al soggetto interessato. Questo report contiene informazioni generate automaticamente in base ai dati rilevati dalla classificazione BlueXP nell'oggetto dei dati ed è progettato per essere utilizzato come modello. Completare il modulo e esaminarlo internamente prima di inviarlo al soggetto interessato.
+** *Investigate Results*: Pagina che consente di analizzare i dati ricercando, ordinando, espandendo i dettagli di un file specifico e scaricando l'elenco dei file.
++
+
+NOTE: Se sono presenti più di 10,000 risultati, nell'elenco dei file vengono visualizzati solo i primi 10,000 risultati.
+
+
+
+
+
+
+
+== Selezione degli ambienti di lavoro per i report
+
+È possibile filtrare i contenuti della dashboard di conformità della classificazione BlueXP per visualizzare i dati di conformità per tutti gli ambienti di lavoro e i database o solo per ambienti di lavoro specifici.
+
+Quando si filtra la dashboard, la classificazione BlueXP regola i dati di conformità e invia report solo agli ambienti di lavoro selezionati.
+
+.Fasi
+. Fare clic sul menu a discesa del filtro, selezionare gli ambienti di lavoro per i quali si desidera visualizzare i dati e fare clic su *View* (Visualizza).
++
+image:screenshot_cloud_compliance_filter.gif["Schermata di selezione degli ambienti di lavoro per i report che si desidera eseguire."]
+
+

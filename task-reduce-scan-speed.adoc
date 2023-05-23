@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: task-reduce-scan-speed.html 
+keywords: slow scans, reduce speed 
+summary: 'Le scansioni dei dati hanno un impatto trascurabile sui sistemi storage e sui dati. Tuttavia, se si è preoccupati anche di un impatto molto ridotto, è possibile configurare la classificazione BlueXP per eseguire scansioni "lente".' 
+---
+= Riduzione della velocità di scansione della classificazione BlueXP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le scansioni dei dati hanno un impatto trascurabile sui sistemi storage e sui dati. Tuttavia, se si è preoccupati anche di un impatto molto ridotto, è possibile configurare la classificazione BlueXP per eseguire scansioni "lente".
+
+Se attivata, la scansione lenta viene utilizzata su tutte le origini dati, non è possibile configurare la scansione lenta per un singolo ambiente di lavoro o un'origine dati.
+
+
+TIP: La velocità di scansione non può essere ridotta durante la scansione dei database.
+
+.Fasi
+. Nella parte inferiore della pagina _Configuration_, spostare il dispositivo di scorrimento verso destra per attivare la scansione lenta.
++
+image:screenshot_slow_scan_enable.png["Una schermata che mostra come attivare la scansione lenta della compliance."]
+
++
+La parte superiore della pagina di configurazione indica che la scansione lenta è attivata.
+
++
+image:screenshot_slow_scan_disable.png["Una schermata che mostra come attivare la scansione lenta della compliance."]
+
+. È possibile disattivare la scansione lenta facendo clic su *Disable* (Disattiva) da questo messaggio.
+

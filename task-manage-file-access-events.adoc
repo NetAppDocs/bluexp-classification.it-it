@@ -1,0 +1,164 @@
+---
+sidebar: sidebar 
+permalink: task-manage-file-access-events.html 
+keywords: compliance, actions, view progress, audit, logs, installation 
+summary: 'È possibile configurare la classificazione BlueXP per registrare gli eventi in un file ogni volta che si accede o si modifica uno dei file che si sta eseguendo la scansione. Quindi, è possibile visualizzare il contenuto di questo file (file Access Audit Log) o scaricarlo per vedere quali modifiche sono state apportate e da chi.' 
+---
+= Monitorare e gestire gli eventi di accesso ai file
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile configurare la classificazione BlueXP per registrare gli eventi in un file ogni volta che si accede o si modifica uno dei file che si sta eseguendo la scansione. Quindi, è possibile visualizzare il contenuto di questo file (file Access Audit Log) o scaricarlo per vedere quali modifiche sono state apportate e da chi.
+
+Ad esempio, se si desidera tenere traccia delle modifiche apportate ai file del personale o ai file delle retribuzioni sensibili, è possibile attivare questa funzione sui volumi in cui risiedono questi file. Quindi, è possibile visualizzare il file Access Audit Log per verificare se questi file sono stati modificati. Se sono stati modificati, sarà possibile visualizzare l'identificatore di protezione (SID) della persona che ha apportato la modifica e la data in cui è stata apportata.
+
+È possibile attivare questa funzione su tutti i volumi critici degli ambienti di lavoro che eseguono il software ONTAP. Se attivato su un volume, gli eventi di accesso ai file vengono monitorati per tutti i file e le directory del volume. Questa funzionalità si basa su https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["Funzione FPolicy"^] Dai sistemi ONTAP e utilizza il sistema di classificazione BlueXP come server FPolicy per ricevere messaggi di notifica (eventi) da ONTAP.
+
+La classificazione BlueXP attualmente acquisisce gli eventi per le seguenti azioni su file e directory:
+
+* Creare
+* Leggi
+* Di scrittura
+* Rinominare
+* Eliminare
+* Modificare il proprietario/i permessi
+* Modifica SACL/DACL (modifiche dell'elenco di controllo di accesso (ACL))
+
+
+Gli utenti di BlueXP con i ruoli "account Admin" o "Workspace Admin" possono configurare i volumi per la registrazione dell'audit di accesso ai file e visualizzare e scaricare i log di audit. Gli utenti con il ruolo "Compliance Viewer" possono solo visualizzare e scaricare i registri di audit.
+
+
+
+== Origini dati supportate
+
+La classificazione BlueXP può registrare gli eventi di accesso ai file per i file che risiedono sui volumi ONTAP nelle seguenti origini dati:
+
+* ONTAP on-premise
+* Cloud Volumes ONTAP
+* Azure NetApp Files
+* Amazon FSX per NetApp ONTAP
+
+
+Le origini dati devono eseguire il software ONTAP versione 9.11 o superiore.
+
+
+
+== Configurare i volumi per la registrazione dell'audit di accesso ai file
+
+È possibile attivare la registrazione dell'audit di accesso ai file sui singoli volumi per tenere traccia delle modifiche apportate a file e directory.
+
+
+TIP: Al momento è possibile configurare il controllo dell'accesso ai file su un massimo di 5 volumi su ciascuna origine dati.
+
+.Prima di iniziare
+* Active Directory deve essere configurato per le origini dati in modo che la classificazione BlueXP possa elencare l'ID della persona che ha effettuato l'accesso ai file.
+* La porta 5018 deve essere aperta per l'accesso in uscita dal sistema di classificazione BlueXP.
+
+
+.Fasi
+. Dalla pagina _Scan Configuration_ relativa all'origine dati, fare clic su image:screenshot_horizontal_more_button.gif["Icona Altro"] Per il volume e selezionare *Configure file Access Audit* (Configura audit accesso file).
++
+image:screenshot_compliance_file_access_audit_button.png["Una schermata che mostra la selezione di un volume sul quale si desidera attivare la registrazione dell'accesso al file."]
+
+. Nella finestra di dialogo _Configure file Access Audit_, fare clic sulla casella di controllo *Enable logging of file access events* (attiva registrazione eventi di accesso al file) e fare clic su *Save* (Salva).
++
+Tenere presente che tutte le azioni di registrazione potenziali sono selezionate per impostazione predefinita e non sono modificabili.
+
++
+image:screenshot_compliance_file_access_audit_dialog.png["Schermata della finestra di dialogo per l'attivazione e la disattivazione della registrazione di un volume e per la selezione delle azioni da registrare."]
+
+. Si noterà che il controllo dell'accesso ai file è ora abilitato per quel volume.
++
+image:screenshot_compliance_file_access_audit_done.png["Una schermata che mostra che la registrazione dell'audit di accesso al file è abilitata per un volume specifico."]
+
+
+
+.Risultato
+Tutti gli eventi di accesso ai file generati per i file sui volumi abilitati verranno aggiunti al file di log. Controllare il file di registro occasionalmente per visualizzare i tipi di eventi ricevuti.
+
+
+
+== Contenuto del file di log
+
+Viene creato un file di log per ogni volume configurato per tenere traccia degli eventi di accesso ai file. I file di log sono denominati "<volume_name>_<volume_uuid>_.log", ad esempio "fpolicy_cifs_838c1727-dd2d-11ed-a3ec-590ce4991.log". Ogni riga del registro di controllo contiene informazioni in questo formato:
+
+* Timestamp - Data e ora dell'evento
+* Client IP (IP client) - Indirizzo IP dell'istanza/PC/Proxy in cui è stata eseguita l'operazione sul file
+* Volume Name (Nome volume) - nome del volume
+* UUID volume - UUID del volume
+* Tipo di file - tipo di file: FILE o DIR
+* Dimensione file - dimensione del file in byte
+* Percorso - percorso completo e nome del file o della directory interessata
+* Volume Type (tipo volume) - tipo di volume: SMB o NFS
+* ID utente - identificatore di sicurezza (SID) della persona che ha eseguito l'azione
+* File Owner ID (ID proprietario file) - identificatore di sicurezza (SID) del proprietario del file
+* Tipo di evento - creazione, lettura, scrittura, ridenominazione, eliminazione, Modificare il proprietario/le autorizzazioni o modificare SACL/DACL
+* Action Details (Dettagli azione) - cosa è stato fatto: Dipende dall'azione
+
+
+Ad esempio, la riga seguente del file di log mostra che si è verificata un'azione "Create" nel volume "fpolicy_cifs" - nel volume è stato creato un nuovo file "f14".
+
+ {"Timestamp": "2023-04-24 13:57", "Client_IP": "172.31.14.35", "Volume_Name": "fpolicy_cifs", "Volume_UUID": "838c1727-dd2d-11ed-a3ec-590ce4991", "File_Type": "FILE", "File_Size": 100, "Path": \\FPOLICY_CVO\fpolicy_cifs_share\dbs\f14, "Volume_Type": "SMB", "User_ID": "S-1-5-21-459977447-2546672318-3630509715-500", "File_Owner_ID": "S-1-5-32-544", "Event_Type": "CREATE", "Action_Details": {details}}
+È possibile utilizzare la pagina di analisi della classificazione di BlueXP per cercare il volume (utilizzando il filtro "Storage Repository") o il file (utilizzando il filtro "file / Directory Path") per visualizzare ulteriori dettagli sul volume e sul file interessati.
+
+
+
+== Accedere ai file di log di controllo di accesso ai file
+
+I file di log di controllo di accesso ai file si trovano sulla macchina di classificazione BlueXP in: `/opt/netapp/file_access_audit_logs/`
+
+Ogni file è configurato per impostazione predefinita in modo da contenere un massimo di 50,000 eventi. <<Configurare le impostazioni del file Access Audit Log,È possibile personalizzare questo valore nella pagina file Access Audit Log Configuration.>> Una volta raggiunto questo limite massimo, le voci meno recenti nel file di registro vengono sovrascritte.
+
+Per impostazione predefinita, la dimensione totale di tutti i file di registro nella directory è impostata su un massimo di 50 GB. <<Configurare le impostazioni del file Access Audit Log,È possibile personalizzare questo valore nella pagina file Access Audit Log Configuration.>> Una volta raggiunto questo limite, i file di log meno recenti vengono eliminati quando vengono aggiunti nuovi file di log. Inoltre, tutti i file di registro più vecchi di 14 giorni verranno sovrascritti in quanto si tratta del tempo massimo di conservazione.
+
+Quando la classificazione BlueXP viene installata su un computer Linux in sede o su un computer Linux implementato nel cloud, è possibile accedere direttamente ai file di log.
+
+Quando la classificazione BlueXP viene implementata nel cloud, è necessario eseguire l'SSH nell'istanza di classificazione BlueXP. Si accede al sistema inserendo l'utente e la password oppure utilizzando la chiave SSH fornita durante l'installazione di BlueXP Connector. Il comando SSH è:
+
+ ssh -i <path_to_the_ssh_key> <machine_user>@<datasense_ip>
+* <path_to_the_ssh_key> = posizione delle chiavi di autenticazione ssh
+* <machine_user>:
++
+** Per AWS: Utilizzare <ec2-user>
+** Per Azure: Utilizzare l'utente creato per l'istanza di BlueXP
+** Per GCP: Utilizzare l'utente creato per l'istanza di BlueXP
+
+
+* <datasense_ip> = indirizzo IP dell'istanza della macchina virtuale di classificazione BlueXP
+
+
+Nota: Per accedere al sistema nel cloud, è necessario modificare le regole in entrata del gruppo di sicurezza. Per ulteriori informazioni, vedere:
+
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html["Regole del gruppo di sicurezza in AWS"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-azure.html["Regole del gruppo di sicurezza in Azure"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-gcp.html["Regole del firewall in Google Cloud"^]
+
+
+
+
+== Configurare le impostazioni del file Access Audit Log
+
+È possibile configurare tre opzioni per i log dei file di controllo dell'accesso ai file. Queste impostazioni si applicano a tutte le origini dati che hanno configurato la registrazione dell'audit di accesso ai file su questa istanza di classificazione BlueXP. Queste impostazioni vengono configurate dalla sezione _file Access Audit Log_ della pagina _Configuration_ di classificazione BlueXP.
+
+image:screenshot_compliance_file_access_audit_config.png["Una schermata che mostra le impostazioni di configurazione per i registri di controllo nella pagina Configurazione classificazione BlueXP."]
+
+[cols="30,50"]
+|===
+| Opzione Registro di controllo | Descrizione 
+
+
+| Percorso del file di log | La posizione è attualmente codificata per la scrittura dei file di log `/opt/netapp/file_access_audit_logs/` 
+
+
+| Allocazione massima dello storage per i registri di controllo | La dimensione totale di tutti i file di log nella directory è attualmente codificata con un valore predefinito di 50 GB. Una volta raggiunto questo limite, i file di registro meno recenti vengono cancellati automaticamente. 
+
+
+| Numero massimo di eventi di audit per file di audit | Ogni file è attualmente protetto da codice per contenere un massimo di 50,000 eventi. Una volta raggiunto questo limite massimo, gli eventi precedenti vengono cancellati man mano che vengono aggiunti nuovi eventi. 
+|===
+Tenere presente che queste impostazioni sono attualmente codificate per impostazione predefinita. Non possono essere modificati.

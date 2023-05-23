@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: reference-collected-metadata.html 
+keywords: compliance, metadata, permissions, time stamps, privacy, last access time 
+summary: La classificazione BlueXP raccoglie determinati metadati quando si eseguono scansioni di classificazione sui dati provenienti dalle origini dati e dagli ambienti di lavoro. La classificazione BlueXP può accedere alla maggior parte dei metadati necessari per classificare i tuoi dati, ma esistono alcune fonti in cui non siamo in grado di accedere ai dati di cui abbiamo bisogno. 
+---
+= Metadati raccolti dalle origini dati
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La classificazione BlueXP raccoglie determinati metadati quando si eseguono scansioni di classificazione sui dati provenienti dalle origini dati e dagli ambienti di lavoro. La classificazione BlueXP può accedere alla maggior parte dei metadati necessari per classificare i tuoi dati, ma esistono alcune fonti in cui non siamo in grado di accedere ai dati di cui abbiamo bisogno.
+
+[cols="15,25,25,25"]
+|===
+|  | *Metadati* | *CIFS* | *NFS* 
+
+
+.3+| *Indicatori di data e ora* | *Tempo di creazione* | Disponibile | Non disponibile (non supportato in Linux) 
+
+
+| *Ora ultimo accesso* | Disponibile | Disponibile 
+
+
+| *Ora ultima modifica* | Disponibile | Disponibile 
+
+
+.2+| *Autorizzazioni* | *Autorizzazioni aperte* | Se il gruppo "EVERYONE" ha accesso al file, viene considerato "aperto all'organizzazione" | Se "altri" hanno accesso al file, viene considerato "aperto all'organizzazione" 
+
+
+| *Accesso utenti/gruppi* | Le informazioni relative a utenti e gruppi provengono da LDAP | Non disponibile (gli utenti NFS sono generalmente gestiti localmente sul server, pertanto la stessa persona può avere un UID diverso in ciascun server) 
+|===
+Si noti che la classificazione BlueXP non estrae l'ultimo tempo di accesso dalle seguenti origini dati: SharePoint Online, SharePoint on-premise (SharePoint Server), OneDrive, Google Drive e Amazon S3.
+
+
+
+== Data e ora dell'ultimo accesso
+
+Quando la classificazione BlueXP estrae i dati dalle condivisioni di file, il sistema operativo li considera come utenti che accedono ai dati e modifica di conseguenza il "tempo di accesso ultimo". Dopo la scansione, la classificazione BlueXP tenta di riportare l'ultimo tempo di accesso all'indicatore data e ora originale. Se la classificazione BlueXP non dispone delle autorizzazioni per gli attributi di scrittura in CIFS o di scrittura in NFS, il sistema non può ripristinare l'ultimo orario di accesso all'indicatore data e ora originale. I volumi ONTAP configurati con SnapLock dispongono di autorizzazioni di sola lettura e non possono riportare l'ultimo orario di accesso all'indicatore data e ora originale.
+
+Per impostazione predefinita, se la classificazione BlueXP non dispone di queste autorizzazioni, il sistema non esegue la scansione dei file nei volumi perché la classificazione BlueXP non può riportare l'ultimo tempo di accesso all'indicatore data e ora originale. Tuttavia, se non si ha alcun problema se l'ultimo tempo di accesso viene reimpostato sull'ora originale nei file, è possibile fare clic sull'opzione *scansione quando mancano i permessi di "scrittura attributi"* nella parte inferiore della pagina di configurazione in modo che la classificazione BlueXP scansiona i volumi indipendentemente dalle autorizzazioni.
+
+image:screenshot_scan_missing_permissions.png["Una schermata che mostra lo switch che puoi utilizzare per eseguire la scansione dei file con la classificazione BlueXP anche se non dispone delle autorizzazioni corrette per ripristinare l'ultimo orario di accesso alla data e ora originale."]
+
+Questa funzionalità è applicabile a sistemi ONTAP on-premise, Cloud Volumes ONTAP, Azure NetApp Files, FSX per ONTAP e file share non NetApp.
+
+Si noti che nella pagina di analisi è presente un filtro denominato _Scan Analysis Event_ che consente di visualizzare i file non classificati perché la classificazione BlueXP non ha potuto ripristinare l'ultimo tempo di accesso, Oppure i file classificati anche se la classificazione BlueXP non ha potuto ripristinare l'ultimo tempo di accesso.
+
+image:screenshot_scan_analysis_event_filter.png["Una schermata del filtro per vedere quali file sono stati sottoposti a scansione e non sottoposti a scansione, in base alla presenza o meno di permessi di scrittura."]
+
+Le selezioni dei filtri sono:
+
+* "Non classificato -- Impossibile ripristinare l'ultimo tempo di accesso" - Mostra i file che non sono stati classificati a causa di autorizzazioni di scrittura mancanti.
+* "Classified and updated last access time" (tempo di accesso ultimo classificato e aggiornato) - Mostra i file classificati e la classificazione BlueXP non è stata in grado di ripristinare l'ultimo tempo di accesso alla data originale. Questo filtro è valido solo per gli ambienti in cui è stata attivata l'OPZIONE *Scan when missing "write attribtributes" permissions*.
+
+
+Se necessario, è possibile esportare questi risultati in un report in modo da visualizzare i file sottoposti o meno a scansione a causa delle autorizzazioni. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-investigate-data.html#data-investigation-report["Scopri di più sul Data Investigation Report"^].

@@ -1,0 +1,137 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-onedrive.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, onedrive, data sense 
+summary: 'Completare alcuni passaggi per avviare la scansione dei file nelle cartelle OneDrive dell"utente con la classificazione BlueXP.' 
+---
+= Scansione degli account OneDrive
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Completare alcuni passaggi per avviare la scansione dei file nelle cartelle OneDrive dell'utente con la classificazione BlueXP.
+
+
+
+== Avvio rapido
+
+Inizia subito seguendo questi passaggi o scorri verso il basso fino alle sezioni rimanenti per ottenere dettagli completi.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Verifica dei prerequisiti di OneDrive
+[role="quick-margin-para"]
+Assicurarsi di disporre delle credenziali di amministratore per accedere all'account OneDrive.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Distribuire l'istanza di classificazione BlueXP
+[role="quick-margin-para"]
+link:task-deploy-cloud-compliance.html["Implementare la classificazione BlueXP"^] se non è già stata implementata un'istanza.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Aggiungere l'account OneDrive
+[role="quick-margin-para"]
+Utilizzando le credenziali dell'utente Admin, accedere all'account OneDrive a cui si desidera accedere in modo che venga aggiunto come nuovo ambiente di lavoro.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Aggiungere gli utenti e selezionare il tipo di scansione
+[role="quick-margin-para"]
+Aggiungere l'elenco degli utenti dall'account OneDrive che si desidera sottoporre a scansione e selezionare il tipo di scansione. È possibile aggiungere fino a 100 utenti alla volta.
+
+
+
+== Verifica dei requisiti di OneDrive
+
+Prima di attivare la classificazione BlueXP, verificare di disporre di una configurazione supportata.
+
+* È necessario disporre delle credenziali di accesso Admin per l'account OneDrive for Business che fornisce l'accesso in lettura ai file dell'utente.
+* Avrai bisogno di un elenco degli indirizzi e-mail separato da righe per tutti gli utenti di cui desideri eseguire la scansione delle cartelle di OneDrive.
+
+
+
+
+== Implementazione dell'istanza di classificazione BlueXP
+
+Distribuire la classificazione BlueXP se non è già stata implementata un'istanza.
+
+La classificazione BlueXP può essere link:task-deploy-cloud-compliance.html["implementato nel cloud"^] oppure link:task-deploy-compliance-onprem.html["in una sede on-premise con accesso a internet"^].
+
+Gli aggiornamenti al software di classificazione BlueXP sono automatizzati finché l'istanza dispone di connettività Internet.
+
+
+
+== Aggiunta dell'account OneDrive
+
+Aggiungere l'account OneDrive in cui risiedono i file utente.
+
+.Fasi
+. Dalla pagina Working Environments Configuration (Configurazione ambienti di lavoro), fare clic su *Add Data Source* (Aggiungi origine dati) > *Add OneDrive account* (Aggiungi account OneDrive).
++
+image:screenshot_compliance_add_onedrive_button.png["Una schermata della pagina Scan Configuration (Configurazione scansione) in cui è possibile fare clic sul pulsante Add OneDrive (Aggiungi OneDrive)."]
+
+. Nella finestra di dialogo Aggiungi un account OneDrive, fai clic su *Accedi a OneDrive*.
+. Nella pagina Microsoft che viene visualizzata, selezionare l'account OneDrive e immettere l'utente e la password di amministratore richiesti, quindi fare clic su *Accept* per consentire alla classificazione BlueXP di leggere i dati da questo account.
+
+
+L'account OneDrive viene aggiunto all'elenco degli ambienti di lavoro.
+
+
+
+== Aggiunta di utenti OneDrive alle scansioni di conformità
+
+Puoi aggiungere singoli utenti OneDrive o tutti gli utenti OneDrive, in modo che i loro file vengano sottoposti a scansione in base alla classificazione BlueXP.
+
+.Fasi
+. Dalla pagina _Configuration_, fare clic sul pulsante *Configuration* dell'account OneDrive.
++
+image:screenshot_compliance_onedrive_add_users.png["Schermata della pagina Scan Configuration (Configurazione scansione) in cui è possibile selezionare il pulsante Configuration (Configurazione)."]
+
+. Se è la prima volta che si aggiungono utenti per questo account OneDrive, fare clic su *Aggiungi i primi utenti OneDrive*.
++
+image:screenshot_compliance_onedrive_add_initial_users.png["Una schermata che mostra il pulsante Add your first OneDrive users (Aggiungi i primi utenti OneDrive) per aggiungere gli utenti iniziali a un account."]
+
++
+Se si aggiungono altri utenti da un account OneDrive, fare clic su *Aggiungi utenti OneDrive*.
+
++
+image:screenshot_compliance_onedrive_add_more_users.png["Una schermata che mostra il pulsante Add OneDrive users (Aggiungi utenti OneDrive) per aggiungere altri utenti a un account."]
+
+. Aggiungere gli indirizzi e-mail degli utenti di cui si desidera eseguire la scansione - un indirizzo e-mail per riga (fino a 100 per sessione) - e fare clic su *Aggiungi utenti*.
++
+image:screenshot_compliance_onedrive_add_email_addresses.png["Schermata della pagina Add OneDrive users (Aggiungi utenti OneDrive) in cui è possibile aggiungere utenti da sottoporre a scansione."]
+
++
+Una finestra di dialogo di conferma visualizza il numero di utenti aggiunti.
+
++
+Se la finestra di dialogo elenca gli utenti che non possono essere aggiunti, acquisire queste informazioni in modo da poter risolvere il problema. In alcuni casi è possibile aggiungere nuovamente l'utente con un indirizzo e-mail corretto.
+
+. Attivare scansioni di sola mappatura o scansioni di mappatura e classificazione sui file utente.
++
+[cols="45,45"]
+|===
+| A: | Eseguire questa operazione: 
+
+
+| Attiva scansioni solo mappatura sui file utente | Fare clic su *Map* (Mappa) 
+
+
+| Attiva scansioni complete sui file utente | Fare clic su *Map & Classify* (Mappa e classificazione) 
+
+
+| Disattivare la scansione dei file utente | Fare clic su *Off* 
+|===
+
+
+.Risultato
+La classificazione BlueXP avvia la scansione dei file per gli utenti aggiunti e i risultati vengono visualizzati nella dashboard e in altre posizioni.
+
+
+
+== Rimozione di un utente OneDrive dalle scansioni di conformità
+
+Se gli utenti lasciano l'azienda o se il loro indirizzo e-mail cambia, puoi rimuovere singoli utenti di OneDrive dall'eseguire la scansione dei loro file in qualsiasi momento. Fare clic su *Remove OneDrive User* (Rimuovi utente OneDrive) dalla pagina di configurazione.
+
+image:screenshot_compliance_onedrive_remove_user.png["Una schermata che mostra come rimuovere un singolo utente dalla scansione dei file."]
+
+Nota: È possibile link:task-managing-compliance.html#removing-a-onedrive-sharepoint-or-google-drive-account-from-bluexp-classification["Elimina l'intero account OneDrive dalla classificazione BlueXP"] Se non si desidera più eseguire la scansione dei dati utente dall'account OneDrive.

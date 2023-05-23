@@ -1,0 +1,300 @@
+---
+sidebar: sidebar 
+permalink: task-org-private-data.html 
+keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense 
+summary: La classificazione BlueXP offre diversi modi per gestire e organizzare i dati privati. In questo modo è più semplice visualizzare i dati più importanti per te. 
+---
+= Organizzazione dei dati privati
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La classificazione BlueXP offre diversi modi per gestire e organizzare i dati privati. In questo modo è più semplice visualizzare i dati più importanti per te.
+
+* Se si è abbonati a. https://azure.microsoft.com/en-us/services/information-protection/["Azure Information Protection (AIP)"^] Per classificare e proteggere i file, è possibile utilizzare la classificazione BlueXP per gestire le etichette AIP.
+* È possibile aggiungere tag ai file che si desidera contrassegnare per l'organizzazione o per alcuni tipi di follow-up.
+* È possibile assegnare un utente BlueXP a un file specifico o a più file, in modo che la persona possa essere responsabile della gestione del file.
+* Utilizzando la funzionalità "Policy" è possibile creare query di ricerca personalizzate in modo da visualizzare facilmente i risultati facendo clic su un pulsante.
+* È possibile inviare avvisi e-mail agli utenti di BlueXP o a qualsiasi altro indirizzo e-mail, quando alcuni criteri critici restituiscono risultati.
+
+
+
+NOTE: Le funzionalità descritte in questa sezione sono disponibili solo se si è scelto di eseguire una scansione di classificazione completa sulle origini dati. Le origini dati che hanno eseguito una scansione solo mappatura non mostrano i dettagli a livello di file.
+
+
+
+== È necessario utilizzare tag o etichette?
+
+Di seguito è riportato un confronto tra il tag di classificazione BlueXP e l'etichettatura Azure Information Protection.
+
+[cols="50,50"]
+|===
+| Tag | Etichette 
+
+
+| I tag di file sono parte integrante della classificazione BlueXP. | Richiede l'iscrizione a Azure Information Protection (AIP). 
+
+
+| Il tag viene conservato solo nel database di classificazione BlueXP e non viene scritto nel file. Il file non viene modificato, né il file a cui si accede o modificato. | L'etichetta fa parte del file e quando l'etichetta cambia, il file cambia. Questa modifica modifica modifica modifica anche i tempi di accesso e modifica del file. 
+
+
+| È possibile avere più tag su un singolo file. | È possibile avere un'etichetta su un singolo file. 
+
+
+| Il tag può essere utilizzato per l'azione di classificazione interna di BlueXP, come copia, spostamento, eliminazione, esecuzione di un criterio, ecc. | Altri sistemi in grado di leggere il file possono vedere l'etichetta, che può essere utilizzata per un'ulteriore automazione. 
+
+
+| Viene utilizzata solo una singola chiamata API per verificare se un file ha un tag. |  
+|===
+
+
+== Classificazione dei dati mediante etichette AIP
+
+È possibile gestire le etichette AIP nei file che la classificazione BlueXP sta analizzando, se si è abbonati https://azure.microsoft.com/en-us/services/information-protection/["Azure Information Protection (AIP)"^]. AIP consente di classificare e proteggere documenti e file applicando etichette ai contenuti. La classificazione BlueXP consente di visualizzare le etichette già assegnate ai file, aggiungere etichette ai file e modificare le etichette quando esiste già un'etichetta.
+
+La classificazione BlueXP supporta le etichette AIP nei seguenti tipi di file: .DOC, .DOCX, .PDF, .PPTX, .XLS, XLSX.
+
+[NOTE]
+====
+* Al momento non è possibile modificare le etichette in file di dimensioni superiori a 30 MB. Per gli account OneDrive, SharePoint e Google Drive, la dimensione massima del file è di 4 MB.
+* Se un file ha un'etichetta che non esiste più in AIP, la classificazione BlueXP lo considera come un file senza un'etichetta.
+* Se la classificazione BlueXP è stata implementata in un'area governativa o in una posizione on-premise che non dispone di accesso a Internet (nota anche come sito oscuro), la funzionalità dell'etichetta AIP non è disponibile.
+
+
+====
+
+
+=== Integrazione delle etichette AIP nello spazio di lavoro
+
+Prima di poter gestire le etichette AIP, è necessario integrare la funzionalità dell'etichetta AIP nella classificazione BlueXP accedendo all'account Azure esistente. Una volta attivata, è possibile gestire le etichette AIP all'interno dei file per tutti link:concept-cloud-compliance.html#supported-data-sources["origini dati"^] Nello spazio di lavoro BlueXP.
+
+.Requisiti
+* È necessario disporre di un account e di una licenza di Azure Information Protection.
+* È necessario disporre delle credenziali di accesso per l'account Azure.
+* Se intendi modificare le etichette nei file che risiedono nei bucket Amazon S3, assicurati che l'autorizzazione sia `s3:PutObject` È incluso nel ruolo IAM. Vedere link:task-scanning-s3.html#reviewing-s3-prerequisites["Impostazione del ruolo IAM"^].
+
+
+.Fasi
+. Dalla pagina di configurazione della classificazione BlueXP, fare clic su *integra etichette AIP*.
++
+image:screenshot_compliance_integrate_aip_labels.png["Una schermata che mostra facendo clic sul pulsante per integrare la funzionalità delle etichette AIP nella classificazione BlueXP."]
+
+. Nella finestra di dialogo integra etichette AIP, fare clic su *Accedi ad Azure*.
+. Nella pagina Microsoft visualizzata, selezionare l'account e immettere le credenziali richieste.
+. Tornare alla scheda classificazione BlueXP e viene visualizzato il messaggio "_AIP Labels Were successfully Integrated with the account <account_name>_" (le etichette AIP sono state integrate correttamente con l'account BlueXP_).
+. Fare clic su *Close* (Chiudi) per visualizzare il testo _AIP Labels Integrated_ (etichette AIP integrate) nella parte superiore della pagina.
++
+image:screenshot_compliance_aip_labels_int.png["Una schermata che mostra le etichette AIP è stata integrata correttamente."]
+
+
+
+.Risultato
+È possibile visualizzare e assegnare le etichette AIP dal riquadro dei risultati della pagina di analisi. È inoltre possibile assegnare etichette AIP ai file utilizzando i criteri.
+
+
+
+=== Visualizzazione delle etichette AIP nei file
+
+È possibile visualizzare l'etichetta AIP corrente assegnata a un file.
+
+Nel riquadro Data Investigation Results (risultati analisi dati), fare clic su image:button_down_caret.png["cart"] per espandere i dettagli dei metadati del file.
+
+image:screenshot_compliance_show_label.png["Una schermata che mostra i dettagli dei metadati per un singolo file, inclusa l'etichetta AIP assegnata."]
+
+
+
+=== Assegnazione manuale delle etichette AIP
+
+È possibile aggiungere, modificare e rimuovere le etichette AIP dai file utilizzando la classificazione BlueXP.
+
+Per assegnare un'etichetta AIP a un singolo file, procedere come segue.
+
+.Fasi
+. Nel riquadro Data Investigation Results (risultati analisi dati), fare clic su image:button_down_caret.png["cart"] per espandere i dettagli dei metadati del file.
++
+image:screenshot_compliance_add_label_manually.png["Una schermata che mostra i dettagli dei metadati per un file nella pagina Data Investigation."]
+
+. Fare clic su *Assegna un'etichetta a questo file*, quindi selezionare l'etichetta.
++
+L'etichetta viene visualizzata nei metadati del file.
+
+
+
+Per assegnare un'etichetta AIP a più file:
+
+.Fasi
+. Nel riquadro Data Investigation Results (risultati analisi dati), selezionare il file o i file da etichettare.
++
+image:screenshot_compliance_tag_multi_files.png["Una schermata che mostra come selezionare i file da etichettare e il pulsante etichetta dalla pagina Data Investigation (analisi dati)."]
+
++
+** Per selezionare singoli file, selezionare la casella corrispondente a ciascun file (image:button_backup_1_volume.png[""]).
+** Per selezionare tutti i file nella pagina corrente, selezionare la casella nella riga del titolo (image:button_select_all_files.png[""]).
+
+
+. Dalla barra dei pulsanti, fare clic su *etichetta* e selezionare l'etichetta AIP:
++
+image:screenshot_compliance_select_aip_label_multi.png["Una schermata che mostra come assegnare un'etichetta AIP a più file nella pagina Data Investigation."]
+
++
+L'etichetta AIP viene aggiunta ai metadati di tutti i file selezionati.
+
+
+
+
+
+=== Rimozione dell'integrazione AIP
+
+Se non si desidera più gestire le etichette AIP nei file, è possibile rimuovere l'account AIP dall'interfaccia di classificazione BlueXP.
+
+Si noti che non vengono apportate modifiche alle etichette aggiunte utilizzando la classificazione BlueXP. Le etichette presenti nei file rimarranno quelle attualmente esistenti.
+
+.Fasi
+. Dalla pagina _Configuration_, fare clic su *AIP Labels Integrated > Remove Integration* (etichette AIP integrate > Rimuovi integrazione).
++
+image:screenshot_compliance_un_integrate_aip_labels.png["Una schermata che mostra come rimuovere le integrazioni AIP con la classificazione BlueXP."]
+
+. Fare clic su *Remove Integration* (Rimuovi integrazione) nella finestra di dialogo di conferma.
+
+
+
+
+== Applicazione di tag per gestire i file sottoposti a scansione
+
+È possibile aggiungere un tag ai file che si desidera contrassegnare per alcuni tipi di follow-up. Ad esempio, è possibile che siano stati trovati alcuni file duplicati e si desidera eliminarne uno, ma è necessario controllare quale file eliminare. È possibile aggiungere un tag "Check to delete" al file in modo da sapere che questo file richiede una ricerca e un qualche tipo di azione futura.
+
+La classificazione BlueXP consente di visualizzare i tag assegnati ai file, aggiungere o rimuovere tag dai file e modificare il nome o eliminare un tag esistente.
+
+Tenere presente che il tag non viene aggiunto al file allo stesso modo in cui le etichette AIP fanno parte dei metadati del file. Il tag è appena visto dagli utenti di BlueXP che utilizzano la classificazione BlueXP in modo da poter vedere se un file deve essere cancellato o controllato per un certo tipo di follow-up.
+
+
+TIP: I tag assegnati ai file nella classificazione BlueXP non sono correlati ai tag che è possibile aggiungere alle risorse, come volumi o istanze di macchine virtuali. I tag di classificazione BlueXP vengono applicati a livello di file.
+
+
+
+=== Visualizzazione dei file con determinati tag applicati
+
+È possibile visualizzare tutti i file con tag specifici assegnati.
+
+. Fare clic sulla scheda *Investigation* dalla classificazione BlueXP.
+. Nella pagina Data Investigation (analisi dati), fare clic su *Tags* nel riquadro Filters (filtri), quindi selezionare i tag richiesti.
++
+image:screenshot_compliance_filter_status.png["Una schermata che mostra come selezionare i tag dal pannello filtri."]
+
++
+Il riquadro dei risultati dell'analisi visualizza tutti i file a cui sono stati assegnati i tag.
+
+
+
+
+
+=== Assegnazione di tag ai file
+
+È possibile aggiungere tag a un singolo file o a un gruppo di file.
+
+Per aggiungere un tag a un singolo file:
+
+.Fasi
+. Nel riquadro Data Investigation Results (risultati analisi dati), fare clic su image:button_down_caret.png["cart"] per espandere i dettagli dei metadati del file.
+. Fare clic sul campo *Tag* per visualizzare i tag attualmente assegnati.
+. Aggiungere il tag o i tag:
++
+** Per assegnare un tag esistente, fare clic nel campo *New Tag...* e iniziare a digitare il nome del tag. Quando viene visualizzato il tag desiderato, selezionarlo e premere *Invio*.
+** Per creare un nuovo tag e assegnarlo al file, fare clic nel campo *New Tag...*, inserire il nome del nuovo tag e premere *Invio*.
++
+image:screenshot_compliance_add_status_manually.png["Una schermata che mostra come assegnare un tag a un file nella pagina Data Investigation."]
+
++
+Il tag viene visualizzato nei metadati del file.
+
+
+
+
+
+Per aggiungere un tag a più file:
+
+.Fasi
+. Nel riquadro Data Investigation Results (risultati analisi dati), selezionare il file o i file da contrassegnare.
++
+image:screenshot_compliance_tag_multi_files.png["Una schermata che mostra come selezionare i file da contrassegnare e il pulsante Tag dalla pagina Data Investigation (analisi dati)."]
+
++
+** Per selezionare singoli file, selezionare la casella corrispondente a ciascun file (image:button_backup_1_volume.png[""]).
+** Per selezionare tutti i file nella pagina corrente, selezionare la casella nella riga del titolo (image:button_select_all_files.png[""]).
+
+
+. Dalla barra dei pulsanti, fare clic su *Tag* per visualizzare i tag attualmente assegnati.
+. Aggiungere il tag o i tag:
++
+** Per assegnare un tag esistente, fare clic nel campo *New Tag...* e iniziare a digitare il nome del tag. Quando viene visualizzato il tag desiderato, selezionarlo e premere *Invio*.
+** Per creare un nuovo tag e assegnarlo al file, fare clic nel campo *New Tag...*, inserire il nome del nuovo tag e premere *Invio*.
++
+image:screenshot_compliance_select_tags_multi.png["Una schermata che mostra come assegnare un tag a più file nella pagina Data Investigation."]
+
+
+
+. Approva l'aggiunta dei tag nella finestra di dialogo di conferma e i tag vengono aggiunti ai metadati per tutti i file selezionati.
+
+
+
+
+=== Eliminazione di tag dai file
+
+Puoi eliminare un tag se non ne hai più bisogno.
+
+Fare clic sulla * x* per un tag esistente.
+
+image:button_delete_datasense_file_tag.png["Una schermata della posizione del pulsante delete tag."]
+
+Se sono stati selezionati più file, il tag viene rimosso da tutti i file.
+
+
+
+== Assegnazione di utenti per la gestione di determinati file
+
+È possibile assegnare un utente BlueXP a un file specifico o a più file, in modo che la persona possa essere responsabile di eventuali azioni di follow-up che devono essere eseguite sul file. Questa funzionalità viene spesso utilizzata con la funzione per aggiungere tag di stato personalizzati a un file.
+
+Ad esempio, è possibile che il file contenga alcuni dati personali che consentono a troppi utenti di accedere in lettura e scrittura (autorizzazioni aperte). È quindi possibile assegnare il tag di stato "Change permissions" e assegnare questo file all'utente "Joan Smith" in modo che possa decidere come risolvere il problema. Una volta risolto il problema, è possibile modificare il tag Status (Stato) in "Completed" (completato).
+
+Si noti che il nome utente non viene aggiunto al file come parte dei metadati del file, ma viene visualizzato solo dagli utenti BlueXP quando si utilizza la classificazione BlueXP.
+
+Un nuovo filtro nella pagina di analisi consente di visualizzare facilmente tutti i file con la stessa persona nel campo "assegnato a".
+
+Per assegnare un utente a un singolo file:
+
+.Fasi
+. Nel riquadro Data Investigation Results (risultati analisi dati), fare clic su image:button_down_caret.png["cart"] per espandere i dettagli dei metadati del file.
+. Fare clic sul campo *assegnato a* e selezionare il nome utente.
++
+image:screenshot_compliance_add_user_manually.png["Una schermata che mostra come assegnare un utente a un file nella pagina Data Investigation."]
+
++
+Il nome utente viene visualizzato nei metadati del file.
+
+
+
+Per assegnare un utente a più file:
+
+.Fasi
+. Nel riquadro Data Investigation Results (risultati analisi dati), selezionare il file o i file che si desidera assegnare a un utente.
++
+image:screenshot_compliance_tag_multi_files.png["Una schermata che mostra come selezionare i file che si desidera assegnare a un utente e il pulsante Assegna a dalla pagina analisi dati."]
+
++
+** Per selezionare singoli file, selezionare la casella corrispondente a ciascun file (image:button_backup_1_volume.png[""]).
+** Per selezionare tutti i file nella pagina corrente, selezionare la casella nella riga del titolo (image:button_select_all_files.png[""]).
+
+
+. Dalla barra dei pulsanti, fare clic su *Assegna a* e selezionare il nome utente:
++
+image:screenshot_compliance_select_user_multi.png["Una schermata che mostra come assegnare un utente a più file nella pagina Data Investigation."]
+
++
+L'utente viene aggiunto ai metadati per tutti i file selezionati.
+
+

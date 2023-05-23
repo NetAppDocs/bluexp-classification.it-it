@@ -1,0 +1,172 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-sharepoint.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, sharepoint, sharepoint online, sharepoint on-premises, data sense 
+summary: Completa alcuni passaggi per iniziare la scansione dei file negli account SharePoint Online e SharePoint on-premise con classificazione BlueXP. 
+---
+= Scansione degli account SharePoint
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Completa alcuni passaggi per iniziare la scansione dei file negli account SharePoint Online e SharePoint on-premise con classificazione BlueXP.
+
+
+
+== Avvio rapido
+
+Inizia subito seguendo questi passaggi o scorri verso il basso fino alle sezioni rimanenti per ottenere dettagli completi.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Esaminare i prerequisiti di SharePoint
+[role="quick-margin-para"]
+Assicurarsi di disporre di credenziali qualificate per accedere all'account SharePoint e di disporre degli URL dei siti SharePoint che si desidera sottoporre a scansione.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Distribuire l'istanza di classificazione BlueXP
+[role="quick-margin-para"]
+link:task-deploy-cloud-compliance.html["Implementare la classificazione BlueXP"^] se non è già stata implementata un'istanza.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Accedere all'account SharePoint
+[role="quick-margin-para"]
+Utilizzando credenziali utente qualificate, accedere all'account SharePoint a cui si desidera accedere in modo che venga aggiunto come nuova origine dati/ambiente di lavoro.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Aggiungere gli URL del sito SharePoint da sottoporre a scansione
+[role="quick-margin-para"]
+Aggiungere l'elenco degli URL del sito SharePoint che si desidera sottoporre a scansione nell'account SharePoint e selezionare il tipo di scansione. È possibile aggiungere fino a 100 URL alla volta e fino a 1,000 siti in totale per ciascun account.
+
+
+
+== Analisi dei requisiti di SharePoint
+
+Esaminare i seguenti prerequisiti per assicurarsi di essere pronti per attivare la classificazione BlueXP su un account SharePoint.
+
+* È necessario disporre delle credenziali di accesso dell'utente Admin per l'account SharePoint che fornisce l'accesso in lettura a tutti i siti SharePoint.
++
+** Per SharePoint Online è possibile utilizzare un account non Admin, ma tale utente deve disporre dell'autorizzazione per accedere a tutti i siti SharePoint che si desidera sottoporre a scansione.
+
+
+* Per SharePoint on-premise, è necessario anche l'URL di SharePoint Server.
+* Per tutti i dati che si desidera sottoporre a scansione, è necessario disporre di un elenco degli URL del sito SharePoint separato da righe.
+
+
+
+
+== Implementazione dell'istanza di classificazione BlueXP
+
+Distribuire la classificazione BlueXP se non è già stata implementata un'istanza.
+
+* Per SharePoint Online, la classificazione BlueXP può essere link:task-deploy-cloud-compliance.html["implementato nel cloud"^].
+* Per SharePoint on-premise, è possibile installare la classificazione BlueXP link:task-deploy-compliance-onprem.html["in una sede on-premise con accesso a internet"^] oppure link:task-deploy-compliance-dark-site.html["in una sede on-premise che non dispone di accesso a internet"^].
+
+
+Quando la classificazione BlueXP viene installata in un sito senza accesso a Internet, BlueXP Connector deve essere installato nello stesso sito senza accesso a Internet. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-private-mode.html["Scopri di più"^].
+
+Gli aggiornamenti al software di classificazione BlueXP sono automatizzati finché l'istanza dispone di connettività Internet.
+
+
+
+== Aggiunta di un account SharePoint Online
+
+Aggiungere l'account SharePoint Online in cui risiedono i file utente.
+
+.Fasi
+. Dalla pagina Working Environments Configuration (Configurazione ambienti di lavoro), fare clic su *Add Data Source* (Aggiungi origine dati) > *Add SharePoint Online account* (Aggiungi account online SharePoint).
++
+image:screenshot_compliance_add_sharepoint_button.png["Una schermata della pagina di configurazione in cui è possibile fare clic sul pulsante Add SharePoint Online (Aggiungi SharePoint Online)."]
+
+. Nella finestra di dialogo Aggiungi un account online SharePoint, fare clic su *Accedi a SharePoint*.
+. Nella pagina Microsoft visualizzata, selezionare l'account SharePoint e immettere l'utente e la password (utente amministratore o altro utente con accesso ai siti SharePoint), quindi fare clic su *Accetta* per consentire alla classificazione BlueXP di leggere i dati da questo account.
+
+
+L'account SharePoint Online viene aggiunto all'elenco degli ambienti di lavoro.
+
+
+
+== Aggiunta di un account SharePoint on-premise
+
+Aggiungere l'account SharePoint on-premise in cui risiedono i file utente.
+
+.Fasi
+. Dalla pagina Working Environments Configuration (Configurazione ambienti di lavoro), fare clic su *Add Data Source* (Aggiungi origine dati) > *Add SharePoint on-premise account* (Aggiungi account SharePoint on-premise).
++
+image:screenshot_compliance_add_sharepoint_onprem_button.png["Una schermata della pagina di configurazione in cui è possibile fare clic sul pulsante Add SharePoint on-premise (Aggiungi SharePoint on-premise)."]
+
+. Nella finestra di dialogo Log in the SharePoint on-premise Server (Accedi al server SharePoint on-premise), immettere le seguenti informazioni:
++
+** Admin user in formato "dominio/utente" o "utente@dominio" e admin password
+** URL di SharePoint Server
++
+image:screenshot_compliance_sharepoint_onprem.png["Una schermata che mostra le informazioni di accesso per un account SharePoint on-premise."]
+
+
+
+. Fare clic su *Connect* (Connetti).
+
+
+L'account SharePoint on-premise viene aggiunto all'elenco degli ambienti di lavoro.
+
+
+
+== Aggiunta di siti SharePoint alle scansioni di conformità
+
+È possibile aggiungere singoli siti SharePoint o fino a 1,000 siti SharePoint nell'account, in modo che i file associati vengano sottoposti a scansione in base alla classificazione BlueXP. La procedura è la stessa, sia che si aggiungano siti SharePoint Online o SharePoint on-premise.
+
+.Fasi
+. Dalla pagina _Configuration_, fare clic sul pulsante *Configuration* dell'account SharePoint.
++
+image:screenshot_compliance_sharepoint_add_sites.png["Schermata della pagina Scan Configuration (Configurazione scansione) in cui è possibile selezionare il pulsante Configuration (Configurazione)."]
+
+. Se questa è la prima volta che si aggiungono siti per questo account SharePoint, fare clic su *Aggiungi il primo sito SharePoint*.
++
+image:screenshot_compliance_sharepoint_add_initial_sites.png["Una schermata che mostra il pulsante Aggiungi i primi siti SharePoint per aggiungere i siti iniziali da sottoporre a scansione."]
+
++
+Se si aggiungono altri utenti da un account SharePoint, fare clic su *Aggiungi siti SharePoint*.
+
++
+image:screenshot_compliance_sharepoint_add_more_sites.png["Una schermata che mostra il pulsante Add SharePoint sites (Aggiungi siti SharePoint) per aggiungere altri siti a un account."]
+
+. Aggiungere gli URL dei siti di cui si desidera eseguire la scansione - un URL per riga (fino a 100 per sessione) - e fare clic su *Aggiungi siti*.
++
+image:screenshot_compliance_sharepoint_add_site.png["Una schermata della pagina Add SharePoint Sites (Aggiungi siti SharePoint) in cui è possibile aggiungere siti da sottoporre a scansione."]
+
++
+Una finestra di dialogo di conferma visualizza il numero di siti aggiunti.
+
++
+Se la finestra di dialogo elenca i siti che non è stato possibile aggiungere, acquisire queste informazioni in modo da risolvere il problema. In alcuni casi è possibile aggiungere nuovamente il sito con un URL corretto.
+
+. Se è necessario aggiungere più di 100 siti per questo account, fare clic nuovamente su *Aggiungi siti SharePoint* fino a quando non sono stati aggiunti tutti i siti per questo account (fino a un totale di 1,000 siti per ciascun account).
+. Attivare scansioni di sola mappatura o scansioni di mappatura e classificazione sui file nei siti SharePoint.
++
+[cols="45,45"]
+|===
+| A: | Eseguire questa operazione: 
+
+
+| Abilitare le scansioni di sola mappatura sui file | Fare clic su *Map* (Mappa) 
+
+
+| Attivare scansioni complete sui file | Fare clic su *Map & Classify* (Mappa e classificazione) 
+
+
+| Disattivare la scansione dei file | Fare clic su *Off* 
+|===
+
+
+.Risultato
+La classificazione BlueXP avvia la scansione dei file nei siti SharePoint aggiunti e i risultati vengono visualizzati nella dashboard e in altre posizioni.
+
+
+
+== Rimozione di un sito SharePoint dalle scansioni di conformità
+
+Se si rimuove un sito SharePoint in futuro o si decide di non eseguire la scansione dei file in un sito SharePoint, è possibile rimuovere singoli siti SharePoint dall'eseguire la scansione dei file in qualsiasi momento. Fai clic su *Rimuovi sito SharePoint* dalla pagina di configurazione.
+
+image:screenshot_compliance_sharepoint_remove_site.png["Una schermata che mostra come rimuovere un singolo sito SharePoint dalla scansione dei file."]
+
+Nota: È possibile link:task-managing-compliance.html#removing-a-onedrive-sharepoint-or-google-drive-account-from-bluexp-classification["Eliminare l'intero account SharePoint dalla classificazione BlueXP"] Se non si desidera più eseguire la scansione dei dati utente dall'account SharePoint.

@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: task-view-compliance-actions.html 
+keywords: compliance, actions, view progress 
+summary: 'Quando si esegue un"azione dal riquadro dei risultati dell"analisi su molti file, ad esempio l"eliminazione di 100 file, il processo può richiedere del tempo. È possibile monitorare lo stato di queste azioni asincrone nel riquadro Action Status (Stato azione) per sapere quando sono state applicate a tutti i file.' 
+---
+= Visualizzazione dello stato delle azioni di compliance
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando si esegue un'azione asincrona dal riquadro dei risultati dell'analisi su molti file, ad esempio, spostando o eliminando 100 file, il processo può richiedere del tempo. Puoi monitorare lo stato di queste azioni nel pannello _Action Status_ per sapere quando sono state applicate a tutti i file.
+
+In questo modo è possibile visualizzare le azioni che sono state completate correttamente, quelle attualmente in corso e quelle che hanno avuto esito negativo, in modo da poter diagnosticare e risolvere eventuali problemi.
+
+Lo stato può essere:
+
+* Operazione riuscita - un'azione di classificazione BlueXP è terminata e tutti gli elementi sono riusciti.
+* Successo parziale - Un'azione di classificazione BlueXP è terminata e alcuni elementi non sono riusciti e altri sono riusciti.
+* In corso - l'azione è ancora in corso.
+* Accodato - l'azione non è stata avviata.
+* Annullato - l'azione è stata annullata.
+* Non riuscito - l'azione non è riuscita.
+
+
+Nota: È possibile annullare le azioni con stato "in coda" o "in corso".
+
+.Fasi
+. Nella parte inferiore destra dell'interfaccia utente di classificazione di BlueXP, viene visualizzato il pulsante *Actions Status* (Stato azioni) image:button_actions_status.png[""].
+. Fare clic su questo pulsante per visualizzare le 20 azioni più recenti.
++
+image:screenshot_compliance_action_status.png["Una schermata che mostra le ultime 20 azioni e il relativo stato nella pagina di configurazione."]
+
+
+
+È possibile fare clic sul nome di un'azione per visualizzare i dettagli corrispondenti a tale operazione.

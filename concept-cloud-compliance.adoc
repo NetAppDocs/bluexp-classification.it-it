@@ -1,0 +1,314 @@
+---
+sidebar: sidebar 
+permalink: concept-cloud-compliance.html 
+keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning, aip labels, governance, data sense, privacy control, classification, optimization 
+summary: BlueXP Classification è un servizio di governance dei dati per BlueXP che esegue la scansione delle origini dati aziendali on-premise e cloud per mappare e classificare i dati e identificare le informazioni private. In questo modo è possibile ridurre i rischi di sicurezza e conformità, ridurre i costi di storage e assistere i progetti di migrazione dei dati. 
+---
+= Scopri di più sulla classificazione BlueXP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+BlueXP Classification è un servizio di governance dei dati per BlueXP che esegue la scansione delle origini dati aziendali on-premise e cloud per mappare e classificare i dati e identificare le informazioni private. In questo modo è possibile ridurre i rischi di sicurezza e conformità, ridurre i costi di storage e assistere i progetti di migrazione dei dati.
+
+https://bluexp.netapp.com/netapp-cloud-data-sense["Scopri i casi di utilizzo per la classificazione BlueXP"^].
+
+
+
+== Caratteristiche
+
+La classificazione BlueXP utilizza l'intelligenza artificiale (ai), l'elaborazione del linguaggio naturale (NLP) e l'apprendimento automatico (ML) per comprendere il contenuto che esegue la scansione al fine di estrarre le entità e classificare il contenuto di conseguenza. Ciò consente alla classificazione BlueXP di fornire le seguenti aree di funzionalità.
+
+
+
+=== Mantenere la conformità
+
+La classificazione BlueXP offre diversi strumenti che possono aiutare a soddisfare le tue esigenze di conformità. È possibile utilizzare la classificazione BlueXP per:
+
+* Identificare le informazioni personali identificabili (PII).
+* Identificare un'ampia gamma di informazioni personali sensibili come richiesto dalle normative sulla privacy GDPR, CCPA, PCI e HIPAA.
+* Rispondere alle richieste di accesso dei soggetti dati (DSAR) in base al nome o all'indirizzo e-mail.
+* Identificare se gli identificatori univoci dei database sono presenti nei file di altri repository, creando in pratica un elenco personalizzato di "dati personali" identificati nelle scansioni di classificazione di BlueXP.
+* Notifica ad alcuni utenti via email quando i file contengono determinati dati PII (si definiscono questi criteri utilizzando link:task-using-policies.html["Policy"^]) in modo da poter decidere un piano d'azione.
+
+
+
+
+=== Rafforzare la sicurezza
+
+La classificazione BlueXP è in grado di identificare i dati potenzialmente a rischio per l'accesso a scopi criminali. È possibile utilizzare la classificazione BlueXP per:
+
+* Identificare tutti i file e le directory (condivisioni e cartelle) con autorizzazioni aperte che sono esposte all'intera organizzazione o al pubblico.
+* Identificare i dati sensibili che risiedono al di fuori della posizione iniziale dedicata.
+* Rispettare le policy di conservazione dei dati.
+* Utilizza _Policies_ per notificare automaticamente al personale addetto alla sicurezza i nuovi problemi di sicurezza in modo che possa intervenire immediatamente.
+* Aggiungere tag personalizzati ai file (ad esempio, "deve essere spostato") e assegnare un utente BlueXP in modo che la persona possa possedere gli aggiornamenti dei file.
+* Visualizzare e modificare https://azure.microsoft.com/en-us/services/information-protection/["Etichette AIP (Azure Information Protection)"^] nei file.
+
+
+
+
+=== Ottimizzare l'utilizzo dello storage
+
+La classificazione BlueXP offre strumenti che possono aiutare con il TCO (Total Cost of Ownership) dello storage. È possibile utilizzare la classificazione BlueXP per:
+
+* Aumenta l'efficienza dello storage identificando dati duplicati o non correlati al business. È possibile utilizzare queste informazioni per decidere se si desidera spostare o eliminare determinati file.
+* Eliminare i file che sembrano insicuri o troppo rischiosi da lasciare nel sistema storage o che sono stati identificati come duplicati. È possibile utilizzare _Policies_ per eliminare automaticamente i file che corrispondono a determinati criteri.
+* Risparmia i costi dello storage identificando i dati inattivi che puoi tierare per uno storage a oggetti meno costoso. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["Scopri di più sul tiering dei sistemi Cloud Volumes ONTAP"^]. https://docs.netapp.com/us-en/cloud-manager-tiering/concept-cloud-tiering.html["Scopri di più sul tiering dei sistemi ONTAP on-premise"^].
+
+
+
+
+=== Accelera la migrazione dei dati
+
+La classificazione BlueXP può essere utilizzata per eseguire la scansione dei dati on-premise prima di eseguirne la migrazione nel cloud pubblico o privato. È possibile utilizzare la classificazione BlueXP per:
+
+* Visualizzare le dimensioni dei dati e se questi contengono informazioni riservate prima di spostarli.
+* Filtrare i dati di origine (in base a oltre 25 tipi di criteri) in modo da poter spostare solo i file richiesti nella destinazione - i dati non necessari non vengono spostati.
+* Sposta, copia o sincronizza automaticamente e continuamente solo i dati richiesti nel repository cloud.
+
+
+
+
+== Origini dati supportate
+
+La classificazione BlueXP è in grado di eseguire la scansione e l'analisi di dati strutturati e non strutturati provenienti dai seguenti tipi di origini dati:
+
+*NetApp:*
+
+* Cloud Volumes ONTAP (implementato in AWS, Azure o GCP)
+* Cluster ONTAP on-premise
+* StorageGRID
+* Azure NetApp Files
+* Amazon FSX per ONTAP
+* Cloud Volumes Service per Google Cloud
+
+
+*Non NetApp:*
+
+* Dell EMC Isilon
+* Storage puro
+* Nutanix
+* Qualsiasi altro vendor di storage
+
+
+*Cloud:*
+
+* Amazon S3
+* Storage Google Cloud
+* OneDrive
+* SharePoint Online
+* SharePoint on-premise (SharePoint Server)
+* Google Drive
+
+
+*Database:*
+
+* Amazon Relational Database Service (Amazon RDS)
+* MongoDB
+* MySQL
+* Oracle
+* PostgreSQL
+* SAP HANA
+* SQL Server (MSSQL)
+
+
+La classificazione BlueXP supporta le versioni NFS 3.x, 4.0 e 4.1 e CIFS 1.x, 2.0, 2.1 e 3.0.
+
+
+
+== Costo
+
+* Il costo per l'utilizzo della classificazione BlueXP dipende dalla quantità di dati che si sta eseguendo la scansione. I primi 1 TB di dati che la classificazione BlueXP scansiona in un'area di lavoro BlueXP sono gratuiti per 30 giorni. Sono inclusi tutti i dati provenienti da tutti gli ambienti di lavoro e le origini dati. Per continuare la scansione dei dati dopo tale data, è necessario un abbonamento a AWS, Azure o GCP Marketplace o una licenza BYOL di NetApp. Vedere https://bluexp.netapp.com/netapp-cloud-data-sense["prezzi"^] per ulteriori informazioni.
++
+link:task-licensing-datasense.html["Scopri come concedere in licenza la classificazione BlueXP"^].
+
+* L'installazione della classificazione BlueXP nel cloud richiede l'implementazione di un'istanza di cloud, con conseguente addebito da parte del provider di cloud in cui viene implementata. Vedere <<L'istanza di classificazione BlueXP,il tipo di istanza implementata per ciascun cloud provider>>. L'installazione della classificazione BlueXP su un sistema on-premise non richiede alcun costo.
+* La classificazione BlueXP richiede l'implementazione di un connettore BlueXP. In molti casi si dispone già di un connettore a causa di altri servizi e storage utilizzati in BlueXP. L'istanza del connettore comporta addebiti da parte del cloud provider in cui viene implementata. Vedere https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-on-prem.html["tipo di istanza implementata per ciascun cloud provider"^]. L'installazione del connettore su un sistema on-premise non richiede alcun costo.
+
+
+
+
+=== Costi di trasferimento dei dati
+
+I costi di trasferimento dei dati dipendono dalla configurazione. Se l'istanza di classificazione BlueXP e l'origine dati si trovano nella stessa zona di disponibilità e nella stessa regione, non ci sono costi di trasferimento dei dati. Tuttavia, se l'origine dati, come un sistema Cloud Volumes ONTAP o un bucket S3, si trova in una _area o regione di disponibilità diversa, il tuo cloud provider addebiterà i costi di trasferimento dei dati. Per ulteriori informazioni, consulta i seguenti link:
+
+* https://aws.amazon.com/ec2/pricing/on-demand/["AWS: Prezzi Amazon EC2"^]
+* https://azure.microsoft.com/en-us/pricing/details/bandwidth/["Microsoft Azure: Dettagli sui prezzi della larghezza di banda"^]
+* https://cloud.google.com/storage-transfer/pricing["Google Cloud: Prezzi del servizio di trasferimento dello storage"^]
+
+
+
+
+== L'istanza di classificazione BlueXP
+
+Quando si implementa la classificazione BlueXP nel cloud, BlueXP implementa l'istanza nella stessa sottorete del connettore. https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["Scopri di più sui connettori."^]
+
+image:diagram_cloud_compliance_instance.png["Diagramma che mostra un'istanza di BlueXP e un'istanza di classificazione BlueXP in esecuzione nel provider cloud."]
+
+Tenere presente quanto segue sull'istanza predefinita:
+
+* In AWS, la classificazione BlueXP viene eseguita su un https://aws.amazon.com/ec2/instance-types/m6i/["m6i.4xlarge instance"^] Con un disco GP2 da 500 GiB. L'immagine del sistema operativo è Amazon Linux 2. Una volta implementato in AWS, è possibile scegliere una dimensione di istanza inferiore se si esegue la scansione di una piccola quantità di dati.
+* In Azure, la classificazione BlueXP viene eseguita su un link:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D16s_v3 VM"^] Con un disco da 500 GiB. L'immagine del sistema operativo è CentOS 7.9.
+* In GCP, la classificazione BlueXP viene eseguita su un link:https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines["n2-standard-16 VM"^] Con un disco persistente standard da 500 GiB. L'immagine del sistema operativo è CentOS 7.9.
+* Nelle regioni in cui l'istanza predefinita non è disponibile, la classificazione BlueXP viene eseguita su un'istanza alternativa. link:reference-instance-types.html["Vedere i tipi di istanza alternativi"].
+* L'istanza è denominata _CloudCompliance_ con un hash generato (UUID) concatenato ad essa. Ad esempio: _CloudCompliance-16b6564-38ad-4080-9a92-36f5fd2f71c7_
+* Per ogni connettore viene implementata una sola istanza di classificazione BlueXP.
+
+
+Puoi anche implementare la classificazione BlueXP su un host Linux on-premise o su un host nel tuo cloud provider preferito. Il software funziona esattamente allo stesso modo, indipendentemente dal metodo di installazione scelto. Gli aggiornamenti del software di classificazione BlueXP sono automatizzati finché l'istanza dispone di accesso a Internet.
+
+
+TIP: L'istanza deve rimanere sempre in esecuzione perché la classificazione BlueXP esegue continuamente la scansione dei dati.
+
+
+
+=== Utilizzando un tipo di istanza più piccolo
+
+È possibile implementare la classificazione BlueXP su un sistema con meno CPU e meno RAM, ma ci sono alcune limitazioni quando si utilizzano questi sistemi meno potenti.
+
+[cols="18,31,51"]
+|===
+| Dimensioni del sistema | Specifiche | Limitazioni 
+
+
+| Grande (impostazione predefinita) | 16 CPU, 64 GB di RAM, SSD da 500 GiB | Nessuno 
+
+
+| Medio | 8 CPU, 32 GB di RAM, SSD da 200 GiB | Scansione più lenta e scansione di un massimo di 1 milione di file. 
+
+
+| Piccolo | 8 CPU, 16 GB di RAM, SSD da 100 GiB | Stesse limitazioni del "Medio", più la capacità di identificare link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request["nomi dei soggetti dei dati"] l'interno dei file è disattivato. 
+|===
+Quando si implementa la classificazione BlueXP nel cloud su AWS, è possibile scegliere un'istanza grande/media/piccola. Quando si implementa la classificazione BlueXP in Azure o GCP, inviare un'e-mail a ng-contact-data-sense@netapp.com per ricevere assistenza se si desidera utilizzare uno di questi sistemi più piccoli. Dovremo collaborare con te per implementare queste configurazioni cloud più piccole.
+
+Quando si implementa la classificazione BlueXP on-premise, è sufficiente utilizzare un host Linux con le specifiche più piccole. Non è necessario contattare NetApp per assistenza.
+
+
+
+== Come funziona la classificazione BlueXP
+
+Ad alto livello, la classificazione BlueXP funziona come segue:
+
+. Si implementa un'istanza della classificazione BlueXP in BlueXP.
+. È possibile attivare la mappatura ad alto livello o la scansione a livello profondo su una o più origini dati.
+. La classificazione BlueXP esegue la scansione dei dati utilizzando un processo di apprendimento ai.
+. Utilizza le dashboard e i tool di reporting forniti per aiutarti nelle tue attività di compliance e governance.
+
+
+
+
+== Come funzionano le scansioni
+
+Dopo aver attivato la classificazione BlueXP e selezionato volumi, bucket, schemi di database o dati utente OneDrive o SharePoint che si desidera analizzare, inizia immediatamente la scansione dei dati per identificare i dati personali e sensibili. Mappa i dati dell'organizzazione, classifica ciascun file e identifica ed estrae entità e modelli predefiniti nei dati. Il risultato della scansione è un indice di informazioni personali, informazioni personali sensibili, categorie di dati e tipi di file.
+
+La classificazione BlueXP si connette ai dati come qualsiasi altro client montando volumi NFS e CIFS. Ai volumi NFS viene automaticamente eseguito l'accesso in sola lettura, mentre è necessario fornire le credenziali Active Directory per eseguire la scansione dei volumi CIFS.
+
+image:diagram_cloud_compliance_scan.png["Diagramma che mostra un'istanza di BlueXP e un'istanza di classificazione BlueXP in esecuzione nel provider cloud. L'istanza di classificazione BlueXP si connette a volumi NFS e CIFS, bucket S3, account OneDrive e database per eseguirne la scansione."]
+
+Dopo la scansione iniziale, la classificazione BlueXP esegue una scansione continua dei dati per rilevare le modifiche incrementali (per questo motivo è importante mantenere l'istanza in esecuzione).
+
+È possibile attivare e disattivare le scansioni a livello di volume, a livello di bucket, a livello di schema del database, a livello di utente OneDrive e a livello di sito SharePoint.
+
+
+
+=== Qual è la differenza tra le scansioni di mappatura e classificazione
+
+La classificazione BlueXP consente di eseguire una scansione generale di "mappatura" su origini dati selezionate. La mappatura fornisce solo una panoramica di alto livello dei dati, mentre la classificazione fornisce una scansione di alto livello dei dati. Il mapping può essere eseguito sulle origini dati molto rapidamente perché non accede ai file per vedere i dati all'interno.
+
+Molti utenti apprezzano questa funzionalità perché desiderano eseguire rapidamente la scansione dei dati per identificare le origini dati che richiedono una maggiore ricerca e quindi possono abilitare le scansioni di classificazione solo su quelle origini dati o volumi richiesti.
+
+La tabella seguente mostra alcune delle differenze:
+
+[cols="47,18,18"]
+|===
+| Funzione | Classificazione | Mappatura 
+
+
+| Velocità di scansione | Lento | Veloce 
+
+
+| Elenco dei tipi di file e della capacità utilizzata | Sì | Sì 
+
+
+| Numero di file e capacità utilizzata | Sì | Sì 
+
+
+| Età e dimensioni dei file | Sì | Sì 
+
+
+| Capacità di eseguire un link:task-controlling-governance-data.html#data-mapping-report["Report di mappatura dei dati"] | Sì | Sì 
+
+
+| Pagina di analisi dei dati per visualizzare i dettagli del file | Sì | No 
+
+
+| Cercare i nomi all'interno dei file | Sì | No 
+
+
+| Creare link:task-using-policies.html["policy"] che forniscono risultati di ricerca personalizzati | Sì | No 
+
+
+| Categorizzare i dati utilizzando le etichette AIP e i tag di stato | Sì | No 
+
+
+| Copiare, eliminare e spostare i file di origine | Sì | No 
+
+
+| Possibilità di eseguire altri report | Sì | No 
+|===
+
+
+=== Con quale rapidità la classificazione BlueXP esegue la scansione dei dati
+
+La velocità di scansione è influenzata dalla latenza di rete, dalla latenza del disco, dalla larghezza di banda della rete, dalle dimensioni dell'ambiente e dalle dimensioni della distribuzione dei file.
+
+* Quando si eseguono scansioni Mapping, la classificazione BlueXP può eseguire la scansione tra 100-150 Tibers di dati al giorno, per nodo dello scanner.
+* Quando si eseguono scansioni di classificazione, la classificazione BlueXP è in grado di eseguire la scansione tra 15-40 Tibers di dati al giorno, per nodo dello scanner.
+
+
+link:task-deploy-compliance-onprem.html#install-bluexp-classification-on-the-linux-host["Scopri di più sull'implementazione di più nodi scanner per la scansione dei dati"^].
+
+
+
+== Informazioni indicizzati dalla classificazione BlueXP
+
+La classificazione BlueXP raccoglie, indicizza e assegna categorie ai dati (file). I dati indicizzati dalla classificazione BlueXP includono quanto segue:
+
+Metadati standard:: La classificazione BlueXP raccoglie i metadati standard relativi ai file: Il tipo di file, le dimensioni, le date di creazione e modifica e così via.
+Dati personali:: Informazioni personali come indirizzi e-mail, numeri di identificazione o numeri di carta di credito. link:task-controlling-private-data.html#viewing-files-that-contain-personal-data["Scopri di più sui dati personali"^].
+Dati personali sensibili:: Tipi speciali di informazioni sensibili, come dati sanitari, origine etnica o opinioni politiche, come definito dal GDPR e da altre normative sulla privacy. link:task-controlling-private-data.html#viewing-files-that-contain-sensitive-personal-data["Scopri di più sui dati personali sensibili"^].
+Categorie:: La classificazione BlueXP prende i dati sottoposti a scansione e li divide in diversi tipi di categorie. Le categorie sono argomenti basati sull'analisi ai del contenuto e dei metadati di ciascun file. link:task-controlling-private-data.html#viewing-files-by-categories["Scopri di più sulle categorie"^].
+Tipi:: La classificazione BlueXP prende i dati sottoposti a scansione e li suddivide in base al tipo di file. link:task-controlling-private-data.html#viewing-files-by-file-types["Scopri di più sui tipi"^].
+Riconoscimento entità nome:: La classificazione BlueXP utilizza l'ai per estrarre i nomi delle persone fisiche dai documenti. link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request["Scopri come rispondere alle richieste di accesso ai soggetti dati"^].
+
+
+
+
+== Panoramica delle reti
+
+BlueXP implementa l'istanza di classificazione BlueXP con un gruppo di protezione che abilita le connessioni HTTP in entrata dall'istanza del connettore.
+
+Quando si utilizza BlueXP in modalità SaaS, la connessione a BlueXP viene servita tramite HTTPS e i dati privati inviati tra il browser e l'istanza di classificazione BlueXP sono protetti con crittografia end-to-end, il che significa che NetApp e terze parti non possono leggerli.
+
+Le regole in uscita sono completamente aperte. L'accesso a Internet è necessario per installare e aggiornare il software di classificazione BlueXP e per inviare metriche di utilizzo.
+
+Se hai requisiti di rete rigorosi, link:task-deploy-cloud-compliance.html#review-prerequisites["Scopri gli endpoint che BlueXP classifica a contatto con"^].
+
+
+
+== Accesso dell'utente alle informazioni di conformità
+
+Il ruolo assegnato a ciascun utente offre diverse funzionalità all'interno di BlueXP e all'interno della classificazione BlueXP:
+
+* Un *account Admin* può gestire le impostazioni di conformità e visualizzare le informazioni di conformità per tutti gli ambienti di lavoro.
+* Un *Workspace Admin* può gestire le impostazioni di conformità e visualizzare le informazioni di conformità solo per i sistemi ai quali è consentito l'accesso. Se un amministratore dell'area di lavoro non riesce ad accedere a un ambiente di lavoro in BlueXP, non può visualizzare alcuna informazione di conformità per l'ambiente di lavoro nella scheda di classificazione di BlueXP.
+* Gli utenti con il ruolo *Compliance Viewer* possono solo visualizzare le informazioni di conformità e generare report per i sistemi ai quali sono autorizzati ad accedere. Questi utenti non possono attivare/disattivare la scansione di volumi, bucket o schemi di database. Questi utenti non possono copiare, spostare o eliminare i file.
+
+
+https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-user-roles.html["Scopri di più sui ruoli BlueXP"^] e come fare https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-netapp-accounts.html#adding-users["aggiungere utenti con ruoli specifici"^].

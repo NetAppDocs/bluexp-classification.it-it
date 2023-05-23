@@ -1,0 +1,236 @@
+---
+sidebar: sidebar 
+permalink: task-test-linux-system.html 
+keywords: cloud compliance, data sense, get started, deploy cloud BlueXP classification, cloud compliance access, compliance, on-premises, linux, test linux system 
+summary: 'Prima di installare manualmente la classificazione BlueXP su un host Linux, è possibile eseguire uno script sull"host per verificare che tutti i prerequisiti siano stati implementati per l"installazione della classificazione BlueXP. È possibile eseguire questo script su un host Linux nella rete o su un host Linux nel cloud. L"host può essere connesso a Internet o risiedere in un sito che non dispone di accesso a Internet.' 
+---
+= Verificare che l'host Linux sia pronto per installare la classificazione BlueXP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Prima di installare manualmente la classificazione BlueXP su un host Linux, è possibile eseguire uno script sull'host per verificare che tutti i prerequisiti siano stati implementati per l'installazione della classificazione BlueXP. È possibile eseguire questo script su un host Linux nella rete o su un host Linux nel cloud. L'host può essere connesso a Internet o risiedere in un sito che non dispone di accesso a Internet (un "sito oscuro").
+
+Esiste anche uno script di test prerequisito che fa parte dello script di installazione della classificazione BlueXP. Lo script qui descritto è stato progettato specificamente per gli utenti che desiderano verificare l'host Linux indipendentemente dall'esecuzione dello script di installazione della classificazione BlueXP.
+
+
+
+== Per iniziare
+
+Eseguire le seguenti operazioni.
+
+. Se necessario, installare un connettore BlueXP, se non ne è già installato uno. È possibile eseguire lo script di test senza aver installato un connettore, ma lo script verifica la connettività tra il connettore e il computer host di classificazione BlueXP, pertanto si consiglia di disporre di un connettore.
+. Preparare il computer host e verificare che soddisfi tutti i requisiti.
+. Abilitare l'accesso a Internet in uscita dal computer host di classificazione BlueXP.
+. Verificare che tutte le porte richieste siano attivate su tutti i sistemi.
+. Scaricare ed eseguire lo script del test dei prerequisiti.
+
+
+
+
+== Creare un connettore
+
+Prima di installare e utilizzare la classificazione BlueXP, è necessario un connettore BlueXP. Tuttavia, è possibile eseguire lo script Prerequisiti senza un connettore.
+
+È possibile https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["Installare il connettore on-premise"^] Su un host Linux nella rete o su un host Linux nel cloud. Alcuni utenti che intendono installare BlueXP classification on-premise possono anche scegliere di installare il connettore on-premise.
+
+Per creare un connettore nel tuo ambiente di cloud provider, consulta https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html["Creazione di un connettore in AWS"^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-azure.html["Creazione di un connettore in Azure"^], o. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html["Creazione di un connettore in GCP"^].
+
+Quando si esegue lo script Prerequisiti, è necessario l'indirizzo IP o il nome host del sistema di connessione. Queste informazioni saranno disponibili se il connettore è stato installato nella propria sede. Se il connettore è implementato nel cloud, è possibile trovare queste informazioni dalla console BlueXP: Fare clic sull'icona della Guida, selezionare *Support* e fare clic su *BlueXP Connector*.
+
+
+
+== Verificare i requisiti dell'host
+
+Il software di classificazione BlueXP deve essere eseguito su un host che soddisfi requisiti specifici del sistema operativo, requisiti di RAM, requisiti software e così via.
+
+* La classificazione BlueXP non è supportata su un host condiviso con altre applicazioni: L'host deve essere un host dedicato.
+
+
+* Quando si costruisce il sistema host in sede, è possibile scegliere tra tre dimensioni del sistema a seconda delle dimensioni del set di dati che si prevede di sottoporre a scansione di classificazione BlueXP.
++
+[cols="18,18,26,30"]
+|===
+| Dimensioni del sistema | CPU | RAM (la memoria di swap deve essere disattivata) | Disco 
+
+
+| *Grande* | 16 CPU | 64 GB DI RAM | 500 GiB SSD ON /, o - 100 GiB Available on /opt - 395 GiB Available on /var - 5 GiB on /tmp 
+
+
+| *Medio* | 8 CPU | 32 GB DI RAM | 200 GiB SSD ON /, o - 50 GiB Available on /opt - 145 GiB Available on /var - 5 GiB on /tmp 
+
+
+| *Piccolo* | 8 CPU | 16 GB DI RAM | 100 GiB SSD ON /, o - 50 GiB Available on /opt - 45 GiB Available on /var - 5 GiB on /tmp 
+|===
++
+Si noti che l'utilizzo di questi sistemi più piccoli presenta delle limitazioni. Vedere link:concept-cloud-compliance.html#using-a-smaller-instance-type["Utilizzando un tipo di istanza più piccolo"] per ulteriori informazioni.
+
+* *UNIX folder permissions*: Sono richieste le seguenti autorizzazioni minime per UNIX:
++
+[cols="25,25"]
+|===
+| Cartella | Permessi minimi 
+
+
+| /tmp | `rwxrwxrwt` 
+
+
+| /opz | `rwxr-xr-x` 
+
+
+| /var/lib/docker | `rwx------` 
+
+
+| /user/lib/systemd/system | `rwxr-xr-x` 
+|===
+* Quando si implementa un'istanza di calcolo nel cloud per l'installazione della classificazione BlueXP, si consiglia di utilizzare un sistema che soddisfi i requisiti di sistema "grandi" indicati in precedenza:
++
+** *Tipo di istanza AWS EC2*: Si consiglia "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types["Vedere altri tipi di istanze AWS"^].
+** *Dimensione delle macchine virtuali Azure*: Si consiglia "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types["Vedere altri tipi di istanze di Azure"^].
+** *Tipo di macchina GCP*: Si consiglia "n2-standard-16". link:reference-instance-types.html#gcp-instance-types["Vedere altri tipi di istanze GCP"^].
+
+
+* *Sistema operativo*: Il sistema operativo deve essere in grado di installare il motore di docker.
++
+** Red Hat Enterprise Linux versioni da 8.0 a 8.7
+** CentOS versioni da 8.0 a 8.7
+** CentOS Stream 8
+** È possibile utilizzare RHEL o CentOS versione 7.8 o 7.9, ma la versione del kernel Linux deve essere 4.0 o superiore
+
+
+* *Red Hat Subscription Management*: L'host deve essere registrato con Red Hat Subscription Management. Se non è registrato, il sistema non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione.
+* *Software aggiuntivo*: È necessario installare il seguente software sull'host prima di installare la classificazione BlueXP:
++
+** Docker Engine versione 19.3.1 o successiva. https://docs.docker.com/engine/install/["Visualizzare le istruzioni di installazione"^].
+** Python 3 versione 3.6 o successiva. https://www.python.org/downloads/["Visualizzare le istruzioni di installazione"^].
+
+
+* *Considerazioni su Firewalld*: Se si intende utilizzare `firewalld`, Si consiglia di abilitarla prima di installare la classificazione BlueXP. Eseguire i seguenti comandi per configurare `firewalld` In modo che sia compatibile con la classificazione BlueXP:
++
+....
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=8080/tcp
+firewall-cmd --permanent --add-port=443/tcp
+firewall-cmd --reload
+....
++
+Se si prevede di utilizzare altri host di classificazione BlueXP come nodi scanner (in un modello distribuito), aggiungere queste regole al sistema primario in questo momento:
+
++
+....
+firewall-cmd --permanent --add-port=2377/tcp
+firewall-cmd --permanent --add-port=7946/udp
+firewall-cmd --permanent --add-port=7946/tcp
+firewall-cmd --permanent --add-port=4789/udp
+....
++
+Tenere presente che è necessario riavviare Docker ogni volta che si attiva o si aggiorna `firewalld` impostazioni.
+
+
+
+
+
+== Abilitare l'accesso a Internet in uscita dalla classificazione BlueXP
+
+La classificazione BlueXP richiede l'accesso a Internet in uscita. Se la rete fisica o virtuale utilizza un server proxy per l'accesso a Internet, assicurarsi che l'istanza di classificazione BlueXP disponga dell'accesso a Internet in uscita per contattare i seguenti endpoint.
+
+
+TIP: Questa sezione non è necessaria per i sistemi host installati in siti senza connettività Internet.
+
+[cols="43,57"]
+|===
+| Endpoint | Scopo 
+
+
+| https://api.bluexp.netapp.com | Comunicazione con il servizio BlueXP, che include gli account NetApp. 
+
+
+| https://netapp-cloud-account.auth0.com https://auth0.com | Comunicazione con il sito Web BlueXP per l'autenticazione utente centralizzata. 
+
+
+| https://support.compliance.api.bluexp.netapp.com/ https://hub.docker.com https://auth.docker.io https://registry-1.docker.io https://index.docker.io/ https://dseasb33srnrn.cloudfront.net/ https://production.cloudflare.docker.com/ | Fornisce accesso a immagini software, manifesti, modelli e per inviare registri e metriche. 
+
+
+| https://support.compliance.api.bluexp.netapp.com/ | Consente a NetApp di eseguire lo streaming dei dati dai record di audit. 
+
+
+| https://github.com/docker https://download.docker.com | Fornisce pacchetti prerequisiti per l'installazione di docker. 
+
+
+| http://mirror.centos.org http://mirrorlist.centos.org http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.107-3.el7.noarch.rpm | Fornisce pacchetti prerequisiti per l'installazione di CentOS. 
+|===
+
+
+== Verificare che tutte le porte richieste siano attivate
+
+Assicurarsi che tutte le porte richieste siano aperte per la comunicazione tra il connettore, la classificazione BlueXP, Active Directory e le origini dati.
+
+[cols="25,25,50"]
+|===
+| Tipo di connessione | Porte | Descrizione 
+
+
+| Connettore <> classificazione BlueXP | 8080 (TCP), 443 (TCP) e 80 | Il firewall o le regole di routing per il connettore devono consentire il traffico in entrata e in uscita sulla porta 443 da e verso l'istanza di classificazione BlueXP. Assicurarsi che la porta 8080 sia aperta in modo da visualizzare l'avanzamento dell'installazione in BlueXP. 
+
+
+| Connettore <> ONTAP cluster (NAS) | 443 (TCP)  a| 
+BlueXP rileva i cluster ONTAP utilizzando HTTPS. Se si utilizzano criteri firewall personalizzati, l'host del connettore deve consentire l'accesso HTTPS in uscita attraverso la porta 443. Se il connettore si trova nel cloud, tutte le comunicazioni in uscita sono consentite dal firewall predefinito o dalle regole di routing.
+
+|===
+
+
+== Eseguire lo script dei prerequisiti di classificazione BlueXP
+
+Seguire questa procedura per eseguire lo script dei prerequisiti di classificazione BlueXP.
+
+.Di cosa hai bisogno
+* Verificare che il sistema Linux soddisfi i requisiti <<Verificare i requisiti dell'host,requisiti dell'host>>.
+* Verificare che nel sistema siano installati i due pacchetti software prerequisiti (Docker Engine e Python 3).
+* Assicurarsi di disporre dei privilegi di root sul sistema Linux.
+
+
+.Fasi
+. Scaricare lo script dei prerequisiti di classificazione BlueXP dal https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["Sito di supporto NetApp"^]. Il file da selezionare è denominato *standalone-pre-requisito-tester-<version>*.
+. Copiare il file sull'host Linux che si desidera utilizzare (utilizzando `scp` o qualche altro metodo).
+. Assegnare le autorizzazioni per eseguire lo script.
++
+[source, cli]
+----
+chmod +x standalone-pre-requisite-tester-v1.21.0
+----
+. Eseguire lo script utilizzando il seguente comando.
++
+[source, cli]
+----
+ ./standalone-pre-requisite-tester-v1.21.0 <--darksite>
+----
++
+Aggiungere l'opzione "--darksite" solo se si esegue lo script su un host che non dispone di accesso a Internet. Alcuni test dei prerequisiti vengono ignorati quando l'host non è connesso a Internet.
+
+. Lo script richiede l'indirizzo IP del computer host di classificazione BlueXP.
++
+** Inserire l'indirizzo IP o il nome host.
+
+
+. Lo script chiede se si dispone di un connettore BlueXP installato.
++
+** Immettere *N* se non si dispone di un connettore installato.
+** Inserire *Y* se si dispone di un connettore installato. Quindi, immettere l'indirizzo IP o il nome host del connettore BlueXP in modo che lo script di test possa verificare questa connettività.
+
+
+. Lo script esegue una serie di test sul sistema e visualizza i risultati man mano che procede. Al termine, scrive un log della sessione in un file denominato `prerequisites-test-<timestamp>.log` nella directory `/opt/netapp/install_logs`.
+
+
+.Risultato
+Se tutti i test dei prerequisiti sono stati eseguiti correttamente, è possibile installare la classificazione BlueXP sull'host quando si è pronti.
+
+Se sono stati rilevati problemi, questi vengono classificati come "consigliati" o "richiesti" per essere risolti. I problemi consigliati in genere sono elementi che rallenterebbero le attività di classificazione e scansione di BlueXP. Questi elementi non devono essere corretti, ma è possibile che si desideri affrontarli.
+
+In caso di problemi "obbligatori", è necessario risolvere i problemi ed eseguire nuovamente lo script di test Prerequisiti.

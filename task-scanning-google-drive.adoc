@@ -1,0 +1,125 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-google-drive.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, google drive, data sense 
+summary: Completare alcuni passaggi per avviare la scansione dei file utente negli account Google Drive con classificazione BlueXP. 
+---
+= Scansione di account Google Drive
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Completare alcuni passaggi per avviare la scansione dei file utente negli account Google Drive con classificazione BlueXP.
+
+
+
+== Avvio rapido
+
+Inizia subito seguendo questi passaggi o scorri verso il basso fino alle sezioni rimanenti per ottenere dettagli completi.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Esaminare i prerequisiti di Google Drive
+[role="quick-margin-para"]
+Assicurarsi di disporre delle credenziali di amministratore per accedere all'account Google Drive.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Implementare la classificazione BlueXP
+[role="quick-margin-para"]
+link:task-deploy-cloud-compliance.html["Implementare la classificazione BlueXP"^] se non è già stata implementata un'istanza.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Accedere all'account Google Drive
+[role="quick-margin-para"]
+Utilizzando le credenziali dell'utente Admin, accedere all'account Google Drive a cui si desidera accedere in modo che venga aggiunto come nuova origine dati.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Selezionare il tipo di scansione dei file utente
+[role="quick-margin-para"]
+Selezionare il tipo di scansione che si desidera eseguire sui file dell'utente; mappatura o mappatura e classificazione.
+
+
+
+== Analisi dei requisiti di Google Drive
+
+Esaminare i seguenti prerequisiti per assicurarsi di essere pronti per attivare la classificazione BlueXP su un account Google Drive.
+
+* È necessario disporre delle credenziali di accesso Admin per l'account Google Drive che fornisce l'accesso in lettura ai file dell'utente
+
+
+
+
+=== Restrizioni attuali
+
+Le seguenti funzionalità di classificazione BlueXP non sono attualmente supportate con Google Drive Files:
+
+* Quando si visualizzano i file nella pagina Data Investigation (analisi dati), le azioni nella barra dei pulsanti non sono attive. Non è possibile copiare, spostare, eliminare, ecc. alcun file.
+* Non è possibile identificare le autorizzazioni all'interno dei file in Google Drive, pertanto non vengono visualizzate informazioni sulle autorizzazioni nella pagina di analisi.
+
+
+
+
+== Implementazione della classificazione BlueXP
+
+Distribuire la classificazione BlueXP se non è già stata implementata un'istanza.
+
+La classificazione BlueXP può essere link:task-deploy-cloud-compliance.html["implementato nel cloud"^] oppure link:task-deploy-compliance-onprem.html["in una sede on-premise con accesso a internet"^].
+
+Gli aggiornamenti al software di classificazione BlueXP sono automatizzati finché l'istanza dispone di connettività Internet.
+
+
+
+== Aggiunta dell'account Google Drive
+
+Aggiungere l'account Google Drive in cui risiedono i file utente. Se si desidera eseguire la scansione di file da più utenti, è necessario eseguire questa procedura per ciascun utente.
+
+.Fasi
+. Dalla pagina Working Environments Configuration (Configurazione ambienti di lavoro), fare clic su *Add Data Source* (Aggiungi origine dati) > *Add Google Drive account* (Aggiungi account Google Drive).
++
+image:screenshot_compliance_add_google_drive_button.png["Una schermata della pagina Scan Configuration (Configurazione scansione) in cui è possibile fare clic sul pulsante Add Google Drive (Aggiungi unità Google)."]
+
+. Nella finestra di dialogo Aggiungi un account Google Drive, fare clic su *Accedi a Google Drive*.
+. Nella pagina Google visualizzata, selezionare l'account Google Drive e immettere l'utente e la password di amministratore richiesti, quindi fare clic su *Accept* (Accetta) per consentire alla classificazione BlueXP di leggere i dati da questo account.
+
+
+L'account Google Drive viene aggiunto all'elenco degli ambienti di lavoro.
+
+
+
+== Selezione del tipo di scansione per i dati dell'utente
+
+Selezionare il tipo di scansione che verrà eseguita dalla classificazione BlueXP sui dati dell'utente.
+
+.Fasi
+. Dalla pagina _Configuration_, fare clic sul pulsante *Configuration* dell'account Google Drive.
++
+image:screenshot_compliance_google_drive_add_sites.png["Una schermata della pagina di configurazione in cui è possibile selezionare il pulsante Configurazione."]
+
+. Abilitare le scansioni di sola mappatura, o le scansioni di mappatura e classificazione, sui file nell'account Google Drive.
++
+image:screenshot_compliance_google_drive_select_scan.png["Una schermata che mostra come selezionare il tipo di classificazione BlueXP di scansione verrà eseguita sui dati di Google Drive."]
+
++
+[cols="45,45"]
+|===
+| A: | Eseguire questa operazione: 
+
+
+| Abilitare le scansioni di sola mappatura sui file | Fare clic su *Map* (Mappa) 
+
+
+| Attivare scansioni complete sui file | Fare clic su *Map & Classify* (Mappa e classificazione) 
+
+
+| Disattivare la scansione dei file | Fare clic su *Off* 
+|===
+
+
+.Risultato
+La classificazione BlueXP avvia la scansione dei file nell'account Google Drive aggiunto e i risultati vengono visualizzati nella dashboard e in altre posizioni.
+
+
+
+== Rimozione di un account Google Drive dalle scansioni di conformità
+
+Poiché solo i file Google Drive di un singolo utente fanno parte di un singolo account Google Drive, se si desidera interrompere la scansione dei file dall'account Google Drive di un utente, è necessario link:task-managing-compliance.html#removing-a-onedrive-sharepoint-or-google-drive-account-from-bluexp-classification["Eliminare l'account Google Drive dalla classificazione BlueXP"].

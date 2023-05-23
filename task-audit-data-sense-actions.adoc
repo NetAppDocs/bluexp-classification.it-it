@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: task-audit-data-sense-actions.html 
+keywords: compliance, actions, view progress, audit, logs, installation 
+summary: 'La classificazione BlueXP registra le attività di gestione eseguite sui file di tutti gli ambienti di lavoro e le origini dati che la classificazione BlueXP sta eseguendo. La classificazione BlueXP registra anche le attività durante l"implementazione dell"istanza di classificazione BlueXP.' 
+---
+= Verifica della cronologia delle azioni di classificazione di BlueXP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La classificazione BlueXP registra le attività di gestione eseguite sui file di tutti gli ambienti di lavoro e le origini dati che la classificazione BlueXP sta eseguendo. La classificazione BlueXP registra anche le attività durante l'implementazione dell'istanza di classificazione BlueXP.
+
+È possibile visualizzare il contenuto dei file di registro di controllo della classificazione BlueXP o scaricarli per verificare quali modifiche sono state apportate e quando. Ad esempio, è possibile visualizzare la richiesta emessa, l'ora della richiesta e i dettagli, ad esempio la posizione di origine nel caso in cui un file sia stato cancellato o la posizione di origine e destinazione nel caso in cui un file sia stato spostato.
+
+
+
+== Contenuto del file di log
+
+Ogni riga del registro di controllo contiene informazioni in questo formato:
+
+`<full date> | <status> | ds_audit_logger | <module> | 0 | 0 | File <full file path> deleted from device <device path> - <result>`
+
+* Data e ora - indicatore orario completo dell'evento
+* Stato - INFORMAZIONI, AVVISO
+* Tipo di azione (eliminare, copiare, spostare, creare policy, aggiornare policy, Eseguire nuovamente la scansione dei file, scaricare il report JSON, ecc.)
+* Nome del file (se l'azione è rilevante per un file)
+* Dettagli dell'azione - cosa è stato fatto: Dipende dall'azione
++
+** Nome policy
+** Per lo spostamento - origine e destinazione
+** Per la copia - origine e destinazione
+** Per tag - nome tag
+** Per assegnare a - nome utente
+** Per avvisi e-mail - indirizzo e-mail/account
+
+
+
+
+Ad esempio, le seguenti righe del file di log mostrano un'operazione di copia riuscita e un'operazione di copia non riuscita.
+
+....
+2022-06-06 15:23:08,910 | INFO | ds_audit_logger | es_scanned_file | 237 | 49 | Copy file /CIFS_share/data/dop1/random_positives.tsv from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - SUCCESS
+2022-06-06 15:23:08,968 | WARNING | ds_audit_logger | es_scanned_file | 239 | 153 | Copy file /CIFS_share/data/compliance-netapp.tar.gz from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - FAILURE
+....
+
+
+== Accedere al file di log
+
+I file di log dell'audit di gestione si trovano sulla macchina di classificazione BlueXP in: `/opt/netapp/audit_logs/`
+
+I file di log dell'audit dell'installazione vengono scritti in `/opt/netapp/install_logs/`
+
+Ogni file di log può avere una dimensione massima di 10 MB. Una volta raggiunto questo limite, viene avviato un nuovo file di log. I file di log sono denominati "DataSense_audit.log", "DataSense_audit.log.1", "DataSense_audit.log.2" e così via. Il sistema conserva un massimo di 100 file di log - i file di log precedenti vengono cancellati automaticamente dopo il raggiungimento del numero massimo consentito.
+
+Quando la classificazione BlueXP viene installata su un computer Linux in sede o su un computer Linux implementato nel cloud, è possibile accedere direttamente al file di log.
+
+Quando la classificazione BlueXP viene implementata nel cloud, è necessario eseguire l'SSH nell'istanza di classificazione BlueXP. Si accede al sistema inserendo l'utente e la password oppure utilizzando la chiave SSH fornita durante l'installazione di BlueXP Connector. Il comando SSH è:
+
+ ssh -i <path_to_the_ssh_key> <machine_user>@<datasense_ip>
+* <path_to_the_ssh_key> = posizione delle chiavi di autenticazione ssh
+* <machine_user>:
++
+** Per AWS: Utilizzare <ec2-user>
+** Per Azure: Utilizzare l'utente creato per l'istanza di BlueXP
+** Per GCP: Utilizzare l'utente creato per l'istanza di BlueXP
+
+
+* <datasense_ip> = indirizzo IP dell'istanza della macchina virtuale
+
+
+Nota: Per accedere al sistema nel cloud, è necessario modificare le regole in entrata del gruppo di sicurezza. Per ulteriori informazioni, vedere:
+
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html["Regole del gruppo di sicurezza in AWS"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-azure.html["Regole del gruppo di sicurezza in Azure"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-gcp.html["Regole del firewall in Google Cloud"^]
+

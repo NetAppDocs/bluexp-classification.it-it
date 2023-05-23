@@ -1,0 +1,142 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-databases.html 
+keywords: cloud compliance, enable cloud compliance, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, databases, database schemas, Oracle, SAP HANA, SQL Server, MongoDB, PostgreSQL, data sense 
+summary: Completare alcuni passaggi per avviare la scansione degli schemi di database con la classificazione BlueXP. 
+---
+= Scansione degli schemi del database
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Completare alcuni passaggi per avviare la scansione degli schemi di database con la classificazione BlueXP.
+
+
+
+== Avvio rapido
+
+Inizia subito seguendo questi passaggi o scorri verso il basso fino alle sezioni rimanenti per ottenere dettagli completi.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Esaminare i prerequisiti del database
+[role="quick-margin-para"]
+Assicurarsi che il database sia supportato e di disporre delle informazioni necessarie per la connessione al database.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Distribuire l'istanza di classificazione BlueXP
+[role="quick-margin-para"]
+link:task-deploy-cloud-compliance.html["Implementare la classificazione BlueXP"^] se non è già stata implementata un'istanza.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Aggiungere il server database
+[role="quick-margin-para"]
+Aggiungere il server database a cui si desidera accedere.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Selezionare gli schemi
+[role="quick-margin-para"]
+Selezionare gli schemi da sottoporre a scansione.
+
+
+
+== Verifica dei prerequisiti
+
+Prima di attivare la classificazione BlueXP, verificare di disporre di una configurazione supportata.
+
+
+
+=== Database supportati
+
+La classificazione BlueXP può eseguire la scansione degli schemi dai seguenti database:
+
+* Amazon Relational Database Service (Amazon RDS)
+* MongoDB
+* MySQL
+* Oracle
+* PostgreSQL
+* SAP HANA
+* SQL Server (MSSQL)
+
+
+
+CAUTION: La funzione di raccolta delle statistiche *deve essere abilitata* nel database.
+
+
+
+=== Requisiti del database
+
+Qualsiasi database con connettività all'istanza di classificazione BlueXP può essere sottoposto a scansione, indipendentemente dalla posizione in cui è ospitato. Per connettersi al database sono necessarie solo le seguenti informazioni:
+
+* Indirizzo IP o nome host
+* Porta
+* Nome del servizio (solo per l'accesso ai database Oracle)
+* Credenziali che consentono l'accesso in lettura agli schemi
++
+Quando si sceglie un nome utente e una password, è importante sceglierne uno che disponga delle autorizzazioni di lettura complete per tutti gli schemi e le tabelle che si desidera sottoporre a scansione. Si consiglia di creare un utente dedicato per il sistema di classificazione BlueXP con tutte le autorizzazioni necessarie.
+
+
+
+*Nota:* per MongoDB, è necessario un ruolo Admin di sola lettura.
+
+
+
+== Implementazione dell'istanza di classificazione BlueXP
+
+Distribuire la classificazione BlueXP se non è già stata implementata un'istanza.
+
+Se si eseguono scansioni di schemi di database accessibili tramite Internet, è possibile link:task-deploy-cloud-compliance.html["Implementare la classificazione BlueXP nel cloud"^] oppure link:task-deploy-compliance-onprem.html["Implementare la classificazione BlueXP in una posizione on-premise con accesso a Internet"^].
+
+Se si eseguono scansioni di schemi di database installati in un sito buio che non dispone di accesso a Internet, è necessario link:task-deploy-compliance-dark-site.html["Implementare la classificazione BlueXP nella stessa posizione on-premise che non dispone di accesso a Internet"^]. Ciò richiede anche che BlueXP Connector sia implementato nella stessa posizione on-premise.
+
+Gli aggiornamenti al software di classificazione BlueXP sono automatizzati finché l'istanza dispone di connettività Internet.
+
+
+
+== Aggiunta del server database
+
+Aggiungere il server di database in cui risiedono gli schemi.
+
+. Dalla pagina Working Environments Configuration (Configurazione ambienti di lavoro), fare clic su *Add Data Source* (Aggiungi origine dati) > *Add Database Server* (Aggiungi server database).
++
+image:screenshot_compliance_add_db_server_button.png["Una schermata della pagina Scan Configuration (Configurazione scansione) in cui è possibile fare clic sul pulsante Add DB Server (Aggiungi server DB)."]
+
+. Inserire le informazioni richieste per identificare il server di database.
++
+.. Selezionare il tipo di database.
+.. Immettere la porta e il nome host o l'indirizzo IP per la connessione al database.
+.. Per i database Oracle, immettere il nome del servizio.
+.. Inserire le credenziali in modo che la classificazione BlueXP possa accedere al server.
+.. Fare clic su *Add DB Server* (Aggiungi server DB).
++
+image:screenshot_compliance_add_db_server_dialog.png["Una schermata della pagina Add DB Server (Aggiungi server DB) per identificare il database."]
+
+
+
+
+
+Il database viene aggiunto all'elenco degli ambienti di lavoro.
+
+
+
+== Attivazione e disattivazione delle scansioni di compliance sugli schemi di database
+
+È possibile interrompere o avviare la scansione completa degli schemi in qualsiasi momento.
+
+
+TIP: Non è disponibile alcuna opzione per selezionare le scansioni di sola mappatura per gli schemi di database.
+
+. Dalla pagina _Configuration_, fare clic sul pulsante *Configuration* del database che si desidera configurare.
++
+image:screenshot_compliance_db_server_config.png["Schermata della pagina Scan Configuration (Configurazione scansione) in cui è possibile selezionare il pulsante Configuration (Configurazione)."]
+
+. Selezionare gli schemi da sottoporre a scansione spostando il dispositivo di scorrimento verso destra.
++
+image:screenshot_compliance_select_schemas.png["Una schermata della pagina Scan Configuration (Configurazione scansione) in cui è possibile scegliere gli schemi da sottoporre a scansione."]
+
+
+
+.Risultato
+La classificazione BlueXP avvia la scansione degli schemi di database abilitati. In caso di errori, questi vengono visualizzati nella colonna Status (Stato), insieme all'azione richiesta per risolvere l'errore.
+
+Si noti che la classificazione BlueXP esegue la scansione dei database una volta al giorno, poiché i database non vengono sottoposti a scansione continua come altre origini dati.
