@@ -24,7 +24,7 @@ Inizia subito seguendo questi passaggi o scorri verso il basso fino alle sezioni
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Individuare i sistemi Azure NetApp Files che si desidera sottoporre a scansione
 [role="quick-margin-para"]
-Prima di eseguire la scansione dei volumi Azure NetApp Files, https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-quick-start.html["BlueXP deve essere configurato per rilevare la configurazione"^].
+Prima di eseguire la scansione dei volumi Azure NetApp Files, https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-quick-start.html["BlueXP deve essere configurato per rilevare la configurazione"^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Distribuire l'istanza di classificazione BlueXP
 [role="quick-margin-para"]
@@ -63,7 +63,7 @@ Selezionare o deselezionare i volumi da sottoporre a scansione per avviare o int
 
 Se il sistema Azure NetApp Files che si desidera sottoporre a scansione non è già in BlueXP come ambiente di lavoro, è possibile aggiungerlo all'area di lavoro in questo momento.
 
-https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-quick-start.html["Scopri come scoprire il sistema Azure NetApp Files in BlueXP"^].
+https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-quick-start.html["Scopri come scoprire il sistema Azure NetApp Files in BlueXP"^].
 
 
 

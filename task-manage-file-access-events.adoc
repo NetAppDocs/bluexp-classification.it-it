@@ -135,9 +135,9 @@ Quando la classificazione BlueXP viene implementata nel cloud, è necessario ese
 
 Nota: Per accedere al sistema nel cloud, è necessario modificare le regole in entrata del gruppo di sicurezza. Per ulteriori informazioni, vedere:
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html["Regole del gruppo di sicurezza in AWS"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-azure.html["Regole del gruppo di sicurezza in Azure"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-gcp.html["Regole del firewall in Google Cloud"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Regole del gruppo di sicurezza in AWS"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Regole del gruppo di sicurezza in Azure"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-gcp.html["Regole del firewall in Google Cloud"^]
 
 
 

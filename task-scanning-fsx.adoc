@@ -41,7 +41,7 @@ Inizia subito seguendo questi passaggi o scorri verso il basso per ottenere info
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Scopri il file system FSX per ONTAP che desideri sottoporre a scansione
 [role="quick-margin-para"]
-Prima di eseguire la scansione di FSX per i volumi ONTAP, https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/start/concept-fsx-aws.html["È necessario disporre di un ambiente di lavoro FSX con volumi configurati"^].
+Prima di eseguire la scansione di FSX per i volumi ONTAP, https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/concept-fsx-aws.html["È necessario disporre di un ambiente di lavoro FSX con volumi configurati"^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Distribuire l'istanza di classificazione BlueXP
 [role="quick-margin-para"]
@@ -77,7 +77,7 @@ Selezionare o deselezionare i volumi da sottoporre a scansione per avviare o int
 
 Se il file system FSX per ONTAP che si desidera sottoporre a scansione non è già in BlueXP come ambiente di lavoro, è possibile aggiungerlo all'area di lavoro in questo momento.
 
-https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html["Scopri come individuare o creare il file system FSX per ONTAP in BlueXP"^].
+https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html["Scopri come individuare o creare il file system FSX per ONTAP in BlueXP"^].
 
 
 

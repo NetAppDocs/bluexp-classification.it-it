@@ -46,7 +46,7 @@ Ciò è utile per le situazioni in cui si esegue la migrazione dei dati e si des
 
 * *Copiare e sincronizzare i file* da un singolo repository di origine (volume ONTAP, bucket S3, condivisione NFS, ecc.) a una directory in una destinazione specifica (destinazione).
 +
-Ciò è utile per le situazioni in cui si esegue la migrazione dei dati da un sistema di origine a un altro. Dopo la copia iniziale, il servizio sincronizza i dati modificati in base alla pianificazione impostata. Questa azione utilizza https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html["Copia e sincronizzazione NetApp BlueXP"^] funzionalità per copiare e sincronizzare i dati da un'origine a una destinazione.
+Ciò è utile per le situazioni in cui si esegue la migrazione dei dati da un sistema di origine a un altro. Dopo la copia iniziale, il servizio sincronizza i dati modificati in base alla pianificazione impostata. Questa azione utilizza https://docs.netapp.com/us-en/bluexp-copy-sync/concept-cloud-sync.html["Copia e sincronizzazione NetApp BlueXP"^] funzionalità per copiare e sincronizzare i dati da un'origine a una destinazione.
 
 
 
@@ -149,9 +149,9 @@ Se inizialmente è stato selezionato *Map All Volumes* (mappatura di tutti i vol
 
 === Copia e sincronizzazione dei file di origine su un sistema di destinazione
 
-È possibile copiare i file di origine che la classificazione BlueXP sta scansionando da qualsiasi origine dati non strutturata supportata in una directory in una posizione di destinazione specifica (https://docs.netapp.com/us-en/cloud-manager-sync/reference-supported-relationships.html["Posizioni di destinazione supportate dalla copia e dalla sincronizzazione BlueXP"^]). Dopo la copia iniziale, tutti i dati modificati nei file vengono sincronizzati in base alla pianificazione configurata.
+È possibile copiare i file di origine che la classificazione BlueXP sta scansionando da qualsiasi origine dati non strutturata supportata in una directory in una posizione di destinazione specifica (https://docs.netapp.com/us-en/bluexp-copy-sync/reference-supported-relationships.html["Posizioni di destinazione supportate dalla copia e dalla sincronizzazione BlueXP"^]). Dopo la copia iniziale, tutti i dati modificati nei file vengono sincronizzati in base alla pianificazione configurata.
 
-Ciò è utile per le situazioni in cui si esegue la migrazione dei dati da un sistema di origine a un altro. Questa azione utilizza https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html["Copia e sincronizzazione NetApp BlueXP"^] funzionalità per copiare e sincronizzare i dati da un'origine a una destinazione.
+Ciò è utile per le situazioni in cui si esegue la migrazione dei dati da un sistema di origine a un altro. Questa azione utilizza https://docs.netapp.com/us-en/bluexp-copy-sync/concept-cloud-sync.html["Copia e sincronizzazione NetApp BlueXP"^] funzionalità per copiare e sincronizzare i dati da un'origine a una destinazione.
 
 
 TIP: Non puoi copiare e sincronizzare i file che risiedono in database, account OneDrive o account SharePoint.
@@ -160,7 +160,7 @@ TIP: Non puoi copiare e sincronizzare i file che risiedono in database, account 
 * Per copiare e sincronizzare i file, è necessario disporre del ruolo account Admin (Amministratore account) o Workspace Admin (Amministratore area di lavoro).
 * Selezionare un minimo di 20 file.
 * Tutti i file selezionati devono provenire dallo stesso repository di origine (volume ONTAP, bucket S3, condivisione NFS o CIFS, ecc.).
-* È necessario attivare il servizio di copia e sincronizzazione BlueXP e configurare almeno un broker di dati da utilizzare per trasferire i file tra i sistemi di origine e di destinazione. Esaminare i requisiti di copia e sincronizzazione di BlueXP a partire da https://docs.netapp.com/us-en/cloud-manager-sync/task-quick-start.html["Descrizione di avvio rapido"^].
+* È necessario attivare il servizio di copia e sincronizzazione BlueXP e configurare almeno un broker di dati da utilizzare per trasferire i file tra i sistemi di origine e di destinazione. Esaminare i requisiti di copia e sincronizzazione di BlueXP a partire da https://docs.netapp.com/us-en/bluexp-copy-sync/task-quick-start.html["Descrizione di avvio rapido"^].
 +
 Si noti che il servizio di copia e sincronizzazione BlueXP prevede costi di servizio separati per le relazioni di sincronizzazione e comporta costi per le risorse se si implementa il broker di dati nel cloud.
 
@@ -189,7 +189,7 @@ L'interfaccia utente di copia e sincronizzazione di BlueXP viene aperta in BlueX
 +
 Viene richiesto di definire la relazione di sincronizzazione. Il sistema di origine viene prepopolato in base al repository e ai file già selezionati nella classificazione BlueXP.
 
-. È necessario selezionare il sistema di destinazione e selezionare (o creare) il Data Broker che si desidera utilizzare. Esaminare i requisiti di copia e sincronizzazione di BlueXP a partire da link:https://docs.netapp.com/us-en/cloud-manager-sync/task-quick-start.html["Descrizione di avvio rapido"^].
+. È necessario selezionare il sistema di destinazione e selezionare (o creare) il Data Broker che si desidera utilizzare. Esaminare i requisiti di copia e sincronizzazione di BlueXP a partire da link:https://docs.netapp.com/us-en/bluexp-copy-sync/task-quick-start.html["Descrizione di avvio rapido"^].
 
 
 .Risultato

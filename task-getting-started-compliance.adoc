@@ -28,7 +28,7 @@ Prima di poter eseguire la scansione dei volumi, è necessario aggiungere i sist
 
 [role="quick-margin-list"]
 * Per i sistemi Cloud Volumes ONTAP, questi ambienti di lavoro dovrebbero essere già disponibili in BlueXP
-* Per sistemi ONTAP on-premise, https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["BlueXP deve rilevare i cluster ONTAP"^]
+* Per sistemi ONTAP on-premise, https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["BlueXP deve rilevare i cluster ONTAP"^]
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Distribuire l'istanza di classificazione BlueXP
@@ -69,7 +69,7 @@ Selezionare o deselezionare i volumi da sottoporre a scansione per avviare o int
 
 Se le origini dati che si desidera sottoporre a scansione non sono già presenti nell'ambiente BlueXP, è possibile aggiungerle all'area di lavoro.
 
-I sistemi Cloud Volumes ONTAP dovrebbero essere già disponibili in Canvas in BlueXP. Per i sistemi ONTAP on-premise, è necessario disporre di https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["BlueXP Scopri questi cluster"^].
+I sistemi Cloud Volumes ONTAP dovrebbero essere già disponibili in Canvas in BlueXP. Per i sistemi ONTAP on-premise, è necessario disporre di https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["BlueXP Scopri questi cluster"^].
 
 
 

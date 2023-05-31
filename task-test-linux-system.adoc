@@ -37,9 +37,9 @@ Eseguire le seguenti operazioni.
 
 Prima di installare e utilizzare la classificazione BlueXP, è necessario un connettore BlueXP. Tuttavia, è possibile eseguire lo script Prerequisiti senza un connettore.
 
-È possibile https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["Installare il connettore on-premise"^] Su un host Linux nella rete o su un host Linux nel cloud. Alcuni utenti che intendono installare BlueXP classification on-premise possono anche scegliere di installare il connettore on-premise.
+È possibile https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["Installare il connettore on-premise"^] Su un host Linux nella rete o su un host Linux nel cloud. Alcuni utenti che intendono installare BlueXP classification on-premise possono anche scegliere di installare il connettore on-premise.
 
-Per creare un connettore nel tuo ambiente di cloud provider, consulta https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html["Creazione di un connettore in AWS"^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-azure.html["Creazione di un connettore in Azure"^], o. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html["Creazione di un connettore in GCP"^].
+Per creare un connettore nel tuo ambiente di cloud provider, consulta https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["Creazione di un connettore in AWS"^], https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Creazione di un connettore in Azure"^], o. https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Creazione di un connettore in GCP"^].
 
 Quando si esegue lo script Prerequisiti, è necessario l'indirizzo IP o il nome host del sistema di connessione. Queste informazioni saranno disponibili se il connettore è stato installato nella propria sede. Se il connettore è implementato nel cloud, è possibile trovare queste informazioni dalla console BlueXP: Fare clic sull'icona della Guida, selezionare *Support* e fare clic su *BlueXP Connector*.
 

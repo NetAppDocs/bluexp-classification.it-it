@@ -348,19 +348,19 @@ Il connettore è un software in esecuzione su un'istanza di calcolo all'interno 
 * Quando si eseguono scansioni di dati in sistemi ONTAP on-premise, condivisioni di file non NetApp, storage a oggetti S3 generico, database, cartelle OneDrive, account SharePoint e account Google Drive, è possibile utilizzare un connettore in una qualsiasi di queste posizioni cloud.
 
 
-Quindi, se si dispone di dati in molte di queste posizioni, potrebbe essere necessario utilizzare https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-to-use-multiple-connectors["Connettori multipli"^].
+Quindi, se si dispone di dati in molte di queste posizioni, potrebbe essere necessario utilizzare https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-to-use-multiple-connectors["Connettori multipli"^].
 
 
 
 === È possibile implementare il connettore sul proprio host?
 
-Sì. È possibile https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-on-prem.html["Implementare il connettore on-premise"^] Su un host Linux nella rete o su un host nel cloud. Se si prevede di implementare la classificazione BlueXP on-premise, potrebbe essere necessario installare anche il connettore on-premise, ma non è necessario.
+Sì. È possibile https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["Implementare il connettore on-premise"^] Su un host Linux nella rete o su un host nel cloud. Se si prevede di implementare la classificazione BlueXP on-premise, potrebbe essere necessario installare anche il connettore on-premise, ma non è necessario.
 
 
 
 === E i siti sicuri senza accesso a Internet?
 
-Sì, anche questo è supportato. È possibile https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-private-mode.html["Implementare il connettore su un host Linux on-premise che non dispone di accesso a Internet"^]. Quindi, è possibile individuare cluster ONTAP on-premise e altre origini dati locali e eseguire la scansione dei dati utilizzando la classificazione BlueXP.
+Sì, anche questo è supportato. È possibile https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Implementare il connettore su un host Linux on-premise che non dispone di accesso a Internet"^]. Quindi, è possibile individuare cluster ONTAP on-premise e altre origini dati locali e eseguire la scansione dei dati utilizzando la classificazione BlueXP.
 
 
 

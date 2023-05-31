@@ -85,7 +85,7 @@ Se non disponi di una licenza di classificazione BlueXP, contattaci per acquista
 * Fare clic sull'icona della chat nell'angolo inferiore destro di BlueXP per richiedere una licenza.
 
 
-Se si dispone di una licenza basata su nodo non assegnata per Cloud Volumes ONTAP che non si intende utilizzare, è possibile convertirla in una licenza di classificazione BlueXP con la stessa equivalenza in dollari e la stessa data di scadenza. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["Fai clic qui per ulteriori informazioni"^].
+Se si dispone di una licenza basata su nodo non assegnata per Cloud Volumes ONTAP che non si intende utilizzare, è possibile convertirla in una licenza di classificazione BlueXP con la stessa equivalenza in dollari e la stessa data di scadenza. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["Fai clic qui per ulteriori informazioni"^].
 
 La pagina del portafoglio digitale BlueXP di BlueXP consente di gestire le licenze BYOL di classificazione BlueXP. È possibile aggiungere nuove licenze e aggiornare quelle esistenti.
 
@@ -126,7 +126,7 @@ Dopo aver acquistato una licenza di classificazione BlueXP (Data Sense) per l'ac
 +
 ** Se si dispone del numero di serie della licenza di classificazione BlueXP e si conosce il proprio account NSS, selezionare l'opzione *inserire il numero di serie* e immettere le informazioni desiderate.
 +
-Se il tuo account NetApp Support Site non è disponibile nell'elenco a discesa, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-nss-accounts.html["Aggiungere l'account NSS a BlueXP"^].
+Se il tuo account NetApp Support Site non è disponibile nell'elenco a discesa, https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["Aggiungere l'account NSS a BlueXP"^].
 
 ** Se si dispone del file di licenza di classificazione BlueXP (richiesto se installato in un sito buio), selezionare l'opzione *Upload License file* (carica file di licenza) e seguire le istruzioni per allegare il file.
 +
