@@ -43,7 +43,7 @@
     <url>
       <loc>https://docs.netapp.com/it-it/bluexp-classification/reference-collected-metadata.html</loc>
       
-      <lastmod>2023-05-31T14:11:08+00:00</lastmod>
+      <lastmod>2023-06-06T15:32:26+00:00</lastmod>
       
     </url>
   
@@ -51,6 +51,13 @@
       <loc>https://docs.netapp.com/it-it/bluexp-classification/reference-instance-types.html</loc>
       
       <lastmod>2023-05-23T20:55:14+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/it-it/bluexp-classification/reference-limitations.html</loc>
+      
+      <lastmod>2023-06-06T15:32:26+00:00</lastmod>
       
     </url>
   
@@ -64,7 +71,7 @@
     <url>
       <loc>https://docs.netapp.com/it-it/bluexp-classification//search.html</loc>
       
-      <lastmod>2023-05-31T14:11:23+00:00</lastmod>
+      <lastmod>2023-06-06T15:32:43+00:00</lastmod>
       
     </url>
   
@@ -85,7 +92,7 @@
     <url>
       <loc>https://docs.netapp.com/it-it/bluexp-classification/task-controlling-governance-data.html</loc>
       
-      <lastmod>2023-05-23T20:55:14+00:00</lastmod>
+      <lastmod>2023-06-06T15:32:26+00:00</lastmod>
       
     </url>
   
@@ -99,42 +106,42 @@
     <url>
       <loc>https://docs.netapp.com/it-it/bluexp-classification/task-deploy-cloud-compliance.html</loc>
       
-      <lastmod>2023-05-31T14:11:08+00:00</lastmod>
+      <lastmod>2023-06-06T15:32:26+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/bluexp-classification/task-deploy-compliance-dark-site.html</loc>
       
-      <lastmod>2023-05-31T14:11:08+00:00</lastmod>
+      <lastmod>2023-06-06T15:32:26+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/bluexp-classification/task-deploy-compliance-onprem.html</loc>
       
-      <lastmod>2023-05-31T14:11:08+00:00</lastmod>
+      <lastmod>2023-06-06T15:32:26+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/bluexp-classification/task-generating-compliance-reports.html</loc>
       
-      <lastmod>2023-05-23T20:55:14+00:00</lastmod>
+      <lastmod>2023-06-06T15:32:26+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/bluexp-classification/task-get-help.html</loc>
       
-      <lastmod>2023-05-31T14:11:08+00:00</lastmod>
+      <lastmod>2023-06-06T15:32:26+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/bluexp-classification/task-getting-started-compliance.html</loc>
       
-      <lastmod>2023-05-31T14:11:08+00:00</lastmod>
+      <lastmod>2023-06-06T15:32:26+00:00</lastmod>
       
     </url>
   
@@ -204,7 +211,7 @@
     <url>
       <loc>https://docs.netapp.com/it-it/bluexp-classification/task-scanning-anf.html</loc>
       
-      <lastmod>2023-05-31T14:11:08+00:00</lastmod>
+      <lastmod>2023-06-06T15:32:26+00:00</lastmod>
       
     </url>
   
@@ -225,7 +232,7 @@
     <url>
       <loc>https://docs.netapp.com/it-it/bluexp-classification/task-scanning-fsx.html</loc>
       
-      <lastmod>2023-05-31T14:11:08+00:00</lastmod>
+      <lastmod>2023-06-06T15:32:26+00:00</lastmod>
       
     </url>
   
@@ -253,7 +260,7 @@
     <url>
       <loc>https://docs.netapp.com/it-it/bluexp-classification/task-scanning-s3.html</loc>
       
-      <lastmod>2023-05-23T20:55:14+00:00</lastmod>
+      <lastmod>2023-06-06T15:32:26+00:00</lastmod>
       
     </url>
   
@@ -267,14 +274,14 @@
     <url>
       <loc>https://docs.netapp.com/it-it/bluexp-classification/task-support-registration.html</loc>
       
-      <lastmod>2023-05-31T14:11:08+00:00</lastmod>
+      <lastmod>2023-06-06T15:32:26+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/it-it/bluexp-classification/task-test-linux-system.html</loc>
       
-      <lastmod>2023-05-31T14:11:08+00:00</lastmod>
+      <lastmod>2023-06-06T15:32:26+00:00</lastmod>
       
     </url>
   
@@ -302,7 +309,7 @@
     <url>
       <loc>https://docs.netapp.com/it-it/bluexp-classification/whats-new.html</loc>
       
-      <lastmod>2023-05-31T14:11:08+00:00</lastmod>
+      <lastmod>2023-06-06T15:32:26+00:00</lastmod>
       
     </url>
   

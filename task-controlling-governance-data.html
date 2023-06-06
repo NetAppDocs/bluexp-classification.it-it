@@ -347,6 +347,31 @@
 
 
 
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/bluexp-classification/pdfs/sidebar/Note_di_rilascio.pdf" 
+            
+          >
+            <img src="/it-it/bluexp-classification/images/pdf.png" alt="" width="16" height="16"/>
+            Note di rilascio
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
 
 
     
@@ -471,6 +496,8 @@
           
     <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
   
+
+
 
 
 
@@ -635,11 +662,27 @@
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Note di rilascio"
-      data-li-level="1#" 
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Note di rilascio</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Novità"
+      data-li-level="2#" 
       class=" "
     ><a class="na-navbar-padding" href="/it-it/bluexp-classification/whats-new.html">
-        Note di rilascio
+        Novità
       </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Limitazioni note"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/bluexp-classification/reference-limitations.html">
+        Limitazioni note
+      </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Inizia subito"
       data-li-level="1" 
@@ -852,6 +895,13 @@
         Gestisci i tuoi dati privati
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Monitorare e gestire gli eventi di accesso ai file"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/bluexp-classification/task-manage-file-access-events.html">
+        Monitorare e gestire gli eventi di accesso ai file
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Modificare le impostazioni di scansione"
       data-li-level="2#" 
       class=" "
@@ -1039,7 +1089,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 20:55:14 +0000">05/23/2023</time>
+    <time datetime="2023-06-06 15:32:26 +0000">06/06/2023</time>
     
   
 
@@ -1338,6 +1388,9 @@ Questo pannello supporta i file in condivisioni CIFS, OneDrive e origini dati Sh
 <div class="paragraph">
 <div class="title">Risultato</div>
 <p>La classificazione BlueXP genera un report in formato PDF che è possibile rivedere e inviare ad altri gruppi in base alle esigenze.</p>
+</div>
+<div class="paragraph">
+<p>Se il report è più grande di 1 MB, il file PDF viene conservato nell&#8217;istanza di classificazione di BlueXP e viene visualizzato un messaggio a comparsa relativo alla posizione esatta. Quando la classificazione BlueXP viene installata su una macchina Linux in sede o su una macchina Linux implementata nel cloud, è possibile accedere direttamente al file PDF. Quando la classificazione BlueXP viene implementata nel cloud, è necessario eseguire l&#8217;SSH nell&#8217;istanza di classificazione BlueXP per scaricare il file PDF. <a href="task-audit-data-sense-actions.html#access-the-log-file" target="_blank" rel="noopener">"Scopri come accedere ai dati sull&#8217;istanza di Classification"</a>.</p>
 </div>
 <div class="paragraph">
 <p>Nota: È possibile personalizzare il nome della società visualizzato nella prima pagina del report dalla parte superiore della pagina di classificazione di BlueXP facendo clic su <span class="image"><img src="./media/screenshot_gallery_options.gif" alt="Il pulsante Altro"></span> Quindi fare clic su <strong>Cambia nome azienda</strong>. La volta successiva che si genera il report, questo includerà il nuovo nome.</p>
