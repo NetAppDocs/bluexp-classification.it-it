@@ -50,9 +50,9 @@ Si noti che l'utilizzo di questi sistemi più piccoli presenta delle limitazioni
 
 * *Sistema operativo*: Il sistema operativo deve essere in grado di installare il motore di docker.
 +
-** Red Hat Enterprise Linux versioni da 8.0 a 8.7
-** CentOS versioni da 8.0 a 8.7
-** CentOS Stream 8
+** Ubuntu 22.04
+** Red Hat Enterprise Linux versioni da 8.0 a 8.5
+** CentOS versioni da 8.0 a 8.5
 ** È possibile utilizzare RHEL o CentOS versione 7.8 o 7.9, ma la versione del kernel Linux deve essere 4.0 o superiore
 
 

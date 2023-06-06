@@ -311,9 +311,7 @@
   <block id="d1f03114b8fef49b0f0cb0a28049ecdf" category="list-text">La funzionalità dell'etichetta AIP (Microsoft Azure Information Protection) non può essere integrata.</block>
   <block id="d86d903b07bcdf54c0633484d605d52a" category="inline-link">Ulteriori informazioni sull'implementazione del connettore in un'area pubblica</block>
   <block id="5de07b40dee2a8b07f30a0fd66bd33fa" category="section-title">Esaminare i prerequisiti</block>
-  <block id="5e23930d439e0ac55d03b274d7f2a1f8" category="paragraph">Esaminare i seguenti prerequisiti per assicurarsi di disporre di una configurazione supportata prima di implementare la classificazione BlueXP nel cloud.</block>
   <block id="a3c7cd542dbae9813f2f591e1d616bf8" category="list-text">Abilitare l'accesso a Internet in uscita dalla classificazione BlueXP</block>
-  <block id="6b737aec4f07a3063a27b81b5e76ff62" category="list-text">La classificazione BlueXP richiede l'accesso a Internet in uscita. Se la rete fisica o virtuale utilizza un server proxy per l'accesso a Internet, assicurarsi che l'istanza di classificazione BlueXP disponga dell'accesso a Internet in uscita per contattare i seguenti endpoint. Quando si implementa la classificazione BlueXP nel cloud, si trova nella stessa subnet del connettore.</block>
   <block id="6a942fef40095cafe3b15d4e4f2a1ab3" category="paragraph">Esaminare la tabella appropriata riportata di seguito a seconda che si stia implementando la classificazione BlueXP in AWS, Azure o GCP.</block>
   <block id="4ea85be63fc1085d8a7d469d21ced42a" category="open-title">Endpoint richiesti per AWS</block>
   <block id="b8724da75fb917e992576b17378e66b3" category="cell">Endpoint</block>
@@ -625,7 +623,6 @@
   <block id="4976afb7a20e2ded93bcee9f4f63b5e0" category="paragraph">Vedere <block ref="ff48588b92e5d0773f5ef04161ad7544" category="inline-xref-macro-rx"></block> per ulteriori informazioni.</block>
   <block id="d5e967f01610f01cb30183e6b342e630" category="list-text">Nella finestra di dialogo di conferma, fare clic su *approva* per avviare la scansione dei volumi con la classificazione BlueXP.</block>
   <block id="b0dab6dc992c93096b218e009d2afb00" category="paragraph">La classificazione BlueXP avvia la scansione dei volumi selezionati nell'ambiente di lavoro. I risultati saranno disponibili nella dashboard Compliance non appena la classificazione BlueXP completa le scansioni iniziali. Il tempo necessario dipende dalla quantità di dati, che potrebbe essere di pochi minuti o ore.</block>
-  <block id="972e2a8ce03816519a790c52519af6f1" category="admonition">Per impostazione predefinita, se la classificazione di BlueXP non dispone delle autorizzazioni di scrittura in CIFS o di scrittura in NFS, il sistema non esegue la scansione dei file nei volumi perché la classificazione di BlueXP non può riportare l'ultimo tempo di accesso alla data e ora originale. Se non si ha cura di ripristinare l'ultimo tempo di accesso, fare clic su *o selezionare il tipo di scansione per ciascun volume*. La pagina dispone di un'impostazione che è possibile attivare in modo che la classificazione BlueXP scansiona i volumi indipendentemente dalle autorizzazioni.</block>
   <block id="5276878b0a17edd0ad3fbee3380d1635" category="section-title">Verificare che la classificazione BlueXP abbia accesso ai volumi</block>
   <block id="6bc94b69811d2b0b701e915104066612" category="paragraph">Assicurarsi che la classificazione BlueXP possa accedere ai volumi controllando la rete, i gruppi di sicurezza e le policy di esportazione.</block>
   <block id="24f2d84d2538ae621015886e3ec8b0c0" category="paragraph">È necessario fornire la classificazione BlueXP con le credenziali CIFS in modo che possa accedere ai volumi CIFS.</block>
@@ -787,7 +784,6 @@
   <block id="b6d9bc7bd8d7f42a7f70429316f4c5a8" category="section-title">Ricerca di dati e download di report</block>
   <block id="95fbc0e5629d1a6565b155bfc1a72f1f" category="inline-link-macro">qualsiasi tipo di informazione personale</block>
   <block id="22f358540a8137fabaf166237bf90665" category="paragraph">Cercare il nome completo o l'identificatore noto del soggetto interessato, quindi scaricare un report elenco file o un report DSAR. È possibile eseguire la ricerca in base a. <block ref="15f0bc476b1c646a9bfee9ca0397f926" category="inline-link-macro-rx"></block>.</block>
-  <block id="c5928463d331d08a07fbb5b6452d32f7" category="admonition">L'inglese, il tedesco e lo spagnolo sono supportati durante la ricerca dei nomi degli argomenti dei dati. Il supporto per altre lingue verrà aggiunto in un secondo momento.</block>
   <block id="c9edde725bcfb1c133b505d4d1320784" category="list-text">Fare clic su *Data subjects*.</block>
   <block id="f1c85eaf16c9599d4afcc94f0e5efb53" category="list-text">Cercare il nome completo o l'identificativo noto dell'interessato.</block>
   <block id="6cb73fb6662a2fc29c22c33577236835" category="paragraph">Ecco un esempio che mostra una ricerca per il nome _john Doe_:</block>
@@ -891,9 +887,7 @@
   <block id="c8716632d7055f530ad579b6f751cf3a" category="paragraph"><block ref="c8716632d7055f530ad579b6f751cf3a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="243263104c829e77835d632f591230d5" category="summary">Prima di aprire un caso di supporto con il supporto tecnico NetApp, è necessario aggiungere un account NetApp Support Site a BlueXP e registrarsi per il supporto.</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">Registrati per ricevere assistenza</block>
-  <block id="8bf30fadf784022b073adb9233678a71" category="paragraph">Prima di aprire un caso di supporto con il supporto tecnico NetApp, è necessario aggiungere un account NetApp Support Site (NSS) a BlueXP e quindi registrarsi per il supporto.</block>
   <block id="0375f4855be072c7d856a0233cc21de9" category="section-title">Supporto per le soluzioni cloud provider</block>
-  <block id="be845c219bb74b14349ffa6e27e7aef3" category="paragraph">Per il supporto tecnico sulle seguenti soluzioni di cloud provider integrate in BlueXP, fare riferimento alla sezione "Assistenza" nella documentazione BlueXP relativa a tale prodotto.</block>
   <block id="b0cee72642f5457a71ddd0b49efb6d93" category="inline-link-macro">Cloud Volumes Service per Google Cloud</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">Panoramica sulla registrazione del supporto</block>
   <block id="192054ad7601240a3e8be54cc5cc548e" category="paragraph">Esistono due forme di registrazione per attivare i diritti di supporto:</block>
@@ -901,18 +895,6 @@
   <block id="23fdcbefa6d9cd877be7ceb7a18bb936" category="paragraph">Questa funzione funge da unico ID di abbonamento al supporto per qualsiasi servizio all'interno di BlueXP. Ogni abbonamento al supporto a livello di account BlueXP deve essere registrato.</block>
   <block id="55ff64467cd508971910145ab5d6b3b8" category="list-text">Registrazione dei numeri di serie Cloud Volumes ONTAP associati a un abbonamento nel mercato del provider cloud (si tratta di numeri di serie 909201xxxxxxxx a 20 cifre).</block>
   <block id="67dbdeb11e22ea7def810bade59ce818" category="paragraph">Questi numeri seriali sono comunemente denominati _numeri seriali PAYGO_ e vengono generati da BlueXP al momento dell'implementazione di Cloud Volumes ONTAP.</block>
-  <block id="9d4125dc88bb9db6eb4be939905761ce" category="paragraph">La registrazione di entrambi i tipi di numeri di serie offre funzionalità come l'apertura di ticket di supporto e la generazione automatica dei casi.</block>
-  <block id="98bc603dcb6d5a57d540b13b541fa41a" category="paragraph">La modalità di registrazione dipende dal fatto che tu sia un cliente o un partner nuovo o esistente.</block>
-  <block id="e5646198d2e01aab2cec9ef946f9c53a" category="list-text">Cliente o partner esistente</block>
-  <block id="76928f97884b4332b83c5be9b99d93d3" category="paragraph">In qualità di cliente o partner NetApp esistente, puoi utilizzare il tuo account SSO NetApp Support Site (NSS) per eseguire queste registrazioni di cui sopra. Nel Support Dashboard, BlueXP fornisce una pagina *NSS Management* dove è possibile aggiungere il proprio account NSS. Una volta aggiunto l'account NSS, BlueXP registra automaticamente questi numeri di serie.</block>
-  <block id="4e6af37fb81d50483d832d4de6e2b26a" category="inline-xref">Scopri come aggiungere il tuo account NSS</block>
-  <block id="8d80298f51b7ff2da78e26e60195c7a3" category="paragraph"><block ref="cbec7c1a4a2acff5e84457dd449ac01d" category="inline-xref-macro-rx"></block>.</block>
-  <block id="1c91f3adc957364cb01d33e100ee1ea3" category="list-text">Novità di NetApp</block>
-  <block id="679f2cae4657f177cc89458d49c97e5f" category="paragraph">Se sei nuovo di NetApp, devi completare una registrazione unica del numero di serie del tuo ID account BlueXP sul sito di registrazione del supporto di NetApp. Una volta completata la registrazione e creato un nuovo account NSS, puoi utilizzare questo account in BlueXP per effettuare la registrazione automatica.</block>
-  <block id="00fc9d0c515c69ea2c368521453d982e" category="inline-xref">Scopri come registrarti a NetApp</block>
-  <block id="97454ce87333f7ebd50ee38b8126fb39" category="paragraph"><block ref="37544f11913357c4e8c8a4ec607ae247" category="inline-xref-macro-rx"></block>.</block>
-  <block id="a92ec860f505b318fd0f0eba6165d607" category="section-title">Aggiungere un account NSS a BlueXP</block>
-  <block id="f2575f6d19024f7288cf78d7dc5b3db9" category="paragraph">Support Dashboard consente di aggiungere e gestire gli account NetApp Support Site da utilizzare con BlueXP.</block>
   <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">Se disponi di un account a livello di cliente, puoi aggiungere uno o più account NSS.</block>
   <block id="e3cd99e4aa330ae6bdfb3754d83ae962" category="list-text">Se disponi di un account partner o reseller, puoi aggiungere uno o più account NSS, ma non possono essere aggiunti insieme agli account a livello di cliente.</block>
   <block id="1afe19576f77bb0073c93359ed2cbb18" category="list-text">Nella parte superiore destra della console BlueXP, fare clic sull'icona Guida e selezionare *supporto*.</block>
@@ -930,15 +912,9 @@
   <block id="1afe8a81cfddc9fa9559e272bb6b9496" category="list-text">Una volta effettuato l'accesso, NetApp memorizzerà il nome utente NSS.</block>
   <block id="1dcb63fd55c4d22e87cb32275b8cc808" category="inline-image-macro">Un'icona di tre punti orizzontali</block>
   <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">Questa opzione richiede di effettuare nuovamente l'accesso. Il token per questi account scade dopo 90 giorni. Verrà inviata una notifica per avvisare l'utente.</block>
-  <block id="ad56c7289bc13dcf4f78c285f7f03878" category="section-title">Registrati con NetApp</block>
-  <block id="f1bac79c2c71fbd93863b9fbd718094c" category="paragraph">La modalità di registrazione al supporto NetApp dipende dal fatto che si disponga già di un account NetApp Support Site (NSS).</block>
   <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">Cliente esistente con un account NSS</block>
   <block id="7e177185e7eddff33dd8f3aeb7551132" category="paragraph">Se sei un cliente NetApp con un account NSS, devi semplicemente registrarti per ricevere supporto tramite BlueXP.</block>
-  <block id="25b94e7b58140f12be91fa8fd935fa59" category="list-text">Se non l'hai ancora fatto, Aggiungi il tuo account NSS a BlueXP.</block>
-  <block id="819aff12752b7e6a1828e755c7664de7" category="list-text">Nella pagina *risorse*, fare clic su *Registra per il supporto*.</block>
-  <block id="e8a3d9970b8fc1d92caaf33d9e116bd4" category="inline-image-macro">Una schermata che mostra il numero di serie di un account e l'opzione Registra per il supporto</block>
   <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">Cliente esistente ma nessun account NSS</block>
-  <block id="cc1d3c161bcf25e6445c2fc771647849" category="paragraph">Se sei già un cliente NetApp con licenze e numeri di serie esistenti ma _no_ account NSS, devi solo creare un account NSS.</block>
   <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">Modulo di registrazione per l'utente del sito di supporto NetApp</block>
   <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">Creare un account NetApp Support Site completando il<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
   <block id="d61c9f72493817776f392db42ac446a2" category="list-text">Assicurarsi di selezionare il livello utente appropriato, che in genere è *cliente/utente finale NetApp*.</block>
@@ -957,7 +933,6 @@
   <block id="cc8b0535948da368f832027c19b7f853" category="list-text">Assicurarsi di copiare il numero di serie dell'account (960xxxx) utilizzato in precedenza per il campo del numero di serie. In questo modo, l'elaborazione dell'account sarà più rapida.</block>
   <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">Al termine</block>
   <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">NetApp dovrebbe contattarti durante questo processo. Si tratta di un esercizio di assunzione per i nuovi utenti.</block>
-  <block id="1c0e45ef07d0dbc13ca2394d5e285fd7" category="paragraph">Una volta ottenuto l'account NetApp Support Site, è possibile accedere a BlueXP per aggiungere questo account NSS per le registrazioni future.</block>
   <block id="fe2e5277ceed073489ebfe172d4ae0e3" category="summary">Quando si esegue un'azione dal riquadro dei risultati dell'analisi su molti file, ad esempio l'eliminazione di 100 file, il processo può richiedere del tempo. È possibile monitorare lo stato di queste azioni asincrone nel riquadro Action Status (Stato azione) per sapere quando sono state applicate a tutti i file.</block>
   <block id="43ed2558da29e111d7b394e516d927d4" category="doc">Visualizzazione dello stato delle azioni di compliance</block>
   <block id="c06ccfe24df0bff683583f82911916e0" category="paragraph">Quando si esegue un'azione asincrona dal riquadro dei risultati dell'analisi su molti file, ad esempio, spostando o eliminando 100 file, il processo può richiedere del tempo. Puoi monitorare lo stato di queste azioni nel pannello _Action Status_ per sapere quando sono state applicate a tutti i file.</block>
@@ -1096,9 +1071,6 @@
   <block id="02a3b057fd8df2afe74574d8ba4929b5" category="inline-link-macro">Vedere altri tipi di istanze GCP</block>
   <block id="0b0199602ca16ca93e8ce086565ea99e" category="list-text">*Tipo di macchina GCP*: Si consiglia "n2-standard-16". <block ref="0560993eb8cc456f0c5f18a57a7d0f71" category="inline-link-macro-rx"></block>.</block>
   <block id="f36c8c3dc40ab9521c9078ec5894a47c" category="list-text">*Sistema operativo*: Il sistema operativo deve essere in grado di installare il motore di docker.</block>
-  <block id="4585e4a4eb923c98011a45c75e24090a" category="list-text">Red Hat Enterprise Linux versioni da 8.0 a 8.7</block>
-  <block id="3f9fe8f7187c1830389e9c7ee4426649" category="list-text">CentOS versioni da 8.0 a 8.7</block>
-  <block id="2f305242577378bffaf65a957ab9682c" category="list-text">CentOS Stream 8</block>
   <block id="fa17233f7eaadf931550cd80b9ba0e45" category="list-text">È possibile utilizzare RHEL o CentOS versione 7.8 o 7.9, ma la versione del kernel Linux deve essere 4.0 o superiore</block>
   <block id="f2183b09e54e4aa491c008ea8ca08bbc" category="list-text">*Red Hat Subscription Management*: L'host deve essere registrato con Red Hat Subscription Management. Se non è registrato, il sistema non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione.</block>
   <block id="7299a589db31a0bc8b28dedaafe896cd" category="list-text">*Software aggiuntivo*: È necessario installare il seguente software sull'host prima di installare la classificazione BlueXP:</block>
@@ -1605,9 +1577,6 @@
   <block id="707f0c56eea47eff25f0e4c8755d5434" category="cell">Numero della carta di credito</block>
   <block id="900eba0c97923d74bd8d9e6190e07264" category="cell">✓</block>
   <block id="c6f85ba2c850ce9e6a70c3b08a6a69ce" category="cell">Soggetti dei dati</block>
-  <block id="b357b524e740bc85b9790a0712d84a30" category="cell">Indirizzo e-mail</block>
-  <block id="c1113e338802baf316f93fb02544b32e" category="cell">Numero IBAN (International Bank account Number)</block>
-  <block id="75ba8d70e3692ba200f0e0df37b4d2ae" category="cell">Indirizzo IP</block>
   <block id="dc647eb65e6711e155375218212b3964" category="cell">Password</block>
   <block id="89212175aaa6a47307131ef3a6bbaa3c" category="cell">Identificatori nazionali</block>
   <block id="9ffceb20e382df6e4587add0d24af321" category="cell">TFN australiano (Tax file Number)</block>
@@ -1879,7 +1848,6 @@
   <block id="9d71010686428b63401d21389a87983b" category="inline-image-macro">Una schermata che mostra l'inserimento del ruolo AWS IAM per la classificazione BlueXP</block>
   <block id="d6024ec0f0750e8f3ff480afef31e8a6" category="paragraph"><block ref="d6024ec0f0750e8f3ff480afef31e8a6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="909d8cdc7c100d1834d4de10094f43ca" category="list-text">Fare clic su *Enable* (attiva).</block>
-  <block id="f6f506d119e38348c2c81e414085aec0" category="admonition">È inoltre possibile attivare le scansioni di conformità per un ambiente di lavoro dalla pagina di configurazione facendo clic su <block ref="a5c9b85c9e509567688aed8106bc419c" category="inline-image-macro-rx" type="image"></block> E selezionando *Activate BlueXP classification* (attiva classificazione BlueXP).</block>
   <block id="859a5985b2a5cefc45dc9f226a5d5ba7" category="paragraph">BlueXP assegna il ruolo IAM all'istanza.</block>
   <block id="e18a75263bcb68f3fcffe930704c1b61" category="section-title">Attivazione e disattivazione delle scansioni di compliance sui bucket S3</block>
   <block id="a09f1d7b84a96466ba7bd8852ed92c89" category="paragraph">Dopo che BlueXP ha attivato la classificazione BlueXP su Amazon S3, il passaggio successivo consiste nella configurazione dei bucket che si desidera sottoporre a scansione.</block>
@@ -2375,16 +2343,11 @@
   <block id="4e7da840816931928beff62cd45584f2" category="cell">*CIFS*</block>
   <block id="b4ccd4984cce17a35c772737cf9415b1" category="cell">*NFS*</block>
   <block id="a045f318999c936720f61814bf4d2c2e" category="cell">*Indicatori di data e ora*</block>
-  <block id="9b0d69d83b07284ebc53ba3f530c7818" category="cell">*Tempo di creazione*</block>
   <block id="78945de8de090e90045d299651a68a9b" category="cell">Disponibile</block>
   <block id="f9b9ab70f8d1cbd522aba5cea3dbb026" category="cell">Non disponibile (non supportato in Linux)</block>
-  <block id="9aa1da50f6c826dbf3b0d1376205e7f9" category="cell">*Ora ultimo accesso*</block>
-  <block id="3d798bb38c846d1b3c39cb17b1521285" category="cell">*Ora ultima modifica*</block>
   <block id="06d8b12cf1272ab914790a8734a08c8e" category="cell">*Autorizzazioni*</block>
-  <block id="5c26435b3fa9562233b3bd9a81a6cb31" category="cell">*Autorizzazioni aperte*</block>
   <block id="fbd9c4028bea4c13eb992144e5923bc4" category="cell">Se il gruppo "EVERYONE" ha accesso al file, viene considerato "aperto all'organizzazione"</block>
   <block id="9dda3af696aa0c88f8922f7a00c87baf" category="cell">Se "altri" hanno accesso al file, viene considerato "aperto all'organizzazione"</block>
-  <block id="681c5f54dfb3915a426bb79691c3ab11" category="cell">*Accesso utenti/gruppi*</block>
   <block id="63f19f489bdf8010eb6fc8ee363b3569" category="cell">Le informazioni relative a utenti e gruppi provengono da LDAP</block>
   <block id="bcead494d002e9572dc3500b60795eec" category="cell">Non disponibile (gli utenti NFS sono generalmente gestiti localmente sul server, pertanto la stessa persona può avere un UID diverso in ciascun server)</block>
   <block id="99d97930418935683e2b318283d0dfe1" category="section-title">Data e ora dell'ultimo accesso</block>
@@ -2452,7 +2415,6 @@
   <block id="68a31aee6ed17baf7f680ccc49bda595" category="list-text">Il cluster ONTAP deve consentire l'accesso HTTPS in entrata attraverso la porta 443. Il criterio firewall predefinito "mgmt" consente l'accesso HTTPS in entrata da tutti gli indirizzi IP. Se questo criterio predefinito è stato modificato o se è stato creato un criterio firewall personalizzato, è necessario associare il protocollo HTTPS a tale criterio e abilitare l'accesso dall'host del connettore.</block>
   <block id="e47c11f521d98557641f18f4c041fad3" category="cell">Classificazione BlueXP &lt;&gt; cluster ONTAP</block>
   <block id="241ba9ff87f0666e68fc0cc21f19a8dc" category="list-text">Per NFS - 111 (TCP/UDP) e 2049 (TCP/UDP)</block>
-  <block id="e1a888256fda414af1e7d195ee9bedbb" category="list-text">Per CIFS - 139 (TCP/UDP) e 445 (TCP/UDP)</block>
   <block id="40e4506c6bd794b594435aa3037f3a4e" category="paragraph">La classificazione BlueXP richiede una connessione di rete a ogni subnet Cloud Volumes ONTAP o sistema ONTAP on-premise. I gruppi di protezione per Cloud Volumes ONTAP devono consentire le connessioni in entrata dall'istanza di classificazione BlueXP.</block>
   <block id="ad7298bcd89281d83eddb3e633b2d082" category="list-text">Per NFS - 111 e 2049</block>
   <block id="a48f4e223524f9629ce5ecfebce7e768" category="list-text">Per CIFS - 139 e 445</block>
@@ -2581,7 +2543,6 @@
   <block id="179219a43ca594b98a13e70b7ebc112a" category="list-text">L'opzione "Light CSV Report" (Report CSV leggero) per i report di analisi dei dati include ora le informazioni provenienti dalle directory.</block>
   <block id="b2755be94249995adeed2a28b31a7393" category="list-text">Il filtro dell'ora "ultimo accesso" ora mostra l'ora dell'ultimo accesso per file e directory.</block>
   <block id="013efea19f002683e016d90789038d6e" category="section-title">Miglioramenti all'installazione</block>
-  <block id="c2e0848a220b82c9650399e6f13e1421" category="list-text">La classificazione BlueXP può essere installata sugli host Linux che eseguono CentOS Stream 8.</block>
   <block id="27bfd524829d2f58c611b9380403face" category="list-text">Il programma di installazione della classificazione BlueXP per i siti senza accesso a Internet (siti oscuri) ora esegue un controllo preliminare per assicurarsi che i requisiti di sistema e di rete siano stati soddisfatti per un'installazione corretta.</block>
   <block id="64abb83963bf9db8126f2ee52cdc0390" category="list-text">I file di log di audit dell'installazione vengono salvati ora e scritti in<block ref="2f5e01665193c4e95e37ac69411567bb" prefix=" " category="inline-code"></block>.</block>
   <block id="5c19ef53902ef56ea5c8f554cccb9ad8" category="section-title">5 febbraio 2023 (versione 1.20)</block>
@@ -2989,14 +2950,10 @@
   <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">Crea un caso con il supporto NetApp</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">Oltre alle opzioni di supporto autonomo sopra descritte, puoi collaborare con uno specialista del supporto NetApp per risolvere eventuali problemi dopo l'attivazione del supporto.</block>
   <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">Prima di iniziare</block>
-  <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">Scopri come registrarti per il supporto</block>
-  <block id="1012a287397c66025d7748edf06a36e2" category="paragraph">Per utilizzare la funzione *Crea un caso*, è necessario prima eseguire una registrazione una tantum del numero di serie dell'ID account BlueXP (ad es. 960xxxx) con NetApp. <block ref="3349e4b3d05f646f2f1421bee7c2ad26" category="inline-link-macro-rx"></block>.</block>
   <block id="6254a4afeeb76765a127fe74d31c1b3d" category="list-text">In BlueXP, fare clic su *Guida &gt; supporto*.</block>
   <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">Nella pagina *risorse*, scegliere una delle opzioni disponibili in supporto tecnico:</block>
   <block id="383133cb6f7207b1c65c3ace94aa5e95" category="list-text">Fai clic su *Chiamaci* per parlare con qualcuno al telefono. Viene visualizzata una pagina su netapp.com che elenca i numeri di telefono che è possibile chiamare.</block>
   <block id="5be2e1dfe4bf215289731df45ec8157b" category="list-text">Fare clic su *Crea un caso* per aprire un ticket con uno specialista del supporto NetApp:</block>
-  <block id="b53e0a259f4a0c8e7da80d6c94e26c84" category="list-text">*NetApp Support Site account*: Selezionare l'account NSS applicabile associato alla persona che apre il caso di supporto. Questa persona sarà il contatto principale a cui NetApp dovrà contattare, oltre alle e-mail aggiuntive fornite di seguito.</block>
-  <block id="d950fb930d7f7e6bfdda1b91b4639a02" category="paragraph">Se non vedi il tuo account NSS, puoi accedere alla scheda *NSS Management* nella sezione Support di BlueXP per aggiungerlo.</block>
   <block id="d63bf50426f4c712554faec55b30c548" category="list-text">*Servizio*: Selezionare il servizio a cui è associato il problema. Ad esempio, BlueXP quando si tratta di un problema di supporto tecnico relativo a flussi di lavoro o funzionalità all'interno del servizio.</block>
   <block id="2e50c5f85523f0aba9ff2db10f18279c" category="list-text">*Ambiente di lavoro*: Se applicabile allo storage, selezionare *Cloud Volumes ONTAP* o *on-premise* e quindi l'ambiente di lavoro associato.</block>
   <block id="aa996e20900197b0ea41485ada083d8c" category="paragraph">L'elenco degli ambienti di lavoro rientra nell'ambito dell'account, dell'area di lavoro e del connettore BlueXP selezionato nel banner superiore del servizio.</block>
@@ -3011,7 +2968,6 @@
   <block id="04e15da1deae9568b4dcda64fbb0c8d5" category="paragraph">Per una cronologia dei casi di supporto, fare clic su *Impostazioni &gt; Cronologia* e cercare le azioni denominate "Crea caso di supporto". Un pulsante all'estrema destra consente di espandere l'azione per visualizzare i dettagli.</block>
   <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">È possibile che venga visualizzato il seguente messaggio di errore quando si tenta di creare un caso:</block>
   <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">"Non sei autorizzato a creare un caso per il servizio selezionato"</block>
-  <block id="fa6b601b2fb4e3e5c7b466ecb8bd70ac" category="paragraph">Questo errore potrebbe indicare che l'account NSS e la società di registrazione a cui è associato non sono la stessa società di registrazione per il numero di serie dell'account BlueXP (ad es. 960xxxx) o il numero di serie dell'ambiente di lavoro. Puoi consultare l'elenco degli account NSS nella parte superiore del modulo *Crea un caso* per trovare la corrispondenza giusta oppure richiedere assistenza utilizzando una delle seguenti opzioni:</block>
   <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">Utilizza la chat integrata nel prodotto</block>
   <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">Inviare un caso non tecnico all'indirizzo<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
   <block id="898e35e1a4bf4b025c3edec879439b08" category="section-title">Gestire i casi di supporto (anteprima)</block>
@@ -3095,7 +3051,6 @@
   <block id="f31705a3bb2f2507f4803c1d996c4887" category="list-text">_Proxy_host_ = IP o nome host del server proxy se l'host si trova dietro un server proxy.</block>
   <block id="580d63944c0010bfed9db7cc082666bf" category="list-text">_Porta_proxy_ = porta per la connessione al server proxy (impostazione predefinita: 80).</block>
   <block id="382110a0400b590f5d4cf18a43519ec9" category="list-text">_Schema_proxy_ = Schema di connessione: https o http (http predefinito).</block>
-  <block id="1f44ba4e0ef93bb540e2527fff0546e4" category="list-text">_Proxy_user_ = utente autenticato per la connessione al server proxy, se è richiesta l'autenticazione di base.</block>
   <block id="10e9c25445ddccd5fc8e39fb121f25f2" category="list-text">_Proxy_password_ = Password per il nome utente specificato.</block>
   <block id="3675f8bc3dcc7378b49b58f9ceb1188f" category="list-text">_Ca_cert_dir_ = percorso del sistema Linux di classificazione BlueXP contenente bundle di certificati CA TLS aggiuntivi. Richiesto solo se il proxy sta eseguendo l'intercettazione TLS.</block>
   <block id="054d10b91a2e5ce49cf12f8ebacd96f3" category="section-title">Aggiunta di nodi scanner a un'implementazione esistente</block>
@@ -3265,7 +3220,6 @@
   <block id="e8d4092baef6680c6a35d5228ae31de2" category="paragraph"><block ref="e8d4092baef6680c6a35d5228ae31de2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0dfcbbbe02d3e96f8ad78782e8772587" category="paragraph">Si tratta di un ID generato dal sistema che viene mappato all'e-mail. Nella pagina *NSS Management*, è possibile visualizzare l'e-mail da <block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> menu.</block>
   <block id="fc79de85a483938f72fbcb9822ec0ae3" category="list-text">Se è necessario aggiornare i token delle credenziali di accesso, è disponibile anche l'opzione *Update Credentials* (Aggiorna credenziali) in <block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> menu.</block>
-  <block id="1bb5620ed3998fd776980cad36e22c9a" category="paragraph"><block ref="1bb5620ed3998fd776980cad36e22c9a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="379f9cd57d97013f3f7fdd24f692a0b1" category="paragraph"><block ref="379f9cd57d97013f3f7fdd24f692a0b1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9b9f3b644051dc45eee1cdd195c832fd" category="paragraph">Quando la classificazione BlueXP viene installata in un sito senza accesso a Internet, BlueXP Connector deve essere installato nello stesso sito senza accesso a Internet.<block ref="151d636b52c90572a7410cd729808024" category="inline-link-rx"></block>.</block>
   <block id="ae32f6accb2b2a18892af4e654e3ac00" category="paragraph">Ciò è utile per le situazioni in cui si esegue la migrazione dei dati da un sistema di origine a un altro. Dopo la copia iniziale, il servizio sincronizza i dati modificati in base alla pianificazione impostata. Questa azione utilizza<block ref="d9f5c10edef42cff18580599262fd784" category="inline-link-rx"></block> funzionalità per copiare e sincronizzare i dati da un'origine a una destinazione.</block>
@@ -3286,7 +3240,6 @@
   <block id="ba29241cb1ada66fbef1294aa7e1002a" category="paragraph">Se non si dispone già di un connettore installato sul sito on-premise offline,<block ref="11f86544d4f60d001e494bbafd1f2548" category="inline-link-rx"></block> Su un host Linux.</block>
   <block id="b63ff2e2b175854ce3610e27e52a6f21" category="paragraph">Se non si dispone già di un connettore BlueXP installato sul sito on-premise offline,<block ref="11f86544d4f60d001e494bbafd1f2548" category="inline-link-rx"></block> Su un host Linux nel tuo sito offline.</block>
   <block id="772608951c3bed8c37dd30e4fa52ea7a" category="list-text">Assicurarsi che il connettore disponga delle autorizzazioni per distribuire le risorse e creare gruppi di protezione per l'istanza di classificazione BlueXP. Le autorizzazioni BlueXP più recenti sono disponibili in<block ref="12017b43c12237092f4f947467fd170e" category="inline-link-rx"></block>.</block>
-  <block id="ffb0ab76f2bfaab3dafdcb157116a7ea" category="list-text">Verificare che il software BlueXP Connector sia stato aggiornato alla versione più recente disponibile.<block ref="1189728130fe33c2fb7adb2d97a83d35" category="inline-link-rx"></block>.</block>
   <block id="4da25d5e326dac4c0bb3865e69dd3325" category="paragraph">Il Data Discovery Assessment Report fornisce un'analisi di alto livello dell'ambiente sottoposto a scansione per evidenziare i risultati del sistema e mostrare le aree problematiche e le potenziali fasi di risoluzione dei problemi. L'obiettivo di questo report è aumentare la consapevolezza dei problemi di governance dei dati, delle esposizioni alla sicurezza dei dati e delle lacune nella compliance dei dati del tuo set di dati.<block ref="34e879e713683b8352bb56b59c6078e2" category="inline-link-rx"></block>.</block>
   <block id="38e8bfeb390cec6e72d97323084e18cc" category="paragraph">Quando si implementa la classificazione BlueXP da un connettore BlueXP in un ambiente AWS, è ora possibile scegliere tra due tipi di istanze più piccoli rispetto a quelli disponibili con l'istanza predefinita. Se si esegue la scansione di un ambiente di piccole dimensioni, questo può contribuire a risparmiare sui costi del cloud. Tuttavia, esistono alcune limitazioni quando si utilizza l'istanza più piccola.<block ref="d8ef680ce45b86e2a6afe2805a7e5562" category="inline-link-rx"></block>.</block>
   <block id="46b0a8862a90d05f4f40bbcda2473af4" category="paragraph">Se si desidera verificare che il sistema Linux soddisfi tutti i prerequisiti indipendentemente dall'esecuzione dell'installazione di classificazione BlueXP, è possibile scaricare uno script separato che esegue solo i prerequisiti.<block ref="f7ad1b05082bb59227795c56a02d9b78" category="inline-link-rx"></block>.</block>
@@ -3341,4 +3294,99 @@
   <block id="36d24108dd8c0c7c0e1f81fdf8c0ca74" category="paragraph">Per crearne uno nel tuo ambiente di cloud provider, consulta la sezione<block ref="43c354a9e10c487e79b72ac55319f506" category="inline-link-rx"></block>,<block ref="f57cc468ab9bea4198c876368a971c60" category="inline-link-rx"></block>, o.<block ref="4ed2379781d8ba33fa9fe0959039a8e2" category="inline-link-rx"></block>.</block>
   <block id="5bda7e03f132a23ba4a10fd78c5bec54" category="paragraph">Nota: È anche possibile<block ref="8635e4adecf532f5cc2442da36c54c5a" category="inline-link-rx"></block> Su un host Linux nella rete o su un host Linux nel cloud. Alcuni utenti che intendono installare BlueXP classification on-premise possono anche scegliere di installare il connettore on-premise.</block>
   <block id="d9807c3141689bddbb5c97208880a55c" category="admonition">La classificazione BlueXP non è attualmente in grado di eseguire la scansione dei bucket S3, Azure NetApp Files o FSX per ONTAP quando il software è installato on-premise. In questi casi, è necessario implementare un connettore separato e un'istanza della classificazione BlueXP nel cloud e.<block ref="c0d2361eca5545ed28b62c643a054bb3" category="inline-link-rx"></block> per le diverse origini dati.</block>
+  <block id="7e06380ecab9614af588d8a05ba6d6b0" category="cell">_Tempo di creazione_</block>
+  <block id="32e6470f56de0e5ebf534668812bd960" category="cell">_Ora ultimo accesso_</block>
+  <block id="c843b01ef48f3bd79d5d3521fbfa6125" category="cell">_Ora ultima modifica_</block>
+  <block id="e9349d6c7fc3f860e75fd091e850b861" category="cell">_Autorizzazioni aperte_</block>
+  <block id="44f76dcd3cb66939e2cbdab782c8314f" category="cell">_Accesso utenti/gruppi_</block>
+  <block id="770ad37e7b6dccf816f59000b32376eb" category="list-text">La classificazione BlueXP non estrae l'ultimo tempo di accesso dalle seguenti origini dati: SharePoint Online, SharePoint on-premise (SharePoint Server), OneDrive, Google Drive e Amazon S3.</block>
+  <block id="846ac2b072f7b636a6e9eec4c3e71fe1" category="list-text">Le versioni precedenti del sistema operativo Windows (ad esempio, Windows 7 e Windows 8) disattivano per impostazione predefinita la raccolta dell'attributo "ultimo tempo di accesso" perché può influire sulle prestazioni del sistema. Quando questo attributo non viene raccolto, le analisi di classificazione BlueXP basate sull'ultimo tempo di accesso verranno influenzate. È possibile abilitare la raccolta dell'ultimo tempo di accesso su questi sistemi Windows meno recenti, se necessario.</block>
+  <block id="e636b4a892ea62f67be639b3661d6897" category="list-text">Per impostazione predefinita, se la classificazione di BlueXP non dispone delle autorizzazioni di scrittura in CIFS o di scrittura in NFS, il sistema non esegue la scansione dei file nei volumi perché la classificazione di BlueXP non può riportare l'ultimo tempo di accesso alla data e ora originale. Se non si ha cura di ripristinare l'ultimo tempo di accesso, fare clic su *o selezionare il tipo di scansione per ciascun volume*. La pagina risultante dispone di un'impostazione che è possibile attivare in modo che la classificazione BlueXP scansiona i volumi indipendentemente dalle autorizzazioni.</block>
+  <block id="dbc6be69ce4e1e10bc890167fa46f18b" category="inline-link-macro">Per ulteriori informazioni su questa limitazione di classificazione di BlueXP, vedere</block>
+  <block id="9b39a17b00cb629e1990cbdcbad1001d" category="list-text">La classificazione BlueXP esegue la scansione di una sola condivisione file in un volume. Se si dispone di più condivisioni nei volumi, sarà necessario eseguire la scansione di tali condivisioni separatamente come gruppo di condivisioni. <block ref="5dac6ccd725a941d49a9e107a98eb409" category="inline-link-macro-rx"></block>.</block>
+  <block id="643a860f992333b8600ea264aca7c4fc" category="cell">Indirizzo e-mail</block>
+  <block id="52d854882d971396b8b17f8ac787c3c5" category="cell">Numero IBAN (International Bank account Number)</block>
+  <block id="5b8c99dad1893a85076709b2d3c2d2d0" category="cell">Indirizzo IP</block>
+  <block id="e5051949dc3a37f9077e85df0f1c8a21" category="list-text">Ubuntu 22.04</block>
+  <block id="bfb5ca6a1be7e27bafb8e663408b453a" category="list-text">Red Hat Enterprise Linux versioni da 8.0 a 8.5</block>
+  <block id="0d424e96e4117758c3bc3268ab82bacf" category="list-text">CentOS versioni da 8.0 a 8.5</block>
+  <block id="3dac7b81357a4f4b160a2d842c8e7348" category="list-text">Per CIFS - 139 (TCP/UDP) e 445 (TCP/UDP)</block>
+  <block id="130c9b78c071186d7e3d61f1c4eb4c60" category="list-text">Si consiglia di aggiornare il software BlueXP Connector alla versione più recente disponibile.<block ref="1189728130fe33c2fb7adb2d97a83d35" category="inline-link-rx"></block>.</block>
+  <block id="78b65cf97b25c47011081025c212c7c0" category="paragraph">Esaminare i seguenti prerequisiti per assicurarsi di disporre di una configurazione supportata prima di implementare la classificazione BlueXP nel cloud. Quando si implementa la classificazione BlueXP nel cloud, si trova nella stessa subnet del connettore.</block>
+  <block id="a215e2fc4fb56a1de009d0523096d557" category="list-text">La classificazione BlueXP richiede l'accesso a Internet in uscita. Se la rete fisica o virtuale utilizza un server proxy per l'accesso a Internet, assicurarsi che l'istanza di classificazione BlueXP disponga dell'accesso a Internet in uscita per contattare i seguenti endpoint. Il proxy deve essere non trasparente, al momento non supportiamo proxy trasparenti.</block>
+  <block id="920fe1428c19533eda6222fe7e58efbe" category="inline-link">Scopri come gestire le credenziali associate all'accesso a BlueXP</block>
+  <block id="e1d2e1a634647fd631081bc4f6f8e523" category="list-text">Per utilizzare la funzione *creazione di un caso*, è necessario prima associare le credenziali del sito di supporto NetApp al login BlueXP.<block ref="2a0d8b66ca9e99d023b48cf25f40fb12" category="inline-link-rx"></block>.</block>
+  <block id="e49aa971c20ec071f1b5bbc3c7266769" category="list-text">Se stai aprendo un caso per un sistema ONTAP con un numero di serie, il tuo account NSS deve essere associato al numero di serie di quel sistema.</block>
+  <block id="c7b7a5ae9f37fd7d24e4d641b9186fe9" category="paragraph">Questo errore potrebbe indicare che l'account NSS e la società di registrazione a cui è associato non sono la stessa società di registrazione per il numero di serie dell'account BlueXP (ad es. 960xxxx) o il numero di serie dell'ambiente di lavoro. È possibile richiedere assistenza utilizzando una delle seguenti opzioni:</block>
+  <block id="1cafe37522033ef4db580aa7479649f6" category="cell">\http://packages.ubuntu.com/
+\http://archive.ubuntu.com</block>
+  <block id="3e104a45d1e7094d4e4412e744a2ed28" category="cell">Fornisce pacchetti prerequisiti per l'installazione di Ubuntu.</block>
+  <block id="3fb31cc8efb6a784adfa36f5dcbd6dcb" category="admonition">Sono supportati l'inglese, il tedesco, il giapponese e lo spagnolo durante la ricerca dei nomi degli argomenti dei dati. Il supporto per altre lingue verrà aggiunto in un secondo momento.</block>
+  <block id="5d8aef9555e5438ddeff623786db2956" category="summary">Le limitazioni note identificano le funzioni non supportate da questa versione del prodotto o che non interagiscono correttamente con esso. Esaminare attentamente queste limitazioni.</block>
+  <block id="482723983a4f2af954e36ff41e567451" category="doc">Limitazioni note</block>
+  <block id="b36af7206dcf373bd9775c24677a5fc3" category="section-title">Limiti di scansione per la classificazione BlueXP</block>
+  <block id="38e601196e9a43492efa5f85f3672de2" category="section-title">La classificazione BlueXP esegue la scansione di una sola condivisione in un volume</block>
+  <block id="831362c8f190190a797ae86ca7a487e2" category="paragraph">Se si dispone di più condivisioni di file in un singolo volume, la classificazione BlueXP esegue la scansione della condivisione con la gerarchia più alta. Ad esempio, se si dispone di condivisioni come le seguenti:</block>
+  <block id="e62fb7061d96488f28377b9b7c87a5f3" category="list-text">/A</block>
+  <block id="dad5a0a365c61f8a86cad9dfc25f8b3a" category="list-text">/A/B.</block>
+  <block id="d5343bbc43034721eddff6ba04503653" category="list-text">/C.</block>
+  <block id="597702d739dab1871c93af7fab02812e" category="list-text">/D/E.</block>
+  <block id="fcd814b0d6047e85c49b02424cb204bc" category="paragraph">I dati in /A verranno quindi sottoposti a scansione. I dati in /C e /D non verranno sottoposti a scansione.</block>
+  <block id="7aebfa1e2291377e040de92d7f7f335f" category="paragraph-title">Soluzione alternativa</block>
+  <block id="14776bef68fe86f58d1665f68b865288" category="paragraph">Esiste una soluzione per assicurarsi di eseguire la scansione dei dati da tutte le condivisioni del volume. Attenersi alla seguente procedura:</block>
+  <block id="07ac6c7be4fcc2c3e85390641ca1f547" category="list-text">Nell'ambiente di lavoro, aggiungere il volume da sottoporre a scansione.</block>
+  <block id="4246bf7edec387ea5212cff7b1dbe300" category="list-text">Dopo che la classificazione BlueXP ha completato la scansione del volume, accedere alla pagina _Data Investigation_ e creare un filtro per vedere quale condivisione viene sottoposta a scansione:</block>
+  <block id="460ff5a5e64ec3903817c107c3cb45f7" category="paragraph">I dati verranno filtrati in base al nome dell'ambiente di lavoro e al tipo di directory = condivisione per visualizzare la condivisione sottoposta a scansione.</block>
+  <block id="2094d1ac9663a79b428d9e79aedd0f59" category="list-text">Ottenere l'elenco completo delle condivisioni presenti nel volume in modo da visualizzare le condivisioni non sottoposte a scansione.</block>
+  <block id="316879df6c55d2fcb2fbb99ae1421271" category="inline-link-macro">Aggiungere le condivisioni rimanenti a un gruppo di condivisione</block>
+  <block id="6365c8ecbac772805c308b501098968e" category="list-text"><block ref="3c14a300450508449fa4ac656dc2d2d2" category="inline-link-macro-rx"></block>.</block>
+  <block id="312913ed4c4493306983760e524a18bf" category="paragraph">È necessario aggiungere tutte le condivisioni singolarmente, ad esempio:</block>
+  <block id="5bf592857864b6327e9f9e7ac8b12e7e" category="list-text">Eseguire questa procedura per ogni volume dell'ambiente di lavoro che dispone di più condivisioni.</block>
+  <block id="96828273826a07fdc4f42f4998e536b2" category="section-title">6 giugno 2023 (versione 1.23)</block>
+  <block id="04e04c61cd37ca8f12b83c892c2c46ea" category="section-title">Il giapponese è ora supportato durante la ricerca dei nomi dei soggetti dei dati</block>
+  <block id="931c126009c96d8f8ce9770df003478d" category="inline-link">Filtro "Data Subject" nella pagina Data Investigation</block>
+  <block id="8b33a4571db736cc278b213820df9c13" category="paragraph">I nomi giapponesi possono ora essere inseriti quando si cerca il nome di un soggetto in risposta a una richiesta di accesso soggetto a dati (DSAR). È possibile generare un<block ref="8ff27ad1e3f1d885a2f0c0f257501bb1" category="inline-link-rx"></block> con le informazioni risultanti. È inoltre possibile immettere i nomi giapponesi in<block ref="615fae5bff7ec48fe0ed5c47e50f199a" category="inline-link-rx"></block> identificare i file che contengono il nome dell'oggetto.</block>
+  <block id="988e5d1ef231d33d94784c928261f0aa" category="section-title">Ubuntu è ora una distribuzione Linux supportata su cui è possibile installare la classificazione BlueXP</block>
+  <block id="bf62ea0cc2aa2f5ecb7f712ffcdafc64" category="inline-link">Scopri come installare la classificazione BlueXP su un host con Ubuntu installato</block>
+  <block id="e79851962ec44d8c7ccd2a63f0c4e92c" category="paragraph">Ubuntu 22.04 è stato qualificato come sistema operativo supportato per la classificazione BlueXP. È possibile installare la classificazione BlueXP su un host Ubuntu Linux nella rete o su un host Linux nel cloud.<block ref="cc16f95732fa73dc357dabce46e4c311" category="inline-link-rx"></block>.</block>
+  <block id="eba7ad27f2a236389ef88102ad7e8e2e" category="section-title">Red Hat Enterprise Linux 8.6 e 8.7 non sono più supportati con le nuove installazioni di classificazione BlueXP</block>
+  <block id="5b1dc8e5b7717b205bb516bc41f51da7" category="paragraph">Queste versioni non sono supportate con le nuove implementazioni perché Red Hat non supporta più Docker, che è un prerequisito. Se si dispone di una macchina di classificazione BlueXP esistente in esecuzione su RHEL 8.6 o 8.7, NetApp continuerà a supportare la configurazione.</block>
+  <block id="b5ba343fa4469021dbdf64181a67e909" category="section-title">La classificazione BlueXP può essere configurata come FPolicy Collector per ricevere eventi FPolicy dai sistemi ONTAP</block>
+  <block id="88b2049c35386070297462047bca71cf" category="inline-link">Scopri come monitorare e gestire gli eventi di accesso ai file</block>
+  <block id="1c6f2c46440d2da9ff124f2379388cf8" category="paragraph">È possibile consentire la raccolta dei registri di controllo dell'accesso ai file nel sistema di classificazione BlueXP per gli eventi di accesso ai file rilevati sui volumi negli ambienti di lavoro. La classificazione BlueXP può acquisire i seguenti tipi di eventi FPolicy e gli utenti che hanno eseguito le azioni sui file: Creare, leggere, scrivere, eliminare, rinominare, Modificare il proprietario/le autorizzazioni e modificare SACL/DACL.<block ref="e525234fcf42827b85ebd3e0f842cd71" category="inline-link-rx"></block>.</block>
+  <block id="e1161f065b10936afc930fd3d9d0c76f" category="section-title">Le licenze Data Sense BYOL sono ora supportate nei siti bui</block>
+  <block id="1ab65443ec0af7e5e1aee32a3cf59dcc" category="inline-link">Scopri come ottenere e caricare la licenza BYOL Data Sense</block>
+  <block id="645f5675426bc396b45b524635e93bc7" category="paragraph">Ora puoi caricare la tua licenza BYOL Data Sense nel portafoglio digitale BlueXP in un sito buio, in modo da ricevere una notifica quando la tua licenza sta per esaurirsi.<block ref="bd823f9b4dce457c0ea2a8dcca6e749f" category="inline-link-rx"></block>.</block>
+  <block id="0c7db2bd63c891adb2c0fa4527805d72" category="paragraph">Per l'account BlueXP e per i singoli sistemi Cloud Volumes ONTAP è richiesta la registrazione del supporto.</block>
+  <block id="28164bf9e881ddc9e7ff74744bfce180" category="paragraph">La registrazione di entrambi i tipi di numeri di serie offre funzionalità come l'apertura di ticket di supporto e la generazione automatica dei casi. La registrazione viene completata aggiungendo account del sito di supporto NetApp a BlueXP come descritto di seguito.</block>
+  <block id="e922b9aa0836a1d93e11cac0fe4c9004" category="paragraph">Per il supporto tecnico sulle seguenti soluzioni di cloud provider, fare riferimento a "Assistenza" nella documentazione di BlueXP relativa a tale prodotto.</block>
+  <block id="5a19febf1dcb23c10e8dcfde64ba764c" category="section-title">Registrare l'account BlueXP per il supporto NetApp</block>
+  <block id="6bbc2ba432f59ab65ee3d8ac5a58336e" category="paragraph">Per registrarsi al supporto e attivare i diritti di supporto, un utente del proprio account BlueXP deve associare un account del sito di supporto NetApp al proprio account di accesso BlueXP. La modalità di registrazione al supporto NetApp dipende dal fatto che si disponga già di un account NetApp Support Site (NSS).</block>
+  <block id="41e1e3cff4a07ce2ecc08e6c09f11092" category="list-text">Fare clic su *User Credentials* (credenziali utente).</block>
+  <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">Selezionare *Aggiungi credenziali NSS* e seguire la richiesta di autenticazione del sito di supporto NetApp.</block>
+  <block id="8c916e828e9e5a3592c8cac4e25928be" category="list-text">Per confermare che la procedura di registrazione è stata eseguita correttamente, fare clic sull'icona Guida e selezionare *supporto*.</block>
+  <block id="8add4eb0d3f6ce61d374f3df3ee4eadf" category="paragraph">La pagina *risorse* dovrebbe mostrare che il tuo account è registrato per il supporto.</block>
+  <block id="10c56875db7a47f791d653e5d5bff0e9" category="inline-image-macro">Una schermata che mostra il numero di serie di un account, una casella di controllo verde e il testo registrato per il supporto.</block>
+  <block id="3d183819a15163ef2e2e7d9d764254a9" category="paragraph"><block ref="3d183819a15163ef2e2e7d9d764254a9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d9a01bdcfab6f0a10fc126999b4d5988" category="paragraph">Si noti che gli altri utenti di BlueXP non visualizzeranno lo stesso stato di registrazione del supporto se non hanno associato un account del sito di supporto NetApp al proprio login BlueXP. Tuttavia, ciò non significa che il tuo account BlueXP non sia registrato per il supporto. Se un utente dell'account ha seguito questa procedura, l'account è stato registrato.</block>
+  <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">Se sei un cliente NetApp con licenze e numeri di serie esistenti ma _no_ account NSS, devi creare un account NSS e associarlo al tuo login BlueXP.</block>
+  <block id="0499bba105f8a891a2c671f1ba99dd34" category="list-text">Associare il nuovo account NSS al login BlueXP completando la procedura riportata sotto <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">Una volta ottenuto l'account del sito di supporto NetApp, associare l'account al login BlueXP completando la procedura indicata in <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="3e616bae81890a6c8fae17c9b45af152" category="section-title">Associare le credenziali NSS per il supporto Cloud Volumes ONTAP</block>
+  <block id="d8f0da67cbab6e43f6d266bdab68cdc8" category="paragraph">Per attivare i seguenti flussi di lavoro chiave per Cloud Volumes ONTAP, è necessario associare le credenziali del sito di supporto NetApp all'account BlueXP:</block>
+  <block id="a0518a10626dc11fd00e2d20265ad240" category="list-text">Registrazione dei sistemi Cloud Volumes ONTAP pay-as-you-go per il supporto</block>
+  <block id="321aadf78ef73521712291b7aba6411f" category="paragraph">È necessario fornire l'account NSS per attivare il supporto per il sistema e accedere alle risorse di supporto tecnico di NetApp.</block>
+  <block id="d51b2b497db445a16b1c9583c1abbb59" category="list-text">Implementazione di Cloud Volumes ONTAP con la propria licenza (BYOL)</block>
+  <block id="2ebfeabed40c2270d9fa8325080a4b3e" category="paragraph">È necessario fornire l'account NSS in modo che BlueXP possa caricare la chiave di licenza e attivare l'abbonamento per il periodo di validità dell'acquisto. Sono inclusi gli aggiornamenti automatici per i rinnovi dei termini.</block>
+  <block id="f5135b68b75a8404803a1eb438e40c5e" category="list-text">Aggiornamento del software Cloud Volumes ONTAP alla versione più recente</block>
+  <block id="39f382b97080640c75604b5890f3a5d3" category="paragraph">L'associazione delle credenziali NSS all'account BlueXP è diversa dall'account NSS associato a un account utente BlueXP.</block>
+  <block id="e3bc6d35311568d55f1c8ea11984b964" category="paragraph">Queste credenziali NSS sono associate all'ID account BlueXP specifico. Gli utenti che appartengono all'account BlueXP possono accedere a queste credenziali da *Support &gt; NSS Management*.</block>
+  <block id="48439ae905464923337d7464952d3315" category="list-text">Il proxy deve essere non trasparente, al momento non supportiamo proxy trasparenti.</block>
+  <block id="b9a11b90960ff803269429887ab4cff3" category="list-text">L'utente deve essere un utente locale. Gli utenti di dominio non sono supportati.</block>
+  <block id="fae80424c022f4f6a5863e7a9e007154" category="list-text">_Proxy_user_ = utente autenticato per la connessione al server proxy, se è richiesta l'autenticazione di base. L'utente deve essere un utente locale - gli utenti di dominio non sono supportati.</block>
+  <block id="e0f8faa1f60bb9ad057dbed0ae3366cd" category="inline-link-macro">Scopri come accedere ai dati sull'istanza di Classification</block>
+  <block id="a9420bec80d413a65a75f5b930ab95d6" category="paragraph">Se il report è più grande di 1 MB, il file PDF viene conservato nell'istanza di classificazione di BlueXP e viene visualizzato un messaggio a comparsa relativo alla posizione esatta. Quando la classificazione BlueXP viene installata su una macchina Linux in sede o su una macchina Linux implementata nel cloud, è possibile accedere direttamente al file PDF. Quando la classificazione BlueXP viene implementata nel cloud, è necessario eseguire l'SSH nell'istanza di classificazione BlueXP per scaricare il file PDF. <block ref="deb8a567236e3a33c0e546690f1ec883" category="inline-link-macro-rx"></block>.</block>
+  <block id="0fe1279b28d533b32c08d839691ef653" category="inline-image-macro">tre punti</block>
+  <block id="e56ef2e2348492a4f0e1e9513b068cc4" category="admonition">È inoltre possibile attivare le scansioni di conformità per un ambiente di lavoro dalla pagina di configurazione facendo clic su <block ref="a759a567ce9a72b21fd45f48f1f358c8" category="inline-image-macro-rx" type="image"></block> E selezionando *Activate BlueXP classification* (attiva classificazione BlueXP).</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">Novità</block>
 </blocks>

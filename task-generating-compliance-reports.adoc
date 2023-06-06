@@ -198,7 +198,7 @@ NOTE: La ricerca dei dati non è attualmente supportata nei database.
 Cercare il nome completo o l'identificatore noto del soggetto interessato, quindi scaricare un report elenco file o un report DSAR. È possibile eseguire la ricerca in base a. link:reference-private-data-categories.html#types-of-personal-data["qualsiasi tipo di informazione personale"^].
 
 
-NOTE: L'inglese, il tedesco e lo spagnolo sono supportati durante la ricerca dei nomi degli argomenti dei dati. Il supporto per altre lingue verrà aggiunto in un secondo momento.
+NOTE: Sono supportati l'inglese, il tedesco, il giapponese e lo spagnolo durante la ricerca dei nomi degli argomenti dei dati. Il supporto per altre lingue verrà aggiunto in un secondo momento.
 
 .Fasi
 . Dal menu BlueXP, fare clic su *Governance > Classification*.

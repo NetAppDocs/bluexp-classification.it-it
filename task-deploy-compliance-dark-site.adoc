@@ -134,9 +134,9 @@ Si noti che l'utilizzo di questi sistemi più piccoli presenta delle limitazioni
 
 * *Sistema operativo*: Il sistema operativo deve essere in grado di installare il motore di docker.
 +
-** Red Hat Enterprise Linux versioni da 8.0 a 8.7
-** CentOS versioni da 8.0 a 8.7
-** CentOS Stream 8
+** Ubuntu 22.04
+** Red Hat Enterprise Linux versioni da 8.0 a 8.5
+** CentOS versioni da 8.0 a 8.5
 ** È possibile utilizzare RHEL o CentOS versione 7.8 o 7.9, ma la versione del kernel Linux deve essere 4.0 o superiore
 
 
@@ -407,8 +407,8 @@ Puoi anche farlo link:task-licensing-datasense.html#use-a-bluexp-classification-
 Poiché il software di classificazione BlueXP viene aggiornato regolarmente con nuove funzionalità, è necessario iniziare una routine per verificare periodicamente la presenza di nuove versioni per assicurarsi di utilizzare il software e le funzionalità più recenti. Sarà necessario aggiornare manualmente il software di classificazione BlueXP perché non è disponibile alcuna connessione a Internet per eseguire l'aggiornamento automaticamente.
 
 .Prima di iniziare
+* Si consiglia di aggiornare il software BlueXP Connector alla versione più recente disponibile. https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode["Consultare la procedura di aggiornamento del connettore"^].
 * Il software di classificazione BlueXP può essere aggiornato una versione principale alla volta. Ad esempio, se è installata la versione 1.20.x, è possibile eseguire l'aggiornamento solo alla versione 1.21.x. Se si dispone di alcune versioni principali, sarà necessario aggiornare il software più volte.
-* Verificare che il software BlueXP Connector sia stato aggiornato alla versione più recente disponibile. https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode["Consultare la procedura di aggiornamento del connettore"^].
 
 
 .Fasi
@@ -418,7 +418,7 @@ Poiché il software di classificazione BlueXP viene aggiornato regolarmente con 
 +
 [source, cli]
 ----
-tar -xvf DataSense-offline-bundle-v1.21.0.tar.gz
+tar -xvf DataSense-offline-bundle-v1.22.0.tar.gz
 ----
 +
 In questo modo si estrae il file di installazione *cc_onrem_installer.tar.gz*.

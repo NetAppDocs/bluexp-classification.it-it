@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations.html 
+keywords: limitations, data sense, classification, scan shares 
+summary: Le limitazioni note identificano le funzioni non supportate da questa versione del prodotto o che non interagiscono correttamente con esso. Esaminare attentamente queste limitazioni. 
+---
+= Limitazioni note
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le limitazioni note identificano le funzioni non supportate da questa versione del prodotto o che non interagiscono correttamente con esso. Esaminare attentamente queste limitazioni.
+
+
+
+== Limiti di scansione per la classificazione BlueXP
+
+
+
+=== La classificazione BlueXP esegue la scansione di una sola condivisione in un volume
+
+Se si dispone di più condivisioni di file in un singolo volume, la classificazione BlueXP esegue la scansione della condivisione con la gerarchia più alta. Ad esempio, se si dispone di condivisioni come le seguenti:
+
+* /A
+* /A/B.
+* /C.
+* /D/E.
+
+
+I dati in /A verranno quindi sottoposti a scansione. I dati in /C e /D non verranno sottoposti a scansione.
+
+.Soluzione alternativa
+Esiste una soluzione per assicurarsi di eseguire la scansione dei dati da tutte le condivisioni del volume. Attenersi alla seguente procedura:
+
+. Nell'ambiente di lavoro, aggiungere il volume da sottoporre a scansione.
+. Dopo che la classificazione BlueXP ha completato la scansione del volume, accedere alla pagina _Data Investigation_ e creare un filtro per vedere quale condivisione viene sottoposta a scansione:
++
+I dati verranno filtrati in base al nome dell'ambiente di lavoro e al tipo di directory = condivisione per visualizzare la condivisione sottoposta a scansione.
+
+. Ottenere l'elenco completo delle condivisioni presenti nel volume in modo da visualizzare le condivisioni non sottoposte a scansione.
+. link:task-scanning-file-shares.html["Aggiungere le condivisioni rimanenti a un gruppo di condivisione"].
++
+È necessario aggiungere tutte le condivisioni singolarmente, ad esempio:
+
++
+....
+/C
+/D
+....
+. Eseguire questa procedura per ogni volume dell'ambiente di lavoro che dispone di più condivisioni.
+

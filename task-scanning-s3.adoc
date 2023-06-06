@@ -129,7 +129,7 @@ image:screenshot_s3_compliance_iam_role.png["Una schermata che mostra l'inserime
 
 
 
-TIP: È inoltre possibile attivare le scansioni di conformità per un ambiente di lavoro dalla pagina di configurazione facendo clic su image:screenshot_gallery_options.gif[""] E selezionando *Activate BlueXP classification* (attiva classificazione BlueXP).
+TIP: È inoltre possibile attivare le scansioni di conformità per un ambiente di lavoro dalla pagina di configurazione facendo clic su image:screenshot_gallery_options.gif["tre punti"] E selezionando *Activate BlueXP classification* (attiva classificazione BlueXP).
 
 .Risultato
 BlueXP assegna il ruolo IAM all'istanza.

@@ -21,22 +21,27 @@ La classificazione BlueXP raccoglie determinati metadati quando si eseguono scan
 |  | *Metadati* | *CIFS* | *NFS* 
 
 
-.3+| *Indicatori di data e ora* | *Tempo di creazione* | Disponibile | Non disponibile (non supportato in Linux) 
+.3+| *Indicatori di data e ora* | _Tempo di creazione_ | Disponibile | Non disponibile (non supportato in Linux) 
 
 
-| *Ora ultimo accesso* | Disponibile | Disponibile 
+| _Ora ultimo accesso_ | Disponibile | Disponibile 
 
 
-| *Ora ultima modifica* | Disponibile | Disponibile 
+| _Ora ultima modifica_ | Disponibile | Disponibile 
 
 
-.2+| *Autorizzazioni* | *Autorizzazioni aperte* | Se il gruppo "EVERYONE" ha accesso al file, viene considerato "aperto all'organizzazione" | Se "altri" hanno accesso al file, viene considerato "aperto all'organizzazione" 
+.2+| *Autorizzazioni* | _Autorizzazioni aperte_ | Se il gruppo "EVERYONE" ha accesso al file, viene considerato "aperto all'organizzazione" | Se "altri" hanno accesso al file, viene considerato "aperto all'organizzazione" 
 
 
-| *Accesso utenti/gruppi* | Le informazioni relative a utenti e gruppi provengono da LDAP | Non disponibile (gli utenti NFS sono generalmente gestiti localmente sul server, pertanto la stessa persona può avere un UID diverso in ciascun server) 
+| _Accesso utenti/gruppi_ | Le informazioni relative a utenti e gruppi provengono da LDAP | Non disponibile (gli utenti NFS sono generalmente gestiti localmente sul server, pertanto la stessa persona può avere un UID diverso in ciascun server) 
 |===
-Si noti che la classificazione BlueXP non estrae l'ultimo tempo di accesso dalle seguenti origini dati: SharePoint Online, SharePoint on-premise (SharePoint Server), OneDrive, Google Drive e Amazon S3.
+[NOTE]
+====
+* La classificazione BlueXP non estrae l'ultimo tempo di accesso dalle seguenti origini dati: SharePoint Online, SharePoint on-premise (SharePoint Server), OneDrive, Google Drive e Amazon S3.
+* Le versioni precedenti del sistema operativo Windows (ad esempio, Windows 7 e Windows 8) disattivano per impostazione predefinita la raccolta dell'attributo "ultimo tempo di accesso" perché può influire sulle prestazioni del sistema. Quando questo attributo non viene raccolto, le analisi di classificazione BlueXP basate sull'ultimo tempo di accesso verranno influenzate. È possibile abilitare la raccolta dell'ultimo tempo di accesso su questi sistemi Windows meno recenti, se necessario.
 
+
+====
 
 
 == Data e ora dell'ultimo accesso
