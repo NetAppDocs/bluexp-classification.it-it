@@ -16,6 +16,8 @@ summary: Se necessario, è possibile impedire alla classificazione BlueXP di ese
 [role="lead"]
 Se necessario, è possibile impedire alla classificazione BlueXP di eseguire la scansione di uno o più ambienti di lavoro, database, gruppi di condivisione file, account OneDrive, account Google Drive, O SharePoint.
 
+La ricarica per la scansione dei dati viene interrotta quando l'origine dati viene rimossa.
+
 
 
 == Disattivazione delle scansioni di compliance per un ambiente di lavoro

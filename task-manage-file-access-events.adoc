@@ -111,7 +111,7 @@ Ad esempio, la riga seguente del file di log mostra che si è verificata un'azio
 
 == Accedere ai file di log di controllo di accesso ai file
 
-I file di log di controllo di accesso ai file si trovano sulla macchina di classificazione BlueXP in: `/opt/netapp/file_access_audit_logs/`
+I file di log di controllo di accesso ai file si trovano sulla macchina di classificazione BlueXP in: `/opt/netapp/fpolicy/logs`
 
 Ogni file è configurato per impostazione predefinita in modo da contenere un massimo di 50,000 eventi. <<Configurare le impostazioni del file Access Audit Log,È possibile personalizzare questo valore nella pagina file Access Audit Log Configuration.>> Una volta raggiunto questo limite massimo, le voci meno recenti nel file di registro vengono sovrascritte.
 
@@ -153,7 +153,7 @@ image:screenshot_compliance_file_access_audit_config.png["Una schermata che most
 | Opzione Registro di controllo | Descrizione 
 
 
-| Percorso del file di log | La posizione è attualmente codificata per la scrittura dei file di log `/opt/netapp/file_access_audit_logs/` 
+| Percorso del file di log | La posizione è attualmente codificata per la scrittura dei file di log `/opt/netapp/fpolicy/logs` 
 
 
 | Allocazione massima dello storage per i registri di controllo | La dimensione totale di tutti i file di log nella directory è attualmente codificata con un valore predefinito di 50 GB. Una volta raggiunto questo limite, i file di registro meno recenti vengono cancellati automaticamente. 
