@@ -1042,14 +1042,11 @@
   <block id="c1b7308083354b8b60760460bcce3ccc" category="cell">*Grande*</block>
   <block id="dc8179e6e72156a5578bf35cf9574540" category="cell">16 CPU</block>
   <block id="5a1fdf37d5cd85436f7504641d78b95f" category="cell">64 GB DI RAM</block>
-  <block id="f73b260a6cb60f48bc6d018192dfb51b" category="cell">500 GiB SSD ON /, o - 100 GiB Available on /opt - 395 GiB Available on /var - 5 GiB on /tmp</block>
   <block id="f3e6e184202c9901024fa409f2c24cb1" category="cell">*Medio*</block>
   <block id="bef6aed074693bd02885fa89c8b418f0" category="cell">8 CPU</block>
   <block id="70eb72cfa1dbdb5556e79344f161d62a" category="cell">32 GB DI RAM</block>
-  <block id="63d284249a11c1390977c2b197c85419" category="cell">200 GiB SSD ON /, o - 50 GiB Available on /opt - 145 GiB Available on /var - 5 GiB on /tmp</block>
   <block id="e8ae9f0392263b55e4580177a75c948e" category="cell">*Piccolo*</block>
   <block id="e706090ac76b3e56523819912497e0f6" category="cell">16 GB DI RAM</block>
-  <block id="6798decba048766a66cd22d4442d7ec0" category="cell">100 GiB SSD ON /, o - 50 GiB Available on /opt - 45 GiB Available on /var - 5 GiB on /tmp</block>
   <block id="a0b7a7641d24b4614381b2d6a615f220" category="paragraph">Si noti che l'utilizzo di questi sistemi più piccoli presenta delle limitazioni. Vedere <block ref="0e704e23a30c6a19db4ec4aec3706681" category="inline-link-macro-rx"></block> per ulteriori informazioni.</block>
   <block id="114b40cee02180a916d6e0a652f1300d" category="list-text">*UNIX folder permissions*: Sono richieste le seguenti autorizzazioni minime per UNIX:</block>
   <block id="b0f2b97dc5d2b76b26e040408bb1d8af" category="cell">Cartella</block>
@@ -3026,7 +3023,6 @@
   <block id="ab6f827b404fc74a3d59a176e44dce54" category="inline-xref">Preparazione del sistema host Linux</block>
   <block id="c0eb32e59a3574faaca63218c3f5922f" category="paragraph">Vedere <block ref="dc1d236e8ef0d554549faeaffd48b8b2" category="inline-xref-macro-rx"></block> e. <block ref="2360c56931bf3d2d23fb74a3dc780c78" category="inline-xref-macro-rx"></block> Per l'elenco completo dei requisiti prima di implementare la classificazione BlueXP.</block>
   <block id="ae8f9609c5884d9f4db4d05e14862cd4" category="inline-link">Passare da un connettore all'altro</block>
-  <block id="86bb25ae4391f2558f38a5358121ae0d" category="paragraph">Seguire questi passaggi quando si installa il software di classificazione BlueXP su un singolo host on-premise.</block>
   <block id="3080c7bbf6707274907b8ec2e97fb7a8" category="list-text">Se si utilizza un proxy per l'accesso a Internet:</block>
   <block id="872a9ee7c158e8dd5094c5c93dcffc57" category="list-text">Sono necessarie le informazioni sul server proxy (indirizzo IP o nome host, porta di connessione, schema di connessione: https o http, nome utente e password).</block>
   <block id="60e3e1e8b520c28183ebe86bd433deda" category="list-text">Se il proxy sta eseguendo l'intercettazione TLS, è necessario conoscere il percorso del sistema Linux di classificazione BlueXP in cui sono memorizzati i certificati della CA TLS.</block>
@@ -3390,4 +3386,20 @@
   <block id="32bb143fdc5ad46423876511f8c73c77" category="paragraph">Ubuntu 22.04 è stato qualificato come sistema operativo supportato per la classificazione BlueXP. È possibile installare la classificazione BlueXP su un host Ubuntu Linux nella rete o su un host Linux nel cloud quando si utilizza la versione 1.23 del programma di installazione.<block ref="cc16f95732fa73dc357dabce46e4c311" category="inline-link-rx"></block>.</block>
   <block id="3e102feedd861186d57f6a85de9de541" category="paragraph">I file di log di controllo di accesso ai file si trovano sulla macchina di classificazione BlueXP in:<block ref="86b82df39f08511f43d33216f4538d29" prefix=" " category="inline-code"></block></block>
   <block id="7f16356d7b675ed76686e591ad5dc661" category="cell">La posizione è attualmente codificata per la scrittura dei file di log<block ref="86b82df39f08511f43d33216f4538d29" prefix=" " category="inline-code"></block></block>
+  <block id="34c688a0843dc19a0624e151973b37a7" category="cell">500 GiB SSD ON /, OR
+- 100 GiB disponibile su /opt
+- 395 GiB disponibile su /var/lib/docker
+- 5 GiB su /tmp</block>
+  <block id="7c2e343b426a44deea2cb9e6eb69e8af" category="cell">200 GiB SSD ON /, OR
+- 50 GiB disponibile su /opt
+- 145 GiB disponibile su /var/lib/docker
+- 5 GiB su /tmp</block>
+  <block id="a8ec707d3d7dc0af4b9cce44343387b0" category="cell">100 GiB SSD ON /, OR
+- 50 GiB disponibile su /opt
+- 45 GiB disponibile su /var/lib/docker
+- 5 GiB su /tmp</block>
+  <block id="0a10409b2f38332b7a7c8f820fc0edd5" category="inline-link">Guarda questo video</block>
+  <block id="404a8e21de3fe2bfdd2e77b81889e5cb" category="paragraph"><block ref="21e1c490f7e7bc90ffb6dabbc263e6f2" category="inline-link-rx"></block> Per una rapida dimostrazione dell'installazione di Docker su CentOS.</block>
+  <block id="d56adb545fe9309fc7a4cfd339798344" category="paragraph">Esaminare i requisiti e seguire questi passaggi quando si installa il software di classificazione BlueXP su un singolo host on-premise.</block>
+  <block id="cf3d087ad95f213d839f606d398101ee" category="paragraph"><block ref="501f73c9c42bcec313b07a4d01108ec0" category="inline-link-rx"></block> Per scoprire come installare la classificazione BlueXP.</block>
 </blocks>
