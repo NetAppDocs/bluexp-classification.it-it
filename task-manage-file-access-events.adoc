@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-manage-file-access-events.html 
 keywords: compliance, actions, view progress, audit, logs, installation 
-summary: 'È possibile configurare la classificazione BlueXP per registrare gli eventi in un file ogni volta che si accede o si modifica uno dei file che si sta eseguendo la scansione. Quindi, è possibile visualizzare il contenuto di questo file (file Access Audit Log) o scaricarlo per vedere quali modifiche sono state apportate e da chi.' 
+summary: 'È possibile configurare la classificazione BlueXP per registrare gli eventi in un file ogni volta che si accede o si modifica uno dei file che si sta eseguendo la scansione. Quindi, è possibile visualizzare il contenuto di questo file di log (file Access Audit Log) o scaricarlo per visualizzare le modifiche apportate al file e i relativi utenti.' 
 ---
 = Monitorare e gestire gli eventi di accesso ai file
 :hardbreaks:
@@ -14,11 +14,11 @@ summary: 'È possibile configurare la classificazione BlueXP per registrare gli 
 
 
 [role="lead"]
-È possibile configurare la classificazione BlueXP per registrare gli eventi in un file ogni volta che si accede o si modifica uno dei file che si sta eseguendo la scansione. Quindi, è possibile visualizzare il contenuto di questo file (file Access Audit Log) o scaricarlo per vedere quali modifiche sono state apportate e da chi.
+È possibile configurare la classificazione BlueXP per registrare gli eventi in un file ogni volta che si accede o si modifica uno dei file che si sta eseguendo la scansione. Quindi, è possibile visualizzare il contenuto di questo file di log (file Access Audit Log) o scaricarlo per visualizzare le modifiche apportate al file e i relativi utenti.
 
 Ad esempio, se si desidera tenere traccia delle modifiche apportate ai file del personale o ai file delle retribuzioni sensibili, è possibile attivare questa funzione sui volumi in cui risiedono questi file. Quindi, è possibile visualizzare il file Access Audit Log per verificare se questi file sono stati modificati. Se sono stati modificati, sarà possibile visualizzare l'identificatore di protezione (SID) della persona che ha apportato la modifica e la data in cui è stata apportata.
 
-È possibile attivare questa funzione su tutti i volumi critici degli ambienti di lavoro che eseguono il software ONTAP. Se attivato su un volume, gli eventi di accesso ai file vengono monitorati per tutti i file e le directory del volume. Questa funzionalità si basa su https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["Funzione FPolicy"^] Dai sistemi ONTAP e utilizza il sistema di classificazione BlueXP come server FPolicy per ricevere messaggi di notifica (eventi) da ONTAP.
+È possibile attivare questa funzione su tutti i volumi critici degli ambienti di lavoro che eseguono il software ONTAP. Se attivato su un volume, gli eventi di accesso ai file vengono monitorati per tutti i file e le directory del volume. Questa funzionalità si basa su https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["Funzione FPolicy"^] Dai sistemi ONTAP e utilizza il sistema di classificazione BlueXP come server FPolicy per ricevere messaggi di notifica (eventi) da ONTAP. La classificazione BlueXP può elaborare circa 990 eventi al secondo da ONTAP.
 
 La classificazione BlueXP attualmente acquisisce gli eventi per le seguenti azioni su file e directory:
 
@@ -52,9 +52,6 @@ Le origini dati devono eseguire il software ONTAP versione 9.11 o superiore.
 == Configurare i volumi per la registrazione dell'audit di accesso ai file
 
 È possibile attivare la registrazione dell'audit di accesso ai file sui singoli volumi per tenere traccia delle modifiche apportate a file e directory.
-
-
-TIP: Al momento è possibile configurare il controllo dell'accesso ai file su un massimo di 5 volumi su ciascuna origine dati.
 
 .Prima di iniziare
 * Active Directory deve essere configurato per le origini dati in modo che la classificazione BlueXP possa elencare l'ID della persona che ha effettuato l'accesso ai file.

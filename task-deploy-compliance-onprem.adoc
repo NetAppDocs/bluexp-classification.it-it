@@ -343,7 +343,7 @@ image:screenshot_cloud_compliance_deploy_onprem.png["Una schermata che mostra la
 . Viene visualizzata la finestra di dialogo _Deploy Data Sense on Premise_. Copiare il comando fornito (ad esempio: `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq`) e incollarlo in un file di testo per poterlo utilizzare in un secondo momento. Quindi fare clic su *Chiudi* per chiudere la finestra di dialogo.
 . Sul computer host, immettere il comando copiato e seguire una serie di prompt oppure fornire il comando completo che include tutti i parametri richiesti come argomenti della riga di comando.
 +
-Tenere presente che il programma di installazione esegue una pre-verifica per assicurarsi che i requisiti di sistema e di rete siano stati soddisfatti per una corretta installazione.
+Tenere presente che il programma di installazione esegue una pre-verifica per assicurarsi che i requisiti di sistema e di rete siano stati soddisfatti per una corretta installazione. https://youtu.be/UZtn_I0e1Ls["Guarda questo video"] comprendere i messaggi di pre-controllo e le implicazioni.
 
 +
 [cols="50a,50"]
