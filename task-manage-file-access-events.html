@@ -1089,7 +1089,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-06-07 18:22:10 +0000">06/07/2023</time>
+    <time datetime="2023-06-15 16:06:08 +0000">06/15/2023</time>
     
   
 
@@ -1102,13 +1102,13 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>È possibile configurare la classificazione BlueXP per registrare gli eventi in un file ogni volta che si accede o si modifica uno dei file che si sta eseguendo la scansione. Quindi, è possibile visualizzare il contenuto di questo file (file Access Audit Log) o scaricarlo per vedere quali modifiche sono state apportate e da chi.</p>
+<p>È possibile configurare la classificazione BlueXP per registrare gli eventi in un file ogni volta che si accede o si modifica uno dei file che si sta eseguendo la scansione. Quindi, è possibile visualizzare il contenuto di questo file di log (file Access Audit Log) o scaricarlo per visualizzare le modifiche apportate al file e i relativi utenti.</p>
 </div>
 <div class="paragraph">
 <p>Ad esempio, se si desidera tenere traccia delle modifiche apportate ai file del personale o ai file delle retribuzioni sensibili, è possibile attivare questa funzione sui volumi in cui risiedono questi file. Quindi, è possibile visualizzare il file Access Audit Log per verificare se questi file sono stati modificati. Se sono stati modificati, sarà possibile visualizzare l&#8217;identificatore di protezione (SID) della persona che ha apportato la modifica e la data in cui è stata apportata.</p>
 </div>
 <div class="paragraph">
-<p>È possibile attivare questa funzione su tutti i volumi critici degli ambienti di lavoro che eseguono il software ONTAP. Se attivato su un volume, gli eventi di accesso ai file vengono monitorati per tutti i file e le directory del volume. Questa funzionalità si basa su <a href="https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html" target="_blank" rel="noopener">"Funzione FPolicy"</a> Dai sistemi ONTAP e utilizza il sistema di classificazione BlueXP come server FPolicy per ricevere messaggi di notifica (eventi) da ONTAP.</p>
+<p>È possibile attivare questa funzione su tutti i volumi critici degli ambienti di lavoro che eseguono il software ONTAP. Se attivato su un volume, gli eventi di accesso ai file vengono monitorati per tutti i file e le directory del volume. Questa funzionalità si basa su <a href="https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html" target="_blank" rel="noopener">"Funzione FPolicy"</a> Dai sistemi ONTAP e utilizza il sistema di classificazione BlueXP come server FPolicy per ricevere messaggi di notifica (eventi) da ONTAP. La classificazione BlueXP può elaborare circa 990 eventi al secondo da ONTAP.</p>
 </div>
 <div class="paragraph">
 <p>La classificazione BlueXP attualmente acquisisce gli eventi per le seguenti azioni su file e directory:</p>
@@ -1175,18 +1175,6 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>È possibile attivare la registrazione dell&#8217;audit di accesso ai file sui singoli volumi per tenere traccia delle modifiche apportate a file e directory.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/bluexp-classification/images/tip.svg" alt="Suggerimento">
-</td>
-<td class="content">
-Al momento è possibile configurare il controllo dell&#8217;accesso ai file su un massimo di 5 volumi su ciascuna origine dati.
-</td>
-</tr>
-</table>
 </div>
 <div class="ulist">
 <div class="title">Prima di iniziare</div>
