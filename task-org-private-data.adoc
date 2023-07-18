@@ -226,6 +226,9 @@ image:screenshot_compliance_tag_multi_files.png["Una schermata che mostra come s
 +
 ** Per selezionare singoli file, selezionare la casella corrispondente a ciascun file (image:button_backup_1_volume.png[""]).
 ** Per selezionare tutti i file nella pagina corrente, selezionare la casella nella riga del titolo (image:button_select_all_files.png[""]).
++
+Al momento è possibile applicare tag a un massimo di 20 file alla volta, una pagina nella pagina dei risultati dell'analisi dei dati.
+
 
 
 . Dalla barra dei pulsanti, fare clic su *Tag* per visualizzare i tag attualmente assegnati.

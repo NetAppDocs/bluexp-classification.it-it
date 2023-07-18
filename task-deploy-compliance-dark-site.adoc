@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-deploy-compliance-dark-site.html 
-keywords: cloud compliance, data sense, get started, deploy cloud data sense, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, dark site, upgrade 
-summary: Completare alcuni passaggi per installare la classificazione BlueXP su un host Linux in un sito on-premise che non dispone di accesso a Internet. Questo tipo di installazione è perfetto per i siti sicuri. 
+keywords: cloud compliance, data sense, get started, deploy cloud data sense, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, dark site, upgrade, private mode 
+summary: 'Completare alcuni passaggi per installare la classificazione BlueXP su un host Linux in un sito on-premise che non dispone di accesso a Internet, noto anche come "modalità privata". Questo tipo di installazione è perfetto per i siti sicuri.' 
 ---
 = Installare la classificazione BlueXP su un host senza accesso a Internet
 :hardbreaks:
@@ -14,7 +14,9 @@ summary: Completare alcuni passaggi per installare la classificazione BlueXP su 
 
 
 [role="lead"]
-Completare alcuni passaggi per installare la classificazione BlueXP su un host Linux in un sito on-premise che non dispone di accesso a Internet. Questo tipo di installazione è perfetto per i siti sicuri.
+Completare alcuni passaggi per installare la classificazione BlueXP su un host Linux in un sito on-premise che non dispone di accesso a Internet, noto anche come "modalità privata". Questo tipo di installazione è perfetto per i siti sicuri.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["Scopri le diverse modalità di implementazione per la classificazione BlueXP Connector e BlueXP"^].
 
 Nota: È anche possibile link:task-deploy-compliance-onprem.html["Implementare la classificazione BlueXP in un sito on-premise con accesso a Internet"].
 
@@ -24,7 +26,7 @@ Lo script di installazione della classificazione BlueXP inizia verificando se il
 
 == Origini dati supportate
 
-Una volta installato in questo modo (a volte chiamato sito "offline" o "buio"), la classificazione BlueXP può eseguire la scansione dei dati solo da origini dati che sono anche locali al sito on-premise. Al momento, la classificazione BlueXP è in grado di eseguire la scansione delle seguenti origini dati *locali*:
+Quando viene installata la modalità privata (talvolta chiamata sito "offline" o "dark"), la classificazione BlueXP può eseguire la scansione dei dati solo da origini dati locali al sito on-premise. Al momento, la classificazione BlueXP è in grado di eseguire la scansione delle seguenti origini dati *locali*:
 
 * Sistemi ONTAP on-premise
 * Schemi di database
@@ -33,7 +35,7 @@ Una volta installato in questo modo (a volte chiamato sito "offline" o "buio"), 
 * Storage a oggetti che utilizza il protocollo S3 (Simple Storage Service)
 
 
-Attualmente non è disponibile alcun supporto per la scansione di Cloud Volumes ONTAP, Azure NetApp Files, FSX per ONTAP, AWS S3 o Google Drive, OneDrive o SharePoint Online quando la classificazione BlueXP viene implementata in un sito buio.
+Attualmente non è disponibile alcun supporto per la scansione di Cloud Volumes ONTAP, Azure NetApp Files, FSX per ONTAP, AWS S3 o Google Drive, OneDrive o SharePoint Online quando la classificazione BlueXP viene implementata in modalità privata.
 
 
 
@@ -60,7 +62,7 @@ Inizia subito seguendo questi passaggi o scorri verso il basso fino alle sezioni
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Installare il connettore BlueXP
 [role="quick-margin-para"]
-Se non si dispone già di un connettore installato sul sito on-premise offline, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Implementare il connettore"^] Su un host Linux.
+Se non si dispone già di un connettore installato in modalità privata, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Implementare il connettore"^] Su un host Linux.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Esaminare i prerequisiti di classificazione di BlueXP
 [role="quick-margin-para"]
@@ -78,7 +80,7 @@ I primi 1 TB di dati che la classificazione BlueXP scansiona in BlueXP sono grat
 
 == Installare il connettore BlueXP
 
-Se non si dispone già di un connettore BlueXP installato sul sito on-premise offline, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Implementare il connettore"^] Su un host Linux nel tuo sito offline.
+Se BlueXP Connector non è già installato in modalità privata, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Implementare il connettore"^] Su un host Linux nel tuo sito offline.
 
 
 
@@ -141,10 +143,10 @@ Si noti che l'utilizzo di questi sistemi più piccoli presenta delle limitazioni
 
 * *Sistema operativo*: Il sistema operativo deve essere in grado di installare il motore di docker.
 +
-** Ubuntu 22.04
-** Red Hat Enterprise Linux versioni da 8.0 a 8.5
-** CentOS versioni da 8.0 a 8.5
-** È possibile utilizzare RHEL o CentOS versione 7.8 o 7.9, ma la versione del kernel Linux deve essere 4.0 o superiore
+** Red Hat Enterprise Linux versione 7.8 e 7.9 - la versione del kernel Linux deve essere 4.0 o superiore
+** CentOS versione 7.8 e 7.9 - la versione del kernel Linux deve essere 4.0 o superiore
+** Rocky Linux 9 (richiede classificazione BlueXP versione 1.24 e superiore)
+** Ubuntu 22.04 (richiede classificazione BlueXP versione 1.23 e successive)
 
 
 * *Red Hat Subscription Management*: L'host deve essere registrato con Red Hat Subscription Management. Se non è registrato, il sistema non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione.
@@ -262,6 +264,8 @@ image:diagram_deploy_onprem_multi_host_no_internet.png["Un diagramma che mostra 
 
 Seguire questi passaggi quando si installa il software di classificazione BlueXP su un singolo host on-premise in un ambiente offline.
 
+Tenere presente che tutte le attività di installazione vengono registrate durante l'installazione della classificazione BlueXP. In caso di problemi durante l'installazione, è possibile visualizzare il contenuto del registro di controllo dell'installazione. È scritto a. `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html#access-the-log-file["Per ulteriori informazioni, fare clic qui"].
+
 .Di cosa hai bisogno
 * Verificare che il sistema Linux soddisfi i requisiti <<Preparare il sistema host Linux,requisiti dell'host>>.
 * Verificare di aver installato i due pacchetti software prerequisiti (Docker Engine e Python 3).
@@ -271,12 +275,12 @@ Seguire questi passaggi quando si installa il software di classificazione BlueXP
 
 .Fasi
 . Su un sistema configurato tramite Internet, scaricare il software di classificazione BlueXP dal https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["Sito di supporto NetApp"^]. Il file da selezionare è denominato *DataSense-offline-bundle-<version>.tar.gz*.
-. Copiare il pacchetto di installazione sull'host Linux che si intende utilizzare nel sito dark.
+. Copiare il pacchetto di installazione sull'host Linux che si intende utilizzare in modalità privata.
 . Decomprimere il pacchetto di installazione sul computer host, ad esempio:
 +
 [source, cli]
 ----
-tar -xzf DataSense-offline-bundle-v1.21.0.tar.gz
+tar -xzf DataSense-offline-bundle-v1.22.0.tar.gz
 ----
 +
 In questo modo si estraggono il software richiesto e il file di installazione *cc_onrem_installer.tar.gz*.
@@ -418,7 +422,10 @@ Poiché il software di classificazione BlueXP viene aggiornato regolarmente con 
 
 .Prima di iniziare
 * Si consiglia di aggiornare il software BlueXP Connector alla versione più recente disponibile. https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode["Consultare la procedura di aggiornamento del connettore"^].
-* Il software di classificazione BlueXP può essere aggiornato una versione principale alla volta. Ad esempio, se è installata la versione 1.20.x, è possibile eseguire l'aggiornamento solo alla versione 1.21.x. Se si dispone di alcune versioni principali, sarà necessario aggiornare il software più volte.
+* A partire dalla classificazione BlueXP versione 1.24, è possibile eseguire aggiornamenti a qualsiasi versione futura del software.
++
+Se il software di classificazione BlueXP esegue una versione precedente alla 1.24, è possibile aggiornare solo una versione principale alla volta. Ad esempio, se è installata la versione 1.21.x, è possibile eseguire l'aggiornamento solo alla versione 1.22.x. Se si dispone di alcune versioni principali, sarà necessario aggiornare il software più volte.
+
 
 
 .Fasi
@@ -428,7 +435,7 @@ Poiché il software di classificazione BlueXP viene aggiornato regolarmente con 
 +
 [source, cli]
 ----
-tar -xvf DataSense-offline-bundle-v1.22.0.tar.gz
+tar -xvf DataSense-offline-bundle-v1.23.0.tar.gz
 ----
 +
 In questo modo si estrae il file di installazione *cc_onrem_installer.tar.gz*.

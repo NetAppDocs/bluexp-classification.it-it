@@ -104,10 +104,10 @@ Si noti che l'utilizzo di questi sistemi più piccoli presenta delle limitazioni
 
 * *Sistema operativo*: Il sistema operativo deve essere in grado di installare il motore di docker.
 +
-** Ubuntu 22.04
-** Red Hat Enterprise Linux versioni da 8.0 a 8.5
-** CentOS versioni da 8.0 a 8.5
-** È possibile utilizzare RHEL o CentOS versione 7.8 o 7.9, ma la versione del kernel Linux deve essere 4.0 o superiore
+** Red Hat Enterprise Linux versione 7.8 e 7.9 - la versione del kernel Linux deve essere 4.0 o superiore
+** CentOS versione 7.8 e 7.9 - la versione del kernel Linux deve essere 4.0 o superiore
+** Rocky Linux 9 (richiede classificazione BlueXP versione 1.24 e superiore)
+** Ubuntu 22.04 (richiede classificazione BlueXP versione 1.23 e successive)
 
 
 * *Red Hat Subscription Management*: L'host deve essere registrato con Red Hat Subscription Management. Se non è registrato, il sistema non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione.

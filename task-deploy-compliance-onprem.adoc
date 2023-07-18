@@ -149,10 +149,10 @@ Si noti che l'utilizzo di questi sistemi più piccoli presenta delle limitazioni
 
 * *Sistema operativo*: Il sistema operativo deve essere in grado di installare il motore di docker.
 +
-** Ubuntu 22.04
-** Red Hat Enterprise Linux versioni da 8.0 a 8.5
-** CentOS versioni da 8.0 a 8.5
-** È possibile utilizzare RHEL o CentOS versione 7.8 o 7.9, ma la versione del kernel Linux deve essere 4.0 o superiore
+** Red Hat Enterprise Linux versione 7.8 e 7.9 - la versione del kernel Linux deve essere 4.0 o superiore
+** CentOS versione 7.8 e 7.9 - la versione del kernel Linux deve essere 4.0 o superiore
+** Rocky Linux 9 (richiede classificazione BlueXP versione 1.24 e superiore)
+** Ubuntu 22.04 (richiede classificazione BlueXP versione 1.23 e successive)
 
 
 * *Red Hat Subscription Management*: L'host deve essere registrato con Red Hat Subscription Management. Se non è registrato, il sistema non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione.
@@ -307,6 +307,8 @@ Esaminare i requisiti e seguire questi passaggi quando si installa il software d
 
 https://youtu.be/gE-vrBLSJqw["Guarda questo video"] Per scoprire come installare la classificazione BlueXP.
 
+Tenere presente che tutte le attività di installazione vengono registrate durante l'installazione della classificazione BlueXP. In caso di problemi durante l'installazione, è possibile visualizzare il contenuto del registro di controllo dell'installazione. È scritto a. `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html#access-the-log-file["Per ulteriori informazioni, fare clic qui"].
+
 .Di cosa hai bisogno
 * Verificare che il sistema Linux soddisfi i requisiti <<Preparare il sistema host Linux,requisiti dell'host>>.
 * Verificare che nel sistema siano installati i due pacchetti software prerequisiti (Docker Engine e Python 3).
@@ -329,7 +331,7 @@ https://youtu.be/gE-vrBLSJqw["Guarda questo video"] Per scoprire come installare
 +
 [source, cli]
 ----
-tar -xzf DATASENSE-INSTALLER-V1.21.0.tar.gz
+tar -xzf DATASENSE-INSTALLER-V1.22.0.tar.gz
 ----
 . In BlueXP, selezionare *Governance > Classification*.
 . Fare clic su *Activate Data Sense* (attiva rilevamento dati).

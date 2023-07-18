@@ -41,7 +41,6 @@ La classificazione BlueXP può registrare gli eventi di accesso ai file per i fi
 
 * ONTAP on-premise
 * Cloud Volumes ONTAP
-* Azure NetApp Files
 * Amazon FSX per NetApp ONTAP
 
 
@@ -52,6 +51,9 @@ Le origini dati devono eseguire il software ONTAP versione 9.11 o superiore.
 == Configurare i volumi per la registrazione dell'audit di accesso ai file
 
 È possibile attivare la registrazione dell'audit di accesso ai file sui singoli volumi per tenere traccia delle modifiche apportate a file e directory.
+
+
+TIP: Al momento è possibile configurare il controllo dell'accesso ai file su un massimo di 8 volumi su ciascuna origine dati.
 
 .Prima di iniziare
 * Active Directory deve essere configurato per le origini dati in modo che la classificazione BlueXP possa elencare l'ID della persona che ha effettuato l'accesso ai file.

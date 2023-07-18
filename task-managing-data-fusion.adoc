@@ -62,15 +62,12 @@ image:screenshot_compliance_add_data_fusion.png["Una schermata per identificare 
 
 . Fare clic su *Aggiungi origine Data Fusion*.
 +
-La pagina di inventario di Data Fusion visualizza le colonne di origine del database configurate per la scansione con la classificazione BlueXP.
-
-+
 image:screenshot_compliance_data_fusion_list.png["Una schermata di tutti i riferimenti alle origini dati configurati con Data Fusion."]
 
 
 
 .Risultati
-Dopo la scansione successiva, i risultati includeranno queste nuove informazioni nella dashboard di conformità nella sezione "risultati personali" e nella pagina delle indagini nel filtro "dati personali". Ciascuna colonna di origine aggiunta viene visualizzata nell'elenco dei filtri nel formato "Table.column", ad esempio `Customers.CustomerID`.
+Dopo la scansione successiva, i risultati includeranno queste nuove informazioni nella dashboard di conformità nella sezione "risultati personali" e nella pagina delle indagini nel filtro "dati personali". Il nome utilizzato per il classificatore viene visualizzato nell'elenco dei filtri, ad esempio `Customers.CustomerID`.
 
 image:screenshot_add_data_fusion_result.png["Una schermata che mostra un esempio di risultati di Data Fusion nel riquadro dei risultati dell'analisi."]
 
@@ -116,7 +113,7 @@ image:screenshot_select_classifier_tool_keywords.png["Una schermata che mostra l
 La schermata seguente mostra i nomi dei prodotti interni (diversi tipi di gufi). La ricerca della classificazione BlueXP per questi elementi non fa distinzione tra maiuscole e minuscole.
 
 +
-image:screenshot_select_classifier_create_logic_keyword.png["Una schermata che mostra l'inserimento delle parole chiave per il classificatore del cliente."]
+image:screenshot_select_classifier_create_logic_keyword.png["Una schermata che mostra l'inserimento delle parole chiave per il classificatore personalizzato."]
 
 . Fare clic su *Done* e la classificazione BlueXP inizia a eseguire una nuova scansione dei dati.
 
@@ -138,7 +135,10 @@ Ad esempio, è possibile visualizzare la posizione in cui gli ID prodotto intern
 
 Dopo aver aggiunto il regex, la classificazione BlueXP riavvia la scansione di tutte le origini dati. Una volta completata la scansione, i nuovi risultati verranno visualizzati nella dashboard di conformità della classificazione BlueXP nella sezione "risultati personali" e nella pagina delle indagini nel filtro "dati personali".
 
-Vedere https://regex101.com/[] se hai bisogno di assistenza nella creazione dell'espressione regolare di cui hai bisogno.
+Vedere https://regex101.com/[] se hai bisogno di assistenza nella creazione dell'espressione regolare di cui hai bisogno. Scegliere *Python* per il flavor per vedere i tipi di risultati che la classificazione BlueXP corrisponde all'espressione regolare.
+
+
+NOTE: Attualmente non è consentito l'utilizzo di flag pattern quando si crea un regex - questo significa che non si dovrebbe utilizzare "/".
 
 .Fasi
 . Dalla scheda _Impostazioni classificazione_, fare clic su *Aggiungi nuovo classificatore* per avviare la procedura guidata _Aggiungi classificatore personalizzato_.
@@ -161,7 +161,7 @@ image:screenshot_select_classifier_tool_regex.png["Una schermata che mostra la s
 .. È possibile immettere qualsiasi espressione regolare legale. Fare clic sul pulsante *Validate* (convalida) per verificare che la classificazione BlueXP sia valida e che non sia troppo ampia, il che significa che restituirà troppi risultati.
 .. In alternativa, è possibile inserire alcune parole di prossimità per migliorare la precisione dei risultati. Si tratta di parole che in genere si trovano entro 300 caratteri del modello che si sta cercando (prima o dopo il modello trovato). Inserire ciascuna parola o frase su una riga separata.
 +
-image:screenshot_select_classifier_create_logic_regex.png["Una schermata che mostra l'inserimento delle parole regex e di prossimità per il classificatore del cliente."]
+image:screenshot_select_classifier_create_logic_regex.png["Una schermata che mostra l'inserimento delle parole regex e di prossimità per il classificatore personalizzato."]
 
 
 
@@ -241,6 +241,9 @@ image:screenshot_custom_classifier_top_5.png["Una schermata che mostra i primi 3
 == Gestire classificatori personalizzati
 
 È possibile modificare qualsiasi classificatore personalizzato creato utilizzando il pulsante *Edit Classifier* (Modifica classificatore).
+
+
+TIP: Al momento non è possibile modificare i classificatori Data Fusion.
 
 Se poi decidi di non aver bisogno della classificazione BlueXP per identificare i modelli personalizzati aggiunti, puoi utilizzare il pulsante *Delete Classifier* (Elimina classificatore) per rimuovere ogni elemento.
 

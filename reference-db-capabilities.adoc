@@ -1,0 +1,126 @@
+---
+sidebar: sidebar 
+permalink: reference-db-capabilities.html 
+keywords: database actions, database filters, supported, unsupported 
+summary: Alcune funzionalità non sono disponibili con la classificazione BlueXP durante la scansione degli schemi di database. 
+---
+= Funzionalità di database supportate e non supportate
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Alcune funzionalità non sono disponibili con la classificazione BlueXP durante la scansione degli schemi di database. Vedere l'elenco riportato di seguito.
+
+È possibile aggiungere gli schemi dei database alla classificazione BlueXP da sottoporre a scansione link:task-scanning-databases.html["come descritto qui"^].
+
+[cols="12,25,9,9,9,9,9,9,9"]
+|===
+| Tipo | Descrizione | MongoDB | SQL Server | MySQL | Oracle | PostgreSQL | SAP HANA | RDS Amazon 
+
+
+.9+| Azioni | Crea policy | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Tag | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Assegnare a. | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Esportare i dati | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Eseguire nuovamente la scansione | x | x | x | x | x | x | x 
+
+
+| Eliminare | x | x | x | x | x | x | x 
+
+
+| Sposta | x | x | x | x | x | x | x 
+
+
+| Copia | x | x | x | x | x | x | x 
+
+
+| Etichetta | x | x | x | x | x | x | x 
+
+
+.25+| Filtri | Policy | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Stato dell'analisi della scansione | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Tipo di ambiente di lavoro | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Ambiente di lavoro | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Repository di storage | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Livello di sensibilità | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Dati personali sensibili | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Categorie | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Dati personali | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Soggetto interessato | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Tipo di file | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Dimensione del file | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Tempo scoperto | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Tag | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Assegnare a. | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Evento di analisi della scansione | x | x | x | x | x | x | x 
+
+
+| Percorso file/directory | x | x | x | x | x | x | x 
+
+
+| Filtri delle autorizzazioni | x | x | x | x | x | x | x 
+
+
+| Etichetta | x | x | x | x | x | x | x 
+
+
+| Numero di identificatori | x | x | x | x | x | x | x 
+
+
+| Tipo di directory | x | x | x | x | x | x | x 
+
+
+| Ora di creazione | x | x | x | x | x | x | x 
+
+
+| Ultima modifica | x | x | x | x | x | x | x 
+
+
+| Ultimo accesso | x | x | x | x | x | x | x 
+
+
+| Duplicati | x | x | x | x | x | x | x 
+|===

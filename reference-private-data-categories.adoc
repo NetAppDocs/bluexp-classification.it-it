@@ -52,7 +52,7 @@ Nota: È possibile aggiungere all'elenco dei dati personali presenti nei file. S
 | Password | Sì | ✓ | ✓ | ✓ |  | ✓ 
 
 
-.54+| Identificatori nazionali | TFN australiano (Tax file Number) | Sì | ✓ | ✓ | ✓ |  |  
+.57+| Identificatori nazionali | TFN australiano (Tax file Number) | Sì | ✓ | ✓ | ✓ |  |  
 
 
 | Patente di guida australiana | Sì | ✓ | ✓ | ✓ |  |  
@@ -119,6 +119,15 @@ Nota: È possibile aggiungere all'elenco dei dati personali presenti nei file. S
 
 
 | Francese Tax Identification Number (SPI) | Sì | ✓ | ✓ | ✓ | ✓ |  
+
+
+| ID tedesco (Personalausweisnummer) | Sì | ✓ | ✓ | ✓ |  |  
+
+
+| Tedesco ID interno per bonifici bancari | Sì | ✓ | ✓ | ✓ |  |  
+
+
+| Numero tedesco di previdenza sociale (Sozialversicherungsnummer) | Sì | ✓ | ✓ | ✓ |  |  
 
 
 | Codice fiscale tedesco (Steuerliche Identifikationsnummer) | Sì | ✓ | ✓ | ✓ |  |  
