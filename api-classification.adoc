@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: api-classification.html 
+keywords: api, apis, rest, restful, authorization, classification, data sense, swagger, body, header, list apis 
+summary: 'Le funzionalità di classificazione BlueXP che sono disponibili tramite l"interfaccia utente web sono anche disponibili tramite l"API Swagger.' 
+---
+= API di classificazione BlueXP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le funzionalità di classificazione BlueXP che sono disponibili tramite l'interfaccia utente web sono anche disponibili tramite l'API Swagger.
+
+Esistono quattro categorie definite nella classificazione BlueXP che corrispondono alle schede dell'interfaccia utente:
+
+* Indagine
+* Conformità
+* Governance
+* Configurazione
+
+
+Le API nella documentazione di Swagger consentono di cercare, aggregare dati, monitorare le scansioni e creare azioni come copia, spostamento e altro ancora.
+
+
+
+== Panoramica
+
+L'API consente di eseguire le seguenti funzioni:
+
+* Informazioni sull'esportazione
++
+** Tutto ciò che è disponibile nell'interfaccia utente può essere esportato tramite l'API (ad eccezione dei report)
+** I dati vengono esportati in formato JSON (semplice da analizzare e inviare ad applicazioni di 3rd parti, come Splunk)
+
+
+* Creare query utilizzando le istruzioni "AND" e "OR", includere ed escludere informazioni e altro ancora.
++
+Ad esempio, è possibile individuare i file _senza_ informazioni personali identificabili (PII) specifiche (funzionalità non disponibile nell'interfaccia utente). È inoltre possibile escludere campi specifici per l'operazione di esportazione.
+
+* Eseguire le azioni
++
+** Aggiornare le credenziali CIFS
+** Visualizzare e annullare le azioni
+** Eseguire nuovamente la scansione delle directory
+
+
+
+
+L'API è protetta e utilizza lo stesso metodo di autenticazione dell'interfaccia utente. Le informazioni sull'autenticazione sono disponibili in: https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html[]
+
+
+
+== Accesso al riferimento API Swagger
+
+Per accedere a Swagger, è necessario l'indirizzo IP dell'istanza di classificazione BlueXP. Nel caso di un'implementazione cloud, verrà utilizzato l'indirizzo IP pubblico. Quindi, è necessario accedere a questo endpoint:
+
+https://<classification_ip>/documentation[]

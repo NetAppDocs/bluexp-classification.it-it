@@ -93,9 +93,22 @@ La pagina del portafoglio digitale BlueXP di BlueXP consente di gestire le licen
 
 === Ottenere il file di licenza per la classificazione BlueXP
 
-Dopo aver acquistato la licenza di classificazione BlueXP (Data Sense), attivare la licenza in BlueXP inserendo il numero di serie della classificazione BlueXP e l'account NSS oppure caricando il file di licenza NLF. Se si prevede di utilizzare questo metodo, la procedura riportata di seguito mostra come ottenere il file di licenza NLF.
+Dopo aver acquistato la licenza di classificazione BlueXP (Data Sense), si attiva la licenza in BlueXP inserendo il numero seriale di classificazione BlueXP e l'account NSS o caricando il file di licenza NLF. Se si prevede di utilizzare questo metodo, la procedura riportata di seguito mostra come ottenere il file di licenza NLF.
 
 Se è stata implementata la classificazione BlueXP su un host in un sito on-premise che non dispone di accesso a Internet, è necessario ottenere il file di licenza da un sistema connesso a Internet. L'attivazione della licenza utilizzando il numero seriale e l'account NSS non è disponibile per le installazioni in siti bui.
+
+.Prima di iniziare
+Prima di iniziare, è necessario disporre delle seguenti informazioni:
+
+* Numero di serie della classificazione BlueXP
++
+Individua questo numero nell'ordine di vendita o contatta l'account team per ottenere queste informazioni.
+
+* ID account BlueXP
++
+Puoi trovare il tuo ID account BlueXP selezionando l'elenco a discesa *account* nella parte superiore di BlueXP, quindi facendo clic su *Gestisci account* accanto all'account. L'ID account si trova nella scheda Panoramica.
+
+
 
 .Fasi
 . Accedere a https://mysupport.netapp.com["Sito di supporto NetApp"^] E fare clic su *sistemi > licenze software*.
@@ -103,13 +116,10 @@ Se è stata implementata la classificazione BlueXP su un host in un sito on-prem
 +
 image:screenshot_cloud_tiering_license_step1.gif["Una schermata che mostra una tabella di licenze dopo la ricerca per numero di serie."]
 
-. In *License Key* (chiave di licenza), fare clic su *Get NetApp License file* (Ottieni file di licenza NetApp).
-. Inserire l'ID account BlueXP (chiamato ID tenant sul sito di supporto) e fare clic su *Submit* (Invia) per scaricare il file di licenza.
+. Nella colonna *chiave di licenza*, fare clic su *Ottieni file di licenza NetApp*.
+. Inserisci il tuo ID tenant (ID account BlueXP) e fai clic su *Invia* per scaricare il file di licenza.
 +
 image:screenshot_cloud_tiering_license_step2.gif["Una schermata che mostra la finestra di dialogo Get License (Ottieni licenza) in cui inserire l'ID tenant e fare clic su Submit (Invia) per scaricare il file di licenza."]
-
-+
-Puoi trovare il tuo ID account BlueXP selezionando l'elenco a discesa *account* nella parte superiore di BlueXP, quindi facendo clic su *Gestisci account* accanto all'account. L'ID account si trova nella scheda Panoramica.
 
 
 

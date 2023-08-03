@@ -160,7 +160,7 @@ Si noti che l'utilizzo di questi sistemi più piccoli presenta delle limitazioni
 +
 ** Docker Engine versione 19.3.1 o successiva. https://docs.docker.com/engine/install/["Visualizzare le istruzioni di installazione"^].
 +
-https://youtu.be/H1WS_-85pWA["Guarda questo video"] Per una rapida dimostrazione dell'installazione di Docker su CentOS.
+https://youtu.be/Ogoufel1q6c["Guarda questo video"^] Per una rapida dimostrazione dell'installazione di Docker su CentOS.
 
 ** Python 3 versione 3.6 o successiva. https://www.python.org/downloads/["Visualizzare le istruzioni di installazione"^].
 
@@ -305,7 +305,7 @@ NOTE: La classificazione BlueXP non è attualmente in grado di eseguire la scans
 
 Esaminare i requisiti e seguire questi passaggi quando si installa il software di classificazione BlueXP su un singolo host on-premise.
 
-https://youtu.be/gE-vrBLSJqw["Guarda questo video"] Per scoprire come installare la classificazione BlueXP.
+https://youtu.be/rFpmekdbORc["Guarda questo video"^] Per scoprire come installare la classificazione BlueXP.
 
 Tenere presente che tutte le attività di installazione vengono registrate durante l'installazione della classificazione BlueXP. In caso di problemi durante l'installazione, è possibile visualizzare il contenuto del registro di controllo dell'installazione. È scritto a. `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html#access-the-log-file["Per ulteriori informazioni, fare clic qui"].
 
@@ -345,7 +345,7 @@ image:screenshot_cloud_compliance_deploy_onprem.png["Una schermata che mostra la
 . Viene visualizzata la finestra di dialogo _Deploy Data Sense on Premise_. Copiare il comando fornito (ad esempio: `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq`) e incollarlo in un file di testo per poterlo utilizzare in un secondo momento. Quindi fare clic su *Chiudi* per chiudere la finestra di dialogo.
 . Sul computer host, immettere il comando copiato e seguire una serie di prompt oppure fornire il comando completo che include tutti i parametri richiesti come argomenti della riga di comando.
 +
-Tenere presente che il programma di installazione esegue una pre-verifica per assicurarsi che i requisiti di sistema e di rete siano stati soddisfatti per una corretta installazione. https://youtu.be/UZtn_I0e1Ls["Guarda questo video"] comprendere i messaggi di pre-controllo e le implicazioni.
+Tenere presente che il programma di installazione esegue una pre-verifica per assicurarsi che i requisiti di sistema e di rete siano stati soddisfatti per una corretta installazione. https://youtu.be/_RCYpuLXiV0["Guarda questo video"^] comprendere i messaggi di pre-controllo e le implicazioni.
 
 +
 [cols="50a,50"]

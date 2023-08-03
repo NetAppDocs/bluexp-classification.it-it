@@ -154,7 +154,7 @@ Si noti che l'utilizzo di questi sistemi più piccoli presenta delle limitazioni
 +
 ** Docker Engine versione 19.3.1 o successiva. https://docs.docker.com/engine/install/["Visualizzare le istruzioni di installazione"^].
 +
-https://youtu.be/H1WS_-85pWA["Guarda questo video"] Per una rapida dimostrazione dell'installazione di Docker su CentOS.
+https://youtu.be/Ogoufel1q6c["Guarda questo video"^] Per una rapida dimostrazione dell'installazione di Docker su CentOS.
 
 ** Python 3 versione 3.6 o successiva. https://www.python.org/downloads/["Visualizzare le istruzioni di installazione"^].
 
