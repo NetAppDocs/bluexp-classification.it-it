@@ -56,9 +56,7 @@ Ora è possibile eseguire l'aggiornamento a una versione più recente della clas
 
 L'API di classificazione BlueXP ti consente di eseguire azioni, creare query ed esportare informazioni sui dati che stai analizzando. La documentazione interattiva è disponibile utilizzando Swagger. La documentazione è suddivisa in più categorie, tra cui analisi, conformità, governance e configurazione. Ogni categoria è un riferimento alle schede nell'interfaccia utente di classificazione BlueXP.
 
-Per accedere a Swagger, è necessario l'indirizzo IP dell'istanza di classificazione BlueXP. Nel caso di un'implementazione cloud, verrà utilizzato l'indirizzo IP pubblico. Quindi, è necessario accedere a questo endpoint:
-
-https://<classification_ip>/documentation[]
+https://docs.netapp.com/us-en/bluexp-classification/api-classification.html["Scopri di più sulle API di classificazione BlueXP"].
 
 
 

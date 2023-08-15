@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-managing-repo-scanning.html 
 keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan 
-summary: 'È possibile gestire i dati sottoposti a scansione in ciascuno degli ambienti di lavoro e delle origini dati. È possibile apportare le modifiche in base a un "repository"; ciò significa che è possibile apportare modifiche per ogni volume, bucket, condivisione, schema, utente, ecc. a seconda del tipo di origine dati che si sta eseguendo la scansione.' 
+summary: 'È possibile gestire la modalità di scansione dei dati in ciascuno degli ambienti di lavoro e delle origini dati. È possibile apportare le modifiche in base a un "repository"; ciò significa che è possibile apportare modifiche per ogni volume, bucket, condivisione, schema, utente, ecc. a seconda del tipo di origine dati che si sta eseguendo la scansione.' 
 ---
-= Modifica delle impostazioni di scansione per i repository
+= Modificare le impostazioni di scansione per gli archivi
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,9 @@ summary: 'È possibile gestire i dati sottoposti a scansione in ciascuno degli a
 
 
 [role="lead"]
-È possibile gestire i dati sottoposti a scansione in ciascuno degli ambienti di lavoro e delle origini dati. È possibile apportare le modifiche in base a un "repository"; ciò significa che è possibile apportare modifiche per ogni volume, bucket, condivisione, schema, utente, ecc. a seconda del tipo di origine dati che si sta eseguendo la scansione.
+È possibile gestire la modalità di scansione dei dati in ciascuno degli ambienti di lavoro e delle origini dati. È possibile apportare le modifiche in base a un "repository"; ciò significa che è possibile apportare modifiche per ogni volume, bucket, condivisione, schema, utente, ecc. a seconda del tipo di origine dati che si sta eseguendo la scansione.
 
-Alcune delle cose che è possibile modificare sono se un repository viene sottoposto a scansione o meno e se la classificazione BlueXP sta eseguendo un link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans["scansione di mappatura o scansione di classificazione  di mappatura"]. È inoltre possibile sospendere e riprendere la scansione, ad esempio se si desidera interrompere la scansione di un volume per un determinato periodo di tempo.
+Alcune delle cose che è possibile modificare sono se un repository viene sottoposto a scansione o meno e se la classificazione BlueXP sta eseguendo un link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans["scansione di mappatura o scansione di classificazione  di mappatura"]. È inoltre possibile sospendere e riprendere la scansione, ad esempio se è necessario interrompere la scansione di un volume per un determinato periodo di tempo.
 
 
 
@@ -51,7 +51,7 @@ TIP: I database non possono essere impostati su scansioni solo di mappatura. La 
 +
 image:screenshot_compliance_config_button.png["Una schermata che mostra come fare clic sul pulsante Configuration (Configurazione) per un ambiente di lavoro."]
 
-. Nella pagina Scan Configuration (Configurazione scansione) è possibile modificare uno qualsiasi dei repository (bucket in questo esempio) per eseguire scansioni *MAP* o *Map & Classify* oppure selezionare *Off* per interrompere la scansione di un particolare bucket.
+. Nella pagina Configurazione scansione è possibile modificare qualsiasi repository (bucket in questo esempio) per eseguire scansioni *Map* o *Map & Classify*.
 +
 image:screenshot_compliance_repo_scanning.png["Una schermata che mostra come selezionare il tipo di scansione per un bucket."]
 
@@ -65,9 +65,26 @@ image:screenshot_compliance_repo_scan_all.png["Una schermata che mostra come con
 
 
 
+== Interruzione della scansione di un repository
+
+È possibile interrompere la scansione di un repository (ad esempio, un volume) se non è più necessario monitorarlo per verificarne la conformità. Per eseguire questa operazione, disattivare la scansione. Quando la scansione viene disattivata, tutte le informazioni e l'indicizzazione relative a quel volume vengono rimosse dal sistema e la ricarica per la scansione dei dati viene interrotta.
+
+.Fasi
+. Dalla scheda Configuration (Configurazione), fare clic sul pulsante *Configuration* (Configurazione) per l'ambiente di lavoro.
++
+image:screenshot_compliance_config_button.png["Una schermata che mostra come fare clic sul pulsante Configuration (Configurazione) per un ambiente di lavoro."]
+
+. Nella pagina Configurazione scansione selezionare *Off* per interrompere la scansione di un particolare bucket.
++
+image:screenshot_compliance_stop_repo_scanning.png["Una schermata che mostra come selezionare il tipo di scansione per un bucket."]
+
+
+
+
+
 == Mettere in pausa e riprendere la scansione per un repository
 
-È possibile "sospendere" la scansione in un repository se si desidera interrompere temporaneamente la scansione di determinati contenuti. Questa operazione non equivale a disattivare la scansione. Quando la scansione viene disattivata, tutte le informazioni e l'indicizzazione relative a quel volume vengono rimosse dal sistema e la ricarica per la scansione dei dati viene interrotta. La sospensione della scansione significa che la classificazione BlueXP non eseguirà scansioni future per modifiche o aggiunte al repository, ma che tutti i risultati correnti saranno ancora visualizzati nel sistema. La sospensione della scansione non interrompe la carica per eseguire la scansione dei dati perché i dati sono ancora presenti.
+È possibile "sospendere" la scansione in un repository se si desidera interrompere temporaneamente la scansione di determinati contenuti. La sospensione della scansione significa che la classificazione BlueXP non eseguirà scansioni future per modifiche o aggiunte al repository, ma che tutti i risultati correnti saranno ancora visualizzati nel sistema. La sospensione della scansione non interrompe il caricamento dei dati acquisiti perché i dati sono ancora presenti.
 
 È possibile riprendere la scansione in qualsiasi momento.
 
