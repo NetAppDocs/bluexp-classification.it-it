@@ -55,11 +55,12 @@ Si noti che la classificazione BlueXP non può estrarre le autorizzazioni o il "
 ** Per CIFS – porte 139 e 445.
 
 
-* Sarà necessario l'elenco delle condivisioni che si desidera aggiungere nel formato `<host_name>:/<share_path>`. È possibile immettere le condivisioni singolarmente oppure fornire un elenco separato da riga delle condivisioni di file che si desidera acquisire.
+* È possibile aggiungere una condivisione DFS (Distributed file System) come normale condivisione CIFS. Tuttavia, poiché la classificazione BlueXP non è consapevole che la condivisione è costruita su più server/volumi combinati come una singola CIFS share, potresti ricevere errori di permessi o connettività sulla condivisione quando il messaggio si applica davvero solo a una delle cartelle/condivisioni che si trova su un server/volume diverso.
 * Per le condivisioni CIFS (SMB), assicurarsi di disporre delle credenziali Active Directory che forniscono l'accesso in lettura alle condivisioni. Le credenziali di amministratore sono preferite nel caso in cui la classificazione BlueXP debba eseguire la scansione di qualsiasi dato che richieda autorizzazioni elevate.
 +
 Se si desidera assicurarsi che i file "ultimi tempi di accesso" non vengano modificati dalle scansioni di classificazione BlueXP, si consiglia di disporre dei permessi Write Attributes in CIFS o Write Permissions in NFS. Se possibile, si consiglia di far parte dell'utente configurato con Active Directory di un gruppo principale dell'organizzazione che dispone delle autorizzazioni per tutti i file.
 
+* Sarà necessario l'elenco delle condivisioni che si desidera aggiungere nel formato `<host_name>:/<share_path>`. È possibile immettere le condivisioni singolarmente oppure fornire un elenco separato da riga delle condivisioni di file che si desidera acquisire.
 
 
 

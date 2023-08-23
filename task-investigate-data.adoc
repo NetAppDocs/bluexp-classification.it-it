@@ -279,9 +279,16 @@ TIP: È possibile utilizzare il valore "hash del file" fornito in questa pagina 
 
 Il Data Investigation Report (Report analisi dati) è un download del contenuto filtrato della pagina Data Investigation (analisi dati).
 
-È possibile salvare il report sulla macchina locale come file .CSV (che può includere fino a 5,000 righe di dati) o come file .JSON che si esporta in una condivisione NFS (che può includere un numero illimitato di righe). Se la classificazione BlueXP sta eseguendo la scansione di file (dati non strutturati), directory (cartelle e condivisioni di file) o database (dati strutturati), è possibile scaricare fino a tre file di report.
+È possibile salvare il rapporto in due formati diversi:
 
+* Come file .CSV sul computer locale, che può includere fino a 5.000 righe di dati.
+* Come file .JSON esportato in una condivisione NFS, che può includere fino a 100.000 righe di dati. Se sono presenti più di 100.000 righe di dati, vengono creati file .JSON aggiuntivi.
++
 Quando si esporta in una condivisione file, assicurarsi che la classificazione BlueXP disponga delle autorizzazioni corrette per l'accesso all'esportazione.
+
+
+
+Se la classificazione BlueXP sta scansionando file (dati non strutturati), directory (cartelle e condivisioni di file) e database (dati strutturati), possono essere scaricati fino a tre file di report.
 
 
 
@@ -291,10 +298,10 @@ Quando si esporta in una condivisione file, assicurarsi che la classificazione B
 . Dalla pagina Data Investigation (analisi dati), fare clic su image:button_download.png["pulsante download"] nella parte superiore destra della pagina.
 . Selezionare se si desidera scaricare un report .CSV o .JSON dei dati e fare clic su *Download Report*.
 +
-image:screenshot_compliance_investigation_report.png["Una schermata della pagina Download Investigation Report con diverse opzioni."]
+Quando si seleziona un report .JSON, inserire il nome della condivisione NFS in cui verrà scaricato il report nel formato `<host_name>:/<share_path>`.
 
 +
-Quando si seleziona un report .JSON, inserire il nome della condivisione NFS in cui verrà scaricato il report nel formato `<host_name>:/<share_path>`.
+image:screenshot_compliance_investigation_report.png["Una schermata della pagina Download Investigation Report con diverse opzioni."]
 
 
 
