@@ -2366,7 +2366,6 @@
   <block id="407c4e9fac86b98147da49acd4fa0d01" category="cell">Porte</block>
   <block id="f067a4d9a77738e1e7acac4c6780b5e2" category="cell">Connettore &lt;&gt; classificazione BlueXP</block>
   <block id="d58ea55d9425e8ef73d976d9662c2616" category="cell">8080 (TCP), 443 (TCP) e 80</block>
-  <block id="357e290720f6835d0225e4c266e5fca5" category="cell">Il gruppo di protezione per il connettore deve consentire il traffico in entrata e in uscita sulla porta 443 da e verso l'istanza di classificazione BlueXP. Assicurarsi che la porta 8080 sia aperta in modo da visualizzare l'avanzamento dell'installazione in BlueXP.</block>
   <block id="62e97b929ca433dfe61e82d128653c46" category="cell">Connettore &lt;&gt; ONTAP cluster (NAS)</block>
   <block id="3a0fddda7e650f4aa4c24cb76fb17af0" category="cell">443 (TCP)</block>
   <block id="7e5d9a5421498db733ec66073d7872b4" category="paragraph">BlueXP rileva i cluster ONTAP utilizzando HTTPS. Se si utilizzano criteri firewall personalizzati, questi devono soddisfare i seguenti requisiti:</block>
@@ -3456,4 +3455,8 @@
   <block id="d9c89ee38491bdb679829f426faea2ef" category="list-text">Come file .CSV sul computer locale, che può includere fino a 5.000 righe di dati.</block>
   <block id="8909a1f3cdd58859743896107e545477" category="list-text">Come file .JSON esportato in una condivisione NFS, che può includere fino a 100.000 righe di dati. Se sono presenti più di 100.000 righe di dati, vengono creati file .JSON aggiuntivi.</block>
   <block id="090f87d7b81c809aa6a6d81dcabfeeb8" category="paragraph">Se la classificazione BlueXP sta scansionando file (dati non strutturati), directory (cartelle e condivisioni di file) e database (dati strutturati), possono essere scaricati fino a tre file di report.</block>
+  <block id="abfab9fcbcf9c983c6fcb0efced8edc6" category="cell">8080 (TCP), 6000 (TCP), 443 (TCP) E 80</block>
+  <block id="31bf187a1f6ba9a21c24893034392c45" category="cell">Il gruppo di sicurezza per il connettore deve consentire il traffico in entrata e in uscita sulle porte 6000 e 443 da e verso l'istanza di classificazione BlueXP.
+
+Assicurarsi che la porta 8080 sia aperta in modo da visualizzare l'avanzamento dell'installazione in BlueXP.</block>
 </blocks>
