@@ -205,7 +205,7 @@ Ad alto livello, la classificazione BlueXP funziona come segue:
 
 == Come funzionano le scansioni
 
-Dopo aver attivato la classificazione BlueXP e selezionato volumi, bucket, schemi di database o dati utente OneDrive o SharePoint che si desidera analizzare, inizia immediatamente la scansione dei dati per identificare i dati personali e sensibili. Mappa i dati dell'organizzazione, classifica ciascun file e identifica ed estrae entità e modelli predefiniti nei dati. Il risultato della scansione è un indice di informazioni personali, informazioni personali sensibili, categorie di dati e tipi di file.
+Dopo aver attivato la classificazione BlueXP e selezionato i repository da analizzare (volumi, bucket, schemi di database o dati utente di OneDrive o SharePoint), viene avviata immediatamente la scansione dei dati per identificare i dati personali e sensibili. Nella maggior parte dei casi, è consigliabile concentrarsi sulla scansione dei dati di produzione in tempo reale anziché su backup, mirror o siti DR. Quindi, la classificazione BlueXP mappa i dati dell'organizzazione, categorizza ogni file e identifica ed estrae entità e modelli predefiniti nei dati. Il risultato della scansione è un indice di informazioni personali, informazioni personali sensibili, categorie di dati e tipi di file.
 
 La classificazione BlueXP si connette ai dati come qualsiasi altro client montando volumi NFS e CIFS. Ai volumi NFS viene automaticamente eseguito l'accesso in sola lettura, mentre è necessario fornire le credenziali Active Directory per eseguire la scansione dei volumi CIFS.
 

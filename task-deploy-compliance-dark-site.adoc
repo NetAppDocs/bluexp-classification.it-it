@@ -116,6 +116,13 @@ Il software di classificazione BlueXP deve essere eseguito su un host che soddis
 +
 Si noti che l'utilizzo di questi sistemi più piccoli presenta delle limitazioni. Vedere link:concept-cloud-compliance.html#using-a-smaller-instance-type["Utilizzando un tipo di istanza più piccolo"] per ulteriori informazioni.
 
+* Quando si implementa un'istanza di calcolo nel cloud per l'installazione della classificazione BlueXP, si consiglia di utilizzare un sistema che soddisfi i requisiti di sistema "grandi" indicati in precedenza:
++
+** *Tipo di istanza AWS EC2*: Si consiglia "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types["Vedere altri tipi di istanze AWS"^].
+** *Dimensione delle macchine virtuali Azure*: Si consiglia "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types["Vedere altri tipi di istanze di Azure"^].
+** *Tipo di macchina GCP*: Si consiglia "n2-standard-16". link:reference-instance-types.html#gcp-instance-types["Vedere altri tipi di istanze GCP"^].
+
+
 * *UNIX folder permissions*: Sono richieste le seguenti autorizzazioni minime per UNIX:
 +
 [cols="25,25"]
@@ -134,29 +141,32 @@ Si noti che l'utilizzo di questi sistemi più piccoli presenta delle limitazioni
 
 | /user/lib/systemd/system | `rwxr-xr-x` 
 |===
-* Quando si implementa un'istanza di calcolo nel cloud per l'installazione della classificazione BlueXP, si consiglia di utilizzare un sistema che soddisfi i requisiti di sistema "grandi" indicati in precedenza:
+* *Sistema operativo*:
 +
-** *Tipo di istanza AWS EC2*: Si consiglia "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types["Vedere altri tipi di istanze AWS"^].
-** *Dimensione delle macchine virtuali Azure*: Si consiglia "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types["Vedere altri tipi di istanze di Azure"^].
-** *Tipo di macchina GCP*: Si consiglia "n2-standard-16". link:reference-instance-types.html#gcp-instance-types["Vedere altri tipi di istanze GCP"^].
+** I seguenti sistemi operativi richiedono l'utilizzo del motore dei container Docker:
++
+*** Red Hat Enterprise Linux versione 7.8 e 7.9 - la versione del kernel Linux deve essere 4.0 o superiore
+*** CentOS versione 7.8 e 7.9 - la versione del kernel Linux deve essere 4.0 o superiore
+*** Rocky Linux 9 (richiede la classificazione BlueXP versione 1,24 o superiore)
+*** Ubuntu 22,04 (richiede la classificazione BlueXP versione 1,23 o superiore)
 
 
-* *Sistema operativo*: Il sistema operativo deve essere in grado di installare il motore di docker.
-+
-** Red Hat Enterprise Linux versione 7.8 e 7.9 - la versione del kernel Linux deve essere 4.0 o superiore
-** CentOS versione 7.8 e 7.9 - la versione del kernel Linux deve essere 4.0 o superiore
-** Rocky Linux 9 (richiede classificazione BlueXP versione 1.24 e superiore)
-** Ubuntu 22.04 (richiede classificazione BlueXP versione 1.23 e successive)
+
+
 
 
 * *Red Hat Subscription Management*: L'host deve essere registrato con Red Hat Subscription Management. Se non è registrato, il sistema non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione.
 * *Software aggiuntivo*: È necessario installare il seguente software sull'host prima di installare la classificazione BlueXP:
 +
-** Docker Engine versione 19.3.1 o successiva. https://docs.docker.com/engine/install/["Visualizzare le istruzioni di installazione"^].
+** A seconda del sistema operativo in uso, è necessario installare uno dei motori container:
++
+*** Docker Engine versione 19.3.1 o superiore. https://docs.docker.com/engine/install/["Visualizzare le istruzioni di installazione"^].
 +
 https://youtu.be/Ogoufel1q6c["Guarda questo video"^] Per una rapida dimostrazione dell'installazione di Docker su CentOS.
 
-** Python 3 versione 3.6 o successiva. https://www.python.org/downloads/["Visualizzare le istruzioni di installazione"^].
+
+
+** Python versione 3,6 o superiore. https://www.python.org/downloads/["Visualizzare le istruzioni di installazione"^].
 
 
 * *Considerazioni su Firewalld*: Se si intende utilizzare `firewalld`, Si consiglia di abilitarla prima di installare la classificazione BlueXP. Eseguire i seguenti comandi per configurare `firewalld` In modo che sia compatibile con la classificazione BlueXP:
@@ -282,7 +292,7 @@ Tenere presente che tutte le attività di installazione vengono registrate duran
 +
 [source, cli]
 ----
-tar -xzf DataSense-offline-bundle-v1.22.0.tar.gz
+tar -xzf DataSense-offline-bundle-v1.25.0.tar.gz
 ----
 +
 In questo modo si estraggono il software richiesto e il file di installazione *cc_onrem_installer.tar.gz*.
@@ -437,7 +447,7 @@ Se il software di classificazione BlueXP esegue una versione precedente alla 1.2
 +
 [source, cli]
 ----
-tar -xvf DataSense-offline-bundle-v1.23.0.tar.gz
+tar -xvf DataSense-offline-bundle-v1.25.0.tar.gz
 ----
 +
 In questo modo si estrae il file di installazione *cc_onrem_installer.tar.gz*.

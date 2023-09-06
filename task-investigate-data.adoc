@@ -248,6 +248,8 @@ Inoltre, È possibile fare clic sul nome di un utente o di un gruppo e viene vis
 
 È possibile visualizzare se i file duplicati vengono memorizzati nei sistemi storage. Ciò è utile se si desidera identificare le aree in cui è possibile risparmiare spazio di storage. Può anche essere utile assicurarsi che alcuni file con autorizzazioni specifiche o informazioni sensibili non vengano duplicati inutilmente nei sistemi di storage.
 
+Tutti i file (esclusi i database) di dimensioni pari o superiori a 1 MB e contenenti informazioni personali o riservate vengono confrontati per verificare se sono presenti duplicati. È possibile utilizzare i filtri della pagina di analisi "dimensione file" insieme a "duplicati" per vedere quali file di un determinato intervallo di dimensioni sono duplicati nell'ambiente in uso.
+
 La classificazione BlueXP utilizza la tecnologia di hashing per determinare i file duplicati. Se un file ha lo stesso codice hash di un altro file, possiamo essere sicuri al 100% che i file siano duplicati esatti - anche se i nomi dei file sono diversi.
 
 È possibile scaricare l'elenco dei file duplicati e inviarlo all'amministratore dello storage in modo che possa decidere quali file, se presenti, possono essere cancellati. Oppure è possibile link:task-managing-highlights.html#deleting-source-files["eliminare il file"] se si è sicuri che non è necessaria una versione specifica del file.
@@ -258,7 +260,7 @@ La classificazione BlueXP utilizza la tecnologia di hashing per determinare i fi
 
 Se si desidera un elenco di tutti i file duplicati negli ambienti di lavoro e nelle origini dati in scansione, è possibile utilizzare il filtro *duplicati > ha duplicati* nella pagina analisi dati.
 
-Tutti i file con duplicati di tutti i tipi di file (esclusi i database), con una dimensione minima di 50 MB e/o contenenti informazioni personali o sensibili, verranno visualizzati nella pagina dei risultati.
+Tutti i file duplicati vengono visualizzati nella pagina risultati.
 
 
 
