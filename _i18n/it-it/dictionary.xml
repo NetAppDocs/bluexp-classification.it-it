@@ -2753,7 +2753,6 @@
   <block id="f761b4a4393e1a53850ec9f4dd420f50" category="paragraph"><block ref="f761b4a4393e1a53850ec9f4dd420f50" category="inline-image-macro-rx" type="image"></block></block>
   <block id="11dfa7f8030ea34c4933fff6eaa19333" category="list-text">Fare clic su *Assegna un'etichetta a questo file*, quindi selezionare l'etichetta.</block>
   <block id="5108557521189397e1f9be01f92633b0" category="paragraph">L'etichetta viene visualizzata nei metadati del file.</block>
-  <block id="398b53642810a3ebb827ca64a7e031fe" category="paragraph">Per assegnare un'etichetta AIP a più file:</block>
   <block id="f26e9a93fd90f2481bfff0f8c4517da6" category="list-text">Nel riquadro Data Investigation Results (risultati analisi dati), selezionare il file o i file da etichettare.</block>
   <block id="4547ea9eb340b9b3af947472b935464f" category="inline-image-macro">Una schermata che mostra come selezionare i file da etichettare e il pulsante etichetta dalla pagina Data Investigation (analisi dati).</block>
   <block id="82f4c85e0490488ae85ec5e3e8910f40" category="paragraph"><block ref="82f4c85e0490488ae85ec5e3e8910f40" category="inline-image-macro-rx" type="image"></block></block>
@@ -2809,12 +2808,10 @@
   <block id="640ddcfcbdd6fd24058616dfd813d30c" category="paragraph">Ad esempio, è possibile che il file contenga alcuni dati personali che consentono a troppi utenti di accedere in lettura e scrittura (autorizzazioni aperte). È quindi possibile assegnare il tag di stato "Change permissions" e assegnare questo file all'utente "Joan Smith" in modo che possa decidere come risolvere il problema. Una volta risolto il problema, è possibile modificare il tag Status (Stato) in "Completed" (completato).</block>
   <block id="f618e6196e135d15235cbaf7abf46b03" category="paragraph">Si noti che il nome utente non viene aggiunto al file come parte dei metadati del file, ma viene visualizzato solo dagli utenti BlueXP quando si utilizza la classificazione BlueXP.</block>
   <block id="931074f4d66344e7b9658958b6d87907" category="paragraph">Un nuovo filtro nella pagina di analisi consente di visualizzare facilmente tutti i file con la stessa persona nel campo "assegnato a".</block>
-  <block id="6f4326437137a604ca129e07fbf28447" category="paragraph">Per assegnare un utente a un singolo file:</block>
   <block id="a86a8c5ea91657b179c7c6639a2c33e7" category="list-text">Fare clic sul campo *assegnato a* e selezionare il nome utente.</block>
   <block id="a80ae116cfcf2ab82dcddbfc170be5b7" category="inline-image-macro">Una schermata che mostra come assegnare un utente a un file nella pagina Data Investigation.</block>
   <block id="412f0fb9ebd6475572b807f651180d22" category="paragraph"><block ref="412f0fb9ebd6475572b807f651180d22" category="inline-image-macro-rx" type="image"></block></block>
   <block id="608c20f332a7cdf1c8b13907f1cc490c" category="paragraph">Il nome utente viene visualizzato nei metadati del file.</block>
-  <block id="8533d80dc327c1f01f502cb153b295dd" category="paragraph">Per assegnare un utente a più file:</block>
   <block id="9d03854319e73cc41bd352adb5eb647e" category="list-text">Nel riquadro Data Investigation Results (risultati analisi dati), selezionare il file o i file che si desidera assegnare a un utente.</block>
   <block id="ca614decc202c0a06868e70380a540ca" category="inline-image-macro">Una schermata che mostra come selezionare i file che si desidera assegnare a un utente e il pulsante Assegna a dalla pagina analisi dati.</block>
   <block id="5771f928056682d86e2c8ac3c8a3ba87" category="paragraph"><block ref="5771f928056682d86e2c8ac3c8a3ba87" category="inline-image-macro-rx" type="image"></block></block>
@@ -3472,4 +3469,8 @@ Assicurarsi che la porta 8080 sia aperta in modo da visualizzare l'avanzamento d
   <block id="40733cb3233c3b83d0f3ecc4ee6fed65" category="paragraph">Classificazione BlueXP utilizzata per identificare i file duplicati solo quando avevano 50 MB o più. Ora è possibile identificare i file duplicati che iniziano con 1 MB. È possibile utilizzare i filtri della pagina di analisi "dimensione file" insieme a "duplicati" per vedere quali file di una certa dimensione sono duplicati nell'ambiente in uso.</block>
   <block id="a0b0397888c391cefadbe3fa028a49bc" category="list-text">Per selezionare tutti i file su tutte le pagine, selezionare la casella nella riga del titolo (<block ref="240ed779654c3f6cf32843800cecc801" category="inline-image-macro-rx" type="image"></block>), quindi nel messaggio a comparsa <block ref="6d073c59586864da957e4fe8e0338e10" category="inline-image-macro-rx" type="image"></block>, Fare clic su *Seleziona tutti gli elementi nell'elenco (xxx elementi)*.</block>
   <block id="b28003dc3eea16791b3379012ffb1993" category="paragraph">È possibile applicare tag a un massimo di 100.000 file alla volta.</block>
+  <block id="8b6c126d65d4a1501ecb5e4a7f296fa9" category="paragraph"><block ref="78a1f63a475eced077a3b4ccbdcfca4e" category="inline-link-rx"></block> Per vedere come eseguire lo script Prerequisites e interpretare i risultati.</block>
+  <block id="6558368ee6073deea643cc8c934764fc" category="paragraph">Per assegnare un'etichetta AIP a più file, procedere come segue. Nota: È possibile assegnare un'etichetta AIP a un massimo di 20 file alla volta (una pagina nell'interfaccia utente).</block>
+  <block id="734926fafb1271c111d9404b81a2a40f" category="paragraph">Per assegnare un utente a un singolo file, procedere come segue.</block>
+  <block id="7cb00932323e74919350bd2ce54bb9db" category="paragraph">Per assegnare un utente a più file, procedere come segue. Nota: È possibile assegnare un utente a un massimo di 20 file alla volta (una pagina nell'interfaccia utente).</block>
 </blocks>

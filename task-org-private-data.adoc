@@ -125,7 +125,7 @@ L'etichetta viene visualizzata nei metadati del file.
 
 
 
-Per assegnare un'etichetta AIP a più file:
+Per assegnare un'etichetta AIP a più file, procedere come segue. Nota: È possibile assegnare un'etichetta AIP a un massimo di 20 file alla volta (una pagina nell'interfaccia utente).
 
 .Fasi
 . Nel riquadro Data Investigation Results (risultati analisi dati), selezionare il file o i file da etichettare.
@@ -269,7 +269,7 @@ Si noti che il nome utente non viene aggiunto al file come parte dei metadati de
 
 Un nuovo filtro nella pagina di analisi consente di visualizzare facilmente tutti i file con la stessa persona nel campo "assegnato a".
 
-Per assegnare un utente a un singolo file:
+Per assegnare un utente a un singolo file, procedere come segue.
 
 .Fasi
 . Nel riquadro Data Investigation Results (risultati analisi dati), fare clic su image:button_down_caret.png["cart"] per espandere i dettagli dei metadati del file.
@@ -282,7 +282,7 @@ Il nome utente viene visualizzato nei metadati del file.
 
 
 
-Per assegnare un utente a più file:
+Per assegnare un utente a più file, procedere come segue. Nota: È possibile assegnare un utente a un massimo di 20 file alla volta (una pagina nell'interfaccia utente).
 
 .Fasi
 . Nel riquadro Data Investigation Results (risultati analisi dati), selezionare il file o i file che si desidera assegnare a un utente.
