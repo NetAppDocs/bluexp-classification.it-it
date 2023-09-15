@@ -204,19 +204,7 @@ Quando si implementa la classificazione BlueXP da un connettore BlueXP in un amb
 image:screenshot_cloud_compliance_deploy_start.png["Una schermata che mostra la selezione del pulsante per attivare la classificazione BlueXP."]
 
 . Fare clic su *Activate Data Sense* (attiva rilevamento dati).
-+
-image:screenshot_cloud_compliance_deploy_cloud_aws.png["Una schermata che mostra la selezione del pulsante per implementare la classificazione BlueXP nel cloud."]
-
 . Dalla pagina _Installation_, fare clic su *Deploy > Deploy* per utilizzare le dimensioni dell'istanza "Large" e avviare la procedura guidata di implementazione del cloud.
-+
-È inoltre possibile fare clic su *Deploy > Configuration* per scegliere tra due tipi di istanze più piccoli se non si dispone di molti dati da sottoporre a scansione. Ciò consente di risparmiare sui costi del cloud quando si utilizza un'istanza più piccola. Di seguito viene mostrata una dimensione della risorsa "media".
-
-+
-Quindi fare clic su *Deploy* per avviare la procedura guidata di implementazione del cloud.
-
-+
-image:screenshot_cloud_deploy_resource_size.png["Una schermata della pagina di distribuzione per scegliere le dimensioni dell'istanza su cui verrà distribuita la classificazione BlueXP."]
-
 . La procedura guidata visualizza lo stato di avanzamento durante le fasi di implementazione. In caso di problemi, il sistema si arresta e richiede l'immissione.
 +
 image:screenshot_cloud_compliance_wizard_start.png["Schermata della classificazione guidata BlueXP per la distribuzione di una nuova istanza."]
