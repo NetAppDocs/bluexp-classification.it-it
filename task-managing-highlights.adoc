@@ -205,11 +205,11 @@ Si noti che alcune delle normali operazioni di copia e sincronizzazione di BlueX
 
 == Spostamento dei file di origine in una condivisione NFS
 
-Puoi spostare i file di origine che la classificazione BlueXP sta scansionando in qualsiasi condivisione NFS. La condivisione NFS non deve essere integrata con la classificazione BlueXP (vedere link:task-scanning-file-shares.html["Scansione delle condivisioni di file"]).
+Puoi spostare i file di origine che la classificazione BlueXP sta scansionando in qualsiasi condivisione NFS. Non è necessario integrare la condivisione NFS con la classificazione BlueXP.
 
 In alternativa, è possibile lasciare un file breadcrumb nella posizione del file spostato. Un file breadcrumb aiuta gli utenti a capire perché un file è stato spostato dalla posizione originale. Per ogni file spostato, il sistema crea un file breadcrumb nella posizione di origine denominata `<filename>-breadcrumb-<date>.txt`. È possibile aggiungere del testo nella finestra di dialogo che verrà aggiunta al file breadcrumb per indicare la posizione in cui è stato spostato il file e l'utente che lo ha spostato.
 
-Se esiste un file con lo stesso nome nella posizione di destinazione, il file non verrà spostato.
+Si noti che la struttura della sottodirectory dal file di origine viene ricreata sulla condivisione di destinazione quando il file viene spostato, in modo da comprendere più facilmente da dove è stato spostato il file. Se esiste un file con lo stesso nome nella posizione di destinazione, il file non verrà spostato.
 
 
 TIP: Non è possibile spostare i file che risiedono nei database.
