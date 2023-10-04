@@ -867,7 +867,6 @@
   <block id="c8716632d7055f530ad579b6f751cf3a" category="paragraph"><block ref="c8716632d7055f530ad579b6f751cf3a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="243263104c829e77835d632f591230d5" category="summary">Prima di aprire un caso di supporto con il supporto tecnico NetApp, è necessario aggiungere un account NetApp Support Site a BlueXP e registrarsi per il supporto.</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">Registrati per ricevere assistenza</block>
-  <block id="0375f4855be072c7d856a0233cc21de9" category="section-title">Supporto per le soluzioni cloud provider</block>
   <block id="b0cee72642f5457a71ddd0b49efb6d93" category="inline-link-macro">Cloud Volumes Service per Google Cloud</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">Panoramica sulla registrazione del supporto</block>
   <block id="192054ad7601240a3e8be54cc5cc548e" category="paragraph">Esistono due forme di registrazione per attivare i diritti di supporto:</block>
@@ -1136,7 +1135,6 @@
   <block id="4ae80798b0ef194ea50cfe00aa1b363c" category="admonition">Non è possibile spostare i file che risiedono nei database.</block>
   <block id="362922d3096f2a8f75a966c92ac6d984" category="list-text">Per spostare i file, è necessario disporre del ruolo account Admin (Amministratore account) o Workspace Admin (Amministratore area di lavoro).</block>
   <block id="3aa95927284ca0cd4e7737dd41a53153" category="list-text">I file di origine possono trovarsi nelle seguenti origini dati: On-premise ONTAP, Cloud Volumes ONTAP, Azure NetApp Files, condivisioni file e SharePoint Online.</block>
-  <block id="687c2785d0e6bcc55e7d411f98257c26" category="list-text">Lo spostamento dei file richiede che la condivisione NFS consenta l'accesso dall'indirizzo IP dell'istanza di classificazione BlueXP.</block>
   <block id="49bb7289b8abc33c271f634fc8149b1e" category="list-text">È possibile spostare un massimo di 15 milioni di file alla volta.</block>
   <block id="cc7802d7dd00fcef6b110f6c11d254d0" category="list-text">Nel riquadro Data Investigation Results (risultati analisi dati), selezionare il file o i file da spostare.</block>
   <block id="9ec28b3e8959ec52791e2484cca2dae5" category="inline-image-macro">Una schermata che mostra come selezionare i file da spostare e il pulsante Sposta dalla pagina analisi dati.</block>
@@ -2340,7 +2338,6 @@
   <block id="566ccf048003723333e9b10e7b0ffc81" category="section-title">Preparare il sistema host Linux</block>
   <block id="8e14c56957ac95c2facdf955093df914" category="paragraph">Il software di classificazione BlueXP deve essere eseguito su un host che soddisfi requisiti specifici del sistema operativo, requisiti di RAM, requisiti software e così via.</block>
   <block id="cd2c26e6dff9147da7b2b00b90713d5e" category="list-text">*Considerazioni su Firewalld*: Se si intende utilizzare<block ref="7ba21652408bcade58b8719451511f2a" prefix=" " category="inline-code"></block>, Si consiglia di abilitarla prima di installare la classificazione BlueXP. Eseguire i seguenti comandi per configurare<block ref="7ba21652408bcade58b8719451511f2a" prefix=" " category="inline-code"></block> In modo che sia compatibile con la classificazione BlueXP:</block>
-  <block id="967e2833b7b63650ec3b8ae154cf6a53" category="paragraph">Tenere presente che è necessario riavviare Docker ogni volta che si attiva o si aggiorna<block ref="7ba21652408bcade58b8719451511f2a" prefix=" " category="inline-code"></block> impostazioni.</block>
   <block id="8cd6bdaa74e38d2e1528afe9821b5929" category="admonition">L'indirizzo IP del sistema host di classificazione BlueXP non può essere modificato dopo l'installazione.</block>
   <block id="7088c16623e2e9a81505c3fc9b3de511" category="section-title">Verificare i prerequisiti di classificazione di BlueXP e BlueXP</block>
   <block id="9a7e54be58f201f0955cf055ce10c16c" category="paragraph">Esaminare i seguenti prerequisiti per assicurarsi di disporre di una configurazione supportata prima di implementare la classificazione BlueXP.</block>
@@ -2969,7 +2966,6 @@
   <block id="5a838e350187be3ad79ae1b63fe95a2b" category="list-text">Aprire il file "Working_Environment_to_scanner_group_config.yml" e definire gli ambienti di lavoro che verranno sottoposti a scansione da ciascun gruppo di scanner</block>
   <block id="23dcbd39a65a485d50a0307dbfaed624" category="list-text">Eseguire il seguente script per registrare queste informazioni di mappatura con tutti i nodi scanner:<block ref="095075046e7ff767d3fd56d02f6fdfdb" prefix=" " category="inline-code"></block></block>
   <block id="02d7e4f0f1520dae85025d3974fbed76" category="list-text">Verificare che tutti i sistemi Linux per i nodi scanner soddisfino il <block ref="2d54aecca24274aa47c2fb620cd7d497" category="inline-xref-macro-rx"></block>.</block>
-  <block id="dc398b6dfc944aa53fc80c488796fb93" category="list-text">Verificare che sui sistemi siano installati i due pacchetti software prerequisiti (Docker Engine e Python 3).</block>
   <block id="b1449ad435bd2427e821c3c261113c80" category="list-text">Verificare che l'ambiente soddisfi i requisiti <block ref="9eb48ce3a280aa134b4c3aab7ed78a68" category="inline-xref-macro-rx"></block>.</block>
   <block id="b24a973a5aa3fefd5ec9cba471feff39" category="list-text">È necessario disporre degli indirizzi IP degli host del nodo scanner che si stanno aggiungendo.</block>
   <block id="7516f4f6c5fbdf54b5b78be3de1b7d8a" category="list-text">È necessario disporre dell'indirizzo IP del sistema host del nodo BlueXP Classification Manager</block>
@@ -3084,7 +3080,6 @@
   <block id="c0b7cbffdfa6fa18059367f2045ac22c" category="sidebar">Casi di utilizzo della classificazione BlueXP</block>
   <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">Blog BlueXP</block>
   <block id="f93e4e0ba0745745e36a3b67b14a8a5b" category="sidebar">Webinar BlueXP</block>
-  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">Tutta la documentazione BlueXP</block>
   <block id="c1560b054493db03cae97adece148673" category="list-text"><block ref="c1560b054493db03cae97adece148673" category="inline-link-rx"></block></block>
   <block id="72a0c1f7935cbaab164295a8fac378d8" category="list-text"><block ref="72a0c1f7935cbaab164295a8fac378d8" category="inline-link-rx"></block></block>
   <block id="9d7d457b861dcdf8b4b7f28f3a120c36" category="list-text"><block ref="9d7d457b861dcdf8b4b7f28f3a120c36" category="inline-link-rx"></block></block>
@@ -3225,9 +3220,7 @@
   <block id="e1161f065b10936afc930fd3d9d0c76f" category="section-title">Le licenze Data Sense BYOL sono ora supportate nei siti bui</block>
   <block id="1ab65443ec0af7e5e1aee32a3cf59dcc" category="inline-link">Scopri come ottenere e caricare la licenza BYOL Data Sense</block>
   <block id="645f5675426bc396b45b524635e93bc7" category="paragraph">Ora puoi caricare la tua licenza BYOL Data Sense nel portafoglio digitale BlueXP in un sito buio, in modo da ricevere una notifica quando la tua licenza sta per esaurirsi.<block ref="bd823f9b4dce457c0ea2a8dcca6e749f" category="inline-link-rx"></block>.</block>
-  <block id="0c7db2bd63c891adb2c0fa4527805d72" category="paragraph">Per l'account BlueXP e per i singoli sistemi Cloud Volumes ONTAP è richiesta la registrazione del supporto.</block>
   <block id="28164bf9e881ddc9e7ff74744bfce180" category="paragraph">La registrazione di entrambi i tipi di numeri di serie offre funzionalità come l'apertura di ticket di supporto e la generazione automatica dei casi. La registrazione viene completata aggiungendo account del sito di supporto NetApp a BlueXP come descritto di seguito.</block>
-  <block id="e922b9aa0836a1d93e11cac0fe4c9004" category="paragraph">Per il supporto tecnico sulle seguenti soluzioni di cloud provider, fare riferimento a "Assistenza" nella documentazione di BlueXP relativa a tale prodotto.</block>
   <block id="5a19febf1dcb23c10e8dcfde64ba764c" category="section-title">Registrare l'account BlueXP per il supporto NetApp</block>
   <block id="6bbc2ba432f59ab65ee3d8ac5a58336e" category="paragraph">Per registrarsi al supporto e attivare i diritti di supporto, un utente del proprio account BlueXP deve associare un account del sito di supporto NetApp al proprio account di accesso BlueXP. La modalità di registrazione al supporto NetApp dipende dal fatto che si disponga già di un account NetApp Support Site (NSS).</block>
   <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">Selezionare *Aggiungi credenziali NSS* e seguire la richiesta di autenticazione del sito di supporto NetApp.</block>
@@ -3439,8 +3432,6 @@ Assicurarsi che la porta 8080 sia aperta in modo da visualizzare l'avanzamento d
   <block id="2a2958e5280a05650587dc8d454a5f8d" category="list-text">A seconda del sistema operativo in uso, è necessario installare uno dei motori container:</block>
   <block id="42b04f3730744d602d0c4b812384dce9" category="list-text">Docker Engine versione 19.3.1 o superiore.<block ref="bbcf0e5e8b0c8687d84c2c22a5ad2ecf" category="inline-link-rx"></block>.</block>
   <block id="1d7787fe4a7264402153a51d8513414f" category="list-text">Python versione 3,6 o superiore.<block ref="f67fc9f0c7d8aa701884bad21356a242" category="inline-link-rx"></block>.</block>
-  <block id="b3eca644efa08065eb8c4ac6103bb98b" category="list-text">Verificare che sul sistema siano installati i due pacchetti software prerequisiti (Docker Engine e Python 3).</block>
-  <block id="b22f0c43f37aea47ed39cf9a0ab2a837" category="list-text">Verificare di aver installato i due pacchetti software prerequisiti (Docker Engine e Python 3).</block>
   <block id="66f5e7d970f0cf4b79e5b61fd2dba7c1" category="list-text">La quantità di dati sottoposti a scansione viene calcolata in base alle dimensioni del file logico senza efficienze dello storage.</block>
   <block id="9977ca20c8bc19b052f79b784b9f28f8" category="paragraph">Dopo aver attivato la classificazione BlueXP e selezionato i repository da analizzare (volumi, bucket, schemi di database o dati utente di OneDrive o SharePoint), viene avviata immediatamente la scansione dei dati per identificare i dati personali e sensibili. Nella maggior parte dei casi, è consigliabile concentrarsi sulla scansione dei dati di produzione in tempo reale anziché su backup, mirror o siti DR. Quindi, la classificazione BlueXP mappa i dati dell'organizzazione, categorizza ogni file e identifica ed estrae entità e modelli predefiniti nei dati. Il risultato della scansione è un indice di informazioni personali, informazioni personali sensibili, categorie di dati e tipi di file.</block>
   <block id="ab7a4d49b4e814b44fcc2e4e34cdc29b" category="paragraph">Devi riavviare Docker o Podman ogni volta che abiliti o aggiorni il sistema<block ref="7ba21652408bcade58b8719451511f2a" prefix=" " category="inline-code"></block> impostazioni.</block>
@@ -3466,4 +3457,26 @@ Assicurarsi che la porta 8080 sia aperta in modo da visualizzare l'avanzamento d
   <block id="125161c62eedd013601db45d9716edf6" category="paragraph">Si noti che la struttura della sottodirectory dal file di origine viene ricreata sulla condivisione di destinazione quando il file viene spostato, in modo da comprendere più facilmente da dove è stato spostato il file. Se esiste un file con lo stesso nome nella posizione di destinazione, il file non verrà spostato.</block>
   <block id="81e4b26a6519cffe24195e5edc407992" category="paragraph">In questo modo è possibile visualizzare le azioni che sono state completate correttamente, quelle attualmente in corso e quelle che hanno avuto esito negativo, in modo da poter diagnosticare e risolvere eventuali problemi. Tenere presente che le brevi operazioni che vengono completate rapidamente, ad esempio lo spostamento di un singolo file, non vengono visualizzate nel riquadro Stato azioni.</block>
   <block id="b2ed02bab90c71832a95050419f003e6" category="list-text">La classificazione BlueXP non estrae l'ultimo tempo a cui si accede dalle seguenti origini dati: SharePoint Online, SharePoint on-premise (SharePoint Server), OneDrive, Google Drive, Amazon S3 e Database.</block>
+  <block id="4b9f4d0e463502904f138e1d9f0014a4" category="section-title">4 ottobre (versione 1,26)</block>
+  <block id="620a73262e6956695319caae21506289" category="section-title">Supporto per installazioni in loco con RHEL versione 9</block>
+  <block id="97e778415712a740a3bb71e9070c88c5" category="paragraph">Le versioni 8 e 9 di Red Hat Enterprise Linux non supportano il motore Docker, necessario per l'installazione della classificazione BlueXP. Ora supportiamo l'installazione su RHEL 9,0, 9,1 e 9,2 utilizzando Podman versione 4 o successiva come infrastruttura container. Se il tuo ambiente richiede l'utilizzo delle versioni più recenti di RHEL, ora puoi installare la classificazione BlueXP (versione 1,26 o superiore) quando utilizzi Podman.</block>
+  <block id="081ac57be4c35d4de4fc43c105089d8f" category="paragraph">Al momento non supportiamo installazioni in siti oscuri o ambienti di scansione distribuiti (utilizzando nodi scanner master e remoti).</block>
+  <block id="db5b005cbaaba7a23899858892848a77" category="section-title">I risultati della pagina di analisi ora visualizzano le dimensioni totali oltre al numero totale di elementi</block>
+  <block id="81b243d81f786faa99d42ef659adac3a" category="paragraph">I risultati filtrati nella pagina di analisi ora mostrano la dimensione totale degli elementi oltre al numero totale di file. Ciò può essere utile quando si spostano file, si eliminano file e altro ancora.</block>
+  <block id="4a90d7d35061a4c9e5845a989ea05db2" category="list-text">I seguenti sistemi operativi richiedono l'utilizzo del motore del container Podman e richiedono la classificazione BlueXP versione 1,26 o superiore:</block>
+  <block id="59f227bced13db9b55686d58d4422b7b" category="list-text">Red Hat Enterprise Linux versione 9,0, 9,1 e 9,2</block>
+  <block id="ca4483ba58214f8a91253985b52c976c" category="paragraph">Tenere presente che le seguenti funzioni non sono attualmente supportate quando si utilizza RHEL 9.x:</block>
+  <block id="1b32bd564a2d99c25093d522b505880d" category="list-text">Installazione in un luogo buio</block>
+  <block id="1a81412d076e7b9aa74911a0adfb4688" category="list-text">Scansione distribuita, utilizzando un nodo scanner master e nodi scanner remoti</block>
+  <block id="cf49e2a8099d82e2f5780f13362c4f6c" category="list-text">Podman versione 4 o superiore. Per installare Podman, aggiorna i pacchetti di sistema <block ref="2331e8e9c17f410bdfc0aa461e9aa2b7" prefix="(" category="inline-code"></block>), quindi installare Podman <block ref="e831e1bb8caac0e1ff717314d00a328d" prefix="(" category="inline-code"></block>).</block>
+  <block id="194351f6f6e0cb2f129f2a15d7f6df07" category="list-text">Verificare che sul sistema siano installati i due pacchetti software prerequisiti (Docker Engine o Podman e Python 3).</block>
+  <block id="70982664d9f01c2eb3895d455947c83d" category="list-text">Verificare che sui sistemi siano installati i due pacchetti software prerequisiti (Docker Engine o Podman e Python 3).</block>
+  <block id="ece19bab46695021f109a5e50f08bebe" category="paragraph">È necessaria la registrazione del supporto per ricevere supporto tecnico specifico per BlueXP e le relative soluzioni e servizi storage. È inoltre necessaria la registrazione del supporto per abilitare i flussi di lavoro chiave per i sistemi Cloud Volumes ONTAP.</block>
+  <block id="8a3d807608e632d188a288fc5f4aa7eb" category="paragraph">La registrazione per il supporto non attiva il supporto NetApp per un file service provider cloud. Per supporto tecnico relativo a un file service di un cloud provider, alla sua infrastruttura o a una soluzione che utilizza il servizio, fare riferimento a "Guida in linea" nella documentazione BlueXP relativa a quel prodotto.</block>
+  <block id="71015deb6ac3269a57685acb827c23be" category="list-text">Vengono spostati solo i file di dimensioni pari o inferiori a 50 MB.</block>
+  <block id="b8b9c11e2f16c4f7686b11f7596d2847" category="list-text">La condivisione NFS di destinazione deve consentire l'accesso dall'indirizzo IP dell'istanza di classificazione BlueXP.</block>
+  <block id="fc33df80766251e78dbe2beb48ec9528" category="list-text">Verificare di aver installato i due pacchetti software prerequisiti (Docker Engine o Podman e Python 3).</block>
+  <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">Ottieni supporto per un file service del cloud provider</block>
+  <block id="f6185bb12f5e53c800be8cda7fbca65b" category="paragraph">Per supporto tecnico relativo a un file service di un cloud provider, alla sua infrastruttura o a una soluzione che utilizza il servizio, fare riferimento a "Guida in linea" nella documentazione BlueXP relativa a quel prodotto.</block>
+  <block id="3880ae5df9fdc4d0fc4a6d00a2239530" category="paragraph">Per ricevere supporto tecnico specifico di BlueXP e delle relative soluzioni e servizi storage, utilizza le opzioni di supporto descritte di seguito.</block>
 </blocks>

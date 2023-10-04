@@ -217,8 +217,9 @@ TIP: Non è possibile spostare i file che risiedono nei database.
 .Requisiti
 * Per spostare i file, è necessario disporre del ruolo account Admin (Amministratore account) o Workspace Admin (Amministratore area di lavoro).
 * I file di origine possono trovarsi nelle seguenti origini dati: On-premise ONTAP, Cloud Volumes ONTAP, Azure NetApp Files, condivisioni file e SharePoint Online.
-* Lo spostamento dei file richiede che la condivisione NFS consenta l'accesso dall'indirizzo IP dell'istanza di classificazione BlueXP.
 * È possibile spostare un massimo di 15 milioni di file alla volta.
+* Vengono spostati solo i file di dimensioni pari o inferiori a 50 MB.
+* La condivisione NFS di destinazione deve consentire l'accesso dall'indirizzo IP dell'istanza di classificazione BlueXP.
 
 
 .Fasi
