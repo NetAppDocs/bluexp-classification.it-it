@@ -329,6 +329,7 @@ Il *Report dati file non strutturati* include le seguenti informazioni sui file:
 * Ora di creazione
 * Ultima modifica
 * Ultimo accesso
+* Autorizzazioni aperte
 * Proprietario del file
 * Categoria
 * Informazioni personali

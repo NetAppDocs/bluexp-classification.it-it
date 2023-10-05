@@ -88,9 +88,11 @@ Le seguenti domande si riferiscono alle prestazioni di scansione della classific
 
 === Con quale frequenza la classificazione BlueXP esegue la scansione dei dati?
 
-I dati cambiano frequentemente, pertanto la classificazione BlueXP esegue una scansione continua dei dati senza alcun impatto sui dati. Anche se la scansione iniziale dei dati potrebbe richiedere più tempo, le scansioni successive eseguono solo la scansione delle modifiche incrementali, riducendo i tempi di scansione del sistema.
+Mentre la scansione iniziale dei dati potrebbe richiedere un po' di tempo, le scansioni successive esaminano solo le modifiche incrementali, riducendo i tempi di scansione del sistema. La classificazione BlueXP scansiona continuamente i dati in modo round-robin, sei repository alla volta, in modo che tutti i dati modificati vengano classificati molto rapidamente.
 
 link:concept-cloud-compliance.html#how-scans-work["Scopri come funzionano le scansioni"].
+
+Nota: La classificazione BlueXP analizza i database solo una volta al giorno, pertanto non viene eseguita la scansione continua dei database come avviene per altre origini dati.
 
 Le scansioni dei dati hanno un impatto trascurabile sui sistemi storage e sui dati. Tuttavia, se si è preoccupati anche di un impatto molto ridotto, è possibile configurare la classificazione BlueXP per eseguire scansioni "lente". link:task-reduce-scan-speed.html["Scopri come ridurre la velocità di scansione"].
 

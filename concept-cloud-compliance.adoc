@@ -211,7 +211,7 @@ La classificazione BlueXP si connette ai dati come qualsiasi altro client montan
 
 image:diagram_cloud_compliance_scan.png["Diagramma che mostra un'istanza di BlueXP e un'istanza di classificazione BlueXP in esecuzione nel provider cloud. L'istanza di classificazione BlueXP si connette a volumi NFS e CIFS, bucket S3, account OneDrive e database per eseguirne la scansione."]
 
-Dopo la scansione iniziale, la classificazione BlueXP esegue una scansione continua dei dati per rilevare le modifiche incrementali (per questo motivo è importante mantenere l'istanza in esecuzione).
+Dopo la scansione iniziale, la classificazione BlueXP analizza continuamente i dati in modo round-robin per rilevare le modifiche incrementali (è per questo che è importante mantenere l'istanza in esecuzione).
 
 È possibile attivare e disattivare le scansioni a livello di volume, a livello di bucket, a livello di schema del database, a livello di utente OneDrive e a livello di sito SharePoint.
 

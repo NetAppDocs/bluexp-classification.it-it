@@ -96,7 +96,7 @@ La pagina del portafoglio digitale BlueXP di BlueXP consente di gestire le licen
 
 Dopo aver acquistato la licenza di classificazione BlueXP (Data Sense), si attiva la licenza in BlueXP inserendo il numero seriale di classificazione BlueXP e l'account NSS o caricando il file di licenza NLF. Se si prevede di utilizzare questo metodo, la procedura riportata di seguito mostra come ottenere il file di licenza NLF.
 
-Se è stata implementata la classificazione BlueXP su un host in un sito on-premise che non dispone di accesso a Internet, è necessario ottenere il file di licenza da un sistema connesso a Internet. L'attivazione della licenza utilizzando il numero seriale e l'account NSS non è disponibile per le installazioni in siti bui.
+Se hai implementato la classificazione BlueXP su un host in un sito on-premise che non dispone di accesso a Internet, significa che hai implementato il connettore BlueXP https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html#private-mode["modalità privata"^], è necessario ottenere il file di licenza da un sistema connesso a internet. L'attivazione della licenza utilizzando il numero seriale e l'account NSS non è disponibile per le installazioni in siti bui.
 
 .Prima di iniziare
 Prima di iniziare, è necessario disporre delle seguenti informazioni:
@@ -107,7 +107,7 @@ Individua questo numero nell'ordine di vendita o contatta l'account team per ott
 
 * ID account BlueXP
 +
-Puoi trovare il tuo ID account BlueXP selezionando l'elenco a discesa *account* nella parte superiore di BlueXP, quindi facendo clic su *Gestisci account* accanto all'account. L'ID account si trova nella scheda Panoramica.
+Puoi trovare il tuo ID account BlueXP selezionando l'elenco a discesa *account* nella parte superiore di BlueXP, quindi facendo clic su *Gestisci account* accanto all'account. L'ID account si trova nella scheda Panoramica. Per i siti in modalità privata senza accesso a Internet, utilizzare *account-DARKSITE1*.
 
 
 
