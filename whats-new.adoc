@@ -22,17 +22,11 @@ Scopri le novità della classificazione BlueXP.
 
 
 
-=== Supporto per installazioni in loco con RHEL versione 9
+=== Supporto per le installazioni on-premise della classificazione BlueXP su RHEL versione 9
 
-Le versioni 8 e 9 di Red Hat Enterprise Linux non supportano il motore Docker, necessario per l'installazione della classificazione BlueXP. Ora supportiamo l'installazione su RHEL 9,0, 9,1 e 9,2 utilizzando Podman versione 4 o successiva come infrastruttura container. Se il tuo ambiente richiede l'utilizzo delle versioni più recenti di RHEL, ora puoi installare la classificazione BlueXP (versione 1,26 o superiore) quando utilizzi Podman.
+Le versioni 8 e 9 di Red Hat Enterprise Linux non supportano il motore Docker, necessario per l'installazione della classificazione BlueXP. Ora supportiamo l'installazione della classificazione BlueXP su RHEL 9,0, 9,1 e 9,2 utilizzando Podman versione 4 o superiore come infrastruttura container. Se il tuo ambiente richiede l'utilizzo delle versioni più recenti di RHEL, ora puoi installare la classificazione BlueXP (versione 1,26 o superiore) quando utilizzi Podman.
 
-Al momento non supportiamo installazioni in siti oscuri o ambienti di scansione distribuiti (utilizzando nodi scanner master e remoti).
-
-
-
-=== I risultati della pagina di analisi ora visualizzano le dimensioni totali oltre al numero totale di elementi
-
-I risultati filtrati nella pagina di analisi ora mostrano la dimensione totale degli elementi oltre al numero totale di file. Ciò può essere utile quando si spostano file, si eliminano file e altro ancora.
+Al momento non supportiamo installazioni in siti oscuri o ambienti di scansione distribuiti (utilizzando nodi di scansione master e remoti) quando si utilizza RHEL 9.x.
 
 
 
