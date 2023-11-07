@@ -3479,4 +3479,8 @@ Assicurarsi che la porta 8080 sia aperta in modo da visualizzare l'avanzamento d
   <block id="74246010013353726bd9ff99866fa7d4" category="section-title">Supporto per le installazioni on-premise della classificazione BlueXP su RHEL versione 9</block>
   <block id="efbacc885d0798efa8b4d06d61cb578e" category="paragraph">Le versioni 8 e 9 di Red Hat Enterprise Linux non supportano il motore Docker, necessario per l'installazione della classificazione BlueXP. Ora supportiamo l'installazione della classificazione BlueXP su RHEL 9,0, 9,1 e 9,2 utilizzando Podman versione 4 o superiore come infrastruttura container. Se il tuo ambiente richiede l'utilizzo delle versioni più recenti di RHEL, ora puoi installare la classificazione BlueXP (versione 1,26 o superiore) quando utilizzi Podman.</block>
   <block id="efe06748da92e661d7225cc7ec109b32" category="paragraph">Al momento non supportiamo installazioni in siti oscuri o ambienti di scansione distribuiti (utilizzando nodi di scansione master e remoti) quando si utilizza RHEL 9.x.</block>
+  <block id="abff2804f60c6da51fe02e78167abad1" category="section-title">6 novembre (versione 1.26.3)</block>
+  <block id="e25bae53fb1951841531279fa78ee63a" category="section-title">In questa versione sono stati risolti i seguenti problemi</block>
+  <block id="299ea648aaf9c598beed6ef12a6ef415" category="list-text">È stata risolta un'incoerenza quando si presenta il numero di file sottoposti a scansione dal sistema nei dashboard.</block>
+  <block id="c6e9efb915fb85dd556a71294988c99a" category="list-text">Miglioramento del comportamento di scansione mediante la gestione e la creazione di report su file e directory con caratteri speciali nel nome e nei metadati.</block>
 </blocks>

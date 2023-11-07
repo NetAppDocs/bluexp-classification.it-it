@@ -18,6 +18,18 @@ Scopri le novità della classificazione BlueXP.
 
 
 
+== 6 novembre (versione 1.26.3)
+
+
+
+=== In questa versione sono stati risolti i seguenti problemi
+
+* È stata risolta un'incoerenza quando si presenta il numero di file sottoposti a scansione dal sistema nei dashboard.
+* Miglioramento del comportamento di scansione mediante la gestione e la creazione di report su file e directory con caratteri speciali nel nome e nei metadati.
+
+
+
+
 == 4 ottobre (versione 1,26)
 
 
