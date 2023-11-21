@@ -223,9 +223,13 @@ Assicurarsi che tutte le porte richieste siano aperte per la comunicazione tra i
 | Tipo di connessione | Porte | Descrizione 
 
 
-| Connettore <> classificazione BlueXP | 8080 (TCP), 6000 (TCP), 443 (TCP) E 80 | Il gruppo di sicurezza per il connettore deve consentire il traffico in entrata e in uscita sulle porte 6000 e 443 da e verso l'istanza di classificazione BlueXP.
+| Connettore <> classificazione BlueXP | 8080 (TCP), 6000 (TCP), 443 (TCP) E 80  a| 
+Il gruppo di sicurezza per il connettore deve consentire il traffico in entrata e in uscita sulle porte 6000 e 443 da e verso l'istanza di classificazione BlueXP.
 
-Assicurarsi che la porta 8080 sia aperta in modo da visualizzare l'avanzamento dell'installazione in BlueXP. 
+* È necessaria la porta 6000 per fare in modo che la licenza BYOL di classificazione BlueXP funzioni in un sito oscuro.
+* La porta 8080 dovrebbe essere aperta in modo da poter vedere l'avanzamento dell'installazione in BlueXP.
+
+
 
 
 | Connettore <> ONTAP cluster (NAS) | 443 (TCP)  a| 
