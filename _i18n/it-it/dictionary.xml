@@ -3370,7 +3370,6 @@
   <block id="d80e88cc1f3abb9239aa87a019057d8b" category="inline-link">Scopri di più sulle API di classificazione BlueXP</block>
   <block id="67a7c5f0403c8f58fe4ae70a6f761ae5" category="paragraph"><block ref="6c685f385b4749ef1d91fb7e0577272e" category="inline-link-rx"></block>.</block>
   <block id="90ca6bd84833f8a6659f7ea02a7649ba" category="list-text">È possibile aggiungere una condivisione DFS (Distributed file System) come normale condivisione CIFS. Tuttavia, poiché la classificazione BlueXP non è consapevole che la condivisione è costruita su più server/volumi combinati come una singola CIFS share, potresti ricevere errori di permessi o connettività sulla condivisione quando il messaggio si applica davvero solo a una delle cartelle/condivisioni che si trova su un server/volume diverso.</block>
-  <block id="d9c89ee38491bdb679829f426faea2ef" category="list-text">Come file .CSV sul computer locale, che può includere fino a 5.000 righe di dati.</block>
   <block id="8909a1f3cdd58859743896107e545477" category="list-text">Come file .JSON esportato in una condivisione NFS, che può includere fino a 100.000 righe di dati. Se sono presenti più di 100.000 righe di dati, vengono creati file .JSON aggiuntivi.</block>
   <block id="090f87d7b81c809aa6a6d81dcabfeeb8" category="paragraph">Se la classificazione BlueXP sta scansionando file (dati non strutturati), directory (cartelle e condivisioni di file) e database (dati strutturati), possono essere scaricati fino a tre file di report.</block>
   <block id="abfab9fcbcf9c983c6fcb0efced8edc6" category="cell">8080 (TCP), 6000 (TCP), 443 (TCP) E 80</block>
@@ -3463,4 +3462,5 @@
   <block id="1f883a560be0732076f2237a57c5195f" category="list-text">La porta 8080 dovrebbe essere aperta in modo da poter vedere l'avanzamento dell'installazione in BlueXP.</block>
   <block id="3834cda66b40129353aaded5673c3634" category="list-text">Red Hat Enterprise Linux versione 7,8 e 7,9</block>
   <block id="05b80f267d8929f809fe86d91268bc94" category="list-text">CentOS versione 7,8 e 7,9</block>
+  <block id="7d389403e7b93ff8a467567b0e19cd8a" category="list-text">Come file .CSV sul computer locale, che può includere fino a 10.000 righe di dati.</block>
 </blocks>

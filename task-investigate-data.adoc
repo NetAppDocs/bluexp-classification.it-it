@@ -283,7 +283,7 @@ Il Data Investigation Report (Report analisi dati) è un download del contenuto 
 
 È possibile salvare il rapporto in due formati diversi:
 
-* Come file .CSV sul computer locale, che può includere fino a 5.000 righe di dati.
+* Come file .CSV sul computer locale, che può includere fino a 10.000 righe di dati.
 * Come file .JSON esportato in una condivisione NFS, che può includere fino a 100.000 righe di dati. Se sono presenti più di 100.000 righe di dati, vengono creati file .JSON aggiuntivi.
 +
 Quando si esporta in una condivisione file, assicurarsi che la classificazione BlueXP disponga delle autorizzazioni corrette per l'accesso all'esportazione.
