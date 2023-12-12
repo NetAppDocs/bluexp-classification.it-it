@@ -281,10 +281,16 @@ TIP: È possibile utilizzare il valore "hash del file" fornito in questa pagina 
 
 Il Data Investigation Report (Report analisi dati) è un download del contenuto filtrato della pagina Data Investigation (analisi dati).
 
-È possibile salvare il rapporto in due formati diversi:
+Il rapporto è disponibile in due formati diversi:
 
-* Come file .CSV sul computer locale, che può includere fino a 10.000 righe di dati.
-* Come file .JSON esportato in una condivisione NFS, che può includere fino a 100.000 righe di dati. Se sono presenti più di 100.000 righe di dati, vengono creati file .JSON aggiuntivi.
+* Come file .CSV che è possibile salvare sul computer locale.
++
+Questo rapporto può includere un massimo di 10.000 righe di dati.
+
+* Come file .JSON esportato in una condivisione NFS.
++
+Se sono presenti più di 250.000 righe di dati, vengono creati file .JSON aggiuntivi.
+
 +
 Quando si esporta in una condivisione file, assicurarsi che la classificazione BlueXP disponga delle autorizzazioni corrette per l'accesso all'esportazione.
 
@@ -322,18 +328,19 @@ Il *Report dati file non strutturati* include le seguenti informazioni sui file:
 * Tipo di ubicazione
 * Nome dell'ambiente di lavoro
 * Repository di storage (ad esempio, un volume, un bucket, condivisioni)
-* Tipo di ambiente di lavoro
+* Tipo di repository
 * Percorso del file
 * Tipo di file
-* Dimensione del file
+* Dimensioni file (in MB)
 * Ora di creazione
 * Ultima modifica
 * Ultimo accesso
-* Autorizzazioni aperte
 * Proprietario del file
 * Categoria
 * Informazioni personali
 * Informazioni personali sensibili
+* Autorizzazioni aperte
+* Errore analisi scansione
 * Data di rilevamento dell'eliminazione
 +
 Una data di rilevamento dell'eliminazione identifica la data in cui il file è stato cancellato o spostato. In questo modo è possibile identificare quando sono stati spostati file sensibili. I file cancellati non fanno parte del numero di file visualizzato nella dashboard o nella pagina di analisi. I file vengono visualizzati solo nei report CSV.
@@ -342,11 +349,11 @@ Una data di rilevamento dell'eliminazione identifica la data in cui il file è s
 
 Il *Report dati directory non strutturate* include le seguenti informazioni relative alle cartelle e alle condivisioni di file:
 
-* Nome dell'ambiente di lavoro
-* Repository di storage (ad esempio, una cartella o condivisioni di file)
 * Tipo di ambiente di lavoro
-* Percorso del file (nome della directory)
-* Proprietario del file
+* Nome dell'ambiente di lavoro
+* Nome directory
+* Repository di storage (ad esempio, una cartella o condivisioni di file)
+* Proprietario directory
 * Ora di creazione
 * Tempo scoperto
 * Ultima modifica
