@@ -18,7 +18,7 @@ Quando gli ID di gruppo (GID) sono allegati a file o cartelle nelle condivisioni
 
 Dopo aver apportato questa modifica e aver eseguito nuovamente la classificazione BlueXP per i file e le cartelle, tutti i file e le cartelle con questi ID di gruppo allegati mostreranno questa autorizzazione nella pagina Dettagli analisi e verranno visualizzati anche nei report in cui vengono visualizzate le autorizzazioni dei file.
 
-Devi accedere al sistema di classificazione BlueXP per poter modificare un file di configurazione ed eseguire uno script per utilizzare questa funzionalità.
+Per attivare questa funzionalità, devi accedere al sistema di classificazione BlueXP in modo da poter modificare un file di configurazione ed eseguire uno script.
 
 
 
