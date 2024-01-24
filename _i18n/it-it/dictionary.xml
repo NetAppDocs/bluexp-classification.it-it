@@ -1032,7 +1032,6 @@
   <block id="5cbcaeca0f98bea3f5714fbeb859b1f8" category="cell"><block ref="a39d05df186d1deb03343bf4f79e6b17" prefix="" category="inline-code"></block></block>
   <block id="2e1a4e3f55001820560b237188c70bc3" category="cell">/var/lib/docker</block>
   <block id="651ffe70d1da174ca6955ceb139ab71c" category="cell"><block ref="20218561600e990c68a725b6b98ae569" prefix="" category="inline-code"></block></block>
-  <block id="361e697d946a0a8473f2bda1979090c3" category="cell">/user/lib/systemd/system</block>
   <block id="d5c832490c0ab9dcb105acd9ee7b4709" category="list-text">Quando si implementa un'istanza di calcolo nel cloud per l'installazione della classificazione BlueXP, si consiglia di utilizzare un sistema che soddisfi i requisiti di sistema "grandi" indicati in precedenza:</block>
   <block id="e6414c92b8fa46238f4135e4d3e45674" category="inline-link-macro">Vedere altri tipi di istanze AWS</block>
   <block id="07c511fd0ad633d44d9e71cb0c9eaba9" category="list-text">*Tipo di istanza AWS EC2*: Si consiglia "m6i.4xlarge". <block ref="2fad631c28a07a1344ecdbaabb5084bf" category="inline-link-macro-rx"></block>.</block>
@@ -3001,34 +3000,6 @@
   <block id="997bc9ee8834fdaee5b662f9a2bd743f" category="sidebar">Disinstallare la classificazione BlueXP</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">Riferimento</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conoscenza e supporto</block>
-  <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">Novità</block>
-  <block id="daf1be80b90f9f38eccbf069ac08640c" category="sidebar">Installare la classificazione BlueXP su un host Linux con Internet</block>
-  <block id="c3e36333a4a6733ccd92dafc9d8c17b5" category="sidebar">Installare la classificazione BlueXP on-premise senza Internet</block>
-  <block id="1692b32d79b99cfb5a1277f8c49a23af" category="sidebar">Eseguire la scansione degli ambienti di lavoro</block>
-  <block id="7a1ecd84a5a121cd176d1d7c8945c20b" category="sidebar">Volumi Cloud Volumes ONTAP</block>
-  <block id="8d097e38d6920ece5917d57da5699e5c" category="sidebar">Volumi ONTAP on-premise</block>
-  <block id="c7596ffa8d20a8a14d1f631c94185f72" category="sidebar">Volumi Azure NetApp Files</block>
-  <block id="fd2fd9101d9dde8ab7090da05f8117ff" category="sidebar">Amazon FSX per ONTAP Volumes</block>
-  <block id="0dcbed0ed443cc2be8b28a4bd6ea0b84" category="sidebar">Eseguire la scansione di altre origini dati</block>
-  <block id="1dc03133d25c1924f8604133a6fa7f0a" category="sidebar">Bucket S3 generici</block>
-  <block id="3305adbdafef990b45e1b0ded7f5a486" category="sidebar">Visualizza i dettagli sui tuoi dati</block>
-  <block id="f72e4f10556fdc1e84c715407cbda16b" category="sidebar">Visualizzare i file che contengono informazioni private</block>
-  <block id="53aba5c7ba7952b6d58e9dfb83a4516e" category="sidebar">Visualizzare i file duplicati nello storage</block>
-  <block id="fe146c842cc64934263018d6ec158b7e" category="sidebar">Filtrare i dati per visualizzare file specifici</block>
-  <block id="ca60961cf2d876d600daca4a1ad60001" category="sidebar">Crea policy per visualizzare le tue ricerche principali</block>
-  <block id="514f916b25444f3ec0ab113c2706f83a" category="sidebar">Applicare tag e proprietari ai file che richiedono attenzione</block>
-  <block id="7644f60fe7823935bde3cbe9f9e82bf8" category="sidebar">Categorizzare i dati utilizzando le etichette AIP</block>
-  <block id="b33a306cb7abd3790ba4311eb102a667" category="sidebar">Aggiungi i tuoi dati personali personalizzati</block>
-  <block id="503c49a3ccf62894992dc5b2f108ca21" category="sidebar">Copia dei file di origine</block>
-  <block id="2987f20ce906ae32ec7e3e192413377f" category="sidebar">Spostare i file di origine</block>
-  <block id="865eee83e350aaa1f9bf0c9f0c4adef0" category="sidebar">Eliminare i file di origine</block>
-  <block id="40af1406afc061038f5851961a636714" category="sidebar">Crea avvisi e-mail quando vengono trovati dati non conformi</block>
-  <block id="9293f14feca10eb970a136a34ecc9d8c" category="sidebar">Rispondere a una richiesta di accesso soggetto a dati</block>
-  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blog e community</block>
-  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Community NetApp</block>
-  <block id="c0b7cbffdfa6fa18059367f2045ac22c" category="sidebar">Casi di utilizzo della classificazione BlueXP</block>
-  <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">Blog BlueXP</block>
-  <block id="f93e4e0ba0745745e36a3b67b14a8a5b" category="sidebar">Webinar BlueXP</block>
   <block id="c1560b054493db03cae97adece148673" category="list-text"><block ref="c1560b054493db03cae97adece148673" category="inline-link-rx"></block></block>
   <block id="72a0c1f7935cbaab164295a8fac378d8" category="list-text"><block ref="72a0c1f7935cbaab164295a8fac378d8" category="inline-link-rx"></block></block>
   <block id="9d7d457b861dcdf8b4b7f28f3a120c36" category="list-text"><block ref="9d7d457b861dcdf8b4b7f28f3a120c36" category="inline-link-rx"></block></block>
@@ -3320,7 +3291,6 @@
   <block id="85b9386ed443776127e099931d73448a" category="list-text">Quando richiesto, selezionare *continua* per essere reindirizzato a una pagina di accesso Microsoft.</block>
   <block id="c77d5103bf67167dd667762d984e1e14" category="section-title">L'API di classificazione BlueXP è ora disponibile</block>
   <block id="95eaa41c2e7025ac80bcfafd1710ff57" category="paragraph">L'API di classificazione BlueXP ti consente di eseguire azioni, creare query ed esportare informazioni sui dati che stai analizzando. La documentazione interattiva è disponibile utilizzando Swagger. La documentazione è suddivisa in più categorie, tra cui analisi, conformità, governance e configurazione. Ogni categoria è un riferimento alle schede nell'interfaccia utente di classificazione BlueXP.</block>
-  <block id="ca37e37afe1d388be7dabea9f8f09ba3" category="sidebar">Video sulla classificazione BlueXP</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
   <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
   <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
@@ -3481,4 +3451,5 @@
   <block id="3fa1e4aec3c930accd20ae2a1e354a79" category="paragraph">BlueXP supporta le funzionalità API REST per i propri servizi. Se BlueXP non è il punto di gestione preferito, i servizi come la classificazione BlueXP possono essere utilizzati anche tramite un'API REST. Ogni azione dell'utente dispone di un'API REST che può essere integrata con sistemi di terze parti. Vedere <block ref="6cf6f695e0ddd2cc536783d6e0951a10" category="inline-link-macro-rx"></block> per ulteriori informazioni.</block>
   <block id="da4874b0888a9dafc160c24905184d23" category="section-title">Vengono sottoposte a scansione copie snapshot che risiedono su volumi ONTAP?</block>
   <block id="a35301b044a7bc259b579edebe42bff3" category="paragraph">No La classificazione BlueXP non scansiona gli snapshot perché il contenuto è identico al contenuto del volume.</block>
+  <block id="dce2a9642217836d54f614dfd625b753" category="cell">/usr/lib/systemd/system</block>
 </blocks>
