@@ -94,4 +94,5 @@ https://youtu.be/Ogoufel1q6c["Guarda questo video"^] Per una rapida dimostrazion
 ** Python versione 3,6 o superiore. https://www.python.org/downloads/["Visualizzare le istruzioni di installazione"^].
 
 
+* *Considerazioni NTP*: NetApp consiglia di configurare il sistema di classificazione BlueXP per utilizzare un servizio NTP (Network Time Protocol). L'ora deve essere sincronizzata tra il sistema di classificazione BlueXP e il sistema del connettore BlueXP.
 

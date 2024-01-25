@@ -18,34 +18,7 @@ Quando gli ID di gruppo (GID) sono allegati a file o cartelle nelle condivisioni
 
 Dopo aver apportato questa modifica e aver eseguito nuovamente la classificazione BlueXP per i file e le cartelle, tutti i file e le cartelle con questi ID di gruppo allegati mostreranno questa autorizzazione nella pagina Dettagli analisi e verranno visualizzati anche nei report in cui vengono visualizzate le autorizzazioni dei file.
 
-Per attivare questa funzionalità, devi accedere al sistema di classificazione BlueXP in modo da poter modificare un file di configurazione ed eseguire uno script.
-
-
-
-== Accedi al sistema di classificazione BlueXP
-
-Quando la classificazione BlueXP è installata su una macchina Linux on-premise o su una macchina Linux implementata nel cloud, puoi accedere direttamente al file di configurazione e allo script.
-
-Quando la classificazione BlueXP viene implementata nel cloud, è necessario eseguire l'SSH nell'istanza di classificazione BlueXP. Si accede al sistema inserendo l'utente e la password oppure utilizzando la chiave SSH fornita durante l'installazione di BlueXP Connector. Il comando SSH è:
-
- ssh -i <path_to_the_ssh_key> <machine_user>@<datasense_ip>
-* <path_to_the_ssh_key> = posizione delle chiavi di autenticazione ssh
-* <machine_user>:
-+
-** Per AWS: Utilizzare <ec2-user>
-** Per Azure: Utilizzare l'utente creato per l'istanza di BlueXP
-** Per GCP: Utilizzare l'utente creato per l'istanza di BlueXP
-
-
-* <datasense_ip> = indirizzo IP dell'istanza della macchina virtuale
-
-
-Nota: Per accedere al sistema nel cloud, è necessario modificare le regole in entrata del gruppo di sicurezza. Per ulteriori informazioni, vedere:
-
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Regole del gruppo di sicurezza in AWS"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Regole del gruppo di sicurezza in Azure"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-gcp.html["Regole del firewall in Google Cloud"^]
-
+Per attivare questa funzionalità, devi accedere al sistema di classificazione BlueXP in modo da poter modificare un file di configurazione ed eseguire uno script. Scopri come link:reference-log-in-to-instance.html["Accedi al sistema di classificazione BlueXP"] A seconda che il software sia stato installato manualmente su una macchina Linux o se l'istanza è stata distribuita nel cloud.
 
 
 

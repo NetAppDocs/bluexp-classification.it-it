@@ -53,3 +53,5 @@ image:screenshot_compliance_uninstall.png["Schermata del pulsante per disinstall
 cleanup.sh
 ----
 
+
+Scopri come link:reference-log-in-to-instance.html["Accedere al computer host di classificazione BlueXP"].
