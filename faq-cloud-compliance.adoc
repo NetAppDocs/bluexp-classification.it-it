@@ -178,25 +178,17 @@ link:task-managing-data-fusion.html["Scopri di più"^].
 
 
 
-=== È possibile istruire il servizio per escludere la scansione dei dati in determinate directory?
+=== Cosa succede se il tiering dei dati è attivato sui volumi ONTAP?
 
-Sì. Se si desidera che la classificazione BlueXP escluda la scansione dei dati che risiedono in determinate directory di origine dati, è possibile fornire tale elenco al motore di classificazione. Dopo aver applicato questa modifica, la classificazione BlueXP esclude la scansione dei dati nelle directory specificate.
+Quando la classificazione BlueXP esegue la scansione di volumi con dati cold a livelli per lo storage a oggetti, esegue la scansione di tutti i dati presenti sui dischi locali e sui dati cold a livelli per lo storage a oggetti. Ciò vale anche per i prodotti non NetApp che implementano il tiering.
 
-link:task-exclude-scan-paths.html["Scopri di più"^].
+La scansione non scalda i dati a freddo - rimane fredda e rimane nello storage a oggetti.
 
 
 
 === Vengono sottoposte a scansione copie snapshot che risiedono su volumi ONTAP?
 
 No La classificazione BlueXP non scansiona gli snapshot perché il contenuto è identico al contenuto del volume.
-
-
-
-=== Cosa succede se il tiering dei dati è attivato sui volumi ONTAP?
-
-Quando la classificazione BlueXP esegue la scansione di volumi con dati cold a livelli per lo storage a oggetti, esegue la scansione di tutti i dati presenti sui dischi locali e sui dati cold a livelli per lo storage a oggetti. Ciò vale anche per i prodotti non NetApp che implementano il tiering.
-
-La scansione non scalda i dati a freddo - rimane fredda e rimane nello storage a oggetti.
 
 
 

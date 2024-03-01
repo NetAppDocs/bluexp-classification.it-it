@@ -18,26 +18,6 @@ Scopri le novità della classificazione BlueXP.
 
 
 
-== 4 marzo 2024 (versione 1,29)
-
-
-
-=== Ora è possibile escludere la scansione dei dati che risiedono in determinate directory di origine dati
-
-Se si desidera che la classificazione BlueXP escluda la scansione dei dati che risiedono in determinate directory di origine dati, è possibile aggiungere questi nomi di directory a un file di configurazione elaborato dalla classificazione BlueXP. Questa funzione consente di evitare la scansione di directory non necessarie o che potrebbero generare risultati falsi positivi per i dati personali.
-
-https://docs.netapp.com/us-en/bluexp-classification/task-exclude-scan-paths.html["Scopri di più"].
-
-
-
-=== Il supporto di istanze di grandi dimensioni è ora qualificato
-
-Se hai bisogno della classificazione BlueXP per analizzare più di 250 milioni di file, puoi utilizzare un'istanza Extra Large nell'implementazione del cloud o nell'installazione on-premise. Questo tipo di sistema è in grado di eseguire la scansione di un massimo di 500 milioni di file.
-
-https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#using-a-smaller-instance-type["Scopri di più"].
-
-
-
 == 10 gennaio 2024 (versione 1,27)
 
 
@@ -54,7 +34,7 @@ Ora puoi configurare gli ID di gruppo in NFS in modo che siano considerati "aper
 
 
 
-== 14 dicembre 2023 (versione 1.26.6)
+== Dicembre 2023 (versione 1.26.6)
 
 Questa versione includeva alcuni miglioramenti minori.
 
@@ -328,3 +308,25 @@ https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#f
 === La classificazione BlueXP può identificare il numero individuale giapponese
 
 La classificazione BlueXP è in grado di identificare e classificare i file che contengono il numero individuale giapponese (noto anche come My Number). Questo include sia il numero personale che il numero personale aziendale. https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-personal-data["Scopri tutti i tipi di dati personali che la classificazione BlueXP può identificare nei tuoi dati"].
+
+
+
+== c3828ad11edf9a8e2a0d7bd8910b2ad3
+
+
+
+=== 329171a5c817ab7ae03a1497aa6d59fa
+
+500b30285e1a741b658bc533a0a125a1
+
+* bacf3e82e48abd0e39c6a162b4aa7191
++
+** c73eb1c0478b9ea7f0699ac7b64d4214
+** 8e3833fdafa0cd3a63d1fae40cbd74e9
+
+
+* 36cbb51c271d3c68a01a8599c0fbd2b8
+* da8fda88af08dfa86e6c1895e629a7a5
+
+
+70ef9f0f001698901fc7782c85efbd22
