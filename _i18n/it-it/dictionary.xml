@@ -3509,6 +3509,68 @@ NOTA: La versione di dicembre 2023 (versione 1.26.6) ha temporaneamente rimosso 
   <block id="ca37e37afe1d388be7dabea9f8f09ba3" category="sidebar">Video sulla classificazione BlueXP</block>
   <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">Blog BlueXP</block>
   <block id="f93e4e0ba0745745e36a3b67b14a8a5b" category="sidebar">Webinar BlueXP</block>
-  <block id="c0aa452130abaadece0c71d90274bb8e" category="section-title">Dicembre 2023 (versione 1.26.6)</block>
-  <block id="ca60961cf2d876d600daca4a1ad60001" category="sidebar">Crea policy per visualizzare le tue ricerche principali</block>
+  <block id="8180cc16c2c6f5d6b650c76944d52252" category="summary">Se si desidera che la classificazione BlueXP escluda la scansione dei dati che risiedono in determinate directory di origine dati, è possibile aggiungere questi nomi di directory a un file di configurazione. Dopo aver applicato questa modifica, il motore di classificazione BlueXP escluderà la scansione dei dati in tali directory.</block>
+  <block id="f6af5e23cd22bc5f1b7833ad602a5c38" category="doc">Escludere directory specifiche dalle scansioni di classificazione BlueXP</block>
+  <block id="bea0fd574e5a5abde1c8262dbd6e2370" category="paragraph">La classificazione BlueXP è configurata per impostazione predefinita in modo da escludere la scansione dei dati snapshot del volume perché tale contenuto è identico al contenuto del volume.</block>
+  <block id="efebf801e240ae82ed1c434305548b38" category="paragraph">Questa funzionalità è disponibile con la classificazione BlueXP versione 1,29 e successive (a partire da marzo 2024).</block>
+  <block id="0abc7ce542155915b82311c6450bea62" category="paragraph">L'esclusione di directory specifiche dalle scansioni di classificazione BlueXP è supportata per le condivisioni NFS e CIFS nelle seguenti origini dati:</block>
+  <block id="49fe103d0a39e5feeddf772106a8122e" category="list-text">Condivisioni di file generiche</block>
+  <block id="cf2e31e61b9c0d3547f54fc506e4b383" category="section-title">Definire le directory da escludere dalla scansione</block>
+  <block id="78e986fa820c103dbcc45ed24bd2f383" category="paragraph">Prima di poter escludere le directory dalla scansione della classificazione, è necessario accedere al sistema di classificazione BlueXP in modo da poter modificare un file di configurazione ed eseguire uno script. Scopri come <block ref="fee7c33f779340beee212bd52ff12fd0" category="inline-link-macro-rx"></block> A seconda che il software sia stato installato manualmente su una macchina Linux o se l'istanza è stata distribuita nel cloud.</block>
+  <block id="bc6218284832af039faeb4c497e97a18" category="list-text">È possibile escludere un massimo di 50 percorsi di directory per sistema di classificazione BlueXP.</block>
+  <block id="66a7b6ae1af91171aaf4ecc7afd0b7d0" category="list-text">L'esclusione dei percorsi di directory può influire sui tempi di scansione.</block>
+  <block id="2e19c6096e07e117219780aee7f88c45" category="list-text">Nel sistema di classificazione BlueXP, vai a "/opt/netapp/config/custom_Configuration" e apri il file<block ref="4a7b66d4befa0d10315241d623b44528" prefix=" " category="inline-code"></block>.</block>
+  <block id="6e0803e8653caacbe1a019f32eda00bb" category="list-text">Nella sezione "data_providers", sotto la riga "exclude:", immettere i percorsi di directory da escludere. Ad esempio:</block>
+  <block id="5a0dfd405c0424a01f42cdb7e596d91c" category="list-text">Salvare le modifiche apportate al file.</block>
+  <block id="d661ab86a14960e8bcf6cdfa727299d1" category="paragraph">Questo comando commette le directory da escludere dalla scansione al motore di classificazione.</block>
+  <block id="21f183efd2dff70b58a99d83fc4f0ce7" category="paragraph">Tutte le scansioni successive dei dati escluderanno la scansione di quelle directory specificate.</block>
+  <block id="a495b8035b743d8b7dea2d9d0918de77" category="paragraph">È possibile aggiungere, modificare o eliminare elementi dall'elenco Escludi utilizzando gli stessi passaggi. L'elenco di esclusione rivisto verrà aggiornato dopo l'esecuzione dello script per confermare le modifiche.</block>
+  <block id="ff7c0fcd6a31e735a61c001f75426961" category="section-title">Esempi</block>
+  <block id="0440227581515c72236de5a764242d5c" category="paragraph-title">Configurazione 1:</block>
+  <block id="8c0f7ed2eea737d19ff087745c78f4ae" category="paragraph">Ogni cartella che contiene "folder1" in qualsiasi punto del nome sarà esclusa da tutte le origini dati.</block>
+  <block id="d6d0a43c6c69d1f785258f09797e96a2" category="list-title">Risultati previsti per i percorsi che saranno esclusi:</block>
+  <block id="0d30977fecaa90640135943496e20863" category="list-text">/CVO1/folder1</block>
+  <block id="8eb7d336cfc030df3afe89d5c289514d" category="list-text">/CVO1/folder1name</block>
+  <block id="9f2d1aa2824b0506dd1e80da3eaebd63" category="list-text">/CVO1/folder10</block>
+  <block id="15fb383027ef8fbe15d374b2efc33994" category="list-text">/CVO1/*folder1</block>
+  <block id="569806d3b5250620ff0f137d85df73c4" category="list-text">/CVO1/+folder1name</block>
+  <block id="d6f23bc30d0950bf24b440de3579ee1f" category="list-text">/CVO1/notfolder10</block>
+  <block id="7e3057c60782470bd7f0c765e4d614b9" category="list-text">/CVO22/folder1</block>
+  <block id="b18ea64bfd5aa27240193320e354bfeb" category="list-text">/CVO22/folder1name</block>
+  <block id="6fdf0a8d667f474107a56d7566260558" category="list-text">/CVO22/folder10</block>
+  <block id="7c9e22babb20d95a6ccacbc12c6e72db" category="list-title">Esempi di percorsi che non verranno esclusi:</block>
+  <block id="ec2b190a955f29720921cc8e6a67731d" category="list-text">/CVO1/*cartella</block>
+  <block id="0856e33548ceb338ab56d993d8281098" category="list-text">/CVO1/nome cartella</block>
+  <block id="14b8fac51101a115be8405f9d25adf0c" category="list-text">/CVO22/*folder20</block>
+  <block id="ce6c202454d84db0a51ee3b673259d76" category="paragraph-title">Configurazione 2:</block>
+  <block id="cd10b67d6b72e9152aca54085862e630" category="paragraph">Ogni cartella che contiene "*folder1" solo all'inizio del nome sarà esclusa.</block>
+  <block id="33114d8cd4f5562094ea8f71798fab0c" category="list-text">/CVO/*folder1</block>
+  <block id="07099186c5910fc2467ae1b4757b70f3" category="list-text">/CVO/*folder1name</block>
+  <block id="b96768cc207dc3d7940a06aed4482e49" category="list-text">/CVO/*folder10</block>
+  <block id="129853dc73d0231d5c812823e2480cba" category="list-text">/CVO/folder1</block>
+  <block id="c855f79110a45e3cf4ee4a2e9f07d01c" category="list-text">/CVO/folder1name</block>
+  <block id="5b6734714cb7b0ac3b7b695994d18616" category="list-text">/CVO/NOT*folder10</block>
+  <block id="d3b9102bc3b45248bbfec3ec65c81ffd" category="paragraph-title">Configurazione 3:</block>
+  <block id="c962d247f3d6cbb96db748ddbc8947d0" category="paragraph">Ogni cartella dell'origine dati "CVO22" che contiene "folder1" in qualsiasi punto del nome sarà esclusa.</block>
+  <block id="85aafa7a10a33b1a6b3edd3a981f3e09" category="section-title">Escape di caratteri speciali nei nomi delle cartelle</block>
+  <block id="555e1283533f2fd2406da22eb7c48543" category="paragraph">Se si dispone di un nome di cartella che contiene uno dei seguenti caratteri speciali e si desidera escludere la scansione dei dati contenuti in tale cartella, sarà necessario utilizzare la sequenza di escape \\ prima del nome della cartella.</block>
+  <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">Ad esempio:</block>
+  <block id="f6b342a69edf320338b3f72b95931768" category="paragraph">Percorso in origine:<block ref="4cd339ff39aca9d50d4472947a989dc1" prefix=" " category="inline-code"></block></block>
+  <block id="457d08b230361da11684b35702d5d114" category="paragraph">Sintassi nel file di esclusione:<block ref="656c9e12809cee621e2abce3032674d0" prefix=" " category="inline-code"></block></block>
+  <block id="3d704d8a7dea04055fa8e435fb3ba4a4" category="section-title">Consente di visualizzare l'elenco di esclusione corrente</block>
+  <block id="ce591271bee64e6f1ef9a4585a8a1142" category="paragraph">È possibile per i contenuti di<block ref="4a7b66d4befa0d10315241d623b44528" prefix=" " category="inline-code"></block> il file di configurazione deve essere diverso da quello che è stato effettivamente eseguito dopo l'esecuzione di<block ref="cb4115d511c44acda4b130ad06cd4322" prefix=" " category="inline-code"></block> script. Per visualizzare l'elenco corrente delle directory che hai escluso dalla scansione della classificazione BlueXP, esegui il seguente comando da "/opt/netapp/Datasense/tools/customer_Configuration/data_provider":</block>
+  <block id="75377d4edffa6c8df90ec35a6c2955ae" category="section-title">È possibile istruire il servizio per escludere la scansione dei dati in determinate directory?</block>
+  <block id="140079c23bf99666acb52cc8f9b453cb" category="paragraph">Sì. Se si desidera che la classificazione BlueXP escluda la scansione dei dati che risiedono in determinate directory di origine dati, è possibile fornire tale elenco al motore di classificazione. Dopo aver applicato questa modifica, la classificazione BlueXP esclude la scansione dei dati nelle directory specificate.</block>
+  <block id="cccdbfa223764cc2c6bbdf979c65ac39" category="paragraph"><block ref="8704cac21d49e5e6ff202bcfdaf0dcb0" category="inline-link-macro-rx"></block>.</block>
+  <block id="71dc9fd1ff423f10c9820171aaeabf3c" category="section-title">4 marzo 2024 (versione 1,29)</block>
+  <block id="2155776a968fa3c23d5147a57832435f" category="section-title">Ora è possibile escludere la scansione dei dati che risiedono in determinate directory di origine dati</block>
+  <block id="81e333e3a0fd82b01c14e8eb52437152" category="paragraph">Se si desidera che la classificazione BlueXP escluda la scansione dei dati che risiedono in determinate directory di origine dati, è possibile aggiungere questi nomi di directory a un file di configurazione elaborato dalla classificazione BlueXP. Questa funzione consente di evitare la scansione di directory non necessarie o che potrebbero generare risultati falsi positivi per i dati personali.</block>
+  <block id="1566e9c70755185a01fd5ae6296dca7b" category="paragraph"><block ref="2b616ef681b794b63b03f66a13723ff8" category="inline-link-rx"></block>.</block>
+  <block id="7cda33697c25a4972bdbfab414004cc2" category="section-title">14 dicembre 2023 (versione 1.26.6)</block>
+  <block id="a1663078538acf931413c4667ee4dc32" category="doc">Definire altri ID di gruppo come aperti all'organizzazione</block>
+  <block id="14262b7b54453519cfa73f76b2652616" category="section-title">Consente di visualizzare l'elenco corrente degli ID di gruppo</block>
+  <block id="30e7ed02f97ac1e08032a6f980412c4b" category="paragraph">È possibile per i contenuti di<block ref="4a7b66d4befa0d10315241d623b44528" prefix=" " category="inline-code"></block> il file di configurazione deve essere diverso da quello che è stato effettivamente eseguito dopo l'esecuzione di<block ref="cb4115d511c44acda4b130ad06cd4322" prefix=" " category="inline-code"></block> script. Per visualizzare l'elenco corrente degli ID di gruppo che hai aggiunto alla classificazione BlueXP, esegui il seguente comando da "/opt/netapp/Datasense/tools/customer_Configuration/data_provider":</block>
+  <block id="2238095e02de090e407d911c0f0f1e9f" category="sidebar">Creare criteri per visualizzare i risultati delle ricerche principali</block>
+  <block id="3e01ecaa94897c14b8a0c8eb76bf0c93" category="sidebar">Escludere alcune directory dalla scansione</block>
+  <block id="c7d804294d8fa0d1ba6bfc80ead25ca0" category="sidebar">Escludere le directory dalla scansione</block>
 </blocks>

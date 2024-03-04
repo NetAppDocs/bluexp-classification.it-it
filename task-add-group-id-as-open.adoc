@@ -4,7 +4,7 @@ permalink: task-add-group-id-as-open.html
 keywords: permissions, open to organization, file access 
 summary: 'Quando gli ID di gruppo sono allegati a file o cartelle nelle condivisioni di file NFS, definiscono le autorizzazioni per il file o la cartella, ad esempio se sono "aperti all"organizzazione". Se alcuni ID gruppo (GID) non sono inizialmente impostati con il livello di autorizzazione "Apri all"organizzazione", è possibile aggiungere tale autorizzazione al GID in modo che tutti i file e le cartelle che hanno quel GID allegato saranno considerati "aperti all"organizzazione".' 
 ---
-= 9ada56a36c98a6592b93aac97b759b65
+= Definire altri ID di gruppo come aperti all'organizzazione
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -27,13 +27,14 @@ Per attivare questa funzionalità, devi accedere al sistema di classificazione B
 È necessario disporre dei numeri ID gruppo (GID) prima di iniziare questa attività.
 
 .Fasi
-. 2783de23499f1b6912284079950af328
+. Nel sistema di classificazione BlueXP, vai a "/opt/netapp/config/custom_Configuration" e apri il file `data_provider.yaml`.
 . Nella riga "organization_group_ids: []" aggiungere gli ID del gruppo. Ad esempio:
 +
  organization_group_ids: [1014, 1015, 21, 2021, 1013, 2020, 1018, 1019]
 +
 Non modificare altro contenuto in questo file.
 
+. Salvare le modifiche apportate al file.
 . Andare a "/opt/netapp/Datasense/tools/customer_Configuration/data_provider" ed eseguire il seguente script:
 +
  update_data_providers_from_config_file.sh
@@ -42,10 +43,15 @@ Questo comando assegna le autorizzazioni ID gruppo modificate al motore di class
 
 
 
+.Risultato
 Tutte le successive scansioni dei dati identificheranno i file o le cartelle che hanno questi ID di gruppo allegati come "aperti all'organizzazione".
 
 È possibile modificare l'elenco degli ID di gruppo ed eliminare gli ID di gruppo aggiunti in passato utilizzando la stessa procedura. L'elenco rivisto degli ID di gruppo verrà aggiornato dopo l'esecuzione dello script per confermare le modifiche.
 
-d16189c10d4d8a98db7b1b99d883a1fd
+
+
+== Consente di visualizzare l'elenco corrente degli ID di gruppo
+
+È possibile per i contenuti di `data_provider.yaml` il file di configurazione deve essere diverso da quello che è stato effettivamente eseguito dopo l'esecuzione di `update_data_providers_from_config_file.sh` script. Per visualizzare l'elenco corrente degli ID di gruppo che hai aggiunto alla classificazione BlueXP, esegui il seguente comando da "/opt/netapp/Datasense/tools/customer_Configuration/data_provider":
 
  get_data_providers_configuration.sh
