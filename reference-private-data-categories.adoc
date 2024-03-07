@@ -23,7 +23,7 @@ TIP: Se hai bisogno della classificazione BlueXP per identificare altri tipi di 
 
 == Tipi di dati personali
 
-I dati personali contenuti nei file possono essere dati personali di carattere generale o identificativi nazionali. La terza colonna nella tabella seguente indica se la classificazione BlueXP utilizza link:task-controlling-private-data.html#viewing-files-that-contain-personal-data["convalida della prossimità"^] per convalidare i risultati per l'identificatore.
+I dati personali contenuti nei file possono essere dati personali di carattere generale o identificativi nazionali. La terza colonna nella tabella seguente indica se la classificazione BlueXP utilizza link:task-controlling-private-data.html#view-files-that-contain-personal-data["convalida della prossimità"^] per convalidare i risultati per l'identificatore.
 
 Le lingue in cui questi elementi possono essere riconosciuti sono identificate nella tabella.
 

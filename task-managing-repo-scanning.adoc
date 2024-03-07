@@ -20,7 +20,7 @@ Alcune delle cose che è possibile modificare sono se un repository viene sottop
 
 
 
-== Visualizzazione dello stato di scansione dei repository
+== Consente di visualizzare lo stato della scansione per i repository
 
 È possibile visualizzare i singoli repository che la classificazione BlueXP sta analizzando (volumi, bucket, ecc.) per ogni ambiente di lavoro e origine dati. Inoltre, puoi vedere quanti sono stati "mappati" e quanti sono stati "classificati". La classificazione richiede più tempo poiché l'identificazione ai completa viene eseguita su tutti i dati.
 
@@ -39,7 +39,7 @@ image:screenshot_compliance_repo_scan_settings.png["Una schermata che indica se 
 
 
 
-== Modifica del tipo di scansione per un repository
+== Modificare il tipo di scansione per un repository
 
 È possibile avviare o interrompere scansioni di sola mappatura, o scansioni di mappatura e classificazione, in un ambiente di lavoro in qualsiasi momento dalla pagina di configurazione. È inoltre possibile passare da scansioni di sola mappatura a scansioni di mappatura e classificazione e viceversa.
 
@@ -65,7 +65,7 @@ image:screenshot_compliance_repo_scan_all.png["Una schermata che mostra come con
 
 
 
-== Interruzione della scansione di un repository
+== Interrompere la ricerca di un repository
 
 È possibile interrompere la scansione di un repository (ad esempio, un volume) se non è più necessario monitorarlo per verificarne la conformità. Per eseguire questa operazione, disattivare la scansione. Quando la scansione viene disattivata, tutte le informazioni e l'indicizzazione relative a quel volume vengono rimosse dal sistema e la ricarica per la scansione dei dati viene interrotta.
 
@@ -82,7 +82,7 @@ image:screenshot_compliance_stop_repo_scanning.png["Una schermata che mostra com
 
 
 
-== Mettere in pausa e riprendere la scansione per un repository
+== Sospendere e riprendere la scansione di un repository
 
 È possibile "sospendere" la scansione in un repository se si desidera interrompere temporaneamente la scansione di determinati contenuti. La sospensione della scansione significa che la classificazione BlueXP non eseguirà scansioni future per modifiche o aggiunte al repository, ma che tutti i risultati correnti saranno ancora visualizzati nel sistema. La sospensione della scansione non interrompe il caricamento dei dati acquisiti perché i dati sono ancora presenti.
 
@@ -107,7 +107,7 @@ image:screenshot_compliance_repo_pause_resume2.png["Una schermata che mostra com
 
 
 
-== Eseguire nuovamente la scansione dei dati per un repository esistente
+== Eseguire nuovamente la scansione dei dati di un repository esistente
 
 La classificazione BlueXP esegue una scansione continua dei dati per rilevare modifiche incrementali nei repository aggiunti. Tuttavia, il sistema richiede tempo per eseguire la scansione di tutti gli ambienti e non esiste alcun metodo per controllare l'ordine dei repository sottoposti a scansione. Se è necessario eseguire una nuova scansione di un determinato repository immediatamente in modo che le modifiche vengano riflesse nel sistema, è possibile selezionare il repository e rieseguire la scansione. In questo modo è possibile assegnare priorità alla scansione di determinati dati prima di altri dati. Dopo l'azione di riscan (scansione), il repository selezionato torna a essere sottoposto a scansione secondo il normale programma di classificazione BlueXP.
 

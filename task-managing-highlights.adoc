@@ -4,7 +4,7 @@ permalink: task-managing-highlights.html
 keywords: compliance, privacy, filter data, delete files, move files, copy files, clone files, sync files, data sense, migration 
 summary: La classificazione BlueXP offre diversi modi per gestire i dati privati. Alcune funzionalità semplificano la preparazione alla migrazione dei dati, mentre altre funzionalità consentono di apportare modifiche ai dati. 
 ---
-= Gestione dei dati privati
+= Gestisci i tuoi dati privati
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -52,7 +52,7 @@ Ciò è utile per le situazioni in cui si esegue la migrazione dei dati da un si
 
 
 
-=== Copia dei file di origine in una condivisione NFS
+=== Copiare i file di origine in una condivisione NFS
 
 Puoi copiare i file di origine che la classificazione BlueXP sta scansionando su qualsiasi condivisione NFS. La condivisione NFS non deve essere integrata con la classificazione BlueXP, devi solo conoscere il nome della condivisione NFS dove tutti i file selezionati verranno copiati nel formato `<host_name>:/<share_path>`.
 
@@ -94,7 +94,7 @@ image:screenshot_compliance_copy_file.png["Una schermata che mostra la selezione
 
 
 
-=== Clonare i dati del volume in un nuovo volume
+=== Clonazione dei dati del volume in un nuovo volume
 
 È possibile clonare un volume ONTAP esistente sottoposto a scansione dalla classificazione BlueXP utilizzando la funzionalità NetApp _FlexClone_. Ciò consente di duplicare rapidamente il volume includendo solo i file selezionati. Ciò è utile se si stanno migrando i dati e si desidera escludere alcuni file dal volume originale o se si desidera creare una copia di un volume per il test.
 
@@ -147,7 +147,7 @@ Se inizialmente è stato selezionato *Map All Volumes* (mappatura di tutti i vol
 
 
 
-=== Copia e sincronizzazione dei file di origine su un sistema di destinazione
+=== Copiare e sincronizzare i file di origine in un sistema di destinazione
 
 È possibile copiare i file di origine che la classificazione BlueXP sta scansionando da qualsiasi origine dati non strutturata supportata in una directory in una posizione di destinazione specifica (https://docs.netapp.com/us-en/bluexp-copy-sync/reference-supported-relationships.html["Posizioni di destinazione supportate dalla copia e dalla sincronizzazione BlueXP"^]). Dopo la copia iniziale, tutti i dati modificati nei file vengono sincronizzati in base alla pianificazione configurata.
 
@@ -203,7 +203,7 @@ Si noti che alcune delle normali operazioni di copia e sincronizzazione di BlueX
 
 
 
-== Spostamento dei file di origine in una condivisione NFS
+== Spostare i file di origine in una condivisione NFS
 
 Puoi spostare i file di origine che la classificazione BlueXP sta scansionando in qualsiasi condivisione NFS. Non è necessario integrare la condivisione NFS con la classificazione BlueXP.
 
@@ -248,11 +248,11 @@ image:screenshot_compliance_move_file.png["Una schermata che mostra la selezione
 
 
 
-== Eliminazione dei file di origine
+== Eliminare i file di origine
 
 È possibile rimuovere in modo permanente i file di origine che sembrano insicuri o troppo rischiosi da lasciare nel sistema di storage o che sono stati identificati come duplicati. Questa azione è permanente e non è possibile annullare o ripristinare.
 
-È possibile eliminare i file manualmente dal riquadro analisi, oppure link:task-using-policies.html#deleting-source-files-automatically-using-policies["Utilizzo automatico dei criteri"^].
+È possibile eliminare i file manualmente dal riquadro analisi, oppure link:task-using-policies.html#delete-source-files-automatically-using-policies["Utilizzo automatico dei criteri"^].
 
 
 TIP: Non è possibile eliminare i file che risiedono nei database. Sono supportate tutte le altre origini dati.
@@ -266,7 +266,7 @@ L'eliminazione dei file richiede le seguenti autorizzazioni:
 
 
 
-=== Eliminazione manuale dei file di origine
+=== Eliminare manualmente i file di origine
 
 .Requisiti
 * Per eliminare i file, è necessario disporre del ruolo account Admin (Amministratore account) o Workspace Admin (Amministratore area di lavoro).

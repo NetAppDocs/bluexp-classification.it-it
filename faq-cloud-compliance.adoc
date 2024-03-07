@@ -178,17 +178,25 @@ link:task-managing-data-fusion.html["Scopri di più"^].
 
 
 
-=== Cosa succede se il tiering dei dati è attivato sui volumi ONTAP?
+=== È possibile istruire il servizio per escludere la scansione dei dati in determinate directory?
 
-Quando la classificazione BlueXP esegue la scansione di volumi con dati cold a livelli per lo storage a oggetti, esegue la scansione di tutti i dati presenti sui dischi locali e sui dati cold a livelli per lo storage a oggetti. Ciò vale anche per i prodotti non NetApp che implementano il tiering.
+Sì. Se si desidera che la classificazione BlueXP escluda la scansione dei dati che risiedono in determinate directory di origine dati, è possibile fornire tale elenco al motore di classificazione. Dopo aver applicato questa modifica, la classificazione BlueXP esclude la scansione dei dati nelle directory specificate.
 
-La scansione non scalda i dati a freddo - rimane fredda e rimane nello storage a oggetti.
+link:task-exclude-scan-paths.html["Scopri di più"^].
 
 
 
 === Vengono sottoposte a scansione copie snapshot che risiedono su volumi ONTAP?
 
 No La classificazione BlueXP non scansiona gli snapshot perché il contenuto è identico al contenuto del volume.
+
+
+
+=== Cosa succede se il tiering dei dati è attivato sui volumi ONTAP?
+
+Quando la classificazione BlueXP esegue la scansione di volumi con dati cold a livelli per lo storage a oggetti, esegue la scansione di tutti i dati presenti sui dischi locali e sui dati cold a livelli per lo storage a oggetti. Ciò vale anche per i prodotti non NetApp che implementano il tiering.
+
+La scansione non scalda i dati a freddo - rimane fredda e rimane nello storage a oggetti.
 
 
 
@@ -204,7 +212,7 @@ Sì. In combinazione con la funzionalità Criteri, è possibile inviare avvisi e
 
 Sì. È possibile gestire le etichette AIP nei file che la classificazione BlueXP sta analizzando, se si è abbonati https://azure.microsoft.com/en-us/services/information-protection/["Azure Information Protection (AIP)"^]. È possibile visualizzare le etichette già assegnate ai file, aggiungere etichette ai file e modificare le etichette esistenti.
 
-link:task-org-private-data.html#categorizing-your-data-using-aip-labels["Scopri di più"^].
+link:task-org-private-data.html#categorize-your-data-using-aip-labels["Scopri di più"^].
 
 
 
@@ -326,7 +334,7 @@ NetApp non ha accesso ai dati riservati e non li visualizza nell'interfaccia ute
 
 === Dove sono memorizzati i dati?
 
-I risultati della scansione sono memorizzati in Elastisearch all'interno dell'istanza di classificazione BlueXP.
+I risultati della scansione sono memorizzati in Elasticsearch all'interno dell'istanza di classificazione BlueXP.
 
 
 

@@ -177,7 +177,10 @@ TIP: L'istanza deve rimanere sempre in esecuzione perché la classificazione Blu
 | Dimensioni del sistema | Specifiche | Limitazioni 
 
 
-| Grande (impostazione predefinita) | 16 CPU, 64 GB di RAM, SSD da 500 GiB | Nessuno 
+| Extra large | 32 CPU, 128 GB di RAM, 1 TiB SSD | Scansione di fino a 500 milioni di file. 
+
+
+| Grande (impostazione predefinita) | 16 CPU, 64 GB di RAM, SSD da 500 GiB | Scansione di fino a 250 milioni di file. 
 
 
 | Medio | 8 CPU, 32 GB di RAM, SSD da 200 GiB | Scansione più lenta e scansione di un massimo di 1 milione di file. 
@@ -185,9 +188,9 @@ TIP: L'istanza deve rimanere sempre in esecuzione perché la classificazione Blu
 
 | Piccolo | 8 CPU, 16 GB di RAM, SSD da 100 GiB | Stesse limitazioni del "Medio", più la capacità di identificare link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request["nomi dei soggetti dei dati"] l'interno dei file è disattivato. 
 |===
-Quando si implementa la classificazione BlueXP nel cloud su AWS, è possibile scegliere un'istanza grande/media/piccola. Quando si implementa la classificazione BlueXP in Azure o GCP, inviare un'e-mail a ng-contact-data-sense@netapp.com per ricevere assistenza se si desidera utilizzare uno di questi sistemi più piccoli. Dovremo collaborare con te per implementare queste configurazioni cloud più piccole.
+Quando si implementa la classificazione BlueXP nel cloud su AWS, è possibile scegliere un'istanza grande/media/piccola. Quando implementi la classificazione BlueXP in Azure o GCP, invia un'email ng-contact-data-sense@netapp.com per assistenza se desideri utilizzare uno di questi sistemi alternativi. Dovremo collaborare con te per implementare queste altre configurazioni cloud.
 
-Quando si implementa la classificazione BlueXP on-premise, è sufficiente utilizzare un host Linux con le specifiche più piccole. Non è necessario contattare NetApp per assistenza.
+Quando si implementa la classificazione BlueXP on-premise, basta utilizzare un host Linux con specifiche alternative. Non è necessario contattare NetApp per assistenza.
 
 
 
@@ -281,10 +284,10 @@ link:task-deploy-compliance-onprem.html#install-bluexp-classification-on-the-lin
 La classificazione BlueXP raccoglie, indicizza e assegna categorie ai dati (file). I dati indicizzati dalla classificazione BlueXP includono quanto segue:
 
 Metadati standard:: La classificazione BlueXP raccoglie i metadati standard relativi ai file: Il tipo di file, le dimensioni, le date di creazione e modifica e così via.
-Dati personali:: Informazioni personali come indirizzi e-mail, numeri di identificazione o numeri di carta di credito. link:task-controlling-private-data.html#viewing-files-that-contain-personal-data["Scopri di più sui dati personali"^].
-Dati personali sensibili:: Tipi speciali di informazioni sensibili, come dati sanitari, origine etnica o opinioni politiche, come definito dal GDPR e da altre normative sulla privacy. link:task-controlling-private-data.html#viewing-files-that-contain-sensitive-personal-data["Scopri di più sui dati personali sensibili"^].
-Categorie:: La classificazione BlueXP prende i dati sottoposti a scansione e li divide in diversi tipi di categorie. Le categorie sono argomenti basati sull'analisi ai del contenuto e dei metadati di ciascun file. link:task-controlling-private-data.html#viewing-files-by-categories["Scopri di più sulle categorie"^].
-Tipi:: La classificazione BlueXP prende i dati sottoposti a scansione e li suddivide in base al tipo di file. link:task-controlling-private-data.html#viewing-files-by-file-types["Scopri di più sui tipi"^].
+Dati personali:: Informazioni personali come indirizzi e-mail, numeri di identificazione o numeri di carta di credito. link:task-controlling-private-data.html#view-files-that-contain-personal-data["Scopri di più sui dati personali"^].
+Dati personali sensibili:: Tipi speciali di informazioni sensibili, come dati sanitari, origine etnica o opinioni politiche, come definito dal GDPR e da altre normative sulla privacy. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data["Scopri di più sui dati personali sensibili"^].
+Categorie:: La classificazione BlueXP prende i dati sottoposti a scansione e li divide in diversi tipi di categorie. Le categorie sono argomenti basati sull'analisi ai del contenuto e dei metadati di ciascun file. link:task-controlling-private-data.html#view-files-by-categories["Scopri di più sulle categorie"^].
+Tipi:: La classificazione BlueXP prende i dati sottoposti a scansione e li suddivide in base al tipo di file. link:task-controlling-private-data.html#view-files-by-file-types["Scopri di più sui tipi"^].
 Riconoscimento entità nome:: La classificazione BlueXP utilizza l'ai per estrarre i nomi delle persone fisiche dai documenti. link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request["Scopri come rispondere alle richieste di accesso ai soggetti dati"^].
 
 

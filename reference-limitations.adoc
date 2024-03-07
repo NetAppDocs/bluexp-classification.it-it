@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-limitations.html 
-keywords: limitations, data sense, classification, scan shares 
+keywords: limitations, data sense, classification, bluexp, scan shares 
 summary: Le limitazioni note identificano le funzioni non supportate da questa versione del prodotto o che non interagiscono correttamente con esso. Esaminare attentamente queste limitazioni. 
 ---
 = Limitazioni note
@@ -15,6 +15,17 @@ summary: Le limitazioni note identificano le funzioni non supportate da questa v
 
 [role="lead"]
 Le limitazioni note identificano le funzioni non supportate da questa versione del prodotto o che non interagiscono correttamente con esso. Esaminare attentamente queste limitazioni.
+
+
+
+== Opzioni rimosse temporaneamente dalla release di classificazione BlueXP
+
+La versione di dicembre 2023 (versione 1.26.6) ha temporaneamente rimosso le seguenti opzioni:
+
+* L'opzione per attivare la raccolta del registro di controllo è stata disattivata.
+* Durante l'analisi Directory, l'opzione per calcolare il numero di dati personali identificabili (PII) per directory non è disponibile.
+* L'opzione per integrare i dati utilizzando le etichette AIP (Azure Information Protection) è stata disattivata.
+
 
 
 

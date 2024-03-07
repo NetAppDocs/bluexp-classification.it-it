@@ -4,7 +4,7 @@ permalink: task-managing-data-fusion.html
 keywords: data identifiers, personal data, sensitive personal data, compliance, data fusion, data sense 
 summary: 'La classificazione BlueXP offre diversi modi per aggiungere un elenco personalizzato di "dati personali" che la classificazione BlueXP identificherà nelle scansioni future, fornendo un quadro completo della posizione dei dati potenzialmente sensibili in tutti i file delle organizzazioni.' 
 ---
-= Aggiunta di identificatori di dati personali alle scansioni di classificazione BlueXP
+= Aggiungi identificatori di dati personali alle scansioni di classificazione BlueXP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -40,7 +40,7 @@ Come puoi vedere, sono stati trovati due ID cliente univoci in due volumi e in u
 Si noti che, dal momento che si esegue la scansione dei database, qualsiasi lingua in cui i dati vengono memorizzati verrà utilizzata per identificare i dati nelle future scansioni di classificazione di BlueXP.
 
 .Fasi
-Devi avere link:task-scanning-databases.html#adding-the-database-server["aggiunto almeno un server di database"^] Alla classificazione BlueXP prima di poter aggiungere origini Fusion dei dati.
+Devi avere link:task-scanning-databases.html#add-the-database-server["aggiunto almeno un server di database"^] Alla classificazione BlueXP prima di poter aggiungere origini Fusion dei dati.
 
 . Nella pagina di configurazione, fare clic su *Manage Data Fusion* (Gestisci dati) nel database in cui risiedono i dati di origine.
 +
@@ -184,7 +184,7 @@ Le categorie possono aiutarti a capire cosa accade con i tuoi dati mostrando i t
 
 Ad esempio, è possibile vedere dove si trovano i file di installazione compressi in formato .gz nei file in modo da poterli rimuovere, se necessario.
 
-Dopo aver aggiornato le categorie personalizzate, la classificazione BlueXP riavvia la scansione di tutte le origini dati. Una volta completata la scansione, i nuovi risultati verranno visualizzati nella dashboard di conformità della classificazione BlueXP nella sezione "Categorie" e nella pagina delle indagini nel filtro "Categoria". link:task-controlling-private-data.html#viewing-files-by-categories["Scopri come visualizzare i file in base alle categorie"].
+Dopo aver aggiornato le categorie personalizzate, la classificazione BlueXP riavvia la scansione di tutte le origini dati. Una volta completata la scansione, i nuovi risultati verranno visualizzati nella dashboard di conformità della classificazione BlueXP nella sezione "Categorie" e nella pagina delle indagini nel filtro "Categoria". link:task-controlling-private-data.html#view-files-by-categories["Scopri come visualizzare i file in base alle categorie"].
 
 .Di cosa hai bisogno
 È necessario creare un minimo di 25 file di training contenenti esempi delle categorie di dati che si desidera vengano riconosciute dalla classificazione BlueXP. Sono supportati i seguenti tipi di file:

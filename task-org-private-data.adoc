@@ -4,7 +4,7 @@ permalink: task-org-private-data.html
 keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense 
 summary: La classificazione BlueXP offre diversi modi per gestire e organizzare i dati privati. In questo modo è più semplice visualizzare i dati più importanti per te. 
 ---
-= Organizzazione dei dati privati
+= Organizzare i dati privati
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -17,6 +17,10 @@ summary: La classificazione BlueXP offre diversi modi per gestire e organizzare 
 La classificazione BlueXP offre diversi modi per gestire e organizzare i dati privati. In questo modo è più semplice visualizzare i dati più importanti per te.
 
 * Se si è abbonati a. https://azure.microsoft.com/en-us/services/information-protection/["Azure Information Protection (AIP)"^] Per classificare e proteggere i file, è possibile utilizzare la classificazione BlueXP per gestire le etichette AIP.
++
+
+NOTE: La release di dicembre 2023 (v1.26.6) ha temporaneamente rimosso l'opzione di integrare i dati utilizzando le etichette AIP (Azure Information Protection).
+
 * È possibile aggiungere tag ai file che si desidera contrassegnare per l'organizzazione o per alcuni tipi di follow-up.
 * È possibile assegnare un utente BlueXP a un file specifico o a più file, in modo che la persona possa essere responsabile della gestione del file.
 * Utilizzando la funzionalità "Policy" è possibile creare query di ricerca personalizzate in modo da visualizzare facilmente i risultati facendo clic su un pulsante.
@@ -53,7 +57,7 @@ Di seguito è riportato un confronto tra il tag di classificazione BlueXP e l'et
 |===
 
 
-== Classificazione dei dati mediante etichette AIP
+== Categorizzare i dati utilizzando le etichette AIP
 
 È possibile gestire le etichette AIP nei file che la classificazione BlueXP sta analizzando, se si è abbonati https://azure.microsoft.com/en-us/services/information-protection/["Azure Information Protection (AIP)"^]. AIP consente di classificare e proteggere documenti e file applicando etichette ai contenuti. La classificazione BlueXP consente di visualizzare le etichette già assegnate ai file, aggiungere etichette ai file e modificare le etichette quando esiste già un'etichetta.
 
@@ -69,7 +73,7 @@ La classificazione BlueXP supporta le etichette AIP nei seguenti tipi di file: .
 ====
 
 
-=== Integrazione delle etichette AIP nello spazio di lavoro
+=== Integrare le etichette AIP nell'area di lavoro
 
 Prima di poter gestire le etichette AIP, è necessario integrare la funzionalità dell'etichetta AIP nella classificazione BlueXP accedendo all'account Azure esistente. Una volta attivata, è possibile gestire le etichette AIP all'interno dei file per tutti link:concept-cloud-compliance.html#supported-data-sources["origini dati"^] Nello spazio di lavoro BlueXP.
 
@@ -98,7 +102,7 @@ image:screenshot_compliance_aip_labels_int.png["Una schermata che mostra le etic
 
 
 
-=== Visualizzazione delle etichette AIP nei file
+=== Visualizzare le etichette AIP nei file
 
 È possibile visualizzare l'etichetta AIP corrente assegnata a un file.
 
@@ -108,7 +112,7 @@ image:screenshot_compliance_show_label.png["Una schermata che mostra i dettagli 
 
 
 
-=== Assegnazione manuale delle etichette AIP
+=== Assegnare manualmente le etichette AIP
 
 È possibile aggiungere, modificare e rimuovere le etichette AIP dai file utilizzando la classificazione BlueXP.
 
@@ -148,7 +152,7 @@ L'etichetta AIP viene aggiunta ai metadati di tutti i file selezionati.
 
 
 
-=== Rimozione dell'integrazione AIP
+=== Rimuovere l'integrazione AIP
 
 Se non si desidera più gestire le etichette AIP nei file, è possibile rimuovere l'account AIP dall'interfaccia di classificazione BlueXP.
 
@@ -164,7 +168,7 @@ image:screenshot_compliance_un_integrate_aip_labels.png["Una schermata che mostr
 
 
 
-== Applicazione di tag per gestire i file sottoposti a scansione
+== Applicare i tag per gestire i file digitalizzati
 
 È possibile aggiungere un tag ai file che si desidera contrassegnare per alcuni tipi di follow-up. Ad esempio, è possibile che siano stati trovati alcuni file duplicati e si desidera eliminarne uno, ma è necessario controllare quale file eliminare. È possibile aggiungere un tag "Check to delete" al file in modo da sapere che questo file richiede una ricerca e un qualche tipo di azione futura.
 
@@ -177,7 +181,7 @@ TIP: I tag assegnati ai file nella classificazione BlueXP non sono correlati ai 
 
 
 
-=== Visualizzazione dei file con determinati tag applicati
+=== Consente di visualizzare i file a cui sono stati applicati determinati tag
 
 È possibile visualizzare tutti i file con tag specifici assegnati.
 
@@ -193,7 +197,7 @@ Il riquadro dei risultati dell'analisi visualizza tutti i file a cui sono stati 
 
 
 
-=== Assegnazione di tag ai file
+=== Assegnare tag ai file
 
 È possibile aggiungere tag a un singolo file o a un gruppo di file.
 
@@ -247,7 +251,7 @@ image:screenshot_compliance_select_tags_multi.png["Una schermata che mostra come
 
 
 
-=== Eliminazione di tag dai file
+=== Eliminare i tag dai file
 
 Puoi eliminare un tag se non ne hai più bisogno.
 
@@ -259,7 +263,7 @@ Se sono stati selezionati più file, il tag viene rimosso da tutti i file.
 
 
 
-== Assegnazione di utenti per la gestione di determinati file
+== Assegnare agli utenti la gestione di determinati file
 
 È possibile assegnare un utente BlueXP a un file specifico o a più file, in modo che la persona possa essere responsabile di eventuali azioni di follow-up che devono essere eseguite sul file. Questa funzionalità viene spesso utilizzata con la funzione per aggiungere tag di stato personalizzati a un file.
 

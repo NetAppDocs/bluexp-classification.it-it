@@ -21,7 +21,7 @@ NOTE: Le funzionalità descritte in questa sezione sono disponibili solo se si �
 
 
 
-== Filtraggio dei dati nella pagina Data Investigation
+== Filtrare i dati nella pagina analisi dati
 
 È possibile filtrare il contenuto della pagina di analisi per visualizzare solo i risultati desiderati. Si tratta di una funzione molto potente, in quanto dopo aver perfezionato i dati, è possibile utilizzare la barra dei pulsanti nella parte superiore della pagina per eseguire una serie di azioni, tra cui la copia di file, lo spostamento di file, l'aggiunta di un tag o di un'etichetta AIP ai file e molto altro.
 
@@ -29,7 +29,7 @@ Se si desidera scaricare il contenuto della pagina come report dopo averlo perfe
 
 image:screenshot_compliance_investigation_filtered.png["Una schermata dei filtri disponibili quando si perfezionano i risultati nella pagina di analisi."]
 
-* Le schede di livello superiore consentono di visualizzare i dati da file (dati non strutturati), directory (cartelle e condivisioni di file) o database (dati strutturati).
+* Le schede di livello superiore consentono di visualizzare i dati di file (dati non strutturati), directory (cartelle e condivisioni di file) o database (dati strutturati).
 * I controlli nella parte superiore di ciascuna colonna consentono di ordinare i risultati in ordine numerico o alfabetico.
 * I filtri del riquadro sinistro consentono di perfezionare i risultati selezionando gli attributi descritti nelle sezioni successive.
 
@@ -51,7 +51,9 @@ Utilizzare i seguenti filtri per visualizzare la quantità di informazioni sensi
 | Livello di sensibilità | Selezionare il livello di sensibilità: Personal (personale), Sensitive Personal (personale sensibile) o non Sensitive (non sensibile). 
 
 
-| Numero di identificatori | Selezionare l'intervallo di identificatori sensibili rilevati per file. Include dati personali e dati personali sensibili. Durante il filtraggio nelle directory, la classificazione BlueXP totalizza le corrispondenze di tutti i file in ogni cartella (e sottocartelle). 
+| Numero di identificatori | Selezionare l'intervallo di identificatori sensibili rilevati per file. Include dati personali e dati personali sensibili. Durante il filtraggio nelle directory, la classificazione BlueXP totalizza le corrispondenze di tutti i file in ogni cartella (e sottocartelle).
+
+NOTA: La versione di dicembre 2023 (versione 1.26.6) ha temporaneamente rimosso l'opzione per calcolare il numero di dati personali identificabili (PII) per Directory. 
 
 
 | Dati personali | Selezionare link:reference-private-data-categories.html#types-of-personal-data["tipi di dati personali"^]. 
@@ -60,7 +62,7 @@ Utilizzare i seguenti filtri per visualizzare la quantità di informazioni sensi
 | Dati personali sensibili | Selezionare link:reference-private-data-categories.html#types-of-sensitive-personal-data["tipi di dati personali sensibili"^]. 
 
 
-| Soggetto interessato | Inserire il nome completo o l'identificativo noto di un soggetto. link:task-generating-compliance-reports.html#searching-for-data-subjects-and-downloading-reports["Scopri di più sugli argomenti dei dati qui"^]. 
+| Soggetto interessato | Inserire il nome completo o l'identificativo noto di un soggetto. link:task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports["Scopri di più sugli argomenti dei dati qui"^]. 
 |===
 
 
@@ -168,10 +170,10 @@ Utilizzare i seguenti filtri per visualizzare i dati in base alle etichette o ai
 | Policy | Selezionare una o più policy. Vai link:task-using-policies.html["qui"^] per visualizzare l'elenco dei criteri esistenti e creare criteri personalizzati. 
 
 
-| Etichetta | Selezionare link:task-org-private-data.html#categorizing-your-data-using-aip-labels["Etichette AIP"] assegnati ai file. 
+| Etichetta | Selezionare link:task-org-private-data.html#categorize-your-data-using-aip-labels["Etichette AIP"] assegnati ai file. 
 
 
-| Tag | Selezionare link:task-org-private-data.html#applying-tags-to-manage-your-scanned-files["il tag o i tag"] assegnati ai file. 
+| Tag | Selezionare link:task-org-private-data.html#apply-tags-to-manage-your-scanned-files["il tag o i tag"] assegnati ai file. 
 
 
 | Assegnato a. | Selezionare il nome della persona a cui è assegnato il file. 
@@ -209,28 +211,28 @@ Utilizzare il seguente filtro per visualizzare i file duplicati nello storage.
 |===
 
 
-== Visualizzazione dei metadati del file
+== Visualizzare i metadati dei file
 
 Nel riquadro Data Investigation Results (risultati analisi dati), fare clic su image:button_down_caret.png["cart"] per visualizzare i metadati del file in un singolo file.
 
 image:screenshot_compliance_file_details.png["Una schermata che mostra i dettagli dei metadati per un file nella pagina Data Investigation."]
 
-Oltre a mostrare l'ambiente di lavoro e il volume in cui si trova il file, i metadati mostrano molte più informazioni, tra cui le autorizzazioni del file, il proprietario del file, l'eventuale presenza di duplicati del file e l'etichetta AIP assegnata (se disponibile) link:task-org-private-data.html#categorizing-your-data-using-aip-labels["AIP integrato nella classificazione BlueXP"^]). Queste informazioni sono utili se stai pensando di link:task-using-policies.html#creating-custom-policies["Creare policy"] perché è possibile visualizzare tutte le informazioni che è possibile utilizzare per filtrare i dati.
+Oltre a mostrare l'ambiente di lavoro e il volume in cui si trova il file, i metadati mostrano molte più informazioni, tra cui le autorizzazioni del file, il proprietario del file, l'eventuale presenza di duplicati del file e l'etichetta AIP assegnata (se disponibile) link:task-org-private-data.html#categorize-your-data-using-aip-labels["AIP integrato nella classificazione BlueXP"^]). Queste informazioni sono utili se stai pensando di link:task-using-policies.html#create-custom-policies["Creare policy"] perché è possibile visualizzare tutte le informazioni che è possibile utilizzare per filtrare i dati.
 
 Tenere presente che non tutte le informazioni sono disponibili per tutte le origini dati, ma solo quelle appropriate per tale origine. Ad esempio, il nome del volume, le autorizzazioni e le etichette AIP non sono rilevanti per i file di database.
 
 Quando si visualizzano i dettagli di un singolo file, è possibile eseguire alcune operazioni sul file:
 
-* È possibile spostare o copiare il file in qualsiasi condivisione NFS. Vedere link:task-managing-highlights.html#moving-source-files-to-an-nfs-share["Spostamento dei file di origine in una condivisione NFS"] e. link:task-managing-highlights.html#copying-source-files["Copia dei file di origine in una condivisione NFS"] per ulteriori informazioni.
-* È possibile eliminare il file. Vedere link:task-managing-highlights.html#deleting-source-files["Eliminazione dei file di origine"] per ulteriori informazioni.
-* È possibile assegnare un determinato Stato al file. Vedere link:task-org-private-data.html#applying-tags-to-manage-your-scanned-files["Applicazione di tag"] per ulteriori informazioni.
-* È possibile assegnare il file a un utente BlueXP per essere responsabile di eventuali azioni di follow-up che devono essere eseguite sul file. Vedere link:task-org-private-data.html#assigning-users-to-manage-certain-files["Assegnazione di utenti a un file"] per ulteriori informazioni.
-* Se sono state integrate etichette AIP con classificazione BlueXP, è possibile assegnare un'etichetta a questo file o modificarla se già esistente. Vedere link:task-org-private-data.html#assigning-aip-labels-manually["Assegnazione manuale delle etichette AIP"] per ulteriori informazioni.
+* È possibile spostare o copiare il file in qualsiasi condivisione NFS. Vedere link:task-managing-highlights.html#move-source-files-to-an-nfs-share["Spostamento dei file di origine in una condivisione NFS"] e. link:task-managing-highlights.html#copy-source-files["Copia dei file di origine in una condivisione NFS"] per ulteriori informazioni.
+* È possibile eliminare il file. Vedere link:task-managing-highlights.html#delete-source-files["Eliminazione dei file di origine"] per ulteriori informazioni.
+* È possibile assegnare un determinato Stato al file. Vedere link:task-org-private-data.html#apply-tags-to-manage-your-scanned-files["Applicazione di tag"] per ulteriori informazioni.
+* È possibile assegnare il file a un utente BlueXP per essere responsabile di eventuali azioni di follow-up che devono essere eseguite sul file. Vedere link:task-org-private-data.html#assign-users-to-manage-certain-files["Assegnazione di utenti a un file"] per ulteriori informazioni.
+* Se sono state integrate etichette AIP con classificazione BlueXP, è possibile assegnare un'etichetta a questo file o modificarla se già esistente. Vedere link:task-org-private-data.html#assign-aip-labels-manually["Assegnazione manuale delle etichette AIP"] per ulteriori informazioni.
 
 
 
 
-== Autorizzazioni di visualizzazione per file e directory
+== Visualizzare le autorizzazioni per file e directory
 
 Per visualizzare un elenco di tutti gli utenti o gruppi che hanno accesso a un file o a una directory e i tipi di autorizzazioni di cui dispongono, fare clic su *Visualizza tutte le autorizzazioni*. Questo pulsante è disponibile solo per i dati in condivisioni CIFS, SharePoint Online, SharePoint on-premise e OneDrive.
 
@@ -244,7 +246,7 @@ Inoltre, È possibile fare clic sul nome di un utente o di un gruppo e viene vis
 
 
 
-== Verifica della presenza di file duplicati nei sistemi di storage
+== Verificare la presenza di file duplicati nei sistemi di storage
 
 È possibile visualizzare se i file duplicati vengono memorizzati nei sistemi storage. Ciò è utile se si desidera identificare le aree in cui è possibile risparmiare spazio di storage. Può anche essere utile assicurarsi che alcuni file con autorizzazioni specifiche o informazioni sensibili non vengano duplicati inutilmente nei sistemi di storage.
 
@@ -252,11 +254,11 @@ Tutti i file (esclusi i database) di dimensioni pari o superiori a 1 MB e conten
 
 La classificazione BlueXP utilizza la tecnologia di hashing per determinare i file duplicati. Se un file ha lo stesso codice hash di un altro file, possiamo essere sicuri al 100% che i file siano duplicati esatti - anche se i nomi dei file sono diversi.
 
-È possibile scaricare l'elenco dei file duplicati e inviarlo all'amministratore dello storage in modo che possa decidere quali file, se presenti, possono essere cancellati. Oppure è possibile link:task-managing-highlights.html#deleting-source-files["eliminare il file"] se si è sicuri che non è necessaria una versione specifica del file.
+È possibile scaricare l'elenco dei file duplicati e inviarlo all'amministratore dello storage in modo che possa decidere quali file, se presenti, possono essere cancellati. Oppure è possibile link:task-managing-highlights.html#delete-source-files["eliminare il file"] se si è sicuri che non è necessaria una versione specifica del file.
 
 
 
-=== Visualizzazione di tutti i file duplicati
+=== Visualizzare tutti i file duplicati
 
 Se si desidera un elenco di tutti i file duplicati negli ambienti di lavoro e nelle origini dati in scansione, è possibile utilizzare il filtro *duplicati > ha duplicati* nella pagina analisi dati.
 
@@ -264,7 +266,7 @@ Tutti i file duplicati vengono visualizzati nella pagina risultati.
 
 
 
-=== Visualizzazione se un file specifico viene duplicato
+=== Visualizzare se un file specifico è duplicato
 
 Se si desidera vedere se un singolo file ha duplicati, fare clic su nel riquadro risultati analisi dati image:button_down_caret.png["cart"] per visualizzare i metadati del file in un singolo file. Se sono presenti duplicati di un determinato file, queste informazioni vengono visualizzate accanto al campo _duplicati_.
 
@@ -300,7 +302,7 @@ Se la classificazione BlueXP sta scansionando file (dati non strutturati), direc
 
 
 
-=== Generazione del report analisi dati
+=== Generare il rapporto analisi dati
 
 .Fasi
 . Dalla pagina Data Investigation (analisi dati), fare clic su image:button_download.png["pulsante download"] nella parte superiore destra della pagina.

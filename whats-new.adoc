@@ -18,7 +18,27 @@ Scopri le novità della classificazione BlueXP.
 
 
 
-== 10 gennaio (versione 1,27)
+== 4 marzo 2024 (versione 1,29)
+
+
+
+=== Ora è possibile escludere la scansione dei dati che risiedono in determinate directory di origine dati
+
+Se si desidera che la classificazione BlueXP escluda la scansione dei dati che risiedono in determinate directory di origine dati, è possibile aggiungere questi nomi di directory a un file di configurazione elaborato dalla classificazione BlueXP. Questa funzione consente di evitare la scansione di directory non necessarie o che potrebbero generare risultati falsi positivi per i dati personali.
+
+https://docs.netapp.com/us-en/bluexp-classification/task-exclude-scan-paths.html["Scopri di più"].
+
+
+
+=== Il supporto di istanze di grandi dimensioni è ora qualificato
+
+Se hai bisogno della classificazione BlueXP per analizzare più di 250 milioni di file, puoi utilizzare un'istanza Extra Large nell'implementazione del cloud o nell'installazione on-premise. Questo tipo di sistema è in grado di eseguire la scansione di un massimo di 500 milioni di file.
+
+https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#using-a-smaller-instance-type["Scopri di più"].
+
+
+
+== 10 gennaio 2024 (versione 1,27)
 
 
 
@@ -34,7 +54,20 @@ Ora puoi configurare gli ID di gruppo in NFS in modo che siano considerati "aper
 
 
 
-== 6 novembre (versione 1.26.3)
+== 14 dicembre 2023 (versione 1.26.6)
+
+Questa versione includeva alcuni miglioramenti minori.
+
+Inoltre, la versione ha temporaneamente rimosso le seguenti opzioni:
+
+* L'opzione per attivare la raccolta del registro di controllo è stata disattivata. Fare riferimento a. link:task-manage-file-access-events.html["Monitorare e gestire gli eventi di accesso ai file"].
+* Durante l'analisi Directory, l'opzione per calcolare il numero di dati personali identificabili (PII) per directory non è disponibile. Fare riferimento a. link:task-investigate-data.html#filter-data-by-sensitivity-and-content["Esaminare i dati memorizzati nella propria organizzazione"].
+* L'opzione per integrare i dati utilizzando le etichette AIP (Azure Information Protection) è stata disattivata. Fare riferimento a. link:task-org-private-data.html["Organizzare i dati privati"].
+
+
+
+
+== 6 novembre 2023 (versione 1.26.3)
 
 
 
@@ -46,7 +79,7 @@ Ora puoi configurare gli ID di gruppo in NFS in modo che siano considerati "aper
 
 
 
-== 4 ottobre (versione 1,26)
+== 4 ottobre 2023 (versione 1,26)
 
 
 
@@ -58,7 +91,7 @@ Al momento non supportiamo installazioni in siti oscuri o ambienti di scansione 
 
 
 
-== 5 settembre (versione 1,25)
+== 5 settembre 2023 (versione 1,25)
 
 
 
@@ -70,7 +103,7 @@ Quando implementi un'istanza di classificazione BlueXP in AWS, al momento non è
 
 === Applicare le etichette su un massimo di 100.000 elementi dalla pagina risultati analisi
 
-In passato, nella pagina dei risultati dell'analisi era possibile applicare tag a una singola pagina alla volta (20 elementi). Ora è possibile selezionare *tutti* elementi nelle pagine dei risultati dell'analisi e applicare tag a tutti gli elementi, fino a 100.000 elementi alla volta. https://docs.netapp.com/us-en/bluexp-classification/task-org-private-data.html#assigning-tags-to-files["Scopri come"].
+In passato, nella pagina dei risultati dell'analisi era possibile applicare tag a una singola pagina alla volta (20 elementi). Ora è possibile selezionare *tutti* elementi nelle pagine dei risultati dell'analisi e applicare tag a tutti gli elementi, fino a 100.000 elementi alla volta. https://docs.netapp.com/us-en/bluexp-classification/task-org-private-data.html#assign-tags-to-files["Scopri come"].
 
 
 
@@ -239,7 +272,7 @@ https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categ
 
 Nelle versioni precedenti della classificazione BlueXP, è possibile inviare avvisi e-mail agli utenti BlueXP del proprio account quando alcuni criteri critici restituiscono risultati. Questa funzione ti consente di ricevere notifiche per proteggere i tuoi dati quando non sei online. Ora puoi anche inviare avvisi e-mail dalle policy a qualsiasi altro utente (fino a 20 indirizzi e-mail) che non sia presente nel tuo account BlueXP.
 
-https://docs.netapp.com/us-en/bluexp-classification/task-using-policies.html#sending-email-alerts-when-non-compliant-data-is-found["Scopri di più sull'invio di avvisi e-mail in base ai risultati della policy"].
+https://docs.netapp.com/us-en/bluexp-classification/task-using-policies.html#send-email-alerts-when-non-compliant-data-is-found["Scopri di più sull'invio di avvisi e-mail in base ai risultati della policy"].
 
 
 
@@ -253,7 +286,7 @@ https://docs.netapp.com/us-en/bluexp-classification/task-managing-data-fusion.ht
 
 === Possibilità di spostare 15 milioni di file utilizzando la classificazione BlueXP
 
-In passato era possibile che la classificazione BlueXP spostasse un massimo di 100,000 file di origine in qualsiasi condivisione NFS. Ora puoi spostare fino a 15 milioni di file alla volta. https://docs.netapp.com/us-en/bluexp-classification/task-managing-highlights.html#moving-source-files-to-an-nfs-share["Scopri di più sullo spostamento dei file di origine utilizzando la classificazione BlueXP"].
+In passato era possibile che la classificazione BlueXP spostasse un massimo di 100,000 file di origine in qualsiasi condivisione NFS. Ora puoi spostare fino a 15 milioni di file alla volta. https://docs.netapp.com/us-en/bluexp-classification/task-managing-highlights.html#move-source-files-to-an-nfs-share["Scopri di più sullo spostamento dei file di origine utilizzando la classificazione BlueXP"].
 
 
 
@@ -288,32 +321,10 @@ Sono disponibili nuovi filtri per perfezionare i risultati visualizzati nella pa
 * Il filtro "percorso file" consente ora di specificare i percorsi che si desidera escludere dai risultati delle query filtrate. Se si inseriscono percorsi per includere ed escludere determinati dati, la classificazione BlueXP individua prima tutti i file nei percorsi inclusi, quindi rimuove i file dai percorsi esclusi e visualizza i risultati.
 
 
-https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#filtering-data-in-the-data-investigation-page["Consulta l'elenco di tutti i filtri che puoi utilizzare per analizzare i tuoi dati"].
+https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#filter-data-in-the-data-investigation-page["Consulta l'elenco di tutti i filtri che puoi utilizzare per analizzare i tuoi dati"].
 
 
 
 === La classificazione BlueXP può identificare il numero individuale giapponese
 
 La classificazione BlueXP è in grado di identificare e classificare i file che contengono il numero individuale giapponese (noto anche come My Number). Questo include sia il numero personale che il numero personale aziendale. https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-personal-data["Scopri tutti i tipi di dati personali che la classificazione BlueXP può identificare nei tuoi dati"].
-
-
-
-== 11 dicembre 2022 (versione 1.18)
-
-
-
-=== Miglioramenti dell'installazione on-premise
-
-Sono stati aggiunti i seguenti miglioramenti per l'installazione on-premise di Data Sense:
-
-* Alcuni prerequisiti aggiuntivi vengono ora controllati prima dell'avvio dell'installazione su un host on-premise. In questo modo, è possibile assicurarsi che il sistema host sia pronto al 100% per l'installazione del software Data Sense:
-+
-** verificare la disponibilità di spazio sufficiente su `/var/lib/docker`, `/tmp`, e. `/opt`
-** verificare le autorizzazioni pertinenti su tutte le cartelle richieste
-
-
-* Nella pagina Configuration (Configurazione), la sezione Working Environments (ambienti di lavoro) visualizza ora l' _Working Environment ID_ (ID ambiente di lavoro) e il nome _scanner Group_ (Gruppo scanner). È necessario conoscere l'ID dell'ambiente di lavoro se si prevede di utilizzare più host Data Sense per fornire ulteriore potenza di elaborazione per eseguire la scansione delle origini dati.
-* Inoltre, nella pagina di configurazione, una nuova sezione mostra i gruppi di scanner configurati e i nodi dello scanner presenti in ciascun gruppo.
-
-
-https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html["Scopri di più sull'installazione di Data Sense su un singolo server host e su più host"].

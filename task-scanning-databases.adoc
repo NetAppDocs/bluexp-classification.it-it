@@ -42,7 +42,7 @@ Selezionare gli schemi da sottoporre a scansione.
 
 
 
-== Verifica dei prerequisiti
+== Esaminare i prerequisiti
 
 Prima di attivare la classificazione BlueXP, verificare di disporre di una configurazione supportata.
 
@@ -83,7 +83,7 @@ Quando si sceglie un nome utente e una password, è importante sceglierne uno ch
 
 
 
-== Implementazione dell'istanza di classificazione BlueXP
+== Distribuire l'istanza di classificazione BlueXP
 
 Distribuire la classificazione BlueXP se non è già stata implementata un'istanza.
 
@@ -95,7 +95,7 @@ Gli aggiornamenti al software di classificazione BlueXP sono automatizzati finch
 
 
 
-== Aggiunta del server database
+== Aggiungere il server database
 
 Aggiungere il server di database in cui risiedono gli schemi.
 
@@ -121,7 +121,7 @@ Il database viene aggiunto all'elenco degli ambienti di lavoro.
 
 
 
-== Attivazione e disattivazione delle scansioni di compliance sugli schemi di database
+== Abilitare e disabilitare le scansioni di conformità sugli schemi di database
 
 È possibile interrompere o avviare la scansione completa degli schemi in qualsiasi momento.
 

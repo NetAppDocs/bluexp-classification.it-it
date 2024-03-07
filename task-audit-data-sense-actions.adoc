@@ -4,7 +4,7 @@ permalink: task-audit-data-sense-actions.html
 keywords: compliance, actions, view progress, audit, logs, installation 
 summary: 'La classificazione BlueXP registra le attività di gestione eseguite sui file di tutti gli ambienti di lavoro e le origini dati che la classificazione BlueXP sta eseguendo. La classificazione BlueXP registra anche le attività durante l"implementazione dell"istanza di classificazione BlueXP.' 
 ---
-= Verifica della cronologia delle azioni di classificazione di BlueXP
+= Controllare la cronologia delle azioni di classificazione di BlueXP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -60,6 +60,6 @@ Ogni file di log può avere una dimensione massima di 10 MB. Una volta raggiunto
 
 
 
-== Accesso ai file di registro
+== Accedere ai file di registro
 
 Sarà necessario accedere al sistema di classificazione BlueXP per accedere ai file di log. Scopri come link:reference-log-in-to-instance.html["Accedi al sistema di classificazione BlueXP"] A seconda che il software sia stato installato manualmente su una macchina Linux o se l'istanza è stata distribuita nel cloud.

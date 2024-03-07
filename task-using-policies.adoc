@@ -4,7 +4,7 @@ permalink: task-using-policies.html
 keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense 
 summary: Le policy sono come un elenco preferito di filtri personalizzati che forniscono i risultati della ricerca nella pagina di analisi per le query di conformità più frequenti. La classificazione BlueXP offre una serie di policy predefinite basate sulle richieste più comuni dei clienti. È possibile creare policy personalizzate che forniscano risultati per ricerche specifiche della propria organizzazione. 
 ---
-= Assegnazione di policy ai dati
+= Assegnare policy ai dati
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -34,7 +34,7 @@ Inoltre, i criteri vengono visualizzati nell'elenco dei filtri della pagina di a
 
 
 
-== Visualizzazione dei risultati della policy nella pagina delle analisi
+== Visualizzare i risultati dei criteri nella pagina di analisi
 
 Per visualizzare i risultati di un criterio nella pagina analisi, fare clic su image:screenshot_gallery_options.gif["Pulsante More (Altro)"] Per una policy specifica, quindi selezionare *esamina risultati*.
 
@@ -42,7 +42,7 @@ image:screenshot_compliance_highlights_investigate.png["Una schermata che mostra
 
 
 
-== Creazione di policy personalizzate
+== Creare criteri personalizzati
 
 È possibile creare policy personalizzate che forniscano risultati per le ricerche specifiche della propria organizzazione. I risultati vengono restituiti per tutti i file e le directory (condivisioni e cartelle) che corrispondono ai criteri di ricerca.
 
@@ -57,10 +57,10 @@ image:screenshot_compliance_save_as_highlight.png["Una schermata che mostra come
 . Assegnare un nome al criterio e selezionare altre azioni che possono essere eseguite dal criterio:
 +
 .. Immettere un nome e una descrizione univoci.
-.. Se si desidera, selezionare la casella per eliminare automaticamente i file che corrispondono ai parametri del criterio. Scopri di più <<Eliminazione automatica dei file di origine mediante le policy,eliminazione dei file di origine mediante un criterio>>.
-.. Se si desidera inviare e-mail di notifica agli utenti BlueXP nell'account, selezionare la casella di controllo e scegliere l'intervallo di invio dell'e-mail. Scopri di più <<Invio di avvisi e-mail quando vengono rilevati dati non conformi,invio di avvisi e-mail in base ai risultati della policy>>.
+.. Se si desidera, selezionare la casella per eliminare automaticamente i file che corrispondono ai parametri del criterio. Scopri di più <<Eliminare automaticamente i file di origine utilizzando i criteri,eliminazione dei file di origine mediante un criterio>>.
+.. Se si desidera inviare e-mail di notifica agli utenti BlueXP nell'account, selezionare la casella di controllo e scegliere l'intervallo di invio dell'e-mail. Scopri di più <<Invia avvisi e-mail quando vengono trovati dati non conformi,invio di avvisi e-mail in base ai risultati della policy>>.
 .. Se si desidera, selezionare la casella se si desidera che le e-mail di notifica vengano inviate ad altri utenti, immettere fino a 20 indirizzi e-mail e scegliere l'intervallo di invio dell'e-mail.
-.. Se si desidera, selezionare la casella per assegnare automaticamente le etichette AIP ai file che corrispondono ai parametri del criterio, quindi selezionare l'etichetta. (Solo se sono già state integrate le etichette AIP. Scopri di più link:task-org-private-data.html#categorizing-your-data-using-aip-labels["Etichette AIP"].)
+.. Se si desidera, selezionare la casella per assegnare automaticamente le etichette AIP ai file che corrispondono ai parametri del criterio, quindi selezionare l'etichetta. (Solo se sono già state integrate le etichette AIP. Scopri di più link:task-org-private-data.html#categorize-your-data-using-aip-labels["Etichette AIP"].)
 .. Fare clic su *Crea policy*.
 +
 image:screenshot_compliance_save_highlight.png["Una schermata che mostra come configurare il criterio e salvarlo."]
@@ -74,7 +74,7 @@ Il nuovo criterio viene visualizzato nella scheda Criteri.
 
 
 
-== Invio di avvisi e-mail quando vengono rilevati dati non conformi
+== Invia avvisi e-mail quando vengono trovati dati non conformi
 
 La classificazione BlueXP può inviare avvisi e-mail agli utenti BlueXP del tuo account quando alcune policy critiche restituiscono risultati, in modo da poter ricevere notifiche per proteggere i tuoi dati. È possibile scegliere di inviare le notifiche via email su base giornaliera, settimanale o mensile. Puoi anche scegliere di inviare avvisi e-mail a qualsiasi altro indirizzo e-mail (fino a 20 indirizzi e-mail) non presente nell'account BlueXP.
 
@@ -104,7 +104,7 @@ La prima e-mail viene inviata ora se ci sono risultati dalla policy, ma solo se 
 
 
 
-== Eliminazione automatica dei file di origine mediante le policy
+== Eliminare automaticamente i file di origine utilizzando i criteri
 
 È possibile creare un criterio personalizzato per eliminare i file corrispondenti al criterio. Ad esempio, è possibile eliminare i file che contengono informazioni riservate e che sono stati rilevati dalla classificazione BlueXP negli ultimi 30 giorni.
 
@@ -135,7 +135,7 @@ Il nuovo criterio viene visualizzato nella scheda Criteri. I file che corrispond
 
 
 
-== Assegnazione automatica delle etichette AIP con i criteri
+== Assegnare automaticamente le etichette AIP con i criteri
 
 È possibile assegnare un'etichetta AIP a tutti i file che soddisfano i criteri del criterio. È possibile specificare l'etichetta AIP durante la creazione del criterio oppure aggiungerla quando si modifica un criterio.
 
@@ -181,7 +181,7 @@ NOTE: Se un criterio è stato configurato con un'etichetta, ma l'etichetta è st
 
 
 
-== Modifica dei criteri
+== Modifica criteri
 
 È possibile modificare qualsiasi criterio per un criterio esistente creato in precedenza. Questo può essere particolarmente utile se si desidera modificare la query (gli elementi definiti utilizzando filtri) per aggiungere o rimuovere determinati parametri.
 
@@ -210,7 +210,7 @@ La policy viene modificata immediatamente. Tutte le azioni definite per quel cri
 
 
 
-== Eliminazione dei criteri
+== Delete Policy (Elimina policy)
 
 È possibile eliminare qualsiasi policy personalizzata creata se non è più necessaria. Non è possibile eliminare alcuna policy predefinita.
 
