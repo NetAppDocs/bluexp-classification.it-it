@@ -30,6 +30,14 @@ https://docs.netapp.com/us-en/bluexp-classification/task-exclude-scan-paths.html
 
 
 
+=== Il supporto di istanze di grandi dimensioni è ora qualificato
+
+Se hai bisogno della classificazione BlueXP per analizzare più di 250 milioni di file, puoi utilizzare un'istanza Extra Large nell'implementazione del cloud o nell'installazione on-premise. Questo tipo di sistema è in grado di eseguire la scansione di un massimo di 500 milioni di file.
+
+https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#using-a-smaller-instance-type["Scopri di più"].
+
+
+
 == 10 gennaio 2024 (versione 1,27)
 
 
