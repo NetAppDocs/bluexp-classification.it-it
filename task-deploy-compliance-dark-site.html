@@ -1,0 +1,2493 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head class="at-element-marker">
+  <title>Installare la classificazione BlueXP su un host senza accesso a Internet | NetApp Documentation</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Installare la classificazione BlueXP su un host senza accesso a Internet | NetApp Documentation" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/it-it/bluexp-classification/task-deploy-compliance-dark-site.html" />
+	<meta property="og:description" content="Completare alcuni passaggi per installare la classificazione BlueXP su un host Linux in un sito on-premise che non dispone di accesso a Internet, noto anche ..." />
+  <meta property="og:image" content="https://docs.netapp.com/it-it/bluexp-classification/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Completare alcuni passaggi per installare la classificazione BlueXP su un host Linux in un sito on-premise che non dispone di accesso a Internet, noto anche ...">
+  <meta name="keywords" content=" cloud compliance, data sense, get started, deploy cloud data sense, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, dark site, upgrade, private mode, docker, podman, bluexp classification"><!-- Icons -->
+  <link rel="icon" href="/it-it/bluexp-classification/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="NetApp Documentation" href="/it-it/bluexp-classification/feed.xml"><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/it-it/bluexp-classification/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/it-it/bluexp-classification/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/it-it/bluexp-classification/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/it-it/bluexp-classification/task-deploy-compliance-dark-site.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-dark-site.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/bluexp-classification/task-deploy-compliance-dark-site.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-dark-site.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/bluexp-classification/task-deploy-compliance-dark-site.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/bluexp-classification/task-deploy-compliance-dark-site.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/bluexp-classification/task-deploy-compliance-dark-site.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/bluexp-classification/task-deploy-compliance-dark-site.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/bluexp-classification/task-deploy-compliance-dark-site.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/bluexp-classification/task-deploy-compliance-dark-site.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/bluexp-classification/task-deploy-compliance-dark-site.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/it-it/bluexp-classification/js/na-search.js'></script><script src='/it-it/bluexp-classification/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/it-it/bluexp-classification/js/custom-dropdown.js'></script>
+  <script src='/it-it/bluexp-classification/js/FileSaver.min.js'></script>
+  <script src='/it-it/bluexp-classification/js/jszip-utils.min.js'></script>
+  <script src='/it-it/bluexp-classification/js/jszip.min.js'></script><script src='/it-it/bluexp-classification/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/it-it/bluexp-classification/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/it">
+                <image id="ie-header-logo" src="/it-it/bluexp-classification/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/it/support-and-training/documentation/">Documenti</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/it-it/bluexp-classification/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">Italiano</span>
+                    <img src="/it-it/bluexp-classification/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/it-it/bluexp-classification/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/it-it/bluexp-classification/task-deploy-compliance-dark-site.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-dark-site.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ja-jp/bluexp-classification/task-deploy-compliance-dark-site.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/bluexp-classification/task-deploy-compliance-dark-site.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/bluexp-classification/task-deploy-compliance-dark-site.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/bluexp-classification/task-deploy-compliance-dark-site.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/bluexp-classification/task-deploy-compliance-dark-site.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/bluexp-classification/task-deploy-compliance-dark-site.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/bluexp-classification/task-deploy-compliance-dark-site.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/it-it/bluexp-classification/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">Tutto NetApp</span>
+                    <img src="/it-it/bluexp-classification/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/it-it/bluexp-classification/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">Supporto</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">Knowledge Base</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/it/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">Training</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/it-it/bluexp-classification/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/it-it/bluexp-classification/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">Tutti i documenti</a>
+    </li>
+    
+    
+    <li class="">
+      <a href="https://docs.netapp.com/us-en/cloud/">Documentazione Cloud</a>
+    </li>
+    
+
+    
+    <li class="">
+      <a href="https://docs.netapp.com/it-it/bluexp-family/">
+        BlueXP
+      </a>
+    </li>
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/it-it/bluexp-classification/">-->
+      BlueXP classification
+    <!--</a>-->
+  </div>
+</div>
+
+            
+
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/it-it/bluexp-classification/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/it-it/bluexp-classification/search.html" 
+        data-type="widget"
+        data-placeholder="Esplora la documentazione"
+        data-no-results-found="Nessun risultato per {query}"
+        data-did-you-mean="Cerca {suggestion}."
+        data-no-results-found-did-you-mean="Nessun risultato per {query}. Intendi {suggestion}?"
+        data-results-found="{hitCount} risultati trovati"
+        data-error-message="Si è verificato un errore. Riprova."
+        data-error-reset="Reimposta ricerca"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Documenti di classificazione BlueXP"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/bluexp-classification/index.html">
+        Documenti di classificazione BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Note di rilascio"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/bluexp-classification/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/bluexp-classification/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Note di rilascio</div>-->
+         Note di rilascio
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Novità"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/whats-new.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/whats-new.html">
+        Novità
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Limitazioni note"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/reference-limitations.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/reference-limitations.html">
+        Limitazioni note
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Inizia subito"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/bluexp-classification/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/bluexp-classification/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Inizia subito</div>-->
+         Inizia subito
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Scopri di più sulla classificazione BlueXP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/concept-cloud-compliance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/concept-cloud-compliance.html">
+        Scopri di più sulla classificazione BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Implementare la classificazione BlueXP"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/bluexp-classification/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/bluexp-classification/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Implementare la classificazione BlueXP</div>-->
+         Implementare la classificazione BlueXP
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Implementazione nel cloud con BlueXP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-deploy-cloud-compliance.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/bluexp-classification/task-deploy-cloud-compliance.html">
+        Implementazione nel cloud con BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installazione su un host Linux con accesso a Internet"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-deploy-compliance-onprem.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/bluexp-classification/task-deploy-compliance-onprem.html">
+        Installazione su un host Linux con accesso a Internet
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installazione on-premise senza accesso a Internet"
+      data-li-level="3#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-deploy-compliance-dark-site.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/bluexp-classification/task-deploy-compliance-dark-site.html">
+        Installazione on-premise senza accesso a Internet
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verificare che l'host Linux sia pronto per installare la classificazione BlueXP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-test-linux-system.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/bluexp-classification/task-test-linux-system.html">
+        Verificare che l'host Linux sia pronto per installare la classificazione BlueXP
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Attivare la scansione sulle origini dati"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/bluexp-classification/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/bluexp-classification/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Attivare la scansione sulle origini dati</div>-->
+         Attivare la scansione sulle origini dati
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Volumes ONTAP e ONTAP on-premise"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-getting-started-compliance.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/bluexp-classification/task-getting-started-compliance.html">
+        Cloud Volumes ONTAP e ONTAP on-premise
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Azure NetApp Files"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-scanning-anf.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/bluexp-classification/task-scanning-anf.html">
+        Azure NetApp Files
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Amazon FSX per ONTAP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-scanning-fsx.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/bluexp-classification/task-scanning-fsx.html">
+        Amazon FSX per ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Bucket Amazon S3"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-scanning-s3.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/bluexp-classification/task-scanning-s3.html">
+        Bucket Amazon S3
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Schemi di database"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-scanning-databases.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/bluexp-classification/task-scanning-databases.html">
+        Schemi di database
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Account OneDrive"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-scanning-onedrive.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/bluexp-classification/task-scanning-onedrive.html">
+        Account OneDrive
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Account SharePoint"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-scanning-sharepoint.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/bluexp-classification/task-scanning-sharepoint.html">
+        Account SharePoint
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Account Google Drive"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-scanning-google-drive.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/bluexp-classification/task-scanning-google-drive.html">
+        Account Google Drive
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Condivisioni di file"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-scanning-file-shares.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/bluexp-classification/task-scanning-file-shares.html">
+        Condivisioni di file
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage a oggetti"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-scanning-object-storage.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/bluexp-classification/task-scanning-object-storage.html">
+        Storage a oggetti
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Integrare Active Directory"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-add-active-directory-datasense.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-add-active-directory-datasense.html">
+        Integrare Active Directory
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Impostare la licenza"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-licensing-datasense.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-licensing-datasense.html">
+        Impostare la licenza
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FAQ"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/faq-cloud-compliance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/faq-cloud-compliance.html">
+        FAQ
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilizzare la classificazione BlueXP"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/bluexp-classification/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/bluexp-classification/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Utilizzare la classificazione BlueXP</div>-->
+         Utilizzare la classificazione BlueXP
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizza i dettagli di governance relativi ai tuoi dati"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-controlling-governance-data.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-controlling-governance-data.html">
+        Visualizza i dettagli di governance relativi ai tuoi dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizza i dettagli di conformità relativi ai tuoi dati"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-controlling-private-data.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-controlling-private-data.html">
+        Visualizza i dettagli di conformità relativi ai tuoi dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Categorie di dati privati"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/reference-private-data-categories.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/reference-private-data-categories.html">
+        Categorie di dati privati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Analizzare i dati"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-investigate-data.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-investigate-data.html">
+        Analizzare i dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Organizzare i dati privati"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-org-private-data.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-org-private-data.html">
+        Organizzare i dati privati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Assegnare policy ai dati"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-using-policies.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-using-policies.html">
+        Assegnare policy ai dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestisci i tuoi dati privati"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-managing-highlights.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-managing-highlights.html">
+        Gestisci i tuoi dati privati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitorare e gestire gli eventi di accesso ai file"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-manage-file-access-events.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-manage-file-access-events.html">
+        Monitorare e gestire gli eventi di accesso ai file
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare le impostazioni di scansione"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="task-managing-repo-scanning.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-managing-repo-scanning.html">
+        Modificare le impostazioni di scansione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Generare report sulla conformità"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-generating-compliance-reports.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-generating-compliance-reports.html">
+        Generare report sulla conformità
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire la classificazione BlueXP"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/bluexp-classification/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/bluexp-classification/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Gestire la classificazione BlueXP</div>-->
+         Gestire la classificazione BlueXP
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiungere identificatori di dati personali personalizzati"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-managing-data-fusion.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-managing-data-fusion.html">
+        Aggiungere identificatori di dati personali personalizzati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Escludere le directory dalla scansione"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-exclude-scan-paths.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-exclude-scan-paths.html">
+        Escludere le directory dalla scansione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzare lo stato delle azioni di classificazione di BlueXP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-view-compliance-actions.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-view-compliance-actions.html">
+        Visualizzare lo stato delle azioni di classificazione di BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Definire gli ID di gruppo esistenti come "aperti all'organizzazione""
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-add-group-id-as-open.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-add-group-id-as-open.html">
+        Definire gli ID di gruppo esistenti come "aperti all'organizzazione"
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Controllare la cronologia delle azioni di classificazione di BlueXP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-audit-data-sense-actions.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-audit-data-sense-actions.html">
+        Controllare la cronologia delle azioni di classificazione di BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ridurre la velocità di scansione della classificazione BlueXP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-reduce-scan-speed.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-reduce-scan-speed.html">
+        Ridurre la velocità di scansione della classificazione BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Rimuovere le origini dati dalla classificazione BlueXP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-managing-compliance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-managing-compliance.html">
+        Rimuovere le origini dati dalla classificazione BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Disinstallare la classificazione BlueXP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-uninstall-data-sense.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-uninstall-data-sense.html">
+        Disinstallare la classificazione BlueXP
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Riferimento"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/bluexp-classification/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/bluexp-classification/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Riferimento</div>-->
+         Riferimento
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tipi di istanze di classificazione BlueXP supportati"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/reference-instance-types.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/reference-instance-types.html">
+        Tipi di istanze di classificazione BlueXP supportati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Metadati raccolti dalle origini dati"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/reference-collected-metadata.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/reference-collected-metadata.html">
+        Metadati raccolti dalle origini dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Accedi al sistema di classificazione BlueXP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/reference-log-in-to-instance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/reference-log-in-to-instance.html">
+        Accedi al sistema di classificazione BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="API di classificazione BlueXP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/api-classification.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/api-classification.html">
+        API di classificazione BlueXP
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conoscenza e supporto"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/bluexp-classification/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/bluexp-classification/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Conoscenza e supporto</div>-->
+         Conoscenza e supporto
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Registrati per ricevere assistenza"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-support-registration.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-support-registration.html">
+        Registrati per ricevere assistenza
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Richiedi assistenza"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/task-get-help.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/bluexp-classification/task-get-help.html">
+        Richiedi assistenza
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Note legali"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task-deploy-compliance-dark-site.html" 
+      dale-entry-url="/legal-notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/bluexp-classification/legal-notices.html">
+        Note legali
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/it-it/bluexp-classification"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/it-it/bluexp-classification"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/it-it/bluexp-classification/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">Installare la classificazione BlueXP su un host senza accesso a Internet</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2024-03-07 01:38:25 +0000">03/07/2024</time>
+        
+    
+    
+        <span>Collaboratori
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/it-it/bluexp-classification/images/discuss-sm.svg" alt="" class="github-icon" />Suggerisci modifiche</span>
+        <img src="/it-it/bluexp-classification/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/it-it/bluexp-classification/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/bluexp-classification.it-it/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/it-it/bluexp-classification/task-deploy-compliance-dark-site.html&page-title=Installare la classificazione BlueXP su un host senza accesso a Internet" class="page-nav-contribute-link" role="button">Richiedi modifiche alla documentazione</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/bluexp-classification/blob/main/task-deploy-compliance-dark-site.adoc" class="page-nav-contribute-link" role="button">Modifica questa pagina</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Scopri come collaborare</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/it-it/bluexp-classification/images/pdf-icon.png" alt="" width="16" height="16"/>PDF<img src="/it-it/bluexp-classification/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/it-it/bluexp-classification/pdfs/fullsite-sidebar/Documentazione_sulla_classificazione_BlueXP.pdf" >
+                    <img src="/it-it/bluexp-classification/images/pdf-icon.png" alt="" width="16" height="16"/>PDF del sito di questa documentazione</a>
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/bluexp-classification/pdfs/sidebar/Note_di_rilascio.pdf" 
+            
+          >
+            <img src="/it-it/bluexp-classification/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Note di rilascio
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/bluexp-classification/pdfs/sidebar/Inizia_subito.pdf" 
+            
+          >
+            <img src="/it-it/bluexp-classification/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Inizia subito
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/bluexp-classification/pdfs/sidebar/Implementare_la_classificazione_BlueXP.pdf" 
+            
+          >
+            <img src="/it-it/bluexp-classification/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Implementare la classificazione BlueXP
+          </a>
+          
+
+
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/bluexp-classification/pdfs/sidebar/Attivare_la_scansione_sulle_origini_dati.pdf" 
+            
+          >
+            <img src="/it-it/bluexp-classification/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Attivare la scansione sulle origini dati
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/bluexp-classification/pdfs/sidebar/Utilizzare_la_classificazione_BlueXP.pdf" 
+            
+          >
+            <img src="/it-it/bluexp-classification/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Utilizzare la classificazione BlueXP
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/bluexp-classification/pdfs/sidebar/Gestire_la_classificazione_BlueXP.pdf" 
+            
+          >
+            <img src="/it-it/bluexp-classification/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Gestire la classificazione BlueXP
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/bluexp-classification/pdfs/sidebar/Riferimento.pdf" 
+            
+          >
+            <img src="/it-it/bluexp-classification/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Riferimento
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/bluexp-classification/pdfs/sidebar/Conoscenza_e_supporto.pdf" 
+            
+          >
+            <img src="/it-it/bluexp-classification/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Conoscenza e supporto
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/it-it/bluexp-classification/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>Raccolta di documenti PDF separati<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>Completare alcuni passaggi per installare la classificazione BlueXP su un host Linux in un sito on-premise che non dispone di accesso a Internet, noto anche come "modalità privata". Questo tipo di installazione è perfetto per i siti sicuri.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html" target="_blank" rel="noopener">"Scopri le diverse modalità di implementazione per la classificazione BlueXP Connector e BlueXP"</a>.</p>
+</div>
+<div class="paragraph">
+<p>Nota: È anche possibile <a href="task-deploy-compliance-onprem.html">"Implementare la classificazione BlueXP in un sito on-premise con accesso a Internet"</a>.</p>
+</div>
+<div class="paragraph">
+<p>Lo script di installazione della classificazione BlueXP inizia verificando se il sistema e l'ambiente soddisfano i prerequisiti richiesti. Se tutti i prerequisiti sono soddisfatti, viene avviata l'installazione. Se si desidera verificare i prerequisiti indipendentemente dall'esecuzione dell'installazione di classificazione BlueXP, è possibile scaricare un pacchetto software separato che esegue solo i prerequisiti. <a href="task-test-linux-system.html">"Scopri come verificare se il tuo host Linux è pronto per installare la classificazione BlueXP"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="origini-dati-supportate">Origini dati supportate</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Quando viene installata la modalità privata (talvolta chiamata sito "offline" o "dark"), la classificazione BlueXP può eseguire la scansione dei dati solo da origini dati locali al sito on-premise. Al momento, la classificazione BlueXP è in grado di eseguire la scansione delle seguenti origini dati <strong>locali</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sistemi ONTAP on-premise</p>
+</li>
+<li>
+<p>Schemi di database</p>
+</li>
+<li>
+<p>Account SharePoint on-premise (SharePoint Server)</p>
+</li>
+<li>
+<p>Condivisioni di file NFS o CIFS non NetApp</p>
+</li>
+<li>
+<p>Storage a oggetti che utilizza il protocollo S3 (Simple Storage Service)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Attualmente non è disponibile alcun supporto per la scansione di Cloud Volumes ONTAP, Azure NetApp Files, FSX per ONTAP, AWS S3 o Google Drive, OneDrive o SharePoint Online quando la classificazione BlueXP viene implementata in modalità privata.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="limitazioni">Limitazioni</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La maggior parte delle funzionalità di classificazione BlueXP funziona quando viene implementato in un sito senza accesso a Internet. Tuttavia, alcune funzioni che richiedono l'accesso a Internet non sono supportate, ad esempio:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Gestione delle etichette AIP (Microsoft Azure Information Protection)</p>
+</li>
+<li>
+<p>Invio di avvisi e-mail agli utenti di BlueXP quando alcuni criteri critici restituiscono risultati</p>
+</li>
+<li>
+<p>Impostazione dei ruoli BlueXP per diversi utenti (ad esempio, account Admin o Compliance Viewer)</p>
+</li>
+<li>
+<p>Copia e sincronizzazione dei file di origine utilizzando la copia e la sincronizzazione BlueXP</p>
+</li>
+<li>
+<p>Ricezione del feedback dell'utente</p>
+</li>
+<li>
+<p>Aggiornamenti software automatici da BlueXP</p>
+<div class="paragraph">
+<p>Sia il connettore BlueXP che la classificazione BlueXP richiederanno aggiornamenti manuali periodici per abilitare nuove funzionalità. La versione della classificazione BlueXP è disponibile nella parte inferiore delle pagine dell'interfaccia utente di classificazione BlueXP. Controllare <a href="whats-new.html">"Classificazione BlueXP - Note di rilascio"</a> per vedere le nuove funzionalità di ciascuna release e se si desidera. Quindi, seguire i passaggi da a. <a href="https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode" target="_blank" rel="noopener">"Aggiornare BlueXP Connector"</a> e. <a href="#aggiornare-il-software-di-classificazione-bluexp">Aggiorna il software di classificazione BlueXP</a>.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="avvio-rapido">Avvio rapido</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Inizia subito seguendo questi passaggi o scorri verso il basso fino alle sezioni rimanenti per ottenere dettagli completi.</p>
+</div>
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png" alt="Uno"></span> Installare il connettore BlueXP</div>
+<p>Se non si dispone già di un connettore installato in modalità privata, <a href="https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html" target="_blank" rel="noopener">"Implementare il connettore"</a> Su un host Linux.</p>
+</div>
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png" alt="Due"></span> Esaminare i prerequisiti di classificazione di BlueXP</div>
+<p>Assicurarsi che il sistema Linux soddisfi i requisiti <a href="#preparare-il-sistema-host-linux">requisiti dell'host</a>, che abbia installato tutto il software necessario e che il tuo ambiente offline soddisfi i requisiti <a href="#verificare-i-prerequisiti-di-classificazione-di-bluexp-e-bluexp">permessi e connettività</a>.</p>
+</div>
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png" alt="Tre"></span> Scarica e implementa la classificazione BlueXP</div>
+<p>Scaricare il software di classificazione BlueXP dal NetApp Support Site e copiare il file di installazione sull'host Linux che si desidera utilizzare. Quindi, avviare l'installazione guidata e seguire le istruzioni per implementare l'istanza di classificazione BlueXP.</p>
+</div>
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png" alt="Quattro"></span> Iscriviti al servizio di classificazione BlueXP</div>
+<p>I primi 1 TB di dati che la classificazione BlueXP scansiona in BlueXP sono gratuiti per 30 giorni. Una licenza BYOL di NetApp è necessaria per continuare la scansione dei dati dopo tale data.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="installare-il-connettore-bluexp">Installare il connettore BlueXP</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Se BlueXP Connector non è già installato in modalità privata, <a href="https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html" target="_blank" rel="noopener">"Implementare il connettore"</a> Su un host Linux nel tuo sito offline.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="preparare-il-sistema-host-linux">Preparare il sistema host Linux</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Il software di classificazione BlueXP deve essere eseguito su un host che soddisfi requisiti specifici del sistema operativo, requisiti di RAM, requisiti software e così via.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>La classificazione BlueXP non è supportata su un host condiviso con altre applicazioni: L'host deve essere un host dedicato.</p>
+</li>
+<li>
+<p>Quando si costruisce il sistema host in sede, è possibile scegliere tra tre dimensioni del sistema a seconda delle dimensioni del set di dati che si prevede di sottoporre a scansione di classificazione BlueXP.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 18.4782%;">
+<col style="width: 18.4782%;">
+<col style="width: 29.3478%;">
+<col style="width: 33.6958%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Dimensioni del sistema</th>
+<th class="tableblock halign-left valign-top">CPU</th>
+<th class="tableblock halign-left valign-top">RAM (la memoria di swap deve essere disattivata)</th>
+<th class="tableblock halign-left valign-top">Disco</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Molto grande</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32 CPU</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">128 GB DI RAM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 TiB SSD su /, o.<br>
+- 100 GiB disponibile su /opt<br>
+895 GiB disponibile su /var/lib/docker<br>
+- 5 GiB su /tmp</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Grande</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 CPU</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64 GB DI RAM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500 GiB SSD ON /, OR<br>
+- 100 GiB disponibile su /opt<br>
+- 395 GiB disponibile su /var/lib/docker<br>
+- 5 GiB su /tmp</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Medio</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8 CPU</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32 GB DI RAM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200 GiB SSD ON /, OR<br>
+- 50 GiB disponibile su /opt<br>
+- 145 GiB disponibile su /var/lib/docker<br>
+- 5 GiB su /tmp</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Piccolo</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8 CPU</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 GB DI RAM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100 GiB SSD ON /, OR<br>
+- 50 GiB disponibile su /opt<br>
+- 45 GiB disponibile su /var/lib/docker<br>
+- 5 GiB su /tmp</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Tenere presente che esistono limitazioni quando si utilizzano sistemi di dimensioni inferiori. Vedere <a href="concept-cloud-compliance.html#using-a-smaller-instance-type">"Utilizzando un tipo di istanza più piccolo"</a> per ulteriori informazioni.</p>
+</div>
+</li>
+<li>
+<p>Quando si implementa un'istanza di calcolo nel cloud per l'installazione della classificazione BlueXP, si consiglia di utilizzare un sistema che soddisfi i requisiti di sistema "grandi" indicati in precedenza:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Tipo di istanza AWS EC2</strong>: Si consiglia "m6i.4xlarge". <a href="reference-instance-types.html#aws-instance-types" target="_blank" rel="noopener">"Vedere altri tipi di istanze AWS"</a>.</p>
+</li>
+<li>
+<p><strong>Dimensione delle macchine virtuali Azure</strong>: Si consiglia "Standard_D16s_v3". <a href="reference-instance-types.html#azure-instance-types" target="_blank" rel="noopener">"Vedere altri tipi di istanze di Azure"</a>.</p>
+</li>
+<li>
+<p><strong>Tipo di macchina GCP</strong>: Si consiglia "n2-standard-16". <a href="reference-instance-types.html#gcp-instance-types" target="_blank" rel="noopener">"Vedere altri tipi di istanze GCP"</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>UNIX folder permissions</strong>: Sono richieste le seguenti autorizzazioni minime per UNIX:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Cartella</th>
+<th class="tableblock halign-left valign-top">Permessi minimi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/tmp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rwxrwxrwt</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/opz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rwxr-xr-x</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/var/lib/docker</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rwx------</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/usr/lib/systemd/system</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rwxr-xr-x</code></p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Sistema operativo</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>I seguenti sistemi operativi richiedono l'utilizzo del motore dei container Docker:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Red Hat Enterprise Linux versione 7,8 e 7,9</p>
+</li>
+<li>
+<p>CentOS versione 7,8 e 7,9</p>
+</li>
+<li>
+<p>Ubuntu 22,04 (richiede la classificazione BlueXP versione 1,23 o superiore)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>I seguenti sistemi operativi richiedono l'utilizzo del motore del container Podman e richiedono la classificazione BlueXP versione 1,26 o superiore:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Red Hat Enterprise Linux versione 9,0, 9,1 e 9,2</p>
+<div class="paragraph">
+<p>Tenere presente che le seguenti funzioni non sono attualmente supportate quando si utilizza RHEL 9.x:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Installazione in un luogo buio</p>
+</li>
+<li>
+<p>Scansione distribuita, utilizzando un nodo scanner master e nodi scanner remoti</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Red Hat Subscription Management</strong>: L'host deve essere registrato con Red Hat Subscription Management. Se non è registrato, il sistema non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione.</p>
+</li>
+<li>
+<p><strong>Software aggiuntivo</strong>: È necessario installare il seguente software sull'host prima di installare la classificazione BlueXP:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A seconda del sistema operativo in uso, è necessario installare uno dei motori container:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Docker Engine versione 19.3.1 o superiore. <a href="https://docs.docker.com/engine/install/" target="_blank" rel="noopener">"Visualizzare le istruzioni di installazione"</a>.</p>
+<div class="paragraph">
+<p><a href="https://youtu.be/Ogoufel1q6c" target="_blank" rel="noopener">"Guarda questo video"</a> Per una rapida dimostrazione dell'installazione di Docker su CentOS.</p>
+</div>
+</li>
+<li>
+<p>Podman versione 4 o superiore. Per installare Podman, aggiorna i pacchetti di sistema (<code>sudo yum update -y</code>), quindi installare Podman (<code>sudo yum install podman -y</code>).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Python versione 3,6 o superiore. <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">"Visualizzare le istruzioni di installazione"</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Considerazioni NTP</strong>: NetApp consiglia di configurare il sistema di classificazione BlueXP per utilizzare un servizio NTP (Network Time Protocol). L'ora deve essere sincronizzata tra il sistema di classificazione BlueXP e il sistema del connettore BlueXP.</p>
+</li>
+<li>
+<p><strong>Considerazioni su Firewalld</strong>: Se si intende utilizzare <code>firewalld</code>, Si consiglia di abilitarla prima di installare la classificazione BlueXP. Eseguire i seguenti comandi per configurare <code>firewalld</code> In modo che sia compatibile con la classificazione BlueXP:</p>
+<div class="literalblock">
+<div class="content">
+<pre>firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=8080/tcp
+firewall-cmd --permanent --add-port=443/tcp
+firewall-cmd --reload</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Devi riavviare Docker o Podman ogni volta che abiliti o aggiorni il sistema <code>firewalld</code> impostazioni.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/bluexp-classification/images/tip.svg" alt="Suggerimento">
+</td>
+<td class="content">
+L'indirizzo IP del sistema host di classificazione BlueXP non può essere modificato dopo l'installazione.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="verificare-i-prerequisiti-di-classificazione-di-bluexp-e-bluexp">Verificare i prerequisiti di classificazione di BlueXP e BlueXP</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Esaminare i seguenti prerequisiti per assicurarsi di disporre di una configurazione supportata prima di implementare la classificazione BlueXP.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Assicurarsi che il connettore disponga delle autorizzazioni per distribuire le risorse e creare gruppi di protezione per l'istanza di classificazione BlueXP. Le autorizzazioni BlueXP più recenti sono disponibili in <a href="https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html" target="_blank" rel="noopener">"Le policy fornite da NetApp"</a>.</p>
+</li>
+<li>
+<p>Assicurarsi che sia possibile mantenere in esecuzione la classificazione BlueXP. L'istanza di classificazione BlueXP deve rimanere attiva per eseguire una scansione continua dei dati.</p>
+</li>
+<li>
+<p>Garantire la connettività del browser Web alla classificazione BlueXP. Una volta attivata la classificazione BlueXP, assicurarsi che gli utenti accedano all'interfaccia BlueXP da un host che dispone di una connessione all'istanza di classificazione BlueXP.</p>
+<div class="paragraph">
+<p>L'istanza di classificazione BlueXP utilizza un indirizzo IP privato per garantire che i dati indicizzati non siano accessibili ad altri. Di conseguenza, il browser Web utilizzato per accedere a BlueXP deve disporre di una connessione a tale indirizzo IP privato. Tale connessione può provenire da un host che si trova all'interno della stessa rete dell'istanza di classificazione BlueXP.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="verificare-che-tutte-le-porte-richieste-siano-attivate">Verificare che tutte le porte richieste siano attivate</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Assicurarsi che tutte le porte richieste siano aperte per la comunicazione tra il connettore, la classificazione BlueXP, Active Directory e le origini dati.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Tipo di connessione</th>
+<th class="tableblock halign-left valign-top">Porte</th>
+<th class="tableblock halign-left valign-top">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connettore &lt;&gt; classificazione BlueXP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8080 (TCP), 6000 (TCP), 443 (TCP) E 80</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Il gruppo di sicurezza per il connettore deve consentire il traffico in entrata e in uscita sulle porte 6000 e 443 da e verso l'istanza di classificazione BlueXP.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>È necessaria la porta 6000 per fare in modo che la licenza BYOL di classificazione BlueXP funzioni in un sito oscuro.</p>
+</li>
+<li>
+<p>La porta 8080 dovrebbe essere aperta in modo da poter vedere l'avanzamento dell'installazione in BlueXP.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connettore &lt;&gt; ONTAP cluster (NAS)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">443 (TCP)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BlueXP rileva i cluster ONTAP utilizzando HTTPS. Se si utilizzano criteri firewall personalizzati, questi devono soddisfare i seguenti requisiti:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>L'host del connettore deve consentire l'accesso HTTPS in uscita attraverso la porta 443. Se il connettore si trova nel cloud, tutte le comunicazioni in uscita sono consentite dal gruppo di sicurezza predefinito.</p>
+</li>
+<li>
+<p>Il cluster ONTAP deve consentire l'accesso HTTPS in entrata attraverso la porta 443. Il criterio firewall predefinito "mgmt" consente l'accesso HTTPS in entrata da tutti gli indirizzi IP. Se questo criterio predefinito è stato modificato o se è stato creato un criterio firewall personalizzato, è necessario associare il protocollo HTTPS a tale criterio e abilitare l'accesso dall'host del connettore.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Classificazione BlueXP &lt;&gt; cluster ONTAP</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Per NFS - 111 (TCP/UDP) e 2049 (TCP/UDP)</p>
+</li>
+<li>
+<p>Per CIFS - 139 (TCP/UDP) e 445 (TCP/UDP)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>La classificazione BlueXP richiede una connessione di rete a ogni subnet Cloud Volumes ONTAP o sistema ONTAP on-premise. I gruppi di protezione per Cloud Volumes ONTAP devono consentire le connessioni in entrata dall'istanza di classificazione BlueXP.</p>
+</div>
+<div class="paragraph">
+<p>Assicurarsi che queste porte siano aperte per l'istanza di classificazione BlueXP:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Per NFS - 111 e 2049</p>
+</li>
+<li>
+<p>Per CIFS - 139 e 445</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I criteri di esportazione dei volumi NFS devono consentire l'accesso dall'istanza di classificazione BlueXP.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Classificazione BlueXP &lt;&gt; Active Directory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">389 (TCP E UDP), 636 (TCP), 3268 (TCP) E 3269 (TCP)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>È necessario che sia già stata configurata una Active Directory per gli utenti della società. Inoltre, la classificazione BlueXP richiede le credenziali di Active Directory per eseguire la scansione dei volumi CIFS.</p>
+</div>
+<div class="paragraph">
+<p>È necessario disporre delle informazioni per Active Directory:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>DNS Server IP Address (Indirizzo IP server DNS) o Multiple IP Address (indirizzi IP multipli)</p>
+</li>
+<li>
+<p>Nome utente e password del server</p>
+</li>
+<li>
+<p>Domain Name (Nome di Active Directory) (Nome di dominio)</p>
+</li>
+<li>
+<p>Se si utilizza o meno LDAP sicuro (LDAPS)</p>
+</li>
+<li>
+<p>Porta server LDAP (generalmente 389 per LDAP e 636 per LDAP sicuro)</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se si utilizzano più host di classificazione BlueXP per fornire ulteriore potenza di elaborazione per eseguire la scansione delle origini dati, è necessario attivare porte/protocolli aggiuntivi. <a href="task-deploy-compliance-dark-site.html#multi-host-installation-for-large-configurations">"Vedere i requisiti aggiuntivi per le porte"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="installare-la-classificazione-bluexp-sullhost-linux-on-premise">Installare la classificazione BlueXP sull'host Linux on-premise</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Per le configurazioni tipiche, il software viene installato su un singolo sistema host. <a href="task-deploy-compliance-dark-site.html#single-host-installation-for-typical-configurations">"Consulta questa procedura"</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/diagram_deploy_onprem_single_host_no_internet.png" alt="Un diagramma che mostra la posizione delle origini dati che è possibile analizzare quando si utilizza una singola istanza di classificazione BlueXP implementata on-premise senza accesso a Internet."></span></p>
+</div>
+<div class="paragraph">
+<p>Per configurazioni molto grandi in cui si eseguono scansioni di petabyte di dati, è possibile includere più host per fornire ulteriore potenza di elaborazione. <a href="task-deploy-compliance-dark-site.html#multi-host-installation-for-large-configurations">"Consulta questa procedura"</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/diagram_deploy_onprem_multi_host_no_internet.png" alt="Un diagramma che mostra la posizione delle origini dati che è possibile analizzare quando si utilizzano più istanze di classificazione BlueXP distribuite on-premise senza accesso a Internet."></span></p>
+</div>
+<div class="sect2">
+<h3 id="installazione-a-host-singolo-per-configurazioni-tipiche">Installazione a host singolo per configurazioni tipiche</h3>
+<div class="paragraph">
+<p>Seguire questi passaggi quando si installa il software di classificazione BlueXP su un singolo host on-premise in un ambiente offline.</p>
+</div>
+<div class="paragraph">
+<p>Tenere presente che tutte le attività di installazione vengono registrate durante l'installazione della classificazione BlueXP. In caso di problemi durante l'installazione, è possibile visualizzare il contenuto del registro di controllo dell'installazione. È scritto a. <code>/opt/netapp/install_logs/</code>. <a href="task-audit-data-sense-actions.html#access-the-log-files">"Per ulteriori informazioni, fare clic qui"</a>.</p>
+</div>
+<div class="ulist">
+<div class="title">Di cosa hai bisogno</div>
+<ul>
+<li>
+<p>Verificare che il sistema Linux soddisfi i requisiti <a href="#preparare-il-sistema-host-linux">requisiti dell'host</a>.</p>
+</li>
+<li>
+<p>Verificare di aver installato i due pacchetti software prerequisiti (Docker Engine o Podman e Python 3).</p>
+</li>
+<li>
+<p>Assicurarsi di disporre dei privilegi di root sul sistema Linux.</p>
+</li>
+<li>
+<p>Verificare che l'ambiente offline soddisfi i requisiti <a href="#verificare-i-prerequisiti-di-classificazione-di-bluexp-e-bluexp">permessi e connettività</a>.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Su un sistema configurato tramite Internet, scaricare il software di classificazione BlueXP dal <a href="https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/" target="_blank" rel="noopener">"Sito di supporto NetApp"</a>. Il file da selezionare è denominato <strong>DataSense-offline-bundle-&lt;version&gt;.tar.gz</strong>.</p>
+</li>
+<li>
+<p>Copiare il pacchetto di installazione sull'host Linux che si intende utilizzare in modalità privata.</p>
+</li>
+<li>
+<p>Decomprimere il pacchetto di installazione sul computer host, ad esempio:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-cli" data-lang="cli">tar -xzf DataSense-offline-bundle-v1.25.0.tar.gz</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In questo modo si estraggono il software richiesto e il file di installazione <strong>cc_onrem_installer.tar.gz</strong>.</p>
+</div>
+</li>
+<li>
+<p>Decomprimere il file di installazione sul computer host, ad esempio:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-cli" data-lang="cli">tar -xzf cc_onprem_installer.tar.gz</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Avviare BlueXP e selezionare <strong>Governance &gt; Classification</strong>.</p>
+</li>
+<li>
+<p>Fare clic su <strong>Activate Data Sense</strong> (attiva rilevamento dati).</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cloud_compliance_deploy_start.png" alt="Una schermata che mostra la selezione del pulsante per attivare la classificazione BlueXP."></span></p>
+</div>
+</li>
+<li>
+<p>Fare clic su <strong>Deploy</strong> per avviare l'installazione on-premise.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cloud_compliance_deploy_darksite.png" alt="Una schermata che mostra la selezione del pulsante per implementare la classificazione BlueXP on-premise."></span></p>
+</div>
+</li>
+<li>
+<p>Viene visualizzata la finestra di dialogo <em>Deploy Data Sense on Premise</em>. Copiare il comando fornito (ad esempio: <code>sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq --darksite</code>) e incollarlo in un file di testo per poterlo utilizzare in un secondo momento. Quindi fare clic su <strong>Chiudi</strong> per chiudere la finestra di dialogo.</p>
+</li>
+<li>
+<p>Sul computer host, immettere il comando copiato e seguire una serie di prompt oppure fornire il comando completo che include tutti i parametri richiesti come argomenti della riga di comando.</p>
+<div class="paragraph">
+<p>Tenere presente che il programma di installazione esegue una pre-verifica per assicurarsi che i requisiti di sistema e di rete siano stati soddisfatti per una corretta installazione.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Inserire i parametri come richiesto:</th>
+<th class="tableblock halign-left valign-top">Immettere il comando completo:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Incollare le informazioni copiate dal passaggio 8:<br>
+<code>sudo ./install.sh -a &lt;account_id&gt; -c &lt;client_id&gt; -t &lt;user_token&gt; --darksite</code></p>
+</li>
+<li>
+<p>Immettere l'indirizzo IP o il nome host del computer host di classificazione BlueXP in modo che sia possibile accedervi dal sistema di connettori.</p>
+</li>
+<li>
+<p>Inserire l'indirizzo IP o il nome host del computer host BlueXP Connector in modo che sia possibile accedervi dal sistema di classificazione BlueXP.</p>
+</li>
+</ol>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In alternativa, è possibile creare l'intero comando in anticipo, fornendo i parametri host necessari:<br>
+<code>sudo ./install.sh -a &lt;account_id&gt; -c &lt;client_id&gt; -t &lt;user_token&gt; --host &lt;ds_host&gt; --manager-host &lt;cm_host&gt; --no-proxy --darksite</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Valori variabili:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Account_id</em> = ID account NetApp</p>
+</li>
+<li>
+<p><em>Client_id</em> = ID client del connettore (aggiungere il suffisso "client" all'ID client se non è già presente)</p>
+</li>
+<li>
+<p><em>User_token</em> = token di accesso utente JWT</p>
+</li>
+<li>
+<p><em>Ds_host</em> = indirizzo IP o nome host del sistema di classificazione BlueXP.</p>
+</li>
+<li>
+<p><em>Cm_host</em> = indirizzo IP o nome host del sistema BlueXP Connector.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Risultato</div>
+<p>Il programma di installazione della classificazione BlueXP installa i pacchetti, registra l'installazione e installa la classificazione BlueXP. L'installazione può richiedere da 10 a 20 minuti.</p>
+</div>
+<div class="paragraph">
+<p>Se la connessione tra il computer host e l'istanza del connettore avviene tramite la porta 8080, l'avanzamento dell'installazione viene visualizzato nella scheda classificazione BlueXP in BlueXP.</p>
+</div>
+<div class="paragraph">
+<div class="title">Cosa c'è di nuovo</div>
+<p>Dalla pagina di configurazione è possibile selezionare il locale <a href="task-getting-started-compliance.html">"Cluster ONTAP on-premise"</a> e. <a href="task-scanning-databases.html">"database"</a> che si desidera acquisire.</p>
+</div>
+<div class="paragraph">
+<p>Puoi anche farlo <a href="task-licensing-datasense.html#use-a-bluexp-classification-byol-license">"Impostare la licenza BYOL per la classificazione BlueXP"</a> Dalla pagina del portafoglio digitale BlueXP. Non ti verrà addebitato alcun costo fino al termine della prova gratuita di 30 giorni.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="installazione-multi-host-per-configurazioni-di-grandi-dimensioni">Installazione multi-host per configurazioni di grandi dimensioni</h3>
+<div class="paragraph">
+<p>Per configurazioni molto grandi in cui si eseguono scansioni di petabyte di dati, è possibile includere più host per fornire ulteriore potenza di elaborazione. Quando si utilizzano più sistemi host, il sistema primario è denominato <em>nodo Manager</em> e i sistemi aggiuntivi che forniscono potenza di elaborazione aggiuntiva sono denominati <em>nodi scanner</em>.</p>
+</div>
+<div class="paragraph">
+<p>Seguire questi passaggi quando si installa il software di classificazione BlueXP su più host on-premise in un ambiente offline.</p>
+</div>
+<div class="ulist">
+<div class="title">Di cosa hai bisogno</div>
+<ul>
+<li>
+<p>Verificare che tutti i sistemi Linux per i nodi Manager e scanner soddisfino il <a href="#preparare-il-sistema-host-linux">requisiti dell'host</a>.</p>
+</li>
+<li>
+<p>Verificare di aver installato i due pacchetti software prerequisiti (Docker Engine o Podman e Python 3).</p>
+</li>
+<li>
+<p>Assicurarsi di disporre dei privilegi di root sui sistemi Linux.</p>
+</li>
+<li>
+<p>Verificare che l'ambiente offline soddisfi i requisiti <a href="#verificare-i-prerequisiti-di-classificazione-di-bluexp-e-bluexp">permessi e connettività</a>.</p>
+</li>
+<li>
+<p>È necessario disporre degli indirizzi IP degli host dei nodi dello scanner che si intende utilizzare.</p>
+</li>
+<li>
+<p>Su tutti gli host devono essere attivati i seguenti protocolli e porte:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 22.2222%;">
+<col style="width: 61.1112%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Porta</th>
+<th class="tableblock halign-left valign-top">Protocolli</th>
+<th class="tableblock halign-left valign-top">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2377</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TCP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comunicazioni per la gestione del cluster</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7946</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TCP, UDP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comunicazione tra nodi</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4789</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UDP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sovrapporre il traffico di rete</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ESP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Traffico ESP (Encrypted IPSec Overlay Network)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">111</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TCP, UDP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server NFS per la condivisione dei file tra gli host (necessario da ciascun nodo scanner al nodo manager)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2049</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TCP, UDP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server NFS per la condivisione dei file tra gli host (necessario da ciascun nodo scanner al nodo manager)</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Seguire i passi da 1 a 8 dal <a href="task-deploy-compliance-dark-site.html#single-host-installation-for-typical-configurations">"Installazione su host singolo"</a> sul nodo manager.</p>
+</li>
+<li>
+<p>Come illustrato al punto 9, quando richiesto dal programma di installazione, è possibile immettere i valori richiesti in una serie di prompt oppure fornire i parametri richiesti come argomenti della riga di comando al programma di installazione.</p>
+<div class="paragraph">
+<p>Oltre alle variabili disponibili per un'installazione a singolo host, viene utilizzata una nuova opzione <strong>-n &lt;node_ip&gt;</strong> per specificare gli indirizzi IP dei nodi dello scanner. Gli IP di più nodi sono separati da una virgola.</p>
+</div>
+<div class="paragraph">
+<p>Ad esempio, questo comando aggiunge 3 nodi scanner:<br>
+<code>sudo ./install.sh -a &lt;account_id&gt; -c &lt;client_id&gt; -t &lt;user_token&gt; --host &lt;ds_host&gt; --manager-host &lt;cm_host&gt; <strong>-n &lt;node_ip1&gt;,&lt;node_ip2&gt;,&lt;node_ip3&gt;</strong> --no-proxy --darksite</code></p>
+</div>
+</li>
+<li>
+<p>Prima del completamento dell'installazione del nodo manager, viene visualizzata una finestra di dialogo con il comando di installazione necessario per i nodi dello scanner. Copiare il comando (ad esempio: <code>sudo ./node_install.sh -m 10.11.12.13 -t ABCDEF-1-3u69m1-1s35212</code>) e salvarlo in un file di testo.</p>
+</li>
+<li>
+<p>Su <strong>ciascun</strong> host nodo scanner:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Copiare il file del programma di installazione Data Sense (<strong>cc_onrem_installer.tar.gz</strong>) sul computer host.</p>
+</li>
+<li>
+<p>Decomprimere il file di installazione.</p>
+</li>
+<li>
+<p>Incollare ed eseguire il comando copiato al punto 3.</p>
+<div class="paragraph">
+<p>Una volta completata l'installazione su tutti i nodi dello scanner e collegati al nodo manager, l'installazione del nodo manager viene completata.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Risultato</div>
+<p>Il programma di installazione della classificazione BlueXP completa l'installazione dei pacchetti e registra l'installazione. L'installazione può richiedere da 15 a 25 minuti.</p>
+</div>
+<div class="paragraph">
+<div class="title">Cosa c'è di nuovo</div>
+<p>Dalla pagina di configurazione è possibile selezionare il locale <a href="task-getting-started-compliance.html">"Cluster ONTAP on-premise"</a> e locale <a href="task-scanning-databases.html">"database"</a> che si desidera acquisire.</p>
+</div>
+<div class="paragraph">
+<p>Puoi anche farlo <a href="task-licensing-datasense.html#use-a-bluexp-classification-byol-license">"Impostare la licenza BYOL per la classificazione BlueXP"</a> Dalla pagina del portafoglio digitale BlueXP. Non ti verrà addebitato alcun costo fino al termine della prova gratuita di 30 giorni.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="aggiornare-il-software-di-classificazione-bluexp">Aggiornare il software di classificazione BlueXP</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Poiché il software di classificazione BlueXP viene aggiornato regolarmente con nuove funzionalità, è necessario iniziare una routine per verificare periodicamente la presenza di nuove versioni per assicurarsi di utilizzare il software e le funzionalità più recenti. Sarà necessario aggiornare manualmente il software di classificazione BlueXP perché non è disponibile alcuna connessione a Internet per eseguire l'aggiornamento automaticamente.</p>
+</div>
+<div class="ulist">
+<div class="title">Prima di iniziare</div>
+<ul>
+<li>
+<p>Si consiglia di aggiornare il software BlueXP Connector alla versione più recente disponibile. <a href="https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode" target="_blank" rel="noopener">"Consultare la procedura di aggiornamento del connettore"</a>.</p>
+</li>
+<li>
+<p>A partire dalla classificazione BlueXP versione 1.24, è possibile eseguire aggiornamenti a qualsiasi versione futura del software.</p>
+<div class="paragraph">
+<p>Se il software di classificazione BlueXP esegue una versione precedente alla 1.24, è possibile aggiornare solo una versione principale alla volta. Ad esempio, se è installata la versione 1.21.x, è possibile eseguire l'aggiornamento solo alla versione 1.22.x. Se si dispone di alcune versioni principali, sarà necessario aggiornare il software più volte.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Su un sistema configurato tramite Internet, scaricare il software di classificazione BlueXP dal <a href="https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/" target="_blank" rel="noopener">"Sito di supporto NetApp"</a>. Il file da selezionare è denominato <strong>DataSense-offline-bundle-&lt;version&gt;.tar.gz</strong>.</p>
+</li>
+<li>
+<p>Copiare il bundle software sull'host Linux in cui è installata la classificazione BlueXP nel sito buio.</p>
+</li>
+<li>
+<p>Decomprimere il bundle software sul computer host, ad esempio:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-cli" data-lang="cli">tar -xvf DataSense-offline-bundle-v1.25.0.tar.gz</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In questo modo si estrae il file di installazione <strong>cc_onrem_installer.tar.gz</strong>.</p>
+</div>
+</li>
+<li>
+<p>Decomprimere il file di installazione sul computer host, ad esempio:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-cli" data-lang="cli">tar -xzf cc_onprem_installer.tar.gz</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In questo modo si estrae lo script di aggiornamento <strong>start_darksite_upgrade.sh</strong> e qualsiasi software di terze parti richiesto.</p>
+</div>
+</li>
+<li>
+<p>Eseguire lo script di aggiornamento sul computer host, ad esempio:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-cli" data-lang="cli">start_darksite_upgrade.sh</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Risultato</div>
+<p>Il software di classificazione BlueXP viene aggiornato sull'host. L'aggiornamento può richiedere da 5 a 10 minuti.</p>
+</div>
+<div class="paragraph">
+<p>Tenere presente che non è necessario alcun aggiornamento sui nodi dello scanner se è stata implementata la classificazione BlueXP su sistemi host multipli per la scansione di configurazioni molto grandi.</p>
+</div>
+<div class="paragraph">
+<p>Per verificare che il software sia stato aggiornato, controllare la versione nella parte inferiore delle pagine dell'interfaccia utente di classificazione di BlueXP.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/it-it/bluexp-classification/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/it-it/bluexp-classification/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">In questa pagina</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Condizioni per l'utilizzo</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Direttiva sulla privacy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Direttiva sui cookie</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Impostazioni cookie</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">Invia feedback su questa pagina</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/it-it/bluexp-classification/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/it-it/bluexp-classification/js/prism.js'></script>
+      <script type="text/javascript" src='/it-it/bluexp-classification/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/it-it/bluexp-classification/js/ie-tabbed-blocks.js'></script>
+    <script src='/it-it/bluexp-classification/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
