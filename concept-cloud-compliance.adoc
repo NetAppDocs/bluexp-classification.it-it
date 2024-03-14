@@ -297,7 +297,7 @@ Riconoscimento entità nome:: La classificazione BlueXP utilizza l'ai per estrar
 
 BlueXP implementa l'istanza di classificazione BlueXP con un gruppo di protezione che abilita le connessioni HTTP in entrata dall'istanza del connettore.
 
-Quando si utilizza BlueXP in modalità SaaS, la connessione a BlueXP viene servita tramite HTTPS e i dati privati inviati tra il browser e l'istanza di classificazione BlueXP sono protetti con crittografia end-to-end, il che significa che NetApp e terze parti non possono leggerli.
+Quando si utilizza BlueXP in modalità SaaS, la connessione a BlueXP viene servita su HTTPS e i dati privati inviati tra il browser e l'istanza di classificazione BlueXP sono protetti con una crittografia end-to-end basata su TLS 1,2, il che significa che NetApp e terze parti non possono leggerla.
 
 Le regole in uscita sono completamente aperte. L'accesso a Internet è necessario per installare e aggiornare il software di classificazione BlueXP e per inviare metriche di utilizzo.
 

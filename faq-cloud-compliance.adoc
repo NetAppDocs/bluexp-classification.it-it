@@ -320,7 +320,7 @@ link:concept-cloud-compliance.html#user-access-to-compliance-information["Scopri
 
 === Qualcuno può accedere ai dati privati inviati tra il browser e la classificazione BlueXP?
 
-No I dati privati inviati tra il browser e l'istanza di classificazione BlueXP sono protetti con crittografia end-to-end, il che significa che NetApp e terze parti non possono leggerli. La classificazione BlueXP non condividerà dati o risultati con NetApp a meno che non venga richiesto e approvato l'accesso.
+No I dati privati inviati tra il browser e l'istanza di classificazione BlueXP sono protetti con una crittografia end-to-end che utilizza TLS 1,2, il che significa che NetApp e terze parti non possono leggerli. La classificazione BlueXP non condividerà dati o risultati con NetApp a meno che non venga richiesto e approvato l'accesso.
 
 I dati sottoposti a scansione rimangono nell'ambiente in cui si opera.
 
