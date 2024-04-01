@@ -135,7 +135,7 @@ Ad esempio, è possibile visualizzare la posizione in cui gli ID prodotto intern
 
 Dopo aver aggiunto il regex, la classificazione BlueXP riavvia la scansione di tutte le origini dati. Una volta completata la scansione, i nuovi risultati verranno visualizzati nella dashboard di conformità della classificazione BlueXP nella sezione "risultati personali" e nella pagina delle indagini nel filtro "dati personali".
 
-Vedere https://regex101.com/[] se hai bisogno di assistenza nella creazione dell'espressione regolare di cui hai bisogno. Scegliere *Python* per il flavor per vedere i tipi di risultati che la classificazione BlueXP corrisponde all'espressione regolare.
+Per assistenza nella creazione dell'espressione regolare, fare riferimento alla sezione https://regex101.com/["Espressioni regolari 101"^]. Scegliere *Python* per il flavor per vedere i tipi di risultati che la classificazione BlueXP corrisponde all'espressione regolare. Il https://pythonium.net/regex["Pagina del tester Python Regex"^] è utile anche visualizzando una rappresentazione grafica dei pattern.
 
 
 NOTE: Attualmente non è consentito l'utilizzo di flag pattern quando si crea un regex - questo significa che non si dovrebbe utilizzare "/".

@@ -70,11 +70,11 @@ Tenere presente che esistono limitazioni quando si utilizzano sistemi di dimensi
 *** Ubuntu 22,04 (richiede la classificazione BlueXP versione 1,23 o superiore)
 
 
-** I seguenti sistemi operativi richiedono l'utilizzo del motore del container Podman e richiedono la classificazione BlueXP versione 1,26 o superiore:
+** I seguenti sistemi operativi richiedono l'utilizzo del motore del container Podman e richiedono la classificazione BlueXP versione 1,30 o superiore:
 +
-*** Red Hat Enterprise Linux versione 9,0, 9,1 e 9,2
+*** Red Hat Enterprise Linux versione 8,8, 9,0, 9,1, 9,2 e 9,3
 +
-Tenere presente che le seguenti funzioni non sono attualmente supportate quando si utilizza RHEL 9.x:
+Tenere presente che le seguenti funzioni non sono attualmente supportate quando si utilizzano RHEL 8.x e RHEL 9.x:
 
 +
 **** Installazione in un luogo buio
@@ -94,11 +94,16 @@ Tenere presente che le seguenti funzioni non sono attualmente supportate quando 
 +
 https://youtu.be/Ogoufel1q6c["Guarda questo video"^] Per una rapida dimostrazione dell'installazione di Docker su CentOS.
 
-*** Podman versione 4 o superiore. Per installare Podman, aggiorna i pacchetti di sistema (`sudo yum update -y`), quindi installare Podman (`sudo yum install podman -y`).
+*** Podman versione 4 o superiore. Per installare Podman, aggiorna i pacchetti di sistema (`sudo yum update -y`), quindi installare Podman (`sudo yum install netavark -y`).
 
 
-** Python versione 3,6 o superiore. https://www.python.org/downloads/["Visualizzare le istruzioni di installazione"^].
 
 
-* *Considerazioni NTP*: NetApp consiglia di configurare il sistema di classificazione BlueXP per utilizzare un servizio NTP (Network Time Protocol). L'ora deve essere sincronizzata tra il sistema di classificazione BlueXP e il sistema del connettore BlueXP.
+
+
+* Python versione 3,6 o superiore. https://www.python.org/downloads/["Visualizzare le istruzioni di installazione"^].
++
+** *Considerazioni NTP*: NetApp consiglia di configurare il sistema di classificazione BlueXP per utilizzare un servizio NTP (Network Time Protocol). L'ora deve essere sincronizzata tra il sistema di classificazione BlueXP e il sistema del connettore BlueXP.
+
+
 

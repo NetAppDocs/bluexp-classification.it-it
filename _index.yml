@@ -7,12 +7,13 @@ indexpage:
     incentrata su ai per l'analisi e la categorizzazione dei dati contestuali, fornendo
     informazioni utili per gestire i requisiti di compliance, rilevare le vulnerabilità
     di sicurezza, ottimizzare i costi e accelerare la migrazione.
-  keywords: classification, cloud data sense, data sense, compliance, security
-  lead: La classificazione BlueXP ti consente di analizzare e classificare i dati
-    nel multicloud ibrido dell'organizzazione. La classificazione utilizza l'elaborazione
-    del linguaggio naturale (NLP) incentrata su ai per l'analisi e la categorizzazione
-    dei dati contestuali, fornendo informazioni utili per gestire i requisiti di compliance,
-    rilevare le vulnerabilità di sicurezza, ottimizzare i costi e accelerare la migrazione.
+  keywords: bluexp, classification, cloud data sense, data sense, compliance, security
+  lead: La classificazione BlueXP (Cloud Data Sense) consente di eseguire la scansione
+    e la classificazione dei dati nel multicloud ibrido della tua organizzazione.
+    La classificazione utilizza l'elaborazione del linguaggio naturale (NLP) incentrata
+    su ai per l'analisi e la categorizzazione dei dati contestuali, fornendo informazioni
+    utili per gestire i requisiti di compliance, rilevare le vulnerabilità di sicurezza,
+    ottimizzare i costi e accelerare la migrazione.
   tiles:
   - title: Inizia subito
     links:
@@ -88,8 +89,6 @@ indexpage:
       url: task-managing-highlights.html#delete-source-files
     - title: Crea avvisi e-mail quando vengono trovati dati non conformi
       url: task-using-policies.html#send-email-alerts-when-non-compliant-data-is-found
-    - title: Monitorare e gestire gli eventi di accesso ai file
-      url: task-manage-file-access-events.html
     - title: Rispondere a una richiesta di accesso soggetto a dati
       url: task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports
   - title: Blog e community

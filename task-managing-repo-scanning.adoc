@@ -35,7 +35,7 @@ image:screenshot_compliance_repo_scan_settings.png["Una schermata che indica se 
 
 
 
-È possibile spostare il cursore sul grafico nella colonna _Scan Status_ per visualizzare il numero di file che rimangono da mappare o classificare in ciascun repository (bucket in questo esempio).
+È possibile passare il cursore sul grafico nella colonna _Mapping Status_ per visualizzare il numero di file che rimangono da mappare o classificare in ciascun repository (bucket in questo esempio).
 
 
 
@@ -53,7 +53,7 @@ image:screenshot_compliance_config_button.png["Una schermata che mostra come far
 
 . Nella pagina Configurazione scansione è possibile modificare qualsiasi repository (bucket in questo esempio) per eseguire scansioni *Map* o *Map & Classify*.
 +
-image:screenshot_compliance_repo_scanning.png["Una schermata che mostra come selezionare il tipo di scansione per un bucket."]
+image:screenshot_compliance_repo_scan_settings.png["Una schermata che mostra come selezionare il tipo di scansione per un bucket."]
 
 
 

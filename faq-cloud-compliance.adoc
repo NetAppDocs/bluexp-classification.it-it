@@ -245,7 +245,7 @@ La classificazione BlueXP consente di eseguire la scansione dei dati da ambienti
 * Account Google Drive
 
 
-La classificazione BlueXP supporta le versioni NFS 3.x, 4.0 e 4.1 e CIFS 1.x, 2.0, 2.1 e 3.0.
+La classificazione BlueXP supporta le versioni NFS 3.x e CIFS 1.x, 2,0, 2,1 e 3,0.
 
 
 
@@ -392,9 +392,23 @@ Quindi, se si dispone di dati in molte di queste posizioni, potrebbe essere nece
 
 
 
+=== La classificazione BlueXP richiede l'accesso alle credenziali?
+
+La classificazione BlueXP non recupera le credenziali di storage. Al contrario, vengono archiviati nel connettore BlueXP.
+
+La classificazione BlueXP usa le credenziali del piano dati, ad esempio, le credenziali CIFS per montare le condivisioni prima della scansione.
+
+
+
 === È possibile implementare il connettore sul proprio host?
 
 Sì. È possibile https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["Implementare il connettore on-premise"^] Su un host Linux nella rete o su un host nel cloud. Se si prevede di implementare la classificazione BlueXP on-premise, potrebbe essere necessario installare anche il connettore on-premise, ma non è necessario.
+
+
+
+=== La comunicazione tra il servizio e il connettore utilizza il protocollo HTTP?
+
+Sì, la classificazione BlueXP comunica con il connettore BlueXP tramite HTTP.
 
 
 

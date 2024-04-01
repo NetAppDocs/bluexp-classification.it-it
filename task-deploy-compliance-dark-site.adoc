@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-deploy-compliance-dark-site.html 
-keywords: cloud compliance, data sense, get started, deploy cloud data sense, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, dark site, upgrade, private mode, docker, podman, bluexp classification 
+keywords: cloud compliance, data sense, get started, deploy cloud data sense, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, dark site, upgrade, private mode, docker, podman, bluexp classification, classification, install 
 summary: 'Completare alcuni passaggi per installare la classificazione BlueXP su un host Linux in un sito on-premise che non dispone di accesso a Internet, noto anche come "modalità privata". Questo tipo di installazione è perfetto per i siti sicuri.' 
 ---
-= Installare la classificazione BlueXP su un host senza accesso a Internet
+= Installare la classificazione BlueXP su un host Linux senza accesso Internet
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'Completare alcuni passaggi per installare la classificazione BlueXP su
 
 
 [role="lead"]
-Completare alcuni passaggi per installare la classificazione BlueXP su un host Linux in un sito on-premise che non dispone di accesso a Internet, noto anche come "modalità privata". Questo tipo di installazione è perfetto per i siti sicuri.
+Completa alcuni passaggi per installare la classificazione BlueXP su un host Linux in un sito on-premise che non dispone di accesso a Internet, anche noto come _private mode_. Questo tipo di installazione è perfetto per i siti sicuri.
 
 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["Scopri le diverse modalità di implementazione per la classificazione BlueXP Connector e BlueXP"^].
 
@@ -156,11 +156,11 @@ Tenere presente che esistono limitazioni quando si utilizzano sistemi di dimensi
 *** Ubuntu 22,04 (richiede la classificazione BlueXP versione 1,23 o superiore)
 
 
-** I seguenti sistemi operativi richiedono l'utilizzo del motore del container Podman e richiedono la classificazione BlueXP versione 1,26 o superiore:
+** I seguenti sistemi operativi richiedono l'utilizzo del motore del container Podman e richiedono la classificazione BlueXP versione 1,30 o superiore:
 +
-*** Red Hat Enterprise Linux versione 9,0, 9,1 e 9,2
+*** Red Hat Enterprise Linux versione 8,8, 9,0, 9,1, 9,2 e 9,3
 +
-Tenere presente che le seguenti funzioni non sono attualmente supportate quando si utilizza RHEL 9.x:
+Tenere presente che le seguenti funzioni non sono attualmente supportate quando si utilizzano RHEL 8.x e RHEL 9.x:
 
 +
 **** Installazione in un luogo buio
@@ -180,14 +180,17 @@ Tenere presente che le seguenti funzioni non sono attualmente supportate quando 
 +
 https://youtu.be/Ogoufel1q6c["Guarda questo video"^] Per una rapida dimostrazione dell'installazione di Docker su CentOS.
 
-*** Podman versione 4 o superiore. Per installare Podman, aggiorna i pacchetti di sistema (`sudo yum update -y`), quindi installare Podman (`sudo yum install podman -y`).
+*** Podman versione 4 o superiore. Per installare Podman, aggiorna i pacchetti di sistema (`sudo yum update -y`), quindi installare Podman (`sudo yum install netavark -y`).
 
 
-** Python versione 3,6 o superiore. https://www.python.org/downloads/["Visualizzare le istruzioni di installazione"^].
 
 
-* *Considerazioni NTP*: NetApp consiglia di configurare il sistema di classificazione BlueXP per utilizzare un servizio NTP (Network Time Protocol). L'ora deve essere sincronizzata tra il sistema di classificazione BlueXP e il sistema del connettore BlueXP.
-* *Considerazioni su Firewalld*: Se si intende utilizzare `firewalld`, Si consiglia di abilitarla prima di installare la classificazione BlueXP. Eseguire i seguenti comandi per configurare `firewalld` In modo che sia compatibile con la classificazione BlueXP:
+
+
+* Python versione 3,6 o superiore. https://www.python.org/downloads/["Visualizzare le istruzioni di installazione"^].
++
+** *Considerazioni NTP*: NetApp consiglia di configurare il sistema di classificazione BlueXP per utilizzare un servizio NTP (Network Time Protocol). L'ora deve essere sincronizzata tra il sistema di classificazione BlueXP e il sistema del connettore BlueXP.
+** *Considerazioni su Firewalld*: Se si intende utilizzare `firewalld`, Si consiglia di abilitarla prima di installare la classificazione BlueXP. Eseguire i seguenti comandi per configurare `firewalld` In modo che sia compatibile con la classificazione BlueXP:
 +
 ....
 firewall-cmd --permanent --add-service=http
@@ -199,6 +202,8 @@ firewall-cmd --reload
 ....
 +
 Devi riavviare Docker o Podman ogni volta che abiliti o aggiorni il sistema `firewalld` impostazioni.
+
+
 
 
 
