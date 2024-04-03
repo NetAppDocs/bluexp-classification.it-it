@@ -81,8 +81,6 @@ sidebar:
       url: "/task-using-policies.html"
     - title: Gestisci i tuoi dati privati
       url: "/task-managing-highlights.html"
-    - title: Monitorare e gestire gli eventi di accesso ai file
-      url: "/task-manage-file-access-events.html"
     - title: Modificare le impostazioni di scansione
       url: task-managing-repo-scanning.html
     - title: Generare report sulla conformità
