@@ -45,11 +45,10 @@ image:screenshot_compliance_governance_dashboard.png["Una schermata della dashbo
 
 
 * *File duplicati* - file duplicati in altre posizioni nelle origini dati che si stanno eseguendo la scansione. link:task-investigate-data.html#view-all-duplicated-files["Scopri quali tipi di file duplicati vengono visualizzati"].
-+
-NOTA:: Se una qualsiasi delle origini dati implementa il tiering dei dati, i dati vecchi che risiedono già nello storage a oggetti possono essere identificati nella categoria _dati obsoleti_.
 
 
 
+NOTE: Se una qualsiasi delle origini dati implementa il tiering dei dati, i dati vecchi che risiedono già nello storage a oggetti possono essere identificati nella categoria _dati obsoleti_.
 
 
 
@@ -82,23 +81,6 @@ Fare clic su ciascuna area per visualizzare i risultati filtrati nella pagina di
 
 
 
-=== Dati elencati in base alla sensibilità e alle autorizzazioni estese
-
-L'area _dati sensibili e permessi estesi_ fornisce una mappa termica dei file che contengono dati sensibili (inclusi dati personali sensibili e sensibili) e che sono eccessivamente permissivi. In questo modo è possibile individuare i rischi associati ai dati sensibili.
-
-La classificazione dei file dipende dal numero di utenti autorizzati ad accedere ai file sull'asse X (dal più basso al più alto) e dal numero di identificatori sensibili all'interno dei file sull'asse Y (dal più basso al più alto). I blocchi rappresentano il numero di file che corrispondono agli elementi degli assi X e Y. I blocchi di colore più chiaro sono buoni, con meno utenti in grado di accedere ai file e con meno identificatori sensibili per file. I blocchi più scuri sono gli elementi che potresti voler esaminare. Ad esempio, la schermata seguente mostra il testo del passaggio del mouse per il blocco blu scuro. Indica che sono disponibili 1,500 file a cui hanno accesso 751-100 utenti e 501-100 identificatori sensibili per file.
-
-image:screenshot_compliance_sensitive_data.png["Una schermata che mostra i dati visualizzati quando si posiziona il cursore su un elemento in questo pannello."]
-
-È possibile fare clic sul blocco desiderato per visualizzare i risultati filtrati dei file interessati nella pagina di analisi, in modo da poter analizzare ulteriormente.
-
-Se non si è integrato un servizio di identità con la classificazione BlueXP, in questo pannello non viene visualizzato alcun dato. link:task-add-active-directory-datasense.html["Scopri come integrare il servizio Active Directory con la classificazione BlueXP"^].
-
-
-TIP: Questo pannello supporta i file in condivisioni CIFS, OneDrive e origini dati SharePoint. Attualmente non è disponibile alcun supporto per database, Google Drive, Amazon S3 e storage a oggetti generici.
-
-
-
 === Dati elencati in base ai tipi di autorizzazioni aperte
 
 L'area _Open Permissions_ mostra la percentuale per ciascun tipo di permessi esistenti per tutti i file sottoposti a scansione. Il grafico mostra i seguenti tipi di autorizzazioni:
@@ -121,17 +103,16 @@ L'area _Open Permissions_ mostra la percentuale per ciascun tipo di permessi esi
 
 * *Age of Data graph* - classifica i dati in base all'ora in cui sono stati creati, all'ultima volta in cui sono stati utilizzati o all'ultima volta in cui sono stati modificati.
 * *Dimensione del grafico dei dati* - classifica i dati in base alle dimensioni.
-+
-NOTA:: Se una qualsiasi delle origini dati implementa il tiering dei dati, i dati vecchi che risiedono già nello storage a oggetti possono essere identificati nel grafico _Age of Data_.
 
 
 
+NOTE: Se una qualsiasi delle origini dati implementa il tiering dei dati, i dati vecchi che risiedono già nello storage a oggetti possono essere identificati nel grafico _Age of Data_.
 
 
 
 === Classificazioni dei dati più identificate
 
-L'area _Classification_ fornisce un elenco dei più identificati link:task-controlling-private-data.html#view-files-by-categories["Categorie"^], link:task-controlling-private-data.html#view-files-by-file-types["Tipi di file"^], e. link:task-org-private-data.html#categorize-your-data-using-aip-labels["Etichette AIP"^] nei dati sottoposti a scansione.
+L'area _Classification_ fornisce un elenco dei più identificati link:task-controlling-private-data.html#view-files-by-categories["Categorie"^] e. link:task-controlling-private-data.html#view-files-by-file-types["Tipi di file"^] nei dati sottoposti a scansione.
 
 
 
@@ -148,14 +129,6 @@ Vedere link:task-controlling-private-data.html#view-files-by-categories["Visuali
 La revisione dei tipi di file consente di controllare i dati sensibili, poiché alcuni tipi di file potrebbero non essere memorizzati correttamente.
 
 Vedere link:task-controlling-private-data.html#view-files-by-file-types["Visualizzazione dei tipi di file"^] per ulteriori informazioni.
-
-
-
-==== Etichette AIP
-
-Se si è abbonati ad Azure Information Protection (AIP), è possibile classificare e proteggere documenti e file applicando etichette ai contenuti. La revisione delle etichette AIP più utilizzate assegnate ai file consente di visualizzare le etichette più utilizzate nei file.
-
-Vedere link:task-org-private-data.html#categorize-your-data-using-aip-labels["Etichette AIP"^] per ulteriori informazioni.
 
 
 
@@ -244,5 +217,3 @@ image:screenshot_compliance_data_discovery_report_button.png["Una schermata dell
 
 .Risultato
 La classificazione BlueXP genera un report in formato PDF che è possibile rivedere e inviare ad altri gruppi in base alle esigenze.
-
-Nota: È possibile personalizzare il nome della società visualizzato nella prima pagina del report dalla parte superiore della pagina di classificazione di BlueXP facendo clic su image:screenshot_gallery_options.gif["Il pulsante Altro"] Quindi fare clic su *Cambia nome azienda*. La volta successiva che si genera il report, questo includerà il nuovo nome.

@@ -16,6 +16,11 @@ summary: 'La classificazione BlueXP offre diversi modi per aggiungere un elenco 
 [role="lead"]
 La classificazione BlueXP offre diversi modi per aggiungere un elenco personalizzato di "dati personali" che la classificazione BlueXP identificherà nelle scansioni future, fornendo un quadro completo della posizione dei dati potenzialmente sensibili in _tutti_ i file della tua organizzazione.
 
+[]
+====
+*NOTA* queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP 1,30 e precedenti.
+
+====
 * È possibile aggiungere identificatori univoci in base a colonne specifiche nei database che si sta eseguendo la scansione.
 * È possibile aggiungere parole chiave personalizzate da un file di testo -- queste parole sono identificate all'interno dei dati.
 * È possibile aggiungere un modello personale utilizzando un'espressione regolare (regex) -- il regex viene aggiunto ai modelli predefiniti esistenti.

@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: task-controlling-governance-dashboard-deprecated.html 
+keywords: savings, stale data, non-business data, duplicate data, age or data, size of data, highlights, policies 
+summary: Ottieni il controllo dei costi relativi ai dati sulle risorse di storage della tua organizzazione. La classificazione BlueXP identifica la quantità di dati obsoleti, dati non aziendali, file duplicati e file molto grandi nei sistemi, in modo da poter decidere se rimuovere o tierare alcuni file in uno storage a oggetti meno costoso. 
+---
+= Visualizza i dettagli di governance dei tuoi dati utilizzando il dashboard Governance
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ottieni il controllo dei costi relativi ai dati sulle risorse di storage della tua organizzazione. La classificazione BlueXP identifica la quantità di dati obsoleti, dati non aziendali, file duplicati e file molto grandi nei sistemi, in modo da poter decidere se rimuovere o tierare alcuni file in uno storage a oggetti meno costoso.
+
+Inoltre, se si prevede di migrare i dati da posizioni on-premise al cloud, è possibile visualizzare le dimensioni dei dati e se alcuni di essi contengono informazioni sensibili prima di spostarli.
+
+[]
+====
+*NOTA* queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP 1,30 e precedenti.
+
+====
+
+
+== Dati elencati in base alla sensibilità e alle autorizzazioni estese nel dashboard Governance
+
+L'area _dati sensibili e permessi estesi_ sul dashboard Governance fornisce una mappa dei file che contengono dati sensibili (inclusi dati personali sensibili e sensibili) e che sono eccessivamente permissivi. In questo modo è possibile individuare i rischi associati ai dati sensibili.
+
+
+NOTE: Ciò si applica alla classificazione BlueXP versioni 1,30 e precedenti.
+
+La classificazione dei file dipende dal numero di utenti autorizzati ad accedere ai file sull'asse X (dal più basso al più alto) e dal numero di identificatori sensibili all'interno dei file sull'asse Y (dal più basso al più alto). I blocchi rappresentano il numero di file che corrispondono agli elementi degli assi X e Y. I blocchi di colore più chiaro sono buoni, con meno utenti in grado di accedere ai file e con meno identificatori sensibili per file. I blocchi più scuri sono gli elementi che potresti voler esaminare. Ad esempio, la schermata seguente mostra il testo del passaggio del mouse per il blocco blu scuro. Indica che sono disponibili 1,500 file a cui hanno accesso 751-100 utenti e 501-100 identificatori sensibili per file.
+
+image:screenshot_compliance_sensitive_data.png["Una schermata che mostra i dati visualizzati quando si posiziona il cursore su un elemento in questo pannello."]
+
+È possibile fare clic sul blocco desiderato per visualizzare i risultati filtrati dei file interessati nella pagina di analisi, in modo da poter analizzare ulteriormente.
+
+Se non si è integrato un servizio di identità con la classificazione BlueXP, in questo pannello non viene visualizzato alcun dato. link:task-add-active-directory-datasense.html["Scopri come integrare il servizio Active Directory con la classificazione BlueXP"^].
+
+
+TIP: Questo pannello supporta i file in condivisioni CIFS, OneDrive e origini dati SharePoint. Attualmente non è disponibile alcun supporto per database, Google Drive, Amazon S3 e storage a oggetti generici.
+
+
+
+== Area di classificazione sul cruscotto che mostra le etichette AIP
+
+L'area _Classification_ sul dashboard fornisce un elenco delle etichette AIP (Azure Information Protection) più identificate nei dati sottoposti a scansione.
+
+Se si è abbonati ad Azure Information Protection (AIP), è possibile classificare e proteggere documenti e file applicando etichette ai contenuti. La revisione delle etichette AIP più utilizzate assegnate ai file consente di visualizzare le etichette più utilizzate nei file.
+
+Vedere link:task-org-private-data.html#categorize-your-data-using-aip-labels["Etichette AIP"^] per ulteriori informazioni.

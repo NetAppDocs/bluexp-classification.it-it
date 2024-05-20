@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: task-investigate-data-deprecated.html 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies 
+summary: 'È possibile analizzare i dati dell"organizzazione visualizzando i dettagli nella pagina Data Investigation. È possibile accedere a questa pagina da molte aree dell"interfaccia utente di classificazione di BlueXP, tra cui le dashboard di governance e conformità.' 
+---
+= Esaminare i dati memorizzati nella pagina analisi dati
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile analizzare i dati dell'organizzazione visualizzando i dettagli nella pagina Data Investigation. È possibile accedere a questa pagina da molte aree dell'interfaccia utente di classificazione di BlueXP, tra cui le dashboard di governance e conformità.
+
+
+NOTE: Le funzionalità descritte in questa sezione sono disponibili solo se si è scelto di eseguire una scansione di classificazione completa sulle origini dati. Le origini dati che hanno eseguito una scansione solo mappatura non mostrano i dettagli a livello di file.
+
+
+
+== Filtrare i dati nella pagina analisi dati
+
+È possibile filtrare il contenuto della pagina di analisi per visualizzare solo i risultati desiderati. Si tratta di una funzione molto potente, in quanto dopo aver perfezionato i dati, è possibile utilizzare la barra dei pulsanti nella parte superiore della pagina per eseguire una serie di azioni, tra cui la copia di file, lo spostamento di file, l'aggiunta di un tag o di un'etichetta AIP ai file e molto altro.
+
+
+
+=== Filtra i dati in base a tag, etichette, utenti assegnati e policy
+
+Utilizzare i seguenti filtri per visualizzare i dati in base a tag, etichette AIP, utenti assegnati o criteri.
+
+[]
+====
+*NOTA* la possibilità di filtrare per tag, etichette e utenti assegnati è rilevante solo per la classificazione BlueXP versioni 1,30 e precedenti.
+
+====
+[cols="30,60"]
+|===
+| Filtro | Dettagli 
+
+
+| Policy | Selezionare una o più policy. Vai link:task-using-policies.html["qui"^] per visualizzare l'elenco dei criteri esistenti e creare criteri personalizzati. 
+
+
+| Etichetta | Selezionare link:task-org-private-data.html#categorize-your-data-using-aip-labels["Etichette AIP"] assegnati ai file. 
+
+
+| Tag | Selezionare link:task-org-private-data.html#apply-tags-to-manage-your-scanned-files["il tag o i tag"] assegnati ai file. 
+
+
+| Assegnato a. | Selezionare il nome della persona a cui è assegnato il file. 
+|===
+
+
+== Creare il rapporto analisi dati
+
+Il Data Investigation Report (Report analisi dati) è un download del contenuto filtrato della pagina Data Investigation (analisi dati).
+
+Il rapporto è disponibile in due formati diversi:
+
+* Come file .CSV che è possibile salvare sul computer locale.
++
+Questo rapporto può includere un massimo di 10.000 righe di dati.
+
+* Come file .JSON esportato in una condivisione NFS.
++
+Se sono presenti più di 250.000 righe di dati, vengono creati file .JSON aggiuntivi.
+
++
+Quando si esporta in una condivisione file, assicurarsi che la classificazione BlueXP disponga delle autorizzazioni corrette per l'accesso all'esportazione.
+
++
+[]
+====
+*NOTA* la capacità di generare il rapporto in . Il formato JSON è rilevante solo per le versioni di classificazione BlueXP 1,30 e precedenti.
+
+====
+
+
+Se la classificazione BlueXP sta scansionando file (dati non strutturati), directory (cartelle e condivisioni di file) e database (dati strutturati), possono essere scaricati fino a tre file di report.
+
+.Fasi
+. Dalla pagina Data Investigation (analisi dati), fare clic su image:button_download.png["pulsante download"] nella parte superiore destra della pagina.
+. Selezionare se si desidera scaricare un report .CSV o .JSON dei dati e fare clic su *Download Report*.
++
+Quando si seleziona un report .JSON, inserire il nome della condivisione NFS in cui verrà scaricato il report nel formato `<host_name>:/<share_path>`.
+
++
+È possibile visualizzare lo stato di avanzamento della generazione di report JSON in link:task-view-compliance-actions.html["Riquadro Actions Status (Stato azioni)"].
+
++
+[]
+====
+*NOTA* la possibilità di filtrare per tag, etichette e utenti assegnati è rilevante solo per la classificazione BlueXP versioni 1,30 e precedenti.
+
+====
+

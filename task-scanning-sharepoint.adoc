@@ -4,7 +4,7 @@ permalink: task-scanning-sharepoint.html
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, sharepoint, sharepoint online, sharepoint on-premises, data sense 
 summary: Completa alcuni passaggi per iniziare la scansione dei file negli account SharePoint Online e SharePoint on-premise con classificazione BlueXP. 
 ---
-= Scansione degli account SharePoint
+= Eseguire la scansione degli account SharePoint
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,6 +16,11 @@ summary: Completa alcuni passaggi per iniziare la scansione dei file negli accou
 [role="lead"]
 Completa alcuni passaggi per iniziare la scansione dei file negli account SharePoint Online e SharePoint on-premise con classificazione BlueXP.
 
+[]
+====
+*NOTA* queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP 1,30 e precedenti.
+
+====
 
 
 == Avvio rapido
@@ -40,7 +45,7 @@ Aggiungere l'elenco degli URL del sito SharePoint che si desidera sottoporre a s
 
 
 
-== Analisi dei requisiti di SharePoint
+== Esaminare i requisiti di SharePoint
 
 Esaminare i seguenti prerequisiti per assicurarsi di essere pronti per attivare la classificazione BlueXP su un account SharePoint.
 
@@ -55,7 +60,7 @@ Esaminare i seguenti prerequisiti per assicurarsi di essere pronti per attivare 
 
 
 
-== Implementazione dell'istanza di classificazione BlueXP
+== Distribuire l'istanza di classificazione BlueXP
 
 Distribuire la classificazione BlueXP se non è già stata implementata un'istanza.
 
@@ -69,7 +74,7 @@ Gli aggiornamenti al software di classificazione BlueXP sono automatizzati finch
 
 
 
-== Aggiunta di un account SharePoint Online
+== Aggiungere un account SharePoint Online
 
 Aggiungere l'account SharePoint Online in cui risiedono i file utente.
 
@@ -86,7 +91,7 @@ L'account SharePoint Online viene aggiunto all'elenco degli ambienti di lavoro.
 
 
 
-== Aggiunta di un account SharePoint on-premise
+== Aggiungere un account SharePoint in sede
 
 Aggiungere l'account SharePoint on-premise in cui risiedono i file utente.
 
@@ -111,7 +116,7 @@ L'account SharePoint on-premise viene aggiunto all'elenco degli ambienti di lavo
 
 
 
-== Aggiunta di siti SharePoint alle scansioni di conformità
+== Aggiungere i siti SharePoint alle scansioni di conformità
 
 È possibile aggiungere singoli siti SharePoint o fino a 1,000 siti SharePoint nell'account, in modo che i file associati vengano sottoposti a scansione in base alla classificazione BlueXP. La procedura è la stessa, sia che si aggiungano siti SharePoint Online o SharePoint on-premise.
 
@@ -163,10 +168,10 @@ La classificazione BlueXP avvia la scansione dei file nei siti SharePoint aggiun
 
 
 
-== Rimozione di un sito SharePoint dalle scansioni di conformità
+== Rimuovere un sito SharePoint dalle scansioni di conformità
 
 Se si rimuove un sito SharePoint in futuro o si decide di non eseguire la scansione dei file in un sito SharePoint, è possibile rimuovere singoli siti SharePoint dall'eseguire la scansione dei file in qualsiasi momento. Fai clic su *Rimuovi sito SharePoint* dalla pagina di configurazione.
 
 image:screenshot_compliance_sharepoint_remove_site.png["Una schermata che mostra come rimuovere un singolo sito SharePoint dalla scansione dei file."]
 
-Nota: È possibile link:task-managing-compliance.html#removing-a-onedrive-sharepoint-or-google-drive-account-from-bluexp-classification["Eliminare l'intero account SharePoint dalla classificazione BlueXP"] Se non si desidera più eseguire la scansione dei dati utente dall'account SharePoint.
+Nota: È possibile link:task-managing-compliance.html["Eliminare l'intero account SharePoint dalla classificazione BlueXP"] Se non si desidera più eseguire la scansione dei dati utente dall'account SharePoint.

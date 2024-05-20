@@ -41,7 +41,7 @@ Avviare l'installazione guidata per implementare l'istanza di classificazione Bl
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Iscriviti al servizio di classificazione BlueXP
 [role="quick-margin-para"]
-I primi 1 TB di dati che la classificazione BlueXP scansiona in BlueXP sono gratuiti per 30 giorni. Per continuare a eseguire la scansione dei dati dopo tale data, è necessario un abbonamento BlueXP tramite il proprio provider cloud Marketplace o una licenza BYOL di NetApp.
+I primi 500 TB di dati analizzati dalla classificazione BlueXP in BlueXP sono gratuiti per 30 giorni. Per continuare a eseguire la scansione dei dati dopo tale data, è necessario un abbonamento BlueXP tramite il proprio provider cloud Marketplace o una licenza BYOL di NetApp.
 
 
 
@@ -51,7 +51,7 @@ Se non disponi già di un connettore, crea un connettore nel tuo cloud provider.
 
 Esistono alcuni scenari in cui è necessario utilizzare un connettore implementato in uno specifico cloud provider:
 
-* Quando si esegue la scansione dei dati in Cloud Volumes ONTAP in AWS, Amazon FSX per ONTAP o nei bucket AWS S3, si utilizza un connettore in AWS.
+* Quando esegui la scansione dei dati in Cloud Volumes ONTAP in AWS o in un bucket Amazon FSX per ONTAP, utilizzi un connettore in AWS.
 * Quando si esegue la scansione dei dati in Cloud Volumes ONTAP in Azure o in Azure NetApp Files, si utilizza un connettore in Azure.
 +
 ** Per Azure NetApp Files, deve essere implementato nella stessa regione dei volumi che si desidera sottoporre a scansione.
@@ -60,7 +60,7 @@ Esistono alcuni scenari in cui è necessario utilizzare un connettore implementa
 * Quando si esegue la scansione dei dati in Cloud Volumes ONTAP in GCP, si utilizza un connettore in GCP.
 
 
-I sistemi ONTAP on-premise, le condivisioni di file non NetApp, lo storage a oggetti S3 generico, i database, le cartelle OneDrive, gli account SharePoint e gli account Google Drive possono essere sottoposti a scansione quando si utilizza uno di questi connettori cloud.
+I sistemi ONTAP on-premise, le condivisioni dei file non NetApp, lo storage a oggetti generico S3 e i database possono essere sottoposti a scansione quando si utilizza uno di questi connettori cloud.
 
 Nota: È anche possibile https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["Installare il connettore on-premise"^] Su un host Linux nella rete o nel cloud. Alcuni utenti che intendono installare BlueXP classification on-premise possono anche scegliere di installare il connettore on-premise.
 
@@ -71,10 +71,6 @@ Come puoi vedere, potrebbero esserci alcune situazioni in cui devi utilizzare ht
 === Supporto per le regioni governative
 
 La classificazione BlueXP è supportata quando il connettore viene implementato in un'area governativa (AWS GovCloud, Azure Gov o Azure DoD). Se implementato in questo modo, la classificazione BlueXP presenta le seguenti restrizioni:
-
-* Impossibile eseguire la scansione di account OneDrive, SharePoint e Google Drive.
-* La funzionalità dell'etichetta AIP (Microsoft Azure Information Protection) non può essere integrata.
-
 
 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-restricted-mode.html["Ulteriori informazioni sull'implementazione del connettore in un'area pubblica"^].
 

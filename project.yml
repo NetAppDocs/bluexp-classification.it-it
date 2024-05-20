@@ -45,20 +45,10 @@ sidebar:
         url: "/task-scanning-anf.html"
       - title: Amazon FSX per ONTAP
         url: "/task-scanning-fsx.html"
-      - title: Bucket Amazon S3
-        url: "/task-scanning-s3.html"
       - title: Schemi di database
         url: "/task-scanning-databases.html"
-      - title: Account OneDrive
-        url: "/task-scanning-onedrive.html"
-      - title: Account SharePoint
-        url: "/task-scanning-sharepoint.html"
-      - title: Account Google Drive
-        url: "/task-scanning-google-drive.html"
       - title: Condivisioni di file
         url: "/task-scanning-file-shares.html"
-      - title: Storage a oggetti
-        url: "/task-scanning-object-storage.html"
     - title: Integrare Active Directory
       url: "/task-add-active-directory-datasense.html"
     - title: Impostare la licenza
@@ -75,34 +65,65 @@ sidebar:
       url: "/reference-private-data-categories.html"
     - title: Analizzare i dati
       url: "/task-investigate-data.html"
-    - title: Organizzare i dati privati
-      url: "/task-org-private-data.html"
     - title: Assegnare policy ai dati
       url: "/task-using-policies.html"
-    - title: Gestisci i tuoi dati privati
-      url: "/task-managing-highlights.html"
     - title: Modificare le impostazioni di scansione
       url: task-managing-repo-scanning.html
     - title: Generare report sulla conformità
       url: "/task-generating-compliance-reports.html"
   - title: Gestire la classificazione BlueXP
     entries:
-    - title: Aggiungere identificatori di dati personali personalizzati
-      url: "/task-managing-data-fusion.html"
     - title: Escludere le directory dalla scansione
       url: "/task-exclude-scan-paths.html"
-    - title: Visualizzare lo stato delle azioni di classificazione di BlueXP
-      url: "/task-view-compliance-actions.html"
     - title: Definire gli ID di gruppo esistenti come "aperti all'organizzazione"
       url: "/task-add-group-id-as-open.html"
-    - title: Controllare la cronologia delle azioni di classificazione di BlueXP
-      url: "/task-audit-data-sense-actions.html"
-    - title: Ridurre la velocità di scansione della classificazione BlueXP
-      url: "/task-reduce-scan-speed.html"
     - title: Rimuovere le origini dati dalla classificazione BlueXP
       url: "/task-managing-compliance.html"
     - title: Disinstallare la classificazione BlueXP
       url: "/task-uninstall-data-sense.html"
+  - title: Funzioni obsolete
+    entries:
+    - title: Elenco delle funzioni obsolete
+      url: "/reference-free-paid.html"
+    - title: Implementare la classificazione BlueXP
+      entries:
+      - title: Installare la classificazione BlueXP su host multipli senza accesso
+          a Internet
+        url: "/task-deploy-multi-host-install-dark-site.html"
+      - title: Aggiunta di nodi scanner a un'implementazione esistente
+        url: "/task-deploy-add-scanner-nodes.html"
+      - title: Imposta una versione di prova gratuita o utilizza la tua licenza
+        url: "/task-licensing-byol-freetrial.html"
+    - title: Dati di scansione
+      entries:
+      - title: Esegui la scansione dei bucket Amazon S3
+        url: "/task-scanning-s3.html"
+      - title: Eseguire la scansione degli account OneDrive
+        url: "/task-scanning-onedrive.html"
+      - title: Eseguire la scansione degli account SharePoint
+        url: "/task-scanning-sharepoint.html"
+      - title: Eseguire la scansione degli account Google Drive
+        url: "/task-scanning-google-drive.html"
+      - title: Scansione dello storage a oggetti che utilizza il protocollo S3
+        url: "/task-scanning-object-storage.html"
+    - title: Gestione dei dati
+      entries:
+      - title: Visualizza i dettagli di governance sui dati nel dashboard Governance
+        url: "/task-controlling-governance-dashboard-deprecated.html"
+      - title: Organizzare i dati privati
+        url: "/task-org-private-data.html"
+      - title: Gestisci i tuoi dati privati
+        url: "/task-managing-highlights.html"
+      - title: Aggiungere identificatori di dati personali personalizzati
+        url: "/task-managing-data-fusion.html"
+      - title: Visualizzare lo stato delle azioni di classificazione di BlueXP
+        url: "/task-view-compliance-actions.html"
+      - title: Controllare la cronologia delle azioni di classificazione di BlueXP
+        url: "/task-audit-data-sense-actions.html"
+      - title: Ridurre la velocità di scansione della classificazione BlueXP
+        url: "/task-reduce-scan-speed.html"
+      - title: Rimuovere un account OneDrive, SharePoint o Google Drive
+        url: "/task-managing-compliance-deprecated.html"
   - title: Riferimento
     entries:
     - title: Tipi di istanze di classificazione BlueXP supportati

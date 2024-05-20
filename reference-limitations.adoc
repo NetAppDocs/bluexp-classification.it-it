@@ -18,9 +18,9 @@ Le limitazioni note identificano le funzioni non supportate da questa versione d
 
 
 
-== Opzioni rimosse temporaneamente dalla release di classificazione BlueXP
+== Opzioni rimosse dalla release di classificazione BlueXP
 
-La versione di dicembre 2023 (versione 1.26.6) ha temporaneamente rimosso le seguenti opzioni:
+La versione di dicembre 2023 (versione 1.26.6) ha rimosso le seguenti opzioni:
 
 * L'opzione per attivare la raccolta del registro di controllo è stata disattivata.
 * Durante l'analisi Directory, l'opzione per calcolare il numero di dati personali identificabili (PII) per directory non è disponibile.

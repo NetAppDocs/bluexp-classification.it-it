@@ -16,11 +16,12 @@ summary: La classificazione BlueXP offre diversi modi per gestire e organizzare 
 [role="lead"]
 La classificazione BlueXP offre diversi modi per gestire e organizzare i dati privati. In questo modo è più semplice visualizzare i dati più importanti per te.
 
+[]
+====
+*NOTA* queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP 1,30 e precedenti. La release di dicembre 2023 (v1.26.6) ha rimosso l'opzione di integrazione dei dati utilizzando le etichette Azure Information Protection (AIP).
+
+====
 * Se si è abbonati a. https://azure.microsoft.com/en-us/services/information-protection/["Azure Information Protection (AIP)"^] Per classificare e proteggere i file, è possibile utilizzare la classificazione BlueXP per gestire le etichette AIP.
-+
-
-NOTE: La release di dicembre 2023 (v1.26.6) ha temporaneamente rimosso l'opzione di integrare i dati utilizzando le etichette AIP (Azure Information Protection).
-
 * È possibile aggiungere tag ai file che si desidera contrassegnare per l'organizzazione o per alcuni tipi di follow-up.
 * È possibile assegnare un utente BlueXP a un file specifico o a più file, in modo che la persona possa essere responsabile della gestione del file.
 * Utilizzando la funzionalità "Policy" è possibile creare query di ricerca personalizzate in modo da visualizzare facilmente i risultati facendo clic su un pulsante.

@@ -17,6 +17,9 @@ summary: Completare alcuni passaggi per avviare la scansione di condivisioni di 
 Completare alcuni passaggi per avviare la scansione di condivisioni di file NFS o CIFS non NetApp direttamente con la classificazione BlueXP. Queste condivisioni di file possono risiedere on-premise o nel cloud.
 
 
+TIP: L'aggiunta di condivisioni di file è l'unico modo per analizzare i dati da Google Cloud NetApp Volumes.
+
+
 
 == Avvio rapido
 

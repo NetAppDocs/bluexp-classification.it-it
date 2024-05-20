@@ -16,6 +16,11 @@ summary: La classificazione BlueXP offre diversi modi per gestire i dati privati
 [role="lead"]
 La classificazione BlueXP offre diversi modi per gestire i dati privati. Alcune funzionalità semplificano la preparazione alla migrazione dei dati, mentre altre funzionalità consentono di apportare modifiche ai dati.
 
+[]
+====
+*NOTA* queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP 1,30 e precedenti.
+
+====
 * È possibile copiare i file in una condivisione NFS di destinazione se si desidera creare una copia di determinati dati e spostarli in una posizione NFS diversa.
 * È possibile clonare un volume ONTAP in un nuovo volume, includendo solo i file selezionati dal volume di origine nel nuovo volume clonato. Ciò è utile per le situazioni in cui si esegue la migrazione dei dati e si desidera escludere alcuni file dal volume originale.
 * È possibile copiare e sincronizzare i file da un repository di origine a una directory in una posizione di destinazione specifica. Questa funzione è utile per le situazioni in cui si esegue la migrazione dei dati da un sistema di origine a un altro mentre è ancora presente un'attività finale sui file di origine.
@@ -143,7 +148,7 @@ Il nuovo volume clonato viene creato nello stesso aggregato del volume di origin
 
 È possibile visualizzare lo stato di avanzamento dell'operazione di clonazione in link:task-view-compliance-actions.html["Riquadro Actions Status (Stato azioni)"].
 
-Se inizialmente è stato selezionato *Map All Volumes* (mappatura di tutti i volumi) o *Map & Classify All Volumes* (mappatura e classificazione di tutti i volumi) quando è stata attivata la classificazione BlueXP per l'ambiente di lavoro in cui risiede il volume di origine, la classificazione BlueXP eseguirà automaticamente la scansione del nuovo volume clonato. Se inizialmente non si è utilizzata una di queste selezioni, è necessario eseguire la scansione di questo nuovo volume link:task-getting-started-compliance.html#enabling-and-disabling-compliance-scans-on-volumes["attivare manualmente la scansione sul volume"].
+Se inizialmente è stato selezionato *Map All Volumes* (mappatura di tutti i volumi) o *Map & Classify All Volumes* (mappatura e classificazione di tutti i volumi) quando è stata attivata la classificazione BlueXP per l'ambiente di lavoro in cui risiede il volume di origine, la classificazione BlueXP eseguirà automaticamente la scansione del nuovo volume clonato. Se inizialmente non si è utilizzata una di queste selezioni, è necessario eseguire la scansione di questo nuovo volume link:task-getting-started-compliance.html["attivare manualmente la scansione sul volume"].
 
 
 
@@ -252,7 +257,7 @@ image:screenshot_compliance_move_file.png["Una schermata che mostra la selezione
 
 È possibile rimuovere in modo permanente i file di origine che sembrano insicuri o troppo rischiosi da lasciare nel sistema di storage o che sono stati identificati come duplicati. Questa azione è permanente e non è possibile annullare o ripristinare.
 
-È possibile eliminare i file manualmente dal riquadro analisi, oppure link:task-using-policies.html#delete-source-files-automatically-using-policies["Utilizzo automatico dei criteri"^].
+È possibile eliminare i file manualmente dal riquadro analisi, oppure link:task-using-policies.html["Utilizzo automatico dei criteri"^].
 
 
 TIP: Non è possibile eliminare i file che risiedono nei database. Sono supportate tutte le altre origini dati.

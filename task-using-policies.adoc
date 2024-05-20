@@ -14,39 +14,34 @@ summary: Le policy sono come un elenco preferito di filtri personalizzati che fo
 
 
 [role="lead"]
-Le policy sono come un elenco preferito di filtri personalizzati che forniscono i risultati della ricerca nella pagina di analisi per le query di conformità più frequenti. La classificazione BlueXP offre una serie di policy predefinite basate sulle richieste più comuni dei clienti. È possibile creare policy personalizzate che forniscano risultati per ricerche specifiche della propria organizzazione.
+Le policy sono come un elenco preferito di filtri personalizzati che forniscono i risultati della ricerca nella pagina di analisi per le query di conformità più frequenti. La classificazione BlueXP fornisce un set di policy predefinite basate su richieste comuni dei clienti. È possibile creare criteri personalizzati che forniscono risultati per ricerche specifiche dell'organizzazione.
 
 Le policy offrono le seguenti funzionalità:
 
-* <<Elenco dei criteri predefiniti,Policy predefinite>> NetApp in base alle richieste degli utenti
+* <<Elenco dei criteri predefiniti,Criteri predefiniti>> NetApp in base alle richieste degli utenti
 * Possibilità di creare policy personalizzate
 * Aprire la pagina delle analisi con i risultati delle policy in un click
-* Invia avvisi e-mail agli utenti BlueXP o a qualsiasi altro indirizzo e-mail, quando alcune policy critiche restituiscono risultati, in modo da poter ricevere notifiche per proteggere i tuoi dati
-* Assegnare automaticamente le etichette AIP (Azure Information Protection) a tutti i file che corrispondono ai criteri definiti in una policy
-* Elimina automaticamente i file (una volta al giorno) quando alcune policy restituiscono risultati, in modo da proteggere automaticamente i dati
 
 
 La scheda *Policies* nella dashboard di conformità elenca tutti i criteri predefiniti e personalizzati disponibili in questa istanza della classificazione BlueXP.
 
 image:screenshot_compliance_highlights_tab.png["Schermata della scheda Criteri nella dashboard di classificazione di BlueXP."]
 
-Inoltre, i criteri vengono visualizzati nell'elenco dei filtri della pagina di analisi.
+Inoltre, i criteri vengono visualizzati nell'elenco dei filtri nella pagina di analisi.
 
 
 
 == Visualizzare i risultati dei criteri nella pagina di analisi
 
-Per visualizzare i risultati di un criterio nella pagina analisi, fare clic su image:screenshot_gallery_options.gif["Pulsante More (Altro)"] Per una policy specifica, quindi selezionare *esamina risultati*.
+Per visualizzare i risultati di un criterio nella pagina analisi, fare clic sul image:screenshot_gallery_options.gif["Pulsante More (Altro)"] Per un criterio specifico, quindi selezionare *esamina risultati*.
 
-image:screenshot_compliance_highlights_investigate.png["Una schermata che mostra la selezione dei risultati dell'analisi per una policy specifica dalla scheda Criteri."]
+image:screenshot_compliance_highlights_investigate.png["Schermata della selezione dei risultati di analisi per un criterio specifico dalla scheda Criteri."]
 
 
 
-== Creare criteri personalizzati
+== Creare policy personalizzate
 
 È possibile creare policy personalizzate che forniscano risultati per le ricerche specifiche della propria organizzazione. I risultati vengono restituiti per tutti i file e le directory (condivisioni e cartelle) che corrispondono ai criteri di ricerca.
-
-Tenere presente che le azioni per l'eliminazione dei dati e l'assegnazione delle etichette AIP in base ai risultati dei criteri sono valide solo per i file. Le directory che corrispondono ai criteri di ricerca non possono essere eliminate automaticamente o assegnate etichette AIP.
 
 .Fasi
 . Dalla pagina Data Investigation (analisi dati), definire la ricerca selezionando tutti i filtri che si desidera utilizzare. Vedere link:task-investigate-data.html["Filtraggio dei dati nella pagina Data Investigation"^] per ulteriori informazioni.
@@ -57,10 +52,7 @@ image:screenshot_compliance_save_as_highlight.png["Una schermata che mostra come
 . Assegnare un nome al criterio e selezionare altre azioni che possono essere eseguite dal criterio:
 +
 .. Immettere un nome e una descrizione univoci.
-.. Se si desidera, selezionare la casella per eliminare automaticamente i file che corrispondono ai parametri del criterio. Scopri di più <<Eliminare automaticamente i file di origine utilizzando i criteri,eliminazione dei file di origine mediante un criterio>>.
-.. Se si desidera inviare e-mail di notifica agli utenti BlueXP nell'account, selezionare la casella di controllo e scegliere l'intervallo di invio dell'e-mail. Scopri di più <<Invia avvisi e-mail quando vengono trovati dati non conformi,invio di avvisi e-mail in base ai risultati della policy>>.
-.. Se si desidera, selezionare la casella se si desidera che le e-mail di notifica vengano inviate ad altri utenti, immettere fino a 20 indirizzi e-mail e scegliere l'intervallo di invio dell'e-mail.
-.. Se si desidera, selezionare la casella per assegnare automaticamente le etichette AIP ai file che corrispondono ai parametri del criterio, quindi selezionare l'etichetta. (Solo se sono già state integrate le etichette AIP. Scopri di più link:task-org-private-data.html#categorize-your-data-using-aip-labels["Etichette AIP"].)
+.. Se si desidera, selezionare la casella per eliminare automaticamente i file che corrispondono ai parametri dei criteri.
 .. Fare clic su *Crea policy*.
 +
 image:screenshot_compliance_save_highlight.png["Una schermata che mostra come configurare il criterio e salvarlo."]
@@ -74,118 +66,11 @@ Il nuovo criterio viene visualizzato nella scheda Criteri.
 
 
 
-== Invia avvisi e-mail quando vengono trovati dati non conformi
-
-La classificazione BlueXP può inviare avvisi e-mail agli utenti BlueXP del tuo account quando alcune policy critiche restituiscono risultati, in modo da poter ricevere notifiche per proteggere i tuoi dati. È possibile scegliere di inviare le notifiche via email su base giornaliera, settimanale o mensile. Puoi anche scegliere di inviare avvisi e-mail a qualsiasi altro indirizzo e-mail (fino a 20 indirizzi e-mail) non presente nell'account BlueXP.
-
-È possibile configurare questa impostazione quando si crea il criterio o quando si modifica un criterio.
-
-Per aggiungere aggiornamenti e-mail a una policy esistente, procedere come segue.
-
-.Fasi
-. Nella pagina elenco criteri, fare clic su *Modifica* per il criterio in cui si desidera aggiungere (o modificare) le impostazioni di posta elettronica.
-+
-image:screenshot_compliance_add_email_alert_1.png["Una schermata che mostra come modificare una policy esistente."]
-
-. Nella pagina Edit Policy (Modifica policy):
-+
-.. Selezionare la casella "Email all the users in this account" (Invia tutti gli utenti di questo account) se si desidera inviare e-mail di notifica agli utenti dell'account BlueXP e scegliere l'intervallo di invio dell'e-mail (ad esempio, *Every Day*).
-.. Selezionare la casella "Send Email" (Invia e-mail) se si desidera inviare e-mail di notifica ad altri utenti, scegliere l'intervallo di invio e inserire fino a 20 indirizzi e-mail.
-+
-image:screenshot_compliance_add_email_alert_2.png["Una schermata che mostra come scegliere i criteri e-mail da inviare per la policy."]
-
-
-
-. Fare clic su *Save Policy* (Salva policy) per visualizzare l'intervallo di invio del messaggio nella descrizione del criterio.
-
-
-.Risultato
-La prima e-mail viene inviata ora se ci sono risultati dalla policy, ma solo se alcuni file soddisfano i criteri della policy. Non vengono inviate informazioni personali nelle e-mail di notifica. Il messaggio di posta elettronica indica la presenza di file che corrispondono ai criteri del criterio e fornisce un collegamento ai risultati del criterio.
-
-
-
-== Eliminare automaticamente i file di origine utilizzando i criteri
-
-È possibile creare un criterio personalizzato per eliminare i file corrispondenti al criterio. Ad esempio, è possibile eliminare i file che contengono informazioni riservate e che sono stati rilevati dalla classificazione BlueXP negli ultimi 30 giorni.
-
-Solo gli account Admins possono creare una policy per eliminare automaticamente i file.
-
-
-NOTE: Tutti i file che corrispondono alla policy verranno eliminati definitivamente una volta al giorno.
-
-.Fasi
-. Dalla pagina Data Investigation (analisi dati), definire la ricerca selezionando tutti i filtri che si desidera utilizzare. Vedere link:task-investigate-data.html["Filtraggio dei dati nella pagina Data Investigation"^] per ulteriori informazioni.
-. Una volta che tutte le caratteristiche del filtro sono esattamente come desiderate, fare clic su *Create Policy from this search* (Crea policy da questa ricerca).
-. Assegnare un nome al criterio e selezionare altre azioni che possono essere eseguite dal criterio:
-+
-.. Immettere un nome e una descrizione univoci.
-.. Selezionare la casella "Elimina automaticamente i file corrispondenti a questa policy" e digitare *Elimina definitivamente* per confermare che si desidera che i file vengano eliminati in modo permanente da questa policy.
-.. Fare clic su *Crea policy*.
-+
-image:screenshot_compliance_delete_files_using_policies.png["Una schermata che mostra come configurare il criterio e salvarlo."]
-
-
-
-
-
-.Risultato
-Il nuovo criterio viene visualizzato nella scheda Criteri. I file che corrispondono al criterio vengono cancellati una volta al giorno quando il criterio viene eseguito.
-
-È possibile visualizzare l'elenco dei file che sono stati eliminati in link:task-view-compliance-actions.html["Riquadro Actions Status (Stato azioni)"].
-
-
-
-== Assegnare automaticamente le etichette AIP con i criteri
-
-È possibile assegnare un'etichetta AIP a tutti i file che soddisfano i criteri del criterio. È possibile specificare l'etichetta AIP durante la creazione del criterio oppure aggiungerla quando si modifica un criterio.
-
-Le etichette vengono aggiunte o aggiornate continuamente nei file mentre la classificazione BlueXP esegue la scansione dei file.
-
-A seconda che un'etichetta sia già applicata a un file e del livello di classificazione dell'etichetta, quando si modifica un'etichetta vengono eseguite le seguenti azioni:
-
-[cols="60,40"]
-|===
-| Se il file... | Quindi... 
-
-
-| Non ha alcuna etichetta | L'etichetta viene aggiunta 
-
-
-| Dispone di un'etichetta con un livello di classificazione inferiore | Viene aggiunta l'etichetta di livello superiore 
-
-
-| Dispone di un'etichetta con un livello di classificazione superiore | Viene conservata l'etichetta di livello superiore 
-
-
-| Viene assegnata un'etichetta sia manualmente che tramite un criterio | Viene aggiunta l'etichetta di livello superiore 
-
-
-| Viene assegnata a due diverse etichette da due policy | Viene aggiunta l'etichetta di livello superiore 
-|===
-Per aggiungere un'etichetta AIP a una policy esistente, procedere come segue.
-
-.Fasi
-. Nella pagina elenco criteri, fare clic su *Modifica* per la policy in cui si desidera aggiungere (o modificare) l'etichetta AIP.
-+
-image:screenshot_compliance_add_label_highlight_1.png["Una schermata che mostra come modificare una policy esistente."]
-
-. Nella pagina Edit Policy (Modifica policy), selezionare la casella per abilitare le etichette automatiche per i file che corrispondono ai parametri del Policy, quindi selezionare l'etichetta (ad esempio, *General*).
-+
-image:screenshot_compliance_add_label_highlight_2.png["Una schermata che mostra come selezionare l'etichetta da assegnare ai file che corrispondono alla policy."]
-
-. Fare clic su *Save Policy* (Salva policy) per visualizzare l'etichetta nella descrizione della policy.
-
-
-
-NOTE: Se un criterio è stato configurato con un'etichetta, ma l'etichetta è stata rimossa da AIP, il nome dell'etichetta viene disattivato e l'etichetta non viene più assegnata.
-
-
-
 == Modifica criteri
 
 È possibile modificare qualsiasi criterio per un criterio esistente creato in precedenza. Questo può essere particolarmente utile se si desidera modificare la query (gli elementi definiti utilizzando filtri) per aggiungere o rimuovere determinati parametri.
 
-Tenere presente che per le policy predefinite è possibile modificare solo se le notifiche e-mail vengono inviate e se vengono aggiunte etichette AIP. Non è possibile modificare altri valori.
+Per i criteri predefiniti, è possibile modificare solo l'invio di notifiche e-mail e l'aggiunta di etichette AIP. Non è possibile modificare altri valori.
 
 .Fasi
 . Nella pagina elenco criteri, fare clic su *Modifica* per il criterio che si desidera modificare.
@@ -212,37 +97,22 @@ La policy viene modificata immediatamente. Tutte le azioni definite per quel cri
 
 == Delete Policy (Elimina policy)
 
-È possibile eliminare qualsiasi policy personalizzata creata se non è più necessaria. Non è possibile eliminare alcuna policy predefinita.
+È possibile eliminare qualsiasi criterio personalizzato creato se non è più necessario. Non è possibile eliminare i criteri predefiniti.
 
-Per eliminare un criterio, fare clic su image:screenshot_gallery_options.gif["Pulsante More (Altro)"] Per una policy specifica, fare clic su *Delete Policy* (Elimina policy), quindi fare nuovamente clic su *Delete Policy* (Elimina policy) nella finestra di dialogo di conferma.
+Per eliminare un criterio, fare clic sul image:screenshot_gallery_options.gif["Pulsante More (Altro)"] Per una policy specifica, fare clic su *Delete Policy* (Elimina policy), quindi fare nuovamente clic su *Delete Policy* (Elimina policy) nella finestra di dialogo di conferma.
 
 
 
 == Elenco dei criteri predefiniti
 
-La classificazione BlueXP fornisce le seguenti policy definite dal sistema:
+La classificazione BlueXP offre le seguenti policy definite dal sistema:
 
 [cols="25,40,40"]
 |===
 | Nome | Descrizione | Logica 
 
 
-| S3 - dati privati esposti pubblicamente | Oggetti S3 contenenti informazioni personali o sensibili, con accesso pubblico aperto in lettura. | S3 Public E contiene informazioni personali o personali sensibili 
-
-
-| PCI DSS - dati obsoleti in 30 giorni | File contenenti informazioni sulla carta di credito, modificati più di 30 giorni fa. | Contiene la carta di credito E l'ultima modifica in 30 giorni 
-
-
-| HIPAA - dati obsoleti in 30 giorni | File contenenti informazioni sulla salute, modificati l'ultima volta 30 giorni fa. | Contiene i dati di salute (definiti come nel report HIPAA) E l'ultima modifica nell'arco di 30 giorni 
-
-
 | Dati privati - obsoleti in 7 anni | File contenenti informazioni personali o sensibili, modificati da oltre 7 anni fa. | File contenenti informazioni personali o sensibili, modificati da oltre 7 anni fa 
-
-
-| GDPR - cittadini europei | File contenenti più di 5 identificatori dei cittadini di un paese dell'UE o tabelle DB contenenti identificatori dei cittadini di un paese dell'UE. | File contenenti oltre 5 identificatori di un (uno) cittadino dell'UE o tabelle DB contenenti righe con oltre il 15% di colonne con identificatori UE di un paese. (Uno qualsiasi degli identificatori nazionali dei paesi europei. Non include Brasile, California, USA SSN, Israele, Sudafrica) 
-
-
-| CCPA - residenti in California | File contenenti oltre 10 identificatori della licenza del driver California o tabelle DB con questo identificatore. | File contenenti oltre 10 identificatori della licenza di guida California O tabelle DB contenenti la licenza di guida California 
 
 
 | Nomi dei soggetti dei dati - rischio elevato | File con oltre 50 nomi di soggetti dati. | File con oltre 50 nomi di soggetti dati 

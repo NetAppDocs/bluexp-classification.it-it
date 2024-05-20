@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: task-deploy-multi-host-install-dark-site.html 
+keywords: cloud compliance, data sense, get started, deploy cloud data sense, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, dark site, upgrade, private mode, docker, podman, bluexp classification, classification, install 
+summary: 'Completare alcuni passaggi per installare la classificazione BlueXP su un host Linux in un sito on-premise che non dispone di accesso a Internet, noto anche come "modalità privata". Questo tipo di installazione è perfetto per i siti sicuri.' 
+---
+= Installare la classificazione BlueXP su host multipli per configurazioni di grandi dimensioni senza accesso a Internet
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Completa alcuni passaggi per installare la classificazione BlueXP su più host in un sito on-premise che non dispone di accesso a Internet, anche noto come _private mode_. Questo tipo di installazione è perfetto per i siti sicuri.
+
+Per le configurazioni molto grandi in cui si esegue la scansione di petabyte di dati in siti senza accesso a Internet, è possibile includere più host per fornire una potenza di elaborazione aggiuntiva. Quando si utilizzano più sistemi host, il sistema primario è denominato _nodo Manager_ e i sistemi aggiuntivi che forniscono potenza di elaborazione aggiuntiva sono denominati _nodi scanner_.
+
+Seguire questi passaggi quando si installa il software di classificazione BlueXP su più host on-premise in un ambiente offline.
+
+[]
+====
+*NOTA* queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP 1,30 e precedenti.
+
+====
+.Di cosa hai bisogno
+* Verificare che tutti i sistemi Linux per i nodi Manager e scanner soddisfino i requisiti dell'host.
+* Verificare di aver installato i due pacchetti software prerequisiti (Docker Engine o Podman e Python 3).
+* Assicurarsi di disporre dei privilegi di root sui sistemi Linux.
+* Verificare che l'ambiente offline soddisfi le autorizzazioni e la connettività richieste.
+* È necessario disporre degli indirizzi IP degli host dei nodi dello scanner che si intende utilizzare.
+* Su tutti gli host devono essere attivati i seguenti protocolli e porte:
++
+[cols="15,20,55"]
+|===
+| Porta | Protocolli | Descrizione 
+
+
+| 2377 | TCP | Comunicazioni per la gestione del cluster 
+
+
+| 7946 | TCP, UDP | Comunicazione tra nodi 
+
+
+| 4789 | UDP | Sovrapporre il traffico di rete 
+
+
+| 50 | ESP | Traffico ESP (Encrypted IPSec Overlay Network) 
+
+
+| 111 | TCP, UDP | Server NFS per la condivisione dei file tra gli host (necessario da ciascun nodo scanner al nodo manager) 
+
+
+| 2049 | TCP, UDP | Server NFS per la condivisione dei file tra gli host (necessario da ciascun nodo scanner al nodo manager) 
+|===
+
+
+.Fasi
+. Seguire i passi da 1 a 8 dal link:task-deploy-compliance-dark-site.html#single-host-installation-for-typical-configurations["Installazione su host singolo"] sul nodo manager.
+. Come illustrato al punto 9, quando richiesto dal programma di installazione, è possibile immettere i valori richiesti in una serie di prompt oppure fornire i parametri richiesti come argomenti della riga di comando al programma di installazione.
++
+Oltre alle variabili disponibili per un'installazione a singolo host, viene utilizzata una nuova opzione *-n <node_ip>* per specificare gli indirizzi IP dei nodi dello scanner. Gli IP di più nodi sono separati da una virgola.
+
++
+Ad esempio, questo comando aggiunge 3 nodi scanner:
+`sudo ./install.sh -a <account_id> -c <client_id> -t <user_token> --host <ds_host> --manager-host <cm_host> *-n <node_ip1>,<node_ip2>,<node_ip3>* --no-proxy --darksite`
+
+. Prima del completamento dell'installazione del nodo manager, viene visualizzata una finestra di dialogo con il comando di installazione necessario per i nodi dello scanner. Copiare il comando (ad esempio: `sudo ./node_install.sh -m 10.11.12.13 -t ABCDEF-1-3u69m1-1s35212`) e salvarlo in un file di testo.
+. Su *ciascun* host nodo scanner:
++
+.. Copiare il file del programma di installazione Data Sense (*cc_onrem_installer.tar.gz*) sul computer host.
+.. Decomprimere il file di installazione.
+.. Incollare ed eseguire il comando copiato al punto 3.
++
+Una volta completata l'installazione su tutti i nodi dello scanner e collegati al nodo manager, l'installazione del nodo manager viene completata.
+
+
+
+
+
+.Risultato
+Il programma di installazione della classificazione BlueXP completa l'installazione dei pacchetti e registra l'installazione. L'installazione può richiedere da 15 a 25 minuti.
+
+.Cosa c'è di nuovo
+Dalla pagina di configurazione è possibile selezionare il locale link:task-getting-started-compliance.html["Cluster ONTAP on-premise"] e locale link:task-scanning-databases.html["database"] che si desidera acquisire.
+
+Puoi anche farlo link:task-licensing-datasense.html["Impostare la licenza BYOL per la classificazione BlueXP"] Dalla pagina del portafoglio digitale BlueXP. Non ti verrà addebitato alcun costo neanche dopo la fine della prova gratuita di 30 giorni.

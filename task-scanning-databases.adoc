@@ -16,8 +16,6 @@ summary: Completare alcuni passaggi per avviare la scansione degli schemi di dat
 [role="lead"]
 Completare alcuni passaggi per avviare la scansione degli schemi di database con la classificazione BlueXP.
 
-Dopo aver abilitato la scansione del database, è possibile aggiungere identificatori univoci che la classificazione BlueXP identificherà in tutte le origini dati in base a colonne specifiche dei database. Questa funzione è denominata _Data Fusion_. link:task-managing-data-fusion.html#add-custom-personal-data-identifiers-from-your-databases["Scopri come aggiungere identificatori di dati personali personalizzati dai tuoi database"^].
-
 
 
 == Avvio rapido

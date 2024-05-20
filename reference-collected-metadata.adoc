@@ -37,7 +37,7 @@ La classificazione BlueXP raccoglie determinati metadati quando si eseguono scan
 |===
 [NOTE]
 ====
-* La classificazione BlueXP non estrae l'ultimo tempo a cui si accede dalle seguenti origini dati: SharePoint Online, SharePoint on-premise (SharePoint Server), OneDrive, Google Drive, Amazon S3 e Database.
+* La classificazione BlueXP non estrae l'ora dell'ultimo accesso dalle origini dei dati del database.
 * Le versioni precedenti del sistema operativo Windows (ad esempio, Windows 7 e Windows 8) disattivano per impostazione predefinita la raccolta dell'attributo "ultimo tempo di accesso" perché può influire sulle prestazioni del sistema. Quando questo attributo non viene raccolto, le analisi di classificazione BlueXP basate sull'ultimo tempo di accesso verranno influenzate. È possibile abilitare la raccolta dell'ultimo tempo di accesso su questi sistemi Windows meno recenti, se necessario.
 
 

@@ -18,6 +18,11 @@ Quando si esegue un'azione asincrona dal riquadro dei risultati dell'analisi su 
 
 In questo modo è possibile visualizzare le azioni che sono state completate correttamente, quelle attualmente in corso e quelle che hanno avuto esito negativo, in modo da poter diagnosticare e risolvere eventuali problemi. Tenere presente che le brevi operazioni che vengono completate rapidamente, ad esempio lo spostamento di un singolo file, non vengono visualizzate nel riquadro Stato azioni.
 
+[]
+====
+*NOTA* queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP 1,30 e precedenti.
+
+====
 Lo stato può essere:
 
 * Operazione riuscita - un'azione di classificazione BlueXP è terminata e tutti gli elementi sono riusciti.

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task-licensing-datasense.html 
-keywords: subscribe, trial, marketplace, subscription, paygo, pay as you go, byol, bring your own license, data sense, cloud data sense 
+permalink: task-licensing-byol-freetrial.html 
+keywords: subscribe, trial, marketplace, subscription, byol, bring your own license, data sense, cloud data sense 
 summary: 'I primi 1 TB di dati che la classificazione BlueXP scansiona in un"area di lavoro BlueXP sono gratuiti. Una licenza BYOL di NetApp, o un abbonamento del tuo provider cloud Marketplace, è necessaria per continuare la scansione dei dati dopo tale data.' 
 ---
-= Imposta una licenza pay-as-you-go per la classificazione BlueXP
+= Imposta una versione di prova gratuita o utilizza la tua licenza per la classificazione BlueXP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,18 +14,16 @@ summary: 'I primi 1 TB di dati che la classificazione BlueXP scansiona in un"are
 
 
 [role="lead"]
-Per eseguire la scansione dei dati è necessario un abbonamento pay-as-you-go (PAYGO).
+Per le versioni 1,30 e precedenti, i primi 1 TB di dati analizzati dalla classificazione BlueXP in un'area di lavoro BlueXP sono gratuiti per 30 giorni. Una licenza BYOL di NetApp, o un abbonamento dal mercato del tuo cloud provider, è necessario per continuare la scansione dei dati dopo tale data.
 
 []
 ====
-*NOTA* queste informazioni sono rilevanti solo per le versioni di base della classificazione BlueXP 1,31 e successive.
+*NOTA* queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP 1,30 e precedenti.
 
 ====
 Alcune note prima di leggere ulteriori informazioni:
 
-* Se hai già sottoscritto l'abbonamento BlueXP pay-as-you-go (PAYGO) nel mercato del tuo cloud provider, sarai automaticamente iscritto anche alla classificazione BlueXP. Non dovrai più iscriverti.
-
-
+* La classificazione BlueXP (Data Sense) Bring-Your-Own-License (BYOL) è una licenza _floating_ che è possibile utilizzare in tutti gli ambienti di lavoro e le origini dati nello spazio di lavoro che si intende sottoporre a scansione. Nel portafoglio digitale BlueXP viene visualizzato un abbonamento attivo.
 * La quantità di dati sottoposti a scansione viene calcolata in base alle dimensioni del file logico senza efficienze dello storage.
 
 
@@ -35,64 +33,17 @@ link:concept-cloud-compliance.html#cost["Scopri di più sulle licenze e sui cost
 
 == prova gratuita di 30 giorni
 
-È disponibile una prova gratuita di 30 giorni per un massimo di 500 TB di dati analizzati dalla classificazione BlueXP in un'area di lavoro BlueXP. Dovrai acquistare una licenza BYOL da NetApp o iscriverti a un abbonamento dal mercato del tuo cloud provider per continuare la scansione dei dati dopo quel momento.
+È disponibile una prova gratuita di 30 giorni per un massimo di 1 TB di dati analizzati dalla classificazione BlueXP in un'area di lavoro BlueXP. Dovrai acquistare una licenza BYOL da NetApp o iscriverti a un abbonamento dal mercato del tuo cloud provider per continuare la scansione dei dati dopo quel momento.
 
-Puoi iscriverti in qualsiasi momento e non ti verrà addebitato alcun costo anche dopo la fine della prova di 30 giorni. È sempre possibile visualizzare la quantità totale di dati sottoposti a scansione dalla dashboard di governance per la classificazione BlueXP. Inoltre, il pulsante _Iscriviti ora_ semplifica l'iscrizione quando sei pronto.
+Puoi iscriverti in qualsiasi momento e non ti verrà addebitato alcun costo fino al termine del periodo di prova di 30 giorni o fino a quando la quantità di dati non supera 1 TB. È sempre possibile visualizzare la quantità totale di dati sottoposti a scansione dalla dashboard di governance per la classificazione BlueXP. Inoltre, il pulsante _Iscriviti ora_ semplifica l'iscrizione quando sei pronto.
 
 image:screenshot_compliance_subscribe.png["Una schermata che mostra la quantità di dati sottoposti a scansione e il pulsante Iscriviti per iscriversi al servizio."]
 
 
 
-== Utilizza un abbonamento PAYGO per la classificazione BlueXP
-
-Le iscrizioni pay-as-you-go dal marketplace del tuo cloud provider ti consentono di concedere in licenza l'uso dei sistemi Cloud Volumes ONTAP e di molti servizi BlueXP, come la classificazione BlueXP. Pagherai il tuo cloud provider per la quantità di dati che la classificazione BlueXP sta analizzando su base oraria in un singolo abbonamento.
-
-L'iscrizione garantisce che il servizio non subisca interruzioni al termine della prova gratuita. Al termine della prova, non ti verrà addebitato alcun costo per la versione principale di BlueXP 1,31 o superiore.
-
-.Fasi
-Questi passaggi devono essere completati da un utente che ha il ruolo di _account Admin_.
-
-. Nella parte superiore destra della console BlueXP, fare clic sull'icona Impostazioni e selezionare *credenziali*.
-+
-image:screenshot_settings_icon.gif["Una schermata del banner in alto a destra di BlueXP in cui è possibile selezionare l'icona Impostazioni."]
-
-. Fare clic su *credenziali* e individuare le credenziali per il profilo dell'istanza AWS, l'identità del servizio gestito Azure o Google Project.
-+
-L'abbonamento deve essere aggiunto a Instance Profile, Managed Service Identity o Google Project. La ricarica non funziona altrimenti.
-
-+
-Se disponi già di un abbonamento BlueXP (come mostrato di seguito per AWS), allora sei tutto impostato: Non devi fare altro.
-
-+
-image:screenshot_profile_subscription.gif["Schermata della pagina credenziali che mostra il profilo istanza con un abbonamento attivo."]
-
-. Se non disponi ancora di un abbonamento, fai clic sul menu azione e su *Associa abbonamento*.
-+
-image:screenshot_add_subscription.gif["Schermata del menu nella pagina credenziali. Viene visualizzato un pulsante per associare un abbonamento alle credenziali."]
-
-. Selezionare un abbonamento esistente e fare clic su *associate* oppure fare clic su *Add Subscription* (Aggiungi abbonamento) e seguire la procedura.
-+
-Il video seguente mostra come associare un https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4["Mercato AWS"^] Iscrizione a un abbonamento AWS:
-
-+
-video::video_subscribing_aws.mp4[width=848,height=480]
-+
-Il video seguente mostra come associare un https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure Marketplace"^] Iscrizione a un abbonamento Azure:
-
-+
-video::video_subscribing_azure.mp4[width=848,height=480]
-+
-Il video seguente mostra come associare a. https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["Google Cloud Marketplace"^] Iscrizione a un abbonamento GCP:
-
-+
-video::video_subscribing_gcp.mp4[width=848,height=480]
-
-
-
-
 == Utilizzare un contratto annuale
 
-Utilizza la classificazione BlueXP ogni anno ottenendo un contratto annuale. Sono disponibili in termini di 1, 2 o 3 anni.
+Paga la classificazione BlueXP annualmente acquistando un contratto annuale. Sono disponibili in termini di 1, 2 o 3 anni.
 
 Se disponi di un contratto annuale da un marketplace, tutta la scansione dei dati di classificazione BlueXP verrà addebitata in base al contratto. Non puoi combinare un contratto di mercato annuale con un BYOL.
 
@@ -107,7 +58,7 @@ Se disponi di un contratto annuale da un marketplace, tutta la scansione dei dat
 
 Le licenze Bring-Your-Own di NetApp offrono termini di 1, 2 o 3 anni. La licenza di classificazione BYOL BlueXP (Data Sense) è una licenza _mobile_ in cui la capacità totale è condivisa tra *tutti* gli ambienti di lavoro e le origini dati, semplificando il rinnovo e la licenza iniziale.
 
-Se non disponi di una licenza di classificazione BlueXP, contattaci per ottenerla:
+Se non disponi di una licenza di classificazione BlueXP, contattaci per acquistarne una:
 
 * Mailto:ng-contact-data-sense@netapp.com?subject=Licensing[Invia e-mail per acquistare una licenza].
 * Fare clic sull'icona della chat nell'angolo inferiore destro di BlueXP per richiedere una licenza.

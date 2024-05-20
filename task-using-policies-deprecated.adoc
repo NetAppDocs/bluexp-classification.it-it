@@ -1,0 +1,118 @@
+---
+sidebar: sidebar 
+permalink: task-using-policies-deprecated.html 
+keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense 
+summary: Le policy sono come un elenco preferito di filtri personalizzati che forniscono i risultati della ricerca nella pagina di analisi per le query di conformità più frequenti. La classificazione BlueXP offre una serie di policy predefinite basate sulle richieste più comuni dei clienti. È possibile creare policy personalizzate che forniscano risultati per ricerche specifiche della propria organizzazione. 
+---
+= Invia avvisi e-mail quando vengono trovati dati non conformi
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La classificazione BlueXP può inviare avvisi e-mail agli utenti BlueXP nel tuo account quando determinate policy critiche restituiscono risultati, in modo da poter ottenere notifiche per proteggere i dati. È possibile scegliere di inviare le notifiche via email su base giornaliera, settimanale o mensile. Puoi anche scegliere di inviare avvisi e-mail a qualsiasi altro indirizzo e-mail (fino a 20 indirizzi e-mail) non presente nell'account BlueXP.
+
+È possibile configurare questa impostazione durante la creazione del criterio o la modifica di qualsiasi criterio.
+
+Per aggiungere aggiornamenti e-mail a un criterio esistente, procedere come segue.
+
+.Fasi
+. Nella pagina elenco criteri, fare clic su *Modifica* per il criterio in cui si desidera aggiungere (o modificare) l'impostazione e-mail.
++
+image:screenshot_compliance_add_email_alert_1.png["Una schermata che mostra come modificare un criterio esistente."]
+
+. Nella pagina Edit Policy (Modifica policy):
++
+.. Selezionare la casella "Email all the users in this account" (Invia tutti gli utenti di questo account) se si desidera inviare e-mail di notifica agli utenti dell'account BlueXP e scegliere l'intervallo di invio dell'e-mail (ad esempio, *Every Day*).
+.. Selezionare la casella "Send Email" (Invia e-mail) se si desidera inviare e-mail di notifica ad altri utenti, scegliere l'intervallo di invio e inserire fino a 20 indirizzi e-mail.
++
+image:screenshot_compliance_add_email_alert_2.png["Una schermata che mostra come scegliere i criteri e-mail da inviare per la policy."]
+
+
+
+. Fare clic su *Salva criterio*. Nella descrizione del criterio viene visualizzato l'intervallo di invio dell'e-mail.
+
+
+.Risultato
+La prima e-mail viene inviata ora se sono presenti risultati dal criterio, ma solo se alcuni file soddisfano i criteri. Non vengono inviate informazioni personali nelle e-mail di notifica. L'e-mail indica che sono presenti file che corrispondono ai criteri e fornisce un collegamento ai risultati dei criteri.
+
+
+
+== Eliminare automaticamente i file di origine utilizzando i criteri
+
+È possibile creare un criterio personalizzato per eliminare i file corrispondenti al criterio. Ad esempio, è possibile eliminare i file che contengono informazioni riservate e che sono stati rilevati dalla classificazione BlueXP negli ultimi 30 giorni.
+
+Solo gli account Admins possono creare una policy per eliminare automaticamente i file.
+
+
+NOTE: Tutti i file che corrispondono alla policy verranno eliminati definitivamente una volta al giorno.
+
+.Fasi
+. Dalla pagina Data Investigation (analisi dati), definire la ricerca selezionando tutti i filtri che si desidera utilizzare. Vedere link:task-investigate-data.html["Filtraggio dei dati nella pagina Data Investigation"^] per ulteriori informazioni.
+. Una volta che tutte le caratteristiche del filtro sono esattamente come desiderate, fare clic su *Create Policy from this search* (Crea policy da questa ricerca).
+. Assegnare un nome al criterio e selezionare altre azioni che possono essere eseguite dal criterio:
++
+.. Immettere un nome e una descrizione univoci.
+.. Selezionare la casella "Elimina automaticamente i file corrispondenti a questa policy" e digitare *Elimina definitivamente* per confermare che si desidera che i file vengano eliminati in modo permanente da questa policy.
+.. Fare clic su *Crea policy*.
++
+image:screenshot_compliance_delete_files_using_policies.png["Schermata che mostra come configurare il criterio e salvarlo."]
+
+
+
+
+
+.Risultato
+Il nuovo criterio viene visualizzato nella scheda Criteri. I file che corrispondono al criterio vengono cancellati una volta al giorno quando il criterio viene eseguito.
+
+È possibile visualizzare l'elenco dei file che sono stati eliminati in link:task-view-compliance-actions.html["Riquadro Actions Status (Stato azioni)"].
+
+
+
+== Assegnare automaticamente le etichette AIP con i criteri
+
+È possibile assegnare un'etichetta AIP a tutti i file che soddisfano i criteri del criterio. È possibile specificare l'etichetta AIP durante la creazione del criterio oppure è possibile aggiungerla durante la modifica di qualsiasi criterio.
+
+Le etichette vengono aggiunte o aggiornate continuamente nei file mentre la classificazione BlueXP esegue la scansione dei file.
+
+A seconda che un'etichetta sia già applicata a un file e del livello di classificazione dell'etichetta, quando si modifica un'etichetta vengono eseguite le seguenti azioni:
+
+[cols="60,40"]
+|===
+| Se il file... | Quindi... 
+
+
+| Non ha alcuna etichetta | L'etichetta viene aggiunta 
+
+
+| Dispone di un'etichetta con un livello di classificazione inferiore | Viene aggiunta l'etichetta di livello superiore 
+
+
+| Dispone di un'etichetta con un livello di classificazione superiore | Viene conservata l'etichetta di livello superiore 
+
+
+| Viene assegnata un'etichetta sia manualmente che tramite un criterio | Viene aggiunta l'etichetta di livello superiore 
+
+
+| Viene assegnata a due etichette diverse da due criteri | Viene aggiunta l'etichetta di livello superiore 
+|===
+Per aggiungere un'etichetta AIP a un criterio esistente, procedere come segue.
+
+.Fasi
+. Nella pagina elenco criteri, fare clic su *Modifica* per il criterio in cui si desidera aggiungere (o modificare) l'etichetta AIP.
++
+image:screenshot_compliance_add_label_highlight_1.png["Una schermata che mostra come modificare una policy esistente."]
+
+. Nella pagina Edit Policy (Modifica policy), selezionare la casella per abilitare le etichette automatiche per i file che corrispondono ai parametri del Policy, quindi selezionare l'etichetta (ad esempio, *General*).
++
+image:screenshot_compliance_add_label_highlight_2.png["Una schermata che mostra come selezionare l'etichetta da assegnare ai file che corrispondono alla policy."]
+
+. Fare clic su *Salva criterio* e l'etichetta viene visualizzata nella descrizione del criterio.
+
+
+
+NOTE: Se un criterio è stato configurato con un'etichetta, ma l'etichetta è stata rimossa da AIP, il nome dell'etichetta viene disattivato e l'etichetta non viene più assegnata.

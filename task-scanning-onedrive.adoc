@@ -4,7 +4,7 @@ permalink: task-scanning-onedrive.html
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, onedrive, data sense 
 summary: 'Completare alcuni passaggi per avviare la scansione dei file nelle cartelle OneDrive dell"utente con la classificazione BlueXP.' 
 ---
-= Scansione degli account OneDrive
+= Eseguire la scansione degli account OneDrive
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,6 +16,11 @@ summary: 'Completare alcuni passaggi per avviare la scansione dei file nelle car
 [role="lead"]
 Completare alcuni passaggi per avviare la scansione dei file nelle cartelle OneDrive dell'utente con la classificazione BlueXP.
 
+[]
+====
+*NOTA* queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP 1,30 e precedenti.
+
+====
 
 
 == Avvio rapido
@@ -133,5 +138,3 @@ La classificazione BlueXP avvia la scansione dei file per gli utenti aggiunti e 
 Se gli utenti lasciano l'azienda o se il loro indirizzo e-mail cambia, puoi rimuovere singoli utenti di OneDrive dall'eseguire la scansione dei loro file in qualsiasi momento. Fare clic su *Remove OneDrive User* (Rimuovi utente OneDrive) dalla pagina di configurazione.
 
 image:screenshot_compliance_onedrive_remove_user.png["Una schermata che mostra come rimuovere un singolo utente dalla scansione dei file."]
-
-Nota: È possibile link:task-managing-compliance.html#removing-a-onedrive-sharepoint-or-google-drive-account-from-bluexp-classification["Elimina l'intero account OneDrive dalla classificazione BlueXP"] Se non si desidera più eseguire la scansione dei dati utente dall'account OneDrive.
