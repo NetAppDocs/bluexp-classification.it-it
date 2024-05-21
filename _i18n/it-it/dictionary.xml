@@ -3544,4 +3544,5 @@ NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per ca
   <block id="77811a66f12d1085614f313861555339" category="sidebar">Gestione dei dati</block>
   <block id="08a8e0f5e4c7d91e565955cb7f30b215" category="sidebar">Visualizza i dettagli di governance sui dati nel dashboard Governance</block>
   <block id="aeb69ebcaffd7e18cd55db906e582bf5" category="sidebar">Rimuovere un account OneDrive, SharePoint o Google Drive</block>
+  <block id="b6417b62aacc6d16c1ae7a79d851d413" category="paragraph">La classificazione BlueXP è supportata se installi il connettore su un host RHEL 8 o 9 che risiede on-premise. Non è supportato se l'host RHEL 8 o 9 si trova in AWS, Azure o Google Cloud.</block>
 </blocks>

@@ -42,6 +42,8 @@ I seguenti sistemi operativi richiedono l'utilizzo del motore del container Podm
 
 Scopri di più https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["Panoramica sulle implementazioni di classificazione BlueXP"].
 
+La classificazione BlueXP è supportata se installi il connettore su un host RHEL 8 o 9 che risiede on-premise. Non è supportato se l'host RHEL 8 o 9 si trova in AWS, Azure o Google Cloud.
+
 
 
 === Opzione per attivare la raccolta del registro di controllo rimossa
