@@ -89,7 +89,7 @@ Ci sono alcune funzionalità e caratteristiche deprecate nella versione core di 
 | Creare un elenco personalizzato di "dati personali" identificati | Sì | No 
 
 
-| Notifica agli utenti tramite e-mail quando i file contengono determinati PII. (Questo criterio viene definito utilizzando link:task-using-policies.html["Policy"^].) | Sì | Sì 
+| Notifica agli utenti tramite e-mail quando i file contengono determinati PII. (Questo criterio viene definito utilizzando link:task-using-policies.html["Policy"^].) | Sì | No 
 
 
 | Utilizzare filtri a livello di directory | Sì | Sì 
@@ -131,6 +131,9 @@ Ci sono alcune funzionalità e caratteristiche deprecate nella versione core di 
 
 
 | Esportare i dati in NFS dall'analisi | Sì | No 
+
+
+| Esportare i dati in CSV dall'analisi | Sì | Sì 
 
 
 | Supporta più scanner | Sì | No 
