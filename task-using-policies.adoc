@@ -55,7 +55,7 @@ image:screenshot_compliance_save_as_highlight.png["Una schermata che mostra come
 .. Se si desidera, selezionare la casella per eliminare automaticamente i file che corrispondono ai parametri dei criteri.
 .. Fare clic su *Crea policy*.
 +
-image:screenshot_compliance_save_highlight.png["Una schermata che mostra come configurare il criterio e salvarlo."]
+image:screenshot_compliance_save_highlight2.png["Una schermata che mostra come configurare il criterio e salvarlo."]
 
 
 
