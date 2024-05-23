@@ -76,7 +76,7 @@ La classificazione BlueXP supporta le etichette AIP nei seguenti tipi di file: .
 
 === Integrare le etichette AIP nell'area di lavoro
 
-Prima di poter gestire le etichette AIP, è necessario integrare la funzionalità dell'etichetta AIP nella classificazione BlueXP accedendo all'account Azure esistente. Una volta attivata, è possibile gestire le etichette AIP all'interno dei file per tutti link:concept-cloud-compliance.html#supported-data-sources["origini dati"^] Nello spazio di lavoro BlueXP.
+Prima di poter gestire le etichette AIP, è necessario integrare la funzionalità dell'etichetta AIP nella classificazione BlueXP accedendo all'account Azure esistente. Una volta attivata, è possibile gestire le etichette AIP all'interno dei file per tutti link:concept-cloud-compliance.html["origini dati"^] Nello spazio di lavoro BlueXP.
 
 .Requisiti
 * È necessario disporre di un account e di una licenza di Azure Information Protection.

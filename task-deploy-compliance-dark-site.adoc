@@ -33,7 +33,6 @@ Quando viene installata la modalità privata (talvolta chiamata sito "offline" o
 
 * Sistemi ONTAP on-premise
 * Schemi di database
-* Condivisioni di file NFS o CIFS non NetApp
 
 
 Quando la classificazione BlueXP viene implementata in modalità privata, al momento non è disponibile alcun supporto per la scansione degli account Cloud Volumes ONTAP, Azure NetApp Files o FSX per ONTAP.
@@ -72,7 +71,7 @@ Scaricare il software di classificazione BlueXP dal NetApp Support Site e copiar
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Iscriviti al servizio di classificazione BlueXP
 [role="quick-margin-para"]
-I primi 500 TB di dati analizzati dalla classificazione BlueXP in BlueXP sono gratuiti per 30 giorni. Una licenza BYOL di NetApp è necessaria per continuare la scansione dei dati dopo tale data. Il core di BlueXP versione 1,31 è gratuito.
+È richiesto un abbonamento al marketplace del tuo cloud provider.
 
 
 

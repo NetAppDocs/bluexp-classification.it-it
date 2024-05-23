@@ -90,99 +90,15 @@ video::video_subscribing_gcp.mp4[width=848,height=480]
 
 
 
-== Utilizzare un contratto annuale
-
-Utilizza la classificazione BlueXP ogni anno ottenendo un contratto annuale. Sono disponibili in termini di 1, 2 o 3 anni.
-
-Se disponi di un contratto annuale da un marketplace, tutta la scansione dei dati di classificazione BlueXP verrà addebitata in base al contratto. Non puoi combinare un contratto di mercato annuale con un BYOL.
-
-* AWS: https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["Per informazioni sui prezzi, consulta l'offerta BlueXP Marketplace"^].
-* Azure: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-bluexp["Per informazioni sui prezzi, consulta l'offerta BlueXP Marketplace"^].
-* Cloud Google: Contatta il tuo commerciale NetApp per acquistare un contratto annuale. Il contratto è disponibile come offerta privata in Google Cloud Marketplace. Dopo che NetApp condividerà con te l'offerta privata, puoi selezionare il piano annuale effettuando l'iscrizione da Google Cloud Marketplace durante l'attivazione della classificazione BlueXP.
-
-
-
-
-== Utilizzare una licenza BYOL di classificazione BlueXP
-
-Le licenze Bring-Your-Own di NetApp offrono termini di 1, 2 o 3 anni. La licenza di classificazione BYOL BlueXP (Data Sense) è una licenza _mobile_ in cui la capacità totale è condivisa tra *tutti* gli ambienti di lavoro e le origini dati, semplificando il rinnovo e la licenza iniziale.
-
-Se non disponi di una licenza di classificazione BlueXP, contattaci per ottenerla:
-
-* Mailto:ng-contact-data-sense@netapp.com?subject=Licensing[Invia e-mail per acquistare una licenza].
-* Fare clic sull'icona della chat nell'angolo inferiore destro di BlueXP per richiedere una licenza.
-
-
-Se si dispone di una licenza basata su nodo non assegnata per Cloud Volumes ONTAP che non si intende utilizzare, è possibile convertirla in una licenza di classificazione BlueXP con la stessa equivalenza in dollari e la stessa data di scadenza. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["Fai clic qui per ulteriori informazioni"^].
-
-USA il Digital Wallet di BlueXP per gestire le licenze BYOL di classificazione BlueXP. È possibile aggiungere nuove licenze, aggiornare le licenze esistenti e visualizzare lo stato della licenza dal portafoglio digitale BlueXP.
-
-
-
-=== Ottenere il file di licenza per la classificazione BlueXP
-
-Dopo aver acquistato la licenza di classificazione BlueXP (rilevamento dati), si attiva la licenza in BlueXP inserendo il numero seriale di classificazione BlueXP e l'account NSS (NetApp Support Site), o caricando il file di licenza NetApp (NLF). Se si prevede di utilizzare questo metodo, la procedura riportata di seguito mostra come ottenere il file di licenza NLF.
-
-Se hai implementato la classificazione BlueXP su un host in un sito on-premise che non dispone di accesso a Internet, significa che hai implementato il connettore BlueXP https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html#private-mode["modalità privata"^], è necessario ottenere il file di licenza da un sistema connesso a internet. L'attivazione della licenza tramite il numero seriale e l'account NSS non è disponibile per le installazioni in modalità privata.
-
-.Prima di iniziare
-Prima di iniziare, è necessario disporre delle seguenti informazioni:
-
-* Numero di serie della classificazione BlueXP
-+
-Individua questo numero nell'ordine di vendita o contatta l'account team per ottenere queste informazioni.
-
-* ID account BlueXP
-+
-Puoi trovare il tuo ID account BlueXP selezionando l'elenco a discesa *account* nella parte superiore di BlueXP, quindi facendo clic su *Gestisci account* accanto all'account. L'ID account si trova nella scheda Panoramica. Per i siti in modalità privata senza accesso a Internet, utilizzare *account-DARKSITE1*.
-
-
-
-.Fasi
-. Accedere a https://mysupport.netapp.com["Sito di supporto NetApp"^] E fare clic su *sistemi > licenze software*.
-. Inserire il numero di serie della licenza di classificazione BlueXP.
-+
-image:screenshot_cloud_tiering_license_step1.gif["Una schermata che mostra una tabella di licenze dopo la ricerca per numero di serie."]
-
-. Nella colonna *chiave di licenza*, fare clic su *Ottieni file di licenza NetApp*.
-. Inserire l'ID account BlueXP (chiamato ID tenant sul sito di supporto) e fare clic su *Submit* (Invia) per scaricare il file di licenza.
-+
-image:screenshot_cloud_tiering_license_step2.gif["Una schermata che mostra la finestra di dialogo Get License (Ottieni licenza) in cui inserire l'ID tenant e fare clic su Submit (Invia) per scaricare il file di licenza."]
-
-
-
-
-
-=== Aggiungere le licenze BYOL di classificazione BlueXP al proprio account
-
-Dopo aver acquistato una licenza di classificazione BlueXP (Data Sense) per l'account BlueXP, è necessario aggiungere la licenza a BlueXP per utilizzare il servizio di classificazione BlueXP.
-
-.Fasi
-. Dal menu BlueXP, fare clic su *Governance > Digital wallet*, quindi selezionare la scheda *licenze servizi dati*.
-. Fare clic su *Aggiungi licenza*.
-. Nella finestra di dialogo _Add License_, inserire le informazioni sulla licenza e fare clic su *Add License*:
-+
-** Se si dispone del numero di serie della licenza di classificazione BlueXP e si conosce il proprio account NSS, selezionare l'opzione *inserire il numero di serie* e immettere le informazioni desiderate.
-+
-Se il tuo account NetApp Support Site non è disponibile nell'elenco a discesa, https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["Aggiungere l'account NSS a BlueXP"^].
-
-** Se si dispone del file di licenza di classificazione BlueXP (richiesto se installato in un sito buio), selezionare l'opzione *Upload License file* (carica file di licenza) e seguire le istruzioni per allegare il file.
-+
-image:screenshot_services_license_add.png["Una schermata che mostra la pagina per aggiungere la licenza BYOL per la classificazione BlueXP."]
-
-
-
-
-
-.Risultato
-BlueXP aggiunge la licenza in modo che il servizio di classificazione BlueXP sia attivo.
-
-
-
 === Aggiornare una licenza BYOL di classificazione BlueXP
 
 Se il termine concesso in licenza si avvicina alla data di scadenza o se la capacità concessa in licenza raggiunge il limite, verrà inviata una notifica nell'interfaccia utente classificazione.
 
+[]
+====
+*NOTA* queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP 1,30 e precedenti.
+
+====
 image:screenshot_services_license_expire_cc1.png["Una schermata che mostra una licenza in scadenza nella pagina di classificazione di BlueXP."]
 
 Questo stato viene visualizzato anche nel Digital Wallet di BlueXP e in https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["Notifiche"^].
@@ -198,7 +114,7 @@ Dopo aver pagato la licenza e averla registrata nel NetApp Support Site, BlueXP 
 
 . Se BlueXP non riesce ad aggiornare automaticamente la licenza (ad esempio, se installata in un sito buio), sarà necessario caricare manualmente il file di licenza.
 +
-.. È possibile <<Ottenere il file di licenza per la classificazione BlueXP,Ottenere il file di licenza dal NetApp Support Site>>.
+.. È possibile ottenere il file di licenza dal sito di assistenza NetApp.
 .. Nella pagina del portafoglio digitale BlueXP della scheda _licenze servizi dati_, fare clic su image:screenshot_horizontal_more_button.gif["Icona Altro"] Per il numero di serie del servizio che si sta aggiornando, fare clic su *Aggiorna licenza*.
 +
 image:screenshot_services_license_update.png["Schermata che mostra la selezione del pulsante Update License (Aggiorna licenza) per un determinato servizio."]
@@ -215,17 +131,17 @@ BlueXP aggiorna la licenza in modo che il servizio di classificazione BlueXP con
 
 === Considerazioni sulla licenza BYOL
 
-Quando si utilizza una licenza BYOL di classificazione BlueXP (Data Sense), BlueXP visualizza un avviso nell'interfaccia utente di classificazione BlueXP e nell'interfaccia utente del portafoglio digitale BlueXP quando la dimensione di tutti i dati che si sta scansionando è prossima al limite di capacità o alla data di scadenza della licenza. Vengono visualizzati i seguenti avvisi:
+Quando si utilizza una licenza BYOL di classificazione BlueXP (Data Sense), BlueXP visualizza un avviso nell'interfaccia utente di classificazione BlueXP e nell'interfaccia utente del portafoglio digitale BlueXP quando la dimensione di tutti i dati che si sta scansionando è prossima al limite di capacità o alla data di scadenza della licenza.
+
+[]
+====
+*NOTA* queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP 1,30 e precedenti.
+
+====
+Vengono visualizzati i seguenti avvisi:
 
 * Quando la quantità di dati che si sta scansionando ha raggiunto il 80% della capacità concessa in licenza, e di nuovo quando si è raggiunto il limite
 * 30 giorni prima della scadenza di una licenza e di nuovo alla scadenza della stessa
 
 
 Utilizzare l'icona chat in basso a destra dell'interfaccia BlueXP per rinnovare la licenza quando vengono visualizzati questi avvisi.
-
-Se la licenza scade o si è raggiunto il limite BYOL, la classificazione BlueXP continua a funzionare, ma l'accesso ai dashboard viene bloccato in modo da non visualizzare le informazioni relative ai dati sottoposti a scansione. Solo la pagina _Configuration_ è disponibile nel caso in cui si desideri ridurre il numero di volumi sottoposti a scansione per portare potenzialmente l'utilizzo della capacità al di sotto del limite di licenza.
-
-Una volta rinnovata la licenza BYOL, BlueXP aggiorna automaticamente la licenza nel portafoglio digitale BlueXP e fornisce l'accesso completo a tutti i dashboard. Se BlueXP non riesce ad accedere al file di licenza tramite una connessione Internet sicura (ad esempio, se installato in un sito buio), è possibile ottenere il file da soli e caricarlo manualmente su BlueXP. Per istruzioni, vedere <<Aggiornare una licenza BYOL di classificazione BlueXP,Come aggiornare una licenza di classificazione BlueXP>>.
-
-
-NOTE: Se l'account in uso dispone sia di una licenza BYOL che DI un abbonamento PAYGO, la classificazione BlueXP _non_ passerà all'abbonamento PAYGO alla scadenza della licenza BYOL. È necessario rinnovare la licenza BYOL.

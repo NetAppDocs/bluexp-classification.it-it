@@ -85,7 +85,7 @@ sidebar:
     entries:
     - title: Elenco delle funzioni obsolete
       url: "/reference-free-paid.html"
-    - title: Implementare la classificazione BlueXP
+    - title: Implementa le deprecazioni di classificazione BlueXP
       entries:
       - title: Installare la classificazione BlueXP su host multipli senza accesso
           a Internet
@@ -94,7 +94,7 @@ sidebar:
         url: "/task-deploy-add-scanner-nodes.html"
       - title: Imposta una versione di prova gratuita o utilizza la tua licenza
         url: "/task-licensing-byol-freetrial.html"
-    - title: Dati di scansione
+    - title: Deprecazioni dei dati di scansione
       entries:
       - title: Esegui la scansione dei bucket Amazon S3
         url: "/task-scanning-s3.html"
@@ -106,7 +106,7 @@ sidebar:
         url: "/task-scanning-google-drive.html"
       - title: Scansione dello storage a oggetti che utilizza il protocollo S3
         url: "/task-scanning-object-storage.html"
-    - title: Gestione dei dati
+    - title: Gestire le deprecazioni dei dati
       entries:
       - title: Visualizza i dettagli di governance sui dati nel dashboard Governance
         url: "/task-controlling-governance-dashboard-deprecated.html"
