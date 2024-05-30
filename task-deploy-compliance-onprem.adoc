@@ -30,7 +30,8 @@ image:diagram_deploy_onprem_cloud_instance.png["Un diagramma dei componenti di r
 
 Per le configurazioni molto grandi in cui si esegue la scansione di petabyte di dati, sulle versioni 1,30 e precedenti, è possibile includere più host per fornire ulteriore potenza di elaborazione. Quando si utilizzano più sistemi host, il sistema primario è denominato _nodo Manager_ e i sistemi aggiuntivi che forniscono potenza di elaborazione aggiuntiva sono denominati _nodi scanner_.
 
-Per le versioni 1,30 e precedenti, se è necessario installare la classificazione BlueXP su più host, fare riferimento a. link:task-deploy-multi-host-install-dark-site.html["Installare la classificazione BlueXP su host multipli senza accesso a Internet"].
+
+NOTE: Per le versioni legacy 1,30 e precedenti, se devi installare la classificazione BlueXP su host multipli, fai riferimento a. link:task-deploy-multi-host-install-dark-site.html["Installare la classificazione BlueXP su host multipli senza accesso a Internet"].
 
 Puoi anche farlo link:task-deploy-compliance-dark-site.html["Installare la classificazione BlueXP in un sito on-premise che non dispone di accesso a Internet"] per siti completamente sicuri.
 
@@ -83,11 +84,9 @@ Per Azure NetApp Files, deve essere implementato nella stessa regione dei volumi
 * Quando si esegue la scansione dei dati in Cloud Volumes ONTAP in GCP, si utilizza un connettore in GCP.
 
 
-I sistemi ONTAP on-premise, le condivisioni dei file e gli account dei database non NetApp possono essere sottoposti a scansione utilizzando uno di questi connettori cloud.
+I sistemi ONTAP on-premise, le condivisioni dei file NetApp e gli account dei database possono essere sottoposti a scansione utilizzando uno qualsiasi di questi connettori cloud.
 
 Nota: È anche possibile https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["Implementare il connettore on-premise"^] Su un host Linux nella rete o su un host Linux nel cloud. Alcuni utenti che intendono installare BlueXP classification on-premise possono anche scegliere di installare il connettore on-premise.
-
-Come puoi vedere, potrebbero esserci alcune situazioni in cui devi utilizzare https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Connettori multipli"].
 
 Quando si installa la classificazione BlueXP, è necessario l'indirizzo IP o il nome host del sistema di connessione. Queste informazioni saranno disponibili se il connettore è stato installato nella propria sede. Se il connettore è implementato nel cloud, è possibile trovare queste informazioni dalla console BlueXP: Fare clic sull'icona della Guida, selezionare *Support* e fare clic su *BlueXP Connector*.
 
@@ -316,8 +315,6 @@ I criteri di esportazione dei volumi NFS devono consentire l'accesso dall'istanz
 
 
 |===
-Se si utilizzano più host di classificazione BlueXP per fornire ulteriore potenza di elaborazione per eseguire la scansione delle origini dati, è necessario attivare porte/protocolli aggiuntivi. link:task-deploy-compliance-onprem.html["Vedere i requisiti aggiuntivi per le porte"].
-
 
 
 == Installare la classificazione BlueXP sull'host Linux

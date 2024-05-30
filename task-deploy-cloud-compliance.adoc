@@ -60,7 +60,7 @@ Esistono alcuni scenari in cui è necessario utilizzare un connettore implementa
 * Quando si esegue la scansione dei dati in Cloud Volumes ONTAP in GCP, si utilizza un connettore in GCP.
 
 
-I sistemi ONTAP on-premise, le condivisioni dei file NetApp, lo storage a oggetti generico S3 e i database possono essere sottoposti a scansione quando si utilizza uno di questi connettori cloud.
+È possibile eseguire la scansione dei sistemi ONTAP on-premise, delle condivisioni di file NetApp e dei database utilizzando uno di questi connettori cloud.
 
 Nota: È anche possibile https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["Installare il connettore on-premise"^] Su un host Linux nella rete o nel cloud. Alcuni utenti che intendono installare BlueXP classification on-premise possono anche scegliere di installare il connettore on-premise.
 

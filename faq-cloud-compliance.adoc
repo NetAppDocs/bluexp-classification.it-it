@@ -40,18 +40,6 @@ La classificazione BlueXP utilizza l'ai per fornire una comprensione contestuale
 
 link:concept-cloud-compliance.html["Scopri di più sul funzionamento della classificazione BlueXP"^].
 
-
-
-=== Quali sono i casi di utilizzo più comuni per la classificazione BlueXP?
-
-* Identificare le informazioni personali identificabili (PII).
-* Individuare e creare report su dati specifici in risposta a soggetti interessati, come richiesto da GDPR, CCPA, HIPAA e altre normative sulla privacy dei dati.
-* Rispettare le nuove e future normative sulla privacy dei dati.
-* Rispettare le normative sulla privacy e sulla conformità dei dati.
-* Migrazione dei dati dai sistemi legacy al cloud.
-* Rispettare le policy di conservazione dei dati.
-
-
 https://bluexp.netapp.com/netapp-cloud-data-sense["Scopri di più sui casi di utilizzo per la classificazione BlueXP"^].
 
 
@@ -106,12 +94,6 @@ Una volta trovati i file di interesse, è possibile elencare le caratteristiche,
 
 
 
-=== Che tipo di analisi fornisce la classificazione BlueXP?
-
-Le origini dati possono essere rappresentate visivamente e le relazioni possono essere definite e rappresentate graficamente. Ad esempio, gli amministratori possono visualizzare tutti i dati obsoleti, duplicati e non correlati al business tra le origini dati dell'intera azienda (sistemi on-premise, database, condivisioni di file, archivi S3, OneDrive, ecc.). Possono quindi copiare, spostare, eliminare e gestire i dati per ottimizzare i costi di storage e ridurre i rischi. Gli utenti possono ridurre i rischi osservando quali dati sensibili potrebbero essere esposti e possono creare lavori per gestire le autorizzazioni per una protezione dei dati efficace. La classificazione BlueXP classifica anche tutti i diversi tipi di dati, in modo che gli amministratori possano analizzare i dati per tipo e vedere quali azioni sono state intraprese sui dati e quando.
-
-
-
 === La classificazione BlueXP offre report?
 
 Sì. Le informazioni offerte dalla classificazione BlueXP possono essere rilevanti per gli altri stakeholder della tua organizzazione, pertanto ti consentiamo di generare report per condividere le informazioni. Per la classificazione BlueXP sono disponibili i seguenti report:
@@ -154,7 +136,7 @@ NOTE: Attivando la classificazione BlueXP su un'origine dati si ottiene una scan
 
 === Come si disattiva la classificazione BlueXP?
 
-È possibile disattivare la classificazione BlueXP dalla scansione di un singolo ambiente di lavoro, database, gruppo di condivisione file, account OneDrive o account SharePoint dalla pagina di configurazione della classificazione BlueXP.
+Puoi disattivare la classificazione BlueXP dall'eseguire la scansione di un singolo ambiente di lavoro, database o gruppo di condivisioni di file dalla pagina di configurazione della classificazione BlueXP.
 
 link:task-managing-compliance.html["Scopri di più"^].
 
@@ -340,10 +322,10 @@ Il connettore è un software in esecuzione su un'istanza di calcolo all'interno 
 
 === Dove deve essere installato il connettore?
 
-* Quando si esegue la scansione dei dati in Cloud Volumes ONTAP in AWS, Amazon FSX per ONTAP o nei bucket AWS S3, si utilizza un connettore in AWS.
+* Quando esegui la scansione dei dati in Cloud Volumes ONTAP in AWS o in Amazon FSX per ONTAP, utilizza un connettore in AWS.
 * Quando si esegue la scansione dei dati in Cloud Volumes ONTAP in Azure o in Azure NetApp Files, si utilizza un connettore in Azure.
 * Quando si esegue la scansione dei dati in Cloud Volumes ONTAP in GCP, si utilizza un connettore in GCP.
-* Quando si eseguono scansioni di dati in sistemi ONTAP on-premise, condivisioni di file non NetApp, storage a oggetti S3 generico, database, cartelle OneDrive, account SharePoint e account Google Drive, è possibile utilizzare un connettore in una qualsiasi di queste posizioni cloud.
+* Durante la scansione dei dati in sistemi ONTAP on-premise, condivisioni di file NetApp o database, puoi utilizzare un connettore in una qualsiasi di queste posizioni cloud.
 
 
 Quindi, se si dispone di dati in molte di queste posizioni, potrebbe essere necessario utilizzare https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-to-use-multiple-connectors["Connettori multipli"^].

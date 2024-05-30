@@ -14,10 +14,10 @@ summary: Completare alcuni passaggi per avviare la scansione di condivisioni di 
 
 
 [role="lead"]
-Completare alcuni passaggi per avviare la scansione di condivisioni di file NFS o CIFS non NetApp direttamente con la classificazione BlueXP. Queste condivisioni di file possono risiedere on-premise o nel cloud.
+Completa alcuni passaggi per iniziare a analizzare le file share NFS o CIFS da Google Cloud NetApp Volumes e dai sistemi NetApp 7-mode di precedente generazione. Queste condivisioni di file possono risiedere on-premise o nel cloud.
 
 
-TIP: L'aggiunta di condivisioni di file è l'unico modo per analizzare i dati da Google Cloud NetApp Volumes.
+NOTE: La scansione dei dati da condivisioni di file non NetApp non è supportata nella versione principale della classificazione BlueXP.
 
 
 
@@ -47,7 +47,7 @@ Aggiungere l'elenco delle condivisioni di file che si desidera acquisire e selez
 
 Prima di attivare la classificazione BlueXP, verificare di disporre di una configurazione supportata.
 
-* Le condivisioni possono essere ospitate ovunque, anche nel cloud o on-premise. Nella maggior parte dei casi si tratta di condivisioni di file che risiedono su sistemi di storage non NetApp. Tuttavia, le condivisioni CIFS dei sistemi storage NetApp 7-Mode precedenti possono essere sottoposte a scansione come condivisioni di file.
+* Le condivisioni possono essere ospitate ovunque, anche nel cloud o on-premise. È possibile eseguire la scansione delle condivisioni CIFS di sistemi storage NetApp 7-Mode meno recenti come condivisioni di file.
 +
 Si noti che la classificazione BlueXP non può estrarre le autorizzazioni o il "tempo di accesso ultimo" dai sistemi 7-Mode. Inoltre, a causa di un problema noto tra alcune versioni di Linux e le condivisioni CIFS su sistemi 7-Mode, è necessario configurare la condivisione in modo che utilizzi solo SMB v1 con l'autenticazione NTLM attivata.
 
@@ -71,10 +71,6 @@ Se si desidera assicurarsi che i file "ultimi tempi di accesso" non vengano modi
 == Implementazione dell'istanza di classificazione BlueXP
 
 Distribuire la classificazione BlueXP se non è già stata implementata un'istanza.
-
-Se si esegue la scansione di condivisioni di file NFS o CIFS non NetApp accessibili tramite Internet, è possibile link:task-deploy-cloud-compliance.html["Implementare la classificazione BlueXP nel cloud"^] oppure link:task-deploy-compliance-onprem.html["Implementare la classificazione BlueXP in una posizione on-premise con accesso a Internet"^].
-
-Se si esegue la scansione di condivisioni di file NFS o CIFS non NetApp installate in un sito buio che non dispone di accesso a Internet, è necessario link:task-deploy-compliance-dark-site.html["Implementare la classificazione BlueXP nella stessa posizione on-premise che non dispone di accesso a Internet"^]. Ciò richiede anche che BlueXP Connector sia implementato nella stessa posizione on-premise.
 
 Gli aggiornamenti al software di classificazione BlueXP sono automatizzati finché l'istanza dispone di connettività Internet.
 
@@ -119,7 +115,7 @@ image:screenshot_compliance_fileshares_add_initial_shares.png["Una schermata che
 Se si stanno aggiungendo condivisioni di file a un gruppo esistente, fare clic su *Aggiungi condivisioni*.
 
 +
-image:screenshot_compliance_fileshares_add_more_shares.png["Una schermata che mostra il pulsante Add shares (Aggiungi condivisioni) per aggiungere altre condivisioni al gruppo."]
+image:screenshot_compliance_fileshares_add_more_shares2.png["Una schermata che mostra il pulsante Add shares (Aggiungi condivisioni) per aggiungere altre condivisioni al gruppo."]
 
 . Selezionare il protocollo per le condivisioni di file che si desidera aggiungere, aggiungere le condivisioni di file che si desidera sottoporre a scansione (una condivisione di file per riga) e fare clic su *continua*.
 +
