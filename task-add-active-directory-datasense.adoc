@@ -16,7 +16,7 @@ summary: È possibile integrare un Active Directory globale con la classificazio
 [role="lead"]
 È possibile integrare un Active Directory globale con la classificazione BlueXP per migliorare i risultati che BlueXP fornisce in relazione ai proprietari dei file e agli utenti e ai gruppi che hanno accesso ai file.
 
-Quando si impostano determinate origini dati (elencate di seguito), è necessario immettere le credenziali Active Directory per consentire alla classificazione BlueXP di eseguire la scansione dei volumi CIFS. Questa integrazione fornisce la classificazione BlueXP con i dettagli relativi al proprietario del file e alle autorizzazioni per i dati che risiedono in tali origini dati. L'Active Directory immessa per tali origini dati potrebbe essere diversa dalle credenziali globali di Active Directory inserite qui. La classificazione BlueXP cerca in tutte le Active Directory integrate i dettagli relativi all'utente e alle autorizzazioni.
+Quando si impostano determinate origini dati (elencate di seguito), è necessario immettere le credenziali Active Directory per consentire alla classificazione BlueXP di eseguire la scansione dei volumi CIFS. Questa integrazione fornisce la classificazione BlueXP con i dettagli relativi al proprietario del file e alle autorizzazioni per i dati che risiedono in tali origini dati. L'Active Directory immesso per tali origini dati potrebbe differire dalle credenziali di Active Directory globali inserite qui. La classificazione BlueXP cerca in tutte le Active Directory integrate i dettagli relativi all'utente e alle autorizzazioni.
 
 Questa integrazione fornisce informazioni aggiuntive nelle seguenti posizioni della classificazione BlueXP:
 
@@ -51,7 +51,7 @@ Dopo aver implementato la classificazione BlueXP e aver attivato la scansione su
 
 Le credenziali di Active Directory possono essere di sola lettura, ma fornendo credenziali di amministratore si garantisce che la classificazione BlueXP possa leggere tutti i dati che richiedono autorizzazioni elevate. Le credenziali vengono memorizzate nell'istanza di classificazione BlueXP.
 
-Per volumi CIFS/condivisioni file, se si desidera assicurarsi che i file "ultimi tempi di accesso" siano invariati dalle scansioni di classificazione BlueXP, si consiglia di disporre dell'autorizzazione Write Attributes. Se possibile, si consiglia di far parte dell'utente configurato con Active Directory di un gruppo principale dell'organizzazione che dispone delle autorizzazioni per tutti i file.
+Per le condivisioni di file/volumi CIFS, se vuoi essere sicuro che i file "ultimi tempi di accesso" siano invariati dalle scansioni della classificazione di BlueXP, consigliamo all'utente di disporre dell'autorizzazione attributi di scrittura. Se possibile, si consiglia di far parte dell'utente configurato con Active Directory di un gruppo principale dell'organizzazione che dispone delle autorizzazioni per tutti i file.
 
 .Requisiti
 * È necessario che sia già stata configurata una Active Directory per gli utenti della società.

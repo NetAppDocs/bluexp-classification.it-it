@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-cloud-compliance.html 
-keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning, aip labels, governance, cloud data sense, data sense, privacy control, classification, optimization, cloud data sense, bluexp 
+keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning,  governance, cloud data sense, data sense, privacy control, classification, optimization, cloud data sense, bluexp 
 summary: BlueXP Classification è un servizio di governance dei dati per BlueXP che esegue la scansione delle origini dati aziendali on-premise e cloud per mappare e classificare i dati e identificare le informazioni private. In questo modo è possibile ridurre i rischi di sicurezza e conformità, ridurre i costi di storage e assistere i progetti di migrazione dei dati. 
 ---
 = Scopri di più sulla classificazione BlueXP
@@ -121,7 +121,7 @@ La classificazione BlueXP è ora gratuita da utilizzare. Non è richiesta alcuna
 
 I costi di trasferimento dei dati dipendono dalla configurazione. Se l'istanza di classificazione BlueXP e l'origine dati si trovano nella stessa zona di disponibilità e nella stessa regione, non ci sono costi di trasferimento dei dati. Ma se l'origine dei dati, ad esempio un sistema Cloud Volumes ONTAP, si trova in una zona o regione di disponibilità _diversa_, i costi di trasferimento dei dati verranno addebitati dal provider cloud. Per ulteriori informazioni, consulta i seguenti link:
 
-* https://aws.amazon.com/ec2/pricing/on-demand/["AWS: Prezzi Amazon EC2"^]
+* https://aws.amazon.com/ec2/pricing/on-demand/["AWS: Prezzi di Amazon Elastic Compute Cloud (Amazon EC2)"^]
 * https://azure.microsoft.com/en-us/pricing/details/bandwidth/["Microsoft Azure: Dettagli sui prezzi della larghezza di banda"^]
 * https://cloud.google.com/storage-transfer/pricing["Google Cloud: Prezzi del servizio di trasferimento dello storage"^]
 
@@ -219,6 +219,12 @@ La tabella seguente mostra alcune delle differenze:
 | Velocità di scansione | Lento | Veloce 
 
 
+| Prezzi | Gratuito | Gratuito 
+
+
+| Capacità | Limitata a 500 TB | Limitata a 500 TB 
+
+
 | Elenco dei tipi di file e della capacità utilizzata | Sì | Sì 
 
 
@@ -241,6 +247,178 @@ La tabella seguente mostra alcune delle differenze:
 
 
 | Possibilità di eseguire altri report | Sì | No 
+
+
+| Possibilità di visualizzare i metadati dei file* | No | Sì 
+|===
+*I seguenti metadati vengono estratti dai file durante le scansioni di mappatura:
+
+* Ambiente di lavoro
+* Tipo di ambiente di lavoro
+* Repository di storage
+* Tipo di file
+* Capacità utilizzata
+* Numero di file
+* Dimensione del file
+* Creazione di file
+* Ultimo accesso al file
+* Ultima modifica al file
+* Ora di rilevamento file
+* Estrazione delle autorizzazioni
+
+
+*Differenze del dashboard di governance*:
+
+[cols="47,18,18"]
+|===
+| Funzione | Mappa e classifica | Mappa 
+
+
+| Dati obsoleti | Sì | Sì 
+
+
+| Dati non aziendali | Sì | Sì 
+
+
+| File duplicati | Sì | No 
+
+
+| Criteri predefiniti | Sì | No 
+
+
+| Criteri personalizzati | Sì | Sì 
+
+
+| Rapporto DDA | Sì | Sì 
+
+
+| Rapporto di mappatura | Sì | Sì 
+
+
+| Rilevamento del livello di sensibilità | Sì | No 
+
+
+| Dati sensibili con autorizzazioni estese | Sì | No 
+
+
+| Autorizzazioni aperte | Sì | Sì 
+
+
+| Età dei dati | Sì | Sì 
+
+
+| Dimensioni dei dati | Sì | Sì 
+
+
+| Categorie | Sì | No 
+
+
+| Tipi di file | Sì | Sì 
+|===
+*Differenze dashboard conformità*:
+
+[cols="47,18,18"]
+|===
+| Funzione | Mappa e classifica | Mappa 
+
+
+| Informazioni personali | Sì | No 
+
+
+| Informazioni personali sensibili | Sì | No 
+
+
+| Report di valutazione sui rischi legati alla privacy | Sì | No 
+
+
+| Report HIPAA | Sì | No 
+
+
+| Report PCI DSS | Sì | No 
+|===
+*Differenze dei filtri di analisi*:
+
+[cols="47,18,18"]
+|===
+| Funzione | Mappa e classifica | Mappa 
+
+
+| Policy | Sì | Sì 
+
+
+| Tipo di ambiente di lavoro | Sì | Sì 
+
+
+| Ambiente di lavoro | Sì | Sì 
+
+
+| Repository di storage | Sì | Sì 
+
+
+| Tipo di file | Sì | Sì 
+
+
+| Dimensione del file | Sì | Sì 
+
+
+| Ora di creazione | Sì | Sì 
+
+
+| Tempo scoperto | Sì | Sì 
+
+
+| Ultima modifica | Sì | Sì 
+
+
+| Ultimo accesso | Sì | Sì 
+
+
+| Autorizzazioni aperte | Sì | Sì 
+
+
+| Percorso directory file | Sì | Sì 
+
+
+| Categoria | Sì | No 
+
+
+| Livello di sensibilità | Sì | No 
+
+
+| Numero di identificatori | Sì | No 
+
+
+| Dati personali | Sì | No 
+
+
+| Dati personali sensibili | Sì | No 
+
+
+| Soggetto interessato | Sì | No 
+
+
+| Duplicati | Sì | No 
+
+
+| Stato di classificazione | Sì | Lo stato è sempre "informazioni riservate" 
+
+
+| Evento di analisi della scansione | Sì | Sì 
+
+
+| Hash file | Sì | Sì 
+
+
+| Numero di utenti con accesso | Sì | Sì 
+
+
+| Autorizzazioni utente/gruppo | Sì | Sì 
+
+
+| Proprietario del file | Sì | Sì 
+
+
+| Tipo di directory | Sì | Sì 
 |===
 
 
@@ -263,7 +441,7 @@ Dati personali:: Informazioni personali come indirizzi e-mail, numeri di identif
 Dati personali sensibili:: Tipi speciali di informazioni sensibili, come dati sanitari, origine etnica o opinioni politiche, come definito dal GDPR e da altre normative sulla privacy. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data["Scopri di più sui dati personali sensibili"^].
 Categorie:: La classificazione BlueXP prende i dati sottoposti a scansione e li divide in diversi tipi di categorie. Le categorie sono argomenti basati sull'analisi ai del contenuto e dei metadati di ciascun file. link:task-controlling-private-data.html#view-files-by-categories["Scopri di più sulle categorie"^].
 Tipi:: La classificazione BlueXP prende i dati sottoposti a scansione e li suddivide in base al tipo di file. link:task-controlling-private-data.html#view-files-by-file-types["Scopri di più sui tipi"^].
-Riconoscimento entità nome:: La classificazione BlueXP utilizza l'ai per estrarre i nomi delle persone fisiche dai documenti. link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request["Scopri come rispondere alle richieste di accesso ai soggetti dati"^].
+Riconoscimento entità nome:: La classificazione BlueXP sfrutta l'ai per estrarre i nomi naturali delle persone dai documenti. link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request["Scopri come rispondere alle richieste di accesso ai soggetti dati"^].
 
 
 

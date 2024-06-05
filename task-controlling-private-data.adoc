@@ -91,7 +91,7 @@ image:screenshot_sensitive_personal_files.gif["Una schermata della finestra di d
 
 La classificazione BlueXP prende i dati sottoposti a scansione e li divide in diversi tipi di categorie. Le categorie sono argomenti basati sull'analisi ai del contenuto e dei metadati di ciascun file. link:reference-private-data-categories.html#types-of-categories["Vedere l'elenco delle categorie"^].
 
-Le categorie possono aiutarti a capire cosa accade con i tuoi dati mostrando i tipi di informazioni di cui disponi. Ad esempio, una categoria come i curriculum o i contratti dei dipendenti può includere dati sensibili. Quando si analizzano i risultati, è possibile che i contratti dei dipendenti siano memorizzati in una posizione non sicura. A questo punto, è possibile correggere il problema.
+Le categorie possono aiutarti a capire cosa accade con i tuoi dati mostrando i tipi di informazioni di cui disponi. Ad esempio, una categoria come i curriculum o i contratti dei dipendenti può includere dati sensibili. Quando si esaminano i risultati, è possibile che i contratti dei dipendenti siano memorizzati in una posizione non sicura. A questo punto, è possibile correggere il problema.
 
 
 NOTE: Le categorie sono supportate in inglese, tedesco e spagnolo. Il supporto per altre lingue verrà aggiunto in un secondo momento.

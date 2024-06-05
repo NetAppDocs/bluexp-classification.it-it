@@ -16,7 +16,7 @@ summary: Ottieni il controllo dei costi relativi ai dati sulle risorse di storag
 [role="lead"]
 Ottieni il controllo dei costi relativi ai dati sulle risorse di storage della tua organizzazione. La classificazione BlueXP identifica la quantità di dati obsoleti, dati non aziendali, file duplicati e file molto grandi nei sistemi, in modo da poter decidere se rimuovere o tierare alcuni file in uno storage a oggetti meno costoso.
 
-Inoltre, se si prevede di migrare i dati da posizioni on-premise al cloud, è possibile visualizzare le dimensioni dei dati e se alcuni di essi contengono informazioni sensibili prima di spostarli.
+Inoltre, se hai in programma di migrare i dati da posizioni on-premise nel cloud, puoi vedere le dimensioni dei dati e se alcuni di essi contengono informazioni sensibili prima di spostarli.
 
 []
 ====
@@ -32,7 +32,7 @@ L'area _dati sensibili e permessi estesi_ sul dashboard Governance fornisce una 
 
 NOTE: Ciò si applica alla classificazione BlueXP versioni 1,30 e precedenti.
 
-La classificazione dei file dipende dal numero di utenti autorizzati ad accedere ai file sull'asse X (dal più basso al più alto) e dal numero di identificatori sensibili all'interno dei file sull'asse Y (dal più basso al più alto). I blocchi rappresentano il numero di file che corrispondono agli elementi degli assi X e Y. I blocchi di colore più chiaro sono buoni, con meno utenti in grado di accedere ai file e con meno identificatori sensibili per file. I blocchi più scuri sono gli elementi che potresti voler esaminare. Ad esempio, la schermata seguente mostra il testo del passaggio del mouse per il blocco blu scuro. Indica che sono disponibili 1,500 file a cui hanno accesso 751-100 utenti e 501-100 identificatori sensibili per file.
+La classificazione dei file dipende dal numero di utenti autorizzati ad accedere ai file sull'asse X (dal più basso al più alto) e dal numero di identificatori sensibili all'interno dei file sull'asse Y (dal più basso al più alto). I blocchi rappresentano il numero di file che corrispondono agli elementi degli assi X e Y. I blocchi di colore più chiaro sono buoni, con meno utenti in grado di accedere ai file e con meno identificatori sensibili per file. I blocchi più scuri sono gli elementi che potresti voler esaminare. Ad esempio, la schermata riportata di seguito mostra il testo della descrizione dei comandi per il blocco blu scuro. Indica che sono disponibili 1,500 file a cui hanno accesso 751-100 utenti e 501-100 identificatori sensibili per file.
 
 image:screenshot_compliance_sensitive_data.png["Una schermata che mostra i dati visualizzati quando si posiziona il cursore su un elemento in questo pannello."]
 

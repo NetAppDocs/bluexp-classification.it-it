@@ -16,7 +16,7 @@ summary: Ottieni il controllo dei costi relativi ai dati sulle risorse di storag
 [role="lead"]
 Ottieni il controllo dei costi relativi ai dati sulle risorse di storage della tua organizzazione. La classificazione BlueXP identifica la quantità di dati obsoleti, dati non aziendali, file duplicati e file molto grandi nei sistemi, in modo da poter decidere se rimuovere o tierare alcuni file in uno storage a oggetti meno costoso.
 
-Inoltre, se si prevede di migrare i dati da posizioni on-premise al cloud, è possibile visualizzare le dimensioni dei dati e se alcuni di essi contengono informazioni sensibili prima di spostarli.
+Inoltre, se hai in programma di migrare i dati da posizioni on-premise nel cloud, puoi vedere le dimensioni dei dati e se alcuni di essi contengono informazioni sensibili prima di spostarli.
 
 
 
@@ -75,7 +75,7 @@ L'area _Top Data Repository per livello di sensibilità_ elenca i primi quattro 
 * Dati personali sensibili
 
 
-È possibile passare il mouse su ciascuna sezione per visualizzare il numero totale di elementi in ciascuna categoria.
+È possibile posizionare il cursore su ciascuna sezione per visualizzare il numero totale di elementi in ciascuna categoria.
 
 Fare clic su ciascuna area per visualizzare i risultati filtrati nella pagina di analisi in modo da poter analizzare ulteriormente.
 
@@ -91,7 +91,7 @@ L'area _Open Permissions_ mostra la percentuale per ciascun tipo di permessi esi
 * Accesso sconosciuto
 
 
-È possibile passare il mouse su ciascuna sezione per visualizzare il numero totale di file in ciascuna categoria. Fare clic su ciascuna area per visualizzare i risultati filtrati nella pagina di analisi in modo da poter analizzare ulteriormente.
+È possibile posizionare il cursore su ciascuna sezione per visualizzare il numero totale di file in ciascuna categoria. Fare clic su ciascuna area per visualizzare i risultati filtrati nella pagina di analisi in modo da poter analizzare ulteriormente.
 
 
 
@@ -99,7 +99,7 @@ L'area _Open Permissions_ mostra la percentuale per ciascun tipo di permessi esi
 
 È possibile esaminare gli elementi nei grafici _Age_ e _Size_ per verificare se sono presenti dati da eliminare o da assegnare allo storage a oggetti meno costoso.
 
-È possibile passare il mouse su un punto dei grafici per visualizzare i dettagli relativi all'età o alle dimensioni dei dati in tale categoria. Fare clic per visualizzare tutti i file filtrati in base all'età o all'intervallo di dimensioni.
+È possibile posizionare il cursore su un punto dei grafici per visualizzare i dettagli relativi all'età o alle dimensioni dei dati di tale categoria. Fare clic per visualizzare tutti i file filtrati in base all'età o all'intervallo di dimensioni.
 
 * *Age of Data graph* - classifica i dati in base all'ora in cui sono stati creati, all'ultima volta in cui sono stati utilizzati o all'ultima volta in cui sono stati modificati.
 * *Dimensione del grafico dei dati* - classifica i dati in base alle dimensioni.
@@ -118,7 +118,7 @@ L'area _Classification_ fornisce un elenco dei più identificati link:task-contr
 
 ==== Categorie
 
-Le categorie possono aiutarti a capire cosa accade con i tuoi dati mostrando i tipi di informazioni di cui disponi. Ad esempio, una categoria come "curriculum" o "contratti dipendenti" può includere dati sensibili. Quando si analizzano i risultati, è possibile che i contratti dei dipendenti siano memorizzati in una posizione non sicura. A questo punto, è possibile correggere il problema.
+Le categorie possono aiutarti a capire cosa accade con i tuoi dati mostrando i tipi di informazioni di cui disponi. Ad esempio, una categoria come "curriculum" o "contratti dipendenti" può includere dati sensibili. Quando si esaminano i risultati, è possibile che i contratti dei dipendenti siano memorizzati in una posizione non sicura. A questo punto, è possibile correggere il problema.
 
 Vedere link:task-controlling-private-data.html#view-files-by-categories["Visualizzazione dei file in base alle categorie"^] per ulteriori informazioni.
 
@@ -134,7 +134,7 @@ Vedere link:task-controlling-private-data.html#view-files-by-file-types["Visuali
 
 == Report di mappatura dei dati
 
-Il Data Mapping Report fornisce una panoramica dei dati memorizzati nelle origini dati aziendali per assisterti nelle decisioni relative a migrazione, backup, sicurezza e processi di conformità. Il report elenca prima una panoramica che riepiloga tutti gli ambienti di lavoro e le origini dati, quindi fornisce un'analisi dettagliata per ciascun ambiente di lavoro.
+Il Data Mapping Report fornisce una panoramica dei dati memorizzati nelle origini dati aziendali per assisterti nelle decisioni relative a migrazione, backup, sicurezza e processi di conformità. Il report elenca prima una panoramica che riassume tutti gli ambienti di lavoro e le origini dati, quindi fornisce un'analisi per ogni ambiente di lavoro.
 
 Il report contiene le seguenti informazioni:
 
@@ -169,9 +169,9 @@ image:screenshot_compliance_data_mapping_report_button.png["Una schermata della 
 
 
 .Risultato
-La classificazione BlueXP genera un report in formato PDF che è possibile rivedere e inviare ad altri gruppi in base alle esigenze.
+La classificazione BlueXP genera un report in formato .pdf che puoi esaminare e inviare ad altri gruppi, se necessario.
 
-Se il report è più grande di 1 MB, il file PDF viene conservato nell'istanza di classificazione di BlueXP e viene visualizzato un messaggio a comparsa relativo alla posizione esatta. Quando la classificazione BlueXP viene installata su una macchina Linux in sede o su una macchina Linux implementata nel cloud, è possibile accedere direttamente al file PDF. Quando la classificazione BlueXP viene implementata nel cloud, è necessario eseguire l'SSH nell'istanza di classificazione BlueXP per scaricare il file PDF. link:task-audit-data-sense-actions.html#access-the-log-files["Scopri come accedere ai dati sull'istanza di Classification"^].
+Se il report è più grande di 1 MB, il file .pdf viene conservato nell'istanza di classificazione BlueXP e viene visualizzato un messaggio a comparsa sulla posizione esatta. Quando la classificazione BlueXP è installata su una macchina Linux locale o su una macchina Linux implementata nel cloud, puoi accedere direttamente al file .pdf. Quando la classificazione BlueXP viene implementata nel cloud, per scaricare il file .pdf dovrai utilizzare SSH per l'istanza di classificazione BlueXP. link:task-audit-data-sense-actions.html#access-the-log-files["Scopri come accedere ai dati sull'istanza di Classification"^].
 
 Nota: È possibile personalizzare il nome della società visualizzato nella prima pagina del report dalla parte superiore della pagina di classificazione di BlueXP facendo clic su image:screenshot_gallery_options.gif["Il pulsante Altro"] Quindi fare clic su *Cambia nome azienda*. La volta successiva che si genera il report, questo includerà il nuovo nome.
 
@@ -179,7 +179,7 @@ Nota: È possibile personalizzare il nome della società visualizzato nella prim
 
 == Report sulla valutazione del rilevamento dei dati
 
-Il Data Discovery Assessment Report fornisce un'analisi di alto livello dell'ambiente sottoposto a scansione per evidenziare i risultati del sistema e mostrare le aree di interesse e le potenziali fasi di correzione. I risultati si basano sia sulla mappatura che sulla classificazione dei dati. L'obiettivo di questo report è quello di sensibilizzare l'utente su tre aspetti significativi del set di dati:
+Il Data Discovery Assessment Report fornisce un'analisi di alto livello dell'ambiente sottoposto a scansione per evidenziare i risultati del sistema e mostrare le aree di interesse e le potenziali fasi di correzione. I risultati si basano sia sulla mappatura che sulla classificazione dei dati. L'obiettivo di questo report è quello di sensibilizzare i clienti su tre aspetti significativi del set di dati:
 
 [cols="25,65"]
 |===
@@ -216,4 +216,4 @@ image:screenshot_compliance_data_discovery_report_button.png["Una schermata dell
 
 
 .Risultato
-La classificazione BlueXP genera un report in formato PDF che è possibile rivedere e inviare ad altri gruppi in base alle esigenze.
+La classificazione BlueXP genera un report in formato .pdf che puoi esaminare e inviare ad altri gruppi, se necessario.

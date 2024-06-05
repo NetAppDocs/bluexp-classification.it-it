@@ -147,7 +147,7 @@ NOTE: Per rimuovere completamente l'istanza di classificazione BlueXP, è possib
 
 === Posso personalizzare il servizio in base alle esigenze della mia organizzazione?
 
-La classificazione BlueXP offre informazioni pronte all'uso ai tuoi dati. Queste informazioni possono essere estratte e utilizzate per le esigenze della tua organizzazione.
+La classificazione BlueXP fornisce informazioni utili ai tuoi dati. Queste informazioni possono essere estratte e utilizzate per le esigenze della tua organizzazione.
 
 Inoltre, la classificazione BlueXP offre diversi modi per aggiungere un elenco personalizzato di "dati personali" che la classificazione BlueXP identificherà nelle scansioni, fornendo un quadro completo della posizione dei dati potenzialmente sensibili in _tutti_ i file delle organizzazioni.
 
@@ -168,7 +168,7 @@ link:task-exclude-scan-paths.html["Scopri di più"^].
 
 
 
-=== Vengono sottoposte a scansione copie snapshot che risiedono su volumi ONTAP?
+=== Le snapshot che risiedono su volumi ONTAP vengono sottoposte a scansione?
 
 No La classificazione BlueXP non scansiona gli snapshot perché il contenuto è identico al contenuto del volume.
 

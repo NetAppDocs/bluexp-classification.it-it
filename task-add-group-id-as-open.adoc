@@ -52,6 +52,6 @@ Tutte le successive scansioni dei dati identificheranno i file o le cartelle che
 
 == Consente di visualizzare l'elenco corrente degli ID di gruppo
 
-È possibile per i contenuti di `data_provider.yaml` il file di configurazione deve essere diverso da quello che è stato effettivamente eseguito dopo l'esecuzione di `update_data_providers_from_config_file.sh` script. Per visualizzare l'elenco corrente degli ID di gruppo che hai aggiunto alla classificazione BlueXP, esegui il seguente comando da "/opt/netapp/Datasense/tools/customer_Configuration/data_provider":
+È possibile per i contenuti di `data_provider.yaml` il file di configurazione deve differire da quello che è stato effettivamente eseguito dopo l'esecuzione di `update_data_providers_from_config_file.sh` script. Per visualizzare l'elenco corrente degli ID di gruppo che hai aggiunto alla classificazione BlueXP, esegui il seguente comando da "/opt/netapp/Datasense/tools/customer_Configuration/data_provider":
 
  get_data_providers_configuration.sh

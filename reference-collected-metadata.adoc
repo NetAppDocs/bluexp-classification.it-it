@@ -52,7 +52,7 @@ Per impostazione predefinita, se la classificazione BlueXP non dispone di queste
 
 image:screenshot_scan_missing_permissions.png["Una schermata che mostra lo switch che puoi utilizzare per eseguire la scansione dei file con la classificazione BlueXP anche se non dispone delle autorizzazioni corrette per ripristinare l'ultimo orario di accesso alla data e ora originale."]
 
-Questa funzionalità è applicabile a sistemi ONTAP on-premise, Cloud Volumes ONTAP, Azure NetApp Files, FSX per ONTAP e file share non NetApp.
+Questa funzionalità è applicabile ai sistemi ONTAP on-premise, Cloud Volumes ONTAP, Azure NetApp Files, FSX per ONTAP e alle condivisioni di file di terze parti.
 
 Si noti che nella pagina di analisi è presente un filtro denominato _Scan Analysis Event_ che consente di visualizzare i file non classificati perché la classificazione BlueXP non ha potuto ripristinare l'ultimo tempo di accesso, Oppure i file classificati anche se la classificazione BlueXP non ha potuto ripristinare l'ultimo tempo di accesso.
 

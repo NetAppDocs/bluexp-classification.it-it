@@ -50,7 +50,7 @@ Quando si esegue lo script Prerequisiti, è necessario l'indirizzo IP o il nome 
 Il software di classificazione BlueXP deve essere eseguito su un host che soddisfi requisiti specifici del sistema operativo, requisiti di RAM, requisiti software e così via.
 
 * La classificazione BlueXP non è supportata su un host condiviso con altre applicazioni: L'host deve essere un host dedicato.
-* Quando si costruisce il sistema host in sede, è possibile scegliere tra tre dimensioni del sistema a seconda delle dimensioni del set di dati che si prevede di sottoporre a scansione di classificazione BlueXP.
+* Quando crei il sistema host on-premise, puoi scegliere tra tre dimensioni di sistema in base alle dimensioni del set di dati che intendi sottoporre a scansione della classificazione BlueXP.
 +
 [cols="17,17,27,31"]
 |===
@@ -65,19 +65,19 @@ Il software di classificazione BlueXP deve essere eseguito su un host che soddis
 
 | *Grande* | 16 CPU | 64 GB DI RAM | 500 GiB SSD ON /, OR
 - 100 GiB disponibile su /opt
-- 395 GiB disponibile su /var/lib/docker
+- 395 GiB disponibile su /var/lib/docker o per Podman /var/lib/containers o per Podman /var/lib/containers
 - 5 GiB su /tmp 
 
 
 | *Medio* | 8 CPU | 32 GB DI RAM | 200 GiB SSD ON /, OR
 - 50 GiB disponibile su /opt
-- 145 GiB disponibile su /var/lib/docker
+145 GiB disponibile su /var/lib/docker o per Podman /var/lib/containers
 - 5 GiB su /tmp 
 
 
 | *Piccolo* | 8 CPU | 16 GB DI RAM | 100 GiB SSD ON /, OR
 - 50 GiB disponibile su /opt
-- 45 GiB disponibile su /var/lib/docker
+45 GiB disponibile su /var/lib/docker o per Podman /var/lib/containers
 - 5 GiB su /tmp 
 |===
 +
@@ -85,7 +85,7 @@ Tenere presente che esistono limitazioni quando si utilizzano sistemi di dimensi
 
 * Quando si implementa un'istanza di calcolo nel cloud per l'installazione della classificazione BlueXP, si consiglia di utilizzare un sistema che soddisfi i requisiti di sistema "grandi" indicati in precedenza:
 +
-** *Tipo di istanza AWS EC2*: Si consiglia "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types["Vedere altri tipi di istanze AWS"^].
+** *Tipo di istanza di Amazon Elastic Compute Cloud (Amazon EC2)*: Si consiglia "m6i.4XLarge". link:reference-instance-types.html#aws-instance-types["Vedere altri tipi di istanze AWS"^].
 ** *Dimensione delle macchine virtuali Azure*: Si consiglia "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types["Vedere altri tipi di istanze di Azure"^].
 ** *Tipo di macchina GCP*: Si consiglia "n2-standard-16". link:reference-instance-types.html#gcp-instance-types["Vedere altri tipi di istanze GCP"^].
 
