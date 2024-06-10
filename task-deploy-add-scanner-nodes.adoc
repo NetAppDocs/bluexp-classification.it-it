@@ -202,5 +202,3 @@ image:screenshot_work_env_id.png["Una schermata dell'ID dell'ambiente di lavoro 
 È inoltre possibile visualizzare l'elenco di tutti i gruppi di scanner, l'indirizzo IP e lo stato di ciascun nodo dello scanner nel gruppo nella parte inferiore della pagina di configurazione.
 
 image:screenshot_scanner_groups.png["Una schermata che mostra tutti i gruppi di scanner insieme all'indirizzo IP per ogni nodo di scanner nel gruppo."]
-
-È possibile link:task-licensing-datasense.html["Impostare la licenza per la classificazione BlueXP"] a questo punto. Non ti verrà addebitato alcun costo fino al termine della prova gratuita di 30 giorni.

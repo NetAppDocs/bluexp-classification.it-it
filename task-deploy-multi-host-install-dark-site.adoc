@@ -85,5 +85,3 @@ Il programma di installazione della classificazione BlueXP completa l'installazi
 
 .Cosa c'è di nuovo
 Dalla pagina di configurazione è possibile selezionare il locale link:task-getting-started-compliance.html["Cluster ONTAP on-premise"] e locale link:task-scanning-databases.html["database"] che si desidera acquisire.
-
-Puoi anche farlo link:task-licensing-datasense.html["Impostare la licenza BYOL per la classificazione BlueXP"] Dalla pagina del portafoglio digitale BlueXP. Non ti verrà addebitato alcun costo neanche dopo la fine della prova gratuita di 30 giorni.

@@ -62,10 +62,6 @@ Assicurarsi che l'ambiente soddisfi i prerequisiti. Ciò include l'accesso a Int
 [role="quick-margin-para"]
 Scarica il software di classificazione Cloud BlueXP dal sito di supporto NetApp e copia il file di installazione sull'host Linux che intendi utilizzare. Quindi, avviare l'installazione guidata e seguire le istruzioni per implementare l'istanza di classificazione BlueXP.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Iscriviti al servizio di classificazione BlueXP
-[role="quick-margin-para"]
-È richiesto un abbonamento al marketplace del tuo cloud provider.
-
 
 
 == Creare un connettore
@@ -428,5 +424,3 @@ Se la connessione tra il computer host e l'istanza del connettore avviene tramit
 
 .Cosa c'è di nuovo
 Dalla pagina di configurazione è possibile selezionare le origini dati da sottoporre a scansione.
-
-Puoi anche farlo link:task-licensing-datasense.html["Impostare la licenza per la classificazione BlueXP"] a questo punto. Non ti verrà addebitato alcun costo neanche dopo la fine della prova gratuita di 30 giorni.

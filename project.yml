@@ -52,8 +52,6 @@ sidebar:
         url: "/task-scanning-file-shares.html"
     - title: Integrare Active Directory
       url: "/task-add-active-directory-datasense.html"
-    - title: Impostare la licenza
-      url: "/task-licensing-datasense.html"
     - title: FAQ
       url: "/faq-cloud-compliance.html"
   - title: Utilizzare la classificazione BlueXP
@@ -93,8 +91,6 @@ sidebar:
         url: "/task-deploy-multi-host-install-dark-site.html"
       - title: Aggiunta di nodi scanner a un'implementazione esistente
         url: "/task-deploy-add-scanner-nodes.html"
-      - title: Imposta una versione di prova gratuita o utilizza la tua licenza
-        url: "/task-licensing-byol-freetrial.html"
     - title: Deprecazioni dei dati di scansione
       entries:
       - title: Esegui la scansione dei bucket Amazon S3

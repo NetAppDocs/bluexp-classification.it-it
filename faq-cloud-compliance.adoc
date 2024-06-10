@@ -298,7 +298,7 @@ La classificazione BlueXP accede ai dati archiviati in Elasticsearch tramite chi
 
 == Licenze e costi
 
-Le seguenti domande riguardano licenze e costi per l'utilizzo della classificazione BlueXP.
+La seguente domanda riguarda le licenze e i costi per l'utilizzo della classificazione BlueXP.
 
 
 

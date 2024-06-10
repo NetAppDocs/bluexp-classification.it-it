@@ -158,7 +158,6 @@
   <block id="f7266d8094dca138937225e514a105f9" category="paragraph">Assicurarsi che l'ambiente soddisfi i prerequisiti. Ciò include l'accesso a Internet in uscita per l'istanza, la connettività tra il connettore e la classificazione BlueXP sulla porta 443 e altro ancora. <block ref="25e4901d8a209a1b27bffd328e6e2ea6" category="inline-xref-macro-rx"></block>.</block>
   <block id="c420094b0555914cda2fb7305e46da39" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Implementare la classificazione BlueXP</block>
   <block id="d6939615c063b246ee57f46ba5658a27" category="paragraph">Avviare l'installazione guidata per implementare l'istanza di classificazione BlueXP nel cloud.</block>
-  <block id="fbd26eae2917c57f49aa73f6b5377420" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> Iscriviti al servizio di classificazione BlueXP</block>
   <block id="94ee7072c2750da1997438a715efb7d4" category="section-title">Creare un connettore</block>
   <block id="16f6b76e35946d0224b05a1466e556f0" category="inline-link">Le funzionalità di BlueXP richiedono un connettore</block>
   <block id="ee9e25ed53166b2db3af20cf43c4404e" category="paragraph">Esistono alcuni scenari in cui è necessario utilizzare un connettore implementato in uno specifico cloud provider:</block>
@@ -239,8 +238,6 @@
   <block id="e15b54208d366c801ab9cdffb6e683fc" category="paragraph">Gli aggiornamenti al software di classificazione BlueXP Connector e BlueXP sono automatizzati purché le istanze dispongano di connettività Internet.</block>
   <block id="ad5480f838ed67e92fecf7af3cef120d" category="paragraph-title">Cosa c'è di nuovo</block>
   <block id="9b305ee4bd352f956f4cb24478769e42" category="paragraph">Dalla pagina di configurazione è possibile selezionare le origini dati da sottoporre a scansione.</block>
-  <block id="5f33fdb01d61b0057674068a8e4f48fa" category="inline-link-macro">Impostare la licenza per la classificazione BlueXP</block>
-  <block id="7cdfce8fdd8dcd9e17a5ea7ac3072db4" category="paragraph">Puoi anche farlo <block ref="732c743571ecc0dc482f5e9d7d25880e" category="inline-link-macro-rx"></block> a questo punto. Non ti verrà addebitato alcun costo fino al termine della prova gratuita di 30 giorni.</block>
   <block id="b1151aae9531d2f5e85d085e8878cea6" category="summary">Queste FAQ possono essere utili se stai cercando una risposta rapida a una domanda.</block>
   <block id="aa2fb7dd454c7ccfa2e848f8e1ae91b3" category="doc">Domande frequenti sulla classificazione BlueXP</block>
   <block id="d114fb433bcf7d5f0818cbc8249575fd" category="section-title">Servizio di classificazione BlueXP</block>
@@ -351,7 +348,6 @@
   <block id="d506351fc51b067200effaea00b650b7" category="paragraph">La classificazione BlueXP esegue la scansione utilizzando protocolli standard e autorizzazioni di sola lettura in tutti gli ambienti. I file selezionati vengono aperti e sottoposti a scansione per rilevare dati aziendali sensibili, informazioni private e problemi relativi al ransomware.</block>
   <block id="dd3080e9b8238619b33db17f32f0014c" category="paragraph">Dopo una scansione completa, sono disponibili molte funzionalità di classificazione BlueXP aggiuntive che è possibile applicare ai dati, ad esempio visualizzare e perfezionare i dati nella pagina Data Investigation, cercare i nomi all'interno dei file, copiare, spostare ed eliminare i file di origine e molto altro ancora.</block>
   <block id="1a068d00fba0764fe495dfcb9428ba33" category="section-title">Licenze e costi</block>
-  <block id="c7c0e44b6916a9859c04b6f890acc7f4" category="paragraph">Le seguenti domande riguardano licenze e costi per l'utilizzo della classificazione BlueXP.</block>
   <block id="c327ff2d5e993e56b5e37bd52bc902cc" category="section-title">Quanto costa la classificazione BlueXP?</block>
   <block id="f56912566696fa3cc8524bcac5febbeb" category="section-title">Implementazione del connettore</block>
   <block id="f92115ef83b34980e3bba84c1a861bac" category="paragraph">Le seguenti domande si riferiscono a BlueXP Connector.</block>
@@ -2057,7 +2053,6 @@
   <block id="5d0d87e9be98aaab11076c1b64d38cc3" category="inline-link-macro">Cluster ONTAP on-premise</block>
   <block id="e61ce3062cb76770658896b778ad06cd" category="inline-link-macro">database</block>
   <block id="c3cea28bb90c637f494d5021dcebdf2d" category="paragraph">Dalla pagina di configurazione è possibile selezionare il locale <block ref="c23a74d01fbf5deb3a784c3ec1da6439" category="inline-link-macro-rx"></block> e. <block ref="6d4571a63bcf6d226319383d2911863e" category="inline-link-macro-rx"></block> che si desidera acquisire.</block>
-  <block id="41400601e067114b3b38643c1a3f9b1c" category="inline-link-macro">Impostare la licenza BYOL per la classificazione BlueXP</block>
   <block id="04094342c588e9aace2c0624ecce4366" category="paragraph">Seguire questi passaggi quando si installa il software di classificazione BlueXP su più host on-premise in un ambiente offline.</block>
   <block id="95476067517016e17d42573817f40913" category="list-text">Assicurarsi di disporre dei privilegi di root sui sistemi Linux.</block>
   <block id="4befe3f377758022758aadd1b583f964" category="list-text">È necessario disporre degli indirizzi IP degli host dei nodi dello scanner che si intende utilizzare.</block>
@@ -2099,7 +2094,6 @@
   <block id="cdc2b03f6ffa90a892ff07e03233975d" category="paragraph">In questo modo si estrae lo script di aggiornamento *start_darksite_upgrade.sh* e qualsiasi software di terze parti richiesto.</block>
   <block id="85455891651214d50e704a4b3e9dde66" category="list-text">Eseguire lo script di aggiornamento sul computer host, ad esempio:</block>
   <block id="7780686cdd0be0a9a8a2193a030392e5" category="paragraph">Il software di classificazione BlueXP viene aggiornato sull'host. L'aggiornamento può richiedere da 5 a 10 minuti.</block>
-  <block id="0c15d0871362e4ad1de8e6731ecdac22" category="paragraph">Tenere presente che non è necessario alcun aggiornamento sui nodi dello scanner se è stata implementata la classificazione BlueXP su sistemi host multipli per la scansione di configurazioni molto grandi.</block>
   <block id="c22cac5d13be450c907e1e287edd3bb0" category="paragraph">Per verificare che il software sia stato aggiornato, controllare la versione nella parte inferiore delle pagine dell'interfaccia utente di classificazione di BlueXP.</block>
   <block id="44b34442167c9611792529867ee76d90" category="doc">Documentazione sulla classificazione BlueXP</block>
   <block id="08aececdd8070f547d2aa65ea8c35446" category="summary">Scopri le novità della classificazione BlueXP.</block>
@@ -2568,7 +2562,6 @@
   <block id="1d4c3c5a59e200a8cf6bd280a00b8b39" category="paragraph">Dalla pagina di configurazione è possibile selezionare le origini dati da sottoporre a scansione, se non è già stato fatto. Se sono stati creati gruppi scanner, ogni origine dati viene sottoposta a scansione dai nodi scanner del rispettivo gruppo.</block>
   <block id="00c5c673cfa296bce54ec77743dbf5a5" category="paragraph">Il nome del gruppo di scanner per ciascun ambiente di lavoro viene visualizzato nella pagina di configurazione.</block>
   <block id="1f3259fd3977a2467ab298df6a6d44d1" category="paragraph">È inoltre possibile visualizzare l'elenco di tutti i gruppi di scanner, l'indirizzo IP e lo stato di ciascun nodo dello scanner nel gruppo nella parte inferiore della pagina di configurazione.</block>
-  <block id="c1421d8b9e8d1f53104bed922d4c6218" category="paragraph">È possibile <block ref="732c743571ecc0dc482f5e9d7d25880e" category="inline-link-macro-rx"></block> a questo punto. Non ti verrà addebitato alcun costo fino al termine della prova gratuita di 30 giorni.</block>
   <block id="59ac5a53f49960bd51774ba044fa9b9c" category="sidebar">Documenti di classificazione BlueXP</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Note di rilascio</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Inizia subito</block>
@@ -2578,7 +2571,6 @@
   <block id="8c7729e22a223978ef26b521fa9ee122" category="sidebar">Cloud Volumes ONTAP e ONTAP on-premise</block>
   <block id="c2d47b6bc95c845ff73e9809734fad1a" category="sidebar">Condivisioni di file</block>
   <block id="81ef4cd6c60d70e2956f5aceef3493d2" category="sidebar">Integrare Active Directory</block>
-  <block id="e907b41f5f3d7332bee5a43fbbf78a08" category="sidebar">Impostare la licenza</block>
   <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">FAQ</block>
   <block id="be9c9ae82a9a2e63d037f87a3d8bd53f" category="sidebar">Utilizzare la classificazione BlueXP</block>
   <block id="a1b1318193a35f78be2416bedbe04261" category="sidebar">Visualizza i dettagli di governance relativi ai tuoi dati</block>
@@ -3313,7 +3305,6 @@
   <block id="428a85a15f039350823864cdd9f6711b" category="paragraph">Per configurazioni molto grandi in cui si eseguono scansioni di petabyte di dati, è possibile includere più host per fornire ulteriore potenza di elaborazione. Ulteriori informazioni link:task-deploy-multi-host-install-dark-site.html&gt; informazioni sull'installazione su più host per configurazioni di grandi dimensioni.</block>
   <block id="758de85e3f025a37293713e5735825a9" category="admonition">La classificazione BlueXP non è attualmente in grado di eseguire la scansione dei bucket S3, Azure NetApp Files o FSX per ONTAP quando il software è installato on-premise. In questi casi, è necessario implementare un connettore separato e un'istanza della classificazione BlueXP nel cloud e.<block ref="3cd9b819ecbc63be3401566b7b7cbf66" category="inline-link-rx"></block> per le diverse origini dati.</block>
   <block id="f221652320e994dc66aab1d5d6da5fb7" category="paragraph">Tenere presente che tutte le attività di installazione vengono registrate durante l'installazione della classificazione BlueXP. In caso di problemi durante l'installazione, è possibile visualizzare il contenuto del registro di controllo dell'installazione. È scritto a.<block ref="fd35ff247277f8b2076573900f968fde" prefix=" " category="inline-code"></block>. <block ref="c7911c51adef419f386feff4cec8acf6" category="inline-link-macro-rx"></block>.</block>
-  <block id="106ac36303312e947023d820e6e7357c" category="paragraph">Puoi anche farlo <block ref="732c743571ecc0dc482f5e9d7d25880e" category="inline-link-macro-rx"></block> a questo punto. Non ti verrà addebitato alcun costo neanche dopo la fine della prova gratuita di 30 giorni.</block>
   <block id="8a2fa9f62a3f919edf2af881f8e7795e" category="paragraph">Esistono molti tipi di dati privati che la classificazione BlueXP può identificare nei volumi e nei database. Vedere le categorie riportate di seguito.</block>
   <block id="224bbd10a45d7fdcbbb8075666b6c93a" category="cell">Selezionare l'intervallo di identificatori sensibili rilevati per file. Include dati personali e dati personali sensibili. Durante il filtraggio nelle directory, la classificazione BlueXP totalizza le corrispondenze di tutti i file in ogni cartella (e sottocartelle).
 
@@ -3391,7 +3382,6 @@ NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per ca
   <block id="806f5ac1a8b4e82bb0bb458ed4a8f577" category="paragraph">Sia il connettore BlueXP che la classificazione BlueXP richiederanno aggiornamenti manuali periodici per abilitare nuove funzionalità. La versione della classificazione BlueXP è disponibile nella parte inferiore delle pagine dell'interfaccia utente di classificazione BlueXP. Controllare <block ref="4cc8c968e2438af740515443c2861b36" category="inline-link-macro-rx"></block> per vedere le nuove funzionalità di ciascuna release e se si desidera. Quindi, seguire i passaggi da a.<block ref="03a7f11cb6270c0421715ee58cbcdb85" category="inline-link-rx"></block> e. <block ref="b1d8f2a5489be1789530a7fc668375fb" category="inline-xref-macro-rx"></block>.</block>
   <block id="3fba2d2072ada5e4a305ed49625f7c97" category="paragraph">Se si utilizzano più host di classificazione BlueXP per fornire ulteriore potenza di elaborazione per eseguire la scansione delle origini dati, è necessario attivare porte/protocolli aggiuntivi. <block ref="8ab506a6f74eff926eb35a8eb7627a1d" category="inline-link-macro-rx"></block>.</block>
   <block id="ce9b3c0997395cdac24ac84544289f19" category="paragraph">Per le configurazioni tipiche, il software viene installato su un singolo sistema host.</block>
-  <block id="1d8330f2303758f6a2278d74e5f2fda9" category="paragraph">Puoi anche farlo <block ref="22859e5e32c097ea1d67937698834047" category="inline-link-macro-rx"></block> Dalla pagina del portafoglio digitale BlueXP. Non ti verrà addebitato alcun costo fino al termine della prova gratuita di 30 giorni.</block>
   <block id="8cf455ffbc4c9c6d2cfe61097a812701" category="list-text">Si consiglia di aggiornare il software BlueXP Connector alla versione più recente disponibile.<block ref="bc80efc6b3afb0a245df87934f8f3cd1" category="inline-link-rx"></block>.</block>
   <block id="279ac5dd73c3a5783ebeb10e172c4f38" category="paragraph">IMPORTANTE</block>
   <block id="a14a0ee1284c6c34c6c0305b52963e2f" category="paragraph">A partire da maggio 2024 con la versione 1,31, la classificazione BlueXP è ora disponibile come funzionalità core all'interno di BlueXP senza costi aggiuntivi. Non è richiesta alcuna licenza di classificazione o abbonamento. Abbiamo concentrato la funzionalità di classificazione BlueXP anche sui sistemi storage NetApp, per cui alcune funzionalità non utilizzate o sottoutilizzate sono state abbandonate.</block>
@@ -3425,7 +3415,6 @@ NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per ca
   <block id="6e154273e95ff921bb43e9896a26d6bb" category="paragraph">Per le configurazioni molto grandi in cui si esegue la scansione di petabyte di dati in siti senza accesso a Internet, è possibile includere più host per fornire una potenza di elaborazione aggiuntiva. Quando si utilizzano più sistemi host, il sistema primario è denominato _nodo Manager_ e i sistemi aggiuntivi che forniscono potenza di elaborazione aggiuntiva sono denominati _nodi scanner_.</block>
   <block id="b9c7e18d108f82ba440210aecbe950ad" category="list-text">Verificare che tutti i sistemi Linux per i nodi Manager e scanner soddisfino i requisiti dell'host.</block>
   <block id="928ed2812cce5a72d98ee96a2b856e67" category="list-text">Verificare che l'ambiente offline soddisfi le autorizzazioni e la connettività richieste.</block>
-  <block id="d681456d0964ef9c77d0e295444695a9" category="paragraph">Puoi anche farlo <block ref="22859e5e32c097ea1d67937698834047" category="inline-link-macro-rx"></block> Dalla pagina del portafoglio digitale BlueXP. Non ti verrà addebitato alcun costo neanche dopo la fine della prova gratuita di 30 giorni.</block>
   <block id="1b37870dae094b28860019e52e52b4ff" category="doc">Rimuovere un account OneDrive, SharePoint o Google Drive dalla classificazione BlueXP</block>
   <block id="15d852c533c897c089cb8de8c1b7855c" category="doc">Eseguire la scansione degli account OneDrive</block>
   <block id="311be35314517dfdb66902778b278206" category="doc">Esegui la scansione dei bucket Amazon S3</block>
@@ -3444,7 +3433,6 @@ NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per ca
   <block id="98f9f8a11a148aec70c39965293ea9b3" category="sidebar">Funzioni obsolete</block>
   <block id="dd6f713e594790101284e68ce9ae76f7" category="sidebar">Elenco delle funzioni obsolete</block>
   <block id="4ebce9b5fd8cf4975c04bb94087ff4b3" category="sidebar">Elenco delle funzioni obsolete</block>
-  <block id="57a53311aaf61c9ce5d7ccc7b0678f93" category="sidebar">Imposta una versione di prova gratuita o utilizza la tua licenza</block>
   <block id="08a8e0f5e4c7d91e565955cb7f30b215" category="sidebar">Visualizza i dettagli di governance sui dati nel dashboard Governance</block>
   <block id="aeb69ebcaffd7e18cd55db906e582bf5" category="sidebar">Rimuovere un account OneDrive, SharePoint o Google Drive</block>
   <block id="b6417b62aacc6d16c1ae7a79d851d413" category="paragraph">La classificazione BlueXP è supportata se installi il connettore su un host RHEL 8 o 9 che risiede on-premise. Non è supportato se l'host RHEL 8 o 9 si trova in AWS, Azure o Google Cloud.</block>
@@ -3453,9 +3441,7 @@ NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per ca
   <block id="53fa8df095671f897c8cbcd13ce182b1" category="inline-link-macro">Ambienti di lavoro e origini dati supportati</block>
   <block id="2930994d2cff6bdaceb544c2a0169659" category="paragraph">Vedere <block ref="fb235327a04124182aad24d53e898b94" category="inline-link-macro-rx"></block>.</block>
   <block id="3270840fec1d1272ecdf8fa5dacfe375" category="paragraph">La classificazione BlueXP è una funzionalità chiave di BlueXP e non è addebitata</block>
-  <block id="1f5565609924c19f8cc66ee9b3e5ff8b" category="paragraph">È richiesto un abbonamento BlueXP attraverso il marketplace del tuo cloud provider.</block>
   <block id="178bf9bf543decf7d7b3739b703708f1" category="paragraph">Prima di poter gestire le etichette AIP, è necessario integrare la funzionalità dell'etichetta AIP nella classificazione BlueXP accedendo all'account Azure esistente. Una volta attivata, è possibile gestire le etichette AIP all'interno dei file per tutti <block ref="9f69f043f42f5e941f29feed1ea9caea" category="inline-link-macro-rx"></block> Nello spazio di lavoro BlueXP.</block>
-  <block id="25c24221a948a50ce66f8d4fb0f6d79c" category="paragraph">È richiesto un abbonamento al marketplace del tuo cloud provider.</block>
   <block id="147b35ab5352426bba38d99d810db4ed" category="list-text">È possibile ottenere il file di licenza dal sito di assistenza NetApp.</block>
   <block id="5956d6a178701862e65cfb2557c264ca" category="paragraph">Quando si utilizza una licenza BYOL di classificazione BlueXP (Data Sense), BlueXP visualizza un avviso nell'interfaccia utente di classificazione BlueXP e nell'interfaccia utente del portafoglio digitale BlueXP quando la dimensione di tutti i dati che si sta scansionando è prossima al limite di capacità o alla data di scadenza della licenza.</block>
   <block id="c5225ba8742170a4ff16813a131d50d2" category="paragraph">Vengono visualizzati i seguenti avvisi:</block>
@@ -3565,16 +3551,12 @@ NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per ca
   <block id="7eac8ad7bb67a204924dcc6a4113f103" category="list-text">*Errore* (punto rosso): Impossibile completare la scansione perché si sono verificati problemi. Se è necessario completare un'azione, l'errore viene visualizzato nella descrizione comandi sotto la colonna "azione richiesta".  In caso contrario, il sistema visualizza uno stato di "errore" e tenta di eseguire il ripristino. Al termine, lo stato cambia.</block>
   <block id="4c5b4656410d347cf852f162490f2e15" category="list-text">*Non scansione*: È stata selezionata la configurazione del volume "Off" e il sistema non sta eseguendo la scansione del volume.</block>
   <block id="bf5237098b7bb15bc07f1d47863a9b8a" category="section-title">5 giugno 2024 (versione 1,32)</block>
-  <block id="b9620e9aadf9827ac9bb29001772b3f0" category="paragraph">Questa versione include i seguenti aggiornamenti.</block>
-  <block id="b83927d03444ee961e834ea1c3b0581b" category="section-title">Le scansioni di mappatura raccolgono i metadati</block>
-  <block id="6c7aa72b096dc637dbeefccf15ca45f8" category="paragraph">I seguenti metadati vengono estratti dai file durante le scansioni di mappatura e visualizzati nelle dashboard Governance, Compliance e Investigation:</block>
-  <block id="240625d3ff2ba7b1a3949f7ddfb468d3" category="section-title">Dati aggiuntivi nelle dashboard</block>
-  <block id="43ac3190fe70b3bdb1f5d5b7083f374a" category="paragraph">Questa versione aggiorna i dati visualizzati nei dashboard Governance, Compliance e Investigation durante le scansioni di mappatura.</block>
-  <block id="9b28a6e87457a6a3bfb03009dcd0b84a" category="inline-link">Qual è la differenza tra la mappatura e la classificazione delle scansioni</block>
-  <block id="c7fb92ca31125e81e2a4f2982bc6a806" category="paragraph">Per ulteriori informazioni, vedere<block ref="4062fc8e6e6df1b01a1de644d8a7eeca" category="inline-link-rx"></block></block>
   <block id="7910c8307cac3d62eca8ac0d42301b38" category="section-title">Nuova colonna Stato mapping nella pagina di configurazione</block>
   <block id="cfbaa8108dcd3c438f032a03ea5c380b" category="paragraph">In questa versione viene ora visualizzata una nuova colonna Stato mapping nella pagina di configurazione. La nuova colonna consente di identificare se la mappatura è in esecuzione, in coda, in pausa o superiore.</block>
   <block id="2f94c0116c501abdbd5c76ddef86d94a" category="paragraph">Per la spiegazione degli stati, vedere<block ref="cacd3972a6d9bfb8b2d3cde3ba576e77" category="inline-link-rx"></block>.</block>
   <block id="d37bdc46b0a428edd8f0ab35c24067ea" category="paragraph">Quando si impostano determinate origini dati (elencate di seguito), è necessario immettere le credenziali Active Directory per consentire alla classificazione BlueXP di eseguire la scansione dei volumi CIFS. Questa integrazione fornisce la classificazione BlueXP con i dettagli relativi al proprietario del file e alle autorizzazioni per i dati che risiedono in tali origini dati. L'Active Directory immesso per tali origini dati potrebbe differire dalle credenziali di Active Directory globali inserite qui. La classificazione BlueXP cerca in tutte le Active Directory integrate i dettagli relativi all'utente e alle autorizzazioni.</block>
   <block id="70f05bdab0f283eaffba98f53fceb776" category="paragraph">Per le condivisioni di file/volumi CIFS, se vuoi essere sicuro che i file "ultimi tempi di accesso" siano invariati dalle scansioni della classificazione di BlueXP, consigliamo all'utente di disporre dell'autorizzazione attributi di scrittura. Se possibile, si consiglia di far parte dell'utente configurato con Active Directory di un gruppo principale dell'organizzazione che dispone delle autorizzazioni per tutti i file.</block>
+  <block id="bf353be94d6ba74709e3d127af6ba1a6" category="paragraph">La seguente domanda riguarda le licenze e i costi per l'utilizzo della classificazione BlueXP.</block>
+  <block id="b660413c1fbf79ce31a119db078401fe" category="paragraph">Questa versione include il seguente aggiornamento.</block>
+  <block id="ee817e39b08fa171d62efb8f7b4143b2" category="admonition">L'integrazione con Active Directory non è supportata nella versione principale della classificazione BlueXP.</block>
 </blocks>
