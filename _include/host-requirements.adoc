@@ -3,7 +3,7 @@
 
 
 * La classificazione BlueXP non è supportata su un host condiviso con altre applicazioni: L'host deve essere un host dedicato.
-* Quando crei il sistema host on-premise, puoi scegliere tra tre dimensioni di sistema in base alle dimensioni del set di dati che intendi sottoporre a scansione della classificazione BlueXP.
+* Quando crei il sistema host on-premise, puoi scegliere tra queste dimensioni di sistema in base alle dimensioni del set di dati che intendi eseguire la scansione della classificazione BlueXP.
 +
 [cols="17,17,27,31"]
 |===
@@ -20,22 +20,7 @@
 - 100 GiB disponibile su /opt
 - 395 GiB disponibile su /var/lib/docker o per Podman /var/lib/containers o per Podman /var/lib/containers
 - 5 GiB su /tmp 
-
-
-| *Medio* | 8 CPU | 32 GB DI RAM | 200 GiB SSD ON /, OR
-- 50 GiB disponibile su /opt
-145 GiB disponibile su /var/lib/docker o per Podman /var/lib/containers
-- 5 GiB su /tmp 
-
-
-| *Piccolo* | 8 CPU | 16 GB DI RAM | 100 GiB SSD ON /, OR
-- 50 GiB disponibile su /opt
-45 GiB disponibile su /var/lib/docker o per Podman /var/lib/containers
-- 5 GiB su /tmp 
 |===
-+
-Tenere presente che esistono limitazioni quando si utilizzano sistemi di dimensioni inferiori. Vedere link:concept-cloud-compliance.html#using-a-smaller-instance-type["Utilizzando un tipo di istanza più piccolo"] per ulteriori informazioni.
-
 * Quando si implementa un'istanza di calcolo nel cloud per l'installazione della classificazione BlueXP, si consiglia di utilizzare un sistema che soddisfi i requisiti di sistema "grandi" indicati in precedenza:
 +
 ** *Tipo di istanza di Amazon Elastic Compute Cloud (Amazon EC2)*: Si consiglia "m6i.4XLarge". link:reference-instance-types.html#aws-instance-types["Vedere altri tipi di istanze AWS"^].

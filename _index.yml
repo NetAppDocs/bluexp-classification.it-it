@@ -53,8 +53,6 @@ indexpage:
       url: task-using-policies.html
     - title: Generare report sulla conformità
       url: task-generating-compliance-reports.html
-    - title: Crea avvisi e-mail quando vengono trovati dati non conformi
-      url: task-using-policies.html
     - title: Rispondere a una richiesta di accesso soggetto a dati
       url: task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports
   - title: Funzioni obsolete
