@@ -14,7 +14,13 @@ summary: Esistono molti tipi di dati privati che la classificazione BlueXP può 
 
 
 [role="lead"]
-Esistono molti tipi di dati privati che la classificazione BlueXP può identificare nei volumi e nei database. Vedere le categorie riportate di seguito.
+Esistono molti tipi di dati privati che la classificazione BlueXP può identificare nei volumi e nei database.
+
+La classificazione BlueXP identifica due tipi di dati personali:
+
+* *Informazioni di identificazione personale (PII)*
+* *Dati personali sensibili (SPii)*
+
 
 
 TIP: Se hai bisogno della classificazione BlueXP per identificare altri tipi di dati privati, come ad esempio numeri di identificazione nazionali aggiuntivi o identificatori sanitari, invia un'email a ng-contact-data-sense@netapp.com con la tua richiesta.
@@ -23,7 +29,7 @@ TIP: Se hai bisogno della classificazione BlueXP per identificare altri tipi di 
 
 == Tipi di dati personali
 
-I dati personali contenuti nei file possono essere dati personali di carattere generale o identificativi nazionali. La terza colonna nella tabella seguente indica se la classificazione BlueXP utilizza link:task-controlling-private-data.html#view-files-that-contain-personal-data["convalida della prossimità"^] per convalidare i risultati per l'identificatore.
+I dati personali, o _informazioni di identificazione personale_ (PII), contenuti nei file possono essere dati personali generici o identificatori nazionali. La terza colonna nella tabella seguente indica se la classificazione BlueXP utilizza link:task-controlling-private-data.html#view-files-that-contain-personal-data["convalida della prossimità"^] per convalidare i risultati per l'identificatore.
 
 Le lingue in cui questi elementi possono essere riconosciuti sono identificate nella tabella.
 
@@ -224,19 +230,19 @@ Le lingue in cui questi elementi possono essere riconosciuti sono identificate n
 
 == Tipi di dati personali sensibili
 
-I dati personali sensibili che la classificazione BlueXP può trovare nei file includono il seguente elenco.
+La classificazione BlueXP può trovare nei file le seguenti informazioni personali sensibili (SPii).
 
 Al momento, gli elementi di questa categoria possono essere riconosciuti solo in inglese.
 
-Riferimento alle procedure penali:: Dati relativi alle condanne e ai reati penali di una persona fisica.
-Riferimento di etnia:: Dati relativi alla razza o all'origine etnica di una persona fisica.
-Riferimento di salute:: Dati relativi alla salute di una persona fisica.
-Codici medici ICD-9-CM:: Codici utilizzati nel settore medico e sanitario.
-Codici medici ICD-10-CM:: Codici utilizzati nel settore medico e sanitario.
-Riferimento alle credenze filosofiche:: Dati relativi alle convinzioni filosofiche di una persona naturale.
-Opinioni politiche riferimento:: Dati relativi alle opinioni politiche di una persona fisica.
-Riferimenti alle credenze religiose:: Dati relativi alle convinzioni religiose di una persona fisica.
-Sex Life o orientamento di riferimento:: Dati relativi alla vita sessuale o all'orientamento sessuale di una persona fisica.
+* *Procedura penale riferimento*: Dati relativi alle condanne penali e ai reati di una persona fisica.
+* *Riferimento etnico*: Dati relativi all'origine razziale o etnica di una persona fisica.
+* *Health Reference*: Dati relativi alla salute di una persona fisica.
+* *ICD-9-CM codici medici*: Codici utilizzati nell'industria medica e sanitaria.
+* *ICD-10-CM codici medici*: Codici utilizzati nell'industria medica e sanitaria.
+* *Principi filosofici riferimento*: Dati riguardanti le credenze filosofiche di una persona fisica.
+* *Pareri politici riferimento*: Dati relativi alle opinioni politiche di una persona fisica.
+* *Religious credences Reference*: Dati relativi alle credenze religiose di una persona fisica.
+* *Sex Life o Orientation Reference*: Dati relativi alla vita sessuale o all'orientamento sessuale di una persona fisica.
 
 
 
@@ -319,12 +325,12 @@ I seguenti metadati sono anche classificati e identificati nelle stesse lingue s
 * Dati dell'applicazione
 * Archiviare i file
 * Audio
-* Dati delle applicazioni di business
+* Breadcrumb dalla classificazione BlueXP
+Dati delle applicazioni di business
 * File CAD
 * Codice
 * Corrotto
 * Database e file di indice
-* Classificazione BlueXP Breadcrumbs
 * File di progettazione
 * Email Application Data (dati applicazione email)
 * Crittografato (file con un elevato punteggio di entropia)

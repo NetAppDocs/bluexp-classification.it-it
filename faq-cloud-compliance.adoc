@@ -238,17 +238,11 @@ Quando la classificazione BlueXP rileva le informazioni personali identificabili
 
 La classificazione BlueXP consente di eseguire una scansione generale di "mappatura" o una scansione completa di "classificazione" sulle origini dati. La mappatura fornisce solo una panoramica di alto livello dei dati, mentre la classificazione fornisce una scansione di alto livello dei dati. Il mapping può essere eseguito sulle origini dati molto rapidamente perché non accede ai file per vedere i dati all'interno.
 
-* Scansione di mappatura dei dati.
-+
-La classificazione BlueXP esegue la scansione solo dei metadati. Questo è utile per la gestione e la governance dei dati globali, l'ambito rapido dei progetti, le proprietà molto grandi e la prioritizzazione. La mappatura dei dati si basa sui metadati ed è considerata una scansione *rapida*.
-
+* *Scansione mappatura dati*: La classificazione BlueXP esegue la scansione solo dei metadati. Questo è utile per la gestione e la governance dei dati globali, l'ambito rapido dei progetti, le proprietà molto grandi e la prioritizzazione. La mappatura dei dati si basa sui metadati ed è considerata una scansione *rapida*.
 +
 Dopo una scansione rapida, è possibile generare un report di mappatura dei dati. Questo report offre una panoramica dei dati memorizzati nelle origini dati aziendali per aiutarti a prendere decisioni in merito all'utilizzo delle risorse, alla migrazione, al backup, alla sicurezza e ai processi di conformità.
 
-* Scansione di classificazione dei dati (profonda).
-+
-La classificazione BlueXP esegue la scansione utilizzando protocolli standard e autorizzazioni di sola lettura in tutti gli ambienti. I file selezionati vengono aperti e sottoposti a scansione per rilevare dati aziendali sensibili, informazioni private e problemi relativi al ransomware.
-
+* *Analisi della classificazione dei dati (Deep)*: La classificazione BlueXP esegue la scansione utilizzando protocolli standard e autorizzazioni di sola lettura in tutti gli ambienti. I file selezionati vengono aperti e sottoposti a scansione per rilevare dati aziendali sensibili, informazioni private e problemi relativi al ransomware.
 +
 Dopo una scansione completa, sono disponibili molte funzionalità di classificazione BlueXP aggiuntive che è possibile applicare ai dati, ad esempio visualizzare e perfezionare i dati nella pagina Data Investigation, cercare i nomi all'interno dei file, copiare, spostare ed eliminare i file di origine e molto altro ancora.
 
@@ -256,7 +250,7 @@ Dopo una scansione completa, sono disponibili molte funzionalità di classificaz
 
 La classificazione BlueXP acquisisce metadati come nome del file, autorizzazioni, ora di creazione, ultimo accesso e ultima modifica. Sono inclusi tutti i metadati visualizzati nella pagina Dettagli analisi dati e nei rapporti analisi dati.
 
-La classificazione BlueXP è in grado di identificare molti tipi di dati privati, come dati personali e dati personali sensibili. Per informazioni dettagliate sui dati privati, fare riferimento a. https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html["Categorie di dati privati analizzate dalla classificazione BlueXP"].
+La classificazione BlueXP è in grado di identificare molti tipi di dati privati, come informazioni personali (PII) e informazioni personali sensibili (SPii). Per informazioni dettagliate sui dati privati, fare riferimento a. https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html["Categorie di dati privati analizzate dalla classificazione BlueXP"].
 
 
 

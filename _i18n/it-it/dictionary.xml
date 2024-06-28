@@ -341,11 +341,7 @@
   <block id="0adefa52dc5e774fb8bd1c62fec82b84" category="paragraph"><block ref="0b3e64f511542d0a580dfbeb6d666614" prefix="" category="inline-code"></block></block>
   <block id="d288c89eadda3d7c229b7316faf2209a" category="section-title">Quali tipi di dati e metadati cattura la classificazione BlueXP?</block>
   <block id="724ba2aee906c26a6c05f56bbf0dd434" category="paragraph">La classificazione BlueXP consente di eseguire una scansione generale di "mappatura" o una scansione completa di "classificazione" sulle origini dati. La mappatura fornisce solo una panoramica di alto livello dei dati, mentre la classificazione fornisce una scansione di alto livello dei dati. Il mapping può essere eseguito sulle origini dati molto rapidamente perché non accede ai file per vedere i dati all'interno.</block>
-  <block id="720afdfb61af450cb24ecd2ff70d9559" category="list-text">Scansione di mappatura dei dati.</block>
-  <block id="e4304e4b14d97af30d876414d94156c9" category="paragraph">La classificazione BlueXP esegue la scansione solo dei metadati. Questo è utile per la gestione e la governance dei dati globali, l'ambito rapido dei progetti, le proprietà molto grandi e la prioritizzazione. La mappatura dei dati si basa sui metadati ed è considerata una scansione *rapida*.</block>
   <block id="00fb8639b6c2826bd3fceaa0d36399d8" category="paragraph">Dopo una scansione rapida, è possibile generare un report di mappatura dei dati. Questo report offre una panoramica dei dati memorizzati nelle origini dati aziendali per aiutarti a prendere decisioni in merito all'utilizzo delle risorse, alla migrazione, al backup, alla sicurezza e ai processi di conformità.</block>
-  <block id="201f7350fba7bb40edd7973d2df21f7d" category="list-text">Scansione di classificazione dei dati (profonda).</block>
-  <block id="d506351fc51b067200effaea00b650b7" category="paragraph">La classificazione BlueXP esegue la scansione utilizzando protocolli standard e autorizzazioni di sola lettura in tutti gli ambienti. I file selezionati vengono aperti e sottoposti a scansione per rilevare dati aziendali sensibili, informazioni private e problemi relativi al ransomware.</block>
   <block id="dd3080e9b8238619b33db17f32f0014c" category="paragraph">Dopo una scansione completa, sono disponibili molte funzionalità di classificazione BlueXP aggiuntive che è possibile applicare ai dati, ad esempio visualizzare e perfezionare i dati nella pagina Data Investigation, cercare i nomi all'interno dei file, copiare, spostare ed eliminare i file di origine e molto altro ancora.</block>
   <block id="1a068d00fba0764fe495dfcb9428ba33" category="section-title">Licenze e costi</block>
   <block id="c327ff2d5e993e56b5e37bd52bc902cc" category="section-title">Quanto costa la classificazione BlueXP?</block>
@@ -1006,18 +1002,14 @@
   <block id="d05dbd72313077420069ae49fe175de1" category="list-text">Per ogni connettore viene implementata una sola istanza di classificazione BlueXP.</block>
   <block id="b9542475929b3c8ff209e88bb948446b" category="paragraph">Puoi anche implementare la classificazione BlueXP su un host Linux on-premise o su un host nel tuo cloud provider preferito. Il software funziona esattamente allo stesso modo, indipendentemente dal metodo di installazione scelto. Gli aggiornamenti del software di classificazione BlueXP sono automatizzati finché l'istanza dispone di accesso a Internet.</block>
   <block id="5509f198213f653cadd8f4de67a143bf" category="admonition">L'istanza deve rimanere sempre in esecuzione perché la classificazione BlueXP esegue continuamente la scansione dei dati.</block>
-  <block id="e0fd86ff833307e88c100c6db47be129" category="paragraph">È possibile implementare la classificazione BlueXP su un sistema con meno CPU e meno RAM, ma ci sono alcune limitazioni quando si utilizzano questi sistemi meno potenti.</block>
   <block id="360d214e899b88b8fe54a260668c2f48" category="cell">Specifiche</block>
   <block id="e646e16bee8b32e6ea29e30d01970a6c" category="cell">Limitazioni</block>
   <block id="1a7c4f8acb1e42cdd7c2f34894fc2a2a" category="cell">Grande (impostazione predefinita)</block>
   <block id="f1fec8e9e1c0fb72e2b217fcc55b8ae5" category="cell">16 CPU, 64 GB di RAM, SSD da 500 GiB</block>
   <block id="87f8a6ab85c9ced3702b4ea641ad4bb5" category="cell">Medio</block>
   <block id="ae0bb774c8ff14b3dcc932f311aaacb7" category="cell">8 CPU, 32 GB di RAM, SSD da 200 GiB</block>
-  <block id="67c7201d970ee76fdf5320231dbc0367" category="cell">Scansione più lenta e scansione di un massimo di 1 milione di file.</block>
   <block id="2660064e68655415da2628c2ae2f7592" category="cell">Piccolo</block>
   <block id="4d4d090716714e5940e9220554e56673" category="cell">8 CPU, 16 GB di RAM, SSD da 100 GiB</block>
-  <block id="49ca56879094b0664574fba79a043f6b" category="inline-link-macro">nomi dei soggetti dei dati</block>
-  <block id="03e99071560d504538c377f7a5f5ac11" category="cell">Stesse limitazioni del "Medio", più la capacità di identificare <block ref="20b2486d30a598a87d1d40b385a9aa49" category="inline-link-macro-rx"></block> l'interno dei file è disattivato.</block>
   <block id="0420746794140f8978222121f6e4a764" category="section-title">Come funziona la classificazione BlueXP</block>
   <block id="e5cbd4e407b221a95e9bc8b3965978dd" category="paragraph">Ad alto livello, la classificazione BlueXP funziona come segue:</block>
   <block id="1483534eda512965970c7917b74698ae" category="list-text">Si implementa un'istanza della classificazione BlueXP in BlueXP.</block>
@@ -1052,17 +1044,13 @@
   <block id="9ece336caf3d2b843dafc984e27b323e" category="paragraph">La velocità di scansione è influenzata dalla latenza di rete, dalla latenza del disco, dalla larghezza di banda della rete, dalle dimensioni dell'ambiente e dalle dimensioni della distribuzione dei file.</block>
   <block id="737ab30d4451f7b971d756cdcc6b7d6b" category="section-title">Informazioni indicizzati dalla classificazione BlueXP</block>
   <block id="28e66615c1e04c19b63a24061d462220" category="paragraph">La classificazione BlueXP raccoglie, indicizza e assegna categorie ai dati (file). I dati indicizzati dalla classificazione BlueXP includono quanto segue:</block>
-  <block id="7723c0a066a249ebd5a6009e28eb007d" category="list-text">Metadati standard</block>
-  <block id="e1c6fd17dccbebfc440207f27d59459b" category="list-text">La classificazione BlueXP raccoglie i metadati standard relativi ai file: Il tipo di file, le dimensioni, le date di creazione e modifica e così via.</block>
   <block id="6370c5a9859b827de2be9d30ec4b997e" category="list-text">Dati personali</block>
   <block id="8c6847c1a3fee83b5a17b582397de2ec" category="inline-link-macro">Scopri di più sui dati personali</block>
   <block id="83b358180e4e01f210434dd14618f990" category="list-text">Dati personali sensibili</block>
   <block id="902c63c889818696415465bcf8e0b76b" category="inline-link-macro">Scopri di più sui dati personali sensibili</block>
   <block id="af1b98adf7f686b84cd0b443e022b7a0" category="list-text">Categorie</block>
   <block id="6a92cf43085c9bfddf06d24557be9d88" category="inline-link-macro">Scopri di più sulle categorie</block>
-  <block id="f2d346b1bb7c1c85ab6f7f21e3666b9f" category="list-text">Tipi</block>
   <block id="5cb163817b0d897b166cc75827e8c477" category="inline-link-macro">Scopri di più sui tipi</block>
-  <block id="999ab1f0dcc560a0944b54ec5ef461c0" category="list-text">Riconoscimento entità nome</block>
   <block id="13d0a191166a1a3dc29ebcd8e3aae81f" category="inline-link-macro">Scopri come rispondere alle richieste di accesso ai soggetti dati</block>
   <block id="7b895b198aba9634ffec5e0ec9a3aff4" category="section-title">Panoramica delle reti</block>
   <block id="6baaa35b9d6c708af7920a94de9f3951" category="paragraph">BlueXP implementa l'istanza di classificazione BlueXP con un gruppo di protezione che abilita le connessioni HTTP in entrata dall'istanza del connettore.</block>
@@ -1296,25 +1284,7 @@
   <block id="56ee28a97ee2b5724da347257b198872" category="cell">USA New York driver's License</block>
   <block id="f5817b4cc67ee41de01a4a19fc33ef7d" category="cell">Numero di previdenza sociale (SSN) USA</block>
   <block id="0ff635b15f7fdd9403b351ffc3d0c2a1" category="section-title">Tipi di dati personali sensibili</block>
-  <block id="1c5cd4f2794657644bcca6e1c8cd7dfd" category="paragraph">I dati personali sensibili che la classificazione BlueXP può trovare nei file includono il seguente elenco.</block>
   <block id="3b3e3761409ec91318d55527674759e3" category="paragraph">Al momento, gli elementi di questa categoria possono essere riconosciuti solo in inglese.</block>
-  <block id="98d51623eb7c03f43fa0678301f5efd4" category="list-text">Riferimento alle procedure penali</block>
-  <block id="eee8240ee2489053f1b73dc1c725bc30" category="list-text">Dati relativi alle condanne e ai reati penali di una persona fisica.</block>
-  <block id="369810982fcd806bbde0147f11c0364d" category="list-text">Riferimento di etnia</block>
-  <block id="8c91af16b200cd5f170a0c293f6c8c10" category="list-text">Dati relativi alla razza o all'origine etnica di una persona fisica.</block>
-  <block id="4d0838c277b16e4c72ecafbaf587b10f" category="list-text">Riferimento di salute</block>
-  <block id="fa9e0f66f09e924c8d185b0c3f264c96" category="list-text">Dati relativi alla salute di una persona fisica.</block>
-  <block id="f23c75cf09f52ec14b1d9b58cc0fe32c" category="list-text">Codici medici ICD-9-CM</block>
-  <block id="ea13a98b7046850c04c07db39e39139c" category="list-text">Codici utilizzati nel settore medico e sanitario.</block>
-  <block id="94eba79711527a8cc4882b225301c4d1" category="list-text">Codici medici ICD-10-CM</block>
-  <block id="3a2343e75371abf39ce11f0ae877ef3b" category="list-text">Riferimento alle credenze filosofiche</block>
-  <block id="21b44c1ea87d2453923ecdda08fbf204" category="list-text">Dati relativi alle convinzioni filosofiche di una persona naturale.</block>
-  <block id="e02ca0fa6e286458f0e6d2d8ab570cbe" category="list-text">Opinioni politiche riferimento</block>
-  <block id="09695dd2eeacedaa3efcdb4907f651ba" category="list-text">Dati relativi alle opinioni politiche di una persona fisica.</block>
-  <block id="9c816fac79e497eaa62bbb4a3adddfc1" category="list-text">Riferimenti alle credenze religiose</block>
-  <block id="93bdcf06c4b4aa8c6c1c5863c54998be" category="list-text">Dati relativi alle convinzioni religiose di una persona fisica.</block>
-  <block id="1126ae684e7f83d7ad03320e3339f2e4" category="list-text">Sex Life o orientamento di riferimento</block>
-  <block id="29ba89564fc652396b0a0ef333c039bf" category="list-text">Dati relativi alla vita sessuale o all'orientamento sessuale di una persona fisica.</block>
   <block id="3b59f947bb18be76ff03ca45ee9db241" category="section-title">Tipi di categorie</block>
   <block id="b7dea65f9a155deeb2a423a4459776ee" category="paragraph">La classificazione BlueXP classifica i tuoi dati nel modo seguente.</block>
   <block id="5ad8ae17298ed454e6b4639368851b62" category="paragraph">La maggior parte di queste categorie può essere riconosciuta in inglese, tedesco e spagnolo.</block>
@@ -1351,12 +1321,10 @@
   <block id="01ff99864c73c43a845fe1b26d70c372" category="list-text">Dati dell'applicazione</block>
   <block id="0fa5a9c40f7f4a1f5dc486811f7a9a68" category="list-text">Archiviare i file</block>
   <block id="b22f0418e8ac915eb66f829d262d14a2" category="list-text">Audio</block>
-  <block id="cbfc4d641fb7ac2f1bc7044e77fe8b2c" category="list-text">Dati delle applicazioni di business</block>
   <block id="255b0d6720ed538171a7e78daf8f4feb" category="list-text">File CAD</block>
   <block id="ca0dbad92a874b2f69b549293387925e" category="list-text">Codice</block>
   <block id="15ff2bcedc465304bd186b34a01e251e" category="list-text">Corrotto</block>
   <block id="9909759c6fe8a3f1958ec5ddf2c84149" category="list-text">Database e file di indice</block>
-  <block id="aab8888eeef9e8f15190e6721c92486d" category="list-text">Classificazione BlueXP Breadcrumbs</block>
   <block id="5656b1e2824ccc307842bdbfcce33f69" category="list-text">File di progettazione</block>
   <block id="b5b1c75f892d4dcc8edd5a8e28d9762a" category="list-text">Email Application Data (dati applicazione email)</block>
   <block id="43b0a31f7bbdb0db052e57796301b990" category="list-text">Crittografato (file con un elevato punteggio di entropia)</block>
@@ -2994,7 +2962,6 @@
   <block id="dfd993077bb353282906702dc3143ec7" category="list-text">*Considerazioni NTP*: NetApp consiglia di configurare il sistema di classificazione BlueXP per utilizzare un servizio NTP (Network Time Protocol). L'ora deve essere sincronizzata tra il sistema di classificazione BlueXP e il sistema del connettore BlueXP.</block>
   <block id="0d7b5294055876bf358044259606856f" category="paragraph">La classificazione BlueXP acquisisce metadati come nome del file, autorizzazioni, ora di creazione, ultimo accesso e ultima modifica. Sono inclusi tutti i metadati visualizzati nella pagina Dettagli analisi dati e nei rapporti analisi dati.</block>
   <block id="829d8d2f641dd9e58ec1a7d5e605ae21" category="inline-link">Categorie di dati privati analizzate dalla classificazione BlueXP</block>
-  <block id="3db00327e72827118e6c677e24f6a704" category="paragraph">La classificazione BlueXP è in grado di identificare molti tipi di dati privati, come dati personali e dati personali sensibili. Per informazioni dettagliate sui dati privati, fare riferimento a.<block ref="56427cf32f2481dc2470f5e57414e198" category="inline-link-rx"></block>.</block>
   <block id="74d4d96e624f192d4ebed96b99d9cedd" category="paragraph">I dati sottoposti a scansione rimangono nell'ambiente in cui si opera.</block>
   <block id="b39079257432aa2e0ea1ac3e4e36cdf8" category="section-title">Come vengono gestiti i dati sensibili?</block>
   <block id="35a8814c3eaa26f66ca3a0eea1193f70" category="paragraph">NetApp non ha accesso ai dati riservati e non li visualizza nell'interfaccia utente. I dati sensibili vengono mascherati, ad esempio gli ultimi quattro numeri vengono visualizzati per le informazioni sulla carta di credito.</block>
@@ -3009,7 +2976,6 @@
 - 100 GiB disponibile su /opt
 895 GiB disponibile su /var/lib/docker
 - 5 GiB su /tmp</block>
-  <block id="20d9878156a2091b70c1ea4cf697dd9d" category="paragraph">I dati personali contenuti nei file possono essere dati personali di carattere generale o identificativi nazionali. La terza colonna nella tabella seguente indica se la classificazione BlueXP utilizza <block ref="af3f1f2f9514770a1cfe0f9a422e763d" category="inline-link-macro-rx"></block> per convalidare i risultati per l'identificatore.</block>
   <block id="bd387dbe20d15a2a0ff5e7602549388e" category="list-text">L'opzione per attivare la raccolta del registro di controllo è stata disattivata.</block>
   <block id="a8a28cc44c1c782e3e832f304d4dfbd7" category="list-text">Durante l'analisi Directory, l'opzione per calcolare il numero di dati personali identificabili (PII) per directory non è disponibile.</block>
   <block id="6b1b1c56d9e50ead02cb1c15240f6672" category="list-text">L'opzione per integrare i dati utilizzando le etichette AIP (Azure Information Protection) è stata disattivata.</block>
@@ -3042,12 +3008,6 @@
   <block id="286037639991fbe8162e37237400f775" category="cell">32 CPU, 128 GB di RAM, 1 TiB SSD</block>
   <block id="f6f61cf219d5829d5169842d420d1503" category="cell">Scansione di fino a 500 milioni di file.</block>
   <block id="ea1a46649fa6479f8f6b7adefbb4450a" category="cell">Scansione di fino a 250 milioni di file.</block>
-  <block id="d2ab97ef89606f2d10fb34a332e0fdb6" category="paragraph">Quando si implementa la classificazione BlueXP nel cloud su AWS, è possibile scegliere un'istanza grande/media/piccola. Quando implementi la classificazione BlueXP in Azure o GCP, invia un'email ng-contact-data-sense@netapp.com per assistenza se desideri utilizzare uno di questi sistemi alternativi. Dovremo collaborare con te per implementare queste altre configurazioni cloud.</block>
-  <block id="8910b1ec473cf0681670f869289481a2" category="paragraph">Quando si implementa la classificazione BlueXP on-premise, basta utilizzare un host Linux con specifiche alternative. Non è necessario contattare NetApp per assistenza.</block>
-  <block id="5a8ee8420a5d1cdc5ee93a7fd5065c6a" category="list-text">Informazioni personali come indirizzi e-mail, numeri di identificazione o numeri di carta di credito. <block ref="fc496cc858c0e8dff4419012ba17c358" category="inline-link-macro-rx"></block>.</block>
-  <block id="824da272ee238f0ff0da26b458ce480c" category="list-text">Tipi speciali di informazioni sensibili, come dati sanitari, origine etnica o opinioni politiche, come definito dal GDPR e da altre normative sulla privacy. <block ref="6221f6509a9900ea9a8146767340b3a8" category="inline-link-macro-rx"></block>.</block>
-  <block id="e95f1ed805ee251f2c684538d33ea9f4" category="list-text">La classificazione BlueXP prende i dati sottoposti a scansione e li divide in diversi tipi di categorie. Le categorie sono argomenti basati sull'analisi ai del contenuto e dei metadati di ciascun file. <block ref="722783767558c868b0670a999b08f996" category="inline-link-macro-rx"></block>.</block>
-  <block id="7a8cb013c41bdd9770a1cad9bb979c55" category="list-text">La classificazione BlueXP prende i dati sottoposti a scansione e li suddivide in base al tipo di file. <block ref="a23a1c3a68ab723cb619be8574a4637d" category="inline-link-macro-rx"></block>.</block>
   <block id="a83bc0aa2bd876d7cc5a350879bd008c" category="section-title">Accedere ai file di registro</block>
   <block id="07b74cfb8b148331baaaa74d89dd4cec" category="doc">Visualizza i report sulla conformità</block>
   <block id="8932e9435ce03fbb7ecf0b2f738ce66a" category="paragraph">Per impostazione predefinita, le dashboard di classificazione di BlueXP visualizzano i dati di conformità e governance per tutti gli ambienti di lavoro, i database e le origini dati. Se si desidera visualizzare report contenenti dati solo per alcuni ambienti di lavoro, <block ref="200c05d79644e6ad09afbf686b752513" category="inline-xref-macro-rx"></block>.</block>
@@ -3101,7 +3061,6 @@
   <block id="cd4d01ef1bbc41dd6c1a648ca6b131c3" category="list-text">Puoi vedere <block ref="bb7ccaeb199c0a6d94b809bfbddc428e" category="inline-link-macro-rx"></block> Per ogni file e directory quando si fa clic sul pulsante "View All Permissions" (Visualizza tutte le autorizzazioni).</block>
   <block id="04e7e9631c93eec889b2ab99b5143465" category="section-title">Connettersi al server Active Directory</block>
   <block id="bbc0bef191e546654d479088a63463e8" category="section-title">Gestire l'integrazione di Active Directory</block>
-  <block id="2698a0014cadd28141bb459524e52ece" category="doc">Consente di visualizzare i dettagli di conformità relativi ai dati archiviati nell'organizzazione</block>
   <block id="5bd05de235efc04c8b15b98cdd6622d2" category="paragraph">Se si desidera visualizzare i dati solo per alcuni ambienti di lavoro, <block ref="06e3575e0ad015087c5a66ab84fa89cb" category="inline-xref-macro-rx"></block>.</block>
   <block id="ee2ce94ca497f99a823b64ee93e29228" category="paragraph">È inoltre possibile filtrare i risultati dalla pagina Data Investigation (analisi dati) e scaricare un report dei risultati come file CSV. Vedere <block ref="f082a9ca9c2b3ab3d0b6d26a35559d93" category="inline-link-macro-rx"></block> per ulteriori informazioni.</block>
   <block id="f9643188d49ee294212ab09521305bdd" category="section-title">Consente di visualizzare i file che contengono dati personali</block>
@@ -3298,7 +3257,6 @@
   <block id="428a85a15f039350823864cdd9f6711b" category="paragraph">Per configurazioni molto grandi in cui si eseguono scansioni di petabyte di dati, è possibile includere più host per fornire ulteriore potenza di elaborazione. Ulteriori informazioni link:task-deploy-multi-host-install-dark-site.html&gt; informazioni sull'installazione su più host per configurazioni di grandi dimensioni.</block>
   <block id="758de85e3f025a37293713e5735825a9" category="admonition">La classificazione BlueXP non è attualmente in grado di eseguire la scansione dei bucket S3, Azure NetApp Files o FSX per ONTAP quando il software è installato on-premise. In questi casi, è necessario implementare un connettore separato e un'istanza della classificazione BlueXP nel cloud e.<block ref="3cd9b819ecbc63be3401566b7b7cbf66" category="inline-link-rx"></block> per le diverse origini dati.</block>
   <block id="f221652320e994dc66aab1d5d6da5fb7" category="paragraph">Tenere presente che tutte le attività di installazione vengono registrate durante l'installazione della classificazione BlueXP. In caso di problemi durante l'installazione, è possibile visualizzare il contenuto del registro di controllo dell'installazione. È scritto a.<block ref="fd35ff247277f8b2076573900f968fde" prefix=" " category="inline-code"></block>. <block ref="c7911c51adef419f386feff4cec8acf6" category="inline-link-macro-rx"></block>.</block>
-  <block id="8a2fa9f62a3f919edf2af881f8e7795e" category="paragraph">Esistono molti tipi di dati privati che la classificazione BlueXP può identificare nei volumi e nei database. Vedere le categorie riportate di seguito.</block>
   <block id="224bbd10a45d7fdcbbb8075666b6c93a" category="cell">Selezionare l'intervallo di identificatori sensibili rilevati per file. Include dati personali e dati personali sensibili. Durante il filtraggio nelle directory, la classificazione BlueXP totalizza le corrispondenze di tutti i file in ogni cartella (e sottocartelle).
 
 NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per calcolare il numero di dati personali identificabili (PII) per Directory.</block>
@@ -3520,7 +3478,6 @@ NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per ca
   <block id="fb8a04662bc42d13ae8a2d1bddbc05b3" category="cell">Lo stato è sempre "informazioni riservate"</block>
   <block id="29344a3c58cf84dcf0144a3627f021d1" category="cell">Hash file</block>
   <block id="4df26807127a67f2d98166e4384eea07" category="cell">Autorizzazioni utente/gruppo</block>
-  <block id="922dab0122736d5f9b503433210903c7" category="list-text">La classificazione BlueXP sfrutta l'ai per estrarre i nomi naturali delle persone dai documenti. <block ref="3e345053a8e9ce1c3eacafd31ce8d78d" category="inline-link-macro-rx"></block>.</block>
   <block id="c1de1b0548f24874b79874a91bd0f05a" category="paragraph">La classificazione dei file dipende dal numero di utenti autorizzati ad accedere ai file sull'asse X (dal più basso al più alto) e dal numero di identificatori sensibili all'interno dei file sull'asse Y (dal più basso al più alto). I blocchi rappresentano il numero di file che corrispondono agli elementi degli assi X e Y. I blocchi di colore più chiaro sono buoni, con meno utenti in grado di accedere ai file e con meno identificatori sensibili per file. I blocchi più scuri sono gli elementi che potresti voler esaminare. Ad esempio, la schermata riportata di seguito mostra il testo della descrizione dei comandi per il blocco blu scuro. Indica che sono disponibili 1,500 file a cui hanno accesso 751-100 utenti e 501-100 identificatori sensibili per file.</block>
   <block id="d4af8d75643e49d82b42b7eb654ed0c7" category="summary">Puoi gestire la scansione dei dati in ciascuno degli ambienti di lavoro e in ciascuna origine nella classificazione BlueXP. È possibile apportare le modifiche in base a un "repository"; ciò significa che è possibile apportare modifiche per ogni volume, bucket, condivisione, schema, utente, ecc. a seconda del tipo di origine dati che si sta eseguendo la scansione.</block>
   <block id="e415c7da5280de793049e6b59816274d" category="paragraph">È possibile visualizzare lo stato di scansione di ciascun ambiente di lavoro nella pagina di configurazione:</block>
@@ -3544,4 +3501,45 @@ NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per ca
   <block id="14aa1b744a832a1cebfb9dd4d34b809d" category="paragraph">Sia il connettore BlueXP che la classificazione BlueXP richiederanno aggiornamenti manuali periodici per abilitare nuove funzionalità. La versione della classificazione BlueXP è disponibile nella parte inferiore delle pagine dell'interfaccia utente di classificazione BlueXP. Controllare <block ref="4cc8c968e2438af740515443c2861b36" category="inline-link-macro-rx"></block> per vedere le nuove funzionalità di ciascuna release e se si desidera. Quindi, seguire i passaggi da a.<block ref="29c5c6557943f5249ffe666c6e468ce9" category="inline-link-rx"></block> e. <block ref="b1d8f2a5489be1789530a7fc668375fb" category="inline-xref-macro-rx"></block>.</block>
   <block id="8a39158958544ff49d3dc95bad3f3a82" category="list-text">Si consiglia di aggiornare il software BlueXP Connector alla versione più recente disponibile.<block ref="4abf459c8cfa6d4ca98cecc130eefa9a" category="inline-link-rx"></block>.</block>
   <block id="914179b3d4545ce8b8e8ba122c53f4d9" category="list-text">Quando crei il sistema host on-premise, puoi scegliere tra queste dimensioni di sistema in base alle dimensioni del set di dati che intendi eseguire la scansione della classificazione BlueXP.</block>
+  <block id="6c09b1dff892b8048d63b1e31c61b814" category="section-title">Distribuzione su diversi tipi di istanza</block>
+  <block id="df08805f9a68769e5aca6dccacac7494" category="paragraph">Puoi implementare la classificazione BlueXP su un sistema con meno CPU e meno RAM.</block>
+  <block id="57637b2cc8a0490c839620385b595b3e" category="paragraph">Quando implementi la classificazione BlueXP in Azure o GCP, invia un'email ng-contact-data-sense@netapp.com per assistenza se desideri utilizzare un tipo di istanza più piccolo.</block>
+  <block id="ac1250c44ca3735bfcf1d4592b478a30" category="list-text">*Metadati standard* la classificazione BlueXP raccoglie metadati standard sui file: Il tipo di file, le sue dimensioni, le date di creazione e modifica e così via.</block>
+  <block id="e59e38f5b5a816003a773fb9f75ff139" category="list-text">*Dati personali*: Dati personali (PII) quali indirizzi e-mail, numeri di identificazione o numeri di carta di credito. <block ref="fc496cc858c0e8dff4419012ba17c358" category="inline-link-macro-rx"></block>.</block>
+  <block id="58b08b9a6ba479db4005e79f9e8bfbc2" category="list-text">*Dati personali sensibili*: Tipi speciali di dati personali sensibili (SPii), quali dati sanitari, origine etnica o opinioni politiche, come definito dal GDPR e da altre normative sulla privacy. <block ref="6221f6509a9900ea9a8146767340b3a8" category="inline-link-macro-rx"></block>.</block>
+  <block id="e1b5177c05ab6adddb3fa94c4f67b610" category="list-text">*Categorie*: La classificazione BlueXP prende i dati sottoposti a scansione e li divide in diversi tipi di categorie. Le categorie sono argomenti basati sull'analisi ai del contenuto e dei metadati di ciascun file. <block ref="722783767558c868b0670a999b08f996" category="inline-link-macro-rx"></block>.</block>
+  <block id="0fbd08a5b8412239310f1e6624aeaf6c" category="list-text">*Tipi*: La classificazione BlueXP prende i dati sottoposti a scansione e li suddivide in base al tipo di file. <block ref="a23a1c3a68ab723cb619be8574a4637d" category="inline-link-macro-rx"></block>.</block>
+  <block id="9557b1a380e33e450b6180ada3830e35" category="list-text">*Riconoscimento entità nome*: La classificazione BlueXP utilizza l'intelligenza artificiale per estrarre i nomi naturali delle persone dai documenti. <block ref="3e345053a8e9ce1c3eacafd31ce8d78d" category="inline-link-macro-rx"></block>.</block>
+  <block id="41265acabb9b2d4334b8c5ef8c74cfaa" category="list-text">*Scansione mappatura dati*: La classificazione BlueXP esegue la scansione solo dei metadati. Questo è utile per la gestione e la governance dei dati globali, l'ambito rapido dei progetti, le proprietà molto grandi e la prioritizzazione. La mappatura dei dati si basa sui metadati ed è considerata una scansione *rapida*.</block>
+  <block id="f8360a4b00aa848a20011c9cc810d223" category="list-text">*Analisi della classificazione dei dati (Deep)*: La classificazione BlueXP esegue la scansione utilizzando protocolli standard e autorizzazioni di sola lettura in tutti gli ambienti. I file selezionati vengono aperti e sottoposti a scansione per rilevare dati aziendali sensibili, informazioni private e problemi relativi al ransomware.</block>
+  <block id="8ee30d3fc93bcfebcb66c04d52653b48" category="paragraph">La classificazione BlueXP è in grado di identificare molti tipi di dati privati, come informazioni personali (PII) e informazioni personali sensibili (SPii). Per informazioni dettagliate sui dati privati, fare riferimento a.<block ref="56427cf32f2481dc2470f5e57414e198" category="inline-link-rx"></block>.</block>
+  <block id="dccdebfeec8fafe3af210e0af17af320" category="paragraph">Esistono molti tipi di dati privati che la classificazione BlueXP può identificare nei volumi e nei database.</block>
+  <block id="3b6b18ad7909031011a3960e81ac99e4" category="paragraph">La classificazione BlueXP identifica due tipi di dati personali:</block>
+  <block id="85542d81e9687ba10d962e859cdaf35a" category="list-text">*Informazioni di identificazione personale (PII)*</block>
+  <block id="874a594310f3c66b96cad8a1ef4af095" category="list-text">*Dati personali sensibili (SPii)*</block>
+  <block id="185a6c810ca281a80052f73d8e326953" category="paragraph">I dati personali, o _informazioni di identificazione personale_ (PII), contenuti nei file possono essere dati personali generici o identificatori nazionali. La terza colonna nella tabella seguente indica se la classificazione BlueXP utilizza <block ref="af3f1f2f9514770a1cfe0f9a422e763d" category="inline-link-macro-rx"></block> per convalidare i risultati per l'identificatore.</block>
+  <block id="22535a9e2a33599f897498d121038146" category="paragraph">La classificazione BlueXP può trovare nei file le seguenti informazioni personali sensibili (SPii).</block>
+  <block id="0327f9ba6d0f4d1eac4f3812d1dcc54d" category="list-text">*Procedura penale riferimento*: Dati relativi alle condanne penali e ai reati di una persona fisica.</block>
+  <block id="5082eafb320441003f6c8b58c5b11b66" category="list-text">*Riferimento etnico*: Dati relativi all'origine razziale o etnica di una persona fisica.</block>
+  <block id="c8c0005ddc44c030f46554f4bc13d30e" category="list-text">*Health Reference*: Dati relativi alla salute di una persona fisica.</block>
+  <block id="b4c4d50bf222c6d6d068e6a38a559115" category="list-text">*ICD-9-CM codici medici*: Codici utilizzati nell'industria medica e sanitaria.</block>
+  <block id="70ab4c8266b508a7c918db522f484d33" category="list-text">*ICD-10-CM codici medici*: Codici utilizzati nell'industria medica e sanitaria.</block>
+  <block id="008e44ccec3f4ad845a4564ae19ec928" category="list-text">*Principi filosofici riferimento*: Dati riguardanti le credenze filosofiche di una persona fisica.</block>
+  <block id="39090e91c08fbc9c0ce9490c2ec652b4" category="list-text">*Pareri politici riferimento*: Dati relativi alle opinioni politiche di una persona fisica.</block>
+  <block id="07053b2e2c9a4f0dbf4313c9308bb0c1" category="list-text">*Religious credences Reference*: Dati relativi alle credenze religiose di una persona fisica.</block>
+  <block id="f614278f8ed5632a7d1b8328e4f9380e" category="list-text">*Sex Life o Orientation Reference*: Dati relativi alla vita sessuale o all'orientamento sessuale di una persona fisica.</block>
+  <block id="374b37a5e415f7edd5cf6f52521389b8" category="list-text">Breadcrumb dalla classificazione BlueXP
+Dati delle applicazioni di business</block>
+  <block id="1903cd6e75503b7859268e96d356ea13" category="doc">Visualizzare i dettagli di conformità relativi ai dati privati memorizzati nell'organizzazione</block>
+  <block id="aa7740206cc512120060a1c060de9543" category="paragraph">Ottieni il controllo dei tuoi dati privati visualizzando i dettagli sui dati personali (PII) e sui dati personali sensibili (SPii) della tua organizzazione. È inoltre possibile ottenere visibilità esaminando le categorie e i tipi di file che BlueXP classifica trovato nei dati.</block>
+  <block id="3b08fbca8f3b3deaf466cedfd425cfc6" category="section-title">1 luglio 2024 (versione 1,33)</block>
+  <block id="b9620e9aadf9827ac9bb29001772b3f0" category="paragraph">Questa versione include i seguenti aggiornamenti.</block>
+  <block id="d61892207457d808cffbfc18b9dcd8ad" category="section-title">Ubuntu supportato</block>
+  <block id="0db04e76c6afbdb79f128758ee937013" category="paragraph">Questa versione supporta la piattaforma Linux Ubuntu 24,04.</block>
+  <block id="b83927d03444ee961e834ea1c3b0581b" category="section-title">Le scansioni di mappatura raccolgono i metadati</block>
+  <block id="6c7aa72b096dc637dbeefccf15ca45f8" category="paragraph">I seguenti metadati vengono estratti dai file durante le scansioni di mappatura e visualizzati nelle dashboard Governance, Compliance e Investigation:</block>
+  <block id="240625d3ff2ba7b1a3949f7ddfb468d3" category="section-title">Dati aggiuntivi nelle dashboard</block>
+  <block id="43ac3190fe70b3bdb1f5d5b7083f374a" category="paragraph">Questa versione aggiorna i dati visualizzati nei dashboard Governance, Compliance e Investigation durante le scansioni di mappatura.</block>
+  <block id="9b28a6e87457a6a3bfb03009dcd0b84a" category="inline-link">Qual è la differenza tra la mappatura e la classificazione delle scansioni</block>
+  <block id="c7fb92ca31125e81e2a4f2982bc6a806" category="paragraph">Per ulteriori informazioni, vedere<block ref="4062fc8e6e6df1b01a1de644d8a7eeca" category="inline-link-rx"></block></block>
 </blocks>
