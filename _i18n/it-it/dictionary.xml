@@ -3163,7 +3163,6 @@
   <block id="8e75bb9e135d127903c8df1b4d72574d" category="list-text">I seguenti sistemi operativi richiedono l'utilizzo del motore del container Podman e richiedono la classificazione BlueXP versione 1,30 o superiore:</block>
   <block id="17809026adc94f6c0d618b91e6379bec" category="list-text">Red Hat Enterprise Linux versione 8,8, 9,0, 9,1, 9,2 e 9,3</block>
   <block id="57da374715d9745b4dd1b2494e49b1c4" category="paragraph">Tenere presente che le seguenti funzioni non sono attualmente supportate quando si utilizzano RHEL 8.x e RHEL 9.x:</block>
-  <block id="555c829e9c93dc526a387388830a8e53" category="list-text">Podman versione 4 o superiore. Per installare Podman, aggiorna i pacchetti di sistema <block ref="2331e8e9c17f410bdfc0aa461e9aa2b7" prefix="(" category="inline-code"></block>), quindi installare Podman <block ref="f93cc32458404a89e1885eee2d68276f" prefix="(" category="inline-code"></block>).</block>
   <block id="bf9330c0401cb1794286325e86e14bc1" category="paragraph">La classificazione BlueXP supporta le versioni NFS 3.x e CIFS 1.x, 2,0, 2,1 e 3,0.</block>
   <block id="8da041e8fe3c0d961b0ec560416bc9a4" category="section-title">La classificazione BlueXP richiede l'accesso alle credenziali?</block>
   <block id="e54c52f3a3c545fc2e2f82026ac5945f" category="paragraph">La classificazione BlueXP non recupera le credenziali di storage. Al contrario, vengono archiviati nel connettore BlueXP.</block>
@@ -3542,4 +3541,5 @@ Dati delle applicazioni di business</block>
   <block id="43ac3190fe70b3bdb1f5d5b7083f374a" category="paragraph">Questa versione aggiorna i dati visualizzati nei dashboard Governance, Compliance e Investigation durante le scansioni di mappatura.</block>
   <block id="9b28a6e87457a6a3bfb03009dcd0b84a" category="inline-link">Qual è la differenza tra la mappatura e la classificazione delle scansioni</block>
   <block id="c7fb92ca31125e81e2a4f2982bc6a806" category="paragraph">Per ulteriori informazioni, vedere<block ref="4062fc8e6e6df1b01a1de644d8a7eeca" category="inline-link-rx"></block></block>
+  <block id="1e61042bc6437e79f5a1cc09c86acd1a" category="list-text">Podman versione 4 o superiore. Per installare Podman, immettere <block ref="9305f04686d4e3dadce4d1e9e77d9d71" prefix="(" category="inline-code"></block>).</block>
 </blocks>
