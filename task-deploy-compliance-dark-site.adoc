@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-deploy-compliance-dark-site.html 
-keywords: cloud compliance, data sense, get started, deploy cloud data sense, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, dark site, upgrade, private mode, docker, podman, bluexp classification, classification, install, cloud data sense, cds, linux host 
+keywords: cloud compliance, bluexp, data sense, get started, deploy cloud data sense, web browser connectivity, cloud compliance access, privacy, linux, ubuntu, compliance, on-premises, dark site, upgrade, private mode, docker, podman, rhel, bluexp classification, classification, install, cloud data sense, cds, linux host 
 summary: 'Completare alcuni passaggi per installare la classificazione BlueXP su un host Linux in un sito on-premise che non dispone di accesso a Internet, noto anche come "modalità privata". Questo tipo di installazione è perfetto per i siti sicuri.' 
 ---
 = Installare la classificazione BlueXP su un host Linux senza accesso Internet
@@ -130,8 +130,8 @@ Il software di classificazione BlueXP deve essere eseguito su un host che soddis
 ** I seguenti sistemi operativi richiedono l'utilizzo del motore dei container Docker:
 +
 *** Red Hat Enterprise Linux versione 7,8 e 7,9
-*** CentOS versione 7,8 e 7,9
 *** Ubuntu 22,04 (richiede la classificazione BlueXP versione 1,23 o superiore)
+*** Ubuntu 24,04 (richiede la classificazione BlueXP versione 1,23 o superiore)
 
 
 ** I seguenti sistemi operativi richiedono l'utilizzo del motore del container Podman e richiedono la classificazione BlueXP versione 1,30 o superiore:
