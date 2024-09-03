@@ -47,8 +47,6 @@ Ad esempio, è possibile individuare i file _senza_ informazioni personali ident
 ** Aggiornare le credenziali CIFS
 ** Visualizzare e annullare le azioni
 ** Eseguire nuovamente la scansione delle directory
-** Eliminare, copiare, etichettare e assegnare gli utenti ai dati
-** Clona e copia i file
 ** Esportare i dati
 
 

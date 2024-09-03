@@ -108,7 +108,7 @@ link:task-deploy-cloud-compliance.html["Implementare la classificazione BlueXP i
 
 *Nota:* l'implementazione della classificazione BlueXP in una posizione on-premise non è attualmente supportata durante la scansione dei bucket S3.
 
-Gli aggiornamenti al software di classificazione BlueXP sono automatizzati finché l'istanza dispone di connettività Internet.
+Gli aggiornamenti al software di classificazione BlueXP  vengono automatizzati finché l'istanza dispone di connettività Internet.
 
 
 

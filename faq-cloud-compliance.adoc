@@ -373,8 +373,6 @@ Quando link:task-deploy-cloud-compliance.html["implementato nel cloud"]:
 * In GCP, la classificazione BlueXP viene eseguita su una macchina virtuale n2-standard-16 con un disco persistente 500 GiB Standard.
 
 
-Si noti che è possibile implementare la classificazione BlueXP su un sistema con meno CPU e meno RAM, ma ci sono delle limitazioni quando si utilizzano questi sistemi. Vedere link:concept-cloud-compliance.html#using-a-smaller-instance-type["Utilizzando un tipo di istanza più piccolo"] per ulteriori informazioni.
-
 link:concept-cloud-compliance.html["Scopri di più sul funzionamento della classificazione BlueXP"^].
 
 

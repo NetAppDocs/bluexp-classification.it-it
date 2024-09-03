@@ -73,7 +73,7 @@ Selezionare o deselezionare i volumi da sottoporre a scansione per avviare o int
 
 
 
-== Rilevamento del file system FSX per ONTAP che si desidera sottoporre a scansione
+== Scopri il file system FSX per ONTAP che desideri analizzare
 
 Se il file system FSX per ONTAP che si desidera sottoporre a scansione non è già in BlueXP come ambiente di lavoro, è possibile aggiungerlo all'area di lavoro in questo momento.
 
@@ -81,7 +81,7 @@ https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-env
 
 
 
-== Implementazione dell'istanza di classificazione BlueXP
+== Distribuire l'istanza di classificazione BlueXP
 
 link:task-deploy-cloud-compliance.html["Implementare la classificazione BlueXP"^] se non è già stata implementata un'istanza.
 
@@ -93,7 +93,7 @@ Gli aggiornamenti al software di classificazione BlueXP sono automatizzati finch
 
 
 
-== Abilitazione della classificazione BlueXP negli ambienti di lavoro
+== Abilita la classificazione BlueXP  nei tuoi ambienti di lavoro
 
 È possibile attivare la classificazione BlueXP per FSX per volumi ONTAP.
 
@@ -107,7 +107,7 @@ image:screenshot_fsx_scanning_activate.png["Una schermata della scheda Configura
 ** Per mappare e classificare tutti i volumi, fare clic su *Map & Classify All Volumes* (Mappa e classificazione di tutti i volumi).
 ** Per personalizzare la scansione per ciascun volume, fare clic su *o selezionare il tipo di scansione per ciascun volume*, quindi scegliere i volumi da mappare e/o classificare.
 +
-Vedere <<Attivazione e disattivazione delle scansioni di compliance sui volumi,Attivazione e disattivazione delle scansioni di compliance sui volumi>> per ulteriori informazioni.
+Per ulteriori informazioni, vedere <<Abilitare e disabilitare le scansioni di conformità sui volumi,Attivazione e disattivazione delle scansioni di compliance sui volumi>> .
 
 
 
@@ -126,7 +126,7 @@ La classificazione BlueXP avvia la scansione dei volumi selezionati nell'ambient
 ====
 
 
-== Verificare che la classificazione BlueXP abbia accesso ai volumi
+== Verificare che la classificazione BlueXP  abbia accesso ai volumi
 
 Assicurarsi che la classificazione BlueXP possa accedere ai volumi controllando la rete, i gruppi di sicurezza e le policy di esportazione.
 
@@ -171,7 +171,7 @@ Dopo aver immesso le credenziali, viene visualizzato un messaggio che indica che
 
 
 
-== Attivazione e disattivazione delle scansioni di compliance sui volumi
+== Abilitare e disabilitare le scansioni di conformità sui volumi
 
 È possibile avviare o interrompere scansioni di sola mappatura, o scansioni di mappatura e classificazione, in un ambiente di lavoro in qualsiasi momento dalla pagina di configurazione. È inoltre possibile passare da scansioni di sola mappatura a scansioni di mappatura e classificazione e viceversa. Si consiglia di eseguire la scansione di tutti i volumi.
 
@@ -209,7 +209,7 @@ NOTE: I nuovi volumi aggiunti all'ambiente di lavoro vengono sottoposti automati
 
 
 
-== Scansione dei volumi di protezione dei dati
+== Eseguire la scansione dei volumi di protezione dei dati
 
 Per impostazione predefinita, i volumi di protezione dei dati (DP) non vengono sottoposti a scansione perché non sono esposti esternamente e la classificazione BlueXP non può accedervi. Questi sono i volumi di destinazione per le operazioni SnapMirror da un file system FSX per ONTAP.
 

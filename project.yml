@@ -40,16 +40,18 @@ sidebar:
         url: "/task-test-linux-system.html"
     - title: Attivare la scansione sulle origini dati
       entries:
-      - title: Cloud Volumes ONTAP e ONTAP on-premise
-        url: "/task-getting-started-compliance.html"
       - title: Azure NetApp Files
         url: "/task-scanning-anf.html"
       - title: Amazon FSX per ONTAP
         url: "/task-scanning-fsx.html"
+      - title: Cloud Volumes ONTAP e ONTAP on-premise
+        url: "/task-getting-started-compliance.html"
       - title: Schemi di database
         url: "/task-scanning-databases.html"
       - title: Condivisioni di file
         url: "/task-scanning-file-shares.html"
+      - title: StorageGRID
+        url: "/task-scanning-storagegrid.html"
     - title: Integrare Active Directory
       url: "/task-add-active-directory-datasense.html"
     - title: FAQ

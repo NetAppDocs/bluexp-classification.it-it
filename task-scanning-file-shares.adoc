@@ -4,7 +4,7 @@ permalink: task-scanning-file-shares.html
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb, data sense, 7-mode 
 summary: Completare alcuni passaggi per avviare la scansione di condivisioni di file NFS o CIFS non NetApp direttamente con la classificazione BlueXP. Queste condivisioni di file possono risiedere on-premise o nel cloud. 
 ---
-= Scansione delle condivisioni di file
+= Eseguire la scansione delle condivisioni dei file
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -43,7 +43,7 @@ Aggiungere l'elenco delle condivisioni di file che si desidera acquisire e selez
 
 
 
-== Revisione dei requisiti di condivisione dei file
+== Rivedere i requisiti di condivisione dei file
 
 Prima di attivare la classificazione BlueXP, verificare di disporre di una configurazione supportata.
 
@@ -68,15 +68,15 @@ Se si desidera assicurarsi che i file "ultimi tempi di accesso" non vengano modi
 
 
 
-== Implementazione dell'istanza di classificazione BlueXP
+== Distribuire l'istanza di classificazione BlueXP
 
 Distribuire la classificazione BlueXP se non è già stata implementata un'istanza.
 
-Gli aggiornamenti al software di classificazione BlueXP sono automatizzati finché l'istanza dispone di connettività Internet.
+Gli aggiornamenti al software di classificazione BlueXP  vengono automatizzati finché l'istanza dispone di connettività Internet.
 
 
 
-== Creazione del gruppo per le condivisioni file
+== Creare il gruppo per le condivisioni file
 
 È necessario aggiungere un "gruppo" di condivisioni file prima di poter aggiungere le condivisioni file. Il gruppo è un contenitore per le condivisioni di file che si desidera sottoporre a scansione e il nome del gruppo viene utilizzato come nome dell'ambiente di lavoro per tali condivisioni di file.
 
@@ -94,7 +94,7 @@ Il nuovo file shares Group viene aggiunto all'elenco degli ambienti di lavoro.
 
 
 
-== Aggiunta di condivisioni di file a un gruppo
+== Aggiungere condivisioni file a un gruppo
 
 Le condivisioni di file vengono aggiunte al file shares Group in modo che i file in tali condivisioni vengano sottoposti a scansione in base alla classificazione BlueXP. Le condivisioni vengono aggiunte nel formato `<host_name>:/<share_path>`.
 
@@ -155,7 +155,7 @@ La classificazione BlueXP avvia la scansione dei file nelle condivisioni di file
 
 
 
-== Rimozione di una condivisione file dalle scansioni di conformità
+== Rimuovere una condivisione di file dalle scansioni di conformità
 
 Se non è più necessario eseguire la scansione di determinate condivisioni di file, è possibile rimuovere singole condivisioni di file dal fatto che i file siano sottoposti a scansione in qualsiasi momento. Fare clic su *Remove Share* (Rimuovi condivisione) dalla pagina di configurazione.
 

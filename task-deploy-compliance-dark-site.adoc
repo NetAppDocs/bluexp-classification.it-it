@@ -213,11 +213,12 @@ Assicurarsi che tutte le porte richieste siano aperte per la comunicazione tra i
 | Tipo di connessione | Porte | Descrizione 
 
 
-| Connettore <> classificazione BlueXP | 8080 (TCP), 6000 (TCP), 443 (TCP) E 80  a| 
+| Connettore <> classificazione BlueXP | 8080 (TCP), 6000 (TCP), 443 (TCP) E 80. 9000  a| 
 Il gruppo di sicurezza per il connettore deve consentire il traffico in entrata e in uscita sulle porte 6000 e 443 da e verso l'istanza di classificazione BlueXP.
 
 * È necessaria la porta 6000 per fare in modo che la licenza BYOL di classificazione BlueXP funzioni in un sito oscuro.
 * La porta 8080 dovrebbe essere aperta in modo da poter vedere l'avanzamento dell'installazione in BlueXP.
+* Se si utilizza un firewall sull'host Linux, è necessaria la porta 9000 per i processi interni all'interno di un server Ubuntu.
 
 
 
@@ -260,6 +261,9 @@ I criteri di esportazione dei volumi NFS devono consentire l'accesso dall'istanz
 * Porta server LDAP (generalmente 389 per LDAP e 636 per LDAP sicuro)
 
 
+
+
+| Se un firewall utilizzato su un host Linux | 9000 | Necessario per i processi interni all'interno di un server Ubuntu. 
 |===
 Se si utilizzano più host di classificazione BlueXP per fornire ulteriore potenza di elaborazione per eseguire la scansione delle origini dati, è necessario attivare porte/protocolli aggiuntivi. link:task-deploy-compliance-dark-site.html["Vedere i requisiti aggiuntivi per le porte"].
 

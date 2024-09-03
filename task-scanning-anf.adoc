@@ -4,7 +4,7 @@ permalink: task-scanning-anf.html
 keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, ANF, azure netApp files, data sense 
 summary: Completa alcuni passaggi per iniziare a utilizzare la classificazione BlueXP per Azure NetApp Files. 
 ---
-= Introduzione alla classificazione BlueXP per Azure NetApp Files
+= Iniziate con la classificazione BlueXP  per Azure NetApp Files
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -59,7 +59,7 @@ Selezionare o deselezionare i volumi da sottoporre a scansione per avviare o int
 
 
 
-== Rilevamento del sistema Azure NetApp Files che si desidera sottoporre a scansione
+== Individuare il sistema Azure NetApp Files che si desidera sottoporre a scansione
 
 Se il sistema Azure NetApp Files che si desidera sottoporre a scansione non è già in BlueXP come ambiente di lavoro, è possibile aggiungerlo all'area di lavoro in questo momento.
 
@@ -67,7 +67,7 @@ https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-quick-start.html["S
 
 
 
-== Implementazione dell'istanza di classificazione BlueXP
+== Distribuire l'istanza di classificazione BlueXP
 
 link:task-deploy-cloud-compliance.html["Implementare la classificazione BlueXP"^] se non è già stata implementata un'istanza.
 
@@ -79,7 +79,7 @@ Gli aggiornamenti al software di classificazione BlueXP sono automatizzati finch
 
 
 
-== Abilitazione della classificazione BlueXP negli ambienti di lavoro
+== Abilita la classificazione BlueXP  nei tuoi ambienti di lavoro
 
 È possibile attivare la classificazione BlueXP sui volumi Azure NetApp Files.
 
@@ -93,7 +93,7 @@ image:screenshot_cloud_compliance_anf_scan_config.png["Una schermata della sched
 ** Per mappare e classificare tutti i volumi, fare clic su *Map & Classify All Volumes* (Mappa e classificazione di tutti i volumi).
 ** Per personalizzare la scansione per ciascun volume, fare clic su *o selezionare il tipo di scansione per ciascun volume*, quindi scegliere i volumi da mappare e/o classificare.
 +
-Vedere <<Attivazione e disattivazione delle scansioni di compliance sui volumi,Attivazione e disattivazione delle scansioni di compliance sui volumi>> per ulteriori informazioni.
+Per ulteriori informazioni, vedere <<Abilitare e disabilitare le scansioni di conformità sui volumi,Abilitare e disabilitare le scansioni di conformità sui volumi>> .
 
 
 
@@ -112,7 +112,7 @@ La classificazione BlueXP avvia la scansione dei volumi selezionati nell'ambient
 ====
 
 
-== Verificare che la classificazione BlueXP abbia accesso ai volumi
+== Verificare che la classificazione BlueXP  abbia accesso ai volumi
 
 Assicurarsi che la classificazione BlueXP possa accedere ai volumi controllando la rete, i gruppi di sicurezza e le policy di esportazione. È necessario fornire la classificazione BlueXP con le credenziali CIFS in modo che possa accedere ai volumi CIFS.
 
@@ -161,7 +161,7 @@ image:screenshot_compliance_volume_details.gif["Una schermata della pagina View 
 
 
 
-== Attivazione e disattivazione delle scansioni di compliance sui volumi
+== Abilitare e disabilitare le scansioni di conformità sui volumi
 
 È possibile avviare o interrompere scansioni di sola mappatura, o scansioni di mappatura e classificazione, in un ambiente di lavoro in qualsiasi momento dalla pagina di configurazione. È inoltre possibile passare da scansioni di sola mappatura a scansioni di mappatura e classificazione e viceversa. Si consiglia di eseguire la scansione di tutti i volumi.
 

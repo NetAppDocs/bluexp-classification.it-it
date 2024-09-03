@@ -173,8 +173,6 @@ Per ulteriori informazioni sui limiti delle vCPU, consultare i seguenti collegam
 * https://cloud.google.com/compute/quotas["Documentazione di Google Cloud: Quote delle risorse"^]
 
 
-Si noti che è possibile implementare la classificazione BlueXP su un'istanza in ambienti cloud AWS con meno CPU e meno RAM, ma l'utilizzo di questi sistemi presenta delle limitazioni. Vedere link:concept-cloud-compliance.html#using-a-smaller-instance-type["Utilizzando un tipo di istanza più piccolo"] per ulteriori informazioni.
-
 --
 
 

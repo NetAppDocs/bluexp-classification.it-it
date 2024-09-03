@@ -18,6 +18,20 @@ Scopri le novità della classificazione BlueXP (Cloud Data Sense).
 
 
 
+== 2 settembre 2024 (versione 1,35)
+
+Questa versione di classificazione BlueXP  include il seguente aggiornamento.
+
+
+
+=== Eseguire la scansione dei dati StorageGRID
+
+La classificazione BlueXP  può ora eseguire la scansione dei dati in StorageGRID.
+
+Per ulteriori informazioni, fare riferimento alla link:task-scanning-storagegrid.html["Eseguire la scansione dei dati StorageGRID"].
+
+
+
 == 5 agosto 2024 (versione 1,34)
 
 Questa versione di classificazione BlueXP  include il seguente aggiornamento.
