@@ -182,7 +182,7 @@ Per ulteriori informazioni sui limiti delle vCPU, consultare i seguenti collegam
 
 Seguire questi passaggi per implementare un'istanza della classificazione BlueXP nel cloud. Il connettore implementerà l'istanza nel cloud, quindi installerà il software di classificazione BlueXP su tale istanza.
 
-Quando si implementa la classificazione BlueXP da un connettore BlueXP in un ambiente AWS, è possibile selezionare la dimensione predefinita dell'istanza oppure scegliere tra due tipi di istanze più piccoli. link:concept-cloud-compliance.html#using-a-smaller-instance-type["Vedere i tipi di istanze e le limitazioni disponibili"]. Nelle regioni in cui il tipo di istanza predefinito non è disponibile, la classificazione BlueXP viene eseguita su un link:reference-instance-types.html["tipo di istanza alternativo"].
+Nelle regioni in cui il tipo di istanza predefinito non è disponibile, la classificazione BlueXP  viene eseguita su un link:reference-instance-types.html["tipo di istanza alternativo"].
 
 [role="tabbed-block"]
 ====

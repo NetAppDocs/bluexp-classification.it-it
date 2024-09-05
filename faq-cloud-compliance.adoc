@@ -260,7 +260,7 @@ Sì, la classificazione BlueXP è completamente integrata con BlueXP. Gli utenti
 
 Inoltre, se si desidera consentire a determinati utenti di visualizzare solo i risultati della scansione di classificazione di BlueXP senza avere la possibilità di gestire le impostazioni di classificazione di BlueXP, è possibile assegnare a tali utenti il ruolo Cloud Compliance Viewer.
 
-link:concept-cloud-compliance.html#user-access-to-compliance-information["Scopri di più"^].
+link:concept-cloud-compliance.html["Scopri di più"^].
 
 
 

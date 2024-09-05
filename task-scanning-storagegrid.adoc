@@ -22,9 +22,9 @@ Completare alcuni passaggi per avviare la scansione dei dati all'interno di Stor
 
 Inizia subito seguendo questi passaggi o scorri verso il basso fino alle sezioni rimanenti per ottenere dettagli completi.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Esaminare i prerequisiti dello storage a oggetti
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Esaminare i prerequisiti di StorageGRID
 [role="quick-margin-para"]
-Per connettersi al servizio di storage a oggetti, è necessario disporre dell'URL dell'endpoint.
+È necessario disporre dell'URL dell'endpoint per connettersi al servizio StorageGRID.
 
 [role="quick-margin-para"]
 È necessario disporre della chiave di accesso e della chiave segreta di StorageGRID in modo che la classificazione BlueXP  possa accedere ai bucket.
@@ -33,7 +33,7 @@ Per connettersi al servizio di storage a oggetti, è necessario disporre dell'UR
 [role="quick-margin-para"]
 link:task-deploy-cloud-compliance.html["Implementare la classificazione BlueXP"^] se non è già stata implementata un'istanza.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Aggiungere il servizio di storage a oggetti
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Aggiungere il servizio StorageGRID
 [role="quick-margin-para"]
 Aggiungere il servizio StorageGRID alla classificazione BlueXP .
 
@@ -70,17 +70,17 @@ Gli aggiornamenti al software di classificazione BlueXP  vengono automatizzati 
 Aggiungere il servizio StorageGRID.
 
 .Fasi
-. Dalla pagina Working Environments Configuration (Configurazione ambienti di lavoro), fare clic su *Add Data Source* (Aggiungi origine dati) > *Add Object Storage Service* (Aggiungi servizio di storage a oggetti).
+. Nella pagina Configurazione ambienti di lavoro, fare clic su *Aggiungi origine dati* > *Aggiungi StorageGRID*.
 +
-image:screenshot_compliance_add_object_storage_button.png["Una schermata della pagina Scan Configuration (Configurazione scansione) in cui è possibile fare clic sul pulsante Add file shares Group (Aggiungi gruppo condivisioni file)."]
+image:screenshot-scanning-add-storagegrid.png["Schermata della pagina Configurazione scansione in cui è possibile fare clic sul pulsante Aggiungi StorageGRID."]
 
-. Nella finestra di dialogo Aggiungi servizio archiviazione oggetti, immettere i dettagli per il servizio StorageGRID e fare clic su *continua*.
+. Nella finestra di dialogo Aggiungi servizio StorageGRID, immettere i dettagli per il servizio StorageGRID e fare clic su *continua*.
 +
 .. Immettere il nome che si desidera utilizzare per l'ambiente di lavoro. Questo nome deve riflettere il nome del servizio StorageGRID a cui si sta effettuando la connessione.
 .. Inserire l'URL dell'endpoint per accedere al servizio di storage a oggetti.
 .. Immettere la chiave di accesso e la chiave segreta in modo che la classificazione BlueXP  possa accedere ai bucket in StorageGRID.
 +
-image:screenshot_compliance_add_object_storage.png["Una schermata della finestra di dialogo in cui inserire i valori per accedere al servizio di storage a oggetti."]
+image:screenshot-scanning-storagegrid-add.png["Schermata della finestra di dialogo in cui è possibile immettere i valori per accedere al servizio StorageGRID."]
 
 
 
@@ -98,11 +98,11 @@ Dopo aver attivato la classificazione BlueXP  su StorageGRID, il passaggio succ
 .Fasi
 . Nella pagina Configurazione, fare clic su *Configurazione* nell'ambiente di lavoro StorageGRID.
 +
-image:screenshot_compliance_object_storage_config.png["Una schermata di fare clic su Configuration (Configurazione) per l'ambiente di lavoro in modo da poter scegliere i bucket da sottoporre a scansione."]
+image:screenshot-scanning-storagegrid-configuration.png["Una schermata di fare clic su Configuration (Configurazione) per l'ambiente di lavoro in modo da poter scegliere i bucket da sottoporre a scansione."]
 
 . Abilita scansioni di sola mappatura o scansioni di mappatura e classificazione sui bucket.
 +
-image:screenshot_compliance_object_storage_select_buckets.png["Una schermata che mostra la selezione dei bucket di storage a oggetti che si desidera sottoporre a scansione."]
+image:screenshot-scanning-add-storagegrid-buckets.png["Schermata di selezione dei bucket StorageGRID da analizzare."]
 
 +
 [cols="45,45"]
