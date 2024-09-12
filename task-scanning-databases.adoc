@@ -4,7 +4,7 @@ permalink: task-scanning-databases.html
 keywords: cloud compliance, enable cloud compliance, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, databases, database schemas, Oracle, SAP HANA, SQL Server, MongoDB, PostgreSQL, data sense 
 summary: Completare alcuni passaggi per avviare la scansione degli schemi di database con la classificazione BlueXP. 
 ---
-= Scansione degli schemi del database
+= Eseguire la scansione degli schemi del database con classificazione BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

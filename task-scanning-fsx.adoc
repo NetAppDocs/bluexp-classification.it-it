@@ -4,7 +4,7 @@ permalink: task-scanning-fsx.html
 keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, fsx, fsx for ontap, aws, data sense 
 summary: Completa alcuni passaggi per iniziare a eseguire la scansione di Amazon FSX per il volume ONTAP con classificazione BlueXP. 
 ---
-= Inizia a utilizzare la classificazione BlueXP per Amazon FSX per ONTAP
+= Esegui la scansione di Amazon FSX per volumi ONTAP con classificazione BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

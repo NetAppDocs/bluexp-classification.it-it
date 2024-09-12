@@ -4,7 +4,7 @@ permalink: task-scanning-file-shares.html
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb, data sense, 7-mode 
 summary: Completare alcuni passaggi per avviare la scansione di condivisioni di file NFS o CIFS non NetApp direttamente con la classificazione BlueXP. Queste condivisioni di file possono risiedere on-premise o nel cloud. 
 ---
-= Eseguire la scansione delle condivisioni dei file
+= Eseguire la scansione delle condivisioni di file con classificazione BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

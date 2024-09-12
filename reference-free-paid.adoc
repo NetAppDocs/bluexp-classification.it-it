@@ -33,7 +33,7 @@ Ci sono alcune funzionalità e caratteristiche deprecate nella versione core di 
 | Cluster ONTAP on-premise | Sì | Sì 
 
 
-| StorageGRID | Sì | No 
+| StorageGRID | Sì | Sì 
 
 
 | Azure NetApp Files | Sì | Sì 

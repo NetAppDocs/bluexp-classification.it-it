@@ -4,7 +4,7 @@ permalink: task-scanning-anf.html
 keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, ANF, azure netApp files, data sense 
 summary: Completa alcuni passaggi per iniziare a utilizzare la classificazione BlueXP per Azure NetApp Files. 
 ---
-= Iniziate con la classificazione BlueXP  per Azure NetApp Files
+= Esegui la scansione dei volumi Azure NetApp Files con classificazione BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
