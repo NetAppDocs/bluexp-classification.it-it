@@ -136,15 +136,7 @@ Il software di classificazione BlueXP deve essere eseguito su un host che soddis
 
 ** I seguenti sistemi operativi richiedono l'utilizzo del motore del container Podman e richiedono la classificazione BlueXP versione 1,30 o superiore:
 +
-*** Red Hat Enterprise Linux versione 8,8, 9,0, 9,1, 9,2 e 9,3
-+
-Tenere presente che le seguenti funzioni non sono attualmente supportate quando si utilizzano RHEL 8.x e RHEL 9.x:
-
-+
-**** Installazione in un luogo buio
-**** Scansione distribuita, utilizzando un nodo scanner master e nodi scanner remoti
-
-
+*** Red Hat Enterprise Linux versione 8,8, 9,0, 9,1, 9,2, 9,3, 9,4
 
 
 
@@ -155,9 +147,6 @@ Tenere presente che le seguenti funzioni non sono attualmente supportate quando 
 ** A seconda del sistema operativo in uso, è necessario installare uno dei motori container:
 +
 *** Docker Engine versione 19.3.1 o superiore. https://docs.docker.com/engine/install/["Visualizzare le istruzioni di installazione"^].
-+
-https://youtu.be/Ogoufel1q6c["Guarda questo video"^] Per una rapida dimostrazione dell'installazione di Docker su CentOS.
-
 *** Podman versione 4 o superiore. Per installare Podman, immettere (`sudo yum install podman netavark -y`).
 
 

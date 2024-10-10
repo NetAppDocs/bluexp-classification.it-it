@@ -129,8 +129,8 @@ image:diagram_cloud_compliance_instance.png["Diagramma che mostra un'istanza di 
 Tenere presente quanto segue sull'istanza predefinita:
 
 * In AWS, la classificazione BlueXP viene eseguita su un https://aws.amazon.com/ec2/instance-types/m6i/["m6i.4xlarge instance"^] Con un disco GP2 da 500 GiB. L'immagine del sistema operativo è Amazon Linux 2. Una volta implementato in AWS, è possibile scegliere una dimensione di istanza inferiore se si esegue la scansione di una piccola quantità di dati.
-* In Azure, la classificazione BlueXP viene eseguita su un link:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D16s_v3 VM"^] Con un disco da 500 GiB. L'immagine del sistema operativo è CentOS 7.9.
-* In GCP, la classificazione BlueXP viene eseguita su un link:https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines["n2-standard-16 VM"^] Con un disco persistente standard da 500 GiB. L'immagine del sistema operativo è CentOS 7.9.
+* In Azure, la classificazione BlueXP  viene eseguita su a link:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D16s_v3 VM"^] con un disco da 500 GiB. L'immagine del sistema operativo è Ubuntu 22,04.
+* Nella GCP, la classificazione BlueXP  viene eseguita su un link:https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines["n2-standard-16 VM"^] con un disco persistente standard GiB 500. L'immagine del sistema operativo è Ubuntu 22,04.
 * Nelle regioni in cui l'istanza predefinita non è disponibile, la classificazione BlueXP viene eseguita su un'istanza alternativa. link:reference-instance-types.html["Vedere i tipi di istanza alternativi"].
 * L'istanza è denominata _CloudCompliance_ con un hash generato (UUID) concatenato ad essa. Ad esempio: _CloudCompliance-16b6564-38ad-4080-9a92-36f5fd2f71c7_
 * Per ogni connettore viene implementata una sola istanza di classificazione BlueXP.
