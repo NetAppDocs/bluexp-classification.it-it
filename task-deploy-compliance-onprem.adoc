@@ -36,9 +36,6 @@ NOTE: Per le versioni legacy 1,30 e precedenti, se devi installare la classifica
 Puoi anche farlo link:task-deploy-compliance-dark-site.html["Installare la classificazione BlueXP in un sito on-premise che non dispone di accesso a Internet"] per siti completamente sicuri.
 
 
-NOTE: Per le versioni precedenti 1,30 e precedenti, per aggiungere nodi scanner, fare riferimento a. link:task-deploy-add-scanner-nodes.html["Aggiunta di nodi scanner a un'implementazione esistente"].
-
-
 
 == Avvio rapido
 

@@ -97,8 +97,7 @@ Selezionare il tipo di scansione che verrà eseguita dalla classificazione BlueX
 
 .Fasi
 . Dalla pagina _Configuration_, fare clic sul pulsante *Configuration* dell'account Google Drive.
-+
-image:screenshot_compliance_google_drive_add_sites.png["Una schermata della pagina di configurazione in cui è possibile selezionare il pulsante Configurazione."]
+
 
 . Abilitare le scansioni di sola mappatura, o le scansioni di mappatura e classificazione, sui file nell'account Google Drive.
 +

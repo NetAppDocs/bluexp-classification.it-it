@@ -226,7 +226,7 @@ image:screenshot_compliance_dp_cifs_volumes.png["Una schermata delle due opzioni
 
 
 
-. Attivare ciascun volume DP che si desidera sottoporre a scansione <<Attivazione e disattivazione delle scansioni di compliance sui volumi,allo stesso modo in cui sono stati attivati altri volumi>>.
+. Attivare ciascun volume DP che si desidera sottoporre a scansione.
 
 
 .Risultato

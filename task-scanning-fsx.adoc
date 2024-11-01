@@ -107,7 +107,7 @@ image:screenshot_fsx_scanning_activate.png["Una schermata della scheda Configura
 ** Per mappare e classificare tutti i volumi, fare clic su *Map & Classify All Volumes* (Mappa e classificazione di tutti i volumi).
 ** Per personalizzare la scansione per ciascun volume, fare clic su *o selezionare il tipo di scansione per ciascun volume*, quindi scegliere i volumi da mappare e/o classificare.
 +
-Per ulteriori informazioni, vedere <<Abilitare e disabilitare le scansioni di conformità sui volumi,Attivazione e disattivazione delle scansioni di compliance sui volumi>> .
+Per ulteriori informazioni, vedere attivazione e disattivazione delle scansioni di conformità sui volumi.
 
 
 
@@ -230,7 +230,7 @@ image:screenshot_compliance_dp_cifs_volumes.png["Una schermata delle due opzioni
 
 
 
-. Attivare ciascun volume DP che si desidera sottoporre a scansione <<Attivazione e disattivazione delle scansioni di compliance sui volumi,allo stesso modo in cui sono stati attivati altri volumi>>.
+. Attivare ciascun volume DP che si desidera sottoporre a scansione.
 
 
 .Risultato

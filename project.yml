@@ -10,7 +10,7 @@ settings:
     pdf_enabled: true
     harmony_enabled: false
   rss_page: whats-new.html
-  langs: it-it,us-en,de-de,es-es,fr-fr,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
+  langs: it-it,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr
 sidebar:
   entries:
   - title: Documenti di classificazione BlueXP
@@ -91,8 +91,6 @@ sidebar:
       - title: Installare la classificazione BlueXP su host multipli senza accesso
           a Internet
         url: "/task-deploy-multi-host-install-dark-site.html"
-      - title: Aggiunta di nodi scanner a un'implementazione esistente
-        url: "/task-deploy-add-scanner-nodes.html"
     - title: Deprecazioni dei dati di scansione
       entries:
       - title: Esegui la scansione dei bucket Amazon S3
