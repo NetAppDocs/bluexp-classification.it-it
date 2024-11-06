@@ -2000,12 +2000,10 @@
   <block id="c22cac5d13be450c907e1e287edd3bb0" category="paragraph">Per verificare che il software sia stato aggiornato, controllare la versione nella parte inferiore delle pagine dell'interfaccia utente di classificazione di BlueXP.</block>
   <block id="44b34442167c9611792529867ee76d90" category="doc">Documentazione sulla classificazione BlueXP</block>
   <block id="08aececdd8070f547d2aa65ea8c35446" category="summary">Scopri le novità della classificazione BlueXP.</block>
-  <block id="f42926ae5eb2834453e4706e43354d5c" category="section-title">3 aprile 2023 (versione 1.22)</block>
   <block id="e4279e9f497576fcde3caeb67ed0f96d" category="section-title">Nuovo report sulla valutazione del rilevamento dei dati</block>
   <block id="5b9233dec22bab321ca47a360d9950b6" category="inline-link">Scopri come generare e utilizzare il Data Discovery Assessment Report</block>
   <block id="21db17f88f41dcd13f48cc90aced1d74" category="section-title">Possibilità di implementare la classificazione BlueXP su istanze più piccole nel cloud</block>
   <block id="cb608d54d750eeb9d266241b5a1d63c7" category="section-title">È ora disponibile uno script standalone per qualificare il sistema Linux prima dell'installazione della classificazione BlueXP</block>
-  <block id="916fe80558e430806f51297666a415c2" category="section-title">7 marzo 2023 (versione 1.21)</block>
   <block id="b4602fb47c1d6ee0427e2682d3a0ca06" category="section-title">Nuova funzionalità per aggiungere categorie personalizzate dall'interfaccia utente di classificazione BlueXP</block>
   <block id="19c8ed5c1b936813e368bc7d83dbccf2" category="inline-link">categorie predefinite</block>
   <block id="bca8069b731ea966c03da0cea318f9d1" category="section-title">Ora è possibile aggiungere parole chiave personalizzate dall'interfaccia utente di classificazione BlueXP</block>
@@ -2024,7 +2022,6 @@
   <block id="013efea19f002683e016d90789038d6e" category="section-title">Miglioramenti all'installazione</block>
   <block id="27bfd524829d2f58c611b9380403face" category="list-text">Il programma di installazione della classificazione BlueXP per i siti senza accesso a Internet (siti oscuri) ora esegue un controllo preliminare per assicurarsi che i requisiti di sistema e di rete siano stati soddisfatti per un'installazione corretta.</block>
   <block id="64abb83963bf9db8126f2ee52cdc0390" category="list-text">I file di log di audit dell'installazione vengono salvati ora e scritti in<block ref="2f5e01665193c4e95e37ac69411567bb" prefix=" " category="inline-code"></block>.</block>
-  <block id="5c19ef53902ef56ea5c8f554cccb9ad8" category="section-title">5 febbraio 2023 (versione 1.20)</block>
   <block id="f0da8cded20db5ee6dce9c1c4da7bcd8" category="section-title">Possibilità di inviare e-mail di notifica basate su policy a qualsiasi indirizzo e-mail</block>
   <block id="af415967f6e10a35f69e4fdddc729da2" category="paragraph">Nelle versioni precedenti della classificazione BlueXP, è possibile inviare avvisi e-mail agli utenti BlueXP del proprio account quando alcuni criteri critici restituiscono risultati. Questa funzione ti consente di ricevere notifiche per proteggere i tuoi dati quando non sei online. Ora puoi anche inviare avvisi e-mail dalle policy a qualsiasi altro utente (fino a 20 indirizzi e-mail) che non sia presente nel tuo account BlueXP.</block>
   <block id="01111213f34b03537871696a29c018fa" category="inline-link">Scopri di più sull'invio di avvisi e-mail in base ai risultati della policy</block>
@@ -2037,7 +2034,6 @@
   <block id="6e0f24b07c077e6e557a1d0fac76b6c1" category="paragraph">Il filtro "numero di utenti con accesso" ora supporta i file memorizzati nei repository SharePoint Online. In passato erano supportati solo i file su condivisioni CIFS. Si noti che i gruppi SharePoint che non sono basati su Active Directory non verranno conteggiati in questo filtro al momento.</block>
   <block id="cab6c5a0928827eecbe652fb21944075" category="section-title">Il nuovo stato "Partial Success" (operazione riuscita parziale) è stato aggiunto al pannello Action Status (Stato azione)</block>
   <block id="d889002fb629aff0cd2d82543e5f378b" category="inline-link">Vedere come visualizzare il pannello Actions Status (Stato azioni)</block>
-  <block id="91edc807a7157b7f0159521433ea5b0f" category="section-title">9 gennaio 2023 (versione 1.19)</block>
   <block id="5e6d4a84337eb1e0ff5a019edf3a15d6" category="section-title">Possibilità di visualizzare un grafico di file che contengono dati sensibili e che sono eccessivamente permissivi</block>
   <block id="738f7059231d5fe5c1e22879f52682fd" category="section-title">Nella pagina Data Investigation sono disponibili tre nuovi filtri</block>
   <block id="a05ecd168005e0205e52b540a66b4208" category="paragraph">Sono disponibili nuovi filtri per perfezionare i risultati visualizzati nella pagina Data Investigation (analisi dati):</block>
@@ -2529,7 +2525,6 @@
   <block id="6365c8ecbac772805c308b501098968e" category="list-text"><block ref="3c14a300450508449fa4ac656dc2d2d2" category="inline-link-macro-rx"></block>.</block>
   <block id="312913ed4c4493306983760e524a18bf" category="paragraph">È necessario aggiungere tutte le condivisioni singolarmente, ad esempio:</block>
   <block id="5bf592857864b6327e9f9e7ac8b12e7e" category="list-text">Eseguire questa procedura per ogni volume dell'ambiente di lavoro che dispone di più condivisioni.</block>
-  <block id="96828273826a07fdc4f42f4998e536b2" category="section-title">6 giugno 2023 (versione 1.23)</block>
   <block id="04e04c61cd37ca8f12b83c892c2c46ea" category="section-title">Il giapponese è ora supportato durante la ricerca dei nomi dei soggetti dei dati</block>
   <block id="931c126009c96d8f8ce9770df003478d" category="inline-link">Filtro "Data Subject" nella pagina Data Investigation</block>
   <block id="8b33a4571db736cc278b213820df9c13" category="paragraph">I nomi giapponesi possono ora essere inseriti quando si cerca il nome di un soggetto in risposta a una richiesta di accesso soggetto a dati (DSAR). È possibile generare un<block ref="8ff27ad1e3f1d885a2f0c0f257501bb1" category="inline-link-rx"></block> con le informazioni risultanti. È inoltre possibile immettere i nomi giapponesi in<block ref="615fae5bff7ec48fe0ed5c47e50f199a" category="inline-link-rx"></block> identificare i file che contengono il nome dell'oggetto.</block>
@@ -2616,7 +2611,6 @@
   <block id="d8e9d38457b0cf1fc41c4f7dc9118e28" category="paragraph">La classificazione BlueXP può eseguire la scansione dei dati solo da origini dati locali al sito on-premise. Al momento, la classificazione BlueXP può eseguire la scansione delle seguenti origini dati locali in "modalità privata", nota anche come sito "scuro":</block>
   <block id="3b1883650bdcd250161cbf99ce0450d4" category="inline-link">Questa funzione è nota anche come "modalità privata"</block>
   <block id="26d411dfdee47762b69f79244d61895e" category="paragraph">Sì, anche questo è supportato. È possibile<block ref="1c270efcf36a8d1c2de58c1ed2ed7315" category="inline-link-rx"></block>.<block ref="93d53de7d74c2549b2ebf074270b753f" category="inline-link-rx"></block>. Quindi, è possibile individuare cluster ONTAP on-premise e altre origini dati locali e eseguire la scansione dei dati utilizzando la classificazione BlueXP.</block>
-  <block id="0494d69152dc144f6691315fabf9af4d" category="section-title">17 luglio 2023 (versione 1.24)</block>
   <block id="025b17159c4d2dd28926bdc5b13436e2" category="section-title">Due nuovi tipi di dati personali tedeschi sono identificati dalla classificazione BlueXP</block>
   <block id="cdbb87700ea6d8c32de7576d1ecb9987" category="section-title">La classificazione BlueXP è completamente supportata in modalità limitata e privata</block>
   <block id="7c4ed755305616a8a97076615e4aa1e5" category="inline-link">Scopri di più sulle modalità di implementazione di BlueXP per il connettore</block>
@@ -2861,13 +2855,9 @@
   <block id="846eb83e821481bdeafbcc34c9138401" category="section-title">Distribuire l'istanza di classificazione BlueXP</block>
   <block id="117276e96b89d072e0a833596332ef29" category="section-title">Aggiungere il server database</block>
   <block id="0dacbfa35e4a190378a78ef8c1f6a644" category="section-title">Abilitare e disabilitare le scansioni di conformità sugli schemi di database</block>
-  <block id="402607c1b30a68385dcfbd12111327c1" category="section-title">10 gennaio 2024 (versione 1,27)</block>
   <block id="5cc6a6599bfa6671ce515940a0badce7" category="paragraph">Questa versione includeva alcuni miglioramenti minori.</block>
   <block id="ea2bddf8f5366e4e19e9f92e993db900" category="list-text">Durante l'analisi Directory, l'opzione per calcolare il numero di dati personali identificabili (PII) per directory non è disponibile. Fare riferimento a. <block ref="5f0cc912e1424f54004e4ab3376e7552" category="inline-link-macro-rx"></block>.</block>
   <block id="95f502d77f0f99fc7fc8414116a3b796" category="list-text">L'opzione per integrare i dati utilizzando le etichette AIP (Azure Information Protection) è stata disattivata. Fare riferimento a. <block ref="1f3e517a67b0b53387aa4b447bd4c674" category="inline-link-macro-rx"></block>.</block>
-  <block id="8571bddd96e0bf7c1af547bf5706fe41" category="section-title">6 novembre 2023 (versione 1.26.3)</block>
-  <block id="7e59fce056fd1f38e1a30dea9fa90ab7" category="section-title">4 ottobre 2023 (versione 1,26)</block>
-  <block id="371c5ebc9b12d1edc94ae540d4adaef6" category="section-title">5 settembre 2023 (versione 1,25)</block>
   <block id="f9be4df42ee71d8a46fc32f8b40e0b1b" category="paragraph">In passato, nella pagina dei risultati dell'analisi era possibile applicare tag a una singola pagina alla volta (20 elementi). Ora è possibile selezionare *tutti* elementi nelle pagine dei risultati dell'analisi e applicare tag a tutti gli elementi, fino a 100.000 elementi alla volta.<block ref="46e19d501a7aeb47676677c6786cd6a8" category="inline-link-rx"></block>.</block>
   <block id="5dfcd9d1075127141684c90379617d15" category="paragraph"><block ref="f9682605316459d6868d028dc460934e" category="inline-link-rx"></block>.</block>
   <block id="1a24f136700e7d996dbc845dbf267e7f" category="paragraph">In passato era possibile che la classificazione BlueXP spostasse un massimo di 100,000 file di origine in qualsiasi condivisione NFS. Ora puoi spostare fino a 15 milioni di file alla volta.<block ref="51df0b03dbf1aa6425434a76a39934ae" category="inline-link-rx"></block>.</block>
@@ -2980,11 +2970,9 @@
   <block id="75377d4edffa6c8df90ec35a6c2955ae" category="section-title">È possibile istruire il servizio per escludere la scansione dei dati in determinate directory?</block>
   <block id="140079c23bf99666acb52cc8f9b453cb" category="paragraph">Sì. Se si desidera che la classificazione BlueXP escluda la scansione dei dati che risiedono in determinate directory di origine dati, è possibile fornire tale elenco al motore di classificazione. Dopo aver applicato questa modifica, la classificazione BlueXP esclude la scansione dei dati nelle directory specificate.</block>
   <block id="cccdbfa223764cc2c6bbdf979c65ac39" category="paragraph"><block ref="8704cac21d49e5e6ff202bcfdaf0dcb0" category="inline-link-macro-rx"></block>.</block>
-  <block id="71dc9fd1ff423f10c9820171aaeabf3c" category="section-title">4 marzo 2024 (versione 1,29)</block>
   <block id="2155776a968fa3c23d5147a57832435f" category="section-title">Ora è possibile escludere la scansione dei dati che risiedono in determinate directory di origine dati</block>
   <block id="81e333e3a0fd82b01c14e8eb52437152" category="paragraph">Se si desidera che la classificazione BlueXP escluda la scansione dei dati che risiedono in determinate directory di origine dati, è possibile aggiungere questi nomi di directory a un file di configurazione elaborato dalla classificazione BlueXP. Questa funzione consente di evitare la scansione di directory non necessarie o che potrebbero generare risultati falsi positivi per i dati personali.</block>
   <block id="1566e9c70755185a01fd5ae6296dca7b" category="paragraph"><block ref="2b616ef681b794b63b03f66a13723ff8" category="inline-link-rx"></block>.</block>
-  <block id="7cda33697c25a4972bdbfab414004cc2" category="section-title">14 dicembre 2023 (versione 1.26.6)</block>
   <block id="a1663078538acf931413c4667ee4dc32" category="doc">Definire altri ID di gruppo come aperti all'organizzazione</block>
   <block id="14262b7b54453519cfa73f76b2652616" category="section-title">Consente di visualizzare l'elenco corrente degli ID di gruppo</block>
   <block id="2238095e02de090e407d911c0f0f1e9f" category="sidebar">Creare criteri per visualizzare i risultati delle ricerche principali</block>
@@ -3018,7 +3006,6 @@
   <block id="7c5fdd74ce4770d435a4270b4817294a" category="list-text"><block ref="7ec82fd84f3aea81a9c6badedcfda318" category="inline-link-macro-rx"></block>, Noto anche come _private mode._ questo tipo di installazione, che utilizza uno script di installazione, è utile per i siti protetti.</block>
   <block id="a59f7e9514f364f5b3574b8ad02f202d" category="paragraph">Sia l'installazione su un host Linux con accesso a Internet che l'installazione in loco su un host Linux senza accesso a Internet utilizzano uno script di installazione. Lo script inizia controllando se il sistema e l'ambiente soddisfano i prerequisiti. Se i prerequisiti vengono soddisfatti, viene avviata l'installazione. Se si desidera verificare i prerequisiti indipendentemente dall'esecuzione dell'installazione di classificazione BlueXP, è possibile scaricare un pacchetto software separato che esegue solo i prerequisiti.</block>
   <block id="1e4c9e5b4eb9656593e357ac3f61cdc1" category="paragraph">Fare riferimento a. <block ref="a838f62b35f046b790a8a32eff3e63b6" category="inline-link-macro-rx"></block>.</block>
-  <block id="1e3ff9766d4708d7de4568322138b5f8" category="section-title">1 aprile 2024 (versione 1,30)</block>
   <block id="1f2986b833ebc6f322deb045aeee0ad8" category="section-title">Supporto aggiunto per la classificazione RHEL v8,8 e v9,3 BlueXP</block>
   <block id="2c435ff16ae089dc2d457e7776588268" category="paragraph">I seguenti sistemi operativi richiedono l'utilizzo del motore del container Podman e richiedono la classificazione BlueXP versione 1,30 o superiore: Red Hat Enterprise Linux versione 8,8, 9,0, 9,1, 9,2 e 9,3.</block>
   <block id="fae29fbaffa78fbfd6537b0feec1a925" category="inline-link-macro">Panoramica sulle implementazioni di classificazione BlueXP</block>
@@ -3196,7 +3183,6 @@ NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per ca
   <block id="1ba8a6d88a1ff9a34215586899b08a1e" category="paragraph">È possibile gestire la modalità di scansione dei dati in ciascuno degli ambienti di lavoro e delle origini dati. È possibile apportare le modifiche in base al "repository", ovvero apportare modifiche per ogni volume, schema, utente e così via, a seconda del tipo di origine dati che si sta eseguendo la scansione.</block>
   <block id="4cf46b88592b20071552593714707a46" category="paragraph">Se inizialmente è stato selezionato *Map All Volumes* (mappatura di tutti i volumi) o *Map &amp; Classify All Volumes* (mappatura e classificazione di tutti i volumi) quando è stata attivata la classificazione BlueXP per l'ambiente di lavoro in cui risiede il volume di origine, la classificazione BlueXP eseguirà automaticamente la scansione del nuovo volume clonato. Se inizialmente non si è utilizzata una di queste selezioni, è necessario eseguire la scansione di questo nuovo volume <block ref="9c238ad6b45b928020692cb5de74fd06" category="inline-link-macro-rx"></block>.</block>
   <block id="c63897b00e1bb7484e004dc2e1337d94" category="paragraph">È possibile eliminare i file manualmente dal riquadro analisi, oppure <block ref="189dcbbb5debf653b5fc0860b1c881e2" category="inline-link-macro-rx"></block>.</block>
-  <block id="240debedb0b95c0376b930ba9355ecf4" category="section-title">15 maggio 2024 (versione 1,31)</block>
   <block id="ac229efd3fa61c5457dcab252996be0b" category="paragraph">La classificazione BlueXP è ora disponibile come funzionalità core all'interno di BlueXP senza costi aggiuntivi per un massimo di 500 TiB di dati sottoposti a scansione. Non è richiesta alcuna licenza di classificazione o abbonamento a pagamento. Mentre concentriamo la funzionalità di classificazione BlueXP sulla scansione dei sistemi storage NetApp con questa nuova versione, alcune funzionalità legacy saranno disponibili solo per i clienti che avevano precedentemente pagato per una licenza. L'utilizzo di tali funzioni legacy scadrà quando il contratto a pagamento avrà raggiunto la data di fine.</block>
   <block id="3607a722a9a09bb6d405f4d84609e858" category="inline-link-macro">Ulteriori informazioni sulle funzioni obsolete</block>
   <block id="1a50d9154328b370f6d9bbbab041964a" category="paragraph"><block ref="671322b9b43cc49264f86b21ef88a11d" category="inline-link-macro-rx"></block>.</block>
@@ -3300,14 +3286,12 @@ NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per ca
   <block id="da30b4408b5e1540ac02763204c943ad" category="list-text">*In pausa* (punto grigio): È stata selezionata l'opzione "Pausa" per sospendere la scansione. Mentre le modifiche del volume non vengono visualizzate nel sistema, le informazioni acquisite vengono comunque visualizzate.</block>
   <block id="7eac8ad7bb67a204924dcc6a4113f103" category="list-text">*Errore* (punto rosso): Impossibile completare la scansione perché si sono verificati problemi. Se è necessario completare un'azione, l'errore viene visualizzato nella descrizione comandi sotto la colonna "azione richiesta".  In caso contrario, il sistema visualizza uno stato di "errore" e tenta di eseguire il ripristino. Al termine, lo stato cambia.</block>
   <block id="4c5b4656410d347cf852f162490f2e15" category="list-text">*Non scansione*: È stata selezionata la configurazione del volume "Off" e il sistema non sta eseguendo la scansione del volume.</block>
-  <block id="bf5237098b7bb15bc07f1d47863a9b8a" category="section-title">5 giugno 2024 (versione 1,32)</block>
   <block id="7910c8307cac3d62eca8ac0d42301b38" category="section-title">Nuova colonna Stato mapping nella pagina di configurazione</block>
   <block id="cfbaa8108dcd3c438f032a03ea5c380b" category="paragraph">In questa versione viene ora visualizzata una nuova colonna Stato mapping nella pagina di configurazione. La nuova colonna consente di identificare se la mappatura è in esecuzione, in coda, in pausa o superiore.</block>
   <block id="2f94c0116c501abdbd5c76ddef86d94a" category="paragraph">Per la spiegazione degli stati, vedere<block ref="cacd3972a6d9bfb8b2d3cde3ba576e77" category="inline-link-rx"></block>.</block>
   <block id="d37bdc46b0a428edd8f0ab35c24067ea" category="paragraph">Quando si impostano determinate origini dati (elencate di seguito), è necessario immettere le credenziali Active Directory per consentire alla classificazione BlueXP di eseguire la scansione dei volumi CIFS. Questa integrazione fornisce la classificazione BlueXP con i dettagli relativi al proprietario del file e alle autorizzazioni per i dati che risiedono in tali origini dati. L'Active Directory immesso per tali origini dati potrebbe differire dalle credenziali di Active Directory globali inserite qui. La classificazione BlueXP cerca in tutte le Active Directory integrate i dettagli relativi all'utente e alle autorizzazioni.</block>
   <block id="70f05bdab0f283eaffba98f53fceb776" category="paragraph">Per le condivisioni di file/volumi CIFS, se vuoi essere sicuro che i file "ultimi tempi di accesso" siano invariati dalle scansioni della classificazione di BlueXP, consigliamo all'utente di disporre dell'autorizzazione attributi di scrittura. Se possibile, si consiglia di far parte dell'utente configurato con Active Directory di un gruppo principale dell'organizzazione che dispone delle autorizzazioni per tutti i file.</block>
   <block id="bf353be94d6ba74709e3d127af6ba1a6" category="paragraph">La seguente domanda riguarda le licenze e i costi per l'utilizzo della classificazione BlueXP.</block>
-  <block id="b660413c1fbf79ce31a119db078401fe" category="paragraph">Questa versione include il seguente aggiornamento.</block>
   <block id="14aa1b744a832a1cebfb9dd4d34b809d" category="paragraph">Sia il connettore BlueXP che la classificazione BlueXP richiederanno aggiornamenti manuali periodici per abilitare nuove funzionalità. La versione della classificazione BlueXP è disponibile nella parte inferiore delle pagine dell'interfaccia utente di classificazione BlueXP. Controllare <block ref="4cc8c968e2438af740515443c2861b36" category="inline-link-macro-rx"></block> per vedere le nuove funzionalità di ciascuna release e se si desidera. Quindi, seguire i passaggi da a.<block ref="29c5c6557943f5249ffe666c6e468ce9" category="inline-link-rx"></block> e. <block ref="b1d8f2a5489be1789530a7fc668375fb" category="inline-xref-macro-rx"></block>.</block>
   <block id="8a39158958544ff49d3dc95bad3f3a82" category="list-text">Si consiglia di aggiornare il software BlueXP Connector alla versione più recente disponibile.<block ref="4abf459c8cfa6d4ca98cecc130eefa9a" category="inline-link-rx"></block>.</block>
   <block id="914179b3d4545ce8b8e8ba122c53f4d9" category="list-text">Quando crei il sistema host on-premise, puoi scegliere tra queste dimensioni di sistema in base alle dimensioni del set di dati che intendi eseguire la scansione della classificazione BlueXP.</block>
@@ -3340,8 +3324,6 @@ NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per ca
 Dati delle applicazioni di business</block>
   <block id="1903cd6e75503b7859268e96d356ea13" category="doc">Visualizzare i dettagli di conformità relativi ai dati privati memorizzati nell'organizzazione</block>
   <block id="aa7740206cc512120060a1c060de9543" category="paragraph">Ottieni il controllo dei tuoi dati privati visualizzando i dettagli sui dati personali (PII) e sui dati personali sensibili (SPii) della tua organizzazione. È inoltre possibile ottenere visibilità esaminando le categorie e i tipi di file che BlueXP classifica trovato nei dati.</block>
-  <block id="3b08fbca8f3b3deaf466cedfd425cfc6" category="section-title">1 luglio 2024 (versione 1,33)</block>
-  <block id="b9620e9aadf9827ac9bb29001772b3f0" category="paragraph">Questa versione include i seguenti aggiornamenti.</block>
   <block id="d61892207457d808cffbfc18b9dcd8ad" category="section-title">Ubuntu supportato</block>
   <block id="0db04e76c6afbdb79f128758ee937013" category="paragraph">Questa versione supporta la piattaforma Linux Ubuntu 24,04.</block>
   <block id="b83927d03444ee961e834ea1c3b0581b" category="section-title">Le scansioni di mappatura raccolgono i metadati</block>
@@ -3403,7 +3385,6 @@ Dati delle applicazioni di business</block>
   <block id="ffc704586971ad083fdf8dd3a75b06c9" category="list-text">Nella pagina Configurazione, fare clic su *Configurazione* nell'ambiente di lavoro StorageGRID.</block>
   <block id="2c9810189a9662217559e6c599b47a67" category="cell">8080 (TCP), 443 (TCP) e 80. 9000</block>
   <block id="83bceb987dd495cde1a148944580e473" category="paragraph">La classificazione BlueXP  può ora eseguire la scansione dei dati in StorageGRID.</block>
-  <block id="a5ac20c838605b872613985f5c302c61" category="section-title">5 agosto 2024 (versione 1,34)</block>
   <block id="7618b35d0748b4efb66fc940006fadd5" category="paragraph"><block ref="83ed27e05a338173092039c2d8e0ae3b" category="inline-link-macro-rx"></block>.</block>
   <block id="67103c15357d4cb02c120c2f07095363" category="paragraph">Nelle regioni in cui il tipo di istanza predefinito non è disponibile, la classificazione BlueXP  viene eseguita su un <block ref="45910d58f60ef6c6ec6de81dc1fbd5cf" category="inline-link-macro-rx"></block>.</block>
   <block id="59b7feee7c455334bdb5e4ec5e6894ed" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Esaminare i prerequisiti di StorageGRID</block>
@@ -3478,6 +3459,41 @@ Dati delle applicazioni di business</block>
   <block id="5413a43995a4a97a249b7b24fbf3e785" category="section-title">Versione 1,36</block>
   <block id="28dc8814bfe656bc8e29052d1508b999" category="section-title">2 settembre 2024</block>
   <block id="2808185c0a48de3cd5dcc0d92f453531" category="section-title">Versione 1,35</block>
-  <block id="1aa327f677148af5679dfc598fb8f539" category="paragraph">Per ulteriori informazioni, fare riferimento alla<block ref="3e1b901b9270f6f4c97e16e88c4e3161" category="inline-link-rx"></block>.</block>
-  <block id="164199ecac7ab88714ff0c68b5fb98f0" category="paragraph">Ora puoi caricare la tua licenza BYOL Data Sense nel portafoglio digitale BlueXP in un sito buio, in modo da ricevere una notifica quando la tua licenza sta per esaurirsi.</block>
+  <block id="60c09f1a3afdb367fc787929a52bce2c" category="paragraph">Per ulteriori informazioni, fare riferimento alla <block ref="01dac562b0502c43b97eebbd4bf4b35d" category="inline-link-macro-rx"></block>.</block>
+  <block id="dd6b8bf5a56c8beb81b173991906c83e" category="section-title">5 agosto 2024</block>
+  <block id="3b506912c9fbc6e924c90fcd67f9e81d" category="section-title">Versione 1,34</block>
+  <block id="16ec862fdbc31bf15f7d944ad60dd33f" category="section-title">1 luglio 2024</block>
+  <block id="29ca6f4adc7aee37872328bb347b7543" category="section-title">Versione 1,33</block>
+  <block id="4497f9fd188a9629ea47d91a3f025c8c" category="section-title">5 giugno 2024</block>
+  <block id="decdab3311a7d521fe764d5d580ddd35" category="section-title">Versione 1,32</block>
+  <block id="93716955add4f66b2af685a33bac4789" category="section-title">15 maggio 2024</block>
+  <block id="362a66c8caf141f86c11be1e2f936c77" category="section-title">Versione 1,31</block>
+  <block id="4434c8a49854e6484f6c158999be4e10" category="section-title">1 aprile 2024</block>
+  <block id="e6a70634d4a42783e6d5918eff0a0ab6" category="section-title">Versione 1,30</block>
+  <block id="9ee51d75827fcf6a985ed40e7418fea6" category="section-title">4 marzo 2024</block>
+  <block id="512d4a337ec357edd106a616e83b1a1f" category="section-title">Versione 1,29</block>
+  <block id="c630754f942c555264fff115d6b5e9b2" category="section-title">10 gennaio 2024</block>
+  <block id="536149161458a7a77ae5b72258f34e48" category="section-title">Versione 1,27</block>
+  <block id="3500d4b863ccad6f25298c3ab1519e74" category="section-title">14 dicembre 2023</block>
+  <block id="552c9ad11d5dffc1189fa270ca015445" category="section-title">Versione 1.26.6</block>
+  <block id="c8684cf4ccd502e49d1d79ff9936bc98" category="section-title">6 novembre 2023</block>
+  <block id="0778a32085af8830c408efb93cb7239f" category="section-title">Versione 1.26.3</block>
+  <block id="e5899cce271b544ee6441231f3c8cb3f" category="section-title">4 ottobre 2023</block>
+  <block id="a7dfa38887a337aec315ca23d79dc622" category="section-title">Versione 1,26</block>
+  <block id="133c04bb5f03e7d4a910bcf2f7193ebd" category="section-title">5 settembre 2023</block>
+  <block id="3f1982a78707e6a0e0433cad5b5a037d" category="section-title">Versione 1,25</block>
+  <block id="deac043b98b13aa9a1a0d041a820ee2c" category="section-title">17 luglio 2023</block>
+  <block id="314ecd7c1da8864532628a8aa4a6c85b" category="section-title">Versione 1,24</block>
+  <block id="6a7140fd5370f297d9a834d30e26ffde" category="section-title">6 giugno 2023</block>
+  <block id="5a78709b3e68f78b25a72a31cfcaa8f0" category="section-title">Versione 1,23</block>
+  <block id="1ab65443ec0af7e5e1aee32a3cf59dcc" category="inline-link">Scopri come ottenere e caricare la licenza BYOL Data Sense</block>
+  <block id="645f5675426bc396b45b524635e93bc7" category="paragraph">Ora puoi caricare la tua licenza BYOL di Data Sense nel portafoglio digitale di BlueXP  in un sito oscuro, in modo da ricevere una notifica quando la tua licenza si sta esaurendo.<block ref="bd823f9b4dce457c0ea2a8dcca6e749f" category="inline-link-rx"></block>.</block>
+  <block id="102787ed6297b34a7504b527e91d01d3" category="section-title">3 aprile 2023</block>
+  <block id="288d139ea0d21561e65bec74c2f7c646" category="section-title">Versione 1,22</block>
+  <block id="4b10c384bd11c38afbbe24f979f5519d" category="section-title">7 marzo 2023</block>
+  <block id="321553493f3e3f76105c5f5c5633b4c1" category="section-title">Versione 1,21</block>
+  <block id="e1bc7b26155063f1ce71b76f655669ef" category="section-title">5 febbraio 2023</block>
+  <block id="4d892f9a0cb70711d12ffb41d4d77d8b" category="section-title">Versione 1,20</block>
+  <block id="88a11892e7418e1eee8c952df9545b46" category="section-title">9 gennaio 2023</block>
+  <block id="58080b77f4121259ffde5ce32650fff6" category="section-title">Versione 1,19</block>
 </blocks>

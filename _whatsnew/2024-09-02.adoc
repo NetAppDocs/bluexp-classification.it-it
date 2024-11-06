@@ -1,0 +1,12 @@
+= Versione 1,35
+:allow-uri-read: 
+
+
+
+
+=== Versione 1,35
+
+.Eseguire la scansione dei dati StorageGRID
+La classificazione BlueXP  può ora eseguire la scansione dei dati in StorageGRID.
+
+Per ulteriori informazioni, fare riferimento alla link:task-scanning-storagegrid.html["Eseguire la scansione dei dati StorageGRID"].
