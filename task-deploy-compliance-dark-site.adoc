@@ -14,7 +14,7 @@ summary: 'Completare alcuni passaggi per installare la classificazione BlueXP su
 
 
 [role="lead"]
-Completa alcuni passaggi per installare la classificazione BlueXP su un host Linux in un sito on-premise che non dispone di accesso a Internet, anche noto come _private mode_. Questo tipo di installazione è perfetto per i siti sicuri.
+Completa alcuni passaggi per installare la classificazione BlueXP su un host Linux in un sito on-premise che non dispone di accesso a Internet, anche noto come _private mode_. Questo tipo di installazione, che utilizza uno script di installazione, non ha connettività al livello SaaS di BlueXP .
 
 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["Scopri le diverse modalità di implementazione per la classificazione BlueXP Connector e BlueXP"^].
 
@@ -254,8 +254,6 @@ I criteri di esportazione dei volumi NFS devono consentire l'accesso dall'istanz
 
 | Se un firewall utilizzato su un host Linux | 9000 | Necessario per i processi interni all'interno di un server Ubuntu. 
 |===
-Se si utilizzano più host di classificazione BlueXP per fornire ulteriore potenza di elaborazione per eseguire la scansione delle origini dati, è necessario attivare porte/protocolli aggiuntivi. link:task-deploy-compliance-dark-site.html["Vedere i requisiti aggiuntivi per le porte"].
-
 
 
 == Installare la classificazione BlueXP sull'host Linux on-premise
@@ -263,8 +261,6 @@ Se si utilizzano più host di classificazione BlueXP per fornire ulteriore poten
 Per le configurazioni tipiche, il software viene installato su un singolo sistema host.
 
 image:diagram_deploy_onprem_single_host_no_internet.png["Un diagramma che mostra la posizione delle origini dati che è possibile analizzare quando si utilizza una singola istanza di classificazione BlueXP implementata on-premise senza accesso a Internet."]
-
-image:diagram_deploy_onprem_multi_host_no_internet.png["Un diagramma che mostra la posizione delle origini dati che è possibile analizzare quando si utilizzano più istanze di classificazione BlueXP distribuite on-premise senza accesso a Internet."]
 
 
 
