@@ -1,0 +1,29 @@
+= Versione 1,39
+:allow-uri-read: 
+
+
+
+
+=== Versione 1,39
+
+Questa versione di classificazione BlueXP  aggiorna il processo di esportazione per il rapporto analisi dati. Questo aggiornamento per l'esportazione è utile per eseguire analisi aggiuntive sui dati, creare visualizzazioni aggiuntive sui dati o condividere con altri i risultati dell'analisi dei dati.
+
+In precedenza, l'esportazione del rapporto Data Investigation era limitata a 10.000 righe. Con questa versione, il limite è stato rimosso in modo da poter esportare tutti i dati. Questa modifica consente di esportare più dati dai report di analisi dei dati, offrendo maggiore flessibilità nell'analisi dei dati.
+
+È possibile scegliere l'ambiente di lavoro, i volumi, la cartella di destinazione e il formato JSON o CSV. Il nome file esportato include un indicatore data e ora che consente di identificare quando i dati sono stati esportati.
+
+Gli ambienti di lavoro supportati includono:
+
+* Cloud Volumes ONTAP
+* FSX per ONTAP
+* ONTAP
+* Gruppo di condivisione
+
+
+L'esportazione dei dati dal rapporto di analisi dei dati presenta le seguenti limitazioni:
+
+* Il numero massimo di record da scaricare è di 500 milioni. Per tipo (file, directory e tabelle)
+* Si prevede che l'esportazione di un milione di record richiederà circa 35 minuti.
+
+
+Per informazioni dettagliate sull'analisi dei dati e sul rapporto, vedere https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Esaminare i dati memorizzati nella propria organizzazione"].

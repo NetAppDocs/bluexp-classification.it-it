@@ -14,7 +14,7 @@ summary: 'È possibile analizzare i dati dell"organizzazione visualizzando i det
 
 
 [role="lead"]
-È possibile analizzare i dati dell'organizzazione visualizzando i dettagli nella pagina Data Investigation. È possibile accedere a questa pagina da molte aree dell'interfaccia utente di classificazione di BlueXP, tra cui le dashboard di governance e conformità.
+È possibile analizzare i dati dell'organizzazione visualizzando i dettagli nella pagina Data Investigation. È possibile accedere a questa pagina da molte aree dell'interfaccia utente di classificazione di BlueXP, tra cui le dashboard di governance e conformità. È possibile esportare i dati in un file CSV o JSON per ulteriori analisi o per condividerli con altri utenti.
 
 
 NOTE: Le funzionalità descritte in questa sezione sono disponibili solo se si è scelto di eseguire una scansione di classificazione completa sulle origini dati. Le origini dati che hanno eseguito una scansione solo mappatura non mostrano i dettagli a livello di file.
@@ -238,17 +238,13 @@ La classificazione BlueXP utilizza la tecnologia di hashing per determinare i fi
 
 È possibile scaricare l'elenco dei file duplicati e inviarlo all'amministratore dello storage in modo che possa decidere quali file, se presenti, possono essere cancellati. Oppure è possibile link:task-managing-highlights.html#delete-source-files["eliminare il file"] se si è sicuri che non è necessaria una versione specifica del file.
 
-
-
-=== Visualizzare tutti i file duplicati
+*Visualizza tutti i file duplicati*
 
 Se si desidera un elenco di tutti i file duplicati negli ambienti di lavoro e nelle origini dati in scansione, è possibile utilizzare il filtro *duplicati > ha duplicati* nella pagina analisi dati.
 
 Tutti i file duplicati vengono visualizzati nella pagina risultati.
 
-
-
-=== Visualizzare se un file specifico è duplicato
+*Visualizza se un file specifico è duplicato*
 
 Se si desidera vedere se un singolo file ha duplicati, fare clic su nel riquadro risultati analisi dati image:button_down_caret.png["cart"] per visualizzare i metadati del file in un singolo file. Se sono presenti duplicati di un determinato file, queste informazioni vengono visualizzate accanto al campo _duplicati_.
 
@@ -265,28 +261,11 @@ TIP: È possibile utilizzare il valore "hash del file" fornito in questa pagina 
 
 Il Data Investigation Report (Report analisi dati) è un download del contenuto filtrato della pagina Data Investigation (analisi dati).
 
-Il rapporto è disponibile come . File CSV che è possibile salvare sul computer locale.
+Il report è disponibile come file .CSV o .JSON che è possibile salvare sul computer locale.
 
 Se la classificazione BlueXP sta scansionando file (dati non strutturati), directory (cartelle e condivisioni di file) e database (dati strutturati), possono essere scaricati fino a tre file di report.
 
-
-
-=== Generare il rapporto analisi dati
-
-.Fasi
-. Dalla pagina Data Investigation (analisi dati), fare clic su image:button_download.png["pulsante download"] nella parte superiore destra della pagina.
-. Selezionare per scaricare un . Rapporto CSV dei dati, quindi fare clic su *Scarica rapporto*.
-+
-image:screenshot_compliance_investigation_report.png["Una schermata della pagina Download Investigation Report con diverse opzioni."]
-
-
-
-.Risultato
-Viene visualizzata una finestra di dialogo che indica che i report sono in fase di download.
-
-
-
-=== Ciò che è incluso nel rapporto di analisi dei dati
+*Cosa è incluso nel rapporto di analisi dei dati*
 
 Il *Report dati file non strutturati* include le seguenti informazioni sui file:
 
@@ -339,3 +318,14 @@ Il *Structured Data Report* include le seguenti informazioni sulle tabelle di da
 * Informazioni personali
 * Informazioni personali sensibili
 
+
+.Procedura per generare il rapporto
+. Dalla pagina Data Investigation (analisi dati), fare clic su image:button_download.png["pulsante download"] nella parte superiore destra della pagina.
+. Selezionare per scaricare un report .CSV o .JSON dei dati, quindi fare clic su *Scarica report*.
++
+image:screenshot_compliance_investigation_report2.png["Una schermata della pagina Download Investigation Report con diverse opzioni."]
+
+
+
+.Risultato
+Viene visualizzata una finestra di dialogo che indica che i report sono in fase di download.

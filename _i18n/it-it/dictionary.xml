@@ -321,7 +321,6 @@
   <block id="6c253a8aff5dfa835a77545b3006abc8" category="list-text">Cluster ONTAP on-premise</block>
   <block id="18cf072964a583150dd247485ba75b92" category="list-text">Amazon FSX per ONTAP</block>
   <block id="270fcb785810d0206945029bb05f4e97" category="list-text">Amazon S3</block>
-  <block id="34a23f91ee1733d5151d67d6f922e573" category="list-text">File share non NetApp</block>
   <block id="d022b1f14ebf8b0b397ff02f8b6bfe78" category="section-title">Esistono restrizioni quando viene implementato in un'area governativa?</block>
   <block id="4f554b82a208efb281c300628a271b8e" category="section-title">Quali origini dati è possibile eseguire la scansione se si installa la classificazione BlueXP in un sito senza accesso a Internet?</block>
   <block id="d0a39c85bb5fdaacac18ed6c4e5b511f" category="list-text">Sistemi ONTAP on-premise</block>
@@ -1138,7 +1137,6 @@
   <block id="0f259b55b58f019c0dd1cc33fbe10199" category="list-text">Dalla pagina Data Investigation (analisi dati), fare clic su <block ref="776643a36a44cc5a62e686055f0484c6" category="inline-image-macro-rx" type="image"></block> nella parte superiore destra della pagina.</block>
   <block id="038235769c3322b247e85f9bc8d7b5da" category="list-text">Selezionare se si desidera scaricare un report .CSV o .JSON dei dati e fare clic su *Download Report*.</block>
   <block id="02b8107c002e6577adbfdfd6d6f1b208" category="inline-image-macro">Una schermata della pagina Download Investigation Report con diverse opzioni.</block>
-  <block id="0b0eacf696b45d65c53ff1b5473edb39" category="paragraph"><block ref="0b0eacf696b45d65c53ff1b5473edb39" category="inline-image-macro-rx" type="image"></block></block>
   <block id="baa6537e5347accba4142c762df4cdf0" category="paragraph">Quando si seleziona un report .JSON, inserire il nome della condivisione NFS in cui verrà scaricato il report nel formato<block ref="5d0795d5bd729889f583de7b0928eaea" prefix=" " category="inline-code"></block>.</block>
   <block id="c7fa83e1836cada62d287dfbba3779c2" category="paragraph">Viene visualizzata una finestra di dialogo che indica che i report sono in fase di download.</block>
   <block id="24a56762deabf31ff2c2a9b817d1ffbe" category="paragraph">È possibile visualizzare lo stato di avanzamento della generazione di report JSON in <block ref="4c82c0e227c501a62216c678b91b4aee" category="inline-link-macro-rx"></block>.</block>
@@ -1171,7 +1169,6 @@
   <block id="8914a2ab502c2e892c90f9e40240866c" category="list-text">Numero di righe</block>
   <block id="6b3a75b3808f31da6754be1d099cbe3f" category="summary">Esistono molti tipi di dati privati che la classificazione BlueXP può identificare nei volumi, nei bucket Amazon S3, nei database, nelle cartelle OneDrive, negli account SharePoint, E Google Drive.</block>
   <block id="93f515959ce6187b986c42fa6959168b" category="doc">Categorie di dati privati</block>
-  <block id="092e6dee95258860d663bccecea3a137" category="admonition">Se hai bisogno della classificazione BlueXP per identificare altri tipi di dati privati, come ad esempio numeri di identificazione nazionali aggiuntivi o identificatori sanitari, invia un'email a ng-contact-data-sense@netapp.com con la tua richiesta.</block>
   <block id="10ff4e7c2ffc1fd426aa6f784a05da66" category="section-title">Tipi di dati personali</block>
   <block id="664f12aee95db5001901ada82a66a117" category="inline-link-macro">convalida della prossimità</block>
   <block id="e1a196cfa9a98106e5ba102887a0c95d" category="paragraph">Le lingue in cui questi elementi possono essere riconosciuti sono identificate nella tabella.</block>
@@ -2556,7 +2553,6 @@
   <block id="7b608a074398a486bc744655598680ea" category="list-text">Nella finestra di dialogo _Uninstall Data Sense_, digitare *uninstall* per confermare che si desidera disconnettere l'istanza di classificazione BlueXP dal connettore BlueXP, quindi fare clic su *Uninstall* (Disinstalla).</block>
   <block id="f10f83db534963d9efae7a297e100091" category="list-text">Accedere alla console del provider di servizi cloud ed eliminare l'istanza di classificazione BlueXP. L'istanza è denominata _CloudCompliance_ con un hash generato (UUID) concatenato ad essa. Ad esempio: _CloudCompliance-16b6564-38ad-4080-9a92-36f5fd2f71c7_</block>
   <block id="961ca08e58e9f85191f5707bc4dac07a" category="paragraph">In questo modo si eliminano l'istanza e tutti i dati associati raccolti dalla classificazione BlueXP.</block>
-  <block id="2c81bcce32daace3a1e27ca8e62dfd40" category="list-text">Per disinstallare il software dall'host, eseguire<block ref="cc561bef4dbd2996ec2b2478f3e1042d" prefix=" " category="inline-code"></block> script sul computer host, ad esempio:</block>
   <block id="e1add3649abfc02bc2a83bd64183210e" category="summary">Completare alcuni passaggi per installare la classificazione BlueXP su un host Linux in un sito on-premise che non dispone di accesso a Internet, noto anche come "modalità privata". Questo tipo di installazione è perfetto per i siti sicuri.</block>
   <block id="05e22c2c931d6a4218f029a72eeb9206" category="inline-link">Scopri le diverse modalità di implementazione per la classificazione BlueXP Connector e BlueXP</block>
   <block id="3c86f5b7f0c9db7841cc30ae9d32c2c2" category="paragraph"><block ref="a9635649936a46cf7723db5b3c00a913" category="inline-link-rx"></block>.</block>
@@ -2867,9 +2863,6 @@
   <block id="fffb468d89636ef35919bda57df8f0bc" category="section-title">Visualizzare le autorizzazioni per file e directory</block>
   <block id="33f1c68834e7b02c4c8b3b9dc4f796d3" category="section-title">Verificare la presenza di file duplicati nei sistemi di storage</block>
   <block id="e6bbcb2826ce1a4f58fd341c4f5ae5f3" category="paragraph">È possibile scaricare l'elenco dei file duplicati e inviarlo all'amministratore dello storage in modo che possa decidere quali file, se presenti, possono essere cancellati. Oppure è possibile <block ref="53c8cd880d15e2953a8e763d6f4dff0c" category="inline-link-macro-rx"></block> se si è sicuri che non è necessaria una versione specifica del file.</block>
-  <block id="11b431a799ad33cee933ceccc5de850c" category="section-title">Visualizzare tutti i file duplicati</block>
-  <block id="3c4c508b343b43aeeceba1d0993025fc" category="section-title">Visualizzare se un file specifico è duplicato</block>
-  <block id="d9f65abd84f27877cbba1b5ea828d53d" category="section-title">Generare il rapporto analisi dati</block>
   <block id="ed6f72ce35fa37960b096efc305078ca" category="paragraph">I risultati della scansione sono memorizzati in Elasticsearch all'interno dell'istanza di classificazione BlueXP.</block>
   <block id="ea8e3558520841b9ad476460d59b798b" category="doc">Aggiungi identificatori di dati personali alle scansioni di classificazione BlueXP</block>
   <block id="8ebfdc752250ae84fbace65f427cdb3f" category="paragraph">Devi avere <block ref="bbfd14f1fba46892c6cec16b4233f355" category="inline-link-macro-rx"></block> Alla classificazione BlueXP prima di poter aggiungere origini Fusion dei dati.</block>
@@ -3071,9 +3064,6 @@ NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per ca
   <block id="d2b1e6329082b8cf29999896b3d3d744" category="paragraph">Oltre a mostrare l'ambiente di lavoro e il volume in cui si trova il file, i metadati mostrano molte più informazioni, incluse le autorizzazioni per i file, il proprietario del file e l'eventuale presenza di duplicati di questo file. Queste informazioni sono utili se stai pensando di <block ref="8c7af7ec06ac1cea6800f7cd16a5f7c0" category="inline-link-macro-rx"></block> perché è possibile visualizzare tutte le informazioni che è possibile utilizzare per filtrare i dati.</block>
   <block id="9538e6335cc9662b264dd0870f2ca091" category="paragraph">Tenere presente che non tutte le informazioni sono disponibili per tutte le origini dati, ma solo quelle appropriate per tale origine. Ad esempio, il nome del volume e le autorizzazioni non sono rilevanti per i file di database.</block>
   <block id="6fa893a1485524675ae044e22dd04d02" category="paragraph">Per visualizzare un elenco di tutti gli utenti o gruppi che hanno accesso a un file o a una directory e i tipi di autorizzazioni di cui dispongono, fare clic su *Visualizza tutte le autorizzazioni*. Questo pulsante è disponibile solo per i dati nelle condivisioni CIFS.</block>
-  <block id="fbc24f64c5cfaa3ec5851bea3459db25" category="paragraph">Il rapporto è disponibile come . File CSV che è possibile salvare sul computer locale.</block>
-  <block id="707592628336b767af6468130ccb5f10" category="list-text">Selezionare per scaricare un . Rapporto CSV dei dati, quindi fare clic su *Scarica rapporto*.</block>
-  <block id="376c2577995f32a4c8892e8aefb140ba" category="section-title">Ciò che è incluso nel rapporto di analisi dei dati</block>
   <block id="6d6f3f8c3e87f4e41fd51dc3695310ba" category="doc">Eseguire la scansione degli account SharePoint</block>
   <block id="16976b9bcf6240cdf0301678ba12a525" category="section-title">Esaminare i requisiti di SharePoint</block>
   <block id="13fed9c014904fd1b4e1eb85a98610e8" category="section-title">Aggiungere un account SharePoint Online</block>
@@ -3491,4 +3481,28 @@ Dati delle applicazioni di business</block>
   <block id="5ae300808387123005a76abbd5a99f46" category="doc">Versione 1,38</block>
   <block id="074f06822cc9864b1be34066c52ec21d" category="paragraph">Questa versione di classificazione BlueXP  include miglioramenti generali e correzioni dei bug.</block>
   <block id="c33f35ab44944cc0d09e5bb702125592" category="section-title">16 dicembre 2024</block>
+  <block id="0a401367ec8a2cd84bb197e6d12c99af" category="doc">Versione 1,39</block>
+  <block id="1a58f9988f87b599ed71b9c7430034c2" category="paragraph">Questa versione di classificazione BlueXP  aggiorna il processo di esportazione per il rapporto analisi dati. Questo aggiornamento per l'esportazione è utile per eseguire analisi aggiuntive sui dati, creare visualizzazioni aggiuntive sui dati o condividere con altri i risultati dell'analisi dei dati.</block>
+  <block id="a4a7057d917e03803441c79badd6d519" category="paragraph">In precedenza, l'esportazione del rapporto Data Investigation era limitata a 10.000 righe. Con questa versione, il limite è stato rimosso in modo da poter esportare tutti i dati. Questa modifica consente di esportare più dati dai report di analisi dei dati, offrendo maggiore flessibilità nell'analisi dei dati.</block>
+  <block id="72fa9e7ff6f311a170ad8d720dff3f2f" category="paragraph">È possibile scegliere l'ambiente di lavoro, i volumi, la cartella di destinazione e il formato JSON o CSV. Il nome file esportato include un indicatore data e ora che consente di identificare quando i dati sono stati esportati.</block>
+  <block id="7afa5ec6a3f715e47b3c6fa2655f18b0" category="paragraph">Gli ambienti di lavoro supportati includono:</block>
+  <block id="253b40ae359ba25b56231803430c4873" category="list-text">ONTAP</block>
+  <block id="a512cd9b163bcb1be6bf96aa95fdfe74" category="list-text">Gruppo di condivisione</block>
+  <block id="d3fdc77553ad7d05684cea9b7806dac8" category="paragraph">L'esportazione dei dati dal rapporto di analisi dei dati presenta le seguenti limitazioni:</block>
+  <block id="d33a90467b78849917ec44b3e694a192" category="list-text">Il numero massimo di record da scaricare è di 500 milioni. Per tipo (file, directory e tabelle)</block>
+  <block id="9720aabb6c8d5eb9cfcffd189ef86ed1" category="list-text">Si prevede che l'esportazione di un milione di record richiederà circa 35 minuti.</block>
+  <block id="e7b42111154b9b878df538017c7943a0" category="inline-link">Esaminare i dati memorizzati nella propria organizzazione</block>
+  <block id="e771ad044e30754f4af0addbc217531d" category="paragraph">Per informazioni dettagliate sull'analisi dei dati e sul rapporto, vedere<block ref="5490a248bca38f18b55b559976dbad47" category="inline-link-rx"></block>.</block>
+  <block id="251452e49ab5b88b5d8545e58cd46509" category="admonition">Se è necessaria la classificazione BlueXP  per identificare altri tipi di dati privati, ad esempio numeri ID nazionali aggiuntivi o identificativi sanitari, contattare il proprio account manager.</block>
+  <block id="2a09f412ecce26a24c17d782c064aa73" category="paragraph">È possibile analizzare i dati dell'organizzazione visualizzando i dettagli nella pagina Data Investigation. È possibile accedere a questa pagina da molte aree dell'interfaccia utente di classificazione di BlueXP, tra cui le dashboard di governance e conformità. È possibile esportare i dati in un file CSV o JSON per ulteriori analisi o per condividerli con altri utenti.</block>
+  <block id="b995ac679338c896401b451552e5d419" category="paragraph">*Visualizza tutti i file duplicati*</block>
+  <block id="ee27fa3e6dfe09f89a9d57742c167aa9" category="paragraph">*Visualizza se un file specifico è duplicato*</block>
+  <block id="47b72e580332bb9da872607466b406bc" category="paragraph">Il report è disponibile come file .CSV o .JSON che è possibile salvare sul computer locale.</block>
+  <block id="f257e5460f3ab87ec47290dc11518fc8" category="paragraph">*Cosa è incluso nel rapporto di analisi dei dati*</block>
+  <block id="f3f4c1edbf92907aa9051152a36ae4cc" category="list-title">Procedura per generare il rapporto</block>
+  <block id="868f49e80cf5d3f7ac26cbec13a8d0be" category="list-text">Selezionare per scaricare un report .CSV o .JSON dei dati, quindi fare clic su *Scarica report*.</block>
+  <block id="8b93cae59bfdd9d1f5373c4f243f1891" category="paragraph"><block ref="8b93cae59bfdd9d1f5373c4f243f1891" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1f22985ba0d865da0fb0dc1149ac8684" category="list-text">Per disinstallare il software dall'host, eseguire<block ref="cc561bef4dbd2996ec2b2478f3e1042d" prefix=" " category="inline-code"></block> lo script sul computer host di classificazione BlueXP , ad esempio:</block>
+  <block id="009d2060a609114df262eff04e83f241" category="section-title">22 gennaio 2025</block>
+  <block id="987a49b32f868f747d862315b00a6b36" category="sidebar">File share (CIFS, NFS)</block>
 </blocks>
