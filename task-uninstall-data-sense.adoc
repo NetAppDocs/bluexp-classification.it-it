@@ -14,7 +14,7 @@ summary: 'È possibile disinstallare il software di classificazione BlueXP per r
 
 
 [role="lead"]
-È possibile disinstallare il software di classificazione BlueXP per risolvere i problemi o per rimuovere in modo permanente il software dall'host. L'eliminazione dell'istanza comporta anche l'eliminazione dei dischi associati in cui risiedono i dati indicizzati. Tutte le informazioni sottoposte a scansione della classificazione BlueXP verranno eliminate in modo permanente.
+Disinstallare il software di classificazione BlueXP  per risolvere i problemi o per rimuovere definitivamente il software dall'host. L'eliminazione dell'istanza comporta anche l'eliminazione dei dischi associati in cui risiedono i dati indicizzati. Tutte le informazioni sottoposte a scansione della classificazione BlueXP verranno eliminate in modo permanente.
 
 I passaggi da utilizzare dipendono dal fatto che sia stata implementata la classificazione BlueXP nel cloud o su un host on-premise.
 

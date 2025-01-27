@@ -1865,7 +1865,6 @@
   <block id="d04fc0fb3a777fbd9b6dc580953648aa" category="list-text">"Classified and updated last access time" (tempo di accesso ultimo classificato e aggiornato) - Mostra i file classificati e la classificazione BlueXP non è stata in grado di ripristinare l'ultimo tempo di accesso alla data originale. Questo filtro è valido solo per gli ambienti in cui è stata attivata l'OPZIONE *Scan when missing "write attribtributes" permissions*.</block>
   <block id="529e58159a0567a96e1265aa7c80760b" category="inline-link">Scopri di più sul Data Investigation Report</block>
   <block id="4f7157701d2db96edcc01457067a6771" category="inline-link-macro">Implementare la classificazione BlueXP in un sito on-premise con accesso a Internet</block>
-  <block id="90815e3d99ff61b4887b2f941fff4e46" category="paragraph">Nota: È anche possibile <block ref="1a9c56cdde8c9a93a744fbe95f12b64a" category="inline-link-macro-rx"></block>.</block>
   <block id="e75f898f4dbad5388881095e9582c693" category="inline-link-macro">Scopri come verificare se il tuo host Linux è pronto per installare la classificazione BlueXP</block>
   <block id="e883a1e45b8fba8675ed0e79f4a46200" category="paragraph">Lo script di installazione della classificazione BlueXP inizia verificando se il sistema e l'ambiente soddisfano i prerequisiti richiesti. Se tutti i prerequisiti sono soddisfatti, viene avviata l'installazione. Se si desidera verificare i prerequisiti indipendentemente dall'esecuzione dell'installazione di classificazione BlueXP, è possibile scaricare un pacchetto software separato che esegue solo i prerequisiti. <block ref="18e558c0c5f7db863c39638301013423" category="inline-link-macro-rx"></block>.</block>
   <block id="00c4bd00ffe3dc5bd31127d620af994f" category="paragraph">La maggior parte delle funzionalità di classificazione BlueXP funziona quando viene implementato in un sito senza accesso a Internet. Tuttavia, alcune funzioni che richiedono l'accesso a Internet non sono supportate, ad esempio:</block>
@@ -2335,7 +2334,6 @@
   <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">Una schermata che mostra le azioni che è possibile eseguire dopo aver selezionato il menu nell'ultima colonna della tabella.</block>
   <block id="7d2b76399031094bccc00e1ddb38ac56" category="summary">Completare alcuni passaggi per installare la classificazione BlueXP su un host Linux nella rete o su un host Linux nel cloud con accesso a Internet. Come parte di questa installazione, sarà necessario implementare manualmente l'host Linux nella rete o nel cloud.</block>
   <block id="0989b495229f449df36968cf973306ca" category="doc">Installare la classificazione BlueXP su un host con accesso a Internet</block>
-  <block id="945fde4f1ebdd85f6388e97e6bcab270" category="paragraph">L'installazione on-premise potrebbe essere una buona opzione se si preferisce eseguire la scansione dei sistemi ONTAP on-premise utilizzando un'istanza di classificazione BlueXP che si trova anche on-premise, ma questo non è un requisito. Il software funziona esattamente allo stesso modo, indipendentemente dal metodo di installazione scelto.</block>
   <block id="829124a47242d374aed9d0704a781736" category="paragraph">L'installazione tipica su un host Linux _in sede_ ha i seguenti componenti e connessioni.</block>
   <block id="f1250c9b73cd8f5ef391e449f0b5dcb4" category="inline-image-macro">Un diagramma dei componenti di rete e BlueXP richiesti e delle relative connessioni.</block>
   <block id="0b0f1899ec6aba7470224b92502a86ac" category="paragraph"><block ref="0b0f1899ec6aba7470224b92502a86ac" category="inline-image-macro-rx" type="image"></block></block>
@@ -2800,10 +2798,6 @@
   <block id="acff74627293e3e739a3c24e5fec03c2" category="cell">*Molto grande*</block>
   <block id="8a0a1142229b3b639f68556794cbd985" category="cell">32 CPU</block>
   <block id="228d50520d6c2a627ecce76f2775d5e1" category="cell">128 GB DI RAM</block>
-  <block id="92194a80ea376740e10d5ee7343f171c" category="cell">1 TiB SSD su /, o.
-- 100 GiB disponibile su /opt
-895 GiB disponibile su /var/lib/docker
-- 5 GiB su /tmp</block>
   <block id="bd387dbe20d15a2a0ff5e7602549388e" category="list-text">L'opzione per attivare la raccolta del registro di controllo è stata disattivata.</block>
   <block id="a8a28cc44c1c782e3e832f304d4dfbd7" category="list-text">Durante l'analisi Directory, l'opzione per calcolare il numero di dati personali identificabili (PII) per directory non è disponibile.</block>
   <block id="6b1b1c56d9e50ead02cb1c15240f6672" category="list-text">L'opzione per integrare i dati utilizzando le etichette AIP (Azure Information Protection) è stata disattivata.</block>
@@ -2982,7 +2976,6 @@
   <block id="7add4f4508f6a065e3f94f770f4bac2d" category="paragraph">La classificazione BlueXP usa le credenziali del piano dati, ad esempio, le credenziali CIFS per montare le condivisioni prima della scansione.</block>
   <block id="6ff26ca67814a870d6ad78d3687ba1a9" category="section-title">La comunicazione tra il servizio e il connettore utilizza il protocollo HTTP?</block>
   <block id="421bab1ab5399669513b071e1e856dca" category="paragraph">Sì, la classificazione BlueXP comunica con il connettore BlueXP tramite HTTP.</block>
-  <block id="5f0111c9b1c6f9cd6124c008eaaa60d2" category="paragraph">Prima di installare manualmente la classificazione BlueXP su un host Linux, è possibile eseguire uno script sull'host per verificare che tutti i prerequisiti siano stati implementati per l'installazione della classificazione BlueXP. È possibile eseguire questo script su un host Linux nella rete o su un host Linux nel cloud. L'host può essere connesso a Internet, oppure può risiedere in un sito che non dispone di accesso a Internet (un _sito scuro_).</block>
   <block id="0acb6de298fd251ec0fab09f46d78a47" category="summary">Pianifica quale implementazione della classificazione BlueXP soddisfa le tue esigenze.</block>
   <block id="7ac7bc027539aa6045c98c020acd30a2" category="doc">Quale implementazione della classificazione BlueXP dovresti utilizzare?</block>
   <block id="6f3a66c40c100d6b6795bf6321152c15" category="paragraph">Puoi implementare la classificazione BlueXP in modi diversi. Scopri quale metodo soddisfa le tue esigenze.</block>
@@ -3214,10 +3207,6 @@ NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per ca
   <block id="7478ade8cfb34d944424b511227fdfa2" category="paragraph">Se il report è più grande di 1 MB, il file .pdf viene conservato nell'istanza di classificazione BlueXP e viene visualizzato un messaggio a comparsa sulla posizione esatta. Quando la classificazione BlueXP è installata su una macchina Linux locale o su una macchina Linux implementata nel cloud, puoi accedere direttamente al file .pdf. Quando la classificazione BlueXP viene implementata nel cloud, per scaricare il file .pdf dovrai utilizzare SSH per l'istanza di classificazione BlueXP. <block ref="21695d5d9eec77c608b7fe7666155715" category="inline-link-macro-rx"></block>.</block>
   <block id="a271d225cad25b912ce5858124897ffe" category="paragraph">Il Data Discovery Assessment Report fornisce un'analisi di alto livello dell'ambiente sottoposto a scansione per evidenziare i risultati del sistema e mostrare le aree di interesse e le potenziali fasi di correzione. I risultati si basano sia sulla mappatura che sulla classificazione dei dati. L'obiettivo di questo report è quello di sensibilizzare i clienti su tre aspetti significativi del set di dati:</block>
   <block id="a5c44a10e9c98a0d20204951c490574b" category="paragraph">Questa funzionalità è applicabile ai sistemi ONTAP on-premise, Cloud Volumes ONTAP, Azure NetApp Files, FSX per ONTAP e alle condivisioni di file di terze parti.</block>
-  <block id="30786f70a10900b6a9d4fd46363a55cb" category="cell">500 GiB SSD ON /, OR
-- 100 GiB disponibile su /opt
-- 395 GiB disponibile su /var/lib/docker o per Podman /var/lib/containers o per Podman /var/lib/containers
-- 5 GiB su /tmp</block>
   <block id="b5f08a168a732355a95d9acdc430dcaf" category="list-text">*Tipo di istanza di Amazon Elastic Compute Cloud (Amazon EC2)*: Si consiglia "m6i.4XLarge". <block ref="2fad631c28a07a1344ecdbaabb5084bf" category="inline-link-macro-rx"></block>.</block>
   <block id="797b21f4662c52d1572473764912397d" category="paragraph">È possibile per i contenuti di<block ref="4a7b66d4befa0d10315241d623b44528" prefix=" " category="inline-code"></block> il file di configurazione deve differire da quello che è stato effettivamente eseguito dopo l'esecuzione di<block ref="cb4115d511c44acda4b130ad06cd4322" prefix=" " category="inline-code"></block> script. Per visualizzare l'elenco corrente degli ID di gruppo che hai aggiunto alla classificazione BlueXP, esegui il seguente comando da "/opt/netapp/Datasense/tools/customer_Configuration/data_provider":</block>
   <block id="f3d1244221881043e7d38d834935042d" category="inline-link">AWS: Prezzi di Amazon Elastic Compute Cloud (Amazon EC2)</block>
@@ -3506,4 +3495,16 @@ Dati delle applicazioni di business</block>
   <block id="009d2060a609114df262eff04e83f241" category="section-title">22 gennaio 2025</block>
   <block id="987a49b32f868f747d862315b00a6b36" category="sidebar">File share (CIFS, NFS)</block>
   <block id="0476d890c406400d4a4b0337b0492ab6" category="paragraph">Lo script si trova nella<block ref="ef7bc183495180bf03292b7d03184b05" prefix=" " category="inline-code"></block> directory.</block>
+  <block id="74110511ebf4f8eea597c953392110f9" category="list-text">1 TiB SSD su /, o 100 GiB disponibile su /opz</block>
+  <block id="4056804c808441484593a6cd5998f06e" category="list-text">895 GiB disponibile su /var/lib/docker</block>
+  <block id="f9ddd233a713e3719c7d8046ab62cc1e" category="list-text">5 GiB ON /tmp</block>
+  <block id="79d1a6d2ec5f279b488952c279f36449" category="list-text">*Per Podman, 5 GB su /tmp*</block>
+  <block id="0e1cb4b06a070e11230e1c8de75a1db8" category="list-text">*Per Podman, 30 GB su /var/tmp*</block>
+  <block id="16b9e4a3843d82aedd78ddf5568f32cc" category="list-text">SSD da 500 GiB su /, o 100 GiB disponibile su /opz</block>
+  <block id="7d5ad3bf21c571c611eed766c4a188c1" category="list-text">395 GiB disponibile su /var/lib/docker o per Podman /var/lib/containers o per Podman /var/lib/containers</block>
+  <block id="155acacab86f1c55608330de83b4e05f" category="paragraph">È anche possibile <block ref="1a9c56cdde8c9a93a744fbe95f12b64a" category="inline-link-macro-rx"></block>.</block>
+  <block id="f9cb03d21a26b2f64053d2e527396790" category="paragraph">L'installazione in sede può essere una buona opzione se si preferisce eseguire la scansione dei sistemi ONTAP in sede utilizzando un'istanza di classificazione BlueXP  che si trova anche in loco, ma questo non è un requisito. Il software funziona esattamente allo stesso modo, indipendentemente dal metodo di installazione scelto.</block>
+  <block id="ee8870d1e0595ddae329cf8ef1ee89fa" category="paragraph">È possibile filtrare il contenuto della pagina di analisi per visualizzare solo i risultati desiderati.</block>
+  <block id="260af28d48ba051bd7cdd887380f9ece" category="paragraph">Prima di installare manualmente la classificazione BlueXP  su un host Linux, eseguire uno script sull'host per verificare che tutti i prerequisiti siano presenti per l'installazione della classificazione BlueXP . È possibile eseguire questo script su un host Linux nella rete o su un host Linux nel cloud. L'host può essere connesso a Internet, oppure può risiedere in un sito che non dispone di accesso a Internet (un _sito scuro_).</block>
+  <block id="b64eea97fe56778b0e28c568854873ed" category="paragraph">Disinstallare il software di classificazione BlueXP  per risolvere i problemi o per rimuovere definitivamente il software dall'host. L'eliminazione dell'istanza comporta anche l'eliminazione dei dischi associati in cui risiedono i dati indicizzati. Tutte le informazioni sottoposte a scansione della classificazione BlueXP verranno eliminate in modo permanente.</block>
 </blocks>

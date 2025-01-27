@@ -23,7 +23,7 @@ NOTE: Le funzionalità descritte in questa sezione sono disponibili solo se si �
 
 == Filtrare i dati nella pagina analisi dati
 
-È possibile filtrare il contenuto della pagina di analisi per visualizzare solo i risultati desiderati. Si tratta di una funzione molto potente, in quanto dopo aver perfezionato i dati, è possibile utilizzare la barra dei pulsanti nella parte superiore della pagina per eseguire una serie di azioni, tra cui la copia di file, lo spostamento di file, l'aggiunta di un tag o di un'etichetta AIP ai file e molto altro.
+È possibile filtrare il contenuto della pagina di analisi per visualizzare solo i risultati desiderati.
 
 Se si desidera scaricare il contenuto della pagina come report dopo averlo perfezionato, fare clic su image:button_download.png["pulsante download"] pulsante. <<Report sull'analisi dei dati,Fare clic qui per ulteriori informazioni sul report Data Investigation>>.
 
