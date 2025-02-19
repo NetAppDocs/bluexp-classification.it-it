@@ -1,0 +1,41 @@
+= Versione 1,40
+:allow-uri-read: 
+
+
+
+
+=== Versione 1,40
+
+Questa versione di classificazione BlueXP  include i seguenti aggiornamenti.
+
+.Supporto per RHEL 9,5
+Questa versione fornisce il supporto per Red Hat Enterprise Linux v9,5 oltre alle versioni precedentemente supportate. Ciò è applicabile a qualsiasi installazione manuale in loco della classificazione BlueXP , comprese le implementazioni in ambienti oscuri.
+
+I seguenti sistemi operativi richiedono l'utilizzo del motore del contenitore Podman e richiedono la classificazione BlueXP  versione 1,30 o superiore: Red Hat Enterprise Linux versione 8,8, 8,10, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5.
+
+.Assegnare priorità alle scansioni
+Quando si eseguono scansioni di sola mappatura, è possibile assegnare priorità alle scansioni più importanti. Questa funzione è utile quando si hanno molti ambienti di lavoro e si desidera garantire che le scansioni ad alta priorità vengano completate per prime.
+
+Per impostazione predefinita, le scansioni vengono accodate in base all'ordine in cui vengono avviate. Grazie alla possibilità di assegnare priorità alle scansioni, è ora possibile spostarle in primo piano sulla coda. È possibile assegnare priorità a più scansioni. La priorità viene indicata in un ordine di primo ingresso e primo uscita, ovvero la prima scansione assegnata all'utente viene spostata in primo piano nella coda; la seconda scansione assegnata all'utente diventa seconda nella coda e così via.
+
+La priorità viene concessa una tantum. Le riscansioni automatiche dei dati di mappatura vengono eseguite nell'ordine predefinito.
+
+La prioritizzazione è limitata a link:concept-cloud-compliance.md#whats-the-difference-between-mapping-and-classification-scans["scansioni di sola mappatura"]; non è disponibile per le scansioni mappa e classificazione.
+
+Per modificare la priorità:
+
+. Dal menu classificazione BlueXP , selezionare *Configurazione*.
+. Selezionare le risorse a cui assegnare la priorità.
+. Dall'opzione azioni..., selezionare *prioritizza scansione*.
+
+
+.Riprovare tutte le scansioni
+La classificazione BlueXP  ora supporta la possibilità di ripetere in batch tutte le scansioni non riuscite.
+
+È ora possibile ritentare le scansioni in un'operazione batch con la funzione **Riprova tutto**. Se le scansioni di classificazione non vengono eseguite correttamente a causa di un problema temporaneo, ad esempio un'interruzione della rete, è possibile riprovare tutte le scansioni contemporaneamente con un solo pulsante invece di riprovare singolarmente. Le scansioni possono essere riavviate tutte le volte necessarie.
+
+Per riprovare tutte le scansioni:
+
+. Dal menu classificazione BlueXP , selezionare *Configurazione*.
+. Per riprovare tutte le scansioni non riuscite, selezionare *Riprova tutte le scansioni*.
+

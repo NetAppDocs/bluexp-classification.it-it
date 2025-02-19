@@ -18,6 +18,48 @@ Scopri le novità della classificazione BlueXP.
 
 
 
+== 19 febbraio 2025
+
+
+
+=== Versione 1,40
+
+Questa versione di classificazione BlueXP  include i seguenti aggiornamenti.
+
+.Supporto per RHEL 9,5
+Questa versione fornisce il supporto per Red Hat Enterprise Linux v9,5 oltre alle versioni precedentemente supportate. Ciò è applicabile a qualsiasi installazione manuale in loco della classificazione BlueXP , comprese le implementazioni in ambienti oscuri.
+
+I seguenti sistemi operativi richiedono l'utilizzo del motore del contenitore Podman e richiedono la classificazione BlueXP  versione 1,30 o superiore: Red Hat Enterprise Linux versione 8,8, 8,10, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5.
+
+.Assegnare priorità alle scansioni
+Quando si eseguono scansioni di sola mappatura, è possibile assegnare priorità alle scansioni più importanti. Questa funzione è utile quando si hanno molti ambienti di lavoro e si desidera garantire che le scansioni ad alta priorità vengano completate per prime.
+
+Per impostazione predefinita, le scansioni vengono accodate in base all'ordine in cui vengono avviate. Grazie alla possibilità di assegnare priorità alle scansioni, è ora possibile spostarle in primo piano sulla coda. È possibile assegnare priorità a più scansioni. La priorità viene indicata in un ordine di primo ingresso e primo uscita, ovvero la prima scansione assegnata all'utente viene spostata in primo piano nella coda; la seconda scansione assegnata all'utente diventa seconda nella coda e così via.
+
+La priorità viene concessa una tantum. Le riscansioni automatiche dei dati di mappatura vengono eseguite nell'ordine predefinito.
+
+La prioritizzazione è limitata a link:concept-cloud-compliance.md#whats-the-difference-between-mapping-and-classification-scans["scansioni di sola mappatura"]; non è disponibile per le scansioni mappa e classificazione.
+
+Per modificare la priorità:
+
+. Dal menu classificazione BlueXP , selezionare *Configurazione*.
+. Selezionare le risorse a cui assegnare la priorità.
+. Dall'opzione azioni..., selezionare *prioritizza scansione*.
+
+
+.Riprovare tutte le scansioni
+La classificazione BlueXP  ora supporta la possibilità di ripetere in batch tutte le scansioni non riuscite.
+
+È ora possibile ritentare le scansioni in un'operazione batch con la funzione **Riprova tutto**. Se le scansioni di classificazione non vengono eseguite correttamente a causa di un problema temporaneo, ad esempio un'interruzione della rete, è possibile riprovare tutte le scansioni contemporaneamente con un solo pulsante invece di riprovare singolarmente. Le scansioni possono essere riavviate tutte le volte necessarie.
+
+Per riprovare tutte le scansioni:
+
+. Dal menu classificazione BlueXP , selezionare *Configurazione*.
+. Per riprovare tutte le scansioni non riuscite, selezionare *Riprova tutte le scansioni*.
+
+
+
+
 == 22 gennaio 2025
 
 
@@ -155,7 +197,7 @@ I seguenti metadati vengono estratti dai file durante le scansioni di mappatura 
 .Dati aggiuntivi nelle dashboard
 Questa versione aggiorna i dati visualizzati nei dashboard Governance, Compliance e Investigation durante le scansioni di mappatura.
 
-Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans["Qual è la differenza tra la mappatura e la classificazione delle scansioni"]
+Per ulteriori informazioni, vedere link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans["Qual è la differenza tra la mappatura e la classificazione delle scansioni"]
 
 
 
@@ -353,7 +395,7 @@ Queste versioni non sono supportate con le nuove implementazioni perché Red Hat
 È possibile consentire la raccolta dei registri di controllo dell'accesso ai file nel sistema di classificazione BlueXP per gli eventi di accesso ai file rilevati sui volumi negli ambienti di lavoro. La classificazione BlueXP può acquisire i seguenti tipi di eventi FPolicy e gli utenti che hanno eseguito le azioni sui file: Creare, leggere, scrivere, eliminare, rinominare, Modificare il proprietario/le autorizzazioni e modificare SACL/DACL.
 
 .Le licenze Data Sense BYOL sono ora supportate nei siti bui
-Ora puoi caricare la tua licenza BYOL di Data Sense nel portafoglio digitale di BlueXP  in un sito oscuro, in modo da ricevere una notifica quando la tua licenza si sta esaurendo. https://docs.netapp.com/us-en/bluexp-classification/task-licensing-datasense.html#obtain-your-bluexp-classification-license-file["Scopri come ottenere e caricare la licenza BYOL Data Sense"].
+Ora puoi caricare la tua licenza BYOL di Data Sense nel portafoglio digitale di BlueXP  in un sito oscuro, in modo da ricevere una notifica quando la tua licenza si sta esaurendo. https://docs.netapp.com/us-en/bluexp-classification/task-licensing-byol-freetrial.html#obtain-your-bluexp-classification-license-file["Scopri come ottenere e caricare la licenza BYOL Data Sense"].
 
 
 

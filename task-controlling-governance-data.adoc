@@ -44,7 +44,7 @@ image:screenshot_compliance_governance_dashboard.png["Una schermata della dashbo
 ** Varie (categoria generale "Altro")
 
 
-* *File duplicati* - file duplicati in altre posizioni nelle origini dati che si stanno eseguendo la scansione. link:task-investigate-data.html#view-all-duplicated-files["Scopri quali tipi di file duplicati vengono visualizzati"].
+* *File duplicati* - file duplicati in altre posizioni nelle origini dati che si stanno eseguendo la scansione. link:task-investigate-data.html#filter-data-by-duplicates["Scopri quali tipi di file duplicati vengono visualizzati"].
 
 
 

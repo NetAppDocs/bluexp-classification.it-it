@@ -112,7 +112,7 @@ Il software di classificazione BlueXP deve essere eseguito su un host che soddis
 
 ** I seguenti sistemi operativi richiedono l'utilizzo del motore del container Podman e richiedono la classificazione BlueXP versione 1,30 o superiore:
 +
-*** Red Hat Enterprise Linux versione 8,8, 9,0, 9,1, 9,2, 9,3, 9,4
+*** Red Hat Enterprise Linux versione 8,8, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5
 
 
 

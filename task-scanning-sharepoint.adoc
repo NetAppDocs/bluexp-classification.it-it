@@ -23,28 +23,6 @@ Completa alcuni passaggi per iniziare la scansione dei file negli account ShareP
 ====
 
 
-== Avvio rapido
-
-Inizia subito seguendo questi passaggi o scorri verso il basso fino alle sezioni rimanenti per ottenere dettagli completi.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Esaminare i prerequisiti di SharePoint
-[role="quick-margin-para"]
-Assicurarsi di disporre di credenziali qualificate per accedere all'account SharePoint e di disporre degli URL dei siti SharePoint che si desidera sottoporre a scansione.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Distribuire l'istanza di classificazione BlueXP
-[role="quick-margin-para"]
-link:task-deploy-cloud-compliance.html["Implementare la classificazione BlueXP"^] se non è già stata implementata un'istanza.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Accedere all'account SharePoint
-[role="quick-margin-para"]
-Utilizzando credenziali utente qualificate, accedere all'account SharePoint a cui si desidera accedere in modo che venga aggiunto come nuova origine dati/ambiente di lavoro.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Aggiungere gli URL del sito SharePoint da sottoporre a scansione
-[role="quick-margin-para"]
-Aggiungere l'elenco degli URL del sito SharePoint che si desidera sottoporre a scansione nell'account SharePoint e selezionare il tipo di scansione. È possibile aggiungere fino a 100 URL alla volta e fino a 1,000 siti in totale per ciascun account.
-
-
-
 == Esaminare i requisiti di SharePoint
 
 Esaminare i seguenti prerequisiti per assicurarsi di essere pronti per attivare la classificazione BlueXP su un account SharePoint.

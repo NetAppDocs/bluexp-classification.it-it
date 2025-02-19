@@ -186,15 +186,19 @@ Dopo la scansione iniziale, la classificazione BlueXP analizza continuamente i d
 
 === Qual è la differenza tra le scansioni di mappatura e classificazione
 
-La classificazione BlueXP consente di eseguire una scansione generale di "mappatura" su origini dati selezionate. La mappatura fornisce solo una panoramica di alto livello dei dati, mentre la classificazione fornisce una scansione di alto livello dei dati. Il mapping può essere eseguito sulle origini dati molto rapidamente perché non accede ai file per vedere i dati all'interno.
+È possibile eseguire due tipi di scansioni nella classificazione BlueXP :
 
-Molti utenti apprezzano questa funzionalità perché desiderano eseguire rapidamente la scansione dei dati per identificare le origini dati che richiedono una maggiore ricerca e quindi possono abilitare le scansioni di classificazione solo su quelle origini dati o volumi richiesti.
+* **Le scansioni solo mappatura** forniscono solo una panoramica di alto livello dei dati e vengono eseguite su origini dati selezionate. Le scansioni di sola mappatura richiedono meno tempo rispetto alle scansioni di mappatura e classificazione, poiché non accedono ai file per visualizzare i dati all'interno.
+* Le scansioni **Map and Classify** forniscono una scansione approfondita dei dati.
+
+
+Le scansioni con sola mappatura consentono di eseguire rapidamente la scansione dei dati e identificare le origini dati che potrebbero richiedere ulteriori ricerche, su cui è possibile eseguire una scansione Map & Classify.
 
 La tabella seguente mostra alcune delle differenze:
 
 [cols="47,18,18"]
 |===
-| Funzione | Classificazione | Mappatura 
+| Funzione | Mappatura e classificazione delle scansioni | Scansioni di sola mappatura 
 
 
 | Velocità di scansione | Lento | Veloce 
@@ -413,8 +417,8 @@ La tabella seguente mostra alcune delle differenze:
 
 La velocità di scansione è influenzata dalla latenza di rete, dalla latenza del disco, dalla larghezza di banda della rete, dalle dimensioni dell'ambiente e dalle dimensioni della distribuzione dei file.
 
-* Quando si eseguono scansioni di mappatura, la classificazione BlueXP può eseguire la scansione tra 100-150 Tibs di dati al giorno.
-* Quando si eseguono le scansioni di classificazione, la classificazione BlueXP può eseguire la scansione tra 15-40 Tibs di dati al giorno.
+* Quando si eseguono scansioni di sola mappatura, la classificazione BlueXP  può eseguire la scansione tra 100-150 tibs di dati al giorno.
+* Quando si eseguono scansioni mappa e classificazione, la classificazione BlueXP  può eseguire la scansione tra 15-40 tibs di dati al giorno.
 
 
 

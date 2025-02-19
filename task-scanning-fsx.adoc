@@ -31,53 +31,13 @@ https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/security-group-rules.html
 +
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html["AWS Elastic Network Interface (ENI)"^]
 
-
-
-
-
-== Avvio rapido
-
-Inizia subito seguendo questi passaggi o scorri verso il basso per ottenere informazioni dettagliate.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Scopri il file system FSX per ONTAP che desideri sottoporre a scansione
-[role="quick-margin-para"]
-Prima di eseguire la scansione di FSX per i volumi ONTAP, https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/concept-fsx-aws.html["È necessario disporre di un ambiente di lavoro FSX con volumi configurati"^].
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Distribuire l'istanza di classificazione BlueXP
-[role="quick-margin-para"]
-link:task-deploy-cloud-compliance.html["Implementare la classificazione BlueXP in BlueXP"^] se non è già stata implementata un'istanza.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Abilitare la classificazione BlueXP e selezionare i volumi da sottoporre a scansione
-[role="quick-margin-para"]
-Selezionare la scheda *Configuration* (Configurazione) e attivare le scansioni di compliance per i volumi in ambienti di lavoro specifici.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Garantire l'accesso ai volumi
-[role="quick-margin-para"]
-Ora che la classificazione BlueXP è attivata, assicurarsi che sia in grado di accedere a tutti i volumi.
-
-[role="quick-margin-list"]
-* L'istanza di classificazione BlueXP richiede una connessione di rete a ciascuna subnet FSX per ONTAP.
 * Assicurarsi che le seguenti porte siano aperte per l'istanza di classificazione BlueXP:
 +
 ** Per NFS: Porte 111 e 2049.
 ** Per CIFS – porte 139 e 445.
 
 
-* I criteri di esportazione dei volumi NFS devono consentire l'accesso dall'istanza di classificazione BlueXP.
-* La classificazione BlueXP richiede le credenziali di Active Directory per eseguire la scansione dei volumi CIFS. + fare clic su *Compliance* > *Configuration* > *Edit CIFS Credentials* (Modifica credenziali CIFS) e fornire le credenziali.
 
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"] Gestire i volumi che si desidera sottoporre a scansione
-[role="quick-margin-para"]
-Selezionare o deselezionare i volumi da sottoporre a scansione per avviare o interrompere la scansione della classificazione BlueXP.
-
-
-
-== Scopri il file system FSX per ONTAP che desideri analizzare
-
-Se il file system FSX per ONTAP che si desidera sottoporre a scansione non è già in BlueXP come ambiente di lavoro, è possibile aggiungerlo all'area di lavoro in questo momento.
-
-https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html["Scopri come individuare o creare il file system FSX per ONTAP in BlueXP"^].
 
 
 
@@ -97,7 +57,8 @@ Gli aggiornamenti al software di classificazione BlueXP sono automatizzati finch
 
 È possibile attivare la classificazione BlueXP per FSX per volumi ONTAP.
 
-. Dal menu di navigazione a sinistra di BlueXP, fare clic su *Governance > Classification* (Governance > classificazione), quindi selezionare la scheda *Configuration* (Configurazione).
+. Dal menu di navigazione sinistro di BlueXP , selezionare *Governance > classificazione*.
+. Dal menu classificazione BlueXP , selezionare *Configurazione*.
 +
 image:screenshot_fsx_scanning_activate.png["Una schermata della scheda Configurazione subito dopo l'implementazione dell'istanza di classificazione BlueXP."]
 
@@ -106,9 +67,6 @@ image:screenshot_fsx_scanning_activate.png["Una schermata della scheda Configura
 ** Per mappare tutti i volumi, fare clic su *Map All Volumes* (Mappa tutti i volumi).
 ** Per mappare e classificare tutti i volumi, fare clic su *Map & Classify All Volumes* (Mappa e classificazione di tutti i volumi).
 ** Per personalizzare la scansione per ciascun volume, fare clic su *o selezionare il tipo di scansione per ciascun volume*, quindi scegliere i volumi da mappare e/o classificare.
-+
-Per ulteriori informazioni, vedere attivazione e disattivazione delle scansioni di conformità sui volumi.
-
 
 
 . Nella finestra di dialogo di conferma, fare clic su *approva* per avviare la scansione dei volumi con la classificazione BlueXP.
@@ -133,7 +91,8 @@ Assicurarsi che la classificazione BlueXP possa accedere ai volumi controllando 
 È necessario fornire la classificazione BlueXP con le credenziali CIFS in modo che possa accedere ai volumi CIFS.
 
 .Fasi
-. Nella pagina _Configuration_, fare clic su *View Details* (Visualizza dettagli) per esaminare lo stato e correggere eventuali errori.
+. Dal menu classificazione BlueXP , selezionare *Configurazione*.
+. Nella pagina Configurazione, selezionare *Visualizza dettagli* per controllare lo stato e correggere eventuali errori.
 +
 Ad esempio, l'immagine seguente mostra che la classificazione BlueXP di un volume non è in grado di eseguire la scansione a causa di problemi di connettività di rete tra l'istanza di classificazione BlueXP e il volume.
 
@@ -145,17 +104,11 @@ image:screenshot_fsx_scanning_no_network_error.png["Una schermata della pagina V
 
 NOTE: Per FSX per ONTAP, la classificazione BlueXP può eseguire la scansione dei volumi solo nella stessa regione di BlueXP.
 
-. Assicurarsi che le seguenti porte siano aperte per l'istanza di classificazione BlueXP.
-+
-** Per NFS: Porte 111 e 2049.
-** Per CIFS – porte 139 e 445.
-
-
 . Assicurarsi che i criteri di esportazione dei volumi NFS includano l'indirizzo IP dell'istanza di classificazione BlueXP in modo che possa accedere ai dati di ciascun volume.
 . Se si utilizza CIFS, fornire la classificazione BlueXP con le credenziali Active Directory in modo che possa eseguire la scansione dei volumi CIFS.
 +
-.. Dal menu di navigazione a sinistra di BlueXP, fare clic su *Governance > Classification* (Governance > classificazione), quindi selezionare la scheda *Configuration* (Configurazione).
-.. Per ciascun ambiente di lavoro, fare clic su *Edit CIFS Credentials* (Modifica credenziali CIFS) e immettere il nome utente e la password necessari per la classificazione BlueXP per accedere ai volumi CIFS nel sistema.
+.. Dal menu classificazione BlueXP , selezionare *Configurazione*.
+.. Per ogni ambiente di lavoro, selezionare *Modifica credenziali CIFS* e immettere il nome utente e la password necessari per la classificazione BlueXP  per accedere ai volumi CIFS sul sistema.
 +
 Le credenziali possono essere di sola lettura, ma fornendo credenziali di amministratore si garantisce che la classificazione BlueXP possa leggere tutti i dati che richiedono autorizzazioni elevate. Le credenziali vengono memorizzate nell'istanza di classificazione BlueXP.
 
@@ -179,31 +132,16 @@ Per impostazione predefinita, lo switch nella parte superiore della pagina per l
 
 image:screenshot_volume_compliance_selection.png["Schermata della pagina di configurazione in cui è possibile attivare o disattivare la scansione di singoli volumi."]
 
-[cols="45,45"]
-|===
-| A: | Eseguire questa operazione: 
+. Dal menu classificazione BlueXP , selezionare *Configurazione*.
+. Nella pagina di configurazione, individuare l'ambiente di lavoro con i volumi da sottoporre a scansione.
+. Effettuare una delle seguenti operazioni:
++
+** Per attivare le scansioni di sola mappatura su un volume, nell'area del volume selezionare *Mappa*. Oppure, per attivare su tutti i volumi, nell'area di intestazione, selezionare *Mappa*. Per abilitare la scansione completa su un volume, nell'area del volume selezionare *Mappa e Classifica*. Oppure, per attivare su tutti i volumi, nell'area di intestazione, selezionare *Mappa e Classifica*.
+** Per disattivare la scansione su un volume, nell'area del volume selezionare *Off*. Per disattivare la scansione su tutti i volumi, nell'area di intestazione selezionare *Off*.
 
 
-| Abilitare le scansioni di sola mappatura su un volume | Nell'area del volume, fare clic su *Map* (Mappa) 
 
 
-| Abilitare la scansione completa su un volume | Nell'area del volume, fare clic su *Map & Classify* (Mappa e classificazione) 
-
-
-| Disattivare la scansione su un volume | Nell'area del volume, fare clic su *Off* 
-
-
-|  |  
-
-
-| Abilitare le scansioni di sola mappatura su tutti i volumi | Nell'area dell'intestazione, fare clic su *Map* (Mappa) 
-
-
-| Abilitare la scansione completa su tutti i volumi | Nell'area dell'intestazione, fare clic su *Map & Classify* (Mappa e classificazione) 
-
-
-| Disattivare la scansione su tutti i volumi | Nell'area dell'intestazione, fare clic su *Off* 
-|===
 
 NOTE: I nuovi volumi aggiunti all'ambiente di lavoro vengono sottoposti automaticamente a scansione solo se è stata impostata l'impostazione *Map* o *Map & Classify* nell'area di intestazione. Se l'opzione è impostata su *Custom* o *Off* nell'area heading, è necessario attivare la mappatura e/o la scansione completa su ogni nuovo volume aggiunto nell'ambiente di lavoro.
 
@@ -220,8 +158,9 @@ image:screenshot_cloud_compliance_dp_volumes.png["Una schermata che mostra il pu
 .Fasi
 Se si desidera eseguire la scansione di questi volumi di protezione dei dati:
 
-. Fare clic su *Enable Access to DP Volumes* (attiva accesso ai volumi DP) nella parte superiore della pagina.
-. Leggere il messaggio di conferma e fare nuovamente clic su *Enable Access to DP Volumes* (attiva accesso ai volumi DP).
+. Dal menu classificazione BlueXP , selezionare *Configurazione*.
+. Selezionare *Abilita accesso ai volumi DP* nella parte superiore della pagina.
+. Leggere il messaggio di conferma e selezionare nuovamente *Abilita accesso ai volumi DP*.
 +
 ** I volumi creati inizialmente come volumi NFS nel file system FSX di origine per ONTAP sono abilitati.
 ** I volumi creati inizialmente come volumi CIFS nel file system FSX di origine per ONTAP richiedono l'immissione delle credenziali CIFS per eseguire la scansione di tali volumi DP. Se sono già state immesse le credenziali Active Directory in modo che la classificazione BlueXP possa eseguire la scansione dei volumi CIFS, è possibile utilizzare tali credenziali oppure specificare un set diverso di credenziali Admin.
@@ -236,7 +175,7 @@ image:screenshot_compliance_dp_cifs_volumes.png["Una schermata delle due opzioni
 .Risultato
 Una volta attivata, la classificazione BlueXP crea una condivisione NFS da ogni volume DP attivato per la scansione. I criteri di esportazione delle condivisioni consentono l'accesso solo dall'istanza di classificazione BlueXP.
 
-*Nota:* se non si dispone di volumi di protezione dati CIFS quando si è inizialmente attivato l'accesso ai volumi DP e successivamente ne sono stati aggiunti alcuni, il pulsante *Enable Access to CIFS DP* (Abilita accesso a CIFS DP) viene visualizzato nella parte superiore della pagina di configurazione. Fare clic su questo pulsante e aggiungere le credenziali CIFS per abilitare l'accesso a questi volumi CIFS DP.
+Se non si dispone di volumi di protezione dati CIFS quando è stato attivato l'accesso ai volumi DP e successivamente ne sono stati aggiunti altri, il pulsante *Enable Access to CIFS DP* (Abilita accesso a CIFS DP) viene visualizzato nella parte superiore della pagina di configurazione. Selezionare questo pulsante e aggiungere le credenziali CIFS per abilitare l'accesso a questi volumi DP CIFS.
 
 
-NOTE: Le credenziali di Active Directory vengono registrate solo nella VM di storage del primo volume CIFS DP, quindi tutti i volumi DP su tale SVM verranno sottoposti a scansione. Tutti i volumi che risiedono su altre SVM non avranno le credenziali di Active Directory registrate, pertanto tali volumi DP non verranno sottoposti a scansione.
+NOTE: Le credenziali Active Directory vengono registrate solo nella VM storage del primo volume CIFS DP, pertanto tutti i volumi DP presenti nella SVM verranno sottoposti a scansione. Tutti i volumi che risiedono su altre SVM non avranno le credenziali di Active Directory registrate, pertanto tali volumi DP non verranno sottoposti a scansione.
