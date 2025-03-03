@@ -3399,4 +3399,6 @@ Dati delle applicazioni di business</block>
   <block id="279961977f7de811c4eeee90a2454c87" category="paragraph">Ora puoi caricare la tua licenza BYOL di Data Sense nel portafoglio digitale di BlueXP  in un sito oscuro, in modo da ricevere una notifica quando la tua licenza si sta esaurendo.<block ref="3e32e5c3cf84ce7c25efff198a230761" category="inline-link-rx"></block>.</block>
   <block id="84ea0db5b42f134872fbf35016e39cf9" category="list-text">Red Hat Enterprise Linux versione 8,8, 8,10, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5</block>
   <block id="e69d7b651771ff110228ddae78e71631" category="list-text">Advanced Vector Extensions (AVX) deve essere attivato sul sistema host.</block>
+  <block id="70c351474b2828e2c0dff97793686bc4" category="paragraph-title">Migliore precisione del modello di categorizzazione</block>
+  <block id="f436ec850a6acc51f2281d01c1b289da" category="paragraph">La precisione del modello di machine learning per <block ref="fff0603fda0aac9c86fd12605ac8a06f" category="inline-link-macro-rx"></block> è migliorata del 11%.</block>
 </blocks>
