@@ -119,7 +119,7 @@ Se la finestra di dialogo elenca le condivisioni che non è stato possibile aggi
 Per impostazione predefinita, lo switch nella parte superiore della pagina per le autorizzazioni *Scan when missing "write attributa" (Esegui scansione quando mancano gli attributi di scrittura)* è disattivato. Ciò significa che se la classificazione di BlueXP non dispone di permessi di scrittura in CIFS o di permessi di scrittura in NFS, il sistema non eseguirà la scansione dei file perché la classificazione di BlueXP non può riportare l'"ultimo tempo di accesso" all'indicatore data e ora originale. Se non si ha alcun problema se l'ultimo tempo di accesso viene reimpostato, attivare l'interruttore per eseguire la scansione di tutti i file, indipendentemente dalle autorizzazioni. link:reference-collected-metadata.html#last-access-time-timestamp["Scopri di più"^].
 
 .Risultato
-La classificazione BlueXP avvia la scansione dei file nelle condivisioni di file aggiunte e i risultati vengono visualizzati nella dashboard e in altre posizioni.
+La classificazione BlueXP avvia la scansione dei file nelle condivisioni di file aggiunte e i risultati vengono visualizzati nella dashboard e in altre posizioni. È possibile tenere traccia dell'avanzamento della scansione iniziale accedendo al menu **Configurazione** e selezionando poi la **Configurazione ambiente di lavoro**. L'avanzamento di ogni scansione viene visualizzato come barra di avanzamento. È inoltre possibile passare il mouse sulla barra di avanzamento per visualizzare il numero di file sottoposti a scansione rispetto al totale dei file nel volume.
 
 
 

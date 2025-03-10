@@ -59,7 +59,7 @@ Per ulteriori informazioni, vedere <<Abilitare e disabilitare le scansioni di co
 
 
 .Risultato
-La classificazione BlueXP avvia la scansione dei volumi selezionati nell'ambiente di lavoro. I risultati saranno disponibili nella dashboard Compliance non appena la classificazione BlueXP completa le scansioni iniziali. Il tempo necessario dipende dalla quantità di dati, che potrebbe essere di pochi minuti o ore.
+La classificazione BlueXP avvia la scansione dei volumi selezionati nell'ambiente di lavoro. I risultati saranno disponibili nella dashboard Compliance non appena la classificazione BlueXP completa le scansioni iniziali. Il tempo necessario dipende dalla quantità di dati, che potrebbe essere di pochi minuti o ore. È possibile tenere traccia dell'avanzamento della scansione iniziale accedendo al menu **Configurazione** e selezionando poi la **Configurazione ambiente di lavoro**. L'avanzamento di ogni scansione viene visualizzato come barra di avanzamento. È inoltre possibile passare il mouse sulla barra di avanzamento per visualizzare il numero di file sottoposti a scansione rispetto al totale dei file nel volume.
 
 [NOTE]
 ====
