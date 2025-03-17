@@ -25,7 +25,7 @@ NOTE: Le funzionalità descritte in questa sezione sono disponibili solo se si �
 
 È possibile filtrare il contenuto della pagina di analisi per visualizzare solo i risultati desiderati.
 
-Se si desidera scaricare il contenuto della pagina come report dopo averlo perfezionato, fare clic su image:button_download.png["pulsante download"] pulsante. <<Report sull'analisi dei dati,Fare clic qui per ulteriori informazioni sul report Data Investigation>>.
+Se si desidera scaricare il contenuto della pagina come report dopo averlo rifinito, selezionare il image:button_download.png["pulsante download"] pulsante. <<Report sull'analisi dei dati,Fare clic qui per ulteriori informazioni sul report Data Investigation>>.
 
 image:screenshot_compliance_investigation_filtered.png["Una schermata dei filtri disponibili quando si perfezionano i risultati nella pagina di analisi."]
 
@@ -33,6 +33,9 @@ image:screenshot_compliance_investigation_filtered.png["Una schermata dei filtri
 * I controlli nella parte superiore di ciascuna colonna consentono di ordinare i risultati in ordine numerico o alfabetico.
 * I filtri del riquadro sinistro consentono di perfezionare i risultati selezionando gli attributi descritti nelle sezioni successive.
 
+
+
+NOTE: È possibile visualizzare solo i primi 10.000 risultati, o 500 pagine, per una scansione nella pagina analisi dati.
 
 
 
@@ -204,7 +207,7 @@ Utilizzare il seguente filtro per visualizzare i file duplicati nello storage.
 
 == Visualizzare i metadati dei file
 
-Nel riquadro Data Investigation Results (risultati analisi dati), fare clic su image:button_down_caret.png["cart"] per visualizzare i metadati del file in un singolo file.
+Nel riquadro risultati analisi dati, selezionare il pulsante freccia giù image:button_down_caret.png["cart"]per ogni singolo file per visualizzare i metadati del file.
 
 image:screenshot_compliance_file_details.png["Una schermata che mostra i dettagli dei metadati per un file nella pagina Data Investigation."]
 
@@ -216,15 +219,15 @@ Tenere presente che non tutte le informazioni sono disponibili per tutte le orig
 
 == Visualizzare le autorizzazioni per file e directory
 
-Per visualizzare un elenco di tutti gli utenti o gruppi che hanno accesso a un file o a una directory e i tipi di autorizzazioni di cui dispongono, fare clic su *Visualizza tutte le autorizzazioni*. Questo pulsante è disponibile solo per i dati nelle condivisioni CIFS.
+Per visualizzare un elenco di tutti gli utenti o gruppi che hanno accesso a un file o a una directory e i tipi di autorizzazioni di cui dispongono, selezionare *Visualizza tutte le autorizzazioni*. Questo pulsante è disponibile solo per i dati nelle condivisioni CIFS.
 
 Si noti che se vengono visualizzati i SID (Security Identifier) invece dei nomi di utenti e gruppi, è necessario integrare Active Directory nella classificazione BlueXP. link:task-add-active-directory-datasense.html["Scopri come farlo"].
 
 image:screenshot_compliance_permissions.png["Una schermata che mostra le autorizzazioni dettagliate per il file."]
 
-Fare clic su image:button_down_caret.png["cart"] per consentire a qualsiasi gruppo di visualizzare l'elenco degli utenti che fanno parte del gruppo.
+Selezionare il pulsante freccia giù image:button_down_caret.png["cart"]per qualsiasi gruppo per visualizzare l'elenco degli utenti che fanno parte del gruppo.
 
-Inoltre, È possibile fare clic sul nome di un utente o di un gruppo e viene visualizzata la pagina di analisi con il nome dell'utente o del gruppo inserito nel filtro "User / Group Permissions" (autorizzazioni utente / gruppo), in modo da visualizzare tutti i file e le directory a cui l'utente o il gruppo ha accesso.
+Selezionando il nome di un utente o di un gruppo, la pagina di analisi viene aggiornata in modo da poter visualizzare tutti i file e le directory a cui l'utente o il gruppo ha accesso.
 
 
 
@@ -246,9 +249,9 @@ Tutti i file duplicati vengono visualizzati nella pagina risultati.
 
 *Visualizza se un file specifico è duplicato*
 
-Se si desidera vedere se un singolo file ha duplicati, fare clic su nel riquadro risultati analisi dati image:button_down_caret.png["cart"] per visualizzare i metadati del file in un singolo file. Se sono presenti duplicati di un determinato file, queste informazioni vengono visualizzate accanto al campo _duplicati_.
+Se si desidera verificare se un singolo file ha duplicati, nel riquadro risultati analisi dati selezionare image:button_down_caret.png["cart"]qualsiasi singolo file per visualizzare i metadati del file. Se sono presenti duplicati di un determinato file, queste informazioni vengono visualizzate accanto al campo _duplicati_.
 
-Per visualizzare l'elenco dei file duplicati e la loro posizione, fare clic su *View Details* (Visualizza dettagli). Nella pagina successiva, fare clic su *View Duplicates* (Visualizza duplicati) per visualizzare i file nella pagina di analisi.
+Per visualizzare l'elenco dei file duplicati e la loro posizione, selezionare *Visualizza dettagli*. Nella pagina successiva selezionare *Visualizza duplicati* per visualizzare i file nella pagina di analisi.
 
 image:screenshot_compliance_duplicate_file.png["Una schermata che mostra come visualizzare la posizione dei file duplicati."]
 
@@ -320,8 +323,9 @@ Il *Structured Data Report* include le seguenti informazioni sulle tabelle di da
 
 
 .Procedura per generare il rapporto
-. Dalla pagina Data Investigation (analisi dati), fare clic su image:button_download.png["pulsante download"] nella parte superiore destra della pagina.
-. Selezionare per scaricare un report .CSV o .JSON dei dati, quindi fare clic su *Scarica report*.
+. Nella pagina analisi dati, selezionare il image:button_download.png["pulsante download"] pulsante in alto a destra della pagina.
+. Scegliere il tipo di rapporto: CSV o JSON e fornire un **Nome rapporto**. Selezionare un ambiente di lavoro ** e **Volume** quindi fornire un percorso della cartella **destinazione**.
+. Selezionare **Scarica rapporto**.
 +
 image:screenshot_compliance_investigation_report2.png["Una schermata della pagina Download Investigation Report con diverse opzioni."]
 
