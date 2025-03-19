@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-managing-repo-scanning-deprecated.html 
 keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan 
-summary: 'È possibile gestire la modalità di scansione dei dati in ciascuno degli ambienti di lavoro e delle origini dati. È possibile apportare le modifiche in base a un "repository"; ciò significa che è possibile apportare modifiche per ogni volume, bucket, condivisione, schema, utente, ecc. a seconda del tipo di origine dati che si sta eseguendo la scansione.' 
+summary: È possibile gestire la modalità di scansione dei dati in ciascuno degli ambienti di lavoro e delle origini dati. È possibile apportare le modifiche in base al repository, ovvero apportare modifiche per ogni volume, bucket, condivisione, schema, utente e così via, a seconda del tipo di origine dati che si sta eseguendo la scansione. 
 ---
-= Eseguire nuovamente la scansione dei dati di un repository esistente
+= Eseguire nuovamente la scansione dei dati per un repository esistente con classificazione BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

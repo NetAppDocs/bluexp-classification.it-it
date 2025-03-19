@@ -4,7 +4,7 @@ permalink: reference-collected-metadata.html
 keywords: compliance, metadata, permissions, time stamps, privacy, last access time 
 summary: La classificazione BlueXP raccoglie determinati metadati quando si eseguono scansioni di classificazione sui dati provenienti dalle origini dati e dagli ambienti di lavoro. La classificazione BlueXP può accedere alla maggior parte dei metadati necessari per classificare i tuoi dati, ma esistono alcune fonti in cui non siamo in grado di accedere ai dati di cui abbiamo bisogno. 
 ---
-= Metadati raccolti dalle origini dati
+= Metadati raccolti dalle origini dei dati nella classificazione BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

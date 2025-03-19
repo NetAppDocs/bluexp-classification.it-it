@@ -4,7 +4,7 @@ permalink: task-view-compliance-actions.html
 keywords: compliance, actions, view progress 
 summary: 'Quando si esegue un"azione dal riquadro dei risultati dell"analisi su molti file, ad esempio l"eliminazione di 100 file, il processo può richiedere del tempo. È possibile monitorare lo stato di queste azioni asincrone nel riquadro Action Status (Stato azione) per sapere quando sono state applicate a tutti i file.' 
 ---
-= Visualizzazione dello stato delle azioni di compliance
+= Visualizzare lo stato delle azioni di conformità nella classificazione BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-scanning-onedrive.html
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, onedrive, data sense 
 summary: 'Completare alcuni passaggi per avviare la scansione dei file nelle cartelle OneDrive dell"utente con la classificazione BlueXP.' 
 ---
-= Eseguire la scansione degli account OneDrive
+= Eseguire la scansione degli account OneDrive con classificazione BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

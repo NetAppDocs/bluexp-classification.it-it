@@ -4,7 +4,7 @@ permalink: task-org-private-data.html
 keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense 
 summary: La classificazione BlueXP offre diversi modi per gestire e organizzare i dati privati. In questo modo è più semplice visualizzare i dati più importanti per te. 
 ---
-= Organizzare i dati privati
+= Organizza i tuoi dati privati con la classificazione BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

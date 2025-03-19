@@ -4,7 +4,7 @@ permalink: task-controlling-private-data.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies 
 summary: Ottieni il controllo dei tuoi dati privati visualizzando i dettagli relativi ai dati personali e ai dati personali sensibili della tua organizzazione. È inoltre possibile ottenere visibilità esaminando le categorie e i tipi di file che BlueXP classifica trovato nei dati. 
 ---
-= Visualizzare i dettagli di conformità relativi ai dati privati memorizzati nell'organizzazione
+= Visualizza i dettagli di conformità sui dati privati archiviati nell'organizzazione con la classificazione BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

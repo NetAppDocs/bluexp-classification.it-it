@@ -4,7 +4,7 @@ permalink: task-add-group-id-as-open.html
 keywords: permissions, open to organization, file access 
 summary: 'Quando gli ID di gruppo sono allegati a file o cartelle nelle condivisioni di file NFS, definiscono le autorizzazioni per il file o la cartella, ad esempio se sono "aperti all"organizzazione". Se alcuni ID gruppo (GID) non sono inizialmente impostati con il livello di autorizzazione "Apri all"organizzazione", è possibile aggiungere tale autorizzazione al GID in modo che tutti i file e le cartelle che hanno quel GID allegato saranno considerati "aperti all"organizzazione".' 
 ---
-= Definire altri ID di gruppo come aperti all'organizzazione
+= Definire altri ID di gruppo come aperti all'organizzazione nella classificazione BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
