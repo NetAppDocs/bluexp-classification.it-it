@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-controlling-governance-data.html 
-keywords: savings, stale data, non-business data, duplicate data, age or data, size of data, highlights, policies 
+keywords: savings, stale data, non-business data, duplicate data, age or data, size of data, highlights, policies, data discovery assessment report, data mapping overview report, data repositories, data sensitivity, sensitive data, wide permissions, open permissions, age of data, size of data, classification, categories, file types, costs of data 
 summary: Ottieni il controllo dei costi relativi ai dati sulle risorse di storage della tua organizzazione. La classificazione BlueXP identifica la quantità di dati obsoleti, dati non aziendali, file duplicati e file molto grandi nei sistemi, in modo da poter decidere se rimuovere o tierare alcuni file in uno storage a oggetti meno costoso. 
 ---
 = Visualizza i dettagli di governance sui dati archiviati nell'organizzazione con la classificazione BlueXP 
@@ -20,31 +20,45 @@ Inoltre, se hai in programma di migrare i dati da posizioni on-premise nel cloud
 
 
 
-== Dashboard di governance
+== Rivedere il dashboard Governance
 
 La dashboard di governance fornisce informazioni che consentono di aumentare l'efficienza e controllare i costi relativi ai dati memorizzati nelle risorse di storage.
 
 image:screenshot_compliance_governance_dashboard.png["Una schermata della dashboard di governance della classificazione BlueXP."]
 
-
-
-=== Risparmiare opportunità
-
-È possibile esaminare gli elementi nell'area _Saving Opportunities_ per verificare se sono presenti dati da eliminare o da assegnare allo storage a oggetti meno costoso. Fare clic su ciascun elemento per visualizzare i risultati filtrati nella pagina di analisi.
-
-* *Dati obsoleti* - dati modificati più di 3 anni fa.
-* *Dati non aziendali* - dati considerati non correlati al business, in base alla categoria o al tipo di file. Ciò include:
+.Fasi
+. Dal menu BlueXP , selezionare *Governance > classificazione*.
+. Selezionare *Governance*.
 +
-** Dati dell'applicazione
-** Audio
-** Eseguibili
-** Immagini
-** Registri
-** Video
-** Varie (categoria generale "Altro")
+Viene visualizzato il dashboard Governance.
 
 
-* *File duplicati* - file duplicati in altre posizioni nelle origini dati che si stanno eseguendo la scansione. link:task-investigate-data.html#filter-data-by-duplicates["Scopri quali tipi di file duplicati vengono visualizzati"].
+
+
+
+=== Rivedere le opportunità di risparmio
+
+È possibile esaminare gli elementi nell'area _Saving Opportunities_ per verificare se sono presenti dati da eliminare o da assegnare allo storage a oggetti meno costoso.
+
+.Fasi
+. Dal menu classificazione BlueXP , selezionare *Governance*.
+. All'interno di ogni riquadro opportunità di risparmio del dashboard Governance, selezionare *Ottimizza archiviazione* per visualizzare i risultati filtrati nella pagina di analisi.
++
+** *Dati obsoleti* - dati modificati più di 3 anni fa.
+** *Dati non aziendali* - dati considerati non correlati al business, in base alla categoria o al tipo di file. Ciò include:
++
+*** Dati dell'applicazione
+*** Audio
+*** Eseguibili
+*** Immagini
+*** Registri
+*** Video
+*** Varie (categoria generale "Altro")
+
+
+** *File duplicati* - file duplicati in altre posizioni nelle origini dati che si stanno eseguendo la scansione. link:task-investigate-data.html#filter-data-by-duplicates["Scopri quali tipi di file duplicati vengono visualizzati"].
+
+
 
 
 
@@ -52,89 +66,60 @@ NOTE: Se una qualsiasi delle origini dati implementa il tiering dei dati, i dati
 
 
 
-=== Policy con il maggior numero di risultati
+=== Rivedere le policy con il maggior numero di risultati
 
-Nell'area _Policies_, i criteri con il maggior numero di risultati vengono visualizzati in cima all'elenco. Fare clic sul nome di una policy per visualizzare i risultati nella pagina delle analisi. Fare clic su *View All* (Visualizza tutto) per visualizzare l'elenco di tutte le policy disponibili.
+Nell'area _Policies_, le policy con il maggior numero di risultati vengono visualizzate all'inizio dell'elenco.
 
-Fare clic su link:task-using-policies.html["qui"] Per ulteriori informazioni sulle policy.
-
-
-
-=== Panoramica dei dati
-
-La sezione _Data Overview_ fornisce una rapida panoramica di tutti i dati sottoposti a scansione. Fare clic sul pulsante per scaricare un report di mappatura dei dati completo che include capacità di utilizzo, età dei dati, dimensione dei dati e tipi di file per tutti gli ambienti di lavoro e le origini dati. Vedere <<Report di mappatura dei dati,Report di mappatura dei dati>> per informazioni dettagliate su questo report.
+.Fasi
+. Dal menu classificazione BlueXP , selezionare *Governance*.
+. Nel riquadro Governance del dashboard > Policy, selezionare il nome di un criterio nel per visualizzare i risultati nella pagina di analisi.
+. Selezionare *Visualizza tutto* per visualizzare l'elenco di tutti i criteri disponibili.
 
 
-
-=== Principali repository di dati elencati in base alla sensibilità dei dati
-
-L'area _Top Data Repository per livello di sensibilità_ elenca i primi quattro repository di dati (ambienti di lavoro e origini dati) che contengono gli elementi più sensibili. Il grafico a barre per ciascun ambiente di lavoro è suddiviso in:
-
-* Dati non sensibili
-* Dati personali
-* Dati personali sensibili
-
-
-È possibile posizionare il cursore su ciascuna sezione per visualizzare il numero totale di elementi in ciascuna categoria.
-
-Fare clic su ciascuna area per visualizzare i risultati filtrati nella pagina di analisi in modo da poter analizzare ulteriormente.
+Per informazioni dettagliate sui criteri, vedere link:task-using-policies.html["Assegnare policy ai dati"].
 
 
 
-=== Dati elencati in base ai tipi di autorizzazioni aperte
+== Creare il report di valutazione per il rilevamento dei dati
 
-L'area _Open Permissions_ mostra la percentuale per ciascun tipo di permessi esistenti per tutti i file sottoposti a scansione. Il grafico mostra i seguenti tipi di autorizzazioni:
+Il report di valutazione del rilevamento dei dati fornisce un'analisi di alto livello dell'ambiente sottoposto a scansione per mostrare le aree di interesse e le potenziali fasi di correzione. I risultati si basano sia sulla mappatura che sulla classificazione dei dati. L'obiettivo di questo report è quello di sensibilizzare i clienti su tre aspetti significativi del set di dati:
 
-* Nessuna autorizzazione aperta
-* Aperto all'organizzazione
-* Aperto al pubblico
-* Accesso sconosciuto
-
-
-È possibile posizionare il cursore su ciascuna sezione per visualizzare il numero totale di file in ciascuna categoria. Fare clic su ciascuna area per visualizzare i risultati filtrati nella pagina di analisi in modo da poter analizzare ulteriormente.
+[cols="25,65"]
+|===
+| Funzione | Descrizione 
 
 
-
-=== Età dei dati e dimensioni dei grafici dei dati
-
-È possibile esaminare gli elementi nei grafici _Age_ e _Size_ per verificare se sono presenti dati da eliminare o da assegnare allo storage a oggetti meno costoso.
-
-È possibile posizionare il cursore su un punto dei grafici per visualizzare i dettagli relativi all'età o alle dimensioni dei dati di tale categoria. Fare clic per visualizzare tutti i file filtrati in base all'età o all'intervallo di dimensioni.
-
-* *Age of Data graph* - classifica i dati in base all'ora in cui sono stati creati, all'ultima volta in cui sono stati utilizzati o all'ultima volta in cui sono stati modificati.
-* *Dimensione del grafico dei dati* - classifica i dati in base alle dimensioni.
+| Problemi di governance dei dati | Un'immagine dettagliata di tutti i dati in tuo possesso e delle aree in cui puoi ridurre la quantità di dati per risparmiare sui costi. 
 
 
-
-NOTE: Se una qualsiasi delle origini dati implementa il tiering dei dati, i dati vecchi che risiedono già nello storage a oggetti possono essere identificati nel grafico _Age of Data_.
-
+| Esposizioni alla sicurezza dei dati | Aree in cui i dati sono accessibili ad attacchi interni o esterni a causa di ampie autorizzazioni di accesso. 
 
 
-=== Classificazioni dei dati più identificate
+| Lacune nella compliance dei dati | Dove si trovano le informazioni personali o sensibili per motivi di sicurezza e DSAR (richieste di accesso dei soggetti). 
+|===
+Utilizzando questo rapporto, è possibile effettuare le seguenti operazioni:
 
-L'area _Classification_ fornisce un elenco dei più identificati link:task-controlling-private-data.html#view-files-by-categories["Categorie"^] e. link:task-controlling-private-data.html#view-files-by-file-types["Tipi di file"^] nei dati sottoposti a scansione.
+* Riduci i costi di storage modificando la policy di conservazione o spostando o eliminando alcuni dati (dati obsoleti, duplicati o non aziendali).
+* Proteggete i vostri dati che dispongono di ampie autorizzazioni mediante la revisione dei criteri di gestione dei gruppi globali.
+* Proteggere i dati personali o sensibili spostando PII in archivi di dati più sicuri.
+
+
+.Fasi
+. Dal menu classificazione BlueXP , selezionare *Governance*.
+. Nella sezione Governance Dashboard > Data Overview (Panoramica dati), selezionare il pulsante *Data Discovery Assessment Report* (rapporto valutazione rilevamento dati).
++
+image:screenshot-compliance-report-buttons.png["Una schermata della dashboard di governance che mostra come avviare il report di valutazione del rilevamento dei dati."]
 
 
 
-==== Categorie
-
-Le categorie possono aiutarti a capire cosa accade con i tuoi dati mostrando i tipi di informazioni di cui disponi. Ad esempio, una categoria come "curriculum" o "contratti dipendenti" può includere dati sensibili. Quando si esaminano i risultati, è possibile che i contratti dei dipendenti siano memorizzati in una posizione non sicura. A questo punto, è possibile correggere il problema.
-
-Vedere link:task-controlling-private-data.html#view-files-by-categories["Visualizzazione dei file in base alle categorie"^] per ulteriori informazioni.
+.Risultato
+La classificazione BlueXP genera un report in formato .pdf che puoi esaminare e inviare ad altri gruppi, se necessario.
 
 
 
-==== Tipi di file
+== Creare il rapporto Panoramica mappatura dati
 
-La revisione dei tipi di file consente di controllare i dati sensibili, poiché alcuni tipi di file potrebbero non essere memorizzati correttamente.
-
-Vedere link:task-controlling-private-data.html#view-files-by-file-types["Visualizzazione dei tipi di file"^] per ulteriori informazioni.
-
-
-
-== Report di mappatura dei dati
-
-Il Data Mapping Report fornisce una panoramica dei dati memorizzati nelle origini dati aziendali per assisterti nelle decisioni relative a migrazione, backup, sicurezza e processi di conformità. Il report elenca prima una panoramica che riassume tutti gli ambienti di lavoro e le origini dati, quindi fornisce un'analisi per ogni ambiente di lavoro.
+Il rapporto di panoramica sulla mappatura dei dati fornisce una panoramica dei dati archiviati nelle origini dati aziendali per assistere l'utente nelle decisioni relative ai processi di migrazione, backup, sicurezza e conformità. Il report elenca prima una panoramica che riassume tutti gli ambienti di lavoro e le origini dati, quindi fornisce un'analisi per ogni ambiente di lavoro.
 
 Il report contiene le seguenti informazioni:
 
@@ -154,18 +139,13 @@ Il report contiene le seguenti informazioni:
 
 | Tipi di file | Elenca il numero totale di file e la capacità utilizzata per ciascun tipo di file memorizzato negli ambienti di lavoro. 
 |===
-
-
-=== Generare il rapporto di mappatura dati
-
-Questo report viene generato dalla scheda Governance della classificazione BlueXP.
-
 .Fasi
-. Dal menu BlueXP, fare clic su *Governance > Classification*.
-. Fare clic su *Governance*, quindi sul pulsante *Data Mapping Report*.
+. Dal menu classificazione BlueXP , selezionare *Governance*.
+. Nella sezione Governance Dashboard > Data Overview (Panoramica dati), selezionare il pulsante *Full Data Mapping Overview Report* (rapporto completo panoramica mappatura dati).
 +
-image:screenshot_compliance_data_mapping_report_button.png["Una schermata della dashboard di governance che mostra come avviare il report di mappatura dei dati."]
+image:screenshot-compliance-report-buttons.png["Una schermata della dashboard di governance che mostra come avviare il report di mappatura dei dati."]
 
+. Per personalizzare il nome della società visualizzato nella prima pagina del report, nella parte superiore della pagina di classificazione BlueXP  selezionare image:screenshot_gallery_options.gif["Il pulsante Altro"]. Quindi selezionare *Modifica nome società*. La volta successiva che si genera il rapporto, questo includerà il nuovo nome.
 
 
 .Risultato
@@ -173,47 +153,107 @@ La classificazione BlueXP genera un report in formato .pdf che puoi esaminare e 
 
 Se il report è più grande di 1 MB, il file .pdf viene conservato nell'istanza di classificazione BlueXP e viene visualizzato un messaggio a comparsa sulla posizione esatta. Quando la classificazione BlueXP è installata su una macchina Linux locale o su una macchina Linux implementata nel cloud, puoi accedere direttamente al file .pdf. Quando la classificazione BlueXP viene implementata nel cloud, per scaricare il file .pdf dovrai utilizzare SSH per l'istanza di classificazione BlueXP. link:task-audit-data-sense-actions.html#access-the-log-files["Scopri come accedere ai dati sull'istanza di Classification"^].
 
-Nota: È possibile personalizzare il nome della società visualizzato nella prima pagina del report dalla parte superiore della pagina di classificazione di BlueXP facendo clic su image:screenshot_gallery_options.gif["Il pulsante Altro"] Quindi fare clic su *Cambia nome azienda*. La volta successiva che si genera il report, questo includerà il nuovo nome.
 
 
+== Esaminare i principali repository di dati elencati in base alla sensibilità dei dati
 
-== Report sulla valutazione del rilevamento dei dati
+L'area _Top Data Repository per livello di sensibilità_ elenca i primi quattro repository di dati (ambienti di lavoro e origini dati) che contengono gli elementi più sensibili. Il grafico a barre per ciascun ambiente di lavoro è suddiviso in:
 
-Il Data Discovery Assessment Report fornisce un'analisi di alto livello dell'ambiente sottoposto a scansione per evidenziare i risultati del sistema e mostrare le aree di interesse e le potenziali fasi di correzione. I risultati si basano sia sulla mappatura che sulla classificazione dei dati. L'obiettivo di questo report è quello di sensibilizzare i clienti su tre aspetti significativi del set di dati:
+* Dati non sensibili
+* Dati personali
+* Dati personali sensibili
 
-[cols="25,65"]
-|===
-| Funzione | Descrizione 
-
-
-| Problemi di governance dei dati | Un'immagine dettagliata di tutti i dati in tuo possesso e delle aree in cui puoi ridurre la quantità di dati per risparmiare sui costi. 
-
-
-| Esposizioni alla sicurezza dei dati | Aree in cui i dati sono accessibili ad attacchi interni o esterni a causa di ampie autorizzazioni di accesso. 
-
-
-| Lacune nella compliance dei dati | Dove si trovano le informazioni personali o sensibili per motivi di sicurezza e DSAR (richieste di accesso dei soggetti). 
-|===
-Dopo la valutazione, questo report identifica le aree in cui è possibile:
-
-* Riduci i costi di storage modificando la policy di conservazione o spostando o eliminando determinati dati (dati obsoleti, duplicati o non aziendali)
-* Proteggi i tuoi dati che dispongono di ampie autorizzazioni rivedendo le policy di gestione dei gruppi globali
-* Proteggi i tuoi dati personali o sensibili trasferendo le informazioni personali in archivi di dati più sicuri
-
-
-
-
-=== Generare il report di valutazione per il rilevamento dei dati
-
-Questo report viene generato dalla scheda Governance della classificazione BlueXP.
 
 .Fasi
-. Dal menu BlueXP, fare clic su *Governance > Classification*.
-. Fare clic su *Governance*, quindi sul pulsante *Data Discovery Assessment Report*.
+. Dal menu classificazione BlueXP , selezionare *Governance*.
+. Nella sezione Governance Dashboard > Data Overview (Dashboard di governance > Panoramica dei dati), per visualizzare il numero totale di elementi in ciascuna categoria, posizionare il cursore su ciascuna sezione della barra.
+. Per filtrare i risultati che verranno visualizzati nella pagina di analisi, selezionare ciascuna area ib nella barra ed esaminare ulteriormente.
+
+
+
+
+== Esaminare i dati sensibili e le autorizzazioni estese
+
+L'area _dati sensibili e autorizzazioni ampie_ mostra la percentuale di file che contengono dati riservati e hanno autorizzazioni estese. Il grafico mostra i seguenti tipi di autorizzazioni:
+
+* Dalle autorizzazioni più restrittive alle restrizioni più permissive sull'asse orizzontale.
+* Dai dati meno sensibili ai dati più sensibili sull'asse verticale.
+
+
+.Fasi
+. Dal menu classificazione BlueXP , selezionare *Governance*.
+. Nella sezione Governance Dashboard > dati sensibili e permessi estesi, per visualizzare il numero totale di file in ogni categoria, posizionare il cursore su ogni casella.
+. Per filtrare i risultati che verranno visualizzati nella pagina di analisi, selezionare una casella e analizzare ulteriormente.
+
+
+
+
+== Esaminare i dati elencati in base ai tipi di autorizzazioni aperte
+
+L'area _Open Permissions_ mostra la percentuale per ciascun tipo di permessi esistenti per tutti i file sottoposti a scansione. Il grafico mostra i seguenti tipi di autorizzazioni:
+
+* Nessuna autorizzazione aperta
+* Aperto all'organizzazione
+* Aperto al pubblico
+* Accesso sconosciuto
+
+
+.Fasi
+. Dal menu classificazione BlueXP , selezionare *Governance*.
+. Nella sezione Governance Dashboard > Open Permissions (autorizzazioni aperte), per visualizzare il numero totale di file in ciascuna categoria, posizionare il cursore su ciascuna casella.
+. Per filtrare i risultati che verranno visualizzati nella pagina di analisi, selezionare una casella e analizzare ulteriormente.
+
+
+
+
+== Controllare l'età e le dimensioni dei dati
+
+Si consiglia di esaminare gli elementi nei grafici _Age_ e _Size_ per verificare se vi sono dati da eliminare o da assegnare a livelli di archiviazione a oggetti meno costosi.
+
+.Fasi
+. Dal menu classificazione BlueXP , selezionare *Governance*.
+. Nel grafico Age of Data del dashboard Governance, per visualizzare i dettagli sull'età dei dati, posizionare il cursore su un punto del grafico.
+. Per filtrare in base all'età o all'intervallo di dimensioni, selezionare l'età o la dimensione.
 +
-image:screenshot_compliance_data_discovery_report_button.png["Una schermata della dashboard di governance che mostra come avviare il report di valutazione del rilevamento dei dati."]
+** *Age of Data graph* - classifica i dati in base all'ora in cui sono stati creati, all'ultima volta in cui sono stati utilizzati o all'ultima volta in cui sono stati modificati.
+** *Dimensione del grafico dei dati* - classifica i dati in base alle dimensioni.
 
 
 
-.Risultato
-La classificazione BlueXP genera un report in formato .pdf che puoi esaminare e inviare ad altri gruppi, se necessario.
+
+
+NOTE: Se un'origine dati implementa il tiering dei dati, è possibile identificare i dati vecchi che risiedono già nello storage a oggetti nel grafico _Age of Data_.
+
+
+
+== Esamina le classificazioni dei dati più identificate nei tuoi dati
+
+L'area _Classification_ fornisce un elenco dei più identificati link:task-controlling-private-data.html#view-files-by-categories["Categorie"^] e. link:task-controlling-private-data.html#view-files-by-file-types["Tipi di file"^] nei dati sottoposti a scansione.
+
+
+
+=== Esaminare le categorie di classificazione più identificate
+
+Le categorie possono aiutarti a capire cosa accade con i tuoi dati mostrando i tipi di informazioni di cui disponi. Ad esempio, una categoria come "curriculum" o "contratti dipendenti" può includere dati sensibili. Quando si esaminano i risultati, è possibile che i contratti dei dipendenti siano memorizzati in una posizione non sicura. A questo punto, è possibile correggere il problema.
+
+Vedere link:task-controlling-private-data.html#view-files-by-categories["Visualizzazione dei file in base alle categorie"^] per ulteriori informazioni.
+
+.Fasi
+. Dal menu classificazione BlueXP , selezionare *Governance*.
+. Nel dashboard Governance > sezione classificazione > sezione Categorie, per visualizzare i dettagli su una categoria, selezionarla. La pagina di analisi fornisce i dati filtrati solo per quella categoria.
+. Per visualizzare tutte le categorie, selezionare *Visualizza tutto*.
+
+
+
+
+=== Esaminare i tipi di file più identificati
+
+La revisione dei tipi di file consente di controllare i dati sensibili, poiché alcuni tipi di file potrebbero non essere memorizzati correttamente.
+
+Vedere link:task-controlling-private-data.html#view-files-by-file-types["Visualizzazione dei tipi di file"^] per ulteriori informazioni.
+
+.Fasi
+. Dal menu classificazione BlueXP , selezionare *Governance*.
+. Nel pannello Governance (Governance Dashboard) > sezione Classification (classificazione) > sezione file Types (tipi di file), per visualizzare i dettagli su un tipo di file, selezionarlo nella sezione file Types (tipi di file) del dashboard Governance (Governance Dashboard governance). La pagina di analisi fornisce dati filtrati solo per quel tipo di file.
+. Per visualizzare tutti i tipi di file, selezionare *Visualizza tutto*.
+
