@@ -268,6 +268,12 @@ Il report è disponibile come file .CSV o .JSON che è possibile salvare sul com
 
 Se la classificazione BlueXP sta scansionando file (dati non strutturati), directory (cartelle e condivisioni di file) e database (dati strutturati), possono essere scaricati fino a tre file di report.
 
+I file sono suddivisi in file con un numero fisso di righe o record:
+
+* CSV - 200.000 record
+* JSON - 100.000 record
+
+
 *Cosa è incluso nel rapporto di analisi dei dati*
 
 Il *Report dati file non strutturati* include le seguenti informazioni sui file:

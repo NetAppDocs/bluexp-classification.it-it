@@ -2808,7 +2808,6 @@
   <block id="e733fac5486f188071518c3c8ce9b02a" category="cell">Assegnare i file agli utenti</block>
   <block id="6505506a35d1d959ffb20a74a4238de6" category="cell">Ripetere la scansione dei dati su richiesta</block>
   <block id="5f571f0f56802124061d64f7f5dac503" category="cell">Creare classificatori personalizzati</block>
-  <block id="46771ec1582c3b0b4aebfc19d6356451" category="cell">Esportare i dati in NFS dall'analisi</block>
   <block id="5b161cf169bcf6263a5f04b0a0b391d6" category="cell">Supporta più scanner</block>
   <block id="8c141aa1a70ce21adac81217b9589d0d" category="cell">Utilizzare l'analisi delle autorizzazioni e i filtri</block>
   <block id="dc9ece481b86d8d5c76d638da3baebab" category="cell">Utilizzare la scheda file</block>
@@ -3441,4 +3440,8 @@ Dati delle applicazioni di business</block>
   <block id="ca304384fad03eae82a8e99a165128d0" category="section-title">Esaminare i tipi di file più identificati</block>
   <block id="5af3bad2ce7ed86124fdaa43b19e15c1" category="list-text">Nel pannello Governance (Governance Dashboard) &gt; sezione Classification (classificazione) &gt; sezione file Types (tipi di file), per visualizzare i dettagli su un tipo di file, selezionarlo nella sezione file Types (tipi di file) del dashboard Governance (Governance Dashboard governance). La pagina di analisi fornisce dati filtrati solo per quel tipo di file.</block>
   <block id="3b879833e0c35c3e97d6bcec57a9aad0" category="list-text">Per visualizzare tutti i tipi di file, selezionare *Visualizza tutto*.</block>
+  <block id="93a41f9744586b4edf90898527b71531" category="cell">Esportare dati in NFS/CIFS dall'analisi</block>
+  <block id="81aef4d88b3543fe7ce12740f599c026" category="paragraph">I file sono suddivisi in file con un numero fisso di righe o record:</block>
+  <block id="65c07610fb212d644f234075537bbc84" category="list-text">CSV - 200.000 record</block>
+  <block id="8897cd6292ab12bb81d8704c400fca96" category="list-text">JSON - 100.000 record</block>
 </blocks>

@@ -130,7 +130,7 @@ Ci sono alcune funzionalità e caratteristiche deprecate nella versione core di 
 | Cercare i nomi all'interno dei file | Sì | Sì 
 
 
-| Esportare i dati in NFS dall'analisi | Sì | No 
+| Esportare dati in NFS/CIFS dall'analisi | Sì | Sì 
 
 
 | Esportare i dati in CSV dall'analisi | Sì | Sì 
