@@ -21,7 +21,7 @@ NOTE: La scansione dei dati da condivisioni di file non NetApp non è supportata
 
 
 
-== Rivedere i requisiti di condivisione dei file
+== Prerequisiti
 
 Prima di attivare la classificazione BlueXP, verificare di disporre di una configurazione supportata.
 
@@ -30,12 +30,6 @@ Prima di attivare la classificazione BlueXP, verificare di disporre di una confi
 Si noti che la classificazione BlueXP non può estrarre le autorizzazioni o il "tempo di accesso ultimo" dai sistemi 7-Mode. Inoltre, a causa di un problema noto tra alcune versioni di Linux e le condivisioni CIFS su sistemi 7-Mode, è necessario configurare la condivisione in modo che utilizzi solo SMB v1 con l'autenticazione NTLM attivata.
 
 * È necessario disporre di una connettività di rete tra l'istanza di classificazione BlueXP e le condivisioni.
-* Assicurarsi che queste porte siano aperte per l'istanza di classificazione BlueXP:
-+
-** Per NFS: Porte 111 e 2049.
-** Per CIFS – porte 139 e 445.
-
-
 * È possibile aggiungere una condivisione DFS (Distributed file System) come normale condivisione CIFS. Tuttavia, poiché la classificazione BlueXP non è consapevole che la condivisione è costruita su più server/volumi combinati come una singola CIFS share, potresti ricevere errori di permessi o connettività sulla condivisione quando il messaggio si applica davvero solo a una delle cartelle/condivisioni che si trova su un server/volume diverso.
 * Per le condivisioni CIFS (SMB), assicurarsi di disporre delle credenziali Active Directory che forniscono l'accesso in lettura alle condivisioni. Le credenziali di amministratore sono preferite nel caso in cui la classificazione BlueXP debba eseguire la scansione di qualsiasi dato che richieda autorizzazioni elevate.
 +
@@ -46,17 +40,11 @@ Se si desidera assicurarsi che i file "ultimi tempi di accesso" non vengano modi
 
 
 
-== Distribuire l'istanza di classificazione BlueXP
-
-Distribuire la classificazione BlueXP se non è già stata implementata un'istanza.
-
-
-
 == Creare il gruppo per le condivisioni file
 
 È necessario aggiungere un "gruppo" di condivisioni file prima di poter aggiungere le condivisioni file. Il gruppo è un contenitore per le condivisioni di file che si desidera sottoporre a scansione e il nome del gruppo viene utilizzato come nome dell'ambiente di lavoro per tali condivisioni di file.
 
-È possibile combinare condivisioni NFS e CIFS nello stesso gruppo, tuttavia tutte le condivisioni file CIFS di un gruppo devono utilizzare le stesse credenziali Active Directory. Se si prevede di aggiungere condivisioni CIFS che utilizzano credenziali diverse, è necessario creare un gruppo separato per ogni set univoco di credenziali.
+È possibile combinare condivisioni NFS e CIFS nello stesso gruppo, ma tutte le condivisioni di file CIFS in un gruppo devono utilizzare le stesse credenziali Active Directory. Se si prevede di aggiungere condivisioni CIFS che utilizzano credenziali diverse, è necessario creare un gruppo separato per ogni set univoco di credenziali.
 
 .Fasi
 . Dal menu classificazione BlueXP , selezionare *Configurazione*.
@@ -81,32 +69,30 @@ Quando si aggiungono sia le condivisioni NFS che CIFS in un singolo gruppo, è n
 . Dal menu classificazione BlueXP , selezionare *Configurazione*.
 . Nella sezione ambienti di lavoro della pagina Configurazione, selezionare il pulsante *Configurazione* per il gruppo condivisioni file.
 +
-image:screenshot_compliance_fileshares_add_shares.png["Schermata della pagina Scan Configuration (Configurazione scansione) in cui è possibile selezionare il pulsante Configuration (Configurazione)."]
+image:screen-cl-config-file-shares.png["Una schermata che mostra il pulsante Configurazione per il gruppo condivisioni file."]
 
 . Se è la prima volta che si aggiungono condivisioni di file per questo gruppo di condivisioni di file, selezionare *Aggiungi prime condivisioni*.
 +
-image:screenshot_compliance_fileshares_add_initial_shares.png["Una schermata che mostra il pulsante Add your first shares (Aggiungi le tue prime condivisioni) per aggiungere le condivisioni iniziali al gruppo."]
+image:screen-cl-config-file-shares-addshares.png["Una schermata che mostra il pulsante Add your first shares (Aggiungi le tue prime condivisioni) per aggiungere le condivisioni iniziali al gruppo."]
 
 +
-Se si aggiungono condivisioni file a un gruppo esistente, selezionare *Aggiungi condivisioni*.
+Se si aggiungono condivisioni di file a un gruppo esistente, selezionare il gruppo, selezionare *Configurazione* e selezionare *Aggiungi condivisioni*.
 
+. Selezionare il protocollo per le condivisioni file che si desidera aggiungere.
 +
-image:screenshot_compliance_fileshares_add_more_shares2.png["Una schermata che mostra il pulsante Add shares (Aggiungi condivisioni) per aggiungere altre condivisioni al gruppo."]
+image:screen-cl-config-shares-add.png["Uno screenshot che mostra le opzioni per aggiungere condivisioni NFS o CIFS al gruppo"]
 
-. Selezionare il protocollo per le condivisioni di file che si sta aggiungendo, aggiungere le condivisioni di file che si desidera analizzare (una condivisione di file per riga) e selezionare *continua*.
+. Aggiungere le condivisioni di file che si desidera analizzare (una condivisione di file per riga).
 +
 Quando si aggiungono condivisioni CIFS (SMB), è necessario immettere le credenziali Active Directory che forniscono l'accesso in lettura alle condivisioni. Si preferiscono le credenziali di amministratore.
 
-+
-image:screenshot_compliance_fileshares_add_file_shares.png["Una schermata della pagina Add file shares (Aggiungi condivisioni file) in cui è possibile aggiungere le condivisioni da sottoporre a scansione."]
-
+. Selezionare *continua*.
 +
 Viene visualizzata una finestra di dialogo di conferma del numero di condivisioni aggiunte.
 
 +
 Se la finestra di dialogo elenca le condivisioni che non è stato possibile aggiungere, acquisire queste informazioni in modo da risolvere il problema. In alcuni casi è possibile aggiungere nuovamente la condivisione con un nome host o un nome di condivisione corretto.
 
-. Abilitare scansioni di sola mappatura o scansioni di mappatura e classificazione su ogni condivisione di file.
 . Per attivare o disattivare le scansioni, eseguire una delle seguenti operazioni:
 +
 ** Per attivare le scansioni di sola mappatura sulle condivisioni di file, selezionare *Mappa*.
@@ -114,12 +100,28 @@ Se la finestra di dialogo elenca le condivisioni che non è stato possibile aggi
 ** Per disattivare la scansione sulle condivisioni file, selezionare *Off*.
 
 
+. Se non si ha interesse se l'ultima ora di accesso è stata reimpostata, ATTIVARE l'opzione *scansione quando mancano le autorizzazioni di "scrittura attributi"* e tutti i file vengono sottoposti a scansione indipendentemente dalle autorizzazioni.
++
+Per impostazione predefinita, lo switch nella parte superiore della pagina per le autorizzazioni *Scan when missing "write attributa" (Esegui scansione quando mancano gli attributi di scrittura)* è disattivato. Ciò significa che se la classificazione di BlueXP non dispone di permessi di scrittura in CIFS o di permessi di scrittura in NFS, il sistema non eseguirà la scansione dei file perché la classificazione di BlueXP non può riportare l'"ultimo tempo di accesso" all'indicatore data e ora originale. link:reference-collected-metadata.html#last-access-time-timestamp["Scopri di più"^].
 
 
-Per impostazione predefinita, lo switch nella parte superiore della pagina per le autorizzazioni *Scan when missing "write attributa" (Esegui scansione quando mancano gli attributi di scrittura)* è disattivato. Ciò significa che se la classificazione di BlueXP non dispone di permessi di scrittura in CIFS o di permessi di scrittura in NFS, il sistema non eseguirà la scansione dei file perché la classificazione di BlueXP non può riportare l'"ultimo tempo di accesso" all'indicatore data e ora originale. Se non si ha alcun problema se l'ultimo tempo di accesso viene reimpostato, attivare l'interruttore per eseguire la scansione di tutti i file, indipendentemente dalle autorizzazioni. link:reference-collected-metadata.html#last-access-time-timestamp["Scopri di più"^].
 
 .Risultato
-La classificazione BlueXP avvia la scansione dei file nelle condivisioni di file aggiunte e i risultati vengono visualizzati nella dashboard e in altre posizioni. È possibile tenere traccia dell'avanzamento della scansione iniziale accedendo al menu **Configurazione** e selezionando poi la **Configurazione ambiente di lavoro**. L'avanzamento di ogni scansione viene visualizzato come barra di avanzamento. È inoltre possibile passare il mouse sulla barra di avanzamento per visualizzare il numero di file sottoposti a scansione rispetto al totale dei file nel volume.
+La classificazione BlueXP avvia la scansione dei file nelle condivisioni di file aggiunte e i risultati vengono visualizzati nella dashboard e in altre posizioni.
+
+
+
+== Tenere traccia dell'avanzamento della scansione
+
+È possibile tenere traccia dell'avanzamento della scansione iniziale.
+
+. Selezionare il menu **Configurazione**.
+. Selezionare la configurazione **ambiente di lavoro**.
++
+L'avanzamento di ogni scansione viene visualizzato come barra di avanzamento.
+
+. Passare il mouse sulla barra di avanzamento per visualizzare il numero di file sottoposti a scansione rispetto al totale dei file nel volume.
+
 
 
 
@@ -129,8 +131,8 @@ Se non è più necessario eseguire la scansione di determinate condivisioni di f
 
 .Fasi
 . Dal menu classificazione BlueXP , selezionare *Configurazione*.
-. Nella pagina di configurazione, selezionare *Rimuovi condivisione*.
-+
-image:screenshot_compliance_fileshares_remove_share.png["Una schermata che mostra come rimuovere una singola condivisione di file da sottoporre a scansione."]
-
+. Selezionare l'ambiente di lavoro.
+. Selezionare *Configurazione*.
+. Nella pagina Configurazione, selezionare azioni image:button-actions-horizontal.png["Icona delle azioni"] per la condivisione file che si desidera rimuovere.
+. Dal menu azioni, selezionare *Rimuovi condivisione*.
 

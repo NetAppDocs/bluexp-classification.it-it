@@ -40,6 +40,8 @@ sidebar:
         url: "/task-test-linux-system.html"
     - title: Attivare la scansione sulle origini dati
       entries:
+      - title: Eseguire la scansione della panoramica delle origini dati
+        url: "/task-scanning-overview.html"
       - title: Azure NetApp Files
         url: "/task-scanning-anf.html"
       - title: Amazon FSX per ONTAP

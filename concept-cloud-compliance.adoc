@@ -20,7 +20,7 @@ La classificazione BlueXP (Cloud Data Sense) è un servizio di governance dei da
 ====
 IMPORTANTE
 
-A partire da maggio 2024 con la versione 1,31, la classificazione BlueXP è ora disponibile come funzionalità core all'interno di BlueXP senza costi aggiuntivi. Non è richiesta alcuna licenza di classificazione o abbonamento. Abbiamo concentrato la funzionalità di classificazione BlueXP anche sui sistemi storage NetApp, per cui alcune funzionalità non utilizzate o sottoutilizzate sono state abbandonate.
+A partire da maggio 2024 con la versione 1,31, la classificazione BlueXP è ora disponibile come funzionalità core all'interno di BlueXP senza costi aggiuntivi. Non è richiesta alcuna licenza di classificazione o abbonamento. Abbiamo concentrato la funzionalità di classificazione BlueXP  sui sistemi di storage NetApp, rendendo obsolete alcune funzioni inutilizzate o sottoutilizzate.
 
 link:reference-free-paid.html["Vedere un elenco delle funzioni obsolete"].
 
@@ -158,19 +158,15 @@ Quando implementi la classificazione BlueXP in Azure o GCP, invia un'email ng-co
 
 
 
-== Come funziona la classificazione BlueXP
+== Come funziona la scansione della classificazione BlueXP 
 
-Ad alto livello, la classificazione BlueXP funziona come segue:
+A un livello elevato, la scansione di classificazione BlueXP  funziona come segue:
 
 . Si implementa un'istanza della classificazione BlueXP in BlueXP.
-. È possibile attivare la mappatura ad alto livello o la scansione a livello profondo su una o più origini dati.
+. È possibile abilitare la mappatura di alto livello (denominata _Mapping only_ Scans) o la scansione di alto livello (denominata _Map & Classify_ Scans) su una o più origini dati.
 . La classificazione BlueXP esegue la scansione dei dati utilizzando un processo di apprendimento ai.
 . Utilizza le dashboard e i tool di reporting forniti per aiutarti nelle tue attività di compliance e governance.
 
-
-
-
-=== Come funzionano le scansioni
 
 Una volta attivata la classificazione BlueXP e selezionati i repository da analizzare (volumi, schemi di database o altri dati utente), viene avviata immediatamente la scansione dei dati per identificare i dati personali e sensibili. Nella maggior parte dei casi, è consigliabile concentrarsi sulla scansione dei dati di produzione in tempo reale anziché su backup, mirror o siti DR. Quindi, la classificazione BlueXP mappa i dati dell'organizzazione, categorizza ogni file e identifica ed estrae entità e modelli predefiniti nei dati. Il risultato della scansione è un indice di informazioni personali, informazioni personali sensibili, categorie di dati e tipi di file.
 
@@ -178,248 +174,21 @@ La classificazione BlueXP si connette ai dati come qualsiasi altro client montan
 
 image:diagram_cloud_compliance_scan.png["Diagramma che mostra un'istanza di BlueXP e un'istanza di classificazione BlueXP in esecuzione nel provider cloud. L'istanza di classificazione BlueXP si connette ai volumi e ai database NFS e CIFS per analizzarli."]
 
-Dopo la scansione iniziale, la classificazione BlueXP analizza continuamente i dati in modo round-robin per rilevare le modifiche incrementali (è per questo che è importante mantenere l'istanza in esecuzione).
+Dopo la scansione iniziale, la classificazione BlueXP  esegue la scansione continua dei dati in modo round robin per rilevare le modifiche incrementali. Per questo motivo è importante mantenere in esecuzione l'istanza.
 
 È possibile attivare e disattivare le scansioni a livello di volume o a livello di schema del database.
 
 
 
-=== Qual è la differenza tra le scansioni di mappatura e classificazione
+== Qual è la differenza tra le scansioni di mappatura e classificazione
 
 È possibile eseguire due tipi di scansioni nella classificazione BlueXP :
 
-* **Le scansioni solo mappatura** forniscono solo una panoramica di alto livello dei dati e vengono eseguite su origini dati selezionate. Le scansioni di sola mappatura richiedono meno tempo rispetto alle scansioni di mappatura e classificazione, poiché non accedono ai file per visualizzare i dati all'interno.
-* Le scansioni **Map and Classify** forniscono una scansione approfondita dei dati.
+* **Le scansioni solo mappatura** forniscono solo una panoramica di alto livello dei vostri dati e vengono eseguite su origini dati selezionate. Le scansioni di sola mappatura richiedono meno tempo rispetto alle scansioni di mappatura e classificazione, poiché non accedono ai file per visualizzare i dati all'interno. Si consiglia di eseguire questa operazione inizialmente per identificare le aree di ricerca e quindi eseguire una scansione Map & Classify su tali aree.
+* **Le scansioni Map & Classify** forniscono una scansione profonda dei vostri dati.
 
 
-Le scansioni con sola mappatura consentono di eseguire rapidamente la scansione dei dati e identificare le origini dati che potrebbero richiedere ulteriori ricerche, su cui è possibile eseguire una scansione Map & Classify.
-
-La tabella seguente mostra alcune delle differenze:
-
-[cols="47,18,18"]
-|===
-| Funzione | Mappatura e classificazione delle scansioni | Scansioni di sola mappatura 
-
-
-| Velocità di scansione | Lento | Veloce 
-
-
-| Prezzi | Gratuito | Gratuito 
-
-
-| Capacità | Limitata a 500 TB | Limitata a 500 TB 
-
-
-| Elenco dei tipi di file e della capacità utilizzata | Sì | Sì 
-
-
-| Numero di file e capacità utilizzata | Sì | Sì 
-
-
-| Età e dimensioni dei file | Sì | Sì 
-
-
-| Capacità di eseguire un link:task-controlling-governance-data.html#data-mapping-report["Report di mappatura dei dati"] | Sì | Sì 
-
-
-| Pagina di analisi dei dati per visualizzare i dettagli del file | Sì | No 
-
-
-| Cercare i nomi all'interno dei file | Sì | No 
-
-
-| Creare link:task-using-policies.html["policy"] che forniscono risultati di ricerca personalizzati | Sì | No 
-
-
-| Possibilità di eseguire altri report | Sì | No 
-
-
-| Possibilità di visualizzare i metadati dei file* | No | Sì 
-|===
-*I seguenti metadati vengono estratti dai file durante le scansioni di mappatura:
-
-* Ambiente di lavoro
-* Tipo di ambiente di lavoro
-* Repository di storage
-* Tipo di file
-* Capacità utilizzata
-* Numero di file
-* Dimensione del file
-* Creazione di file
-* Ultimo accesso al file
-* Ultima modifica al file
-* Ora di rilevamento file
-* Estrazione delle autorizzazioni
-
-
-.Differenze del dashboard di governance:
-[%collapsible]
-====
-[cols="40,25,25"]
-|===
-| Funzione | Mappa e classifica | Mappa 
-
-
-| Dati obsoleti | Sì | Sì 
-
-
-| Dati non aziendali | Sì | Sì 
-
-
-| File duplicati | Sì | Sì 
-
-
-| Criteri predefiniti | Sì | No 
-
-
-| Criteri personalizzati | Sì | Sì 
-
-
-| Rapporto DDA | Sì | Sì 
-
-
-| Rapporto di mappatura | Sì | Sì 
-
-
-| Rilevamento del livello di sensibilità | Sì | No 
-
-
-| Dati sensibili con autorizzazioni estese | Sì | No 
-
-
-| Autorizzazioni aperte | Sì | Sì 
-
-
-| Età dei dati | Sì | Sì 
-
-
-| Dimensioni dei dati | Sì | Sì 
-
-
-| Categorie | Sì | No 
-
-
-| Tipi di file | Sì | Sì 
-|===
-====
-.Differenze del dashboard di conformità:
-[%collapsible]
-====
-[cols="40,25,25"]
-|===
-| Funzione | Mappa e classifica | Mappa 
-
-
-| Informazioni personali | Sì | No 
-
-
-| Informazioni personali sensibili | Sì | No 
-
-
-| Report di valutazione sui rischi legati alla privacy | Sì | No 
-
-
-| Report HIPAA | Sì | No 
-
-
-| Report PCI DSS | Sì | No 
-|===
-====
-.Differenze tra i filtri di analisi:
-[%collapsible]
-====
-[cols="40,25,25"]
-|===
-| Funzione | Mappa e classifica | Mappa 
-
-
-| Policy | Sì | Sì 
-
-
-| Tipo di ambiente di lavoro | Sì | Sì 
-
-
-| Ambiente di lavoro | Sì | Sì 
-
-
-| Repository di storage | Sì | Sì 
-
-
-| Tipo di file | Sì | Sì 
-
-
-| Dimensione del file | Sì | Sì 
-
-
-| Ora di creazione | Sì | Sì 
-
-
-| Tempo scoperto | Sì | Sì 
-
-
-| Ultima modifica | Sì | Sì 
-
-
-| Ultimo accesso | Sì | Sì 
-
-
-| Autorizzazioni aperte | Sì | Sì 
-
-
-| Percorso directory file | Sì | Sì 
-
-
-| Categoria | Sì | No 
-
-
-| Livello di sensibilità | Sì | No 
-
-
-| Numero di identificatori | Sì | No 
-
-
-| Dati personali | Sì | No 
-
-
-| Dati personali sensibili | Sì | No 
-
-
-| Soggetto interessato | Sì | No 
-
-
-| Duplicati | Sì | Sì 
-
-
-| Stato di classificazione | Sì | Lo stato è sempre "informazioni riservate" 
-
-
-| Evento di analisi della scansione | Sì | Sì 
-
-
-| Hash file | Sì | Sì 
-
-
-| Numero di utenti con accesso | Sì | Sì 
-
-
-| Autorizzazioni utente/gruppo | Sì | Sì 
-
-
-| Proprietario del file | Sì | Sì 
-
-
-| Tipo di directory | Sì | Sì 
-|===
-====
-
-
-=== Con quale rapidità la classificazione BlueXP esegue la scansione dei dati
-
-La velocità di scansione è influenzata dalla latenza di rete, dalla latenza del disco, dalla larghezza di banda della rete, dalle dimensioni dell'ambiente e dalle dimensioni della distribuzione dei file.
-
-* Quando si eseguono scansioni di sola mappatura, la classificazione BlueXP  può eseguire la scansione tra 100-150 tibs di dati al giorno.
-* Quando si eseguono scansioni mappa e classificazione, la classificazione BlueXP  può eseguire la scansione tra 15-40 tibs di dati al giorno.
-
+Per informazioni dettagliate sulle differenze tra le scansioni Mapping e Classification, vedere link:task-scanning-overview.html["Qual è la differenza tra le scansioni di mappatura e classificazione?"].
 
 
 
@@ -429,7 +198,7 @@ La classificazione BlueXP raccoglie, indicizza e assegna categorie ai dati (file
 
 * *Metadati standard* sui file: Il tipo di file, le sue dimensioni, le date di creazione e modifica, e così via.
 * *Dati personali*: Dati personali (PII) quali indirizzi e-mail, numeri di identificazione o numeri di carta di credito. link:task-controlling-private-data.html#view-files-that-contain-personal-data["Scopri di più sui dati personali"^].
-* *Dati personali sensibili*: Tipi speciali di dati personali sensibili (SPii), quali dati sanitari, origine etnica o opinioni politiche, come definito dal GDPR e da altre normative sulla privacy. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data["Scopri di più sui dati personali sensibili"^].
+* *Dati personali sensibili*: Tipi speciali di dati personali sensibili (SPII), quali dati sanitari, origine etnica o opinioni politiche, come definito dal GDPR e da altre normative sulla privacy. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data["Scopri di più sui dati personali sensibili"^].
 * *Categorie*: La classificazione BlueXP prende i dati sottoposti a scansione e li divide in diversi tipi di categorie. Le categorie sono argomenti basati sull'analisi ai del contenuto e dei metadati di ciascun file. link:task-controlling-private-data.html#view-files-by-categories["Scopri di più sulle categorie"^].
 * *Tipi*: La classificazione BlueXP prende i dati sottoposti a scansione e li suddivide in base al tipo di file. link:task-controlling-private-data.html#view-files-by-file-types["Scopri di più sui tipi"^].
 * *Riconoscimento entità nome*: La classificazione BlueXP utilizza l'intelligenza artificiale per estrarre i nomi naturali delle persone dai documenti. link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request["Scopri come rispondere alle richieste di accesso ai soggetti dati"^].
@@ -439,9 +208,11 @@ La classificazione BlueXP raccoglie, indicizza e assegna categorie ai dati (file
 
 == Panoramica delle reti
 
+La classificazione BlueXP implementa un singolo server, o cluster, ovunque tu scelga, nel cloud o on-premise. I server si connettono alle origini dati tramite protocolli standard e indicizzano i risultati in un cluster Elasticsearch, anch'esso distribuito sugli stessi server. In questo modo è possibile supportare ambienti multicloud, multicloud, cloud privato e on-premise.
+
 BlueXP implementa l'istanza di classificazione BlueXP con un gruppo di protezione che abilita le connessioni HTTP in entrata dall'istanza del connettore.
 
-Quando si utilizza BlueXP in modalità SaaS, la connessione a BlueXP viene servita su HTTPS e i dati privati inviati tra il browser e l'istanza di classificazione BlueXP sono protetti con una crittografia end-to-end basata su TLS 1,2, il che significa che NetApp e terze parti non possono leggerla.
+Quando si utilizza BlueXP  in modalità SaaS, la connessione a BlueXP  viene fornita tramite HTTPS e i dati privati inviati tra il browser e l'istanza di classificazione BlueXP  vengono protetti con la crittografia end-to-end tramite TLS 1,2, il che significa che NetApp e terze parti non possono leggerli.
 
 Le regole in uscita sono completamente aperte. L'accesso a Internet è necessario per installare e aggiornare il software di classificazione BlueXP e per inviare metriche di utilizzo.
 

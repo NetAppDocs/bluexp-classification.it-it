@@ -16,6 +16,8 @@ summary: Ottieni il controllo dei costi relativi ai dati sulle risorse di storag
 [role="lead"]
 Ottieni il controllo dei costi relativi ai dati sulle risorse di storage della tua organizzazione. La classificazione BlueXP identifica la quantità di dati obsoleti, dati non aziendali, file duplicati e file molto grandi nei sistemi, in modo da poter decidere se rimuovere o tierare alcuni file in uno storage a oggetti meno costoso.
 
+Questo è dove dovreste cominciare la vostra ricerca. Dal dashboard Governance, è possibile selezionare un'area per ulteriori indagini.
+
 Inoltre, se hai in programma di migrare i dati da posizioni on-premise nel cloud, puoi vedere le dimensioni dei dati e se alcuni di essi contengono informazioni sensibili prima di spostarli.
 
 
@@ -42,7 +44,7 @@ Viene visualizzato il dashboard Governance.
 
 .Fasi
 . Dal menu classificazione BlueXP , selezionare *Governance*.
-. All'interno di ogni riquadro opportunità di risparmio del dashboard Governance, selezionare *Ottimizza archiviazione* per visualizzare i risultati filtrati nella pagina di analisi.
+. All'interno di ogni riquadro opportunità di risparmio del dashboard Governance, selezionare *Ottimizza archiviazione* per visualizzare i risultati filtrati nella pagina di analisi. È possibile esaminare gli elementi nell'area _Saving Opportunities_ per verificare se sono presenti dati da eliminare o da assegnare allo storage a oggetti meno costoso.
 +
 ** *Dati obsoleti* - dati modificati più di 3 anni fa.
 ** *Dati non aziendali* - dati considerati non correlati al business, in base alla categoria o al tipo di file. Ciò include:
@@ -70,13 +72,13 @@ NOTE: Se una qualsiasi delle origini dati implementa il tiering dei dati, i dati
 
 Nell'area _Policies_, le policy con il maggior numero di risultati vengono visualizzate all'inizio dell'elenco.
 
+Per informazioni dettagliate sui criteri, vedere link:task-using-policies.html["Assegnare policy ai dati"].
+
 .Fasi
 . Dal menu classificazione BlueXP , selezionare *Governance*.
-. Nel riquadro Governance del dashboard > Policy, selezionare il nome di un criterio nel per visualizzare i risultati nella pagina di analisi.
-. Selezionare *Visualizza tutto* per visualizzare l'elenco di tutti i criteri disponibili.
+. Nel riquadro Governance (Amministrazione) > Policies (Criteri), selezionare il nome di un criterio per visualizzare i risultati nella pagina di analisi.
+. Selezionare *Visualizza tutto* per visualizzare l'elenco di tutti i criteri disponibili. Nell'area _Policies_, le policy con il maggior numero di risultati vengono visualizzate all'inizio dell'elenco.
 
-
-Per informazioni dettagliate sui criteri, vedere link:task-using-policies.html["Assegnare policy ai dati"].
 
 
 
@@ -99,14 +101,15 @@ Il report di valutazione del rilevamento dei dati fornisce un'analisi di alto li
 |===
 Utilizzando questo rapporto, è possibile effettuare le seguenti operazioni:
 
-* Riduci i costi di storage modificando la policy di conservazione o spostando o eliminando alcuni dati (dati obsoleti, duplicati o non aziendali).
-* Proteggete i vostri dati che dispongono di ampie autorizzazioni mediante la revisione dei criteri di gestione dei gruppi globali.
-* Proteggere i dati personali o sensibili spostando PII in archivi di dati più sicuri.
+* Riduci i costi di storage modificando la policy di conservazione o spostando o eliminando determinati dati (dati obsoleti, duplicati o non aziendali)
+* Proteggi i tuoi dati che dispongono di ampie autorizzazioni rivedendo le policy di gestione dei gruppi globali
+* Proteggi i tuoi dati personali o sensibili trasferendo le informazioni personali in archivi di dati più sicuri
 
 
 .Fasi
-. Dal menu classificazione BlueXP , selezionare *Governance*.
-. Nella sezione Governance Dashboard > Data Overview (Panoramica dati), selezionare il pulsante *Data Discovery Assessment Report* (rapporto valutazione rilevamento dati).
+. Dal menu BlueXP , selezionare *Governance > classificazione*.
+. Selezionare *Governance*.
+. Selezionare *Report valutazione rilevamento dati*.
 +
 image:screenshot-compliance-report-buttons.png["Una schermata della dashboard di governance che mostra come avviare il report di valutazione del rilevamento dei dati."]
 
@@ -140,12 +143,13 @@ Il report contiene le seguenti informazioni:
 | Tipi di file | Elenca il numero totale di file e la capacità utilizzata per ciascun tipo di file memorizzato negli ambienti di lavoro. 
 |===
 .Fasi
-. Dal menu classificazione BlueXP , selezionare *Governance*.
-. Nella sezione Governance Dashboard > Data Overview (Panoramica dati), selezionare il pulsante *Full Data Mapping Overview Report* (rapporto completo panoramica mappatura dati).
+. Dal menu BlueXP , selezionare *Governance > classificazione*.
+. Selezionare *Governance*.
+. Selezionare *rapporto completo Panoramica mappatura dati*.
 +
 image:screenshot-compliance-report-buttons.png["Una schermata della dashboard di governance che mostra come avviare il report di mappatura dei dati."]
 
-. Per personalizzare il nome della società visualizzato nella prima pagina del report, nella parte superiore della pagina di classificazione BlueXP  selezionare image:screenshot_gallery_options.gif["Il pulsante Altro"]. Quindi selezionare *Modifica nome società*. La volta successiva che si genera il rapporto, questo includerà il nuovo nome.
+. Per personalizzare il nome della società visualizzato nella prima pagina del report, in alto a destra della pagina classificazione BlueXP , selezionare image:screenshot_gallery_options.gif["Il pulsante Altro"]. Quindi selezionare *Modifica nome società*. La volta successiva che si genera il rapporto, questo includerà il nuovo nome.
 
 
 .Risultato
@@ -155,7 +159,7 @@ Se il report è più grande di 1 MB, il file .pdf viene conservato nell'istanza 
 
 
 
-== Esaminare i principali repository di dati elencati in base alla sensibilità dei dati
+=== Esaminare i principali repository di dati elencati in base alla sensibilità dei dati
 
 L'area _Top Data Repository per livello di sensibilità_ elenca i primi quattro repository di dati (ambienti di lavoro e origini dati) che contengono gli elementi più sensibili. Il grafico a barre per ciascun ambiente di lavoro è suddiviso in:
 
@@ -165,14 +169,13 @@ L'area _Top Data Repository per livello di sensibilità_ elenca i primi quattro 
 
 
 .Fasi
-. Dal menu classificazione BlueXP , selezionare *Governance*.
-. Nella sezione Governance Dashboard > Data Overview (Dashboard di governance > Panoramica dei dati), per visualizzare il numero totale di elementi in ciascuna categoria, posizionare il cursore su ciascuna sezione della barra.
+. Per visualizzare il numero totale di elementi in ciascuna categoria, posizionare il cursore su ciascuna sezione della barra.
 . Per filtrare i risultati che verranno visualizzati nella pagina di analisi, selezionare ciascuna area ib nella barra ed esaminare ulteriormente.
 
 
 
 
-== Esaminare i dati sensibili e le autorizzazioni estese
+=== Esaminare i dati sensibili e le autorizzazioni estese
 
 L'area _dati sensibili e autorizzazioni ampie_ mostra la percentuale di file che contengono dati riservati e hanno autorizzazioni estese. Il grafico mostra i seguenti tipi di autorizzazioni:
 
@@ -181,14 +184,13 @@ L'area _dati sensibili e autorizzazioni ampie_ mostra la percentuale di file che
 
 
 .Fasi
-. Dal menu classificazione BlueXP , selezionare *Governance*.
-. Nella sezione Governance Dashboard > dati sensibili e permessi estesi, per visualizzare il numero totale di file in ogni categoria, posizionare il cursore su ogni casella.
+. Per visualizzare il numero totale di file in ciascuna categoria, posizionare il cursore su ciascuna casella.
 . Per filtrare i risultati che verranno visualizzati nella pagina di analisi, selezionare una casella e analizzare ulteriormente.
 
 
 
 
-== Esaminare i dati elencati in base ai tipi di autorizzazioni aperte
+=== Esaminare i dati elencati in base ai tipi di autorizzazioni aperte
 
 L'area _Open Permissions_ mostra la percentuale per ciascun tipo di permessi esistenti per tutti i file sottoposti a scansione. Il grafico mostra i seguenti tipi di autorizzazioni:
 
@@ -199,20 +201,18 @@ L'area _Open Permissions_ mostra la percentuale per ciascun tipo di permessi esi
 
 
 .Fasi
-. Dal menu classificazione BlueXP , selezionare *Governance*.
-. Nella sezione Governance Dashboard > Open Permissions (autorizzazioni aperte), per visualizzare il numero totale di file in ciascuna categoria, posizionare il cursore su ciascuna casella.
+. Per visualizzare il numero totale di file in ciascuna categoria, posizionare il cursore su ciascuna casella.
 . Per filtrare i risultati che verranno visualizzati nella pagina di analisi, selezionare una casella e analizzare ulteriormente.
 
 
 
 
-== Controllare l'età e le dimensioni dei dati
+=== Controllare l'età e le dimensioni dei dati
 
 Si consiglia di esaminare gli elementi nei grafici _Age_ e _Size_ per verificare se vi sono dati da eliminare o da assegnare a livelli di archiviazione a oggetti meno costosi.
 
 .Fasi
-. Dal menu classificazione BlueXP , selezionare *Governance*.
-. Nel grafico Age of Data del dashboard Governance, per visualizzare i dettagli sull'età dei dati, posizionare il cursore su un punto del grafico.
+. Nel grafico Età dei dati, per visualizzare i dettagli relativi all'età dei dati, posizionare il cursore su un punto del grafico.
 . Per filtrare in base all'età o all'intervallo di dimensioni, selezionare l'età o la dimensione.
 +
 ** *Age of Data graph* - classifica i dati in base all'ora in cui sono stati creati, all'ultima volta in cui sono stati utilizzati o all'ultima volta in cui sono stati modificati.
@@ -226,34 +226,18 @@ NOTE: Se un'origine dati implementa il tiering dei dati, è possibile identifica
 
 
 
-== Esamina le classificazioni dei dati più identificate nei tuoi dati
+=== Esamina le classificazioni dei dati più identificate nei tuoi dati
 
 L'area _Classification_ fornisce un elenco dei più identificati link:task-controlling-private-data.html#view-files-by-categories["Categorie"^] e. link:task-controlling-private-data.html#view-files-by-file-types["Tipi di file"^] nei dati sottoposti a scansione.
-
-
-
-=== Esaminare le categorie di classificazione più identificate
 
 Le categorie possono aiutarti a capire cosa accade con i tuoi dati mostrando i tipi di informazioni di cui disponi. Ad esempio, una categoria come "curriculum" o "contratti dipendenti" può includere dati sensibili. Quando si esaminano i risultati, è possibile che i contratti dei dipendenti siano memorizzati in una posizione non sicura. A questo punto, è possibile correggere il problema.
 
 Vedere link:task-controlling-private-data.html#view-files-by-categories["Visualizzazione dei file in base alle categorie"^] per ulteriori informazioni.
 
 .Fasi
-. Dal menu classificazione BlueXP , selezionare *Governance*.
-. Nel dashboard Governance > sezione classificazione > sezione Categorie, per visualizzare i dettagli su una categoria, selezionarla. La pagina di analisi fornisce i dati filtrati solo per quella categoria.
-. Per visualizzare tutte le categorie, selezionare *Visualizza tutto*.
+. Dal menu BlueXP, fare clic su *Governance > Classification*.
+. Fare clic su *Governance*, quindi sul pulsante *Data Discovery Assessment Report*.
 
 
-
-
-=== Esaminare i tipi di file più identificati
-
-La revisione dei tipi di file consente di controllare i dati sensibili, poiché alcuni tipi di file potrebbero non essere memorizzati correttamente.
-
-Vedere link:task-controlling-private-data.html#view-files-by-file-types["Visualizzazione dei tipi di file"^] per ulteriori informazioni.
-
-.Fasi
-. Dal menu classificazione BlueXP , selezionare *Governance*.
-. Nel pannello Governance (Governance Dashboard) > sezione Classification (classificazione) > sezione file Types (tipi di file), per visualizzare i dettagli su un tipo di file, selezionarlo nella sezione file Types (tipi di file) del dashboard Governance (Governance Dashboard governance). La pagina di analisi fornisce dati filtrati solo per quel tipo di file.
-. Per visualizzare tutti i tipi di file, selezionare *Visualizza tutto*.
-
+.Risultato
+La classificazione BlueXP genera un report in formato .pdf che puoi esaminare e inviare ad altri gruppi, se necessario.
