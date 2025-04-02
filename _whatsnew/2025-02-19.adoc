@@ -20,7 +20,7 @@ Per impostazione predefinita, le scansioni vengono accodate in base all'ordine i
 
 La priorità viene concessa una tantum. Le riscansioni automatiche dei dati di mappatura vengono eseguite nell'ordine predefinito.
 
-La prioritizzazione è limitata a link:concept-cloud-compliance.md#whats-the-difference-between-mapping-and-classification-scans["scansioni di sola mappatura"]; non è disponibile per le scansioni mappa e classificazione.
+La prioritizzazione è limitata a link:concept-cloud-compliance.html["scansioni di sola mappatura"]; non è disponibile per le scansioni mappa e classificazione.
 
 Per modificare la priorità:
 

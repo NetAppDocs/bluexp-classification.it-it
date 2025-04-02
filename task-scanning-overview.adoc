@@ -55,7 +55,7 @@ La tabella seguente mostra alcune delle differenze:
 | Età e dimensioni dei file | Sì | Sì 
 
 
-| Capacità di eseguire un link:task-controlling-governance-data.html#data-mapping-report["Report di mappatura dei dati"] | Sì | Sì 
+| Possibilità di eseguire un link:task-controlling-governance-data.html["Report di mappatura dei dati"] | Sì | Sì 
 
 
 | Pagina di analisi dei dati per visualizzare i dettagli del file | Sì | No 

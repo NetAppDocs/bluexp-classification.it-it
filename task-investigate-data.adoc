@@ -65,7 +65,7 @@ NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per ca
 | Dati personali sensibili | Selezionare link:reference-private-data-categories.html#types-of-sensitive-personal-data["tipi di dati personali sensibili"^]. 
 
 
-| Soggetto interessato | Inserire il nome completo o l'identificativo noto di un soggetto. link:task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports["Scopri di più sugli argomenti dei dati qui"^]. 
+| Soggetto interessato | Inserire il nome completo o l'identificativo noto di un soggetto. link:task-generating-compliance-reports.html["Scopri di più sugli argomenti dei dati qui"^]. 
 |===
 
 
