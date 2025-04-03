@@ -219,7 +219,7 @@ BlueXP rileva i cluster ONTAP utilizzando HTTPS. Se si utilizzano criteri firewa
 
 Seguire questa procedura per eseguire lo script dei prerequisiti di classificazione BlueXP.
 
-https://youtu.be/_RCYpuLXiV0?si=QLGUw8mqPrz9qs4B["Guarda questo video"^] Per vedere come eseguire lo script Prerequisites e interpretare i risultati.
+https://youtu.be/5ONowfPWkFs?si=QLGUw8mqPrz9qs4B["Guarda questo video"^] Per vedere come eseguire lo script Prerequisites e interpretare i risultati.
 
 .Di cosa hai bisogno
 * Verificare che il sistema Linux soddisfi i requisiti <<Verificare i requisiti dell'host,requisiti dell'host>>.

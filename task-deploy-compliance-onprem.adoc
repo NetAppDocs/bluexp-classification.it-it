@@ -309,7 +309,7 @@ NOTE: La classificazione BlueXP non è attualmente in grado di eseguire la scans
 
 Esaminare i requisiti e seguire questi passaggi quando si installa il software di classificazione BlueXP su un singolo host on-premise.
 
-https://youtu.be/rFpmekdbORc["Guarda questo video"^] Per scoprire come installare la classificazione BlueXP.
+https://youtu.be/XiPLaJpfJEI["Guarda questo video"^] Per vedere come installare la classificazione BlueXP .
 
 Tenere presente che tutte le attività di installazione vengono registrate durante l'installazione della classificazione BlueXP. In caso di problemi durante l'installazione, è possibile visualizzare il contenuto del registro di controllo dell'installazione. È scritto a. `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html["Per ulteriori informazioni, fare clic qui"].
 
@@ -349,7 +349,7 @@ image:screenshot_cloud_compliance_deploy_onprem.png["Una schermata che mostra la
 . Viene visualizzata la finestra di dialogo _Deploy Data Sense on Premise_. Copiare il comando fornito (ad esempio: `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq`) e incollarlo in un file di testo per poterlo utilizzare in un secondo momento. Quindi fare clic su *Chiudi* per chiudere la finestra di dialogo.
 . Sul computer host, immettere il comando copiato e seguire una serie di prompt oppure fornire il comando completo che include tutti i parametri richiesti come argomenti della riga di comando.
 +
-Tenere presente che il programma di installazione esegue una pre-verifica per assicurarsi che i requisiti di sistema e di rete siano stati soddisfatti per una corretta installazione. https://youtu.be/_RCYpuLXiV0["Guarda questo video"^] comprendere i messaggi di pre-controllo e le implicazioni.
+Si noti che il programma di installazione esegue un controllo preliminare per assicurarsi che i requisiti di sistema e di rete siano stati impostati per una corretta installazione. https://youtu.be/5ONowfPWkFs["Guarda questo video"^] comprendere i messaggi e le implicazioni del controllo preliminare.
 
 +
 [cols="50a,50"]
