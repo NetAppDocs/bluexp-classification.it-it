@@ -16,7 +16,7 @@ summary: 'Puoi gestire la scansione dei dati in ciascuno degli ambienti di lavor
 [role="lead"]
 È possibile gestire la modalità di scansione dei dati in ciascuno degli ambienti di lavoro e delle origini dati. È possibile apportare le modifiche in base al "repository", ovvero apportare modifiche per ogni volume, schema, utente e così via, a seconda del tipo di origine dati che si sta eseguendo la scansione.
 
-Alcune delle cose che è possibile modificare sono se un repository viene sottoposto a scansione o meno e se la classificazione BlueXP sta eseguendo un link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans["scansione di mappatura o scansione di classificazione  di mappatura"]. È inoltre possibile sospendere e riprendere la scansione, ad esempio se è necessario interrompere la scansione di un volume per un determinato periodo di tempo.
+Alcune delle cose che è possibile modificare sono se un repository viene sottoposto a scansione o meno e se la classificazione BlueXP  sta eseguendo un link:concept-cloud-compliance.html["scansione di mappatura o scansione di classificazione  di mappatura"]. È inoltre possibile sospendere e riprendere la scansione, ad esempio se è necessario interrompere la scansione di un volume per un determinato periodo di tempo.
 
 
 
@@ -37,17 +37,17 @@ Alcune delle cose che è possibile modificare sono se un repository viene sottop
 
 
 .Fasi
-. Dalla scheda Configuration (Configurazione), fare clic sul pulsante *Configuration* (Configurazione) per l'ambiente di lavoro.
+. Dal menu classificazione BlueXP , selezionare *Configurazione*.
 +
 image:screenshot_compliance_config_button.png["Una schermata che mostra come fare clic sul pulsante Configuration (Configurazione) per un ambiente di lavoro."]
 
-. Nella pagina Scan Configuration (Configurazione scansione) è possibile visualizzare le impostazioni di scansione per tutti i repository.
+. Dalla scheda Configurazione, selezionare il pulsante *Configurazione* per l'ambiente di lavoro.
+. Nella pagina Configurazione scansione, visualizzare le impostazioni di scansione per tutti gli archivi.
 +
 image:screenshot_compliance_repo_scan_settings.png["Una schermata che indica se i bucket sono sottoposti a scansione e lo stato corrente della scansione."]
 
+. Posizionare il cursore sul grafico nella colonna _Mapping Status_ per vedere il numero di file che rimangono da mappare o classificare in ciascun repository (bucket in questo esempio).
 
-
-È possibile passare il cursore sul grafico nella colonna _Mapping Status_ per visualizzare il numero di file che rimangono da mappare o classificare in ciascun repository (bucket in questo esempio).
 
 
 
@@ -59,21 +59,25 @@ image:screenshot_compliance_repo_scan_settings.png["Una schermata che indica se 
 TIP: I database non possono essere impostati su scansioni solo di mappatura. La scansione del database può essere disattivata o attivata; dove attivata equivale a Mappa e classificazione.
 
 .Fasi
-. Dalla scheda Configuration (Configurazione), fare clic sul pulsante *Configuration* (Configurazione) per l'ambiente di lavoro.
+. Dal menu classificazione BlueXP , selezionare *Configurazione*.
+. Dalla scheda Configurazione, selezionare il pulsante *Configurazione* per l'ambiente di lavoro.
 +
 image:screenshot_compliance_config_button.png["Una schermata che mostra come fare clic sul pulsante Configuration (Configurazione) per un ambiente di lavoro."]
 
-. Nella pagina Configurazione scansione è possibile modificare qualsiasi repository (bucket in questo esempio) per eseguire scansioni *Map* o *Map & Classify*.
+. Nella pagina Configurazione scansione, modificare qualsiasi repository (bucket in questo esempio) per eseguire scansioni *Map* o *Map & Classify*.
 +
 image:screenshot_compliance_repo_scan_settings.png["Una schermata che mostra come selezionare il tipo di scansione per un bucket."]
 
-
-
++
 Alcuni tipi di ambienti di lavoro consentono di modificare il tipo di scansione globale per tutti i repository utilizzando una barra dei pulsanti nella parte superiore della pagina. Valido per i sistemi Cloud Volumes ONTAP, on-premise ONTAP, Azure NetApp Files e Amazon FSX per ONTAP.
 
++
 L'esempio seguente mostra questa barra dei pulsanti per un sistema Azure NetApp Files.
 
++
 image:screenshot_compliance_repo_scan_all.png["Una schermata che mostra come configurare la stessa impostazione di scansione per tutti i volumi in un ambiente di lavoro."]
+
+
 
 
 
@@ -82,13 +86,14 @@ image:screenshot_compliance_repo_scan_all.png["Una schermata che mostra come con
 È possibile interrompere la scansione di un repository (ad esempio, un volume) se non è più necessario monitorarlo per verificarne la conformità. Per eseguire questa operazione, disattivare la scansione. Quando la scansione viene disattivata, tutte le informazioni e l'indicizzazione relative a quel volume vengono rimosse dal sistema e la ricarica per la scansione dei dati viene interrotta.
 
 .Fasi
-. Dalla scheda Configuration (Configurazione), fare clic sul pulsante *Configuration* (Configurazione) per l'ambiente di lavoro.
+. Dal menu classificazione BlueXP , selezionare *Configurazione*.
+. Dalla scheda Configurazione, selezionare il pulsante *Configurazione* per l'ambiente di lavoro.
 +
 image:screenshot_compliance_config_button.png["Una schermata che mostra come fare clic sul pulsante Configuration (Configurazione) per un ambiente di lavoro."]
 
 . Nella pagina Configurazione scansione selezionare *Off* per interrompere la scansione di un particolare bucket.
 +
-image:screenshot_compliance_stop_repo_scanning.png["Una schermata che mostra come selezionare il tipo di scansione per un bucket."]
+image:screenshot_compliance_repo_scan_settings.png["Una schermata che mostra come selezionare il tipo di scansione per un bucket."]
 
 
 
@@ -101,18 +106,11 @@ image:screenshot_compliance_stop_repo_scanning.png["Una schermata che mostra com
 È possibile riprendere la scansione in qualsiasi momento.
 
 .Fasi
-. Dalla scheda Configuration (Configurazione), fare clic sul pulsante *Configuration* (Configurazione) per l'ambiente di lavoro.
+. Dal menu classificazione BlueXP , selezionare *Configurazione*.
+. Dalla scheda Configurazione, selezionare il pulsante *Configurazione* per l'ambiente di lavoro.
 +
 image:screenshot_compliance_config_button.png["Una schermata che mostra come fare clic sul pulsante Configuration (Configurazione) per un ambiente di lavoro."]
 
-. Nella pagina Scan Configuration (Configurazione scansione), fare clic sul pulsante Pause (Pausa) per sospendere la scansione di un volume oppure premere il pulsante Resume (Riprendi) per riprendere la scansione di un volume precedentemente sospeso.
-+
-image:screenshot_compliance_repo_pause_resume.png["Una schermata che mostra come mettere in pausa e riprendere la scansione su un volume."]
-
-+
-Tenere presente che alcune origini dati forniscono la funzionalità Pausa e Riprendi in un menu, come mostrato di seguito per i siti SharePoint.
-
-+
-image:screenshot_compliance_repo_pause_resume2.png["Una schermata che mostra come sospendere e riprendere la scansione su un sito SharePoint."]
-
+. Nella pagina Configurazione scansione, selezionare l'icona azioniimage:button-actions-horizontal.png["Icona delle azioni"].
+. Selezionare *Pausa* per sospendere la scansione di un volume o selezionare *Riprendi* per riprendere la scansione di un volume precedentemente in pausa.
 

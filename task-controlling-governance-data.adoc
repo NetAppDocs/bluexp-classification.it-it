@@ -155,13 +155,13 @@ image:screenshot-compliance-report-buttons.png["Una schermata della dashboard di
 .Risultato
 La classificazione BlueXP genera un report in formato .pdf che puoi esaminare e inviare ad altri gruppi, se necessario.
 
-Se il report è più grande di 1 MB, il file .pdf viene conservato nell'istanza di classificazione BlueXP e viene visualizzato un messaggio a comparsa sulla posizione esatta. Quando la classificazione BlueXP è installata su una macchina Linux locale o su una macchina Linux implementata nel cloud, puoi accedere direttamente al file .pdf. Quando la classificazione BlueXP viene implementata nel cloud, per scaricare il file .pdf dovrai utilizzare SSH per l'istanza di classificazione BlueXP. link:task-audit-data-sense-actions.html#access-the-log-files["Scopri come accedere ai dati sull'istanza di Classification"^].
+Se il report è più grande di 1 MB, il file .pdf viene conservato nell'istanza di classificazione BlueXP e viene visualizzato un messaggio a comparsa sulla posizione esatta. Quando la classificazione BlueXP è installata su una macchina Linux locale o su una macchina Linux implementata nel cloud, puoi accedere direttamente al file .pdf. Quando la classificazione BlueXP viene implementata nel cloud, per scaricare il file .pdf dovrai utilizzare SSH per l'istanza di classificazione BlueXP.
 
 
 
 === Esaminare i principali repository di dati elencati in base alla sensibilità dei dati
 
-L'area _Top Data Repository per livello di sensibilità_ elenca i primi quattro repository di dati (ambienti di lavoro e origini dati) che contengono gli elementi più sensibili. Il grafico a barre per ciascun ambiente di lavoro è suddiviso in:
+L'area _Top Data Repository by Sensitivity Level_ del rapporto Panoramica mappatura dati elenca i quattro principali repository di dati (ambienti di lavoro e origini dati) che contengono gli elementi più sensibili. Il grafico a barre per ciascun ambiente di lavoro è suddiviso in:
 
 * Dati non sensibili
 * Dati personali
@@ -177,7 +177,7 @@ L'area _Top Data Repository per livello di sensibilità_ elenca i primi quattro 
 
 === Esaminare i dati sensibili e le autorizzazioni estese
 
-L'area _dati sensibili e autorizzazioni ampie_ mostra la percentuale di file che contengono dati riservati e hanno autorizzazioni estese. Il grafico mostra i seguenti tipi di autorizzazioni:
+L'area _dati sensibili e autorizzazioni ampie_ del report Panoramica mappatura dati mostra la percentuale di file che contengono dati riservati e hanno autorizzazioni ampie. Il grafico mostra i seguenti tipi di autorizzazioni:
 
 * Dalle autorizzazioni più restrittive alle restrizioni più permissive sull'asse orizzontale.
 * Dai dati meno sensibili ai dati più sensibili sull'asse verticale.
@@ -192,7 +192,7 @@ L'area _dati sensibili e autorizzazioni ampie_ mostra la percentuale di file che
 
 === Esaminare i dati elencati in base ai tipi di autorizzazioni aperte
 
-L'area _Open Permissions_ mostra la percentuale per ciascun tipo di permessi esistenti per tutti i file sottoposti a scansione. Il grafico mostra i seguenti tipi di autorizzazioni:
+L'area _autorizzazioni aperte_ del rapporto Panoramica mappatura dati mostra la percentuale per ciascun tipo di autorizzazioni esistenti per tutti i file sottoposti a scansione. Il grafico mostra i seguenti tipi di autorizzazioni:
 
 * Nessuna autorizzazione aperta
 * Aperto all'organizzazione
@@ -209,7 +209,7 @@ L'area _Open Permissions_ mostra la percentuale per ciascun tipo di permessi esi
 
 === Controllare l'età e le dimensioni dei dati
 
-Si consiglia di esaminare gli elementi nei grafici _Age_ e _Size_ per verificare se vi sono dati da eliminare o da assegnare a livelli di archiviazione a oggetti meno costosi.
+È possibile esaminare gli elementi nei grafici _Age_ e _Size_ del rapporto Panoramica mappatura dati per verificare se vi sono dati da eliminare o da assegnare a livelli di archiviazione a oggetti meno costosi.
 
 .Fasi
 . Nel grafico Età dei dati, per visualizzare i dettagli relativi all'età dei dati, posizionare il cursore su un punto del grafico.
@@ -228,11 +228,11 @@ NOTE: Se un'origine dati implementa il tiering dei dati, è possibile identifica
 
 === Esamina le classificazioni dei dati più identificate nei tuoi dati
 
-L'area _Classification_ fornisce un elenco dei più identificati link:task-controlling-private-data.html#view-files-by-categories["Categorie"^] e. link:task-controlling-private-data.html#view-files-by-file-types["Tipi di file"^] nei dati sottoposti a scansione.
+L'area _Classification_ del rapporto Panoramica mappatura dati fornisce un elenco dei dati più identificati link:task-controlling-private-data.html["Categorie"] e link:task-controlling-private-data.html["Tipi di file"]acquisiti.
 
 Le categorie possono aiutarti a capire cosa accade con i tuoi dati mostrando i tipi di informazioni di cui disponi. Ad esempio, una categoria come "curriculum" o "contratti dipendenti" può includere dati sensibili. Quando si esaminano i risultati, è possibile che i contratti dei dipendenti siano memorizzati in una posizione non sicura. A questo punto, è possibile correggere il problema.
 
-Vedere link:task-controlling-private-data.html#view-files-by-categories["Visualizzazione dei file in base alle categorie"^] per ulteriori informazioni.
+Per ulteriori informazioni, vedere link:task-controlling-private-data.html["Visualizzazione dei file in base alle categorie"] .
 
 .Fasi
 . Dal menu BlueXP, fare clic su *Governance > Classification*.

@@ -45,10 +45,11 @@ Per la classificazione BlueXP sono disponibili i seguenti report:
 Quando si filtra la dashboard, la classificazione BlueXP regola i dati di conformità e invia report solo agli ambienti di lavoro selezionati.
 
 .Fasi
-. Selezionare l'elenco a discesa del filtro e gli ambienti di lavoro.
+. Dal menu classificazione BlueXP , selezionare "*conformità*".
+. Selezionare l'elenco a discesa del filtro ambienti di lavoro e selezionare gli ambienti di lavoro.
 . Selezionare *Visualizza*.
 +
-image:screenshot_cloud_compliance_filter.gif["Schermata di selezione degli ambienti di lavoro per i report che si desidera eseguire."]
+image:screenshot_cloud_compliance_filter.png["Schermata di selezione degli ambienti di lavoro per i report che si desidera eseguire."]
 
 
 
@@ -77,8 +78,8 @@ Cercare il nome completo o l'identificatore noto del soggetto interessato, quind
 NOTE: Sono supportati l'inglese, il tedesco, il giapponese e lo spagnolo durante la ricerca dei nomi degli argomenti dei dati. Il supporto per altre lingue verrà aggiunto in un secondo momento.
 
 .Fasi
-. Dal menu BlueXP , selezionare *Governance > classificazione*.
-. Selezionare *oggetti dati*.
+. Dal menu classificazione BlueXP , selezionare "*conformità*".
+. Dalla pagina conformità, scorrere verso il basso e selezionare *oggetti dati*.
 . Cercare il nome completo o l'identificativo noto dell'interessato.
 +
 Ecco un esempio che mostra una ricerca per il nome _john Doe_:
@@ -125,8 +126,9 @@ Il report contiene le seguenti informazioni:
 Accedere alla scheda Compliance per generare il report.
 
 .Fasi
-. Dal menu BlueXP , selezionare *Governance > classificazione*.
-. Selezionare *conformità*, quindi selezionare l'icona di download accanto a *rapporto HIPAA* in *rapporti*.
+. Dal menu classificazione BlueXP , selezionare "*conformità*".
+. Scorrere verso il basso e individuare il riquadro *rapporti*.
+. Selezionare l'icona di download accanto a *rapporto HIPAA*.
 +
 image:screenshot_hipaa.gif["Una schermata della scheda Compliance di BlueXP che mostra il riquadro Reports (Report) in cui è possibile fare clic su HIPAA."]
 
@@ -155,8 +157,9 @@ Il report contiene le seguenti informazioni:
 Accedere alla scheda Compliance per generare il report.
 
 .Fasi
-. Dal menu BlueXP , selezionare *Governance > classificazione*.
-. Selezionare *conformità*, quindi selezionare l'icona di download accanto a *rapporto PCI DSS* in *rapporti*.
+. Dal menu classificazione BlueXP , selezionare "*conformità*".
+. Scorrere verso il basso e individuare il riquadro *rapporti*.
+. Selezionare l'icona di download accanto a *rapporto PCI DSS*.
 +
 image:screenshot_pci_dss.gif["Una schermata della scheda Compliance di BlueXP che mostra il riquadro Reports (Report) in cui è possibile fare clic su Privacy Risk Assessment (Valutazione dei rischi per la privacy)."]
 
@@ -183,8 +186,9 @@ Il report contiene le seguenti informazioni:
 Accedere alla scheda Compliance per generare il report.
 
 .Fasi
-. Dal menu BlueXP , selezionare *Governance > classificazione*.
-. Selezionare *conformità*, quindi selezionare l'icona di download accanto a *Valutazione dei rischi per la privacy* in *rapporti*.
+. Dal menu classificazione BlueXP , selezionare "*conformità*".
+. Scorrere verso il basso e individuare il riquadro *rapporti*.
+. Selezionare l'icona di download accanto a *Privacy Risk Assessment*.
 +
 image:screenshot_privacy_risk_assessment.gif["Una schermata della scheda Compliance di BlueXP che mostra il riquadro Reports (Report) in cui è possibile fare clic su Privacy Risk Assessment (Valutazione dei rischi per la privacy)."]
 
