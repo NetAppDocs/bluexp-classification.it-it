@@ -164,7 +164,7 @@ La classificazione BlueXP consente di eseguire una scansione generale di "mappat
 +
 Dopo una scansione rapida, è possibile generare un report di mappatura dei dati. Questo report offre una panoramica dei dati memorizzati nelle origini dati aziendali per aiutarti a prendere decisioni in merito all'utilizzo delle risorse, alla migrazione, al backup, alla sicurezza e ai processi di conformità.
 
-* *Scansione di classificazione dei dati (profonda) (scansione mappa e classificazione)*: Scansioni di classificazione BlueXP  utilizzando protocolli standard e autorizzazioni di sola lettura in tutti gli ambienti. I file selezionati vengono aperti e sottoposti a scansione per rilevare dati aziendali sensibili, informazioni private e problemi relativi al ransomware.
+* *Classificazione dei dati scansione profonda (scansione mappa e classificazione)*: Scansioni di classificazione BlueXP  utilizzando protocolli standard e autorizzazioni di sola lettura in tutti gli ambienti. I file selezionati vengono aperti e sottoposti a scansione per rilevare dati aziendali sensibili, informazioni private e problemi relativi al ransomware.
 +
 Dopo una scansione completa, sono disponibili molte funzionalità di classificazione BlueXP aggiuntive che è possibile applicare ai dati, ad esempio visualizzare e perfezionare i dati nella pagina Data Investigation, cercare i nomi all'interno dei file, copiare, spostare ed eliminare i file di origine e molto altro ancora.
 

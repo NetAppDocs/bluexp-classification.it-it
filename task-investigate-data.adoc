@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-investigate-data.html 
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies 
-summary: 'È possibile analizzare i dati dell"organizzazione visualizzando i dettagli nella pagina Data Investigation. È possibile accedere a questa pagina da molte aree dell"interfaccia utente di classificazione di BlueXP, tra cui le dashboard di governance e conformità.' 
+summary: 'È possibile analizzare i dati dell"organizzazione visualizzando i dettagli nella pagina Data Investigation. Qui è possibile continuare la ricerca dopo aver esaminato il dashboard Governance.' 
 ---
 = Esaminare i dati memorizzati nella propria organizzazione con la classificazione BlueXP 
 :hardbreaks:
@@ -14,7 +14,9 @@ summary: 'È possibile analizzare i dati dell"organizzazione visualizzando i det
 
 
 [role="lead"]
-È possibile analizzare i dati dell'organizzazione visualizzando i dettagli nella pagina Data Investigation. È possibile accedere a questa pagina da molte aree dell'interfaccia utente di classificazione di BlueXP, tra cui le dashboard di governance e conformità. È possibile esportare i dati in un file CSV o JSON per ulteriori analisi o per condividerli con altri utenti.
+È possibile analizzare i dati dell'organizzazione visualizzando i dettagli nella pagina Data Investigation. Qui è possibile continuare la ricerca dopo aver esaminato il dashboard Governance. Nella pagina di analisi, è possibile filtrare i dati utilizzando uno dei numerosi filtri per visualizzare solo i risultati desiderati. Puoi anche vedere i metadati dei file, le autorizzazioni per file e directory e controllare i file duplicati nei tuoi sistemi storage.
+
+È possibile accedere a questa pagina da molte aree dell'interfaccia utente di classificazione BlueXP , tra cui i dashboard Governance e Compliance con i filtri già selezionati in quelle pagine. È possibile esportare i dati in un file CSV o JSON per ulteriori analisi o per condividerli con altri utenti.
 
 
 NOTE: Le funzionalità descritte in questa sezione sono disponibili solo se si è scelto di eseguire una scansione di classificazione completa sulle origini dati. Le origini dati che hanno eseguito una scansione solo mappatura non mostrano i dettagli a livello di file.
@@ -25,21 +27,22 @@ NOTE: Le funzionalità descritte in questa sezione sono disponibili solo se si �
 
 È possibile filtrare il contenuto della pagina di analisi per visualizzare solo i risultati desiderati.
 
-Se si desidera scaricare il contenuto della pagina come report dopo averlo rifinito, selezionare il image:button_download.png["pulsante download"] pulsante. <<Report sull'analisi dei dati,Fare clic qui per ulteriori informazioni sul report Data Investigation>>.
-
+.Fasi
+. Dal menu classificazione BlueXP , selezionare *analisi*.
+. Nella pagina analisi dati, effettuare una delle seguenti operazioni:
+. Per scaricare il contenuto della pagina come report dopo averlo rifinito, selezionare il image:button_download.png["pulsante download"] pulsante. <<Data Investigation Report,Fare clic qui per ulteriori informazioni sul report Data Investigation>>.
++
 image:screenshot_compliance_investigation_filtered.png["Una schermata dei filtri disponibili quando si perfezionano i risultati nella pagina di analisi."]
 
-* Le schede di livello superiore consentono di visualizzare i dati di file (dati non strutturati), directory (cartelle e condivisioni di file) o database (dati strutturati).
-* I controlli nella parte superiore di ciascuna colonna consentono di ordinare i risultati in ordine numerico o alfabetico.
-* I filtri del riquadro sinistro consentono di perfezionare i risultati selezionando gli attributi descritti nelle sezioni successive.
+. Per visualizzare i dati provenienti da file (dati non strutturati), directory (cartelle e condivisioni di file) o da database (dati strutturati), selezionare una delle schede in alto.
+. Per ordinare i risultati in ordine numerico o alfabetico, selezionare il controllo nella parte superiore di ciascuna colonna.
+. Per perfezionare ulteriormente i risultati, selezionare uno dei numerosi filtri nel riquadro sinistro del filtro.
 
 
 
 NOTE: È possibile visualizzare solo i primi 10.000 risultati, o 500 pagine, per una scansione nella pagina analisi dati.
 
-
-
-=== Filtra i dati in base alla sensibilità e al contenuto
+*Filtrare i dati in base alla sensibilità e al contenuto*
 
 Utilizzare i seguenti filtri per visualizzare la quantità di informazioni sensibili contenute nei dati.
 
@@ -48,28 +51,24 @@ Utilizzare i seguenti filtri per visualizzare la quantità di informazioni sensi
 | Filtro | Dettagli 
 
 
-| Categoria | Selezionare link:reference-private-data-categories.html#types-of-categories["tipi di categorie"^]. 
+| Categoria | Selezionare link:reference-private-data-categories.html["tipi di categorie"]. 
 
 
 | Livello di sensibilità | Selezionare il livello di sensibilità: Personal (personale), Sensitive Personal (personale sensibile) o non Sensitive (non sensibile). 
 
 
-| Numero di identificatori | Selezionare l'intervallo di identificatori sensibili rilevati per file. Include dati personali e dati personali sensibili. Durante il filtraggio nelle directory, la classificazione BlueXP totalizza le corrispondenze di tutti i file in ogni cartella (e sottocartelle).
-
-NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per calcolare il numero di dati personali identificabili (PII) per Directory. 
+| Numero di identificatori | Selezionare l'intervallo di identificatori sensibili rilevati per file. Include dati personali e dati personali sensibili. Durante il filtraggio nelle directory, la classificazione BlueXP totalizza le corrispondenze di tutti i file in ogni cartella (e sottocartelle). NOTA: La versione di dicembre 2023 (versione 1.26.6) ha rimosso l'opzione per calcolare il numero di dati personali identificabili (PII) per Directory. 
 
 
-| Dati personali | Selezionare link:reference-private-data-categories.html#types-of-personal-data["tipi di dati personali"^]. 
+| Dati personali | Selezionare link:reference-private-data-categories.html["tipi di dati personali"]. 
 
 
-| Dati personali sensibili | Selezionare link:reference-private-data-categories.html#types-of-sensitive-personal-data["tipi di dati personali sensibili"^]. 
+| Dati personali sensibili | Selezionare link:reference-private-data-categories.html["tipi di dati personali sensibili"]. 
 
 
-| Soggetto interessato | Inserire il nome completo o l'identificativo noto di un soggetto. link:task-generating-compliance-reports.html["Scopri di più sugli argomenti dei dati qui"^]. 
+| Soggetto interessato | Inserire il nome completo o l'identificativo noto di un soggetto. link:task-generating-compliance-reports.html["Scopri di più sugli argomenti dei dati qui"]. 
 |===
-
-
-=== Filtrare i dati in base al proprietario dell'utente e alle autorizzazioni dell'utente
+*Filtrare i dati in base al proprietario e alle autorizzazioni utente*
 
 Utilizzare i seguenti filtri per visualizzare i proprietari dei file e le autorizzazioni di accesso ai dati.
 
@@ -89,9 +88,7 @@ Utilizzare i seguenti filtri per visualizzare i proprietari dei file e le autori
 
 | Numero di utenti con accesso | Selezionare uno o più intervalli di categorie per visualizzare i file e le cartelle aperti a un determinato numero di utenti. 
 |===
-
-
-=== Filtrare i dati in base all'ora
+*Filtra dati per ora*
 
 Utilizzare i seguenti filtri per visualizzare i dati in base ai criteri temporali.
 
@@ -112,12 +109,10 @@ Utilizzare i seguenti filtri per visualizzare i dati in base ai criteri temporal
 | Ultimo accesso  a| 
 Selezionare un intervallo di tempo in cui è stato eseguito l'ultimo accesso al file o alla directory (solo CIFS o NFS). È inoltre possibile specificare un intervallo di tempo personalizzato per perfezionare ulteriormente i risultati della ricerca. Per i tipi di file sottoposti a scansione dalla classificazione BlueXP, questa è l'ultima volta che la classificazione BlueXP ha sottoposto a scansione il file.
 
-Si noti che la classificazione BlueXP non estrae l'ultimo tempo di accesso dalle seguenti origini dati: SharePoint Online, SharePoint on-premise (SharePoint Server), OneDrive, Google Drive e Amazon S3.
+La classificazione BlueXP non estrae l'ultimo tempo di accesso dalle seguenti origini dati: SharePoint Online, SharePoint on-premise (SharePoint Server), OneDrive, Google Drive e Amazon S3.
 
 |===
-
-
-=== Filtra i dati in base ai metadati
+*Filtra dati per metadati*
 
 Utilizzare i seguenti filtri per visualizzare i dati in base alla posizione, alle dimensioni e alla directory o al tipo di file.
 
@@ -132,7 +127,7 @@ Utilizzare i seguenti filtri per visualizzare i dati in base alla posizione, all
 | Tipo di directory | Selezionare il tipo di directory; "Share" (Condividi) o "Folder" (cartella). 
 
 
-| Tipo di file | Selezionare link:reference-private-data-categories.html#types-of-files["tipi di file"^]. 
+| Tipo di file | Selezionare link:reference-private-data-categories.html["tipi di file"]. 
 
 
 | Dimensione del file | Selezionare l'intervallo di dimensioni del file. 
@@ -140,9 +135,7 @@ Utilizzare i seguenti filtri per visualizzare i dati in base alla posizione, all
 
 | Hash del file | Inserire l'hash del file per trovare un file specifico, anche se il nome è diverso. 
 |===
-
-
-=== Filtrare i dati in base al tipo di storage
+*Filtra dati per tipo di archiviazione*
 
 Utilizzare i seguenti filtri per visualizzare i dati in base al tipo di storage.
 
@@ -159,9 +152,7 @@ Utilizzare i seguenti filtri per visualizzare i dati in base al tipo di storage.
 
 | Repository di storage | Selezionare il repository di storage, ad esempio un volume o uno schema. 
 |===
-
-
-=== Filtra i dati in base alle policy
+*Filtra i dati in base alle policy*
 
 Utilizzare il seguente filtro per visualizzare i dati in base ai criteri.
 
@@ -172,9 +163,7 @@ Utilizzare il seguente filtro per visualizzare i dati in base ai criteri.
 
 | Policy | Selezionare una o più policy. Vai link:task-using-policies.html["qui"^] per visualizzare l'elenco dei criteri esistenti e creare criteri personalizzati. 
 |===
-
-
-=== Filtrare i dati in base allo stato dell'analisi
+*Filtra dati per stato analisi*
 
 Utilizzare il seguente filtro per visualizzare i dati in base allo stato di scansione della classificazione BlueXP.
 
@@ -188,11 +177,9 @@ Utilizzare il seguente filtro per visualizzare i dati in base allo stato di scan
 
 | Evento di analisi della scansione | Selezionare se si desidera visualizzare i file che non sono stati classificati perché la classificazione BlueXP non ha potuto ripristinare l'ultimo tempo di accesso o i file che sono stati classificati anche se la classificazione BlueXP non ha potuto ripristinare l'ultimo tempo di accesso. 
 |===
-link:reference-collected-metadata.html#last-access-time-timestamp["Vedere i dettagli sull'indicatore data/ora dell'ultimo accesso"] Per ulteriori informazioni sugli elementi visualizzati nella pagina di analisi durante il filtraggio utilizzando l'evento di analisi scansione.
+link:reference-collected-metadata.html["Vedere i dettagli sull'indicatore data/ora dell'ultimo accesso"] Per ulteriori informazioni sugli elementi visualizzati nella pagina di analisi durante il filtraggio mediante l'evento di analisi scansione.
 
-
-
-=== Filtra i dati in base ai duplicati
+*Filtra dati per duplicati*
 
 Utilizzare il seguente filtro per visualizzare i file duplicati nello storage.
 
@@ -207,27 +194,44 @@ Utilizzare il seguente filtro per visualizzare i file duplicati nello storage.
 
 == Visualizzare i metadati dei file
 
-Nel riquadro risultati analisi dati, selezionare il pulsante freccia giù image:button_down_caret.png["cart"]per ogni singolo file per visualizzare i metadati del file.
+Oltre a mostrare l'ambiente di lavoro e il volume in cui si trova il file, i metadati mostrano molte più informazioni, incluse le autorizzazioni per i file, il proprietario del file e l'eventuale presenza di duplicati di questo file. Queste informazioni sono utili se si prevede di link:task-using-policies.html["Creare policy"]visualizzare tutte le informazioni che è possibile utilizzare per filtrare i dati.
 
+Non tutte le informazioni sono disponibili per tutte le fonti di dati, proprio ciò che è appropriato per quella fonte di dati. Ad esempio, il nome del volume e le autorizzazioni non sono rilevanti per i file di database.
+
+.Fasi
+. Dal menu classificazione BlueXP , selezionare *analisi*.
+. Nell'elenco Data Investigation (analisi dati) a destra, selezionare il pulsante freccia giù image:button_down_caret.png["cart"]a destra per ogni singolo file per visualizzare i metadati del file.
++
 image:screenshot_compliance_file_details.png["Una schermata che mostra i dettagli dei metadati per un file nella pagina Data Investigation."]
 
-Oltre a mostrare l'ambiente di lavoro e il volume in cui si trova il file, i metadati mostrano molte più informazioni, incluse le autorizzazioni per i file, il proprietario del file e l'eventuale presenza di duplicati di questo file. Queste informazioni sono utili se stai pensando di link:task-using-policies.html#create-custom-policies["Creare policy"] perché è possibile visualizzare tutte le informazioni che è possibile utilizzare per filtrare i dati.
-
-Tenere presente che non tutte le informazioni sono disponibili per tutte le origini dati, ma solo quelle appropriate per tale origine. Ad esempio, il nome del volume e le autorizzazioni non sono rilevanti per i file di database.
 
 
 
-== Visualizzare le autorizzazioni per file e directory
+
+== Visualizzare le autorizzazioni degli utenti per file e directory
 
 Per visualizzare un elenco di tutti gli utenti o gruppi che hanno accesso a un file o a una directory e i tipi di autorizzazioni di cui dispongono, selezionare *Visualizza tutte le autorizzazioni*. Questo pulsante è disponibile solo per i dati nelle condivisioni CIFS.
 
 Si noti che se vengono visualizzati i SID (Security Identifier) invece dei nomi di utenti e gruppi, è necessario integrare Active Directory nella classificazione BlueXP. link:task-add-active-directory-datasense.html["Scopri come farlo"].
 
+.Fasi
+. Dal menu classificazione BlueXP , selezionare *analisi*.
+. Nell'elenco Data Investigation (analisi dati) a destra, selezionare il pulsante freccia giù image:button_down_caret.png["cart"]a destra per ogni singolo file per visualizzare i metadati del file.
+. Per visualizzare un elenco di tutti gli utenti o gruppi che hanno accesso a un file o a una directory e ai tipi di autorizzazioni di cui dispongono, nel campo autorizzazioni aperte, selezionare *Visualizza tutte le autorizzazioni*.
++
+
+NOTE: La classificazione BlueXP  mostra fino a 100 utenti nell'elenco.
+
++
 image:screenshot_compliance_permissions.png["Una schermata che mostra le autorizzazioni dettagliate per il file."]
 
-Selezionare il pulsante freccia giù image:button_down_caret.png["cart"]per qualsiasi gruppo per visualizzare l'elenco degli utenti che fanno parte del gruppo.
+. Selezionare il pulsante freccia giù image:button_down_caret.png["cart"]per qualsiasi gruppo per visualizzare l'elenco degli utenti che fanno parte del gruppo.
++
 
-Selezionando il nome di un utente o di un gruppo, la pagina di analisi viene aggiornata in modo da poter visualizzare tutti i file e le directory a cui l'utente o il gruppo ha accesso.
+TIP: È possibile espandere un livello del gruppo per visualizzare gli utenti che fanno parte del gruppo.
+
+. Selezionare il nome di un utente o di un gruppo per aggiornare la pagina di analisi in modo da visualizzare tutti i file e le directory a cui l'utente o il gruppo ha accesso.
+
 
 
 
@@ -235,32 +239,41 @@ Selezionando il nome di un utente o di un gruppo, la pagina di analisi viene agg
 
 È possibile visualizzare se i file duplicati vengono memorizzati nei sistemi storage. Ciò è utile se si desidera identificare le aree in cui è possibile risparmiare spazio di storage. Può anche essere utile assicurarsi che alcuni file con autorizzazioni specifiche o informazioni sensibili non vengano duplicati inutilmente nei sistemi di storage.
 
-Tutti i file (esclusi i database) di dimensioni pari o superiori a 1 MB e contenenti informazioni personali o riservate vengono confrontati per verificare se sono presenti duplicati. È possibile utilizzare i filtri della pagina di analisi "dimensione file" insieme a "duplicati" per vedere quali file di un determinato intervallo di dimensioni sono duplicati nell'ambiente in uso.
+Tutti i file (esclusi i database) di dimensioni pari o superiori a 1 MB o contenenti informazioni personali o riservate vengono confrontati per verificare se sono presenti duplicati.
 
 La classificazione BlueXP utilizza la tecnologia di hashing per determinare i file duplicati. Se un file ha lo stesso codice hash di un altro file, possiamo essere sicuri al 100% che i file siano duplicati esatti - anche se i nomi dei file sono diversi.
 
-È possibile scaricare l'elenco dei file duplicati e inviarlo all'amministratore dello storage in modo che possa decidere quali file, se presenti, possono essere cancellati. Oppure è possibile link:task-managing-highlights.html#delete-source-files["eliminare il file"] se si è sicuri che non è necessaria una versione specifica del file.
+.Fasi
+. Dal menu classificazione BlueXP , selezionare *analisi*.
+. Nel pannello filtri della pagina di analisi a sinistra, selezionare "dimensione file" insieme a "duplicati" ("ha duplicati") per vedere quali file di un determinato intervallo di dimensioni sono duplicati nell'ambiente.
+. Facoltativamente, scaricare l'elenco di file duplicati e inviarlo all'amministratore dello storage in modo da poter decidere quali file, se presenti, possono essere eliminati.
+. Facoltativamente, link:task-managing-highlights.html["eliminare il file"]se si è certi che non è necessaria una versione specifica del file.
 
-*Visualizza tutti i file duplicati*
-
-Se si desidera un elenco di tutti i file duplicati negli ambienti di lavoro e nelle origini dati in scansione, è possibile utilizzare il filtro *duplicati > ha duplicati* nella pagina analisi dati.
-
-Tutti i file duplicati vengono visualizzati nella pagina risultati.
 
 *Visualizza se un file specifico è duplicato*
 
-Se si desidera verificare se un singolo file ha duplicati, nel riquadro risultati analisi dati selezionare image:button_down_caret.png["cart"]qualsiasi singolo file per visualizzare i metadati del file. Se sono presenti duplicati di un determinato file, queste informazioni vengono visualizzate accanto al campo _duplicati_.
+È possibile verificare se un singolo file contiene duplicati.
 
-Per visualizzare l'elenco dei file duplicati e la loro posizione, selezionare *Visualizza dettagli*. Nella pagina successiva selezionare *Visualizza duplicati* per visualizzare i file nella pagina di analisi.
+.Fasi
+. Dal menu classificazione BlueXP , selezionare *analisi*.
+. Nell'elenco analisi dati, selezionare image:button_down_caret.png["cart"] a destra un singolo file per visualizzare i metadati del file.
++
+Se esistono duplicati per un file, queste informazioni vengono visualizzate accanto al campo _duplicati_.
 
+. Per visualizzare l'elenco dei file duplicati e la loro posizione, selezionare *Visualizza dettagli*.
+. Nella pagina successiva selezionare *Visualizza duplicati* per visualizzare i file nella pagina di analisi.
++
 image:screenshot_compliance_duplicate_file.png["Una schermata che mostra come visualizzare la posizione dei file duplicati."]
 
++
 
 TIP: È possibile utilizzare il valore "hash del file" fornito in questa pagina e immetterlo direttamente nella pagina di analisi per cercare un file duplicato specifico in qualsiasi momento, oppure utilizzarlo in un criterio.
 
 
 
-== Report sull'analisi dei dati
+
+
+== Creare il rapporto analisi dati
 
 Il Data Investigation Report (Report analisi dati) è un download del contenuto filtrato della pagina Data Investigation (analisi dati).
 
@@ -330,7 +343,10 @@ Il *Structured Data Report* include le seguenti informazioni sulle tabelle di da
 
 .Procedura per generare il rapporto
 . Nella pagina analisi dati, selezionare il image:button_download.png["pulsante download"] pulsante in alto a destra della pagina.
-. Scegliere il tipo di rapporto: CSV o JSON e fornire un **Nome rapporto**. Selezionare un ambiente di lavoro ** e **Volume** quindi fornire un percorso della cartella **destinazione**.
+. Scegliere il tipo di rapporto: CSV o JSON.
+. Fornire un **Nome rapporto**.
+. Selezionare un ambiente di lavoro ** e **Volume**
+. Fornire un percorso della cartella di destinazione **.
 . Selezionare **Scarica rapporto**.
 +
 image:screenshot_compliance_investigation_report2.png["Una schermata della pagina Download Investigation Report con diverse opzioni."]
@@ -339,3 +355,27 @@ image:screenshot_compliance_investigation_report2.png["Una schermata della pagin
 
 .Risultato
 Viene visualizzata una finestra di dialogo che indica che i report sono in fase di download.
+
+
+
+== Creare un criterio basato sui filtri selezionati
+
+Potrebbe essere utile salvare come criterio i filtri selezionati nella pagina analisi dati. In questo modo, è possibile eseguire gli stessi filtri in qualsiasi momento senza doverli riselezionare.
+
+.Fasi
+. Dal menu classificazione BlueXP , selezionare *analisi*.
+. Nella pagina analisi dati, selezionare i filtri che si desidera utilizzare per creare un criterio.
+. Nella parte inferiore del pannello filtro, selezionare *Crea criterio da questa ricerca*.
+. Immettere un nome e una descrizione per il criterio.
+. Scegli una delle seguenti opzioni:
++
+** *Elimina automaticamente i file corrispondenti a questo criterio (ogni giorno): Selezionare questa opzione se si desidera eliminare i file corrispondenti al criterio.
+** *Invia aggiornamenti tramite e-mail relativi a questo criterio agli utenti BlueXP  su questo account ogni <day/week/month>*: Selezionare questa opzione se si desidera inviare aggiornamenti tramite e-mail relativi al criterio agli utenti BlueXP  su questo account.
+** *Invia e-mail ogni <Day> a <email address>*: Selezionare questa opzione se si desidera inviare un'e-mail ogni <Day> a un indirizzo e-mail specifico.
+
+
+. Selezionare *Crea policy*.
+
+
+
+TIP: La visualizzazione dei risultati nella pagina Criteri potrebbe richiedere fino a 15 minuti.
