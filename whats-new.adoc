@@ -18,6 +18,29 @@ Scopri le novità della classificazione BlueXP.
 
 
 
+== 14 aprile 2025
+
+
+
+=== Versione 1,42
+
+Questa versione di classificazione BlueXP  include:
+
+.Scansione in blocco per ambienti di lavoro
+La classificazione BlueXP  supporta ora le operazioni di massa per gli ambienti di lavoro. È possibile scegliere di attivare le scansioni di mappatura, attivare le scansioni di mappatura e classificazione, disattivare le scansioni o creare una configurazione personalizzata tra i volumi in ambiente di lavoro. Se si effettua una selezione per un singolo volume, questa sovrascrive la selezione in blocco. Per eseguire un'operazione bulk, accedere alla pagina **Configurazione** ed effettuare la selezione.
+
+.Scaricare il rapporto di indagine localmente
+La classificazione BlueXP  ora supporta la possibilità di scaricare i report di analisi dei dati localmente per la visualizzazione nel browser. Se si sceglie l'opzione locale, l'analisi dei dati è disponibile solo nel formato CSV e visualizza solo le prime 10.000 righe di dati.
+
+Per ulteriori informazioni, vedere link:task-investigate-data.html#create-the-data-investigation-report["Esaminare i dati memorizzati nella propria organizzazione con la classificazione BlueXP "].
+
+.Assegnare la priorità alle scansioni di classificazione
+La classificazione BlueXP  ora supporta la possibilità di assegnare priorità alle scansioni di mappa e classificazione oltre alle scansioni di sola mappatura. La prioritizzazione delle scansioni Map & Classify è supportata durante e prima dell'inizio delle scansioni. Se si sceglie di assegnare la priorità a una scansione mentre è in corso, vengono assegnate priorità sia alla scansione di mappatura che alla scansione di classificazione.
+
+Per ulteriori informazioni, vedere link:task-managing-repo-scanning.html#prioritize-scans["Assegnare priorità alle scansioni"].
+
+
+
 == 10 marzo 2025
 
 
@@ -47,7 +70,7 @@ Questa versione fornisce il supporto per Red Hat Enterprise Linux v9,5 oltre all
 I seguenti sistemi operativi richiedono l'utilizzo del motore del contenitore Podman e richiedono la classificazione BlueXP  versione 1,30 o superiore: Red Hat Enterprise Linux versione 8,8, 8,10, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5.
 
 .Assegnare priorità alle scansioni
-Quando si eseguono scansioni di sola mappatura, è possibile assegnare priorità alle scansioni più importanti. Questa funzione è utile quando si hanno molti ambienti di lavoro e si desidera garantire che le scansioni ad alta priorità vengano completate per prime.
+Quando si eseguono scansioni solo mapping, è possibile assegnare la priorità alle scansioni più importanti. Questa funzione è utile quando si hanno molti ambienti di lavoro e si desidera garantire che le scansioni ad alta priorità vengano completate per prime.
 
 Per impostazione predefinita, le scansioni vengono accodate in base all'ordine in cui vengono avviate. Grazie alla possibilità di assegnare priorità alle scansioni, è ora possibile spostarle in primo piano sulla coda. È possibile assegnare priorità a più scansioni. La priorità viene indicata in un ordine di primo ingresso e primo uscita, ovvero la prima scansione assegnata all'utente viene spostata in primo piano nella coda; la seconda scansione assegnata all'utente diventa seconda nella coda e così via.
 
@@ -55,12 +78,7 @@ La priorità viene concessa una tantum. Le riscansioni automatiche dei dati di m
 
 La prioritizzazione è limitata a link:concept-cloud-compliance.html["scansioni di sola mappatura"]; non è disponibile per le scansioni mappa e classificazione.
 
-Per modificare la priorità:
-
-. Dal menu classificazione BlueXP , selezionare *Configurazione*.
-. Selezionare le risorse a cui assegnare la priorità.
-. Dall'opzione azioni..., selezionare *prioritizza scansione*.
-
+Per ulteriori informazioni, vedere link:task-managing-repo-scanning.html#prioritize-scans["Assegnare priorità alle scansioni"].
 
 .Riprovare tutte le scansioni
 La classificazione BlueXP  ora supporta la possibilità di ripetere in batch tutte le scansioni non riuscite.

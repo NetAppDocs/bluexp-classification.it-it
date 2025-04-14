@@ -283,8 +283,12 @@ Se la classificazione BlueXP sta scansionando file (dati non strutturati), direc
 
 I file sono suddivisi in file con un numero fisso di righe o record:
 
-* CSV - 200.000 record
 * JSON - 100.000 record
+* CSV - 200.000 record
++
+
+NOTE: È possibile scaricare una versione del file CSV da visualizzare in questo browser. Questa versione è limitata a 10.000 record.
+
 
 
 *Cosa è incluso nel rapporto di analisi dei dati*
@@ -344,9 +348,11 @@ Il *Structured Data Report* include le seguenti informazioni sulle tabelle di da
 .Procedura per generare il rapporto
 . Nella pagina analisi dati, selezionare il image:button_download.png["pulsante download"] pulsante in alto a destra della pagina.
 . Scegliere il tipo di rapporto: CSV o JSON.
-. Fornire un **Nome rapporto**.
-. Selezionare un ambiente di lavoro ** e **Volume**
-. Fornire un percorso della cartella di destinazione **.
+. Immettere un **Nome rapporto**.
+. Se si sceglie CSV per il tipo di rapporto, selezionare **locale** per scaricare il rapporto nel browser. Nota questa opzione limita il referto alle prime 10.000 righe. Con questa opzione non sono richieste altre opzioni.
++
+Per la relazione completa, selezionare **ambiente di lavoro** quindi scegliere **ambiente di lavoro** e **Volume** dai rispettivi menu a discesa. Fornire un percorso della cartella di destinazione **.
+
 . Selezionare **Scarica rapporto**.
 +
 image:screenshot_compliance_investigation_report2.png["Una schermata della pagina Download Investigation Report con diverse opzioni."]

@@ -81,6 +81,22 @@ image:screenshot_compliance_repo_scan_all.png["Una schermata che mostra come con
 
 
 
+== Assegnare priorità alle scansioni
+
+È possibile assegnare la priorità alle scansioni più importanti - solo mappatura o Mappa e classificazione. La possibilità di assegnare priorità alle scansioni consente di garantire che le scansioni ad alta priorità vengano completate per prime.
+
+Per impostazione predefinita, le scansioni vengono accodate in base all'ordine in cui vengono avviate. Grazie alla possibilità di assegnare priorità alle scansioni, è ora possibile spostarle in primo piano sulla coda. È possibile assegnare priorità a più scansioni. La priorità viene indicata in un ordine di primo ingresso e primo uscita, ovvero la prima scansione assegnata all'utente viene spostata in primo piano nella coda; la seconda scansione assegnata all'utente diventa seconda nella coda e così via.
+
+La priorità viene concessa una tantum. Le riscansioni automatiche dei dati di mappatura vengono eseguite nell'ordine predefinito.
+
+.Fasi
+. Dal menu classificazione BlueXP , selezionare *Configurazione*.
+. Selezionare le risorse a cui assegnare la priorità.
+. Dall'opzione azioni `...`, selezionare *prioritizza scansione*.
+
+
+
+
 == Interrompere la ricerca di un repository
 
 È possibile interrompere la scansione di un repository (ad esempio, un volume) se non è più necessario monitorarlo per verificarne la conformità. Per eseguire questa operazione, disattivare la scansione. Quando la scansione viene disattivata, tutte le informazioni e l'indicizzazione relative a quel volume vengono rimosse dal sistema e la ricarica per la scansione dei dati viene interrotta.
