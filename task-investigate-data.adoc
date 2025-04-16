@@ -30,7 +30,7 @@ NOTE: Le funzionalità descritte in questa sezione sono disponibili solo se si �
 .Fasi
 . Dal menu classificazione BlueXP , selezionare *analisi*.
 . Nella pagina analisi dati, effettuare una delle seguenti operazioni:
-. Per scaricare il contenuto della pagina come report dopo averlo rifinito, selezionare il image:button_download.png["pulsante download"] pulsante. <<Data Investigation Report,Fare clic qui per ulteriori informazioni sul report Data Investigation>>.
+. Per scaricare il contenuto della pagina come report dopo averlo rifinito, selezionare il image:button_download.png["pulsante download"] pulsante.
 +
 image:screenshot_compliance_investigation_filtered.png["Una schermata dei filtri disponibili quando si perfezionano i risultati nella pagina di analisi."]
 
@@ -161,7 +161,7 @@ Utilizzare il seguente filtro per visualizzare i dati in base ai criteri.
 | Filtro | Dettagli 
 
 
-| Policy | Selezionare una o più policy. Vai link:task-using-policies.html["qui"^] per visualizzare l'elenco dei criteri esistenti e creare criteri personalizzati. 
+| Policy | Selezionare una o più policy. Andare link:task-using-policies.html["qui"] a visualizzare l'elenco dei criteri esistenti e a creare criteri personalizzati. 
 |===
 *Filtra dati per stato analisi*
 
@@ -194,7 +194,7 @@ Utilizzare il seguente filtro per visualizzare i file duplicati nello storage.
 
 == Visualizzare i metadati dei file
 
-Oltre a mostrare l'ambiente di lavoro e il volume in cui si trova il file, i metadati mostrano molte più informazioni, incluse le autorizzazioni per i file, il proprietario del file e l'eventuale presenza di duplicati di questo file. Queste informazioni sono utili se si prevede di link:task-using-policies.html["Creare policy"]visualizzare tutte le informazioni che è possibile utilizzare per filtrare i dati.
+Oltre a mostrare l'ambiente di lavoro e il volume in cui si trova il file, i metadati mostrano molte più informazioni, incluse le autorizzazioni per i file, il proprietario del file e l'eventuale presenza di duplicati di questo file. Queste informazioni sono utili se si prevede di link:task-using-policies.html["creare policy"]visualizzare tutte le informazioni che è possibile utilizzare per filtrare i dati.
 
 Non tutte le informazioni sono disponibili per tutte le fonti di dati, proprio ciò che è appropriato per quella fonte di dati. Ad esempio, il nome del volume e le autorizzazioni non sono rilevanti per i file di database.
 

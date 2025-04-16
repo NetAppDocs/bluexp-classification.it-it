@@ -194,11 +194,11 @@ Per informazioni dettagliate sulle differenze tra le scansioni Mapping e Classif
 
 == Informazioni classificate dalla classificazione BlueXP 
 
-La classificazione BlueXP raccoglie, indicizza e assegna categorie ai dati (file). I dati indicizzati dalla classificazione BlueXP includono quanto segue:
+La classificazione BlueXP  raccoglie, indicizza e assegna categorie ai seguenti dati:
 
 * *Metadati standard* sui file: Il tipo di file, le sue dimensioni, le date di creazione e modifica, e così via.
-* *Dati personali*: Dati personali (PII) quali indirizzi e-mail, numeri di identificazione o numeri di carta di credito. link:task-controlling-private-data.html#view-files-that-contain-personal-data["Scopri di più sui dati personali"^].
-* *Dati personali sensibili*: Tipi speciali di dati personali sensibili (SPII), quali dati sanitari, origine etnica o opinioni politiche, come definito dal GDPR e da altre normative sulla privacy. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data["Scopri di più sui dati personali sensibili"^].
+* *Dati personali*: Informazioni personali identificabili (PII) quali indirizzi e-mail, numeri di identificazione o numeri di carta di credito, che la classificazione BlueXP  identifica utilizzando parole, stringhe e modelli specifici nei file. link:task-controlling-private-data.html#view-files-that-contain-personal-data["Scopri di più sui dati personali"^].
+* *Dati personali sensibili*: Tipi speciali di dati personali sensibili (SPII), quali dati sanitari, origine etnica o opinioni politiche, come definito dal regolamento generale sulla protezione dei dati (GDPR) e da altre normative sulla privacy. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data["Scopri di più sui dati personali sensibili"^].
 * *Categorie*: La classificazione BlueXP prende i dati sottoposti a scansione e li divide in diversi tipi di categorie. Le categorie sono argomenti basati sull'analisi ai del contenuto e dei metadati di ciascun file. link:task-controlling-private-data.html#view-files-by-categories["Scopri di più sulle categorie"^].
 * *Tipi*: La classificazione BlueXP prende i dati sottoposti a scansione e li suddivide in base al tipo di file. link:task-controlling-private-data.html#view-files-by-file-types["Scopri di più sui tipi"^].
 * *Riconoscimento delle entità dei nomi*: La classificazione BlueXP  utilizza l'intelligenza artificiale per estrarre i nomi naturali delle persone dai documenti. link:task-generating-compliance-reports.html["Scopri come rispondere alle richieste di accesso ai soggetti dati"^].

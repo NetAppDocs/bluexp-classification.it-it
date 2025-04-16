@@ -58,7 +58,7 @@ Viene visualizzato il dashboard Governance.
 *** Varie (categoria generale "Altro")
 
 
-** *File duplicati* - file duplicati in altre posizioni nelle origini dati che si stanno eseguendo la scansione. link:task-investigate-data.html#filter-data-by-duplicates["Scopri quali tipi di file duplicati vengono visualizzati"].
+** *File duplicati* - file duplicati in altre posizioni nelle origini dati che si stanno eseguendo la scansione. link:task-investigate-data.html["Scopri quali tipi di file duplicati vengono visualizzati"].
 
 
 

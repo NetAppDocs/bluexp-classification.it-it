@@ -329,7 +329,7 @@ Questa versione includeva alcuni miglioramenti minori.
 La release ha inoltre rimosso le seguenti opzioni:
 
 * L'opzione per attivare la raccolta del registro di controllo è stata disattivata.
-* Durante l'analisi Directory, l'opzione per calcolare il numero di dati personali identificabili (PII) per directory non è disponibile. Fare riferimento a. link:task-investigate-data.html#filter-data-by-sensitivity-and-content["Esaminare i dati memorizzati nella propria organizzazione"].
+* Durante l'analisi Directory, l'opzione per calcolare il numero di dati personali identificabili (PII) per directory non è disponibile. Fare riferimento alla link:task-investigate-data.html["Esaminare i dati memorizzati nella propria organizzazione"].
 * L'opzione per integrare i dati utilizzando le etichette AIP (Azure Information Protection) è stata disattivata. Fare riferimento a. link:task-org-private-data.html["Organizzare i dati privati"].
 
 
