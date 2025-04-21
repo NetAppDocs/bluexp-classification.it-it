@@ -56,7 +56,7 @@ Le lingue in cui questi elementi possono essere riconosciuti sono identificate n
 | Password | Sì | ✓ | ✓ | ✓ |  | ✓ 
 
 
-.57+| Identificatori nazionali | TFN australiano (Tax file Number) | Sì | ✓ | ✓ | ✓ |  |  
+.88+| Identificatori nazionali | TFN australiano (Tax file Number) | Sì | ✓ | ✓ | ✓ |  |  
 
 
 | Patente di guida australiana | Sì | ✓ | ✓ | ✓ |  |  
@@ -87,6 +87,99 @@ Le lingue in cui questi elementi possono essere riconosciuti sono identificate n
 
 
 | ID bulgaro (UCN) | Sì | ✓ | ✓ | ✓ |  |  
+
+
+| Numeri delle informazioni bancarie canadesi - numero di conto | Sì | ✓ |  |  |  |  
+
+
+| Numeri delle informazioni bancarie canadesi - numero di transito | Sì | ✓ |  |  |  |  
+
+
+| Cittadinanza canadese/numero di residenza permanente - numero carta PR (UCI) | Sì | ✓ |  |  |  |  
+
+
+| Patente di guida canadese - Alberta | Sì | ✓ |  |  |  |  
+
+
+| Patente di guida canadese - British Columbia | Sì | ✓ |  |  |  |  
+
+
+| Patente di guida canadese - Manitoba | Sì | ✓ |  |  |  |  
+
+
+| Patente di guida canadese - nuovo Brunswick | Sì | ✓ |  |  |  |  
+
+
+| Patente di guida canadese - Terranova e Labrador | Sì | ✓ |  |  |  |  
+
+
+| Patente di guida canadese - territori del nord-ovest | Sì | ✓ |  |  |  |  
+
+
+| Patente di guida canadese - Nova Scotia | Sì | ✓ |  |  |  |  
+
+
+| Patente di guida canadese - Nunavut | Sì | ✓ |  |  |  |  
+
+
+| Patente di guida canadese - Ontario | Sì | ✓ |  |  |  |  
+
+
+| Patente di guida canadese - Isola del Principe Edoardo | Sì | ✓ |  |  |  |  
+
+
+| Patente di guida canadese - Quebec | Sì | ✓ |  |  |  |  
+
+
+| Patente di guida canadese - Saskatchewan | Sì | ✓ |  |  |  |  
+
+
+| Patente di guida canadese - Yukon | Sì | ✓ |  |  |  |  
+
+
+| Numero della carta sanitaria canadese - Alberta PHIN | Sì | ✓ |  |  |  |  
+
+
+| Numero della carta sanitaria canadese - British Columbia PHIN | Sì | ✓ |  |  |  |  
+
+
+| Numero della carta sanitaria canadese - Manitoba PHIN | Sì | ✓ |  |  |  |  
+
+
+| Numero della carta sanitaria canadese - PHIN | Sì | ✓ |  |  |  |  
+
+
+| Numero della carta sanitaria canadese - Newfoundland e Labrador PHIN | Sì | ✓ |  |  |  |  
+
+
+| Numero della carta sanitaria canadese - PHIN territori del nord-ovest | Sì | ✓ |  |  |  |  
+
+
+| Numero della carta sanitaria canadese - Nova Scotia PHIN | Sì | ✓ |  |  |  |  
+
+
+| Numero della carta sanitaria canadese - Nunavut PHIN | Sì | ✓ |  |  |  |  
+
+
+| Numero della carta sanitaria canadese - Ontario PHIN | Sì | ✓ |  |  |  |  
+
+
+| Numero della carta sanitaria canadese - Prince Edward Island PHIN | Sì | ✓ |  |  |  |  
+
+
+| Numero della carta sanitaria canadese - Quebec PHIN | Sì | ✓ |  |  |  |  
+
+
+| Numero della carta sanitaria canadese - Saskatchewan PHIN | Sì | ✓ |  |  |  |  
+
+
+| Numero della carta sanitaria canadese - Yukon PHIN | Sì | ✓ |  |  |  |  
+
+
+| Numero di passaporto canadese | Sì | ✓ |  |  |  |  
+
+
+| Numero di previdenza sociale canadese (SIN) | Sì | ✓ |  |  |  |  
 
 
 | ID croato (OIB) | Sì | ✓ | ✓ | ✓ |  |  
@@ -209,10 +302,7 @@ Le lingue in cui questi elementi possono essere riconosciuti sono identificate n
 | ID svedese | Sì | ✓ | ✓ | ✓ |  |  
 
 
-| Texas driver's License | Sì | ✓ | ✓ | ✓ |  |  
-
-
-| REGNO UNITO ID (NINO) | Sì | ✓ | ✓ | ✓ |  |  
+| ID REGNO UNITO (NINO) | Sì | ✓ | ✓ | ✓ |  |  
 
 
 | USA California driver's License | Sì | ✓ | ✓ | ✓ |  |  
@@ -222,6 +312,9 @@ Le lingue in cui questi elementi possono essere riconosciuti sono identificate n
 
 
 | USA New York driver's License | Sì | ✓ | ✓ | ✓ |  |  
+
+
+| Patente di guida USA Texas | Sì | ✓ | ✓ | ✓ |  |  
 
 
 | Numero di previdenza sociale (SSN) USA | Sì | ✓ | ✓ | ✓ |  |  
