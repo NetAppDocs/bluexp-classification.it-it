@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-using-policies.html 
 keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense 
-summary: Le policy sono come un elenco preferito di filtri personalizzati che forniscono i risultati della ricerca nella pagina di analisi per le query di conformità più frequenti. La classificazione BlueXP offre una serie di policy predefinite basate sulle richieste più comuni dei clienti. È possibile creare policy personalizzate che forniscano risultati per ricerche specifiche della propria organizzazione. 
+summary: Filtri personalizzati per i criteri che forniscono i risultati della ricerca nella pagina di indagine per le query di conformità più frequenti. La classificazione BlueXP  fornisce una serie di criteri predefiniti basati su richieste comuni oppure è possibile crearne di personalizzati. 
 ---
 = Assegna policy ai dati con classificazione BlueXP 
 :hardbreaks:
@@ -25,15 +25,15 @@ Le policy offrono le seguenti funzionalità:
 
 La scheda *Policies* nella dashboard di conformità elenca tutti i criteri predefiniti e personalizzati disponibili in questa istanza della classificazione BlueXP.
 
-image:screenshot_compliance_highlights_tab.png["Schermata della scheda Criteri nella dashboard di classificazione di BlueXP."]
+I criteri vengono inoltre visualizzati nell'elenco dei filtri nella pagina di analisi.
 
-Inoltre, i criteri vengono visualizzati nell'elenco dei filtri nella pagina di analisi.
+image:screenshot_compliance_highlights_tab.png["Schermata della scheda Criteri nella dashboard di classificazione di BlueXP."]
 
 
 
 == Visualizzare i risultati dei criteri nella pagina di analisi
 
-Per visualizzare i risultati di un criterio nella pagina analisi, fare clic sul image:screenshot_gallery_options.gif["Pulsante More (Altro)"] Per un criterio specifico, quindi selezionare *esamina risultati*.
+Per visualizzare i risultati di un criterio nella pagina di analisi, selezionare il  pulsante corrispondente a un criterio specifico, image:screenshot_gallery_options.gif["Pulsante More (Altro)"]quindi selezionare *esamina risultati*.
 
 image:screenshot_compliance_highlights_investigate.png["Schermata della selezione dei risultati di analisi per un criterio specifico dalla scheda Criteri."]
 
@@ -44,16 +44,16 @@ image:screenshot_compliance_highlights_investigate.png["Schermata della selezion
 È possibile creare policy personalizzate che forniscano risultati per le ricerche specifiche della propria organizzazione. I risultati vengono restituiti per tutti i file e le directory (condivisioni e cartelle) che corrispondono ai criteri di ricerca.
 
 .Fasi
-. Dalla pagina Data Investigation (analisi dati), definire la ricerca selezionando tutti i filtri che si desidera utilizzare. Vedere link:task-investigate-data.html["Filtraggio dei dati nella pagina Data Investigation"^] per ulteriori informazioni.
-. Una volta che tutte le caratteristiche del filtro sono esattamente come desiderate, fare clic su *Create Policy from this search* (Crea policy da questa ricerca).
+. Nella scheda analisi, definire una ricerca selezionando i filtri che si desidera utilizzare. Per ulteriori informazioni, vedere link:task-investigate-data.html["Filtraggio dei dati nella pagina di analisi"] .
+. Una volta impostate tutte le caratteristiche del filtro a proprio piacimento, selezionare *Crea criterio da questa ricerca*.
 +
-image:screenshot_compliance_save_as_highlight.png["Una schermata che mostra come salvare una query filtrata come policy."]
+image:screenshot_compliance_save_as_highlight.png["Schermata che mostra come salvare una query filtrata come criterio."]
 
 . Assegnare un nome al criterio e selezionare altre azioni che possono essere eseguite dal criterio:
 +
 .. Immettere un nome e una descrizione univoci.
 .. Se si desidera, selezionare la casella per eliminare automaticamente i file che corrispondono ai parametri dei criteri.
-.. Fare clic su *Crea policy*.
+.. Selezionare *Crea policy*.
 +
 image:screenshot_compliance_save_highlight2.png["Una schermata che mostra come configurare il criterio e salvarlo."]
 
@@ -68,30 +68,27 @@ Il nuovo criterio viene visualizzato nella scheda Criteri.
 
 == Modifica criteri
 
-È possibile modificare qualsiasi criterio per un criterio esistente creato in precedenza. Questo può essere particolarmente utile se si desidera modificare la query (gli elementi definiti utilizzando filtri) per aggiungere o rimuovere determinati parametri.
+È possibile modificare i criteri di un criterio esistente per modificare la query (gli elementi definiti utilizzando filtri) e aggiungere o rimuovere determinati parametri.
 
-Per i criteri predefiniti, è possibile modificare solo l'invio di notifiche e-mail e l'aggiunta di etichette AIP. Non è possibile modificare altri valori.
+Non è possibile modificare i criteri predefiniti.
 
 .Fasi
-. Nella pagina elenco criteri, fare clic su *Modifica* per il criterio che si desidera modificare.
+. Nella pagina elenco criteri, selezionare *Modifica criterio* per il criterio che si desidera modificare.
 +
 image:screenshot_compliance_edit_policy_button.png["Una schermata che mostra come avviare una modifica di un criterio esistente."]
 
-. Se si desidera modificare gli elementi di questa pagina (nome, descrizione, invio di notifiche e-mail e aggiunta di etichette AIP), apportare la modifica e fare clic su *Save Policy* (Salva policy).
+. Apportare le modifiche ai campi nome e descrizione. Per modificare solo questi campi, selezionare *Salva criterio*.
 +
-Se si desidera modificare i filtri per la query salvata, fare clic su *Edit Query* (Modifica query).
+Per modificare i filtri per la query salvata, selezionare *Modifica query*.
 
 +
 image:screenshot_compliance_edit_policy_dialog.png["Schermata che mostra la selezione del pulsante Edit Query (Modifica query) nella pagina Edit Policy (Modifica policy)."]
 
-. Nella pagina di analisi che definisce la query, modificare la query aggiungendo, rimuovendo o personalizzando i filtri, quindi fare clic su *Save Changes* (Salva modifiche).
+. Nella pagina di analisi che definisce la query, modificare la query aggiungendo, rimuovendo o personalizzando i filtri, quindi selezionare *Salva modifiche* .
 +
 image:screenshot_compliance_edit_policy_query.png["Una schermata che mostra come modificare la query modificando le impostazioni del filtro."]
 
 
-
-.Risultato
-La policy viene modificata immediatamente. Tutte le azioni definite per quel criterio per inviare un'email, aggiungere etichette AIP o eliminare file si verificheranno al successivo interno.
 
 
 
@@ -99,7 +96,7 @@ La policy viene modificata immediatamente. Tutte le azioni definite per quel cri
 
 È possibile eliminare qualsiasi criterio personalizzato creato se non è più necessario. Non è possibile eliminare i criteri predefiniti.
 
-Per eliminare un criterio, fare clic sul image:screenshot_gallery_options.gif["Pulsante More (Altro)"] Per una policy specifica, fare clic su *Delete Policy* (Elimina policy), quindi fare nuovamente clic su *Delete Policy* (Elimina policy) nella finestra di dialogo di conferma.
+Per eliminare un criterio, selezionare il image:screenshot_gallery_options.gif["Pulsante More (Altro)"] pulsante relativo a un criterio specifico, selezionare *Elimina criterio*, quindi selezionare nuovamente *Elimina criterio* nella finestra di dialogo di conferma.
 
 
 
