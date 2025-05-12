@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-using-policies.html 
 keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense 
-summary: Filtri personalizzati per i criteri che forniscono i risultati della ricerca nella pagina di indagine per le query di conformità più frequenti. La classificazione BlueXP  fornisce una serie di criteri predefiniti basati su richieste comuni oppure è possibile crearne di personalizzati. 
+summary: Le ricerche salvate sono filtri personalizzati che forniscono i risultati della ricerca nella pagina di analisi per le query di conformità più comuni. La classificazione BlueXP  fornisce una serie di ricerche salvate predefinite in base alle richieste comuni oppure è possibile crearne di proprie. 
 ---
-= Assegna policy ai dati con classificazione BlueXP 
+= Gestire le ricerche salvate con la classificazione BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,75 +14,66 @@ summary: Filtri personalizzati per i criteri che forniscono i risultati della ri
 
 
 [role="lead"]
-Le policy sono come un elenco preferito di filtri personalizzati che forniscono i risultati della ricerca nella pagina di analisi per le query di conformità più frequenti. La classificazione BlueXP fornisce un set di policy predefinite basate su richieste comuni dei clienti. È possibile creare criteri personalizzati che forniscono risultati per ricerche specifiche dell'organizzazione.
-
-Le policy offrono le seguenti funzionalità:
-
-* <<Elenco dei criteri predefiniti,Criteri predefiniti>> NetApp in base alle richieste degli utenti
-* Possibilità di creare policy personalizzate
-* Aprire la pagina delle analisi con i risultati delle policy in un click
+La classificazione BlueXP  supporta il salvataggio delle query di ricerca. Con una ricerca salvata, è possibile creare filtri personalizzati per ordinare le query frequenti della pagina di analisi dei dati. La classificazione BlueXP  include anche ricerche salvate predefinite basate su richieste comuni.
 
 
-La scheda *Policies* nella dashboard di conformità elenca tutti i criteri predefiniti e personalizzati disponibili in questa istanza della classificazione BlueXP.
+NOTE: Nelle versioni di classificazione BlueXP  precedenti alla 1,43, le ricerche salvate sono state chiamate xref:task-using-policies-deprecated.adoc[policy].
 
-I criteri vengono inoltre visualizzati nell'elenco dei filtri nella pagina di analisi.
+La scheda *ricerche salvate* nel dashboard conformità elenca tutte le ricerche salvate predefinite e personalizzate disponibili in questa istanza della classificazione BlueXP .
 
-image:screenshot_compliance_highlights_tab.png["Schermata della scheda Criteri nella dashboard di classificazione di BlueXP."]
+Le ricerche salvate vengono visualizzate anche nell'elenco dei filtri nella pagina di analisi.
+
+image:screenshot_compliance_highlights_tab.png["Schermata della scheda ricerche salvate nel dashboard di classificazione BlueXP ."]
 
 
 
-== Visualizzare i risultati dei criteri nella pagina di analisi
+== Visualizzare i risultati delle ricerche salvate nella pagina di analisi
 
-Per visualizzare i risultati di un criterio nella pagina di analisi, selezionare il  pulsante corrispondente a un criterio specifico, image:screenshot_gallery_options.gif["Pulsante More (Altro)"]quindi selezionare *esamina risultati*.
+Per visualizzare i risultati di una ricerca salvata nella pagina di analisi, selezionare il  pulsante per una ricerca specifica, image:screenshot_gallery_options.gif["Pulsante More (Altro)"]quindi selezionare *risultati analisi*.
 
-image:screenshot_compliance_highlights_investigate.png["Schermata della selezione dei risultati di analisi per un criterio specifico dalla scheda Criteri."]
+image:screenshot_compliance_highlights_investigate.png["Schermata di selezione dei risultati di analisi per una ricerca specifica dalla scheda Ricerca Saced."]
 
 
 
-== Creare policy personalizzate
+== Creare ricerche salvate personalizzate
 
-È possibile creare policy personalizzate che forniscano risultati per le ricerche specifiche della propria organizzazione. I risultati vengono restituiti per tutti i file e le directory (condivisioni e cartelle) che corrispondono ai criteri di ricerca.
+È possibile creare ricerche salvate personalizzate che forniscono risultati per le query specifiche dell'organizzazione. I risultati vengono restituiti per tutti i file e le directory (condivisioni e cartelle) che corrispondono ai criteri di ricerca.
 
 .Fasi
 . Nella scheda analisi, definire una ricerca selezionando i filtri che si desidera utilizzare. Per ulteriori informazioni, vedere link:task-investigate-data.html["Filtraggio dei dati nella pagina di analisi"] .
-. Una volta impostate tutte le caratteristiche del filtro a proprio piacimento, selezionare *Crea criterio da questa ricerca*.
+. Una volta impostate tutte le caratteristiche del filtro a tuo piacimento, seleziona *Crea ricerca salvata*.
 +
-image:screenshot_compliance_save_as_highlight.png["Schermata che mostra come salvare una query filtrata come criterio."]
+image:screenshot_compliance_save_as_highlight.png["Schermata che mostra come salvare una query filtrata come ricerca salvata."]
 
-. Assegnare un nome al criterio e selezionare altre azioni che possono essere eseguite dal criterio:
+. Assegnare un nome alla ricerca salvata e aggiungere una descrizione. Il nome deve essere univoco.
+. Selezionare *Crea ricerca salvata*.
 +
-.. Immettere un nome e una descrizione univoci.
-.. Se si desidera, selezionare la casella per eliminare automaticamente i file che corrispondono ai parametri dei criteri.
-.. Selezionare *Crea policy*.
-+
-image:screenshot_compliance_save_highlight2.png["Una schermata che mostra come configurare il criterio e salvarlo."]
-
-
+image:screenshot_compliance_save_highlight2.png["Schermata che mostra come configurare la ricerca salvata e salvarla."]
 
 
 
 .Risultato
-Il nuovo criterio viene visualizzato nella scheda Criteri.
+La nuova ricerca salvata viene visualizzata nella scheda Ricerche salvate.
 
 
 
-== Modifica criteri
+== Modificare le ricerche salvate
 
-È possibile modificare i criteri di un criterio esistente per modificare la query (gli elementi definiti utilizzando filtri) e aggiungere o rimuovere determinati parametri.
+È possibile modificare i criteri di una ricerca salvata creata su misura per modificare la query (gli elementi definiti utilizzando filtri) e aggiungere o rimuovere determinati parametri.
 
-Non è possibile modificare i criteri predefiniti.
+Non è possibile modificare le ricerche salvate predefinite.
 
 .Fasi
-. Nella pagina elenco criteri, selezionare *Modifica criterio* per il criterio che si desidera modificare.
+. Nella pagina ricerche salvate, selezionare *Modifica ricerca salvata* per la ricerca che si desidera modificare.
 +
-image:screenshot_compliance_edit_policy_button.png["Una schermata che mostra come avviare una modifica di un criterio esistente."]
+image:screenshot_compliance_edit_policy_button.png["Una schermata che mostra Modifica ricerca salvata."]
 
-. Apportare le modifiche ai campi nome e descrizione. Per modificare solo questi campi, selezionare *Salva criterio*.
+. Apportare le modifiche ai campi nome e descrizione. Per modificare solo questi campi, selezionare *Salva*.
 +
 Per modificare i filtri per la query salvata, selezionare *Modifica query*.
 
 +
-image:screenshot_compliance_edit_policy_dialog.png["Schermata che mostra la selezione del pulsante Edit Query (Modifica query) nella pagina Edit Policy (Modifica policy)."]
+image:screenshot_compliance_edit_policy_dialog.png["Schermata di selezione del pulsante Modifica query nella pagina Modifica ricerca salvata."]
 
 . Nella pagina di analisi che definisce la query, modificare la query aggiungendo, rimuovendo o personalizzando i filtri, quindi selezionare *Salva modifiche* .
 +
@@ -92,34 +83,48 @@ image:screenshot_compliance_edit_policy_query.png["Una schermata che mostra come
 
 
 
-== Delete Policy (Elimina policy)
+== Eliminare le ricerche salvate
 
-È possibile eliminare qualsiasi criterio personalizzato creato se non è più necessario. Non è possibile eliminare i criteri predefiniti.
+È possibile eliminare qualsiasi ricerca salvata personalizzata se non è più necessaria. Non è possibile eliminare le ricerche salvate predefinite
 
-Per eliminare un criterio, selezionare il image:screenshot_gallery_options.gif["Pulsante More (Altro)"] pulsante relativo a un criterio specifico, selezionare *Elimina criterio*, quindi selezionare nuovamente *Elimina criterio* nella finestra di dialogo di conferma.
-
-
-
-== Elenco dei criteri predefiniti
-
-La classificazione BlueXP offre le seguenti policy definite dal sistema:
-
-[cols="25,40,40"]
-|===
-| Nome | Descrizione | Logica 
+Per eliminare una ricerca salvata, selezionare il image:screenshot_gallery_options.gif["Pulsante More (Altro)"] pulsante per una ricerca specifica, selezionare *Elimina ricerca salvata*, quindi selezionare nuovamente *Elimina ricerca* nella finestra di dialogo di conferma.
 
 
-| Dati privati - obsoleti in 7 anni | File contenenti informazioni personali o sensibili, modificati da oltre 7 anni fa. | File contenenti informazioni personali o sensibili, modificati da oltre 7 anni fa 
+
+== Ricerche predefinite
+
+La classificazione BlueXP  fornisce le seguenti query di ricerca definite dal sistema:
+
+* **Denominazione delle persone - rischio elevato**
++
+File con più di 50 nomi di soggetti di dati
+
+* **Indirizzi e-mail - rischio elevato**
++
+File con più di 50 indirizzi e-mail o colonne di database con più del 50% delle righe contenenti indirizzi e-mail
+
+* **Dati personali - rischio elevato**
++
+File con più di 20 identificatori di dati personali o colonne di database con oltre il 50% delle righe contenenti identificatori di dati personali
+
+* **Dati privati - obsoleti oltre 7 anni**
++
+File contenenti informazioni personali o sensibili, ultima modifica più di 7 anni fa
+
+* **Protezione - alta**
++
+File o colonne di database contenenti una password, informazioni sulla carta di credito, numero IBAN o numero di previdenza sociale
+
+* **Protezione - bassa**
++
+File a cui non si accede da più di 3 anni
+
+* **Proteggi - Medio**
++
+File che contengono file o colonne di database con identificatori di dati personali, inclusi numeri di identificazione, numeri di identificazione fiscale, numeri di patente di guida, ID medicinali o numeri di passaporto
+
+* **Dati personali sensibili - rischio elevato**
++
+File con più di 20 identificatori di dati personali sensibili o colonne di database con più del 50% delle righe contenenti dati personali sensibili
 
 
-| Nomi dei soggetti dei dati - rischio elevato | File con oltre 50 nomi di soggetti dati. | File con oltre 50 nomi di soggetti dati 
-
-
-| Indirizzi e-mail - rischio elevato | File con oltre 50 indirizzi e-mail o colonne DB con oltre il 50% delle righe contenenti indirizzi e-mail | File con oltre 50 indirizzi e-mail o colonne DB con oltre il 50% delle righe contenenti indirizzi e-mail 
-
-
-| Dati personali - rischio elevato | File con oltre 20 ID dati personali o colonne DB con oltre il 50% delle righe contenenti identificativi dati personali. | File con oltre 20 colonne personali o DB con oltre il 50% delle righe contenenti dati personali 
-
-
-| Dati personali sensibili - rischio elevato | File con oltre 20 identificatori di dati personali sensibili o colonne di database con oltre il 50% delle righe contenenti dati personali sensibili. | File con oltre 20 colonne personali sensibili o DB con oltre il 50% delle righe contenenti dati personali sensibili 
-|===

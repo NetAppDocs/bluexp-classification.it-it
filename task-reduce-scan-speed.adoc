@@ -21,11 +21,9 @@ Se attivata, la scansione lenta viene utilizzata su tutte le origini dati, non �
 
 TIP: La velocità di scansione non può essere ridotta durante la scansione dei database.
 
-[]
-====
-*NOTA* queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP 1,30 e precedenti.
 
-====
+NOTE: Queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP  1,30 e precedenti.
+
 .Fasi
 . Nella parte inferiore della pagina _Configuration_, spostare il dispositivo di scorrimento verso destra per attivare la scansione lenta.
 +

@@ -18,11 +18,9 @@ La classificazione BlueXP registra le attività di gestione eseguite sui file di
 
 È possibile visualizzare il contenuto dei file di registro di controllo della classificazione BlueXP o scaricarli per verificare quali modifiche sono state apportate e quando. Ad esempio, è possibile visualizzare la richiesta emessa, l'ora della richiesta e i dettagli, ad esempio la posizione di origine nel caso in cui un file sia stato cancellato o la posizione di origine e destinazione nel caso in cui un file sia stato spostato.
 
-[]
-====
-*NOTA* queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP 1,30 e precedenti.
 
-====
+NOTE: Queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP  1,30 e precedenti.
+
 
 
 == Contenuto del file di log
@@ -33,11 +31,11 @@ Ogni riga del registro di controllo contiene informazioni in questo formato:
 
 * Data e ora - indicatore orario completo dell'evento
 * Stato - INFORMAZIONI, AVVISO
-* Tipo di azione (eliminare, copiare, spostare, creare policy, aggiornare policy, Eseguire nuovamente la scansione dei file, scaricare il report JSON, ecc.)
+* Tipo di azione (eliminazione, copia, spostamento, creazione di una ricerca salvata, aggiornamento della ricerca salvata, nuova scansione dei file, download del report JSON, ecc.)
 * Nome del file (se l'azione è rilevante per un file)
 * Dettagli dell'azione - cosa è stato fatto: Dipende dall'azione
 +
-** Nome policy
+** Nome ricerca salvato
 ** Per lo spostamento - origine e destinazione
 ** Per la copia - origine e destinazione
 ** Per tag - nome tag

@@ -23,7 +23,7 @@ Alcune funzionalità non sono disponibili con la classificazione BlueXP durante 
 | Tipo | Descrizione | MongoDB | SQL Server | MySQL | Oracle | PostgreSQL | SAP HANA | RDS Amazon 
 
 
-.9+| Azioni | Crea policy | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+.9+| Azioni | Crea ricerca salvata | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
 
 
 | Tag | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
@@ -50,7 +50,7 @@ Alcune funzionalità non sono disponibili con la classificazione BlueXP durante 
 | Etichetta | x | x | x | x | x | x | x 
 
 
-.25+| Filtri | Policy | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+.25+| Filtri | Ricerche salvate | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
 
 
 | Stato dell'analisi della scansione | ✓ | ✓ | ✓ | ✓ | ✓ |  |  

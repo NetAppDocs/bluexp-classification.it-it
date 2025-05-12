@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-controlling-governance-data.html 
-keywords: savings, stale data, non-business data, duplicate data, age or data, size of data, highlights, policies, data discovery assessment report, data mapping overview report, data repositories, data sensitivity, sensitive data, wide permissions, open permissions, age of data, size of data, classification, categories, file types, costs of data 
+keywords: savings, stale data, non-business data, duplicate data, age or data, size of data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, categories, file types, costs of data 
 summary: Ottieni il controllo dei costi relativi ai dati sulle risorse di storage della tua organizzazione. La classificazione BlueXP identifica la quantità di dati obsoleti, dati non aziendali, file duplicati e file molto grandi nei sistemi, in modo da poter decidere se rimuovere o tierare alcuni file in uno storage a oggetti meno costoso. 
 ---
 = Visualizza i dettagli di governance sui dati archiviati nell'organizzazione con la classificazione BlueXP 
@@ -68,16 +68,16 @@ NOTE: Se una qualsiasi delle origini dati implementa il tiering dei dati, i dati
 
 
 
-=== Rivedere le policy con il maggior numero di risultati
+=== Esaminare le ricerche salvate con il maggior numero di risultati
 
-Nell'area _Policies_, le policy con il maggior numero di risultati vengono visualizzate all'inizio dell'elenco.
+Nella scheda _ricerche salvate_, le ricerche con il maggior numero di risultati vengono visualizzate in cima all'elenco.
 
-Per informazioni dettagliate sui criteri, vedere link:task-using-policies.html["Assegnare policy ai dati"].
+Per informazioni dettagliate sulle ricerche salvate, vedere link:task-using-policies.html["Creare ricerche salvate"].
 
 .Fasi
 . Dal menu classificazione BlueXP , selezionare *Governance*.
-. Nel riquadro Governance (Amministrazione) > Policies (Criteri), selezionare il nome di un criterio per visualizzare i risultati nella pagina di analisi.
-. Selezionare *Visualizza tutto* per visualizzare l'elenco di tutti i criteri disponibili. Nell'area _Policies_, le policy con il maggior numero di risultati vengono visualizzate all'inizio dell'elenco.
+. Nel dashboard Governo, individuare il riquadro delle ricerche salvate. Selezionare il nome di una ricerca salvata per visualizzare i risultati nella pagina di analisi.
+. Selezionare *Visualizza tutto* per visualizzare l'elenco di tutte le ricerche salvate disponibili. Nell'area _ricerche salvate_, le ricerche con il maggior numero di risultati vengono visualizzate all'inizio dell'elenco.
 
 
 
@@ -116,7 +116,7 @@ image:screenshot-compliance-report-buttons.png["Una schermata della dashboard di
 
 
 .Risultato
-La classificazione BlueXP genera un report in formato .pdf che puoi esaminare e inviare ad altri gruppi, se necessario.
+La classificazione BlueXP genera un report in formato PDF che è possibile rivedere e inviare ad altri gruppi in base alle esigenze.
 
 
 

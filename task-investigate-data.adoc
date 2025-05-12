@@ -152,16 +152,16 @@ Utilizzare i seguenti filtri per visualizzare i dati in base al tipo di storage.
 
 | Repository di storage | Selezionare il repository di storage, ad esempio un volume o uno schema. 
 |===
-*Filtra i dati in base alle policy*
+*Filtrare i dati in base alle ricerche salvate*
 
-Utilizzare il seguente filtro per visualizzare i dati in base ai criteri.
+Utilizzare il seguente filtro per visualizzare i dati in base alle ricerche salvate.
 
 [cols="30,60"]
 |===
 | Filtro | Dettagli 
 
 
-| Policy | Selezionare una o più policy. Andare link:task-using-policies.html["qui"] a visualizzare l'elenco dei criteri esistenti e a creare criteri personalizzati. 
+| Ricerca salvata | Selezionare una o più ricerche salvate. Accedere a link:task-using-policies.html["scheda ricerche salvate"]per visualizzare l'elenco delle ricerche salvate esistenti e crearne di nuove. 
 |===
 *Filtra dati per stato analisi*
 
@@ -194,7 +194,7 @@ Utilizzare il seguente filtro per visualizzare i file duplicati nello storage.
 
 == Visualizzare i metadati dei file
 
-Oltre a mostrare l'ambiente di lavoro e il volume in cui si trova il file, i metadati mostrano molte più informazioni, incluse le autorizzazioni per i file, il proprietario del file e l'eventuale presenza di duplicati di questo file. Queste informazioni sono utili se si prevede di link:task-using-policies.html["creare policy"]visualizzare tutte le informazioni che è possibile utilizzare per filtrare i dati.
+Oltre a mostrare l'ambiente di lavoro e il volume in cui si trova il file, i metadati mostrano molte più informazioni, incluse le autorizzazioni per i file, il proprietario del file e l'eventuale presenza di duplicati di questo file. Queste informazioni sono utili se si prevede di link:task-using-policies.html["creare ricerche salvate"]visualizzare tutte le informazioni che è possibile utilizzare per filtrare i dati.
 
 Non tutte le informazioni sono disponibili per tutte le fonti di dati, proprio ciò che è appropriato per quella fonte di dati. Ad esempio, il nome del volume e le autorizzazioni non sono rilevanti per i file di database.
 
@@ -267,7 +267,7 @@ image:screenshot_compliance_duplicate_file.png["Una schermata che mostra come vi
 
 +
 
-TIP: È possibile utilizzare il valore "hash del file" fornito in questa pagina e immetterlo direttamente nella pagina di analisi per cercare un file duplicato specifico in qualsiasi momento, oppure utilizzarlo in un criterio.
+TIP: È possibile utilizzare il valore "hash file" fornito in questa pagina e immetterlo direttamente nella pagina di ricerca per cercare un file duplicato specifico in qualsiasi momento, oppure utilizzarlo in una ricerca salvata.
 
 
 
@@ -364,24 +364,18 @@ Viene visualizzata una finestra di dialogo che indica che i report sono in fase 
 
 
 
-== Creare un criterio basato sui filtri selezionati
+== Crea una ricerca salvata in base ai filtri selezionati
 
-Potrebbe essere utile salvare come criterio i filtri selezionati nella pagina analisi dati. In questo modo, è possibile eseguire gli stessi filtri in qualsiasi momento senza doverli riselezionare.
+È possibile creare una ricerca salvata per i filtri di ricerca utilizzati di frequente nella pagina analisi dati per replicare facilmente le query di ricerca.
 
 .Fasi
 . Dal menu classificazione BlueXP , selezionare *analisi*.
-. Nella pagina analisi dati, selezionare i filtri che si desidera utilizzare per creare un criterio.
-. Nella parte inferiore del pannello filtro, selezionare *Crea criterio da questa ricerca*.
-. Immettere un nome e una descrizione per il criterio.
+. Nella pagina analisi dati, selezionare i filtri che si desidera utilizzare per creare una ricerca salvata.
+. Nella parte inferiore del pannello filtro, selezionare *Crea ricerca salvata da questa ricerca*.
+. Immettere un nome e una descrizione per la ricerca salvata.
 . Scegli una delle seguenti opzioni:
-+
-** *Elimina automaticamente i file corrispondenti a questo criterio (ogni giorno): Selezionare questa opzione se si desidera eliminare i file corrispondenti al criterio.
-** *Invia aggiornamenti tramite e-mail relativi a questo criterio agli utenti BlueXP  su questo account ogni <day/week/month>*: Selezionare questa opzione se si desidera inviare aggiornamenti tramite e-mail relativi al criterio agli utenti BlueXP  su questo account.
-** *Invia e-mail ogni <Day> a <email address>*: Selezionare questa opzione se si desidera inviare un'e-mail ogni <Day> a un indirizzo e-mail specifico.
-
-
-. Selezionare *Crea policy*.
+. Selezionare *Crea ricerca salvata*.
 
 
 
-TIP: La visualizzazione dei risultati nella pagina Criteri potrebbe richiedere fino a 15 minuti.
+TIP: La visualizzazione dei risultati nella pagina Ricerche salvate potrebbe richiedere fino a 15 minuti.

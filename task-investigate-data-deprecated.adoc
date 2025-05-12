@@ -27,9 +27,9 @@ NOTE: Le funzionalità descritte in questa sezione sono disponibili solo se si �
 
 
 
-=== Filtra i dati in base a tag, etichette, utenti assegnati e policy
+=== Filtrare i dati in base a tag, etichette, utenti assegnati e ricerche salvate
 
-Utilizzare i seguenti filtri per visualizzare i dati in base a tag, etichette AIP, utenti assegnati o criteri.
+Utilizzare i seguenti filtri per visualizzare i dati in base a tag, etichette AIP, utenti assegnati o ricerche salvate.
 
 []
 ====
@@ -41,7 +41,7 @@ Utilizzare i seguenti filtri per visualizzare i dati in base a tag, etichette AI
 | Filtro | Dettagli 
 
 
-| Policy | Selezionare una o più policy. Vai link:task-using-policies.html["qui"^] per visualizzare l'elenco dei criteri esistenti e creare criteri personalizzati. 
+| Ricerche salvate | Selezionare una o più ricerche salvate. Andare link:task-using-policies.html["qui"^] per visualizzare l'elenco delle ricerche esistenti o crearne una nuova. 
 
 
 | Etichetta | Selezionare link:task-org-private-data.html#categorize-your-data-using-aip-labels["Etichette AIP"] assegnati ai file. 

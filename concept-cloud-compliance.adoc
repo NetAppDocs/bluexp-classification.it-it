@@ -49,7 +49,7 @@ La classificazione BlueXP è in grado di identificare i dati potenzialmente a ri
 * Identificare tutti i file e le directory (condivisioni e cartelle) con autorizzazioni aperte che sono esposte all'intera organizzazione o al pubblico.
 * Identificare i dati sensibili che risiedono al di fuori della posizione iniziale dedicata.
 * Rispettare le policy di conservazione dei dati.
-* Utilizzare _Policies_ per rilevare automaticamente i nuovi problemi di sicurezza, in modo che il personale addetto alla sicurezza possa intervenire immediatamente.
+* Utilizzare __Policies__ per rilevare automaticamente i nuovi problemi di sicurezza, in modo che il personale addetto alla sicurezza possa intervenire immediatamente.
 
 
 .Ottimizzare l'utilizzo dello storage

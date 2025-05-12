@@ -16,11 +16,9 @@ summary: È possibile gestire la modalità di scansione dei dati in ciascuno deg
 [role="lead"]
 La classificazione BlueXP esegue una scansione continua dei dati per rilevare modifiche incrementali nei repository aggiunti. Tuttavia, il sistema richiede tempo per eseguire la scansione di tutti gli ambienti e non esiste alcun metodo per controllare l'ordine dei repository sottoposti a scansione. Se è necessario eseguire una nuova scansione di un determinato repository immediatamente in modo che le modifiche vengano riflesse nel sistema, è possibile selezionare il repository e rieseguire la scansione. In questo modo è possibile assegnare priorità alla scansione di determinati dati prima di altri dati. Dopo l'azione di riscan (scansione), il repository selezionato torna a essere sottoposto a scansione secondo il normale programma di classificazione BlueXP.
 
-[]
-====
-*NOTA* queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP 1,30 e precedenti.
 
-====
+NOTE: Queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP  1,30 e precedenti.
+
 La classificazione BlueXP supporta la scansione delle directory su tutti i tipi di origine dati, ad eccezione di Amazon S3 e dei database. Attualmente supportiamo la riscansione di una singola directory (cartella o condivisione) o di più directory. Il supporto futuro includerà la riscansione di altri tipi di repository (file, database, ecc.).
 
 * Quando si esegue una nuova scansione di una directory, tutti i file all'interno della directory vengono riconfigurati, ma le sottocartelle all'interno della directory non vengono riutilizzate.

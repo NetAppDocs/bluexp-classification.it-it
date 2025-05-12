@@ -16,11 +16,12 @@ summary: 'La classificazione BlueXP offre diversi modi per aggiungere un elenco 
 [role="lead"]
 La classificazione BlueXP offre diversi modi per aggiungere un elenco personalizzato di "dati personali" che la classificazione BlueXP identificherà nelle scansioni future, fornendo un quadro completo della posizione dei dati potenzialmente sensibili in _tutti_ i file della tua organizzazione.
 
-[]
-====
-*NOTA* queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP 1,30 e precedenti.
 
-====
+IMPORTANT: Per creare una classificazione personalizzata nella versione 1,43 e successive, vedere xref:task-custom-classification.adoc[Creare una classificazione personalizzata].
+
+
+NOTE: Queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP  1,30 e precedenti.
+
 * È possibile aggiungere identificatori univoci in base a colonne specifiche nei database che si sta eseguendo la scansione.
 * È possibile aggiungere parole chiave personalizzate da un file di testo -- queste parole sono identificate all'interno dei dati.
 * È possibile aggiungere un modello personale utilizzando un'espressione regolare (regex) -- il regex viene aggiunto ai modelli predefiniti esistenti.
@@ -36,7 +37,7 @@ NOTE: Le funzionalità descritte in questa sezione sono disponibili solo se si �
 
 == Aggiungere identificatori di dati personali personalizzati dai database
 
-Una funzionalità chiamata _Data Fusion_ consente di eseguire la scansione dei dati delle organizzazioni per identificare se gli identificatori univoci dei database sono presenti in qualsiasi altra origine dati. È possibile scegliere gli identificatori aggiuntivi che la classificazione BlueXP ricerca nelle relative scansioni selezionando una o più colonne specifiche in una tabella di database. Ad esempio, il diagramma riportato di seguito mostra come i dati Fusion vengono utilizzati per eseguire la scansione di volumi, bucket e database per individuare le occorrenze di tutti gli ID cliente dal database Oracle.
+_Data Fusion_ consente di eseguire la scansione dei dati dell'organizzazione per identificare se gli identificatori univoci dei database sono presenti in qualsiasi altra origine dati. È possibile scegliere gli identificatori aggiuntivi che la classificazione BlueXP  cercherà nelle relative scansioni selezionando una o più colonne specifiche in una tabella di database. Ad esempio, il diagramma riportato di seguito mostra come i dati Fusion vengono utilizzati per eseguire la scansione di volumi, bucket e database per individuare le occorrenze di tutti gli ID cliente dal database Oracle.
 
 image:diagram_compliance_data_fusion.png["Un diagramma che mostra come il contenuto dei database può essere utilizzato come origine per identificare i file che contengono gli stessi dati."]
 
