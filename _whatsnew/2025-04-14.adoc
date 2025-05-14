@@ -9,9 +9,9 @@
 Questa versione di classificazione BlueXP  include:
 
 .Scansione in blocco per ambienti di lavoro
-La classificazione BlueXP  supporta ora le operazioni di massa per gli ambienti di lavoro. È possibile scegliere di attivare le scansioni di mappatura, attivare le scansioni di mappatura e classificazione, disattivare le scansioni o creare una configurazione personalizzata tra i volumi in ambiente di lavoro. Se si effettua una selezione per un singolo volume, questa sovrascrive la selezione in blocco. Per eseguire un'operazione bulk, accedere alla pagina **Configurazione** ed effettuare la selezione.
+La classificazione BlueXP  supporta le operazioni bulk per gli ambienti di lavoro. È possibile scegliere di attivare le scansioni di mappatura, attivare le scansioni di mappatura e classificazione, disattivare le scansioni o creare una configurazione personalizzata tra i volumi in ambiente di lavoro. Se si effettua una selezione per un singolo volume, questa sovrascrive la selezione in blocco. Per eseguire un'operazione bulk, accedere alla pagina **Configurazione** ed effettuare la selezione.
 
 .Scaricare il rapporto di indagine localmente
-La classificazione BlueXP  ora supporta la possibilità di scaricare i report di analisi dei dati localmente per la visualizzazione nel browser. Se si sceglie l'opzione locale, l'analisi dei dati è disponibile solo nel formato CSV e visualizza solo le prime 10.000 righe di dati.
+La classificazione BlueXP  supporta la possibilità di scaricare localmente i report di analisi dei dati da visualizzare nel browser. Se si sceglie l'opzione locale, l'analisi dei dati è disponibile solo nel formato CSV e visualizza solo le prime 10.000 righe di dati.
 
 Per ulteriori informazioni, vedere link:task-investigate-data.html#create-the-data-investigation-report["Esaminare i dati memorizzati nella propria organizzazione con la classificazione BlueXP "].

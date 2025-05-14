@@ -321,7 +321,7 @@ Tenere presente che tutte le attività di installazione vengono registrate duran
 +
 ** Sono necessarie le informazioni sul server proxy (indirizzo IP o nome host, porta di connessione, schema di connessione: https o http, nome utente e password).
 ** Se il proxy sta eseguendo l'intercettazione TLS, è necessario conoscere il percorso del sistema Linux di classificazione BlueXP in cui sono memorizzati i certificati della CA TLS.
-** Il proxy deve essere non trasparente, al momento non supportiamo proxy trasparenti.
+** Il proxy deve essere non trasparente. BlueXP  classificaiton attualmente non supporta proxy trasparenti.
 ** L'utente deve essere un utente locale. Gli utenti di dominio non sono supportati.
 
 

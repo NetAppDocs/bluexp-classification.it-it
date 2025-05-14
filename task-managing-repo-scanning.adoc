@@ -29,7 +29,7 @@ Alcune delle cose che è possibile modificare sono se un repository viene sottop
 * *Inizializzazione* (punto azzurro): La configurazione mappa o classificazione è attivata. Viene visualizzato per alcuni secondi prima di avviare lo stato "coda in sospeso".
 * *Coda in sospeso* (punto arancione): L'attività di scansione è in attesa di essere elencata nella coda di scansione.
 * *In coda* (punto arancione): L'attività è stata aggiunta correttamente alla coda di scansione. Il sistema avvia il mapping o la classificazione del volume all'arrivo del turno nella coda.
-* *In esecuzione* (punto verde): L'attività di scansione, che era in coda, viene ora eseguita nell'archivio di archiviazione selezionato.
+* *In esecuzione* (punto verde): L'attività di scansione, che si trovava nella coda, è in corso attivo nell'archivio di archiviazione selezionato.
 * *Terminato* (punto verde): La scansione del repository di archiviazione è completa.
 * *In pausa* (punto grigio): È stata selezionata l'opzione "Pausa" per sospendere la scansione. Mentre le modifiche del volume non vengono visualizzate nel sistema, le informazioni acquisite vengono comunque visualizzate.
 * *Errore* (punto rosso): Impossibile completare la scansione perché si sono verificati problemi. Se è necessario completare un'azione, l'errore viene visualizzato nella descrizione comandi sotto la colonna "azione richiesta".  In caso contrario, il sistema visualizza uno stato di "errore" e tenta di eseguire il ripristino. Al termine, lo stato cambia.
@@ -85,7 +85,7 @@ image:screenshot_compliance_repo_scan_all.png["Una schermata che mostra come con
 
 È possibile assegnare la priorità alle scansioni di sola mappatura più importanti o mappare e classificare le scansioni per garantire che vengano completate per prime le scansioni ad alta priorità.
 
-Per impostazione predefinita, le scansioni vengono accodate in base all'ordine in cui vengono avviate. Grazie alla possibilità di assegnare priorità alle scansioni, è ora possibile spostarle in primo piano sulla coda. È possibile assegnare priorità a più scansioni. La priorità viene indicata in un ordine di primo ingresso e primo uscita, ovvero la prima scansione assegnata all'utente viene spostata in primo piano nella coda; la seconda scansione assegnata all'utente diventa seconda nella coda e così via.
+Per impostazione predefinita, le scansioni vengono accodate in base all'ordine in cui vengono avviate. Con la possibilità di assegnare priorità alle scansioni, è possibile spostare le scansioni in primo piano nella coda. È possibile assegnare priorità a più scansioni. La priorità viene indicata in un ordine di primo ingresso e primo uscita, ovvero la prima scansione assegnata all'utente viene spostata in primo piano nella coda; la seconda scansione assegnata all'utente diventa seconda nella coda e così via.
 
 La priorità viene concessa una tantum. Le riscansioni automatiche dei dati di mappatura vengono eseguite nell'ordine predefinito.
 

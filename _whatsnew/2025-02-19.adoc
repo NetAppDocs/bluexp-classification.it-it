@@ -16,7 +16,7 @@ I seguenti sistemi operativi richiedono l'utilizzo del motore del contenitore Po
 .Assegnare priorità alle scansioni di sola mappatura
 Quando si eseguono scansioni solo mapping, è possibile assegnare la priorità alle scansioni più importanti. Questa funzione è utile quando si hanno molti ambienti di lavoro e si desidera garantire che le scansioni ad alta priorità vengano completate per prime.
 
-Per impostazione predefinita, le scansioni vengono accodate in base all'ordine in cui vengono avviate. Grazie alla possibilità di assegnare priorità alle scansioni, è ora possibile spostarle in primo piano sulla coda. È possibile assegnare priorità a più scansioni. La priorità viene indicata in un ordine di primo ingresso e primo uscita, ovvero la prima scansione assegnata all'utente viene spostata in primo piano nella coda; la seconda scansione assegnata all'utente diventa seconda nella coda e così via.
+Per impostazione predefinita, le scansioni vengono accodate in base all'ordine in cui vengono avviate. Con la possibilità di assegnare priorità alle scansioni, è possibile spostare le scansioni in primo piano nella coda. È possibile assegnare priorità a più scansioni. La priorità viene indicata in un ordine di primo ingresso e primo uscita, ovvero la prima scansione assegnata all'utente viene spostata in primo piano nella coda; la seconda scansione assegnata all'utente diventa seconda nella coda e così via.
 
 La priorità viene concessa una tantum. Le riscansioni automatiche dei dati di mappatura vengono eseguite nell'ordine predefinito.
 
@@ -25,9 +25,9 @@ La prioritizzazione è limitata a link:concept-cloud-compliance.html["scansioni 
 Per ulteriori informazioni, vedere link:task-managing-repo-scanning.html#prioritize-scans["Assegnare priorità alle scansioni"].
 
 .Riprovare tutte le scansioni
-La classificazione BlueXP  ora supporta la possibilità di ripetere in batch tutte le scansioni non riuscite.
+La classificazione BlueXP  supporta la possibilità di ripetere in batch tutte le scansioni non riuscite.
 
-È ora possibile ritentare le scansioni in un'operazione batch con la funzione **Riprova tutto**. Se le scansioni di classificazione non vengono eseguite correttamente a causa di un problema temporaneo, ad esempio un'interruzione della rete, è possibile riprovare tutte le scansioni contemporaneamente con un solo pulsante invece di riprovare singolarmente. Le scansioni possono essere riavviate tutte le volte necessarie.
+È possibile ripetere le scansioni in un'operazione batch con la funzione **Riprova tutto**. Se le scansioni di classificazione non vengono eseguite correttamente a causa di un problema temporaneo, ad esempio un'interruzione della rete, è possibile riprovare tutte le scansioni contemporaneamente con un solo pulsante invece di riprovare singolarmente. Le scansioni possono essere riavviate tutte le volte necessarie.
 
 Per riprovare tutte le scansioni:
 

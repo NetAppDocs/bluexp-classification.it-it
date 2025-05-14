@@ -21,7 +21,7 @@ La classificazione BlueXP può inviare avvisi e-mail agli utenti BlueXP nel tuo 
 Per aggiungere aggiornamenti e-mail a un criterio esistente, procedere come segue.
 
 .Fasi
-. Nella pagina elenco criteri, fare clic su *Modifica* per il criterio in cui si desidera aggiungere (o modificare) l'impostazione e-mail.
+. Nella pagina elenco criteri, selezionare *Modifica* per il criterio in cui si desidera aggiungere (o modificare) l'impostazione e-mail.
 +
 image:screenshot_compliance_add_email_alert_1.png["Una schermata che mostra come modificare un criterio esistente."]
 
@@ -34,11 +34,11 @@ image:screenshot_compliance_add_email_alert_2.png["Una schermata che mostra come
 
 
 
-. Fare clic su *Salva criterio*. Nella descrizione del criterio viene visualizzato l'intervallo di invio dell'e-mail.
+. Selezionare *Salva criterio*. Nella descrizione del criterio viene visualizzato l'intervallo di invio dell'e-mail.
 
 
 .Risultato
-La prima e-mail viene inviata ora se sono presenti risultati dal criterio, ma solo se alcuni file soddisfano i criteri. Non vengono inviate informazioni personali nelle e-mail di notifica. L'e-mail indica che sono presenti file che corrispondono ai criteri e fornisce un collegamento ai risultati dei criteri.
+Viene inviato un messaggio e-mail se i file soddisfano i criteri. Non vengono inviate informazioni personali nelle e-mail di notifica. L'e-mail indica che sono presenti file che corrispondono ai criteri e fornisce un collegamento ai risultati dei criteri.
 
 
 

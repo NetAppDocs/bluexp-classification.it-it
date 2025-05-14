@@ -144,7 +144,7 @@ Dopo aver aggiunto il regex, la classificazione BlueXP riavvia la scansione di t
 Per assistenza nella creazione dell'espressione regolare, fare riferimento alla sezione https://regex101.com/["Espressioni regolari 101"^]. Scegliere *Python* per il flavor per vedere i tipi di risultati che la classificazione BlueXP corrisponde all'espressione regolare. Il https://pythonium.net/regex["Pagina del tester Python Regex"^] è utile anche visualizzando una rappresentazione grafica dei pattern.
 
 
-NOTE: Attualmente non è consentito l'utilizzo di flag pattern quando si crea un regex - questo significa che non si dovrebbe utilizzare "/".
+NOTE: La classificazione BlueXP  non supporta i flag di pattern quando si crea un regex. Ciò significa che non si dovrebbe utilizzare "/".
 
 .Fasi
 . Dalla scheda _Impostazioni classificazione_, fare clic su *Aggiungi nuovo classificatore* per avviare la procedura guidata _Aggiungi classificatore personalizzato_.
