@@ -17,7 +17,7 @@ summary: Se necessario, è possibile impedire alla classificazione BlueXP di ese
 Se non si desidera più eseguire la scansione dei file utente da un determinato account OneDrive, da un account SharePoint specifico o da un account Google Drive, è possibile eliminare l'account dall'interfaccia di classificazione BlueXP e interrompere tutte le scansioni.
 
 .Fasi
-. Dalla pagina _Configuration_, fare clic su image:screenshot_gallery_options.gif["Pulsante More (Altro)"] Nella riga dell'account OneDrive, SharePoint o Google Drive, quindi fare clic su *Rimuovi account OneDrive*, *Rimuovi account SharePoint* o *Rimuovi account Google Drive*.
+. Dalla pagina _Configuration_, selezionare il image:button-gallery-options.gif["Pulsante More (Altro)"] pulsante nella riga per l'account OneDrive, SharePoint o Google Drive, quindi selezionare *Remove OneDrive account*, *Remove SharePoint account* o *Remove Google Drive account*.
 +
 image:screenshot_compliance_remove_onedrive.png["Schermata del pulsante Remove OneDrive (Rimuovi OneDrive) dalla pagina Scan Configuration (Configurazione scansione)."]
 

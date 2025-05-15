@@ -22,7 +22,7 @@ Se necessario, puoi impedire alla classificazione BlueXP di analizzare uno o pi�
 
 Quando si disattivano le scansioni, la classificazione BlueXP non esegue più la scansione dei dati nell'ambiente di lavoro e rimuove le informazioni indicizzate sulla conformità dall'istanza di classificazione BlueXP (i dati dell'ambiente di lavoro stesso non vengono cancellati).
 
-. Dalla pagina _Configuration_, fare clic su image:screenshot_gallery_options.gif["Pulsante More (Altro)"] Nella riga dell'ambiente di lavoro, quindi fare clic su *Disattiva rilevamento dati*.
+. Dalla pagina _Configuration_, selezionare il image:button-gallery-options.gif["Pulsante More (Altro)"] pulsante nella riga per l'ambiente di lavoro, quindi *Deactivate Data Sense* (Disattiva rilevamento dati).
 
 
 image:screenshot_deactivate_compliance_scan.png["Una schermata dell'icona dell'azione in cui è possibile selezionare Disattiva classificazione BlueXP. Questa opzione è disponibile dopo aver selezionato un ambiente di lavoro dalla pagina Canvas."]
@@ -36,7 +36,7 @@ TIP: È inoltre possibile disattivare le scansioni di conformità per un ambient
 
 Se non si desidera più eseguire la scansione di un determinato database, è possibile eliminarlo dall'interfaccia di classificazione di BlueXP e interrompere tutte le scansioni.
 
-. Dalla pagina _Configuration_, fare clic su image:screenshot_gallery_options.gif["Pulsante More (Altro)"] Nella riga del database, quindi fare clic su *Remove DB Server* (Rimuovi server DB).
+. Nella pagina _Configuration_, selezionare il image:button-gallery-options.gif["Pulsante More (Altro)"] pulsante nella riga per il database, quindi *Remove DB Server*.
 
 
 image:screenshot_compliance_remove_db.png["Schermata del pulsante Remove DB Server (Rimuovi server DB) dalla pagina Scan Configuration (Configurazione scansione)."]
@@ -48,7 +48,7 @@ image:screenshot_compliance_remove_db.png["Schermata del pulsante Remove DB Serv
 Se non si desidera più eseguire la scansione dei file utente da un gruppo di condivisioni file, è possibile eliminare il gruppo di condivisioni file dall'interfaccia di classificazione BlueXP e interrompere tutte le scansioni.
 
 .Fasi
-. Dalla pagina _Configuration_, fare clic su image:screenshot_gallery_options.gif["Pulsante More (Altro)"] Nella riga del gruppo condivisioni file, quindi fare clic su *Rimuovi gruppo condivisioni file*.
+. Dalla pagina _Configuration_, selezionare il image:button-gallery-options.gif["Pulsante More (Altro)"] pulsante nella riga per il gruppo condivisioni file, quindi *Rimuovi gruppo condivisioni file*.
 +
 image:screenshot_compliance_remove_fileshare_group.png["Schermata del pulsante Remove file Share Group (Rimuovi gruppo di condivisione file) dalla pagina Scan Configuration (Configurazione scansione)."]
 

@@ -149,7 +149,7 @@ Il report contiene le seguenti informazioni:
 +
 image:screenshot-compliance-report-buttons.png["Una schermata della dashboard di governance che mostra come avviare il report di mappatura dei dati."]
 
-. Per personalizzare il nome della società visualizzato nella prima pagina del report, in alto a destra della pagina classificazione BlueXP , selezionare image:screenshot_gallery_options.gif["Il pulsante Altro"]. Quindi selezionare *Modifica nome società*. La volta successiva che si genera il rapporto, questo includerà il nuovo nome.
+. Per personalizzare il nome della società visualizzato nella prima pagina del report, in alto a destra della pagina classificazione BlueXP , selezionare image:button-gallery-options.gif["Il pulsante Altro"]. Quindi selezionare *Modifica nome società*. La volta successiva che si genera il rapporto, questo includerà il nuovo nome.
 
 
 .Risultato

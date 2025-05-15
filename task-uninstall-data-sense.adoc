@@ -24,11 +24,11 @@ I passaggi da utilizzare dipendono dal fatto che sia stata implementata la class
 
 Se non si desidera più utilizzare la classificazione BlueXP, è possibile disinstallare ed eliminare l'istanza di classificazione BlueXP dall'ambiente del provider cloud.
 
-. Nella parte superiore della pagina di classificazione di BlueXP, fare clic su image:screenshot_gallery_options.gif["Pulsante More (Altro)"] Quindi fare clic su *Uninstall Data Sense* (Disinstalla rilevamento dati).
+. Nella parte superiore della pagina di classificazione BlueXP , selezionare image:button-gallery-options.gif["Pulsante More (Altro)"] quindi *Disinstalla rilevamento dati*.
 +
 image:screenshot_compliance_uninstall.png["Schermata del pulsante per disinstallare il software di classificazione BlueXP."]
 
-. Nella finestra di dialogo _Uninstall Data Sense_, digitare *uninstall* per confermare che si desidera disconnettere l'istanza di classificazione BlueXP dal connettore BlueXP, quindi fare clic su *Uninstall* (Disinstalla).
+. Nella finestra di dialogo _Disinstalla rilevamento dati_, digitare *uninstall* per confermare che si desidera scollegare l'istanza di classificazione BlueXP  dal connettore BlueXP , quindi selezionare *Disinstalla*.
 . Accedere alla console del provider di servizi cloud ed eliminare l'istanza di classificazione BlueXP. L'istanza è denominata _CloudCompliance_ con un hash generato (UUID) concatenato ad essa. Ad esempio: _CloudCompliance-16b6564-38ad-4080-9a92-36f5fd2f71c7_
 +
 In questo modo si eliminano l'istanza e tutti i dati associati raccolti dalla classificazione BlueXP.
@@ -41,11 +41,11 @@ In questo modo si eliminano l'istanza e tutti i dati associati raccolti dalla cl
 
 È possibile disinstallare la classificazione BlueXP da un host se non si desidera più utilizzare la classificazione BlueXP o se si è verificato un problema che richiede la reinstallazione.
 
-. Nella parte superiore della pagina di classificazione di BlueXP, fare clic su image:screenshot_gallery_options.gif["Pulsante More (Altro)"] Quindi fare clic su *Uninstall Data Sense* (Disinstalla rilevamento dati).
+. Nella parte superiore della pagina di classificazione BlueXP , selezionare image:button-gallery-options.gif["Pulsante More (Altro)"] quindi *Disinstalla rilevamento dati*.
 +
 image:screenshot_compliance_uninstall.png["Schermata del pulsante per disinstallare il software di classificazione BlueXP."]
 
-. Nella finestra di dialogo _Uninstall Data Sense_, digitare *uninstall* per confermare che si desidera disconnettere l'istanza di classificazione BlueXP dal connettore BlueXP, quindi fare clic su *Uninstall* (Disinstalla).
+. Nella finestra di dialogo _Disinstalla rilevamento dati_, digitare *uninstall* per confermare che si desidera scollegare l'istanza di classificazione BlueXP  dal connettore BlueXP , quindi selezionare *Disinstalla*.
 . Per disinstallare il software dall'host, eseguire `cleanup.sh` lo script sul computer host di classificazione BlueXP , ad esempio:
 +
 [source, cli]

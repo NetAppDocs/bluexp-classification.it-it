@@ -130,11 +130,11 @@ image:screenshot_s3_enable_compliance.png["Schermata di attivazione del servizio
 +
 image:screenshot_s3_compliance_iam_role.png["Una schermata che mostra l'inserimento del ruolo AWS IAM per la classificazione BlueXP"]
 
-. Fare clic su *Enable* (attiva).
+. Selezionare *Abilita*.
 
 
 
-TIP: È inoltre possibile attivare le scansioni di conformità per un ambiente di lavoro dalla pagina di configurazione facendo clic su image:screenshot_gallery_options.gif["tre punti"] E selezionando *Activate BlueXP classification* (attiva classificazione BlueXP).
+TIP: È inoltre possibile attivare le scansioni di conformità per un ambiente di lavoro dalla pagina Configurazione selezionando il image:button-gallery-options.gif["tre punti"] pulsante, quindi *attiva classificazione BlueXP *.
 
 .Risultato
 BlueXP assegna il ruolo IAM all'istanza.

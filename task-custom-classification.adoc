@@ -13,7 +13,7 @@ summary: 'La classificazione BlueXP  consente di personalizzare la ricerca di i
 
 
 [role="lead"]
-Con la classificazione BlueXP , è possibile creare una ricerca personalizzata per le informazioni riservate. La ricerca può essere definita come ambito di un'espressione regolare o di una serie di parole chiave di prossimità.
+Con la classificazione BlueXP , è possibile creare una ricerca personalizzata per le informazioni riservate. La ricerca può essere definita come espressione regolare (regex).
 
 
 
@@ -22,14 +22,12 @@ Con la classificazione BlueXP , è possibile creare una ricerca personalizzata 
 La classificazione personalizzata è disponibile solo per le scansioni Map & Classify, non solo per le scansioni mapping. Questa funzione è attualmente in anteprima.
 
 .Fasi
-. Selezionare la scheda **classificazione personalizzata**.
-. Selezionare **Aggiungi nuovo classificatore**.
-. Aggiungere Nome e Descrizione per il nuovo classificatore.
+. Selezionare la scheda **classificazione personalizzata**. image:screenshot-custom-classification-tab.png["Schermata della pagina classificazione personalizzata."]
+. Selezionare il pulsante **Aggiungi nuovo classificatore**.
+. Aggiungere un Nome e una Descrizione per il nuovo classificatore.
 . Per aggiungere la personalizzazione come espressione regolare, selezionare **espressione regolare personalizzata** quindi **Avanti**.
-+
-.. Per un'espressione regolare, aggiungere il modello per rilevare le informazioni specifiche dei dati. Ad esempio, l'ID a 12 cifre che inizia con 201 è \B201\f\d(9)b. selezionare **convalida** per confermare la sintassi della voce.
-
-
+. Aggiungere un modello per rilevare le informazioni specifiche dei dati. Selezionare **convalida** per confermare la sintassi della voce. image:screenshot-create-logic-regex.png["Schermata della finestra di dialogo per creare un'espressione regolare."]
+. Selezionare **fatto** per creare la classificazione personalizzata.
 
 
 La nuova personalizzazione viene acquisita nella successiva scansione pianificata. Per visualizzare i risultati, vedere xref:task-generating-compliance-reports.html[Generare report sulla conformità].

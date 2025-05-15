@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-using-policies.html 
-keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense 
+keywords: compliance, privacy, filter data, highlights, policies, notifications, saved search, tags, data sense, edit query 
 summary: Le ricerche salvate sono filtri personalizzati che forniscono i risultati della ricerca nella pagina di analisi per le query di conformità più comuni. La classificazione BlueXP  fornisce una serie di ricerche salvate predefinite in base alle richieste comuni oppure è possibile crearne di proprie. 
 ---
 = Gestire le ricerche salvate con la classificazione BlueXP 
@@ -29,9 +29,9 @@ image:screenshot_compliance_highlights_tab.png["Schermata della scheda ricerche 
 
 == Visualizzare i risultati delle ricerche salvate nella pagina di analisi
 
-Per visualizzare i risultati di una ricerca salvata nella pagina di analisi, selezionare il  pulsante per una ricerca specifica, image:screenshot_gallery_options.gif["Pulsante More (Altro)"]quindi selezionare *risultati analisi*.
+Per visualizzare i risultati di una ricerca salvata nella pagina di analisi, selezionare il  pulsante per una ricerca specifica, image:button-gallery-options.gif["Pulsante More (Altro)"]quindi selezionare *risultati analisi*.
 
-image:screenshot_compliance_highlights_investigate.png["Schermata di selezione dei risultati di analisi per una ricerca specifica dalla scheda Ricerca Saced."]
+image:screenshot_compliance_highlights_investigate.png["Schermata di selezione dei risultati di analisi per una ricerca specifica dalla scheda di ricerca salvata."]
 
 
 
@@ -52,32 +52,31 @@ image:screenshot_compliance_save_highlight2.png["Schermata che mostra come confi
 
 
 
-.Risultato
-La nuova ricerca salvata viene visualizzata nella scheda Ricerche salvate.
+Una volta creata la ricerca, è possibile visualizzarla nella scheda **ricerche salvate**.
 
 
 
 == Modificare le ricerche salvate
 
-È possibile modificare i criteri di una ricerca salvata creata su misura per modificare la query (gli elementi definiti utilizzando filtri) e aggiungere o rimuovere determinati parametri.
+È possibile modificare i criteri di query per una ricerca salvata (ovvero i filtri definiti) per aggiungere o rimuovere determinati parametri.
 
 Non è possibile modificare le ricerche salvate predefinite.
 
 .Fasi
-. Nella pagina ricerche salvate, selezionare *Modifica ricerca salvata* per la ricerca che si desidera modificare.
+. Nella pagina ricerche salvate, selezionare *Modifica ricerca* per la ricerca che si desidera modificare.
 +
-image:screenshot_compliance_edit_policy_button.png["Una schermata che mostra Modifica ricerca salvata."]
+image:screenshot-edit-search.png["Una schermata che mostra Modifica ricerca salvata."]
 
-. Apportare le modifiche ai campi nome e descrizione. Per modificare solo questi campi, selezionare *Salva*.
+. Apportare le modifiche ai campi nome e descrizione. Per modificare solo i campi nome e descrizione, selezionare *Salva ricerca*.
 +
-Per modificare i filtri per la query salvata, selezionare *Modifica query*.
+Per modificare i filtri per la ricerca salvata, selezionare *Modifica query*.
 
 +
-image:screenshot_compliance_edit_policy_dialog.png["Schermata di selezione del pulsante Modifica query nella pagina Modifica ricerca salvata."]
+image:screenshot-edit-search-dialog.png["Schermata del pulsante Modifica query nella pagina Modifica ricerca salvata."]
 
-. Nella pagina di analisi che definisce la query, modificare la query aggiungendo, rimuovendo o personalizzando i filtri, quindi selezionare *Salva modifiche* .
+. Nella pagina di analisi, modificare la query. È possibile aggiungere, rimuovere o modificare i filtri. Per completare le modifiche, selezionare *Salva query per questa ricerca*.
 +
-image:screenshot_compliance_edit_policy_query.png["Una schermata che mostra come modificare la query modificando le impostazioni del filtro."]
+image:screenshot-edit-query.png["Una schermata che mostra come modificare la query modificando le impostazioni del filtro."]
 
 
 
@@ -85,9 +84,9 @@ image:screenshot_compliance_edit_policy_query.png["Una schermata che mostra come
 
 == Eliminare le ricerche salvate
 
-È possibile eliminare qualsiasi ricerca salvata personalizzata se non è più necessaria. Non è possibile eliminare le ricerche salvate predefinite
+È possibile eliminare qualsiasi ricerca salvata personalizzata se non è più necessaria. Non è possibile eliminare le ricerche salvate predefinite.
 
-Per eliminare una ricerca salvata, selezionare il image:screenshot_gallery_options.gif["Pulsante More (Altro)"] pulsante per una ricerca specifica, selezionare *Elimina ricerca salvata*, quindi selezionare nuovamente *Elimina ricerca* nella finestra di dialogo di conferma.
+Per eliminare una ricerca salvata, selezionare il image:button-gallery-options.gif["Pulsante More (Altro)"] pulsante per una ricerca specifica, selezionare *Elimina ricerca*, quindi selezionare nuovamente *Elimina ricerca* nella finestra di dialogo di conferma.
 
 
 
