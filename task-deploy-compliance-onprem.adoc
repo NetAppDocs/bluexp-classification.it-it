@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-deploy-compliance-onprem.html 
-keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, linux, ubuntu, cloud compliance access, privacy, compliance, on-premises, classification, pii, bluexp classification, docker, podman, install bluexp classification, cloud data sense, cds, rhel, linux host 
+keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, linux, ubuntu, cloud compliance access, privacy, compliance, on-premises 
 summary: 'Completare alcuni passaggi per installare la classificazione BlueXP su un host Linux nella rete o su un host Linux nel cloud con accesso a Internet. Come parte di questa installazione, sarà necessario implementare manualmente l"host Linux nella rete o nel cloud.' 
 ---
 = Installare la classificazione BlueXP su un host con accesso a Internet
@@ -313,7 +313,7 @@ https://youtu.be/XiPLaJpfJEI["Guarda questo video"^] Per vedere come installare 
 
 Tenere presente che tutte le attività di installazione vengono registrate durante l'installazione della classificazione BlueXP. In caso di problemi durante l'installazione, è possibile visualizzare il contenuto del registro di controllo dell'installazione. È scritto a. `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html["Per ulteriori informazioni, fare clic qui"].
 
-.Di cosa hai bisogno
+.Prima di iniziare
 * Verificare che il sistema Linux soddisfi i requisiti <<Preparare il sistema host Linux,requisiti dell'host>>.
 * Verificare che sul sistema siano installati i due pacchetti software prerequisiti (Docker Engine o Podman e Python 3).
 * Assicurarsi di disporre dei privilegi di root sul sistema Linux.

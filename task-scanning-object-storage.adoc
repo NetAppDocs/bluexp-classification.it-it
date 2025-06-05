@@ -17,9 +17,7 @@ summary: 'Completare alcuni passaggi per avviare la scansione dei dati all"inter
 Completare alcuni passaggi per avviare la scansione dei dati all'interno dello storage a oggetti direttamente con la classificazione BlueXP. La classificazione BlueXP consente di eseguire la scansione dei dati da qualsiasi servizio di storage a oggetti che utilizza il protocollo S3 (Simple Storage Service). Tra cui NetApp StorageGRID, IBM Cloud Object Store, Linode, B2 Cloud Storage, Amazon S3 e molto altro ancora.
 
 
-IMPORTANT: Le seguenti informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP  1,30 e precedenti.
-
-+ a partire dalla versione 1,31, la classificazione BlueXP  fa parte dell'offerta principale di BlueXP . Per ulteriori informazioni, vedere link:task-scanning-storagegrid.html["Eseguire la scansione dei dati StorageGRID"].
+IMPORTANT: Le seguenti informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP  1,30 e precedenti. + a partire dalla versione 1,31, la classificazione BlueXP  fa parte dell'offerta principale di BlueXP . Per ulteriori informazioni, vedere link:task-scanning-storagegrid.html["Eseguire la scansione dei dati StorageGRID"].
 
 
 

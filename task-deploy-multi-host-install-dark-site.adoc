@@ -20,12 +20,10 @@ Per le configurazioni molto grandi in cui si esegue la scansione di petabyte di 
 
 Seguire questi passaggi quando si installa il software di classificazione BlueXP su più host on-premise in un ambiente offline.
 
-[]
-====
-*NOTA* queste informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP 1,30 e precedenti.
 
-====
-.Di cosa hai bisogno
+NOTE: Le seguenti informazioni sono rilevanti solo per le versioni precedenti della classificazione BlueXP  1,30 e precedenti.
+
+.Prima di iniziare
 * Verificare che tutti i sistemi Linux per i nodi Manager e scanner soddisfino i requisiti dell'host.
 * Verificare di aver installato i due pacchetti software prerequisiti (Docker Engine o Podman e Python 3).
 * Assicurarsi di disporre dei privilegi di root sui sistemi Linux.
