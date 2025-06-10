@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-controlling-governance-data.html 
-keywords: savings, stale data, non-business data, duplicate data, age or data, size of data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, categories, file types, costs of data 
+keywords: savings, stale data, non-business data, duplicate data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, categories, file types, costs of data 
 summary: Ottieni il controllo dei costi relativi ai dati sulle risorse di storage della tua organizzazione. La classificazione BlueXP identifica la quantità di dati obsoleti, dati non aziendali, file duplicati e file molto grandi nei sistemi, in modo da poter decidere se rimuovere o tierare alcuni file in uno storage a oggetti meno costoso. 
 ---
 = Visualizza i dettagli di governance sui dati archiviati nell'organizzazione con la classificazione BlueXP 
@@ -40,11 +40,11 @@ Viene visualizzato il dashboard Governance.
 
 === Rivedere le opportunità di risparmio
 
-È possibile esaminare gli elementi nell'area _Saving Opportunities_ per verificare se sono presenti dati da eliminare o da assegnare allo storage a oggetti meno costoso.
+Il componente _Opportunità di risparmio_ mostra i dati che è possibile eliminare o spostare in un archivio oggetti meno costoso. I dati in _Opportunità di risparmio_ vengono aggiornati ogni 2 ore e possono essere aggiornati manualmente.
 
 .Fasi
 . Dal menu classificazione BlueXP , selezionare *Governance*.
-. All'interno di ogni riquadro opportunità di risparmio del dashboard Governance, selezionare *Ottimizza archiviazione* per visualizzare i risultati filtrati nella pagina di analisi. È possibile esaminare gli elementi nell'area _Saving Opportunities_ per verificare se sono presenti dati da eliminare o da assegnare allo storage a oggetti meno costoso.
+. All'interno di ogni riquadro opportunità di risparmio del dashboard Governance, selezionare *Ottimizza archiviazione* per visualizzare i risultati filtrati nella pagina di analisi. Per scoprire quali dati dovresti eliminare o spostare in un archivio meno costoso, esamina le _Opportunità di risparmio_.
 +
 ** *Dati obsoleti* - dati modificati più di 3 anni fa.
 ** *Dati non aziendali* - dati considerati non correlati al business, in base alla categoria o al tipo di file. Ciò include:
@@ -70,13 +70,13 @@ NOTE: Se una qualsiasi delle origini dati implementa il tiering dei dati, i dati
 
 === Esaminare le ricerche salvate con il maggior numero di risultati
 
-Nella scheda _ricerche salvate_, le ricerche con il maggior numero di risultati vengono visualizzate in cima all'elenco.
+Nella scheda _ricerche salvate_, le ricerche con il maggior numero di risultati vengono visualizzate in cima all'elenco. Questi dati vengono aggiornati ogni due ore.
 
 Per informazioni dettagliate sulle ricerche salvate, vedere link:task-using-policies.html["Creare ricerche salvate"].
 
 .Fasi
 . Dal menu classificazione BlueXP , selezionare *Governance*.
-. Nel dashboard Governo, individuare il riquadro delle ricerche salvate. Selezionare il nome di una ricerca salvata per visualizzare i risultati nella pagina di analisi.
+. Nella dashboard Governance, individua il riquadro Ricerche salvate. Selezionare il nome di una ricerca salvata per visualizzare i risultati nella pagina di analisi.
 . Selezionare *Visualizza tutto* per visualizzare l'elenco di tutte le ricerche salvate disponibili. Nell'area _ricerche salvate_, le ricerche con il maggior numero di risultati vengono visualizzate all'inizio dell'elenco.
 
 
@@ -122,7 +122,7 @@ La classificazione BlueXP genera un report in formato PDF che è possibile rived
 
 == Creare il rapporto Panoramica mappatura dati
 
-Il rapporto di panoramica sulla mappatura dei dati fornisce una panoramica dei dati archiviati nelle origini dati aziendali per assistere l'utente nelle decisioni relative ai processi di migrazione, backup, sicurezza e conformità. Il report elenca prima una panoramica che riassume tutti gli ambienti di lavoro e le origini dati, quindi fornisce un'analisi per ogni ambiente di lavoro.
+Il rapporto di panoramica sulla mappatura dei dati fornisce una panoramica dei dati archiviati nelle origini dati aziendali per assistere l'utente nelle decisioni relative ai processi di migrazione, backup, sicurezza e conformità. Il report riassume tutti gli ambienti di lavoro e le fonti di dati, fornendo anche un'analisi per ciascun ambiente di lavoro.
 
 Il report contiene le seguenti informazioni:
 
@@ -155,7 +155,7 @@ image:screenshot-compliance-report-buttons.png["Una schermata della dashboard di
 .Risultato
 La classificazione BlueXP genera un report in formato .pdf che puoi esaminare e inviare ad altri gruppi, se necessario.
 
-Se il report è più grande di 1 MB, il file .pdf viene conservato nell'istanza di classificazione BlueXP e viene visualizzato un messaggio a comparsa sulla posizione esatta. Quando la classificazione BlueXP è installata su una macchina Linux locale o su una macchina Linux implementata nel cloud, puoi accedere direttamente al file .pdf. Quando la classificazione BlueXP viene implementata nel cloud, per scaricare il file .pdf dovrai utilizzare SSH per l'istanza di classificazione BlueXP.
+Se il report è più grande di 1 MB, il file .pdf viene conservato nell'istanza di classificazione BlueXP e viene visualizzato un messaggio a comparsa sulla posizione esatta. Quando la classificazione BlueXP è installata su una macchina Linux locale o su una macchina Linux implementata nel cloud, puoi accedere direttamente al file .pdf. Quando la classificazione BlueXP viene distribuita nel cloud, sarà necessario connettersi tramite SSH all'istanza della classificazione BlueXP per scaricare il file .pdf.
 
 
 
@@ -168,9 +168,11 @@ L'area _Top Data Repository by Sensitivity Level_ del rapporto Panoramica mappat
 * Dati personali sensibili
 
 
+Questi dati vengono aggiornati ogni due ore e possono essere aggiornati manualmente.
+
 .Fasi
 . Per visualizzare il numero totale di elementi in ciascuna categoria, posizionare il cursore su ciascuna sezione della barra.
-. Per filtrare i risultati che verranno visualizzati nella pagina di analisi, selezionare ciascuna area ib nella barra ed esaminare ulteriormente.
+. Per filtrare i risultati che appariranno nella pagina Indagine, seleziona ogni area nella barra e prosegui nella ricerca.
 
 
 
@@ -179,8 +181,8 @@ L'area _Top Data Repository by Sensitivity Level_ del rapporto Panoramica mappat
 
 L'area _dati sensibili e autorizzazioni ampie_ del report Panoramica mappatura dati mostra la percentuale di file che contengono dati riservati e hanno autorizzazioni ampie. Il grafico mostra i seguenti tipi di autorizzazioni:
 
-* Dalle autorizzazioni più restrittive alle restrizioni più permissive sull'asse orizzontale.
-* Dai dati meno sensibili ai dati più sensibili sull'asse verticale.
+* Dai permessi più restrittivi alle restrizioni più permissive sull'asse orizzontale.
+* Dai dati meno sensibili a quelli più sensibili sull'asse verticale.
 
 
 .Fasi
@@ -235,8 +237,8 @@ Le categorie possono aiutarti a capire cosa accade con i tuoi dati mostrando i t
 Per ulteriori informazioni, vedere link:task-controlling-private-data.html["Visualizzazione dei file in base alle categorie"] .
 
 .Fasi
-. Dal menu BlueXP, fare clic su *Governance > Classification*.
-. Fare clic su *Governance*, quindi sul pulsante *Data Discovery Assessment Report*.
+. Dal menu BlueXP , selezionare *Governance > classificazione*.
+. Selezionare *Governance*, quindi il pulsante *Data Discovery Assessment Report*.
 
 
 .Risultato
