@@ -68,7 +68,7 @@
 *** Red Hat Enterprise Linux versione 8,8, 8,10, 9,0, 9,1, 9,2, 9,3, 9,4 e 9,5
 
 
-** Advanced Vector Extensions (AVX) deve essere attivato sul sistema host.
+** Le estensioni vettoriali avanzate (AVX2) devono essere abilitate sul sistema host.
 
 
 * *Red Hat Subscription Management*: L'host deve essere registrato con Red Hat Subscription Management. Se non è registrato, il sistema non può accedere ai repository per aggiornare il software di terze parti richiesto durante l'installazione.
