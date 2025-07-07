@@ -18,7 +18,7 @@ Scopri le novità della classificazione BlueXP.
 
 
 
-== 09 giugno 2025
+== 10 giugno 2025
 
 
 
@@ -287,7 +287,7 @@ Per ulteriori informazioni, fare riferimento alla link:task-scanning-storagegrid
 
 
 
-== 5 agosto 2024
+== 05 agosto 2024
 
 
 
@@ -302,7 +302,7 @@ Per informazioni dettagliate sulla distribuzione, fare riferimento a https://doc
 
 
 
-== 1 luglio 2024
+== 01 luglio 2024
 
 
 
@@ -335,7 +335,7 @@ Per ulteriori informazioni, vedere link:https://docs.netapp.com/us-en/bluexp-cla
 
 
 
-== 5 giugno 2024
+== 05 giugno 2024
 
 
 
@@ -361,7 +361,7 @@ link:reference-free-paid.html["Ulteriori informazioni sulle funzioni obsolete"].
 
 
 
-== 1 aprile 2024
+== 01 aprile 2024
 
 
 
@@ -389,7 +389,7 @@ Se hai implementato la classificazione BlueXP senza accesso a Internet, dovrai e
 
 
 
-== 4 marzo 2024
+== 04 marzo 2024
 
 
 
@@ -438,7 +438,7 @@ La release ha inoltre rimosso le seguenti opzioni:
 
 
 
-== 6 novembre 2023
+== 06 novembre 2023
 
 
 
@@ -452,7 +452,7 @@ In questa versione sono stati risolti i seguenti problemi
 
 
 
-== 4 ottobre 2023
+== 04 ottobre 2023
 
 
 
@@ -465,7 +465,7 @@ Al momento non supportiamo installazioni in siti oscuri o ambienti di scansione 
 
 
 
-== 5 settembre 2023
+== 05 settembre 2023
 
 
 
@@ -510,7 +510,7 @@ https://docs.netapp.com/us-en/bluexp-classification/api-classification.html["Sco
 
 
 
-== 6 giugno 2023
+== 06 giugno 2023
 
 
 
@@ -533,7 +533,7 @@ Ora puoi caricare la tua licenza BYOL Data Sense nel portafoglio digitale BlueXP
 
 
 
-== 3 aprile 2023
+== 03 aprile 2023
 
 
 
@@ -550,7 +550,7 @@ Se si desidera verificare che il sistema Linux soddisfi tutti i prerequisiti ind
 
 
 
-== 7 marzo 2023
+== 07 marzo 2023
 
 
 
@@ -595,7 +595,7 @@ https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categ
 
 
 
-== 5 febbraio 2023
+== 05 febbraio 2023
 
 
 
@@ -622,7 +622,7 @@ Il nuovo stato "Partial Success" (successo parziale) indica che un'azione di cla
 
 
 
-== 9 gennaio 2023
+== 09 gennaio 2023
 
 
 
