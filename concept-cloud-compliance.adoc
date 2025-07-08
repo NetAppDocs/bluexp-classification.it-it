@@ -127,14 +127,14 @@ Tenere presente quanto segue sull'istanza predefinita:
 * Per ogni connettore viene implementata una sola istanza di classificazione BlueXP.
 
 
-Puoi anche implementare la classificazione BlueXP su un host Linux on-premise o su un host nel tuo cloud provider preferito. Il software funziona esattamente allo stesso modo, indipendentemente dal metodo di installazione scelto. Gli aggiornamenti del software di classificazione BlueXP sono automatizzati finché l'istanza dispone di accesso a Internet.
+Puoi anche implementare la classificazione BlueXP su un host Linux on-premise o su un host nel tuo cloud provider preferito. Il software funziona esattamente allo stesso modo, indipendentemente dal metodo di installazione scelto. Gli aggiornamenti del software di classificazione BlueXP sono automatizzati finché l'istanza ha accesso a Internet.
 
 
 TIP: L'istanza deve rimanere sempre in esecuzione perché la classificazione BlueXP esegue continuamente la scansione dei dati.
 
 *Distribuire su diversi tipi di istanza*
 
-Puoi implementare la classificazione BlueXP su un sistema con meno CPU e meno RAM.
+Esaminare le seguenti specifiche per i tipi di istanza:
 
 [cols="18,31,51"]
 |===
@@ -168,7 +168,7 @@ image:diagram_cloud_compliance_scan.png["Diagramma che mostra un'istanza di Blue
 
 Dopo la scansione iniziale, la classificazione BlueXP  esegue la scansione continua dei dati in modo round robin per rilevare le modifiche incrementali. Per questo motivo è importante mantenere in esecuzione l'istanza.
 
-È possibile attivare e disattivare le scansioni a livello di volume o a livello di schema del database.
+È possibile abilitare e disabilitare le scansioni a livello di volume o a livello di schema del database.
 
 
 
@@ -176,7 +176,7 @@ Dopo la scansione iniziale, la classificazione BlueXP  esegue la scansione cont
 
 È possibile eseguire due tipi di scansioni nella classificazione BlueXP :
 
-* **Le scansioni solo mappatura** forniscono solo una panoramica di alto livello dei vostri dati e vengono eseguite su origini dati selezionate. Le scansioni di sola mappatura richiedono meno tempo rispetto alle scansioni di mappatura e classificazione, poiché non accedono ai file per visualizzare i dati all'interno. Si consiglia di eseguire questa operazione inizialmente per identificare le aree di ricerca e quindi eseguire una scansione Map & Classify su tali aree.
+* **Le scansioni solo mappatura** forniscono solo una panoramica di alto livello dei vostri dati e vengono eseguite su origini dati selezionate. Le scansioni di sola mappatura richiedono meno tempo delle scansioni di mappatura e classificazione perché non accedono ai file per visualizzare i dati al loro interno. Si consiglia di eseguire questa operazione inizialmente per identificare le aree di ricerca e quindi eseguire una scansione Map & Classify su tali aree.
 * **Le scansioni Map & Classify** forniscono una scansione profonda dei vostri dati.
 
 
