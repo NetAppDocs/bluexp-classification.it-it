@@ -2,4 +2,4 @@
 :allow-uri-read: 
 
 
-+ se si desidera assicurarsi che i file "ultimi tempi di accesso" siano invariati dalle scansioni di classificazione BlueXP, si consiglia di disporre dei permessi Write Attributes in CIFS o write permissions in NFS. Se possibile, si consiglia di far parte dell'utente configurato con Active Directory di un gruppo principale dell'organizzazione che dispone delle autorizzazioni per tutti i file.
++ Per assicurarsi che gli "ultimi accessi" dei file non vengano modificati dalle scansioni BlueXP classification , si consiglia che l'utente disponga delle autorizzazioni di scrittura degli attributi in CIFS o di autorizzazioni di scrittura in NFS. Se possibile, configurare l'utente di Active Directory come parte di un gruppo padre nell'organizzazione che disponga delle autorizzazioni per tutti i file.

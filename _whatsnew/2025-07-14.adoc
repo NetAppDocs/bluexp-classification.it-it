@@ -1,0 +1,19 @@
+= Versione 1,45
+:allow-uri-read: 
+
+
+
+
+=== Versione 1,45
+
+Questa versione BlueXP classification include modifiche al codice che ottimizzano l'utilizzo delle risorse e:
+
+.Flusso di lavoro migliorato per aggiungere condivisioni di file per la scansione
+Il flusso di lavoro per aggiungere condivisioni file a un gruppo di condivisione file è stato semplificato. Il processo ora differenzia anche il supporto del protocollo CIFS in base al tipo di autenticazione (Kerberos o NTLM).
+
+Per ulteriori informazioni, vedere xref:task-scanning-file-shares.html[Eseguire la scansione delle condivisioni dei file].
+
+.Informazioni avanzate sul proprietario del file
+Ora puoi visualizzare maggiori informazioni sui proprietari dei file acquisiti nella scheda Indagine. Quando visualizzi i metadati di un file nella scheda Indagine, individua il proprietario del file, quindi seleziona **Visualizza dettagli** per visualizzare il nome utente, l'indirizzo email e il nome dell'account SAM. Puoi anche visualizzare altri elementi di proprietà di questo utente. Questa funzionalità è disponibile solo per gli ambienti di lavoro con Active Directory.
+
+Per ulteriori informazioni, vedere xref:task-investigate-data.html[Esaminare i dati memorizzati nella propria organizzazione].

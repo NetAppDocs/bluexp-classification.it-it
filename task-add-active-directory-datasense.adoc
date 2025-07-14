@@ -21,6 +21,9 @@ Quando si impostano determinate origini dati (elencate di seguito), è necessari
 Questa integrazione fornisce informazioni aggiuntive nelle seguenti posizioni della classificazione BlueXP:
 
 * È possibile utilizzare il "Proprietario del file" link:task-investigate-data.html["filtro"] e visualizzare i risultati nei metadati del file nel riquadro delle indagini. Al posto del proprietario del file che contiene il SID (Security identifier), viene inserito il nome utente effettivo.
++
+Puoi anche visualizzare maggiori dettagli sul proprietario del file: nome dell'account, indirizzo email e nome dell'account SAM, oppure visualizzare gli elementi di proprietà di quell'utente.
+
 * È possibile visualizzare link:task-investigate-data.html["autorizzazioni complete per i file"] per ogni file e directory quando si fa clic sul pulsante "Visualizza tutte le autorizzazioni".
 * In link:task-controlling-governance-data.html["Dashboard di governance"], Il pannello Open Permissions (autorizzazioni aperte) mostra un livello di dettaglio maggiore sui dati.
 

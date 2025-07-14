@@ -36,7 +36,7 @@ image:screenshot_compliance_investigation_filtered.png["Una schermata dei filtri
 
 . Per visualizzare i dati provenienti da file (dati non strutturati), directory (cartelle e condivisioni di file) o da database (dati strutturati), selezionare una delle schede in alto.
 . Per ordinare i risultati in ordine numerico o alfabetico, selezionare il controllo nella parte superiore di ciascuna colonna.
-. Per perfezionare ulteriormente i risultati, selezionare uno dei numerosi filtri nel riquadro sinistro del filtro.
+. Per restringere ulteriormente i risultati, seleziona uno dei filtri nel riquadro Filtro.
 
 
 
@@ -196,7 +196,7 @@ Utilizzare il seguente filtro per visualizzare i file duplicati nello storage.
 
 Oltre a mostrare l'ambiente di lavoro e il volume in cui si trova il file, i metadati mostrano molte più informazioni, incluse le autorizzazioni per i file, il proprietario del file e l'eventuale presenza di duplicati di questo file. Queste informazioni sono utili se si prevede di link:task-using-policies.html["creare ricerche salvate"]visualizzare tutte le informazioni che è possibile utilizzare per filtrare i dati.
 
-Non tutte le informazioni sono disponibili per tutte le fonti di dati, proprio ciò che è appropriato per quella fonte di dati. Ad esempio, il nome del volume e le autorizzazioni non sono rilevanti per i file di database.
+La disponibilità delle informazioni dipende dall'origine dati. Ad esempio, il nome del volume e le autorizzazioni non sono condivisi per i file di database.
 
 .Fasi
 . Dal menu classificazione BlueXP , selezionare *analisi*.
@@ -237,11 +237,11 @@ TIP: È possibile espandere un livello del gruppo per visualizzare gli utenti ch
 
 == Verificare la presenza di file duplicati nei sistemi di storage
 
-È possibile visualizzare se i file duplicati vengono memorizzati nei sistemi storage. Ciò è utile se si desidera identificare le aree in cui è possibile risparmiare spazio di storage. Può anche essere utile assicurarsi che alcuni file con autorizzazioni specifiche o informazioni sensibili non vengano duplicati inutilmente nei sistemi di storage.
+Puoi verificare se nei tuoi sistemi di archiviazione sono presenti file duplicati. Ciò è utile se si desidera identificare le aree in cui è possibile risparmiare spazio di storage. È inoltre opportuno assicurarsi che determinati file con autorizzazioni specifiche o informazioni sensibili non vengano duplicati inutilmente nei tuoi sistemi di archiviazione.
 
 Tutti i file (esclusi i database) di dimensioni pari o superiori a 1 MB o contenenti informazioni personali o riservate vengono confrontati per verificare se sono presenti duplicati.
 
-La classificazione BlueXP utilizza la tecnologia di hashing per determinare i file duplicati. Se un file ha lo stesso codice hash di un altro file, possiamo essere sicuri al 100% che i file siano duplicati esatti - anche se i nomi dei file sono diversi.
+La classificazione BlueXP utilizza la tecnologia di hashing per determinare i file duplicati. Se un file ha lo stesso codice hash di un altro file, puoi essere sicuro al 100% che i file sono duplicati esatti, anche se i nomi dei file sono diversi.
 
 .Fasi
 . Dal menu classificazione BlueXP , selezionare *analisi*.
@@ -277,7 +277,7 @@ TIP: È possibile utilizzare il valore "hash file" fornito in questa pagina e im
 
 Il Data Investigation Report (Report analisi dati) è un download del contenuto filtrato della pagina Data Investigation (analisi dati).
 
-Il report è disponibile come file .CSV o .JSON che è possibile salvare sul computer locale.
+Il report è disponibile come file CSV o JSON e puoi salvarlo sul tuo computer locale.
 
 Se la classificazione BlueXP sta scansionando file (dati non strutturati), directory (cartelle e condivisioni di file) e database (dati strutturati), possono essere scaricati fino a tre file di report.
 
@@ -307,6 +307,10 @@ Il *Report dati file non strutturati* include le seguenti informazioni sui file:
 * Ultima modifica
 * Ultimo accesso
 * Proprietario del file
++
+** I dati del proprietario del file comprendono il nome dell'account, il nome dell'account SAM e l'indirizzo e-mail quando Active Directory è configurato.
+
+
 * Categoria
 * Informazioni personali
 * Informazioni personali sensibili
@@ -314,7 +318,7 @@ Il *Report dati file non strutturati* include le seguenti informazioni sui file:
 * Errore analisi scansione
 * Data di rilevamento dell'eliminazione
 +
-Una data di rilevamento dell'eliminazione identifica la data in cui il file è stato cancellato o spostato. In questo modo è possibile identificare quando sono stati spostati file sensibili. I file cancellati non fanno parte del numero di file visualizzato nella dashboard o nella pagina di analisi. I file vengono visualizzati solo nei report CSV.
+La data di rilevamento dell'eliminazione identifica la data in cui il file è stato eliminato o spostato. In questo modo è possibile identificare quando sono stati spostati file sensibili. I file eliminati non contribuiscono al conteggio dei file visualizzato nella dashboard o nella pagina Indagine. I file vengono visualizzati solo nei report CSV.
 
 
 
