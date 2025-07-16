@@ -375,7 +375,10 @@ Per la spiegazione degli stati, vedere https://docs.netapp.com/us-en/bluexp-clas
 === Versione 1,31
 
 .La classificazione è disponibile come servizio core all'interno di BlueXP
-La classificazione BlueXP è ora disponibile come funzionalità core all'interno di BlueXP senza costi aggiuntivi per un massimo di 500 TiB di dati sottoposti a scansione. Non è richiesta alcuna licenza di classificazione o abbonamento a pagamento. Mentre concentriamo la funzionalità di classificazione BlueXP sulla scansione dei sistemi storage NetApp con questa nuova versione, alcune funzionalità legacy saranno disponibili solo per i clienti che avevano precedentemente pagato per una licenza. L'utilizzo di tali funzioni legacy scadrà quando il contratto a pagamento avrà raggiunto la data di fine.
+La BlueXP classification è ora disponibile come funzionalità principale di BlueXP senza costi aggiuntivi per un massimo di 500 TiB di dati scansionati per connettore. Non è richiesta alcuna licenza di classificazione o abbonamento a pagamento. Mentre concentriamo la funzionalità di classificazione BlueXP sulla scansione dei sistemi storage NetApp con questa nuova versione, alcune funzionalità legacy saranno disponibili solo per i clienti che avevano precedentemente pagato per una licenza. L'utilizzo di tali funzioni legacy scadrà quando il contratto a pagamento avrà raggiunto la data di fine.
+
+
+NOTE: La BlueXP classification non impone limiti alla quantità di dati che può analizzare. Ogni connettore supporta la scansione e la visualizzazione di 500 TiB di dati. Per analizzare più di 500 TiB di dati, link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation["installare un altro connettore"^] Poi link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["distribuire un'altra istanza di classificazione"] . + L'interfaccia utente BlueXP visualizza i dati di un singolo connettore. Per suggerimenti sulla visualizzazione dei dati di più connettori, vedere link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Utilizzare più connettori"^] .
 
 link:reference-free-paid.html["Ulteriori informazioni sulle funzioni obsolete"].
 

@@ -43,7 +43,7 @@ La tabella seguente mostra alcune delle differenze:
 | Prezzi | Gratuito | Gratuito 
 
 
-| Capacità | Limitata a 500 TB | Limitata a 500 TB 
+| Capacità | Limitato a 500 TiB* | Limitato a 500 TiB* 
 
 
 | Elenco dei tipi di file e della capacità utilizzata | Sì | Sì 
@@ -72,6 +72,8 @@ La tabella seguente mostra alcune delle differenze:
 
 | Possibilità di visualizzare i metadati dei file* | No | Sì 
 |===
+{asterisco} include::_include/connector-limit.adoc[]
+
 *I seguenti metadati vengono estratti dai file durante le scansioni di mappatura:
 
 * Ambiente di lavoro
