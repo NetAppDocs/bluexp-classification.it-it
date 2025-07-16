@@ -14,4 +14,4 @@ La classificazione BlueXP  supporta le operazioni bulk per gli ambienti di lavo
 .Scaricare il rapporto di indagine localmente
 La classificazione BlueXP  supporta la possibilità di scaricare localmente i report di analisi dei dati da visualizzare nel browser. Se si sceglie l'opzione locale, l'analisi dei dati è disponibile solo nel formato CSV e visualizza solo le prime 10.000 righe di dati.
 
-Per ulteriori informazioni, vedere link:task-investigate-data.html#create-the-data-investigation-report["Esaminare i dati memorizzati nella propria organizzazione con la classificazione BlueXP "].
+Per ulteriori informazioni, vedere link:https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#create-the-data-investigation-report["Esaminare i dati memorizzati nella propria organizzazione con la classificazione BlueXP "].

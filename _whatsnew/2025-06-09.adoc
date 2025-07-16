@@ -51,7 +51,7 @@ I tempi di aggiornamento per i singoli componenti della dashboard di Governance 
 
 | Principali repository di dati per livello di sensibilità | 2 ore 
 |===
-È possibile visualizzare l'ora dell'ultimo aggiornamento e aggiornare manualmente i componenti File duplicati, Dati non aziendali, Ricerche salvate, Dati obsoleti e Repository dati principali per livello di sensibilità. Per ulteriori informazioni sulla dashboard di Governance, consultare xref:task-controlling-governance-data.html[Visualizzare i dettagli di governance sui dati archiviati nell'organizzazione] .
+È possibile visualizzare l'ora dell'ultimo aggiornamento e aggiornare manualmente i componenti File duplicati, Dati non aziendali, Ricerche salvate, Dati obsoleti e Repository dati principali per livello di sensibilità. Per ulteriori informazioni sulla dashboard di Governance, consultare link:https://docs.netapp.com/us-en/bluexp-classification/task-controlling-governance-data.html["Visualizzare i dettagli di governance sui dati archiviati nell'organizzazione"] .
 
 .Miglioramenti delle prestazioni e della sicurezza
 Sono stati apportati miglioramenti per ottimizzare le prestazioni, il consumo di memoria e la sicurezza della classificazione BlueXP.

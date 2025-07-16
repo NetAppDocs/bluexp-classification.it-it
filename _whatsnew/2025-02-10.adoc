@@ -26,7 +26,7 @@ Esistono due tipi di scansioni:
 
 La priorità viene assegnata solo alle scansioni di sola mappatura, non alle scansioni MAP e Classify.
 
-Per impostazione predefinita, la priorità è impostata su 1 e può essere modificata su un numero compreso tra 1 e 10. Minore è il numero, maggiore è la priorità. Se non si imposta una priorità, alla scansione viene assegnata una priorità di 5.
+Per impostazione predefinita, la priorità è impostata su 1 e può essere modificata su un numero compreso tra 1 e 10. Minore è il numero, maggiore è la priorità. Se non si imposta una priorità, alla scansione viene assegnata la priorità 5.
 
 Per modificare la priorità, procedere come segue:
 
