@@ -192,29 +192,29 @@ Nelle regioni in cui il tipo di istanza predefinito non è disponibile, la class
 .Implementazione in AWS
 --
 .Fasi
-. Dal menu di navigazione a sinistra di BlueXP, fare clic su *Governance > Classification*.
+. Dal menu di navigazione sinistro di BlueXP , selezionare *Governance > classificazione*.
+. Selezionare *Distribuisci classificazione in locale o nel cloud*.
 +
-image:screenshot_cloud_compliance_deploy_start.png["Una schermata che mostra la selezione del pulsante per attivare la classificazione BlueXP."]
+image:screenshot-deploy-classification.png["Una schermata che mostra la selezione del pulsante per attivare la classificazione BlueXP."]
 
-. Fare clic su *Activate Data Sense* (attiva rilevamento dati).
-. Dalla pagina _Installation_, fare clic su *Deploy > Deploy* per utilizzare le dimensioni dell'istanza "Large" e avviare la procedura guidata di implementazione del cloud.
+. Dalla pagina _Installazione_, seleziona *Distribuisci > Distribuisci* per utilizzare la dimensione dell'istanza "Grande" e avviare la procedura guidata di distribuzione nel cloud.
 . La procedura guidata visualizza lo stato di avanzamento durante le fasi di implementazione. In caso di problemi, il sistema si arresta e richiede l'immissione.
 +
 image:screenshot_cloud_compliance_wizard_start.png["Schermata della classificazione guidata BlueXP per la distribuzione di una nuova istanza."]
 
-. Una volta implementata l'istanza e installata la classificazione BlueXP, fare clic su *Continue to Configuration* (continua alla configurazione) per accedere alla pagina _Configuration_ (Configurazione).
+. Una volta distribuita l'istanza e installata la BlueXP classification , selezionare *Continua alla configurazione* per andare alla pagina _Configurazione_.
 
 
 --
 .Implementazione in Azure
 --
 .Fasi
-. Dal menu di navigazione a sinistra di BlueXP, fare clic su *Governance > Classification*.
-. Fare clic su *Activate Data Sense* (attiva rilevamento dati).
+. Dal menu di navigazione sinistro di BlueXP , selezionare *Governance > classificazione*.
+. Selezionare *Distribuisci classificazione in locale o nel cloud*.
 +
-image:screenshot_cloud_compliance_deploy_start.png["Una schermata che mostra la selezione del pulsante per attivare la classificazione BlueXP."]
+image:screenshot-deploy-classification.png["Una schermata che mostra la selezione del pulsante per attivare la classificazione BlueXP."]
 
-. Fare clic su *Deploy* per avviare la procedura guidata di implementazione del cloud.
+. Selezionare *Distribuisci* per avviare la procedura guidata di distribuzione nel cloud.
 +
 image:screenshot_cloud_compliance_deploy_cloud.png["Una schermata che mostra la selezione del pulsante per implementare la classificazione BlueXP nel cloud."]
 
@@ -222,19 +222,19 @@ image:screenshot_cloud_compliance_deploy_cloud.png["Una schermata che mostra la 
 +
 image:screenshot_cloud_compliance_wizard_start.png["Schermata della classificazione guidata BlueXP per la distribuzione di una nuova istanza."]
 
-. Una volta implementata l'istanza e installata la classificazione BlueXP, fare clic su *Continue to Configuration* (continua alla configurazione) per accedere alla pagina _Configuration_ (Configurazione).
+. Una volta distribuita l'istanza e installata la BlueXP classification , selezionare *Continua alla configurazione* per andare alla pagina _Configurazione_.
 
 
 --
 .Implementazione in Google Cloud
 --
 .Fasi
-. Dal menu di navigazione a sinistra di BlueXP, fare clic su *Governance > Classification*.
-. Fare clic su *Activate Data Sense* (attiva rilevamento dati).
+. Dal menu di navigazione sinistro di BlueXP , selezionare *Governance > classificazione*.
+. Selezionare *Distribuisci classificazione in locale o nel cloud*.
 +
-image:screenshot_cloud_compliance_deploy_start.png["Una schermata che mostra la selezione del pulsante per attivare la classificazione BlueXP."]
+image:screenshot-deploy-classification.png["Una schermata che mostra la selezione del pulsante per attivare la classificazione BlueXP."]
 
-. Fare clic su *Deploy* per avviare la procedura guidata di implementazione del cloud.
+. Selezionare *Distribuisci* per avviare la procedura guidata di distribuzione nel cloud.
 +
 image:screenshot_cloud_compliance_deploy_cloud.png["Una schermata che mostra la selezione del pulsante per implementare la classificazione BlueXP nel cloud."]
 
@@ -242,7 +242,7 @@ image:screenshot_cloud_compliance_deploy_cloud.png["Una schermata che mostra la 
 +
 image:screenshot_cloud_compliance_wizard_start.png["Schermata della classificazione guidata BlueXP per la distribuzione di una nuova istanza."]
 
-. Una volta implementata l'istanza e installata la classificazione BlueXP, fare clic su *Continue to Configuration* (continua alla configurazione) per accedere alla pagina _Configuration_ (Configurazione).
+. Una volta distribuita l'istanza e installata la BlueXP classification , selezionare *Continua alla configurazione* per andare alla pagina _Configurazione_.
 
 
 --

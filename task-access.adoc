@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: task-access.html 
+keywords: log in, sign in 
+summary: Per iniziare a utilizzare la BlueXP classification, accedi al servizio in BlueXP. 
+---
+= Accedi BlueXP classification
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+È possibile accedere al servizio BlueXP classification tramite NetApp BlueXP.
+
+Per accedere a BlueXP, puoi utilizzare le credenziali del sito di supporto NetApp oppure registrarti per un accesso cloud NetApp utilizzando il tuo indirizzo email e una password. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Scopri di più sull'accesso a BlueXP"^].
+
+Attività specifiche richiedono ruoli utente BlueXP specifici. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Scopri i ruoli di accesso BlueXP per tutti i servizi"^].
+
+.Prima di iniziare
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Dovresti aggiungere un connettore BlueXP ."^]
+* link:task-deploy-cloud-compliance.html["Scopri quale stile di distribuzione BlueXP classification è più adatto al tuo carico di lavoro."]
+
+
+.Fasi
+. In un browser web, vai a link:https://console.bluexp.netapp.com/["Console BlueXP"^] .
++
+Viene visualizzata la pagina di accesso a NetApp BlueXP.
+
+. Sign in a BlueXP.
+. Dal menu di navigazione a sinistra BlueXP , seleziona *Governance* > *Classificazione*.
+. Se è la prima volta che accedi BlueXP classification, verrà visualizzata la pagina di destinazione.
++
+Seleziona *Distribuisci classificazione in locale o nel cloud* per iniziare a distribuire la tua istanza di classificazione. Per ulteriori informazioni, vedere link:task-deploy-cloud-compliance.html["Quale implementazione della classificazione BlueXP dovresti utilizzare?"]
+
++
+image:screenshot-deploy-classification.png["Una schermata che mostra la selezione del pulsante per attivare la classificazione BlueXP."]
+
++
+In caso contrario, viene visualizzata la Dashboard BlueXP classification .
+
+

@@ -179,16 +179,11 @@
   <block id="7df445bf0c34cf36a966141745590030" category="open-title">Implementazione in AWS</block>
   <block id="23c0e03df230b1dfa0e16b9d275b80ea" category="list-text">Dal menu di navigazione a sinistra di BlueXP, fare clic su *Governance &gt; Classification*.</block>
   <block id="d33aba60d91a201fe7b4bce522f9deb7" category="inline-image-macro">Una schermata che mostra la selezione del pulsante per attivare la classificazione BlueXP.</block>
-  <block id="c48b9bad2a3a25d6dad223ab11c5a33e" category="paragraph"><block ref="c48b9bad2a3a25d6dad223ab11c5a33e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="cce26d229722c6ca9257990a7091d9c0" category="list-text">Fare clic su *Activate Data Sense* (attiva rilevamento dati).</block>
   <block id="473b6ff5a1c62a3a028f4dc37b9cbd6c" category="inline-image-macro">Una schermata che mostra la selezione del pulsante per implementare la classificazione BlueXP nel cloud.</block>
-  <block id="2cf7dbc159875140b6f5ecc68994fa13" category="list-text">Dalla pagina _Installation_, fare clic su *Deploy &gt; Deploy* per utilizzare le dimensioni dell'istanza "Large" e avviare la procedura guidata di implementazione del cloud.</block>
   <block id="125c9895b0de4086b75bd6de17240096" category="list-text">La procedura guidata visualizza lo stato di avanzamento durante le fasi di implementazione. In caso di problemi, il sistema si arresta e richiede l'immissione.</block>
   <block id="6ccd3462f51e144ba54924a76ff58ce8" category="inline-image-macro">Schermata della classificazione guidata BlueXP per la distribuzione di una nuova istanza.</block>
   <block id="f7b6e8ebd5557b7030e15d04046f60e7" category="paragraph"><block ref="f7b6e8ebd5557b7030e15d04046f60e7" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="bdfca0a21ad4ec182fb0ff0fe7b8bc6b" category="list-text">Una volta implementata l'istanza e installata la classificazione BlueXP, fare clic su *Continue to Configuration* (continua alla configurazione) per accedere alla pagina _Configuration_ (Configurazione).</block>
   <block id="699be6723175322ef727a933c7b42bbd" category="open-title">Implementazione in Azure</block>
-  <block id="a09a5c1c3cb0d27dbac4cfa3c73c0ec8" category="list-text">Fare clic su *Deploy* per avviare la procedura guidata di implementazione del cloud.</block>
   <block id="1f61c6b070b23b20d4af173152567e3d" category="paragraph"><block ref="1f61c6b070b23b20d4af173152567e3d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="12714d8579e39a7357fefed194511b8a" category="open-title">Implementazione in Google Cloud</block>
   <block id="f7f52f1ee1d2634a6ef6ca88452892e9" category="paragraph">BlueXP implementa l'istanza di classificazione BlueXP nel tuo cloud provider.</block>
@@ -3560,4 +3555,28 @@ Dati delle applicazioni di business</block>
   <block id="acdf9d63036f9706b8165f6f6a7117da" category="paragraph">{asterisco} include::_include/connector-limit.adoc[]</block>
   <block id="e8c9a8c8c457fc72bf3b116575089845" category="paragraph">La BlueXP classification è ora disponibile come funzionalità principale di BlueXP senza costi aggiuntivi per un massimo di 500 TiB di dati scansionati per connettore. Non è richiesta alcuna licenza di classificazione o abbonamento a pagamento. Mentre concentriamo la funzionalità di classificazione BlueXP sulla scansione dei sistemi storage NetApp con questa nuova versione, alcune funzionalità legacy saranno disponibili solo per i clienti che avevano precedentemente pagato per una licenza. L'utilizzo di tali funzioni legacy scadrà quando il contratto a pagamento avrà raggiunto la data di fine.</block>
   <block id="3c6bee2e144dcf57c21b516f9adcdfef" category="paragraph">Sì, la classificazione BlueXP  dispone di un'API REST per le funzionalità supportate nella versione di classificazione BlueXP  che fa parte della piattaforma BlueXP  core. Vedere <block ref="66d6eeee3cdd1145e7194200ace05e36" category="inline-link-macro-rx"></block>.</block>
+  <block id="b88a97dbbf0d94d8396d856054201821" category="summary">Per iniziare a utilizzare la BlueXP classification, accedi al servizio in BlueXP.</block>
+  <block id="5e2bda6842e62bee66b91379fc54ff14" category="doc">Accedi BlueXP classification</block>
+  <block id="18ab5404b1c9c78cdbe1208355c612b8" category="paragraph">È possibile accedere al servizio BlueXP classification tramite NetApp BlueXP.</block>
+  <block id="827ffaa4071f763fcf2f165bc506ac67" category="inline-link-macro">Scopri di più sull'accesso a BlueXP</block>
+  <block id="e85f8055ef2f47366302b6cd1e438fd5" category="paragraph">Per accedere a BlueXP, puoi utilizzare le credenziali del sito di supporto NetApp oppure registrarti per un accesso cloud NetApp utilizzando il tuo indirizzo email e una password. <block ref="87311a7719bd09cd8d149ce0279338dd" category="inline-link-macro-rx"></block>.</block>
+  <block id="34397c830c77af93d96e3ed470658d45" category="inline-link-macro">Scopri i ruoli di accesso BlueXP per tutti i servizi</block>
+  <block id="0a52c97ea3cc5973c99346826ec696eb" category="paragraph">Attività specifiche richiedono ruoli utente BlueXP specifici. <block ref="8b4e96244237d791189f9a3329e43e34" category="inline-link-macro-rx"></block>.</block>
+  <block id="7b9aeeb99181b7bca6291c8ca1c3ec58" category="inline-link-macro">Dovresti aggiungere un connettore BlueXP .</block>
+  <block id="4d1ee80ad087cea271c22d352e5e16cf" category="list-text"><block ref="4d1ee80ad087cea271c22d352e5e16cf" category="inline-link-macro-rx"></block></block>
+  <block id="d5686972367b277b3384920923b26bb8" category="inline-link-macro">Scopri quale stile di distribuzione BlueXP classification è più adatto al tuo carico di lavoro.</block>
+  <block id="a7d2d849071dae06891079aa8c9ed283" category="list-text"><block ref="a7d2d849071dae06891079aa8c9ed283" category="inline-link-macro-rx"></block></block>
+  <block id="5975f7e9036c78e6217b16f295f0ca75" category="inline-link-macro">Console BlueXP</block>
+  <block id="899f21c9bd67afec8f9f3be01a8edddc" category="list-text">In un browser web, vai a <block ref="046fd603b18837f482287e5ec741e5ed" category="inline-link-macro-rx"></block> .</block>
+  <block id="753e3c2055278365db83b605f29d4860" category="paragraph">Viene visualizzata la pagina di accesso a NetApp BlueXP.</block>
+  <block id="ee852dbf3a138374521be3a3b6b5413d" category="list-text">Sign in a BlueXP.</block>
+  <block id="94390442839b9d41b3d61bf8fbfa3412" category="list-text">Dal menu di navigazione a sinistra BlueXP , seleziona *Governance* &gt; *Classificazione*.</block>
+  <block id="9b78feb8a8a40d46d2fb12391c043b8e" category="list-text">Se è la prima volta che accedi BlueXP classification, verrà visualizzata la pagina di destinazione.</block>
+  <block id="3c5000aadb8f3b41a943ceff25d45f92" category="paragraph">Seleziona *Distribuisci classificazione in locale o nel cloud* per iniziare a distribuire la tua istanza di classificazione. Per ulteriori informazioni, vedere <block ref="ac3bd67718326214ecb171be9412b196" category="inline-link-macro-rx"></block></block>
+  <block id="a65721c6a00f8c4af241338a11fd8f3f" category="paragraph"><block ref="a65721c6a00f8c4af241338a11fd8f3f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e694fa91cc3969b00d0ae997752b6422" category="paragraph">In caso contrario, viene visualizzata la Dashboard BlueXP classification .</block>
+  <block id="e142a6f5dd7278bd87df979071f43ac7" category="list-text">Selezionare *Distribuisci classificazione in locale o nel cloud*.</block>
+  <block id="dcc769ed0ea98e366058422f08990e15" category="list-text">Dalla pagina _Installazione_, seleziona *Distribuisci &gt; Distribuisci* per utilizzare la dimensione dell'istanza "Grande" e avviare la procedura guidata di distribuzione nel cloud.</block>
+  <block id="6082f95d47d2b6cd46c38a484f2b2e4f" category="list-text">Una volta distribuita l'istanza e installata la BlueXP classification , selezionare *Continua alla configurazione* per andare alla pagina _Configurazione_.</block>
+  <block id="f08251ff59a66c2320f7263142413eac" category="list-text">Selezionare *Distribuisci* per avviare la procedura guidata di distribuzione nel cloud.</block>
 </blocks>
