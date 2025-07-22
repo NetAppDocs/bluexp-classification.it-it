@@ -2952,8 +2952,6 @@ Dati delle applicazioni di business</block>
   <block id="d3057f8e098d72850d91f222796050a1" category="section-title">Esamina le classificazioni dei dati più identificate nei tuoi dati</block>
   <block id="93a41f9744586b4edf90898527b71531" category="cell">Esportare dati in NFS/CIFS dall'analisi</block>
   <block id="81aef4d88b3543fe7ce12740f599c026" category="paragraph">I file sono suddivisi in file con un numero fisso di righe o record:</block>
-  <block id="65c07610fb212d644f234075537bbc84" category="list-text">CSV - 200.000 record</block>
-  <block id="8897cd6292ab12bb81d8704c400fca96" category="list-text">JSON - 100.000 record</block>
   <block id="781c4c76cc2b33e7ebecd0ec7ae9a2c7" category="section-title">Come funziona la scansione della classificazione BlueXP </block>
   <block id="474cf46df0c1e9c8d98c2f529a0b080b" category="paragraph">A un livello elevato, la scansione di classificazione BlueXP  funziona come segue:</block>
   <block id="20d2a2e8543925af69154c91d0f12b74" category="list-text">È possibile abilitare la mappatura di alto livello (denominata _Mapping only_ Scans) o la scansione di alto livello (denominata _Map &amp; Classify_ Scans) su una o più origini dati.</block>
@@ -3145,7 +3143,6 @@ Dati delle applicazioni di business</block>
   <block id="d7530ec47cb0f60bf26bff38cfcd4f1f" category="list-text">Selezionare *Pausa* per sospendere la scansione di un volume o selezionare *Riprendi* per riprendere la scansione di un volume precedentemente in pausa.</block>
   <block id="e28f00b8dd55b4a2626bbd4233f326a1" category="list-text">*Classificazione dei dati scansione profonda (scansione mappa e classificazione)*: Scansioni di classificazione BlueXP  utilizzando protocolli standard e autorizzazioni di sola lettura in tutti gli ambienti. I file selezionati vengono aperti e sottoposti a scansione per rilevare dati aziendali sensibili, informazioni private e problemi relativi al ransomware.</block>
   <block id="e90444baa59788bd6471cf703b12a16e" category="summary">È possibile analizzare i dati dell'organizzazione visualizzando i dettagli nella pagina Data Investigation. Qui è possibile continuare la ricerca dopo aver esaminato il dashboard Governance.</block>
-  <block id="43b0fcc067500dde9cd348cfb2a4fb95" category="paragraph">È possibile analizzare i dati dell'organizzazione visualizzando i dettagli nella pagina Data Investigation. Qui è possibile continuare la ricerca dopo aver esaminato il dashboard Governance. Nella pagina di analisi, è possibile filtrare i dati utilizzando uno dei numerosi filtri per visualizzare solo i risultati desiderati. Puoi anche vedere i metadati dei file, le autorizzazioni per file e directory e controllare i file duplicati nei tuoi sistemi storage.</block>
   <block id="b7f6a3bebde141b211f7f03ea94b59a0" category="paragraph">È possibile accedere a questa pagina da molte aree dell'interfaccia utente di classificazione BlueXP , tra cui i dashboard Governance e Compliance con i filtri già selezionati in quelle pagine. È possibile esportare i dati in un file CSV o JSON per ulteriori analisi o per condividerli con altri utenti.</block>
   <block id="503f38415f575979b1abb29789cbda50" category="list-text">Dal menu classificazione BlueXP , selezionare *analisi*.</block>
   <block id="262bd6cb4081a4bb1d5b7bb69c91cf84" category="list-text">Nella pagina analisi dati, effettuare una delle seguenti operazioni:</block>
@@ -3579,4 +3576,7 @@ Dati delle applicazioni di business</block>
   <block id="6082f95d47d2b6cd46c38a484f2b2e4f" category="list-text">Una volta distribuita l'istanza e installata la BlueXP classification , selezionare *Continua alla configurazione* per andare alla pagina _Configurazione_.</block>
   <block id="f08251ff59a66c2320f7263142413eac" category="list-text">Selezionare *Distribuisci* per avviare la procedura guidata di distribuzione nel cloud.</block>
   <block id="cb4bf32603c89d08cad17e7e7dd302f2" category="list-text"><block ref="cb4bf32603c89d08cad17e7e7dd302f2" category="inline-link-macro-rx"></block></block>
+  <block id="3047d0f529bebd6bfe17922e0ca45403" category="paragraph">Esamina i dati della tua organizzazione visualizzandone i dettagli nella pagina Indagine sui dati. Qui è possibile continuare la ricerca dopo aver esaminato il dashboard Governance. Nella pagina di analisi, è possibile filtrare i dati utilizzando uno dei numerosi filtri per visualizzare solo i risultati desiderati. Puoi anche vedere i metadati dei file, le autorizzazioni per file e directory e controllare i file duplicati nei tuoi sistemi storage.</block>
+  <block id="f93f654f18be890b72a6dc3853af2702" category="list-text">JSON - 100.000 record per report, la cui generazione richiede circa 5 minuti</block>
+  <block id="1685dbc95abdf5db3fea70bcbed67efa" category="list-text">CSV - 200.000 record per report, la cui generazione richiede circa 4 minuti</block>
 </blocks>

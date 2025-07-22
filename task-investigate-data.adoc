@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-investigate-data.html 
-keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies,json, csv, data investigation, data investigation report, download report, file metadata, file permissions, duplicate files, saved search 
 summary: 'È possibile analizzare i dati dell"organizzazione visualizzando i dettagli nella pagina Data Investigation. Qui è possibile continuare la ricerca dopo aver esaminato il dashboard Governance.' 
 ---
 = Esaminare i dati memorizzati nella propria organizzazione con la classificazione BlueXP 
@@ -14,7 +14,7 @@ summary: 'È possibile analizzare i dati dell"organizzazione visualizzando i det
 
 
 [role="lead"]
-È possibile analizzare i dati dell'organizzazione visualizzando i dettagli nella pagina Data Investigation. Qui è possibile continuare la ricerca dopo aver esaminato il dashboard Governance. Nella pagina di analisi, è possibile filtrare i dati utilizzando uno dei numerosi filtri per visualizzare solo i risultati desiderati. Puoi anche vedere i metadati dei file, le autorizzazioni per file e directory e controllare i file duplicati nei tuoi sistemi storage.
+Esamina i dati della tua organizzazione visualizzandone i dettagli nella pagina Indagine sui dati. Qui è possibile continuare la ricerca dopo aver esaminato il dashboard Governance. Nella pagina di analisi, è possibile filtrare i dati utilizzando uno dei numerosi filtri per visualizzare solo i risultati desiderati. Puoi anche vedere i metadati dei file, le autorizzazioni per file e directory e controllare i file duplicati nei tuoi sistemi storage.
 
 È possibile accedere a questa pagina da molte aree dell'interfaccia utente di classificazione BlueXP , tra cui i dashboard Governance e Compliance con i filtri già selezionati in quelle pagine. È possibile esportare i dati in un file CSV o JSON per ulteriori analisi o per condividerli con altri utenti.
 
@@ -283,8 +283,8 @@ Se la classificazione BlueXP sta scansionando file (dati non strutturati), direc
 
 I file sono suddivisi in file con un numero fisso di righe o record:
 
-* JSON - 100.000 record
-* CSV - 200.000 record
+* JSON - 100.000 record per report, la cui generazione richiede circa 5 minuti
+* CSV - 200.000 record per report, la cui generazione richiede circa 4 minuti
 +
 
 NOTE: È possibile scaricare una versione del file CSV da visualizzare in questo browser. Questa versione è limitata a 10.000 record.
