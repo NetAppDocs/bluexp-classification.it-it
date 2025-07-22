@@ -1981,7 +1981,6 @@
   <block id="db8769ab87872f8d19b54e22d54685fe" category="paragraph"><block ref="c29073dde35b7e3b513884b9c9e495a3" category="inline-link-rx"></block>.</block>
   <block id="9d06990508d25d367d9158c6558eb9c8" category="list-text"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
   <block id="2e0c742f4616eb27b5b7646aa790edfe" category="list-text"><block ref="2e0c742f4616eb27b5b7646aa790edfe" category="inline-link-macro-rx"></block></block>
-  <block id="cf14bff66a8b72d3675db8ffe0f02ee3" category="list-text"><block ref="cf14bff66a8b72d3675db8ffe0f02ee3" category="inline-link-macro-rx"></block></block>
   <block id="e8d4092baef6680c6a35d5228ae31de2" category="paragraph"><block ref="e8d4092baef6680c6a35d5228ae31de2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0dfcbbbe02d3e96f8ad78782e8772587" category="paragraph">Si tratta di un ID generato dal sistema che viene mappato all'e-mail. Nella pagina *NSS Management*, è possibile visualizzare l'e-mail da <block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> menu.</block>
   <block id="fc79de85a483938f72fbcb9822ec0ae3" category="list-text">Se è necessario aggiornare i token delle credenziali di accesso, è disponibile anche l'opzione *Update Credentials* (Aggiorna credenziali) in <block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> menu.</block>
@@ -3579,4 +3578,5 @@ Dati delle applicazioni di business</block>
   <block id="dcc769ed0ea98e366058422f08990e15" category="list-text">Dalla pagina _Installazione_, seleziona *Distribuisci &gt; Distribuisci* per utilizzare la dimensione dell'istanza "Grande" e avviare la procedura guidata di distribuzione nel cloud.</block>
   <block id="6082f95d47d2b6cd46c38a484f2b2e4f" category="list-text">Una volta distribuita l'istanza e installata la BlueXP classification , selezionare *Continua alla configurazione* per andare alla pagina _Configurazione_.</block>
   <block id="f08251ff59a66c2320f7263142413eac" category="list-text">Selezionare *Distribuisci* per avviare la procedura guidata di distribuzione nel cloud.</block>
+  <block id="cb4bf32603c89d08cad17e7e7dd302f2" category="list-text"><block ref="cb4bf32603c89d08cad17e7e7dd302f2" category="inline-link-macro-rx"></block></block>
 </blocks>
