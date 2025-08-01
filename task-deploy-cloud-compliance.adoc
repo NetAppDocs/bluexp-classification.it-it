@@ -150,7 +150,15 @@ Esaminare la tabella appropriata riportata di seguito a seconda che si stia impl
 |===
 --
 ====
-Assicurarsi che BlueXP disponga delle autorizzazioni necessarie:: Assicurarsi che BlueXP disponga delle autorizzazioni per distribuire le risorse e creare gruppi di protezione per l'istanza di classificazione BlueXP. Le autorizzazioni BlueXP più recenti sono disponibili in https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html["Le policy fornite da NetApp"^].
+Assicurarsi che BlueXP disponga delle autorizzazioni necessarie:: Assicurarsi che BlueXP disponga delle autorizzazioni per distribuire risorse e creare gruppi di sicurezza per l'istanza BlueXP classification .
++
+--
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["Autorizzazioni di Google Cloud"^]
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#classification["Autorizzazioni AWS"^]
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html#classification["Autorizzazioni di Azure"^]
+
+
+--
 Assicurarsi che BlueXP Connector possa accedere alla classificazione BlueXP:: Garantire la connettività tra il connettore e l'istanza di classificazione BlueXP. Il gruppo di protezione per il connettore deve consentire il traffico in entrata e in uscita sulla porta 443 da e verso l'istanza di classificazione BlueXP. Questa connessione consente l'implementazione dell'istanza di classificazione BlueXP e consente di visualizzare le informazioni nelle schede Compliance e Governance. La classificazione BlueXP è supportata nelle regioni governative di AWS e Azure.
 +
 --
