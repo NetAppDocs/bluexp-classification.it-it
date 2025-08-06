@@ -8,7 +8,7 @@ summary: Per iniziare a utilizzare la BlueXP classification, accedi al servizio 
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/get-started/
+:imagesdir: ./media/
 
 
 [role="lead"]

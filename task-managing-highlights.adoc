@@ -63,7 +63,7 @@ Puoi copiare i file di origine che la classificazione BlueXP sta scansionando su
 TIP: Non è possibile copiare i file che risiedono nei database.
 
 .Requisiti
-* È necessario disporre delle autorizzazioni per copiare i file. link:concept-cloud-compliance.html#user-roles["Informazioni sull'accesso degli utenti alle informazioni sulla conformità"].
+* Per copiare i file è necessario disporre delle autorizzazioni. link:concept-cloud-compliance.html["Informazioni sull'accesso degli utenti alle informazioni sulla conformità"] .
 * La copia dei file richiede che la condivisione NFS di destinazione consenta l'accesso dall'istanza di classificazione BlueXP.
 * È possibile copiare da 1 a 100,000 file alla volta.
 
@@ -106,7 +106,7 @@ Il nuovo volume viene creato nello stesso aggregato del volume di origine. Assic
 *Nota:* i volumi FlexGroup non possono essere clonati perché non sono supportati da FlexClone.
 
 .Requisiti
-* È necessario disporre delle autorizzazioni per copiare i file. link:concept-cloud-compliance.html#user-roles["Informazioni sull'accesso degli utenti alle informazioni sulla conformità"].
+* Per copiare i file è necessario disporre delle autorizzazioni. link:concept-cloud-compliance.html["Informazioni sull'accesso degli utenti alle informazioni sulla conformità"] .
 * Selezionare un minimo di 20 file.
 * Tutti i file selezionati devono provenire dallo stesso volume e il volume deve essere online.
 * Il volume deve provenire da un sistema Cloud Volumes ONTAP o ONTAP on-premise. Al momento non sono supportate altre origini dati.
@@ -160,7 +160,7 @@ Ciò è utile per le situazioni in cui si esegue la migrazione dei dati da un si
 TIP: Non puoi copiare e sincronizzare i file che risiedono in database, account OneDrive o account SharePoint.
 
 .Requisiti
-* È necessario disporre delle autorizzazioni per copiare e sincronizzare i file. link:concept-cloud-compliance.html#user-roles["Informazioni sull'accesso degli utenti alle informazioni sulla conformità"].
+* Per copiare e sincronizzare i file è necessario disporre delle autorizzazioni. link:concept-cloud-compliance.html["Informazioni sull'accesso degli utenti alle informazioni sulla conformità"] .
 * Selezionare un minimo di 20 file.
 * Tutti i file selezionati devono provenire dallo stesso repository di origine (volume ONTAP, bucket S3, condivisione NFS o CIFS, ecc.).
 * È necessario attivare il servizio di copia e sincronizzazione BlueXP e configurare almeno un broker di dati da utilizzare per trasferire i file tra i sistemi di origine e di destinazione. Esaminare i requisiti di copia e sincronizzazione di BlueXP a partire da https://docs.netapp.com/us-en/bluexp-copy-sync/task-quick-start.html["Descrizione di avvio rapido"^].
@@ -218,7 +218,7 @@ Si noti che la struttura della sottodirectory dal file di origine viene ricreata
 TIP: Non è possibile spostare i file che risiedono nei database.
 
 .Requisiti
-* È necessario disporre delle autorizzazioni per spostare i file. link:concept-cloud-compliance.html#user-roles["Informazioni sull'accesso degli utenti alle informazioni sulla conformità"].
+* Per spostare i file è necessario disporre delle autorizzazioni. link:concept-cloud-compliance.html["Informazioni sull'accesso degli utenti alle informazioni sulla conformità"] .
 * I file di origine possono trovarsi nelle seguenti origini dati: On-premise ONTAP, Cloud Volumes ONTAP, Azure NetApp Files, condivisioni file e SharePoint Online.
 * È possibile spostare un massimo di 15 milioni di file alla volta.
 * Vengono spostati solo i file di dimensioni pari o inferiori a 50 MB.
@@ -270,7 +270,7 @@ L'eliminazione dei file richiede le seguenti autorizzazioni:
 === Eliminare manualmente i file di origine
 
 .Requisiti
-* È necessario disporre delle autorizzazioni per eliminare i file. link:concept-cloud-compliance.html#user-roles["Informazioni sull'accesso degli utenti alle informazioni sulla conformità"].
+* Per eliminare i file è necessario disporre delle autorizzazioni. link:concept-cloud-compliance.html["Informazioni sull'accesso degli utenti alle informazioni sulla conformità"] .
 * È possibile eliminare un massimo di 100,000 file alla volta.
 
 
