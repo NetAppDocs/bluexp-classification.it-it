@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: api-classification.html 
 keywords: api, apis, rest, restful, authorization, classification, data sense, swagger, body, header, list apis 
-summary: 'Le funzionalità di classificazione BlueXP che sono disponibili tramite l"interfaccia utente web sono anche disponibili tramite l"API Swagger.' 
+summary: 'Le funzionalità BlueXP classification disponibili tramite l"interfaccia utente Web sono disponibili anche tramite l"API REST.' 
 ---
 = API di classificazione BlueXP
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Le funzionalità di classificazione BlueXP che sono disponibili tramit
 
 
 [role="lead"]
-Le funzionalità di classificazione BlueXP che sono disponibili tramite l'interfaccia utente web sono anche disponibili tramite l'API Swagger.
+Le funzionalità BlueXP classification disponibili tramite l'interfaccia utente Web sono disponibili anche tramite l'API REST.
 
 Esistono quattro categorie definite nella classificazione BlueXP che corrispondono alle schede dell'interfaccia utente:
 
@@ -52,13 +52,13 @@ Ad esempio, è possibile individuare i file _senza_ informazioni personali ident
 
 
 
-L'API è protetta e utilizza lo stesso metodo di autenticazione dell'interfaccia utente. Le informazioni sull'autenticazione sono disponibili in: https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html[]
+L'API è sicura e utilizza lo stesso metodo di autenticazione dell'interfaccia utente.  Puoi trovare informazioni sull'autenticazione nellink:https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html["Documentazione REST API"^] .
 
 
 
 == Accesso al riferimento API Swagger
 
-Per accedere a Swagger, è necessario l'indirizzo IP dell'istanza di classificazione BlueXP. Nel caso di un'implementazione cloud, verrà utilizzato l'indirizzo IP pubblico. Quindi, è necessario accedere a questo endpoint:
+Per accedere al riferimento API, è necessario l'indirizzo IP dell'istanza BlueXP classification .  Se si dispone di una distribuzione cloud, utilizzare l'indirizzo ID pubblico. Per esempio:
 
 \https://<classification_ip>/documentazione
 

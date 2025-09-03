@@ -89,7 +89,7 @@ Il software di classificazione BlueXP deve essere eseguito su un host che soddis
 
 Assicurarsi che sia possibile mantenere in esecuzione la classificazione BlueXP. Il sistema di classificazione BlueXP deve rimanere attivo per eseguire una scansione continua dei dati.
 
-* La classificazione BlueXP non è supportata su un host condiviso con altre applicazioni: L'host deve essere un host dedicato.
+* La BlueXP classification non è supportata su un host condiviso con altre applicazioni.  L'host deve essere un host dedicato.
 * Quando crei il sistema host on-premise, puoi scegliere tra queste dimensioni di sistema in base alle dimensioni del set di dati che intendi eseguire la scansione della classificazione BlueXP.
 +
 [cols="17,17,27,31"]
@@ -101,7 +101,6 @@ Assicurarsi che sia possibile mantenere in esecuzione la classificazione BlueXP.
 ** 1 TiB SSD su /, o 100 GiB disponibile su /opz
 ** 895 GiB disponibile su /var/lib/docker
 ** 5 GiB ON /tmp
-** *Per Podman, 5 GB su /tmp*
 ** *Per Podman, 30 GB su /var/tmp*
 
 
@@ -109,18 +108,17 @@ Assicurarsi che sia possibile mantenere in esecuzione la classificazione BlueXP.
 
 | *Grande* | 16 CPU | 64 GB DI RAM  a| 
 ** SSD da 500 GiB su /, o 100 GiB disponibile su /opz
-** 395 GiB disponibile su /var/lib/docker o per Podman /var/lib/containers o per Podman /var/lib/containers
+** 400 GiB disponibili su /var/lib/docker o per Podman /var/lib/containers
 ** 5 GiB ON /tmp
-** *Per Podman, 5 GB su /tmp*
 ** *Per Podman, 30 GB su /var/tmp*
 
 
 |===
-* Quando si implementa un'istanza di calcolo nel cloud per l'installazione della classificazione BlueXP, si consiglia di utilizzare un sistema che soddisfi i requisiti di sistema "grandi" indicati in precedenza:
+* Quando distribuisci un'istanza di elaborazione nel cloud per l'installazione BlueXP classification , utilizza un sistema che soddisfi i requisiti di sistema "Large" sopra indicati:
 +
-** *Tipo di istanza di Amazon Elastic Compute Cloud (Amazon EC2)*: Si consiglia "m6i.4XLarge". link:reference-instance-types.html#aws-instance-types["Vedere altri tipi di istanze AWS"^].
-** *Dimensione delle macchine virtuali Azure*: Si consiglia "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types["Vedere altri tipi di istanze di Azure"^].
-** *Tipo di macchina GCP*: Si consiglia "n2-standard-16". link:reference-instance-types.html#gcp-instance-types["Vedere altri tipi di istanze GCP"^].
+** *Tipo di istanza Amazon Elastic Compute Cloud (Amazon EC2)*: "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types["Vedere altri tipi di istanze AWS"^] .
+** *Dimensioni della VM di Azure*: "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types["Vedere altri tipi di istanze di Azure"^] .
+** *Tipo di macchina GCP*: "n2-standard-16". link:reference-instance-types.html#gcp-instance-types["Vedere altri tipi di istanze GCP"^] .
 
 
 * *UNIX folder permissions*: Sono richieste le seguenti autorizzazioni minime per UNIX:
@@ -173,7 +171,7 @@ Assicurarsi che sia possibile mantenere in esecuzione la classificazione BlueXP.
 
 * Python versione 3,6 o superiore. https://www.python.org/downloads/["Visualizzare le istruzioni di installazione"^].
 +
-** *Considerazioni NTP*: NetApp consiglia di configurare il sistema di classificazione BlueXP per utilizzare un servizio NTP (Network Time Protocol). L'ora deve essere sincronizzata tra il sistema di classificazione BlueXP e il sistema del connettore BlueXP.
+** *Considerazioni su NTP*: NetApp consiglia di configurare la BlueXP classification per utilizzare un servizio Network Time Protocol (NTP).  L'ora deve essere sincronizzata tra il sistema BlueXP classification e il connettore.
 
 
 
